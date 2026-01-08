@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { headers } from 'next/headers';
 
 type ContactPayload = {
   nombre?: string;
@@ -10,7 +11,67 @@ type ContactPayload = {
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+// Rate limiting configuration
+const RATE_LIMIT_MAX = 5; // Max requests
+const RATE_LIMIT_WINDOW_MS = 15 * 60 * 1000; // 15 minutes
+
+// In-memory store for rate limiting (per serverless instance)
+const rateLimitStore = new Map<string, { count: number; resetTime: number }>();
+
+function getClientIp(headersList: Headers): string {
+  return (
+    headersList.get('x-forwarded-for')?.split(',')[0]?.trim() ||
+    headersList.get('x-real-ip') ||
+    'unknown'
+  );
+}
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const record = rateLimitStore.get(ip);
+
+  // Clean up expired entries periodically
+  if (rateLimitStore.size > 1000) {
+    for (const [key, value] of rateLimitStore.entries()) {
+      if (now > value.resetTime) {
+        rateLimitStore.delete(key);
+      }
+    }
+  }
+
+  if (!record || now > record.resetTime) {
+    rateLimitStore.set(ip, { count: 1, resetTime: now + RATE_LIMIT_WINDOW_MS });
+    return false;
+  }
+
+  if (record.count >= RATE_LIMIT_MAX) {
+    return true;
+  }
+
+  record.count++;
+  return false;
+}
+
+// Input length limits
+const MAX_LENGTH = {
+  nombre: 100,
+  email: 254,
+  organizacion: 200,
+  mensaje: 5000,
+};
+
 export async function POST(request: Request) {
+  // Rate limiting check
+  const headersList = await headers();
+  const clientIp = getClientIp(headersList);
+
+  if (isRateLimited(clientIp)) {
+    return NextResponse.json(
+      { error: 'Demasiadas solicitudes. Por favor, intente más tarde.' },
+      { status: 429 }
+    );
+  }
+
   let payload: ContactPayload;
 
   try {
@@ -35,6 +96,16 @@ export async function POST(request: Request) {
 
   if (!EMAIL_REGEX.test(email)) {
     return NextResponse.json({ error: 'Correo electrónico inválido.' }, { status: 400 });
+  }
+
+  // Input length validation
+  if (
+    nombre.length > MAX_LENGTH.nombre ||
+    email.length > MAX_LENGTH.email ||
+    organizacion.length > MAX_LENGTH.organizacion ||
+    mensaje.length > MAX_LENGTH.mensaje
+  ) {
+    return NextResponse.json({ error: 'Datos demasiado largos.' }, { status: 400 });
   }
 
   const apiKey = process.env.RESEND_API_KEY;
