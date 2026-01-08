@@ -295,7 +295,7 @@ export default function ABNLanding() {
               </p>
               <div className="mt-8 font-sans text-sm text-[#1a3a2f]/60">
                 <p>Lambaré, Paraguay</p>
-                <p className="mt-1">contacto@bir.com.py</p>
+                <p className="mt-1">anthony@bir.com.py</p>
               </div>
             </div>
             
