@@ -17,6 +17,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://bir.com.py'),
   title: "ABN | Agencia Bir Nuñez - Consultoría en Transformación Institucional",
   description: "Diseñamos sistemas de gobernanza, educación y tecnología para organizaciones que perduran. Consultoría institucional en Paraguay.",
   keywords: ["consultoría", "transformación institucional", "Paraguay", "educación", "gobernanza", "tecnología"],
