@@ -40,6 +40,12 @@ export default function ABNLanding() {
             <span className="font-medium tracking-wide text-sm">AGENCIA BIR NUÑEZ</span>
           </div>
           <div className="flex items-center gap-6">
+            <a href="#divisiones" className="text-sm font-medium hover:text-[#b87333] transition-colors hidden md:block">
+              Divisiones
+            </a>
+            <a href="#casos" className="text-sm font-medium hover:text-[#b87333] transition-colors hidden md:block">
+              Casos
+            </a>
             <a href="#equipo" className="text-sm font-medium hover:text-[#b87333] transition-colors hidden md:block">
               Equipo
             </a>
@@ -55,16 +61,18 @@ export default function ABNLanding() {
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl fade-in">
             <p className="font-sans text-sm tracking-widest text-[#b87333] mb-4 uppercase">
-              Consultoría Familiar en Transformación Institucional
+              Para colegios, ONGs e iglesias en Paraguay
             </p>
             <div className="w-12 h-px bg-[#b87333]/50 mb-8" />
             <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl leading-tight mb-8">
               Estructura honesta para organizaciones que perduran
             </h1>
             <p className="font-sans text-lg md:text-xl text-[#1a3a2f]/70 leading-relaxed max-w-2xl mb-10">
-              Somos una consultora familiar con cuatro divisiones especializadas:
-              educación, tecnología, derecho de niñez, y gestión financiera.
-              Diseñamos sistemas que funcionan cuando nosotros no estamos.
+              Consultora familiar con experiencia corporativa internacional
+              y cuatro divisiones especializadas: educación, tecnología,
+              derecho de niñez, y gestión financiera. Diseñamos sistemas que
+              funcionan cuando nosotros no estamos — reemplazando planillas,
+              consultores que desaparecen, y procesos que dependen de una sola persona.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -140,13 +148,13 @@ export default function ABNLanding() {
               <p className="font-sans text-sm text-[#FAF8F5]/60 mb-4">Director: Anthony Bir</p>
               <p className="font-sans text-[#FAF8F5]/70 leading-relaxed mb-6">
                 Aplicaciones a medida para organizaciones que superaron Excel
-                pero no necesitan software empresarial. Desarrollamos con AI agents
-                y metodologías modernas.
+                pero no necesitan software empresarial. Nuestro motor editorial
+                genera materiales educativos completos con inteligencia artificial.
               </p>
               <ul className="font-sans text-sm space-y-2 text-[#FAF8F5]/60">
                 <li>• Sistemas de gestión escolar</li>
+                <li>• Motor editorial con IA</li>
                 <li>• Plataformas de tesorería</li>
-                <li>• Automatización de procesos</li>
                 <li>• Dashboards administrativos</li>
               </ul>
             </div>
@@ -256,9 +264,9 @@ export default function ABNLanding() {
                   </div>
                 </div>
                 <p className="font-sans text-[#1a3a2f]/70 leading-relaxed mb-6">
-                  Plataforma integral para administración de institución educativa:
-                  matrículas, calificaciones, asistencia, comunicación con padres,
-                  gestión docente, y reportes al MEC.
+                  Plataforma integral para administración escolar: matrículas,
+                  calificaciones, asistencia, gestión docente, y reportes al MEC
+                  — con un motor editorial que genera materiales de clase con IA.
                 </p>
                 <ul className="font-sans text-sm space-y-2 text-[#1a3a2f]/60">
                   <li className="flex items-center gap-2">
@@ -271,13 +279,13 @@ export default function ABNLanding() {
                     <svg className="w-4 h-4 text-[#b87333] shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    Next.js 15 + TypeScript + Supabase
+                    Generación de materiales semanales con IA
                   </li>
                   <li className="flex items-center gap-2">
                     <svg className="w-4 h-4 text-[#b87333] shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    Integración con requisitos MEC Paraguay
+                    Alineado al programa oficial del MEC Paraguay
                   </li>
                 </ul>
               </div>
@@ -339,6 +347,87 @@ export default function ABNLanding() {
                   className="w-full h-auto"
                 />
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AI Motor — Editorial AENA */}
+      <section className="px-6 md:px-12 py-20 md:py-28 bg-[#1a3a2f] text-[#FAF8F5] overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+            {/* Copy */}
+            <div className="scroll-reveal">
+              <p className="font-sans text-sm tracking-widest text-[#b87333] mb-4 uppercase">
+                Nuestro Motor de IA
+              </p>
+              <h2 className="font-serif text-3xl md:text-4xl leading-tight mb-6">
+                Tu docente planifica una vez. Sale con toda la semana lista.
+              </h2>
+              <p className="font-sans text-[#FAF8F5]/70 leading-relaxed mb-8">
+                Editorial AENA reemplaza las horas que tus docentes pasan
+                cada fin de semana armando fichas, evaluaciones y comunicados.
+                El sistema toma la planificación semanal y genera seis materiales
+                completos, alineados al programa del MEC Paraguay, listos para
+                imprimir el lunes.
+              </p>
+
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-[#b87333]/20 rounded-sm flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="text-[#b87333] font-serif text-sm">1</span>
+                  </div>
+                  <div>
+                    <p className="font-sans font-medium text-sm">La docente carga su plan semanal</p>
+                    <p className="font-sans text-xs text-[#FAF8F5]/50">Objetivos, indicadores, estilo de enseñanza — lo que ya hace</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-[#b87333]/20 rounded-sm flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="text-[#b87333] font-serif text-sm">2</span>
+                  </div>
+                  <div>
+                    <p className="font-sans font-medium text-sm">La IA genera 6 materiales en minutos</p>
+                    <p className="font-sans text-xs text-[#FAF8F5]/50">Texto base, ficha, evaluación, comunicado, guía, y rúbrica</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-[#b87333]/20 rounded-sm flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="text-[#b87333] font-serif text-sm">3</span>
+                  </div>
+                  <div>
+                    <p className="font-sans font-medium text-sm">Revisa, aprueba, imprime</p>
+                    <p className="font-sans text-xs text-[#FAF8F5]/50">DOCX y PDF listos — el docente siempre tiene la última palabra</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-2">
+                {['Texto base', 'Ficha de trabajo', 'Evaluación', 'Comunicación a padres', 'Guía de cuaderno', 'Rúbrica'].map((tag) => (
+                  <span
+                    key={tag}
+                    className="font-sans text-xs px-3 py-1.5 bg-[#FAF8F5]/10 rounded-sm text-[#FAF8F5]/70 border border-[#FAF8F5]/10"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Screenshot */}
+            <div className="scroll-reveal">
+              <div className="screenshot-frame rounded-lg overflow-hidden shadow-2xl border border-[#FAF8F5]/10">
+                <Image
+                  src="/screenshots/editorial-aena.png"
+                  alt="Editorial AENA — Hub de generación de materiales educativos con IA"
+                  width={2814}
+                  height={1808}
+                  className="w-full h-auto"
+                />
+              </div>
+              <p className="font-sans text-xs text-[#FAF8F5]/30 mt-4 text-center">
+                Editorial AENA — Generador semanal de materiales educativos
+              </p>
             </div>
           </div>
         </div>
@@ -418,10 +507,11 @@ export default function ABNLanding() {
                 Herramientas empresariales para organizaciones de escala humana
               </h2>
               <p className="font-sans text-[#FAF8F5]/70 leading-relaxed">
-                Las escuelas, iglesias y organizaciones comunitarias merecen
-                herramientas tan sofisticadas como las de las corporaciones,
-                pero diseñadas para su realidad: presupuestos ajustados,
-                equipos pequeños, y la necesidad de que las cosas simplemente funcionen.
+                Traemos metodologías de corporaciones globales (Heinz, Thermo Fisher)
+                al contexto de escuelas, iglesias y ONGs en Paraguay. Tu institución
+                merece herramientas tan sofisticadas como las de las grandes empresas,
+                pero diseñadas para tu realidad: presupuestos ajustados, equipos
+                pequeños, y la necesidad de que las cosas simplemente funcionen.
               </p>
             </div>
             <div className="space-y-6">
@@ -462,9 +552,9 @@ export default function ABNLanding() {
             <div className="font-sans text-[#1a3a2f]/70 leading-relaxed space-y-4">
               <p>
                 ABN nace de la convergencia de trayectorias: experiencia corporativa
-                internacional (Heinz, Thermo Fisher), dos décadas de servicio pastoral
-                y educativo en Paraguay, y la visión compartida de una familia
-                comprometida con el desarrollo institucional.
+                internacional, dos décadas de servicio pastoral y educativo en Paraguay,
+                y la visión compartida de una familia comprometida con el desarrollo
+                institucional.
               </p>
               <p>
                 Trabajamos con instituciones que entienden que la excelencia operativa
@@ -473,14 +563,14 @@ export default function ABNLanding() {
             </div>
             <div className="font-sans text-[#1a3a2f]/70 leading-relaxed space-y-4">
               <p>
-                En 2024, nuestro director de tecnología construyó —usando metodologías
-                de inteligencia artificial— los sistemas que hoy usamos internamente.
-                Esa experiencia nos demostró que las organizaciones pequeñas pueden
-                acceder a herramientas de nivel empresarial sin presupuestos corporativos.
+                Cada sistema que ofrecemos lo usamos nosotros primero. AENA Admin
+                gestiona nuestra propia institución educativa. IPUPY Tesorería
+                administra las finanzas de nuestra organización eclesiástica.
+                No vendemos software que no probamos en nuestra propia realidad.
               </p>
               <p className="text-[#1a3a2f] font-medium">
-                Dos sistemas en producción. Tecnología construida con IA.
-                Resultados reales para instituciones reales.
+                Dos sistemas en producción. Probados internamente antes de
+                ofrecerlos a otras instituciones.
               </p>
             </div>
           </div>
