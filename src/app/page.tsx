@@ -54,6 +54,22 @@ export default function ABNLanding() {
             </a>
           </div>
         </nav>
+        <div className="md:hidden px-6 md:px-12 pb-4 max-w-7xl mx-auto">
+          <div className="mobile-nav-strip flex gap-2 overflow-x-auto pb-1">
+            <a href="#divisiones" className="mobile-nav-chip">
+              Divisiones
+            </a>
+            <a href="#casos" className="mobile-nav-chip">
+              Casos
+            </a>
+            <a href="#equipo" className="mobile-nav-chip">
+              Equipo
+            </a>
+            <a href="#contacto" className="mobile-nav-chip">
+              Contacto
+            </a>
+          </div>
+        </div>
       </header>
 
       {/* Hero */}
@@ -68,12 +84,12 @@ export default function ABNLanding() {
               Estructura donde otros improvisan
             </h1>
             <p className="font-sans text-lg md:text-xl text-[#1a3a2f]/70 leading-relaxed max-w-2xl mb-10">
-              Consultora familiar con experiencia corporativa internacional
-              y cuatro divisiones especializadas: educación, tecnología,
-              derecho de niñez, y gestión financiera. Diseñamos sistemas donde
-              la institución define el estándar y la tecnología lo ejecuta
-              — reemplazando planillas, consultores que desaparecen, y procesos
-              que dependen de una sola persona.
+              Consultora familiar con experiencia corporativa internacional y
+              cuatro divisiones especializadas en educación, tecnología,
+              derecho de la niñez y gestión financiera. Diseñamos sistemas
+              para que la institución marque el estándar y la tecnología lo
+              ejecute, sin depender de planillas, consultores pasajeros ni
+              procesos atados a una sola persona.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -99,24 +115,25 @@ export default function ABNLanding() {
       </section>
 
       {/* Social Proof - Stats */}
-      <section className="px-6 md:px-12 py-12 bg-white border-y border-[#1a3a2f]/10">
+      <section className="relative px-6 md:px-12 py-12 bg-white border-y border-[#1a3a2f]/10 overflow-hidden">
+        <div className="proof-background" aria-hidden="true" />
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center relative">
+            <div className="proof-card">
               <p className="font-serif text-3xl md:text-4xl text-[#1a3a2f]">4</p>
               <p className="font-sans text-sm text-[#1a3a2f]/60 mt-1">Divisiones especializadas</p>
             </div>
-            <div>
+            <div className="proof-card">
               <p className="font-serif text-3xl md:text-4xl text-[#1a3a2f]">2</p>
-              <p className="font-sans text-sm text-[#1a3a2f]/60 mt-1">Sistemas en producción</p>
+              <p className="font-sans text-sm text-[#1a3a2f]/60 mt-1">Sistemas propios en producción</p>
             </div>
-            <div>
+            <div className="proof-card">
               <p className="font-serif text-3xl md:text-4xl text-[#1a3a2f]">20+</p>
-              <p className="font-sans text-sm text-[#1a3a2f]/60 mt-1">Años en Paraguay</p>
+              <p className="font-sans text-sm text-[#1a3a2f]/60 mt-1">Años de experiencia local</p>
             </div>
-            <div>
-              <p className="font-serif text-3xl md:text-4xl text-[#1a3a2f]">100%</p>
-              <p className="font-sans text-sm text-[#1a3a2f]/60 mt-1">Consultoría familiar</p>
+            <div className="proof-card">
+              <p className="font-serif text-3xl md:text-4xl text-[#1a3a2f]">1</p>
+              <p className="font-sans text-sm text-[#1a3a2f]/60 mt-1">Equipo familiar con ejecución directa</p>
             </div>
           </div>
         </div>
@@ -441,57 +458,68 @@ export default function ABNLanding() {
         <div className="max-w-7xl mx-auto scroll-reveal">
           <div className="mb-16">
             <p className="font-sans text-sm tracking-widest text-[#b87333] mb-4 uppercase">
-              Paquetes
+              Formas de trabajo
             </p>
-            <h2 className="font-serif text-3xl md:text-4xl line-accent">Soluciones integradas</h2>
+            <h2 className="font-serif text-3xl md:text-4xl line-accent">Cómo empezamos y cómo escalamos</h2>
+            <p className="font-sans text-[#1a3a2f]/70 leading-relaxed max-w-3xl mt-6">
+              No vendemos una caja cerrada. Empezamos con un diagnóstico claro,
+              definimos una hoja de ruta y ejecutamos por fases según el nivel
+              de madurez de tu institución.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Institutional Package */}
-            <div className="card-hover bg-[#FAF8F5] p-8 rounded-sm border border-[#1a3a2f]/10">
-              <h3 className="font-serif text-xl mb-2">Paquete Institucional</h3>
-              <p className="font-sans text-sm text-[#b87333] mb-4">Para colegios 150-500 alumnos</p>
+            <div className="card-hover engagement-card bg-[#FAF8F5] p-8 rounded-sm border border-[#1a3a2f]/10">
+              <p className="engagement-step">01</p>
+              <h3 className="font-serif text-xl mb-2">Diagnóstico Institucional</h3>
+              <p className="font-sans text-sm text-[#b87333] mb-4">Para colegios, ONGs e iglesias que necesitan ordenar primero</p>
               <p className="font-sans text-[#1a3a2f]/70 leading-relaxed mb-6">
-                Transformación completa: auditoría pedagógica, compliance legal,
-                setup contable, y dashboard integrado.
+                Auditamos operación, estructura y puntos de riesgo para definir
+                qué conviene resolver ahora, qué puede esperar y qué sistema
+                hace falta construir.
               </p>
               <ul className="font-sans text-sm space-y-2 text-[#1a3a2f]/60">
-                <li>• 4 divisiones trabajando en conjunto</li>
-                <li>• Diagnóstico inicial completo</li>
-                <li>• Implementación escalonada</li>
-                <li>• Soporte continuo</li>
+                <li>• Diagnóstico operativo e institucional</li>
+                <li>• Priorización de riesgos y cuellos de botella</li>
+                <li>• Recomendación por división</li>
+                <li>• Hoja de ruta inicial</li>
               </ul>
             </div>
 
             {/* ONG Package */}
-            <div className="card-hover bg-[#FAF8F5] p-8 rounded-sm border border-[#1a3a2f]/10">
-              <h3 className="font-serif text-xl mb-2">Paquete ONG</h3>
-              <p className="font-sans text-sm text-[#b87333] mb-4">Para organizaciones sin fines de lucro</p>
+            <div className="card-hover engagement-card bg-[#FAF8F5] p-8 rounded-sm border border-[#1a3a2f]/10">
+              <p className="engagement-step">02</p>
+              <h3 className="font-serif text-xl mb-2">Implementación por Frente</h3>
+              <p className="font-sans text-sm text-[#b87333] mb-4">Para instituciones que ya saben qué problema quieren resolver</p>
               <p className="font-sans text-[#1a3a2f]/70 leading-relaxed mb-6">
-                Estructura legal para niñez + sistema contable y reporting
-                para transparencia y rendición de cuentas.
+                Ejecutamos una división o combinamos varias: educación,
+                tecnología, derecho de la niñez o gestión financiera, con un
+                alcance definido y responsables claros.
               </p>
               <ul className="font-sans text-sm space-y-2 text-[#1a3a2f]/60">
-                <li>• División Legal + Financiera</li>
-                <li>• Protocolos CODENI</li>
-                <li>• Sistema de tesorería</li>
-                <li>• Reportes de auditoría</li>
+                <li>• Proyecto por división o por problema</li>
+                <li>• Alcance, entregables y responsables definidos</li>
+                <li>• Implementación escalonada</li>
+                <li>• Capacitación del equipo interno</li>
               </ul>
             </div>
 
             {/* Consulting */}
-            <div className="card-hover bg-[#FAF8F5] p-8 rounded-sm border border-[#1a3a2f]/10">
-              <h3 className="font-serif text-xl mb-2">Consultoría Puntual</h3>
-              <p className="font-sans text-sm text-[#b87333] mb-4">Por división, tarifas independientes</p>
+            <div className="card-hover engagement-card bg-[#FAF8F5] p-8 rounded-sm border border-[#1a3a2f]/10">
+              <p className="engagement-step">03</p>
+              <h3 className="font-serif text-xl mb-2">Acompañamiento Integral</h3>
+              <p className="font-sans text-sm text-[#b87333] mb-4">Para instituciones que necesitan ejecución continua y coordinación central</p>
               <p className="font-sans text-[#1a3a2f]/70 leading-relaxed mb-6">
-                Proyectos específicos con la división que necesites:
-                auditoría, capacitación, implementación, o asesoría.
+                Coordinamos varias divisiones sobre una misma hoja de ruta para
+                que la institución avance sin fragmentarse entre proveedores,
+                planillas y decisiones aisladas.
               </p>
               <ul className="font-sans text-sm space-y-2 text-[#1a3a2f]/60">
-                <li>• Diagnósticos puntuales</li>
-                <li>• Talleres y capacitaciones</li>
-                <li>• Implementación de sistemas</li>
-                <li>• Asesoría por proyecto</li>
+                <li>• Dirección transversal del proyecto</li>
+                <li>• Varias divisiones trabajando sobre la misma prioridad</li>
+                <li>• Seguimiento y ajustes continuos</li>
+                <li>• Un solo equipo responsable del avance</li>
               </ul>
             </div>
           </div>
@@ -620,8 +648,9 @@ export default function ABNLanding() {
             ¿Necesitás transformar tu institución?
           </h2>
           <p className="font-sans text-[#1a3a2f]/70 mb-6 max-w-2xl mx-auto">
-            Conversemos sobre tu organización y cómo nuestras divisiones
-            pueden trabajar juntas para resolver tus desafíos.
+            Si ya sabés que Excel, WhatsApp y decisiones improvisadas no
+            alcanzan, conversemos. Te ayudamos a ordenar primero y escalar
+            después.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -659,7 +688,7 @@ export default function ABNLanding() {
               <p className="font-sans text-[#1a3a2f]/70 leading-relaxed mt-12">
                 Cada proyecto comienza con una conversación. Contanos sobre
                 tu institución y los desafíos que enfrentás. Respondemos
-                dentro de 48 horas hábiles.
+                normalmente dentro de 48 horas hábiles.
               </p>
               <div className="mt-8 font-sans text-sm text-[#1a3a2f]/60">
                 <p>Lambaré, Paraguay</p>

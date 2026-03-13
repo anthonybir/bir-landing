@@ -77,8 +77,9 @@ export default function ContactForm() {
         autoComplete="off"
       />
       <div>
-        <label className="font-sans text-sm font-medium block mb-2">Nombre</label>
+        <label htmlFor="nombre" className="font-sans text-sm font-medium block mb-2">Nombre</label>
         <input
+          id="nombre"
           type="text"
           name="nombre"
           required
@@ -88,8 +89,9 @@ export default function ContactForm() {
         />
       </div>
       <div>
-        <label className="font-sans text-sm font-medium block mb-2">Correo electrónico</label>
+        <label htmlFor="email" className="font-sans text-sm font-medium block mb-2">Correo electrónico</label>
         <input
+          id="email"
           type="email"
           name="email"
           required
@@ -99,8 +101,9 @@ export default function ContactForm() {
         />
       </div>
       <div>
-        <label className="font-sans text-sm font-medium block mb-2">Organización</label>
+        <label htmlFor="organizacion" className="font-sans text-sm font-medium block mb-2">Organización</label>
         <input
+          id="organizacion"
           type="text"
           name="organizacion"
           value={formData.organizacion}
@@ -109,8 +112,9 @@ export default function ContactForm() {
         />
       </div>
       <div>
-        <label className="font-sans text-sm font-medium block mb-2">Mensaje</label>
+        <label htmlFor="mensaje" className="font-sans text-sm font-medium block mb-2">Mensaje</label>
         <textarea
+          id="mensaje"
           name="mensaje"
           rows={4}
           required
