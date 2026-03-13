@@ -241,101 +241,101 @@ export default function ABNLanding() {
             <h2 className="font-serif text-3xl md:text-4xl line-accent">Sistemas que construimos y usamos</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="space-y-16">
             {/* AENA Case */}
-            <div className="card-hover bg-white p-8 md:p-10 rounded-sm border border-[#1a3a2f]/10">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 stat-card rounded-sm flex items-center justify-center">
-                  <span className="text-[#FAF8F5] font-serif text-xl">A</span>
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+              <div>
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 stat-card rounded-sm flex items-center justify-center">
+                    <span className="text-[#FAF8F5] font-serif text-xl">A</span>
+                  </div>
+                  <div>
+                    <h3 className="font-serif text-xl">AENA Admin</h3>
+                    <p className="font-sans text-sm text-[#1a3a2f]/60">Sistema de Gestión Escolar</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-serif text-xl">AENA Admin</h3>
-                  <p className="font-sans text-sm text-[#1a3a2f]/60">Sistema de Gestión Escolar</p>
-                </div>
+                <p className="font-sans text-[#1a3a2f]/70 leading-relaxed mb-6">
+                  Plataforma integral para administración de institución educativa:
+                  matrículas, calificaciones, asistencia, comunicación con padres,
+                  gestión docente, y reportes al MEC.
+                </p>
+                <ul className="font-sans text-sm space-y-2 text-[#1a3a2f]/60">
+                  <li className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-[#b87333] shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    En producción desde 2024
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-[#b87333] shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Next.js 15 + TypeScript + Supabase
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-[#b87333] shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Integración con requisitos MEC Paraguay
+                  </li>
+                </ul>
               </div>
-              <p className="font-sans text-[#1a3a2f]/70 leading-relaxed mb-6">
-                Plataforma integral para administración de institución educativa:
-                matrículas, calificaciones, asistencia, comunicación con padres,
-                gestión docente, y reportes al MEC.
-              </p>
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="bg-[#FAF8F5] p-4 rounded-sm">
-                  <p className="font-serif text-2xl text-[#1a3a2f]">284K</p>
-                  <p className="font-sans text-xs text-[#1a3a2f]/60">Líneas de código</p>
-                </div>
-                <div className="bg-[#FAF8F5] p-4 rounded-sm">
-                  <p className="font-serif text-2xl text-[#1a3a2f]">1,378</p>
-                  <p className="font-sans text-xs text-[#1a3a2f]/60">Archivos TypeScript</p>
-                </div>
+              <div className="screenshot-frame rounded-lg overflow-hidden shadow-xl border border-[#1a3a2f]/10">
+                <img
+                  src="/screenshots/aena-dashboard.png"
+                  alt="AENA Admin — Dashboard con asistencia por grado"
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
               </div>
-              <ul className="font-sans text-sm space-y-2 text-[#1a3a2f]/60">
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-[#b87333]" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  En producción desde 2024
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-[#b87333]" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Next.js 15 + TypeScript + Supabase
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-[#b87333]" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Integración con requisitos MEC Paraguay
-                </li>
-              </ul>
             </div>
 
             {/* IPUPY Case */}
-            <div className="card-hover bg-white p-8 md:p-10 rounded-sm border border-[#1a3a2f]/10">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 stat-card rounded-sm flex items-center justify-center">
-                  <span className="text-[#FAF8F5] font-serif text-xl">I</span>
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+              <div className="md:order-2">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 stat-card rounded-sm flex items-center justify-center">
+                    <span className="text-[#FAF8F5] font-serif text-xl">I</span>
+                  </div>
+                  <div>
+                    <h3 className="font-serif text-xl">IPUPY Tesorería</h3>
+                    <p className="font-sans text-sm text-[#1a3a2f]/60">Sistema de Gestión Financiera</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-serif text-xl">IPUPY Tesorería</h3>
-                  <p className="font-sans text-sm text-[#1a3a2f]/60">Sistema de Gestión Financiera</p>
-                </div>
+                <p className="font-sans text-[#1a3a2f]/70 leading-relaxed mb-6">
+                  Plataforma de tesorería para organización eclesiástica:
+                  control de ingresos/egresos, reportes financieros,
+                  gestión de múltiples congregaciones, y auditoría transparente.
+                </p>
+                <ul className="font-sans text-sm space-y-2 text-[#1a3a2f]/60">
+                  <li className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-[#b87333] shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    En producción desde 2024
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-[#b87333] shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Rendición de cuentas multi-nivel
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-[#b87333] shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Gobernanza eclesiástica transparente
+                  </li>
+                </ul>
               </div>
-              <p className="font-sans text-[#1a3a2f]/70 leading-relaxed mb-6">
-                Plataforma de tesorería para organización eclesiástica:
-                control de ingresos/egresos, reportes financieros,
-                gestión de múltiples congregaciones, y auditoría transparente.
-              </p>
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="bg-[#FAF8F5] p-4 rounded-sm">
-                  <p className="font-serif text-2xl text-[#1a3a2f]">240K</p>
-                  <p className="font-sans text-xs text-[#1a3a2f]/60">Líneas de código</p>
-                </div>
-                <div className="bg-[#FAF8F5] p-4 rounded-sm">
-                  <p className="font-serif text-2xl text-[#1a3a2f]">1,093</p>
-                  <p className="font-sans text-xs text-[#1a3a2f]/60">Archivos TypeScript</p>
-                </div>
+              <div className="screenshot-frame rounded-lg overflow-hidden shadow-xl border border-[#1a3a2f]/10 md:order-1">
+                <img
+                  src="/screenshots/ipupy-dashboard.png"
+                  alt="IPUPY Tesorería — Dashboard financiero con ingresos y métricas"
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
               </div>
-              <ul className="font-sans text-sm space-y-2 text-[#1a3a2f]/60">
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-[#b87333]" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  En producción desde 2024
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-[#b87333]" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Rendición de cuentas multi-nivel
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-[#b87333]" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Gobernanza eclesiástica transparente
-                </li>
-              </ul>
             </div>
           </div>
         </div>
