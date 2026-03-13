@@ -70,9 +70,10 @@ export default function ABNLanding() {
             <p className="font-sans text-lg md:text-xl text-[#1a3a2f]/70 leading-relaxed max-w-2xl mb-10">
               Consultora familiar con experiencia corporativa internacional
               y cuatro divisiones especializadas: educación, tecnología,
-              derecho de niñez, y gestión financiera. Diseñamos sistemas que
-              funcionan cuando nosotros no estamos — reemplazando planillas,
-              consultores que desaparecen, y procesos que dependen de una sola persona.
+              derecho de niñez, y gestión financiera. Diseñamos sistemas donde
+              la institución define el estándar y la tecnología lo ejecuta
+              — reemplazando planillas, consultores que desaparecen, y procesos
+              que dependen de una sola persona.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -131,14 +132,15 @@ export default function ABNLanding() {
                 Nuestro Motor de IA
               </p>
               <h2 className="font-serif text-3xl md:text-4xl leading-tight mb-6">
-                Tu docente planifica una vez. Sale con toda la semana lista.
+                Tus docentes ya usan IA. La pregunta es: ¿quién define el estándar?
               </h2>
               <p className="font-sans text-[#FAF8F5]/70 leading-relaxed mb-8">
-                Editorial AENA reemplaza las horas que tus docentes pasan
-                cada fin de semana armando fichas, evaluaciones y comunicados.
-                El sistema toma la planificación semanal y genera seis materiales
-                completos, alineados al programa del MEC Paraguay, listos para
-                imprimir el lunes.
+                Hoy cada docente genera sus planes con ChatGPT de forma improvisada
+                — sin criterio institucional, sin alineación al MEC, sin coherencia
+                entre grados. Editorial AENA invierte esa lógica: la institución
+                define el estándar de aprendizaje, y la IA lo personaliza para cada
+                aula. Capacidades MEC, contexto local de tu colegio, planes anuales
+                y semanales — todo generado bajo una línea institucional consistente.
               </p>
 
               <div className="space-y-4 mb-8">
@@ -147,8 +149,8 @@ export default function ABNLanding() {
                     <span className="text-[#b87333] font-serif text-sm">1</span>
                   </div>
                   <div>
-                    <p className="font-sans font-medium text-sm">La docente carga su plan semanal</p>
-                    <p className="font-sans text-xs text-[#FAF8F5]/50">Objetivos, indicadores, estilo de enseñanza — lo que ya hace</p>
+                    <p className="font-sans font-medium text-sm">La institución configura su estándar</p>
+                    <p className="font-sans text-xs text-[#FAF8F5]/50">Capacidades MEC + contexto local + filosofía pedagógica del colegio</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -156,8 +158,8 @@ export default function ABNLanding() {
                     <span className="text-[#b87333] font-serif text-sm">2</span>
                   </div>
                   <div>
-                    <p className="font-sans font-medium text-sm">La IA genera 6 materiales en minutos</p>
-                    <p className="font-sans text-xs text-[#FAF8F5]/50">Texto base, ficha, evaluación, comunicado, guía, y rúbrica</p>
+                    <p className="font-sans font-medium text-sm">La IA genera planes y 6 materiales por semana</p>
+                    <p className="font-sans text-xs text-[#FAF8F5]/50">Texto base, ficha, evaluación, comunicado, guía, y rúbrica — alineados al estándar</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -165,8 +167,8 @@ export default function ABNLanding() {
                     <span className="text-[#b87333] font-serif text-sm">3</span>
                   </div>
                   <div>
-                    <p className="font-sans font-medium text-sm">Revisa, aprueba, imprime</p>
-                    <p className="font-sans text-xs text-[#FAF8F5]/50">DOCX y PDF listos — el docente siempre tiene la última palabra</p>
+                    <p className="font-sans font-medium text-sm">El docente revisa, ajusta, imprime</p>
+                    <p className="font-sans text-xs text-[#FAF8F5]/50">DOCX y PDF listos — el docente aporta su criterio, no su fin de semana</p>
                   </div>
                 </div>
               </div>
@@ -195,7 +197,7 @@ export default function ABNLanding() {
                 />
               </div>
               <p className="font-sans text-xs text-[#FAF8F5]/30 mt-4 text-center">
-                Editorial AENA — Generador semanal de materiales educativos
+                Editorial AENA — Planes y materiales generados bajo estándar institucional
               </p>
             </div>
           </div>
@@ -229,12 +231,12 @@ export default function ABNLanding() {
               <p className="font-sans text-sm text-[#FAF8F5]/60 mb-4">Director: Anthony Bir</p>
               <p className="font-sans text-[#FAF8F5]/70 leading-relaxed mb-6">
                 Aplicaciones a medida para organizaciones que superaron Excel
-                pero no necesitan software empresarial. Nuestro motor editorial
-                genera materiales educativos completos con inteligencia artificial.
+                pero no necesitan software empresarial. Nuestro motor de IA
+                genera planes y materiales bajo el estándar que define la institución.
               </p>
               <ul className="font-sans text-sm space-y-2 text-[#FAF8F5]/60">
                 <li>• Sistemas de gestión escolar</li>
-                <li>• Motor editorial con IA</li>
+                <li>• Motor de IA con estándar institucional</li>
                 <li>• Plataformas de tesorería</li>
                 <li>• Dashboards administrativos</li>
               </ul>
@@ -255,13 +257,14 @@ export default function ABNLanding() {
               </div>
               <p className="font-sans text-sm text-[#1a3a2f]/60 mb-4">Directora: Diana Nuñez de Bir</p>
               <p className="font-sans text-[#1a3a2f]/70 leading-relaxed mb-6">
-                Rediseño curricular, marcos de evaluación accesibles, y sistemas
-                administrativos que liberan a docentes para enseñar.
+                Rediseño curricular, marcos de evaluación accesibles, y el estándar
+                institucional que alimenta nuestro motor de IA — para que cada
+                docente trabaje dentro de una línea coherente definida por la institución.
               </p>
               <ul className="font-sans text-sm space-y-2 text-[#1a3a2f]/60">
                 <li>• Diagnóstico institucional</li>
+                <li>• Estándar pedagógico institucional</li>
                 <li>• Diseño de rúbricas y evaluación</li>
-                <li>• Capacitación docente</li>
                 <li>• Cumplimiento MEC Paraguay</li>
               </ul>
             </div>
@@ -347,7 +350,7 @@ export default function ABNLanding() {
                 <p className="font-sans text-[#1a3a2f]/70 leading-relaxed mb-6">
                   Plataforma integral para administración escolar: matrículas,
                   calificaciones, asistencia, gestión docente, y reportes al MEC
-                  — con un motor editorial que genera materiales de clase con IA.
+                  — con un motor de IA que genera materiales bajo el estándar institucional, no al criterio individual de cada docente.
                 </p>
                 <ul className="font-sans text-sm space-y-2 text-[#1a3a2f]/60">
                   <li className="flex items-center gap-2">
@@ -504,33 +507,33 @@ export default function ABNLanding() {
                 Nuestra Filosofía
               </p>
               <h2 className="font-serif text-3xl md:text-4xl leading-tight mb-6">
-                Herramientas empresariales para organizaciones de escala humana
+                Sistemas que controlan la IA — no al revés
               </h2>
               <p className="font-sans text-[#FAF8F5]/70 leading-relaxed">
-                Traemos metodologías de corporaciones globales (Heinz, Thermo Fisher)
-                al contexto de escuelas, iglesias y ONGs en Paraguay. Tu institución
-                merece herramientas tan sofisticadas como las de las grandes empresas,
-                pero diseñadas para tu realidad: presupuestos ajustados, equipos
-                pequeños, y la necesidad de que las cosas simplemente funcionen.
+                La IA es una herramienta poderosa, pero sin estructura institucional
+                produce resultados aleatorios. Traemos metodologías de corporaciones
+                globales (Heinz, Thermo Fisher) al contexto de escuelas, iglesias
+                y ONGs en Paraguay — diseñando sistemas donde la institución define
+                el estándar y la tecnología lo ejecuta a escala.
               </p>
             </div>
             <div className="space-y-6">
               <div className="border-l-2 border-[#b87333] pl-6">
+                <h3 className="font-serif text-xl mb-2">La institución manda, la IA obedece</h3>
+                <p className="font-sans text-sm text-[#FAF8F5]/60">
+                  Vos definís el estándar de aprendizaje. La IA genera los materiales dentro de ese marco.
+                </p>
+              </div>
+              <div className="border-l-2 border-[#b87333] pl-6">
                 <h3 className="font-serif text-xl mb-2">Estructura, no dependencia</h3>
                 <p className="font-sans text-sm text-[#FAF8F5]/60">
-                  Sistemas que funcionan cuando los consultores se van.
+                  Sistemas que funcionan cuando los consultores se van y cuando la IA cambia.
                 </p>
               </div>
               <div className="border-l-2 border-[#b87333] pl-6">
-                <h3 className="font-serif text-xl mb-2">Claridad sobre complejidad</h3>
+                <h3 className="font-serif text-xl mb-2">Contexto paraguayo, escala global</h3>
                 <p className="font-sans text-sm text-[#FAF8F5]/60">
-                  Procesos que cualquier miembro del equipo puede entender.
-                </p>
-              </div>
-              <div className="border-l-2 border-[#b87333] pl-6">
-                <h3 className="font-serif text-xl mb-2">Contexto paraguayo</h3>
-                <p className="font-sans text-sm text-[#FAF8F5]/60">
-                  20+ años viviendo y diseñando para la realidad local.
+                  20+ años diseñando para la realidad local con herramientas de clase mundial.
                 </p>
               </div>
             </div>
@@ -564,13 +567,14 @@ export default function ABNLanding() {
             <div className="font-sans text-[#1a3a2f]/70 leading-relaxed space-y-4">
               <p>
                 Cada sistema que ofrecemos lo usamos nosotros primero. AENA Admin
-                gestiona nuestra propia institución educativa. IPUPY Tesorería
-                administra las finanzas de nuestra organización eclesiástica.
-                No vendemos software que no probamos en nuestra propia realidad.
+                gestiona nuestra propia institución educativa — incluyendo el motor
+                de IA que genera planes y materiales bajo nuestro estándar
+                institucional, no el de ChatGPT. IPUPY Tesorería administra
+                las finanzas de nuestra organización eclesiástica.
               </p>
               <p className="text-[#1a3a2f] font-medium">
-                Dos sistemas en producción. Probados internamente antes de
-                ofrecerlos a otras instituciones.
+                Creemos que la IA funciona cuando la institución le pone los límites.
+                Lo probamos en nuestra propia realidad todos los días.
               </p>
             </div>
           </div>
