@@ -65,7 +65,7 @@ export default function ABNLanding() {
             </p>
             <div className="w-12 h-px bg-[#b87333]/50 mb-8" />
             <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl leading-tight mb-8">
-              Estructura honesta para organizaciones que perduran
+              Estructura donde otros improvisan
             </h1>
             <p className="font-sans text-lg md:text-xl text-[#1a3a2f]/70 leading-relaxed max-w-2xl mb-10">
               Consultora familiar con experiencia corporativa internacional

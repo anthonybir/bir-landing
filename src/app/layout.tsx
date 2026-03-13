@@ -19,12 +19,12 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   metadataBase: new URL('https://bir.com.py'),
   title: "ABN | Agencia Bir Nuñez - Consultoría en Transformación Institucional",
-  description: "Diseñamos sistemas de gobernanza, educación y tecnología para organizaciones que perduran. Consultoría institucional en Paraguay.",
+  description: "Consultoría institucional en Paraguay. Sistemas donde la institución define el estándar y la tecnología lo ejecuta — educación, derecho de niñez, gestión financiera.",
   keywords: ["consultoría", "transformación institucional", "Paraguay", "educación", "gobernanza", "tecnología"],
   authors: [{ name: "Agencia Bir Nuñez" }],
   openGraph: {
     title: "ABN | Consultoría en Transformación Institucional",
-    description: "Estructura honesta para organizaciones que perduran",
+    description: "Estructura donde otros improvisan",
     url: "https://bir.com.py",
     siteName: "Agencia Bir Nuñez",
     locale: "es_PY",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "ABN | Consultoría en Transformación Institucional",
-    description: "Estructura honesta para organizaciones que perduran",
+    description: "Estructura donde otros improvisan",
   },
 };
 
