@@ -121,6 +121,87 @@ export default function ABNLanding() {
         </div>
       </section>
 
+      {/* AI Motor — Editorial AENA */}
+      <section className="px-6 md:px-12 py-20 md:py-28 bg-[#1a3a2f] text-[#FAF8F5] overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+            {/* Copy */}
+            <div className="scroll-reveal">
+              <p className="font-sans text-sm tracking-widest text-[#b87333] mb-4 uppercase">
+                Nuestro Motor de IA
+              </p>
+              <h2 className="font-serif text-3xl md:text-4xl leading-tight mb-6">
+                Tu docente planifica una vez. Sale con toda la semana lista.
+              </h2>
+              <p className="font-sans text-[#FAF8F5]/70 leading-relaxed mb-8">
+                Editorial AENA reemplaza las horas que tus docentes pasan
+                cada fin de semana armando fichas, evaluaciones y comunicados.
+                El sistema toma la planificación semanal y genera seis materiales
+                completos, alineados al programa del MEC Paraguay, listos para
+                imprimir el lunes.
+              </p>
+
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-[#b87333]/20 rounded-sm flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="text-[#b87333] font-serif text-sm">1</span>
+                  </div>
+                  <div>
+                    <p className="font-sans font-medium text-sm">La docente carga su plan semanal</p>
+                    <p className="font-sans text-xs text-[#FAF8F5]/50">Objetivos, indicadores, estilo de enseñanza — lo que ya hace</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-[#b87333]/20 rounded-sm flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="text-[#b87333] font-serif text-sm">2</span>
+                  </div>
+                  <div>
+                    <p className="font-sans font-medium text-sm">La IA genera 6 materiales en minutos</p>
+                    <p className="font-sans text-xs text-[#FAF8F5]/50">Texto base, ficha, evaluación, comunicado, guía, y rúbrica</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-[#b87333]/20 rounded-sm flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="text-[#b87333] font-serif text-sm">3</span>
+                  </div>
+                  <div>
+                    <p className="font-sans font-medium text-sm">Revisa, aprueba, imprime</p>
+                    <p className="font-sans text-xs text-[#FAF8F5]/50">DOCX y PDF listos — el docente siempre tiene la última palabra</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-2">
+                {['Texto base', 'Ficha de trabajo', 'Evaluación', 'Comunicación a padres', 'Guía de cuaderno', 'Rúbrica'].map((tag) => (
+                  <span
+                    key={tag}
+                    className="font-sans text-xs px-3 py-1.5 bg-[#FAF8F5]/10 rounded-sm text-[#FAF8F5]/70 border border-[#FAF8F5]/10"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Screenshot */}
+            <div className="scroll-reveal">
+              <div className="screenshot-frame rounded-lg overflow-hidden shadow-2xl border border-[#FAF8F5]/10">
+                <Image
+                  src="/screenshots/editorial-aena.png"
+                  alt="Editorial AENA — Hub de generación de materiales educativos con IA"
+                  width={2814}
+                  height={1808}
+                  className="w-full h-auto"
+                />
+              </div>
+              <p className="font-sans text-xs text-[#FAF8F5]/30 mt-4 text-center">
+                Editorial AENA — Generador semanal de materiales educativos
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Divisions / Services */}
       <section id="divisiones" className="px-6 md:px-12 py-20 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto scroll-reveal">
@@ -347,87 +428,6 @@ export default function ABNLanding() {
                   className="w-full h-auto"
                 />
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* AI Motor — Editorial AENA */}
-      <section className="px-6 md:px-12 py-20 md:py-28 bg-[#1a3a2f] text-[#FAF8F5] overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-            {/* Copy */}
-            <div className="scroll-reveal">
-              <p className="font-sans text-sm tracking-widest text-[#b87333] mb-4 uppercase">
-                Nuestro Motor de IA
-              </p>
-              <h2 className="font-serif text-3xl md:text-4xl leading-tight mb-6">
-                Tu docente planifica una vez. Sale con toda la semana lista.
-              </h2>
-              <p className="font-sans text-[#FAF8F5]/70 leading-relaxed mb-8">
-                Editorial AENA reemplaza las horas que tus docentes pasan
-                cada fin de semana armando fichas, evaluaciones y comunicados.
-                El sistema toma la planificación semanal y genera seis materiales
-                completos, alineados al programa del MEC Paraguay, listos para
-                imprimir el lunes.
-              </p>
-
-              <div className="space-y-4 mb-8">
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-[#b87333]/20 rounded-sm flex items-center justify-center shrink-0 mt-0.5">
-                    <span className="text-[#b87333] font-serif text-sm">1</span>
-                  </div>
-                  <div>
-                    <p className="font-sans font-medium text-sm">La docente carga su plan semanal</p>
-                    <p className="font-sans text-xs text-[#FAF8F5]/50">Objetivos, indicadores, estilo de enseñanza — lo que ya hace</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-[#b87333]/20 rounded-sm flex items-center justify-center shrink-0 mt-0.5">
-                    <span className="text-[#b87333] font-serif text-sm">2</span>
-                  </div>
-                  <div>
-                    <p className="font-sans font-medium text-sm">La IA genera 6 materiales en minutos</p>
-                    <p className="font-sans text-xs text-[#FAF8F5]/50">Texto base, ficha, evaluación, comunicado, guía, y rúbrica</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-[#b87333]/20 rounded-sm flex items-center justify-center shrink-0 mt-0.5">
-                    <span className="text-[#b87333] font-serif text-sm">3</span>
-                  </div>
-                  <div>
-                    <p className="font-sans font-medium text-sm">Revisa, aprueba, imprime</p>
-                    <p className="font-sans text-xs text-[#FAF8F5]/50">DOCX y PDF listos — el docente siempre tiene la última palabra</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-2">
-                {['Texto base', 'Ficha de trabajo', 'Evaluación', 'Comunicación a padres', 'Guía de cuaderno', 'Rúbrica'].map((tag) => (
-                  <span
-                    key={tag}
-                    className="font-sans text-xs px-3 py-1.5 bg-[#FAF8F5]/10 rounded-sm text-[#FAF8F5]/70 border border-[#FAF8F5]/10"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Screenshot */}
-            <div className="scroll-reveal">
-              <div className="screenshot-frame rounded-lg overflow-hidden shadow-2xl border border-[#FAF8F5]/10">
-                <Image
-                  src="/screenshots/editorial-aena.png"
-                  alt="Editorial AENA — Hub de generación de materiales educativos con IA"
-                  width={2814}
-                  height={1808}
-                  className="w-full h-auto"
-                />
-              </div>
-              <p className="font-sans text-xs text-[#FAF8F5]/30 mt-4 text-center">
-                Editorial AENA — Generador semanal de materiales educativos
-              </p>
             </div>
           </div>
         </div>
