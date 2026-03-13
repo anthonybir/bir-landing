@@ -1,105 +1,33 @@
-'use client';
+import ContactForm from './ContactForm';
 
-import { useState, FormEvent, ChangeEvent } from 'react';
+const WHATSAPP_NUMBER = '595991402548';
+const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola, me interesa conocer más sobre los servicios de ABN.')}`;
 
-interface FormData {
-  nombre: string;
-  email: string;
-  organizacion: string;
-  mensaje: string;
-  website: string;
-}
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Agencia Bir Nuñez',
+  alternateName: 'ABN',
+  url: 'https://bir.com.py',
+  email: 'anthony@bir.com.py',
+  description:
+    'Consultoría familiar en transformación institucional. Educación, tecnología, derecho de niñez, y gestión financiera en Paraguay.',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Lambaré',
+    addressCountry: 'PY',
+  },
+  foundingDate: '2024',
+  knowsLanguage: ['es', 'en'],
+};
 
 export default function ABNLanding() {
-  const [formData, setFormData] = useState<FormData>({
-    nombre: '',
-    email: '',
-    organizacion: '',
-    mensaje: '',
-    website: '',
-  });
-  const [submitted, setSubmitted] = useState(false);
-  const [submitting, setSubmitting] = useState(false);
-  const [submitError, setSubmitError] = useState<string | null>(null);
-
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setSubmitting(true);
-    setSubmitError(null);
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
-      const data = await response.json();
-      if (!response.ok) {
-        throw new Error(data?.error || 'No se pudo enviar el mensaje.');
-      }
-      setSubmitted(true);
-    } catch (error) {
-      setSubmitError(error instanceof Error ? error.message : 'No se pudo enviar el mensaje.');
-    } finally {
-      setSubmitting(false);
-    }
-  };
-
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
   return (
     <div className="min-h-screen bg-[#FAF8F5] text-[#1a3a2f]">
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap');
-
-        .font-serif { font-family: 'DM Serif Display', Georgia, serif; }
-        .font-sans { font-family: 'Outfit', system-ui, sans-serif; }
-
-        .hero-gradient {
-          background: linear-gradient(180deg, #FAF8F5 0%, #f0ebe4 100%);
-        }
-
-        .card-hover {
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card-hover:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 20px 40px rgba(26, 58, 47, 0.08);
-        }
-
-        .input-focus:focus {
-          outline: none;
-          border-color: #1a3a2f;
-          box-shadow: 0 0 0 3px rgba(26, 58, 47, 0.1);
-        }
-
-        .fade-in {
-          animation: fadeIn 0.8s ease-out forwards;
-        }
-
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-
-        .line-accent {
-          position: relative;
-        }
-        .line-accent::after {
-          content: '';
-          position: absolute;
-          bottom: -8px;
-          left: 0;
-          width: 60px;
-          height: 2px;
-          background: #b87333;
-        }
-
-        .stat-card {
-          background: linear-gradient(135deg, #1a3a2f 0%, #2d5a4a 100%);
-        }
-      `}</style>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
       {/* Navigation */}
       <nav className="font-sans px-6 md:px-12 py-6 flex justify-between items-center max-w-7xl mx-auto">
@@ -136,16 +64,21 @@ export default function ABNLanding() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="#divisiones"
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="font-sans inline-flex items-center justify-center gap-2 bg-[#1a3a2f] text-[#FAF8F5] px-6 py-3 rounded-sm font-medium hover:bg-[#1a3a2f]/90 transition-colors"
               >
-                Conocer divisiones
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Escribinos por WhatsApp
               </a>
               <a
-                href="#casos"
+                href="#divisiones"
                 className="font-sans inline-flex items-center justify-center gap-2 text-sm font-medium border-2 border-[#1a3a2f] px-6 py-3 rounded-sm hover:bg-[#1a3a2f] hover:text-[#FAF8F5] transition-colors"
               >
-                Ver casos reales
+                Conocer divisiones
               </a>
             </div>
           </div>
@@ -161,16 +94,16 @@ export default function ABNLanding() {
               <p className="font-sans text-sm text-[#1a3a2f]/60 mt-1">Divisiones especializadas</p>
             </div>
             <div>
-              <p className="font-serif text-3xl md:text-4xl text-[#1a3a2f]">500K+</p>
-              <p className="font-sans text-sm text-[#1a3a2f]/60 mt-1">Líneas de código propias</p>
+              <p className="font-serif text-3xl md:text-4xl text-[#1a3a2f]">2</p>
+              <p className="font-sans text-sm text-[#1a3a2f]/60 mt-1">Sistemas en producción</p>
             </div>
             <div>
               <p className="font-serif text-3xl md:text-4xl text-[#1a3a2f]">20+</p>
               <p className="font-sans text-sm text-[#1a3a2f]/60 mt-1">Años en Paraguay</p>
             </div>
             <div>
-              <p className="font-serif text-3xl md:text-4xl text-[#1a3a2f]">2</p>
-              <p className="font-sans text-sm text-[#1a3a2f]/60 mt-1">Sistemas en producción</p>
+              <p className="font-serif text-3xl md:text-4xl text-[#1a3a2f]">100%</p>
+              <p className="font-sans text-sm text-[#1a3a2f]/60 mt-1">Consultoría familiar</p>
             </div>
           </div>
         </div>
@@ -534,14 +467,14 @@ export default function ABNLanding() {
             </div>
             <div className="font-sans text-[#1a3a2f]/70 leading-relaxed space-y-4">
               <p>
-                En 2024, nuestro director de tecnología construyó —sin background técnico,
-                usando AI agents— los sistemas que hoy usamos internamente. Esa experiencia
-                nos demostró que las organizaciones pequeñas pueden acceder a herramientas
-                de nivel empresarial sin presupuestos corporativos.
+                En 2024, nuestro director de tecnología construyó —usando metodologías
+                de inteligencia artificial— los sistemas que hoy usamos internamente.
+                Esa experiencia nos demostró que las organizaciones pequeñas pueden
+                acceder a herramientas de nivel empresarial sin presupuestos corporativos.
               </p>
               <p className="text-[#1a3a2f] font-medium">
-                500,000+ líneas de código. Dos sistemas en producción.
-                Cero desarrolladores contratados.
+                Dos sistemas en producción. Tecnología construida con IA.
+                Resultados reales para instituciones reales.
               </p>
             </div>
           </div>
@@ -590,12 +523,25 @@ export default function ABNLanding() {
             Conversemos sobre tu organización y cómo nuestras divisiones
             pueden trabajar juntas para resolver tus desafíos.
           </p>
-          <a
-            href="#contacto"
-            className="font-sans inline-flex items-center justify-center gap-2 bg-[#1a3a2f] text-[#FAF8F5] px-8 py-4 rounded-sm font-medium hover:bg-[#1a3a2f]/90 transition-colors"
-          >
-            Agendar conversación
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-sans inline-flex items-center justify-center gap-2 bg-[#1a3a2f] text-[#FAF8F5] px-8 py-4 rounded-sm font-medium hover:bg-[#1a3a2f]/90 transition-colors"
+            >
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+              Escribinos por WhatsApp
+            </a>
+            <a
+              href="#contacto"
+              className="font-sans inline-flex items-center justify-center gap-2 text-sm font-medium border-2 border-[#1a3a2f] px-8 py-4 rounded-sm hover:bg-[#1a3a2f] hover:text-[#FAF8F5] transition-colors"
+            >
+              Enviar mensaje
+            </a>
+          </div>
         </div>
       </section>
 
@@ -621,87 +567,7 @@ export default function ABNLanding() {
               </div>
             </div>
 
-            <div>
-              {submitted ? (
-                <div className="bg-[#FAF8F5] p-8 rounded-sm border border-[#1a3a2f]/10 text-center">
-                  <div className="w-12 h-12 bg-[#1a3a2f] rounded-sm flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-6 h-6 text-[#FAF8F5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <h3 className="font-serif text-xl mb-2">Mensaje enviado</h3>
-                  <p className="font-sans text-sm text-[#1a3a2f]/60">
-                    Gracias por contactarnos. Respondemos pronto.
-                  </p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <input
-                    type="text"
-                    name="website"
-                    value={formData.website}
-                    onChange={handleChange}
-                    className="hidden"
-                    tabIndex={-1}
-                    autoComplete="off"
-                  />
-                  <div>
-                    <label className="font-sans text-sm font-medium block mb-2">Nombre</label>
-                    <input
-                      type="text"
-                      name="nombre"
-                      required
-                      value={formData.nombre}
-                      onChange={handleChange}
-                      className="font-sans w-full px-4 py-3 bg-[#FAF8F5] border border-[#1a3a2f]/20 rounded-sm input-focus transition-all"
-                    />
-                  </div>
-                  <div>
-                    <label className="font-sans text-sm font-medium block mb-2">Correo electrónico</label>
-                    <input
-                      type="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="font-sans w-full px-4 py-3 bg-[#FAF8F5] border border-[#1a3a2f]/20 rounded-sm input-focus transition-all"
-                    />
-                  </div>
-                  <div>
-                    <label className="font-sans text-sm font-medium block mb-2">Organización</label>
-                    <input
-                      type="text"
-                      name="organizacion"
-                      value={formData.organizacion}
-                      onChange={handleChange}
-                      className="font-sans w-full px-4 py-3 bg-[#FAF8F5] border border-[#1a3a2f]/20 rounded-sm input-focus transition-all"
-                    />
-                  </div>
-                  <div>
-                    <label className="font-sans text-sm font-medium block mb-2">Mensaje</label>
-                    <textarea
-                      name="mensaje"
-                      rows={4}
-                      required
-                      value={formData.mensaje}
-                      onChange={handleChange}
-                      className="font-sans w-full px-4 py-3 bg-[#FAF8F5] border border-[#1a3a2f]/20 rounded-sm input-focus transition-all resize-none"
-                      placeholder="Contanos brevemente sobre tu organización y cómo podemos ayudar..."
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    disabled={submitting}
-                    className="font-sans w-full bg-[#1a3a2f] text-[#FAF8F5] py-4 rounded-sm font-medium hover:bg-[#1a3a2f]/90 transition-colors"
-                  >
-                    {submitting ? 'Enviando...' : 'Enviar mensaje'}
-                  </button>
-                  {submitError ? (
-                    <p className="font-sans text-sm text-[#b87333]">{submitError}</p>
-                  ) : null}
-                </form>
-              )}
-            </div>
+            <ContactForm />
           </div>
         </div>
       </section>
