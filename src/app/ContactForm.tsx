@@ -73,6 +73,7 @@ export default function ContactForm() {
         onChange={handleChange}
         className="hidden"
         tabIndex={-1}
+        aria-hidden="true"
         autoComplete="off"
       />
       <div>

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import ContactForm from './ContactForm';
 
 const WHATSAPP_NUMBER = '595991402548';
@@ -281,11 +282,12 @@ export default function ABNLanding() {
                 </ul>
               </div>
               <div className="screenshot-frame rounded-lg overflow-hidden shadow-xl border border-[#1a3a2f]/10">
-                <img
+                <Image
                   src="/screenshots/aena-dashboard.png"
                   alt="AENA Admin — Dashboard con asistencia por grado"
+                  width={2842}
+                  height={1794}
                   className="w-full h-auto"
-                  loading="lazy"
                 />
               </div>
             </div>
@@ -329,11 +331,12 @@ export default function ABNLanding() {
                 </ul>
               </div>
               <div className="screenshot-frame rounded-lg overflow-hidden shadow-xl border border-[#1a3a2f]/10 md:order-1">
-                <img
+                <Image
                   src="/screenshots/ipupy-dashboard.png"
                   alt="IPUPY Tesorería — Dashboard financiero con ingresos y métricas"
+                  width={2846}
+                  height={1822}
                   className="w-full h-auto"
-                  loading="lazy"
                 />
               </div>
             </div>

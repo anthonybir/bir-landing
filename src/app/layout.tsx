@@ -30,6 +30,11 @@ export const metadata: Metadata = {
     locale: "es_PY",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "ABN | Consultoría en Transformación Institucional",
+    description: "Estructura honesta para organizaciones que perduran",
+  },
 };
 
 export default function RootLayout({
