@@ -85,6 +85,7 @@ export default function ContactForm() {
           required
           value={formData.nombre}
           onChange={handleChange}
+          placeholder="Tu nombre completo"
           className="font-sans w-full px-4 py-3 bg-[#FAF8F5] border border-[#1a3a2f]/20 rounded-sm input-focus transition-all"
         />
       </div>
@@ -97,6 +98,7 @@ export default function ContactForm() {
           required
           value={formData.email}
           onChange={handleChange}
+          placeholder="correo@ejemplo.com"
           className="font-sans w-full px-4 py-3 bg-[#FAF8F5] border border-[#1a3a2f]/20 rounded-sm input-focus transition-all"
         />
       </div>
@@ -108,6 +110,7 @@ export default function ContactForm() {
           name="organizacion"
           value={formData.organizacion}
           onChange={handleChange}
+          placeholder="Nombre de tu colegio, ONG o iglesia"
           className="font-sans w-full px-4 py-3 bg-[#FAF8F5] border border-[#1a3a2f]/20 rounded-sm input-focus transition-all"
         />
       </div>
@@ -121,7 +124,7 @@ export default function ContactForm() {
           value={formData.mensaje}
           onChange={handleChange}
           className="font-sans w-full px-4 py-3 bg-[#FAF8F5] border border-[#1a3a2f]/20 rounded-sm input-focus transition-all resize-none"
-          placeholder="Contanos brevemente sobre tu organización y cómo podemos ayudar..."
+          placeholder="Contanos brevemente qué necesitás y sobre tu institución..."
         />
       </div>
       <button

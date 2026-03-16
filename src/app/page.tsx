@@ -49,8 +49,11 @@ export default function ABNLanding() {
             <a href="#equipo" className="text-sm font-medium hover:text-[#b87333] transition-colors hidden md:block">
               Equipo
             </a>
-            <a href="#contacto" className="text-sm font-medium hover:text-[#b87333] transition-colors">
-              Contacto
+            <a
+              href="#contacto"
+              className="text-sm font-medium bg-[#1a3a2f] text-[#FAF8F5] px-4 py-2 rounded-sm hover:bg-[#1a3a2f]/90 transition-colors hidden md:block"
+            >
+              Hablemos
             </a>
           </div>
         </nav>
@@ -72,40 +75,40 @@ export default function ABNLanding() {
         </div>
       </header>
 
-      {/* Hero */}
-      <section className="hero-gradient px-6 md:px-12 pt-16 pb-24 md:pt-24 md:pb-32">
-        <div className="max-w-7xl mx-auto">
-          <div className="max-w-3xl fade-in">
+      {/* Hero — dark background */}
+      <section className="hero-dark px-6 md:px-12 pt-20 pb-28 md:pt-28 md:pb-36">
+        <div className="max-w-7xl mx-auto relative">
+          <div className="max-w-4xl fade-in">
             <p className="font-sans text-sm tracking-widest text-[#b87333] mb-4 uppercase">
               Para colegios, ONGs e iglesias en Paraguay
             </p>
             <div className="w-12 h-px bg-[#b87333]/50 mb-8" />
-            <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl leading-tight mb-8">
-              Estructura donde otros improvisan
+            <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl xl:text-[5.5rem] leading-[1.05] mb-6">
+              <span className="hero-word">Estructura</span>
+              <span className="hero-word">donde</span>
+              <span className="hero-word">otros</span>
+              <span className="hero-word">improvisan</span>
             </h1>
-            <p className="font-sans text-lg md:text-xl text-[#1a3a2f]/70 leading-relaxed max-w-2xl mb-10">
-              Consultora familiar con experiencia corporativa internacional y
-              cuatro divisiones especializadas en educación, tecnología,
-              derecho de la niñez y gestión financiera. Diseñamos sistemas
-              para que la institución marque el estándar y la tecnología lo
-              ejecute, sin depender de planillas, consultores pasajeros ni
-              procesos atados a una sola persona.
+            <p className="font-sans text-lg md:text-xl text-[#FAF8F5]/60 leading-relaxed max-w-2xl mb-10">
+              Consultora familiar con cuatro divisiones especializadas.
+              Diseñamos sistemas para que la institución marque el estándar
+              y la tecnología lo ejecute.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary font-sans inline-flex items-center justify-center gap-2 bg-[#1a3a2f] text-[#FAF8F5] px-6 py-3 rounded-sm font-medium hover:bg-[#1a3a2f]/90"
+                className="btn-primary font-sans inline-flex items-center justify-center gap-2 bg-[#FAF8F5] text-[#1a3a2f] px-6 py-3 rounded-sm font-medium hover:bg-white"
               >
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                 </svg>
                 Escribinos por WhatsApp
               </a>
               <a
                 href="#divisiones"
-                className="btn-outline font-sans inline-flex items-center justify-center gap-2 text-sm font-medium border-2 border-[#1a3a2f] px-6 py-3 rounded-sm hover:bg-[#1a3a2f] hover:text-[#FAF8F5]"
+                className="btn-outline font-sans inline-flex items-center justify-center gap-2 text-sm font-medium border-2 border-[#FAF8F5]/30 text-[#FAF8F5] px-6 py-3 rounded-sm hover:bg-[#FAF8F5] hover:text-[#1a3a2f]"
               >
                 Conocer divisiones
               </a>
@@ -115,41 +118,44 @@ export default function ABNLanding() {
       </section>
 
       {/* Social Proof - Stats */}
-      <section className="relative px-6 md:px-12 py-12 bg-white border-y border-[#1a3a2f]/10 overflow-hidden">
+      <section className="relative px-6 md:px-12 py-14 md:py-16 bg-white border-y border-[#1a3a2f]/10 overflow-hidden">
         <div className="proof-background" aria-hidden="true" />
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center relative">
-            <div className="proof-card">
-              <p className="font-serif text-3xl md:text-4xl text-[#1a3a2f]">4</p>
-              <p className="font-sans text-sm text-[#1a3a2f]/60 mt-1">Divisiones especializadas</p>
-            </div>
             <div className="proof-card">
               <p className="font-serif text-3xl md:text-4xl text-[#1a3a2f]">2</p>
               <p className="font-sans text-sm text-[#1a3a2f]/60 mt-1">Sistemas propios en producción</p>
             </div>
             <div className="proof-card">
               <p className="font-serif text-3xl md:text-4xl text-[#1a3a2f]">20+</p>
-              <p className="font-sans text-sm text-[#1a3a2f]/60 mt-1">Años de experiencia local</p>
+              <p className="font-sans text-sm text-[#1a3a2f]/60 mt-1">Años de experiencia institucional</p>
             </div>
             <div className="proof-card">
-              <p className="font-serif text-3xl md:text-4xl text-[#1a3a2f]">1</p>
-              <p className="font-sans text-sm text-[#1a3a2f]/60 mt-1">Equipo familiar con ejecución directa</p>
+              <p className="font-serif text-3xl md:text-4xl text-[#1a3a2f]">4</p>
+              <p className="font-sans text-sm text-[#1a3a2f]/60 mt-1">Divisiones bajo un mismo equipo</p>
+            </div>
+            <div className="proof-card">
+              <p className="font-serif text-3xl md:text-4xl text-[#b87333]">100%</p>
+              <p className="font-sans text-sm text-[#1a3a2f]/60 mt-1">De lo que ofrecemos, lo usamos primero</p>
             </div>
           </div>
         </div>
       </section>
 
+      <div className="section-divider" />
+
       {/* AI Motor — Editorial AENA */}
-      <section className="px-6 md:px-12 py-20 md:py-28 bg-[#1a3a2f] text-[#FAF8F5] overflow-hidden">
+      <section className="px-6 md:px-12 py-24 md:py-32 bg-[#1a3a2f] text-[#FAF8F5] overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
             {/* Copy */}
-            <div className="scroll-reveal">
+            <div className="scroll-reveal-left">
               <p className="font-sans text-sm tracking-widest text-[#b87333] mb-4 uppercase">
                 Nuestro Motor de IA
               </p>
               <h2 className="font-serif text-3xl md:text-4xl leading-tight mb-6">
-                Tus docentes ya usan IA. La pregunta es: ¿quién define el estándar?
+                Tus docentes ya usan IA.<br />
+                <span className="text-[#b87333]">¿Quién define el estándar?</span>
               </h2>
               <p className="font-sans text-[#FAF8F5]/70 leading-relaxed mb-8">
                 Hoy cada docente genera sus planes con ChatGPT de forma improvisada
@@ -160,29 +166,23 @@ export default function ABNLanding() {
                 y semanales — todo generado bajo una línea institucional consistente.
               </p>
 
-              <div className="space-y-4 mb-8">
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-[#b87333]/20 rounded-sm flex items-center justify-center shrink-0 mt-0.5">
-                    <span className="text-[#b87333] font-serif text-sm">1</span>
-                  </div>
+              <div className="space-y-5 mb-8">
+                <div className="flex items-start gap-4">
+                  <span className="font-serif text-4xl text-[#b87333]/20 leading-none shrink-0 mt-0.5">01</span>
                   <div>
                     <p className="font-sans font-medium text-sm">La institución configura su estándar</p>
                     <p className="font-sans text-xs text-[#FAF8F5]/50">Capacidades MEC + contexto local + filosofía pedagógica del colegio</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-[#b87333]/20 rounded-sm flex items-center justify-center shrink-0 mt-0.5">
-                    <span className="text-[#b87333] font-serif text-sm">2</span>
-                  </div>
+                <div className="flex items-start gap-4">
+                  <span className="font-serif text-4xl text-[#b87333]/20 leading-none shrink-0 mt-0.5">02</span>
                   <div>
                     <p className="font-sans font-medium text-sm">La IA genera planes y 6 materiales por semana</p>
                     <p className="font-sans text-xs text-[#FAF8F5]/50">Texto base, ficha, evaluación, comunicado, guía, y rúbrica — alineados al estándar</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-[#b87333]/20 rounded-sm flex items-center justify-center shrink-0 mt-0.5">
-                    <span className="text-[#b87333] font-serif text-sm">3</span>
-                  </div>
+                <div className="flex items-start gap-4">
+                  <span className="font-serif text-4xl text-[#b87333]/20 leading-none shrink-0 mt-0.5">03</span>
                   <div>
                     <p className="font-sans font-medium text-sm">El docente revisa, ajusta, imprime</p>
                     <p className="font-sans text-xs text-[#FAF8F5]/50">DOCX y PDF listos — el docente aporta su criterio, no su fin de semana</p>
@@ -194,7 +194,7 @@ export default function ABNLanding() {
                 {['Texto base', 'Ficha de trabajo', 'Evaluación', 'Comunicación a padres', 'Guía de cuaderno', 'Rúbrica'].map((tag) => (
                   <span
                     key={tag}
-                    className="font-sans text-xs px-3 py-1.5 bg-[#FAF8F5]/10 rounded-sm text-[#FAF8F5]/70 border border-[#FAF8F5]/10"
+                    className="capability-tag font-sans text-xs px-3 py-1.5 bg-[#FAF8F5]/10 rounded-sm text-[#FAF8F5]/70 border border-[#FAF8F5]/10 cursor-default"
                   >
                     {tag}
                   </span>
@@ -203,14 +203,18 @@ export default function ABNLanding() {
             </div>
 
             {/* Screenshot */}
-            <div className="scroll-reveal">
-              <div className="screenshot-frame rounded-lg overflow-hidden shadow-2xl border border-[#FAF8F5]/10">
+            <div className="scroll-reveal-right">
+              <div className="rounded-lg overflow-hidden shadow-2xl border border-[#FAF8F5]/10">
+                <div className="browser-chrome">
+                  <div className="dot" /><div className="dot" /><div className="dot" />
+                </div>
                 <Image
                   src="/screenshots/editorial-aena.png"
                   alt="Editorial AENA — Hub de generación de materiales educativos con IA"
                   width={2814}
                   height={1808}
                   className="w-full h-auto"
+                  loading="lazy"
                 />
               </div>
               <p className="font-sans text-xs text-[#FAF8F5]/30 mt-4 text-center">
@@ -222,7 +226,7 @@ export default function ABNLanding() {
       </section>
 
       {/* Divisions / Services */}
-      <section id="divisiones" className="px-6 md:px-12 py-20 md:py-28 bg-white">
+      <section id="divisiones" className="px-6 md:px-12 py-24 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto scroll-reveal">
           <div className="mb-16">
             <p className="font-sans text-sm tracking-widest text-[#b87333] mb-4 uppercase">
@@ -341,8 +345,10 @@ export default function ABNLanding() {
         </div>
       </section>
 
+      <div className="section-divider" />
+
       {/* Cases / Social Proof */}
-      <section id="casos" className="px-6 md:px-12 py-20 md:py-28 bg-[#FAF8F5]">
+      <section id="casos" className="px-6 md:px-12 py-24 md:py-32 bg-[#FAF8F5]">
         <div className="max-w-7xl mx-auto scroll-reveal">
           <div className="mb-16">
             <p className="font-sans text-sm tracking-widest text-[#b87333] mb-4 uppercase">
@@ -351,10 +357,10 @@ export default function ABNLanding() {
             <h2 className="font-serif text-3xl md:text-4xl line-accent">Sistemas que construimos y usamos</h2>
           </div>
 
-          <div className="space-y-16">
+          <div className="space-y-20">
             {/* AENA Case */}
             <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-              <div>
+              <div className="scroll-reveal-left">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 stat-card rounded-sm flex items-center justify-center">
                     <span className="text-[#FAF8F5] font-serif text-xl">A</span>
@@ -389,14 +395,22 @@ export default function ABNLanding() {
                     Alineado al programa oficial del MEC Paraguay
                   </li>
                 </ul>
+                <a href="#contacto" className="inline-flex items-center gap-1 font-sans text-sm font-medium text-[#b87333] mt-6 hover:underline">
+                  Consultá sobre AENA Admin
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                </a>
               </div>
-              <div className="screenshot-frame rounded-lg overflow-hidden shadow-xl border border-[#1a3a2f]/10">
+              <div className="scroll-reveal-right rounded-lg overflow-hidden shadow-xl border border-[#1a3a2f]/10">
+                <div className="browser-chrome">
+                  <div className="dot" /><div className="dot" /><div className="dot" />
+                </div>
                 <Image
                   src="/screenshots/aena-dashboard.png"
                   alt="AENA Admin — Dashboard con asistencia por grado"
                   width={2842}
                   height={1794}
                   className="w-full h-auto"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -438,14 +452,22 @@ export default function ABNLanding() {
                     Gobernanza eclesiástica transparente
                   </li>
                 </ul>
+                <a href="#contacto" className="inline-flex items-center gap-1 font-sans text-sm font-medium text-[#b87333] mt-6 hover:underline">
+                  Consultá sobre IPUPY
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                </a>
               </div>
-              <div className="screenshot-frame rounded-lg overflow-hidden shadow-xl border border-[#1a3a2f]/10 md:order-1">
+              <div className="scroll-reveal-left rounded-lg overflow-hidden shadow-xl border border-[#1a3a2f]/10 md:order-1">
+                <div className="browser-chrome">
+                  <div className="dot" /><div className="dot" /><div className="dot" />
+                </div>
                 <Image
                   src="/screenshots/ipupy-dashboard.png"
                   alt="IPUPY Tesorería — Dashboard financiero con ingresos y métricas"
                   width={2846}
                   height={1822}
                   className="w-full h-auto"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -453,8 +475,10 @@ export default function ABNLanding() {
         </div>
       </section>
 
+      <div className="section-divider" />
+
       {/* Packages */}
-      <section className="px-6 md:px-12 py-20 md:py-28 bg-white">
+      <section className="px-6 md:px-12 py-24 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto scroll-reveal">
           <div className="mb-16">
             <p className="font-sans text-sm tracking-widest text-[#b87333] mb-4 uppercase">
@@ -487,8 +511,9 @@ export default function ABNLanding() {
               </ul>
             </div>
 
-            {/* ONG Package */}
-            <div className="card-hover engagement-card bg-[#FAF8F5] p-8 rounded-sm border border-[#1a3a2f]/10">
+            {/* ONG Package — Recommended */}
+            <div className="card-hover engagement-card bg-[#FAF8F5] p-8 rounded-sm border-2 border-[#b87333]/40 relative">
+              <span className="absolute top-0 right-0 bg-[#b87333] text-[#FAF8F5] font-sans text-[0.65rem] tracking-widest uppercase px-3 py-1 rounded-bl-sm">Más común</span>
               <p className="engagement-step">02</p>
               <h3 className="font-serif text-xl mb-2">Implementación por Frente</h3>
               <p className="font-sans text-sm text-[#b87333] mb-4">Para instituciones que ya saben qué problema quieren resolver</p>
@@ -527,7 +552,7 @@ export default function ABNLanding() {
       </section>
 
       {/* Philosophy */}
-      <section className="px-6 md:px-12 py-20 md:py-28 bg-[#1a3a2f] text-[#FAF8F5]">
+      <section className="px-6 md:px-12 py-24 md:py-32 bg-[#1a3a2f] text-[#FAF8F5]">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div>
@@ -569,8 +594,10 @@ export default function ABNLanding() {
         </div>
       </section>
 
+      <div className="section-divider" />
+
       {/* Team */}
-      <section id="equipo" className="px-6 md:px-12 py-20 md:py-28 bg-[#FAF8F5]">
+      <section id="equipo" className="px-6 md:px-12 py-24 md:py-32 bg-[#FAF8F5]">
         <div className="max-w-7xl mx-auto scroll-reveal">
           <div className="mb-16">
             <p className="font-sans text-sm tracking-widest text-[#b87333] mb-4 uppercase">
@@ -608,13 +635,14 @@ export default function ABNLanding() {
           </div>
 
           {/* Team Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-20 h-20 bg-[#1a3a2f] rounded-sm flex items-center justify-center mx-auto mb-4 team-avatar">
                 <span className="text-[#FAF8F5] font-serif text-2xl">AB</span>
               </div>
               <h3 className="font-serif text-lg">Anthony Bir</h3>
               <p className="font-sans text-sm text-[#1a3a2f]/60">CEO & Director de Sistemas</p>
+              <p className="font-sans text-xs text-[#1a3a2f]/40 mt-1">Ex-Heinz, Thermo Fisher. Arquitecto de AENA Admin e IPUPY.</p>
             </div>
             <div className="text-center">
               <div className="w-20 h-20 bg-[#1a3a2f] rounded-sm flex items-center justify-center mx-auto mb-4 team-avatar">
@@ -622,6 +650,7 @@ export default function ABNLanding() {
               </div>
               <h3 className="font-serif text-lg">Diana Nuñez de Bir</h3>
               <p className="font-sans text-sm text-[#1a3a2f]/60">Directora de Educación</p>
+              <p className="font-sans text-xs text-[#1a3a2f]/40 mt-1">20+ años en educación. Diseña el estándar pedagógico institucional.</p>
             </div>
             <div className="text-center">
               <div className="w-20 h-20 bg-[#1a3a2f] rounded-sm flex items-center justify-center mx-auto mb-4 team-avatar">
@@ -629,6 +658,7 @@ export default function ABNLanding() {
               </div>
               <h3 className="font-serif text-lg">Danae Bir Nuñez</h3>
               <p className="font-sans text-sm text-[#1a3a2f]/60">Directora Legal</p>
+              <p className="font-sans text-xs text-[#1a3a2f]/40 mt-1">Especialista en derecho de niñez y protocolos institucionales.</p>
             </div>
             <div className="text-center">
               <div className="w-20 h-20 bg-[#1a3a2f] rounded-sm flex items-center justify-center mx-auto mb-4 team-avatar">
@@ -636,6 +666,7 @@ export default function ABNLanding() {
               </div>
               <h3 className="font-serif text-lg">Stephanie Bir</h3>
               <p className="font-sans text-sm text-[#1a3a2f]/60">Directora Financiera</p>
+              <p className="font-sans text-xs text-[#1a3a2f]/40 mt-1">Gestión financiera y auditoría para ONGs e instituciones educativas.</p>
             </div>
           </div>
         </div>
@@ -659,7 +690,7 @@ export default function ABNLanding() {
               rel="noopener noreferrer"
               className="btn-primary font-sans inline-flex items-center justify-center gap-2 bg-[#1a3a2f] text-[#FAF8F5] px-8 py-4 rounded-sm font-medium hover:bg-[#1a3a2f]/90"
             >
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
               </svg>
               Escribinos por WhatsApp
@@ -675,7 +706,7 @@ export default function ABNLanding() {
       </section>
 
       {/* Contact */}
-      <section id="contacto" className="px-6 md:px-12 py-20 md:py-28 bg-white">
+      <section id="contacto" className="px-6 md:px-12 py-24 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 md:gap-20">
             <div>
@@ -700,6 +731,19 @@ export default function ABNLanding() {
           </div>
         </div>
       </section>
+
+      {/* Floating WhatsApp */}
+      <a
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="whatsapp-float"
+        aria-label="Contactar por WhatsApp"
+      >
+        <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+      </a>
 
       {/* Footer */}
       <footer className="bg-[#1a3a2f] text-[#FAF8F5]">
