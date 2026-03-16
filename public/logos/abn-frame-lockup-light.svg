@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" width="320" height="120">
+  <g transform="translate(10, 20)">
+    <!-- Frame mark -->
+    <rect x="0" y="10" width="90" height="68" rx="2" fill="none" stroke="#1A1A1A" stroke-width="2"/>
+    <path d="M22,10 L45,-6 L68,10" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linejoin="miter"/>
+    <text x="45" y="50" text-anchor="middle" fill="#1A1A1A" font-size="21" font-weight="600" letter-spacing="5" font-family="Helvetica, Arial, sans-serif">ABN</text>
+    <rect fill="#C7A54A" x="18" y="56" width="54" height="2" rx="1"/>
+    <!-- Descriptor -->
+    <text x="108" y="34" fill="#1A1A1A" font-size="11" font-weight="600" letter-spacing="3" font-family="Helvetica, Arial, sans-serif">AGENCIA BIR NUÑEZ</text>
+    <line x1="108" y1="42" x2="290" y2="42" stroke="#E8E6E1" stroke-width="0.5"/>
+    <text x="108" y="56" fill="#5A5A5A" font-size="8.5" letter-spacing="1" font-family="Helvetica, Arial, sans-serif">Consultoría en Transformación Institucional</text>
+  </g>
+</svg>

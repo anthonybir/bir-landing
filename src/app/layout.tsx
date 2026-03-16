@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
-import { DM_Serif_Display, Outfit } from "next/font/google";
+import { Instrument_Sans, JetBrains_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
-const dmSerif = DM_Serif_Display({
-  weight: "400",
+const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
-  variable: "--font-serif",
+  variable: "--font-sans",
   display: "swap",
 });
 
-const outfit = Outfit({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-mono",
   display: "swap",
 });
 
@@ -44,7 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${dmSerif.variable} ${outfit.variable} antialiased`}>
+      <body className={`${instrumentSans.variable} ${jetbrainsMono.variable} antialiased`}>
         {children}
         <Analytics />
       </body>

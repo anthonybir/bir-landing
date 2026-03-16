@@ -15,11 +15,11 @@ export default async function Image() {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
-          backgroundColor: '#1a3a2f',
+          backgroundColor: '#1A1A1A',
           padding: '80px',
         }}
       >
-        {/* Logo */}
+        {/* Logo area */}
         <div
           style={{
             display: 'flex',
@@ -28,27 +28,33 @@ export default async function Image() {
             marginBottom: '40px',
           }}
         >
+          {/* ABN Frame Mark inline */}
           <div
             style={{
-              width: '70px',
-              height: '70px',
-              backgroundColor: '#FAF8F5',
-              borderRadius: '4px',
+              width: '60px',
+              height: '60px',
+              border: '2.5px solid #F5F3EE',
+              borderRadius: '2px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              fontSize: '40px',
-              fontFamily: 'Georgia',
-              color: '#1a3a2f',
+              fontSize: '24px',
+              fontWeight: 600,
+              letterSpacing: '4px',
+              color: '#F5F3EE',
+              fontFamily: 'Helvetica, Arial, sans-serif',
+              position: 'relative',
             }}
           >
-            A
+            ABN
           </div>
           <span
             style={{
               fontSize: '28px',
-              color: '#FAF8F5',
+              color: '#F5F3EE',
               letterSpacing: '0.1em',
+              fontFamily: 'Helvetica, Arial, sans-serif',
+              fontWeight: 600,
             }}
           >
             AGENCIA BIR NUÑEZ
@@ -59,14 +65,15 @@ export default async function Image() {
         <div
           style={{
             fontSize: '64px',
-            fontFamily: 'Georgia',
-            color: '#FAF8F5',
+            fontFamily: 'Helvetica, Arial, sans-serif',
+            fontWeight: 700,
+            color: '#F5F3EE',
             lineHeight: 1.2,
             marginBottom: '30px',
             maxWidth: '900px',
           }}
         >
-          Estructura honesta para organizaciones que perduran
+          Estructura donde otros improvisan
         </div>
 
         {/* Accent line */}
@@ -74,7 +81,7 @@ export default async function Image() {
           style={{
             width: '80px',
             height: '4px',
-            backgroundColor: '#b87333',
+            backgroundColor: '#C7A54A',
             marginBottom: '30px',
           }}
         />
@@ -83,8 +90,9 @@ export default async function Image() {
         <div
           style={{
             fontSize: '24px',
-            color: '#FAF8F5',
+            color: '#F5F3EE',
             opacity: 0.7,
+            fontFamily: 'Helvetica, Arial, sans-serif',
           }}
         >
           Consultoría en Transformación Institucional • Paraguay

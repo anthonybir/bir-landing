@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <g transform="translate(8, 12)">
+    <rect x="0" y="8" width="48" height="36" rx="1.5" fill="none" stroke="#1A1A1A" stroke-width="2"/>
+    <path d="M12,8 L24,-4 L36,8" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linejoin="miter"/>
+    <text x="24" y="30" text-anchor="middle" fill="#1A1A1A" font-size="13" font-weight="600" letter-spacing="2.5" font-family="Helvetica, Arial, sans-serif">ABN</text>
+    <rect fill="#C7A54A" x="10" y="34" width="28" height="1.5" rx="0.5"/>
+  </g>
+</svg>

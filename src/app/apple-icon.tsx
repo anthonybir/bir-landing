@@ -13,19 +13,17 @@ export default function AppleIcon() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundColor: '#1a3a2f',
+          backgroundColor: '#1A1A1A',
           borderRadius: '32px',
         }}
       >
-        <span
-          style={{
-            fontSize: '100px',
-            fontFamily: 'Georgia',
-            color: '#FAF8F5',
-          }}
-        >
-          A
-        </span>
+        {/* ABN Grid Mark — warm white on charcoal */}
+        <svg viewBox="0 0 84 84" width="100" height="100">
+          <rect fill="#F5F3EE" x="0" y="0" width="38" height="38" rx="3" />
+          <rect fill="#F5F3EE" x="42" y="0" width="38" height="38" rx="3" />
+          <rect fill="#F5F3EE" x="0" y="42" width="38" height="38" rx="3" />
+          <rect fill="#F5F3EE" x="42" y="42" width="38" height="38" rx="3" />
+        </svg>
       </div>
     ),
     { ...size }

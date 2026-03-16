@@ -1,16 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FAF8F5;
-  --foreground: #1a3a2f;
-  --accent: #b87333;
+  --background: #F5F3EE;
+  --foreground: #1A1A1A;
+  --accent: #C7A54A;
+  --slate: #5A5A5A;
+  --light-gray: #E8E6E1;
+  --mid-gray: #9A9890;
+  --true-dark: #2C2C2A;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-slate: var(--slate);
+  --color-light-gray: var(--light-gray);
+  --color-mid-gray: var(--mid-gray);
+  --color-true-dark: var(--true-dark);
   --font-sans: var(--font-sans);
-  --font-serif: var(--font-serif);
+  --font-mono: var(--font-mono);
 }
 
 html {
@@ -23,15 +32,15 @@ body {
 }
 
 ::selection {
-  background: rgba(184, 115, 51, 0.2);
-  color: #1a3a2f;
+  background: rgba(199, 165, 74, 0.2);
+  color: #1A1A1A;
 }
 
 /* ---- Hero ---- */
 
 .hero-dark {
-  background: #1a3a2f;
-  color: #FAF8F5;
+  background: #1A1A1A;
+  color: #F5F3EE;
   position: relative;
   overflow: hidden;
 }
@@ -41,8 +50,8 @@ body {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 20% 80%, rgba(184, 115, 51, 0.08), transparent),
-    radial-gradient(ellipse 60% 50% at 80% 20%, rgba(250, 248, 245, 0.03), transparent);
+    radial-gradient(ellipse 80% 60% at 20% 80%, rgba(199, 165, 74, 0.08), transparent),
+    radial-gradient(ellipse 60% 50% at 80% 20%, rgba(245, 243, 238, 0.03), transparent);
   pointer-events: none;
 }
 
@@ -83,7 +92,7 @@ body {
 
 .mobile-nav-chip {
   flex-shrink: 0;
-  border: 1px solid rgba(26, 58, 47, 0.1);
+  border: 1px solid rgba(26, 26, 26, 0.1);
   background: rgba(255, 255, 255, 0.78);
   backdrop-filter: blur(10px);
   padding: 0.5rem 1rem;
@@ -91,15 +100,15 @@ body {
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.02em;
-  color: #1a3a2f;
+  color: #1A1A1A;
   transition: transform 0.25s ease, border-color 0.25s ease, background-color 0.25s ease, color 0.25s ease;
 }
 
 .mobile-nav-chip:hover {
   transform: translateY(-1px);
-  border-color: rgba(184, 115, 51, 0.35);
-  background: rgba(184, 115, 51, 0.08);
-  color: #7a4e21;
+  border-color: rgba(199, 165, 74, 0.35);
+  background: rgba(199, 165, 74, 0.08);
+  color: #9A7B30;
 }
 
 /* Staggered hero entrance — each direct child animates in sequence */
@@ -128,9 +137,9 @@ body {
 }
 .card-hover:hover {
   transform: translateY(-6px);
-  box-shadow: 0 25px 50px rgba(26, 58, 47, 0.1),
-              0 10px 20px rgba(26, 58, 47, 0.04);
-  border-color: rgba(184, 115, 51, 0.3);
+  box-shadow: 0 25px 50px rgba(26, 26, 26, 0.1),
+              0 10px 20px rgba(26, 26, 26, 0.04);
+  border-color: rgba(199, 165, 74, 0.3);
 }
 
 .engagement-card {
@@ -138,7 +147,7 @@ body {
   overflow: hidden;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0)) top / 100% 96px no-repeat,
-    #faf8f5;
+    #F5F3EE;
 }
 
 .engagement-card::before {
@@ -147,15 +156,16 @@ body {
   inset: 0 auto auto 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, #b87333 0%, rgba(184, 115, 51, 0.2) 100%);
+  background: linear-gradient(90deg, #C7A54A 0%, rgba(199, 165, 74, 0.2) 100%);
 }
 
 .engagement-step {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
+  font-weight: 700;
   font-size: 3rem;
   line-height: 1;
   letter-spacing: 0.05em;
-  color: rgba(184, 115, 51, 0.15);
+  color: rgba(199, 165, 74, 0.15);
   margin-bottom: 0.75rem;
 }
 
@@ -165,15 +175,15 @@ body {
   transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 .capability-tag:hover {
-  background-color: rgba(250, 248, 245, 0.18);
-  border-color: rgba(250, 248, 245, 0.25);
-  color: #FAF8F5;
+  background-color: rgba(245, 243, 238, 0.18);
+  border-color: rgba(245, 243, 238, 0.25);
+  color: #F5F3EE;
 }
 
 /* ---- Browser chrome mockup ---- */
 
 .browser-chrome {
-  background: #1a3a2f;
+  background: #1A1A1A;
   border-radius: 0.5rem 0.5rem 0 0;
   padding: 0.625rem 1rem;
   display: flex;
@@ -184,7 +194,7 @@ body {
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
-  background: rgba(250, 248, 245, 0.2);
+  background: rgba(245, 243, 238, 0.2);
 }
 .browser-chrome .dot:first-child { background: rgba(255, 95, 86, 0.7); }
 .browser-chrome .dot:nth-child(2) { background: rgba(255, 189, 46, 0.7); }
@@ -217,7 +227,7 @@ body {
 
 .section-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(184, 115, 51, 0.25), transparent);
+  background: linear-gradient(90deg, transparent, rgba(199, 165, 74, 0.25), transparent);
   max-width: 200px;
   margin: 0 auto;
 }
@@ -229,8 +239,8 @@ body {
 }
 .input-focus:focus {
   outline: none;
-  border-color: #b87333;
-  box-shadow: 0 0 0 3px rgba(184, 115, 51, 0.1);
+  border-color: #C7A54A;
+  box-shadow: 0 0 0 3px rgba(199, 165, 74, 0.1);
   background-color: white;
 }
 
@@ -247,29 +257,29 @@ body {
   left: 0;
   width: 48px;
   height: 2px;
-  background: #b87333;
+  background: #C7A54A;
 }
 
 /* ---- Stat gradient ---- */
 
 .stat-card {
-  background: linear-gradient(135deg, #1a3a2f 0%, #2d5a4a 100%);
+  background: linear-gradient(135deg, #1A1A1A 0%, #2C2C2A 100%);
 }
 
 .proof-background {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at top left, rgba(184, 115, 51, 0.08), transparent 28%),
-    radial-gradient(circle at bottom right, rgba(26, 58, 47, 0.06), transparent 30%);
+    radial-gradient(circle at top left, rgba(199, 165, 74, 0.08), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(26, 26, 26, 0.06), transparent 30%);
   pointer-events: none;
 }
 
 .proof-card {
   position: relative;
-  background: rgba(250, 248, 245, 0.82);
-  border: 1px solid rgba(26, 58, 47, 0.08);
-  box-shadow: 0 12px 30px rgba(26, 58, 47, 0.04);
+  background: rgba(245, 243, 238, 0.82);
+  border: 1px solid rgba(26, 26, 26, 0.08);
+  box-shadow: 0 12px 30px rgba(26, 26, 26, 0.04);
   border-radius: 0.25rem;
   padding: 1.25rem 0.9rem;
   backdrop-filter: blur(8px);
@@ -280,8 +290,8 @@ body {
 
 .proof-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(184, 115, 51, 0.25);
-  box-shadow: 0 18px 38px rgba(26, 58, 47, 0.08);
+  border-color: rgba(199, 165, 74, 0.25);
+  box-shadow: 0 18px 38px rgba(26, 26, 26, 0.08);
 }
 
 /* ---- Buttons ---- */
@@ -291,7 +301,7 @@ body {
 }
 .btn-primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(26, 58, 47, 0.25);
+  box-shadow: 0 6px 20px rgba(26, 26, 26, 0.25);
 }
 .btn-primary:active {
   transform: translateY(0);
@@ -316,7 +326,7 @@ body {
 }
 .team-avatar:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(26, 58, 47, 0.15);
+  box-shadow: 0 12px 24px rgba(26, 26, 26, 0.15);
 }
 
 /* ---- Scroll-driven reveal (progressive enhancement) ---- */
