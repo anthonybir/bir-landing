@@ -34,7 +34,10 @@ export default function ABNLanding() {
       <header className="sticky top-0 z-50 bg-[#F5F3EE]/90 backdrop-blur-lg border-b border-[#1A1A1A]/5">
         <nav className="font-sans px-6 md:px-12 py-5 flex justify-between items-center max-w-7xl mx-auto">
           <div className="flex items-center gap-3">
-            <Image src="/logos/abn-frame-light.svg" alt="ABN" width={40} height={34} className="h-9 w-auto hover:opacity-80 hover:scale-105 transition-all duration-200" />
+            {/* Desktop: full lockup with name + descriptor */}
+            <Image src="/logos/abn-frame-lockup-light.svg" alt="Agencia Bir Nuñez" width={220} height={40} className="hidden md:block h-10 w-auto hover:opacity-80 transition-opacity duration-200" />
+            {/* Mobile: compact frame mark + name */}
+            <Image src="/logos/abn-frame-light.svg" alt="ABN" width={40} height={34} className="md:hidden h-9 w-auto" />
             <span className="md:hidden font-sans font-semibold text-sm tracking-wide">ABN</span>
           </div>
           <div className="flex items-center gap-6">
