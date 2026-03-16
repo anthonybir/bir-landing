@@ -202,7 +202,7 @@ export default function ABNLanding() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Technology Division */}
-            <div className="card-hover scroll-reveal-stagger-1 bg-foreground text-background p-8 md:p-10 rounded-sm">
+            <div className="card-hover bg-foreground text-background p-8 md:p-10 rounded-sm">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-background rounded-sm flex items-center justify-center">
                   <svg className="w-6 h-6 text-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -229,7 +229,7 @@ export default function ABNLanding() {
             </div>
 
             {/* Education Division */}
-            <div className="card-hover scroll-reveal-stagger-2 bg-background p-8 md:p-10 rounded-sm border border-[#1A1A1A]/10">
+            <div className="card-hover bg-background p-8 md:p-10 rounded-sm border border-[#1A1A1A]/10">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-foreground rounded-sm flex items-center justify-center">
                   <svg className="w-6 h-6 text-background" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -256,7 +256,7 @@ export default function ABNLanding() {
             </div>
 
             {/* Legal Division */}
-            <div className="card-hover scroll-reveal-stagger-3 bg-background p-8 md:p-10 rounded-sm border border-[#1A1A1A]/10">
+            <div className="card-hover bg-background p-8 md:p-10 rounded-sm border border-[#1A1A1A]/10">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-foreground rounded-sm flex items-center justify-center">
                   <svg className="w-6 h-6 text-background" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -282,7 +282,7 @@ export default function ABNLanding() {
             </div>
 
             {/* Financial Division */}
-            <div className="card-hover scroll-reveal-stagger-4 bg-background p-8 md:p-10 rounded-sm border border-[#1A1A1A]/10">
+            <div className="card-hover bg-background p-8 md:p-10 rounded-sm border border-[#1A1A1A]/10">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-foreground rounded-sm flex items-center justify-center">
                   <svg className="w-6 h-6 text-background" fill="none" stroke="currentColor" viewBox="0 0 24 24">
