@@ -28,11 +28,13 @@ export const metadata: Metadata = {
     siteName: "Agencia Bir Nuñez",
     locale: "es_PY",
     type: "website",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "ABN - Consultoría en Transformación Institucional" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "ABN | Consultoría en Transformación Institucional",
     description: "Estructura donde otros improvisan",
+    images: ["/opengraph-image"],
   },
 };
 
