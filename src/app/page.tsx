@@ -34,7 +34,8 @@ export default function ABNLanding() {
       <header className="sticky top-0 z-50 bg-[#F5F3EE]/90 backdrop-blur-lg border-b border-[#1A1A1A]/5">
         <nav className="font-sans px-6 md:px-12 py-5 flex justify-between items-center max-w-7xl mx-auto">
           <div className="flex items-center gap-3">
-            <Image src="/logos/abn-frame-light.svg" alt="ABN" width={40} height={34} className="h-9 w-auto" />
+            <Image src="/logos/abn-frame-light.svg" alt="ABN" width={40} height={34} className="h-9 w-auto hover:opacity-80 hover:scale-105 transition-all duration-200" />
+            <span className="md:hidden font-sans font-semibold text-sm tracking-wide">ABN</span>
           </div>
           <div className="flex items-center gap-6">
             <a href="#divisiones" className="text-sm font-medium hover:text-[#C7A54A] transition-colors hidden md:block">
@@ -65,8 +66,8 @@ export default function ABNLanding() {
             <a href="#equipo" className="mobile-nav-chip">
               Equipo
             </a>
-            <a href="#contacto" className="mobile-nav-chip">
-              Contacto
+            <a href="#contacto" className="mobile-nav-chip bg-[#1A1A1A] text-[#F5F3EE] border-[#1A1A1A]">
+              Hablemos
             </a>
           </div>
         </div>
@@ -80,13 +81,13 @@ export default function ABNLanding() {
               Para colegios, ONGs e iglesias en Paraguay
             </p>
             <div className="w-12 h-px bg-[#C7A54A]/50 mb-8" />
-            <h1 className="font-sans font-bold text-4xl md:text-6xl lg:text-7xl xl:text-[5.5rem] leading-[1.05] mb-6">
+            <h1 className="font-sans font-bold text-4xl md:text-6xl lg:text-7xl xl:text-[5.5rem] leading-[1.05] tracking-tight mb-6">
               <span className="hero-word">Estructura</span>
               <span className="hero-word">donde</span>
               <span className="hero-word">otros</span>
               <span className="hero-word">improvisan</span>
             </h1>
-            <p className="font-sans text-lg md:text-xl text-[#F5F3EE]/60 leading-relaxed max-w-2xl mb-10">
+            <p className="font-sans font-light text-lg md:text-xl text-[#F5F3EE]/60 leading-relaxed max-w-2xl mb-10">
               Agencia familiar con cuatro divisiones especializadas.
               Diseñamos sistemas para que la institución marque el estándar
               y la tecnología lo ejecute.
@@ -600,7 +601,7 @@ export default function ABNLanding() {
             <p className="font-sans text-sm tracking-widest text-[#C7A54A] mb-4 uppercase">
               Quiénes Somos
             </p>
-            <h2 className="font-sans font-bold text-3xl md:text-4xl line-accent">Una consultora familiar</h2>
+            <h2 className="font-sans font-bold text-3xl md:text-4xl line-accent">Una agencia familiar</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-start mb-16">
@@ -670,7 +671,7 @@ export default function ABNLanding() {
       </section>
 
       {/* CTA */}
-      <section className="px-6 md:px-12 py-16 bg-[#C7A54A]/10 border-y border-[#C7A54A]/20">
+      <section className="px-6 md:px-12 py-16 bg-[#E8E6E1] border-y border-[#1A1A1A]/10">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="font-sans font-semibold text-2xl md:text-3xl mb-4">
             ¿Necesitás transformar tu institución?
@@ -745,7 +746,7 @@ export default function ABNLanding() {
       {/* Footer */}
       <footer className="bg-[#1A1A1A] text-[#F5F3EE]">
         <div className="h-px bg-gradient-to-r from-transparent via-[#C7A54A]/40 to-transparent" />
-        <div className="px-6 md:px-12 py-8 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="px-6 md:px-12 py-8 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div className="flex items-center">
             <Image src="/logos/abn-frame-lockup-dark.svg" alt="Agencia Bir Nuñez" width={160} height={40} className="h-8 w-auto" />
           </div>
