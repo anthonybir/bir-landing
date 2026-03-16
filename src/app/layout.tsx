@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
-import { Instrument_Sans, JetBrains_Mono } from "next/font/google";
+import { Instrument_Sans, JetBrains_Mono, Cormorant_Garamond } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
+  display: "swap",
+});
+
+const cormorantGaramond = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+  variable: "--font-serif",
   display: "swap",
 });
 
@@ -45,7 +52,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${instrumentSans.variable} ${jetbrainsMono.variable} antialiased`}>
+      <body className={`${instrumentSans.variable} ${cormorantGaramond.variable} ${jetbrainsMono.variable} antialiased`}>
         {children}
         <Analytics />
       </body>

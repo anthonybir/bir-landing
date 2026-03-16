@@ -59,7 +59,6 @@ export default function NavBar() {
         <div className="flex items-center gap-3">
           <Image src="/logos/abn-frame-lockup-light.svg" alt="Agencia Bir Nuñez" width={300} height={88} priority className="hidden md:block h-20 w-auto hover:opacity-80 transition-opacity duration-200" />
           <Image src="/logos/abn-frame-light.svg" alt="ABN" width={40} height={34} priority className="md:hidden h-9 w-auto" />
-          <span className="md:hidden font-sans font-semibold text-sm tracking-wide">ABN</span>
         </div>
         <div className="flex items-center gap-6">
           {SECTIONS.filter((s) => s !== 'contacto').map((id) => (

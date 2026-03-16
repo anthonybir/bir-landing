@@ -42,20 +42,20 @@ export default function ABNLanding() {
 
       <main>
       {/* Hero — dark background */}
-      <section className="hero-dark px-6 md:px-12 pt-20 pb-28 md:pt-28 md:pb-36">
+      <section className="hero-dark px-6 md:px-12 pt-20 pb-28 md:pt-32 md:pb-40">
         <div className="max-w-7xl mx-auto relative">
           <div className="max-w-4xl fade-in">
             <p className="font-sans text-sm tracking-widest text-accent mb-4 uppercase">
               Para colegios, ONGs e iglesias en Paraguay
             </p>
             <div className="w-12 h-px bg-[#C7A54A]/50 mb-8" />
-            <h1 className="font-sans font-bold text-4xl md:text-6xl lg:text-7xl xl:text-[5.5rem] leading-[1.05] tracking-tight mb-6">
+            <h1 className="font-serif font-bold text-4xl md:text-6xl lg:text-7xl xl:text-[5.5rem] leading-[1.05] tracking-tight mb-6">
               <span className="hero-word">Estructura</span>
               <span className="hero-word">donde</span>
               <span className="hero-word">otros</span>
               <span className="hero-word">improvisan</span>
             </h1>
-            <p className="font-sans font-light text-lg md:text-xl text-background/60 leading-relaxed max-w-2xl mb-10">
+            <p className="font-sans font-light text-lg md:text-2xl text-background/60 leading-relaxed max-w-2xl mb-10">
               Agencia familiar con cuatro divisiones especializadas.
               Diseñamos sistemas para que la institución marque el estándar
               y la tecnología lo ejecute.
@@ -117,7 +117,7 @@ export default function ABNLanding() {
               <p className="font-sans text-sm tracking-widest text-accent mb-4 uppercase">
                 Nuestro Motor de IA
               </p>
-              <h2 className="font-sans font-bold text-3xl md:text-4xl leading-tight mb-6">
+              <h2 className="font-serif font-bold text-3xl md:text-4xl leading-tight mb-6">
                 Tus docentes ya usan IA.<br />
                 <span className="text-accent">¿Quién define el estándar?</span>
               </h2>
@@ -197,12 +197,12 @@ export default function ABNLanding() {
             <p className="font-sans text-sm tracking-widest text-accent mb-4 uppercase">
               Nuestras Divisiones
             </p>
-            <h2 className="font-sans font-bold text-3xl md:text-4xl line-accent">Cuatro áreas, una familia</h2>
+            <h2 className="font-serif font-bold text-3xl md:text-4xl line-accent">Cuatro áreas, una familia</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Technology Division */}
-            <div className="card-hover bg-foreground text-background p-8 md:p-10 rounded-sm">
+            <div className="card-hover scroll-reveal-stagger-1 bg-foreground text-background p-8 md:p-10 rounded-sm">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-background rounded-sm flex items-center justify-center">
                   <svg className="w-6 h-6 text-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -229,7 +229,7 @@ export default function ABNLanding() {
             </div>
 
             {/* Education Division */}
-            <div className="card-hover bg-background p-8 md:p-10 rounded-sm border border-[#1A1A1A]/10">
+            <div className="card-hover scroll-reveal-stagger-2 bg-background p-8 md:p-10 rounded-sm border border-[#1A1A1A]/10">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-foreground rounded-sm flex items-center justify-center">
                   <svg className="w-6 h-6 text-background" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -256,7 +256,7 @@ export default function ABNLanding() {
             </div>
 
             {/* Legal Division */}
-            <div className="card-hover bg-background p-8 md:p-10 rounded-sm border border-[#1A1A1A]/10">
+            <div className="card-hover scroll-reveal-stagger-3 bg-background p-8 md:p-10 rounded-sm border border-[#1A1A1A]/10">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-foreground rounded-sm flex items-center justify-center">
                   <svg className="w-6 h-6 text-background" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -282,7 +282,7 @@ export default function ABNLanding() {
             </div>
 
             {/* Financial Division */}
-            <div className="card-hover bg-background p-8 md:p-10 rounded-sm border border-[#1A1A1A]/10">
+            <div className="card-hover scroll-reveal-stagger-4 bg-background p-8 md:p-10 rounded-sm border border-[#1A1A1A]/10">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-foreground rounded-sm flex items-center justify-center">
                   <svg className="w-6 h-6 text-background" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -319,7 +319,7 @@ export default function ABNLanding() {
             <p className="font-sans text-sm tracking-widest text-accent mb-4 uppercase">
               Casos Reales
             </p>
-            <h2 className="font-sans font-bold text-3xl md:text-4xl line-accent">Sistemas que construimos y usamos</h2>
+            <h2 className="font-serif font-bold text-3xl md:text-4xl line-accent">Sistemas que construimos y usamos</h2>
           </div>
 
           <div className="space-y-20">
@@ -451,7 +451,7 @@ export default function ABNLanding() {
             <p className="font-sans text-sm tracking-widest text-accent mb-4 uppercase">
               Formas de trabajo
             </p>
-            <h2 className="font-sans font-bold text-3xl md:text-4xl line-accent">Cómo empezamos y cómo escalamos</h2>
+            <h2 className="font-serif font-bold text-3xl md:text-4xl line-accent">Cómo empezamos y cómo escalamos</h2>
             <p className="font-sans text-foreground/70 leading-relaxed max-w-3xl mt-6">
               No vendemos una caja cerrada. Empezamos con un diagnóstico claro,
               definimos una hoja de ruta y ejecutamos por fases según el nivel
@@ -519,17 +519,17 @@ export default function ABNLanding() {
       </section>
 
       {/* Philosophy */}
-      <section className="dark-section px-6 md:px-12 py-24 md:py-32 bg-foreground text-background">
+      <section className="dark-section px-6 md:px-12 py-28 md:py-36 bg-foreground text-background">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div>
               <p className="font-sans text-sm tracking-widest text-accent mb-6 uppercase">
                 Nuestra Filosofía
               </p>
-              <h2 className="font-sans font-bold text-3xl md:text-4xl leading-tight mb-6">
+              <h2 className="font-serif font-bold text-3xl md:text-4xl leading-tight mb-6">
                 Sistemas que controlan la IA — no al revés
               </h2>
-              <p className="font-sans text-background/70 leading-relaxed">
+              <p className="font-sans text-background/70 leading-relaxed max-w-xl">
                 La IA es una herramienta poderosa, pero sin estructura institucional
                 produce resultados aleatorios. Traemos metodologías de corporaciones
                 globales (Heinz, Thermo Fisher) al contexto de escuelas, iglesias
@@ -537,7 +537,7 @@ export default function ABNLanding() {
                 el estándar y la tecnología lo ejecuta a escala.
               </p>
             </div>
-            <div className="space-y-6">
+            <div className="space-y-6 scroll-reveal-right">
               <div className="border-l-2 border-[#C7A54A] pl-6">
                 <h3 className="font-sans font-semibold text-xl mb-2">La institución manda, la IA obedece</h3>
                 <p className="font-sans text-sm text-background/60">
@@ -564,13 +564,13 @@ export default function ABNLanding() {
       <div className="section-divider" />
 
       {/* Team */}
-      <section id="equipo" className="px-6 md:px-12 py-24 md:py-32 bg-background">
+      <section id="equipo" className="px-6 md:px-12 py-28 md:py-36 bg-background">
         <div className="max-w-7xl mx-auto scroll-reveal">
           <div className="mb-16">
             <p className="font-sans text-sm tracking-widest text-accent mb-4 uppercase">
               Quiénes Somos
             </p>
-            <h2 className="font-sans font-bold text-3xl md:text-4xl line-accent">Una agencia familiar</h2>
+            <h2 className="font-serif font-bold text-3xl md:text-4xl line-accent">Una agencia familiar</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-start mb-16">
@@ -642,7 +642,7 @@ export default function ABNLanding() {
       {/* CTA */}
       <section className="cta-section px-6 md:px-12 py-16 bg-light-gray border-y border-[#1A1A1A]/10">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="font-sans font-semibold text-2xl md:text-3xl mb-4">
+          <h2 className="font-serif font-semibold text-2xl md:text-3xl mb-4">
             ¿Necesitás transformar tu institución?
           </h2>
           <p className="font-sans text-foreground/70 mb-6 max-w-2xl mx-auto">
@@ -678,10 +678,10 @@ export default function ABNLanding() {
               <p className="font-sans text-sm tracking-widest text-accent mb-6 uppercase">
                 Contacto
               </p>
-              <h2 className="font-sans font-bold text-3xl md:text-4xl leading-tight mb-6 line-accent">
+              <h2 className="font-serif font-bold text-3xl md:text-4xl leading-tight mb-6 line-accent">
                 Conversemos sobre tu institución
               </h2>
-              <p className="font-sans text-foreground/70 leading-relaxed mt-12">
+              <p className="font-sans text-foreground/70 leading-relaxed mt-4">
                 Cada proyecto comienza con una conversación. Contanos sobre
                 tu institución y los desafíos que enfrentás. Respondemos
                 normalmente dentro de 48 horas hábiles.
@@ -718,7 +718,7 @@ export default function ABNLanding() {
         <div className="px-6 md:px-12 py-12 max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-8">
             <div>
-              <Image src="/logos/abn-frame-lockup-dark.svg" alt="Agencia Bir Nuñez" width={160} height={40} className="h-8 w-auto mb-3" />
+              <Image src="/logos/abn-frame-lockup-dark.svg" alt="Agencia Bir Nuñez" width={200} height={50} className="h-10 w-auto mb-3" />
               <p className="font-sans text-sm text-background/40">
                 Consultoría en Transformación Institucional
               </p>
