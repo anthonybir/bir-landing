@@ -32,7 +32,7 @@ const jsonLd = {
 
 export default function ABNLanding() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground page-enter">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -82,7 +82,7 @@ export default function ABNLanding() {
       </section>
 
       {/* Social Proof - Stats */}
-      <section className="relative px-6 md:px-12 py-14 md:py-16 bg-white border-y border-[#1A1A1A]/10 overflow-hidden">
+      <section className="hero-shadow relative px-6 md:px-12 py-14 md:py-16 bg-white border-y border-[#1A1A1A]/10 overflow-hidden">
         <div className="proof-background" aria-hidden="true" />
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center relative">
@@ -109,7 +109,7 @@ export default function ABNLanding() {
       <div className="section-divider" />
 
       {/* AI Motor — Editorial AENA */}
-      <section className="px-6 md:px-12 py-24 md:py-32 bg-foreground text-background overflow-hidden">
+      <section className="dark-section px-6 md:px-12 py-24 md:py-32 bg-foreground text-background overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
             {/* Copy */}
@@ -360,7 +360,7 @@ export default function ABNLanding() {
                     Alineado al programa oficial del MEC Paraguay
                   </li>
                 </ul>
-                <a href="#contacto" className="inline-flex items-center gap-1 font-sans text-sm font-medium text-accent mt-6 hover:underline">
+                <a href="#contacto" className="link-arrow font-sans text-sm font-medium text-accent mt-6 hover:underline">
                   Consultá sobre AENA Admin
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                 </a>
@@ -418,7 +418,7 @@ export default function ABNLanding() {
                     Gobernanza eclesiástica transparente
                   </li>
                 </ul>
-                <a href="#contacto" className="inline-flex items-center gap-1 font-sans text-sm font-medium text-accent mt-6 hover:underline">
+                <a href="#contacto" className="link-arrow font-sans text-sm font-medium text-accent mt-6 hover:underline">
                   Consultá sobre IPUPY
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                 </a>
@@ -480,7 +480,7 @@ export default function ABNLanding() {
 
             {/* ONG Package — Recommended */}
             <div className="card-hover engagement-card bg-background p-8 rounded-sm border-2 border-[#C7A54A]/40 relative">
-              <span className="absolute top-0 right-0 bg-[#C7A54A] text-background font-sans text-[0.65rem] tracking-widest uppercase px-3 py-1 rounded-bl-sm">Más común</span>
+              <span className="engagement-badge">Más común</span>
               <p className="engagement-step">02</p>
               <h3 className="font-sans font-semibold text-xl mb-2">Implementación por Frente</h3>
               <p className="font-sans text-sm text-accent mb-4">Para instituciones que ya saben qué problema quieren resolver</p>
@@ -519,7 +519,7 @@ export default function ABNLanding() {
       </section>
 
       {/* Philosophy */}
-      <section className="px-6 md:px-12 py-24 md:py-32 bg-foreground text-background">
+      <section className="dark-section px-6 md:px-12 py-24 md:py-32 bg-foreground text-background">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div>
@@ -640,7 +640,7 @@ export default function ABNLanding() {
       </section>
 
       {/* CTA */}
-      <section className="px-6 md:px-12 py-16 bg-light-gray border-y border-[#1A1A1A]/10">
+      <section className="cta-section px-6 md:px-12 py-16 bg-light-gray border-y border-[#1A1A1A]/10">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="font-sans font-semibold text-2xl md:text-3xl mb-4">
             ¿Necesitás transformar tu institución?
@@ -692,7 +692,9 @@ export default function ABNLanding() {
               </div>
             </div>
 
-            <ContactForm />
+            <div className="form-card">
+              <ContactForm />
+            </div>
           </div>
         </div>
       </section>
