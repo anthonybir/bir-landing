@@ -124,7 +124,7 @@ export default function ContactForm() {
           value={formData.mensaje}
           onChange={handleChange}
           className="font-sans w-full px-4 py-3 bg-[#FAF8F5] border border-[#1a3a2f]/20 rounded-sm input-focus transition-all resize-none"
-          placeholder="Contanos brevemente qué necesitás y sobre tu institución..."
+          placeholder="Contanos sobre tu institución y qué necesitás resolver..."
         />
       </div>
       <button

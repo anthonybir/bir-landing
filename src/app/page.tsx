@@ -12,7 +12,7 @@ const jsonLd = {
   url: 'https://bir.com.py',
   email: 'anthony@bir.com.py',
   description:
-    'Consultoría familiar en transformación institucional. Educación, tecnología, derecho de niñez, y gestión financiera en Paraguay.',
+    'Agencia familiar en transformación institucional. Educación, tecnología, derecho de niñez, y gestión financiera en Paraguay.',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Lambaré',
@@ -90,7 +90,7 @@ export default function ABNLanding() {
               <span className="hero-word">improvisan</span>
             </h1>
             <p className="font-sans text-lg md:text-xl text-[#FAF8F5]/60 leading-relaxed max-w-2xl mb-10">
-              Consultora familiar con cuatro divisiones especializadas.
+              Agencia familiar con cuatro divisiones especializadas.
               Diseñamos sistemas para que la institución marque el estándar
               y la tecnología lo ejecute.
             </p>
@@ -135,8 +135,8 @@ export default function ABNLanding() {
               <p className="font-sans text-sm text-[#1a3a2f]/60 mt-1">Divisiones bajo un mismo equipo</p>
             </div>
             <div className="proof-card">
-              <p className="font-serif text-3xl md:text-4xl text-[#b87333]">100%</p>
-              <p className="font-sans text-sm text-[#1a3a2f]/60 mt-1">De lo que ofrecemos, lo usamos primero</p>
+              <p className="font-serif text-3xl md:text-4xl text-[#b87333]">2/2</p>
+              <p className="font-sans text-sm text-[#1a3a2f]/60 mt-1">Sistemas propios en uso interno</p>
             </div>
           </div>
         </div>
@@ -253,7 +253,7 @@ export default function ABNLanding() {
               <p className="font-sans text-[#FAF8F5]/70 leading-relaxed mb-6">
                 Aplicaciones a medida para organizaciones que superaron Excel
                 pero no necesitan software empresarial. Nuestro motor de IA
-                genera planes y materiales bajo el estándar que define la institución.
+                genera planes y materiales bajo el criterio que define la institución.
               </p>
               <ul className="font-sans text-sm space-y-2 text-[#FAF8F5]/60">
                 <li>• Sistemas de gestión escolar</li>
@@ -278,13 +278,13 @@ export default function ABNLanding() {
               </div>
               <p className="font-sans text-sm text-[#1a3a2f]/60 mb-4">Directora: Diana Nuñez de Bir</p>
               <p className="font-sans text-[#1a3a2f]/70 leading-relaxed mb-6">
-                Rediseño curricular, marcos de evaluación accesibles, y el estándar
-                institucional que alimenta nuestro motor de IA — para que cada
-                docente trabaje dentro de una línea coherente definida por la institución.
+                Rediseño curricular, marcos de evaluación accesibles, y la línea
+                pedagógica que alimenta nuestro motor de IA — para que cada
+                docente trabaje dentro de un criterio coherente definido por la institución.
               </p>
               <ul className="font-sans text-sm space-y-2 text-[#1a3a2f]/60">
                 <li>• Diagnóstico institucional</li>
-                <li>• Estándar pedagógico institucional</li>
+                <li>• Línea pedagógica institucional</li>
                 <li>• Diseño de rúbricas y evaluación</li>
                 <li>• Cumplimiento MEC Paraguay</li>
               </ul>
@@ -623,7 +623,7 @@ export default function ABNLanding() {
               <p>
                 Cada sistema que ofrecemos lo usamos nosotros primero. AENA Admin
                 gestiona nuestra propia institución educativa — incluyendo el motor
-                de IA que genera planes y materiales bajo nuestro estándar
+                de IA que genera planes y materiales bajo nuestro criterio
                 institucional, no el de ChatGPT. IPUPY Tesorería administra
                 las finanzas de nuestra organización eclesiástica.
               </p>
@@ -641,7 +641,7 @@ export default function ABNLanding() {
                 <span className="text-[#FAF8F5] font-serif text-2xl">AB</span>
               </div>
               <h3 className="font-serif text-lg">Anthony Bir</h3>
-              <p className="font-sans text-sm text-[#1a3a2f]/60">CEO & Director de Sistemas</p>
+              <p className="font-sans text-sm text-[#1a3a2f]/60">Director General & Sistemas</p>
               <p className="font-sans text-xs text-[#1a3a2f]/40 mt-1">Ex-Heinz, Thermo Fisher. Arquitecto de AENA Admin e IPUPY.</p>
             </div>
             <div className="text-center">
@@ -650,7 +650,7 @@ export default function ABNLanding() {
               </div>
               <h3 className="font-serif text-lg">Diana Nuñez de Bir</h3>
               <p className="font-sans text-sm text-[#1a3a2f]/60">Directora de Educación</p>
-              <p className="font-sans text-xs text-[#1a3a2f]/40 mt-1">20+ años en educación. Diseña el estándar pedagógico institucional.</p>
+              <p className="font-sans text-xs text-[#1a3a2f]/40 mt-1">20+ años en educación. Diseña la línea pedagógica institucional.</p>
             </div>
             <div className="text-center">
               <div className="w-20 h-20 bg-[#1a3a2f] rounded-sm flex items-center justify-center mx-auto mb-4 team-avatar">
@@ -714,7 +714,7 @@ export default function ABNLanding() {
                 Contacto
               </p>
               <h2 className="font-serif text-3xl md:text-4xl leading-tight mb-6 line-accent">
-                Conversemos sobre tu organización
+                Conversemos sobre tu institución
               </h2>
               <p className="font-sans text-[#1a3a2f]/70 leading-relaxed mt-12">
                 Cada proyecto comienza con una conversación. Contanos sobre
