@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Instrument_Sans, JetBrains_Mono, Cormorant_Garamond } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import NavBar from "./NavBar";
+import Footer from "./Footer";
+import WhatsAppFloat from "./WhatsAppFloat";
 import "./globals.css";
 
 const instrumentSans = Instrument_Sans({
@@ -25,7 +28,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://bir.com.py'),
   title: "ABN | Agencia Bir Nuñez - Consultoría en Transformación Institucional",
-  description: "Consultoría institucional en Paraguay. Sistemas donde la institución define el estándar y la tecnología lo ejecuta — educación, derecho de niñez, gestión financiera.",
+  description: "Consultoría institucional en Paraguay. Sistemas donde la institución define el estándar y la tecnología lo ejecuta — educación, tecnología, y desarrollo institucional.",
   keywords: ["consultoría", "transformación institucional", "Paraguay", "educación", "gobernanza", "tecnología"],
   authors: [{ name: "Agencia Bir Nuñez" }],
   openGraph: {
@@ -53,7 +56,12 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={`${instrumentSans.variable} ${cormorantGaramond.variable} ${jetbrainsMono.variable} antialiased`}>
-        {children}
+        <div className="min-h-screen bg-background text-foreground page-enter">
+          <NavBar />
+          <main>{children}</main>
+          <WhatsAppFloat />
+          <Footer />
+        </div>
         <Analytics />
       </body>
     </html>

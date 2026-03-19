@@ -1,38 +1,21 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import Link from 'next/link';
 
-const SECTIONS = ['divisiones', 'casos', 'equipo', 'contacto'] as const;
-
-const LABELS: Record<string, string> = {
-  divisiones: 'Divisiones',
-  casos: 'Casos',
-  equipo: 'Equipo',
-  contacto: 'Hablemos',
-};
+const NAV_ITEMS = [
+  { href: '/servicios', label: 'Servicios' },
+  { href: '/casos', label: 'Casos' },
+  { href: '/nosotros', label: 'Nosotros' },
+] as const;
 
 export default function NavBar() {
-  const [active, setActive] = useState<string>('');
+  const pathname = usePathname();
   const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            setActive(entry.target.id);
-          }
-        }
-      },
-      { rootMargin: '-40% 0px -55% 0px' }
-    );
-
-    for (const id of SECTIONS) {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    }
-
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -43,7 +26,6 @@ export default function NavBar() {
     handleScroll();
 
     return () => {
-      observer.disconnect();
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
@@ -57,56 +39,52 @@ export default function NavBar() {
       />
       <nav className="font-sans px-6 md:px-12 py-5 flex justify-between items-center max-w-7xl mx-auto">
         <div className="flex items-center gap-3">
-          <Image src="/logos/abn-frame-lockup-light.svg" alt="Agencia Bir Nuñez" width={300} height={88} priority className="hidden md:block h-20 w-auto hover:opacity-80 transition-opacity duration-200" />
-          <Image src="/logos/abn-frame-light.svg" alt="ABN" width={40} height={34} priority className="md:hidden h-9 w-auto" />
+          <Link href="/">
+            <Image src="/logos/abn-frame-lockup-light.svg" alt="Agencia Bir Nuñez" width={300} height={88} priority className="hidden md:block h-20 w-auto hover:opacity-80 transition-opacity duration-200" />
+            <Image src="/logos/abn-frame-light.svg" alt="ABN" width={40} height={34} priority className="md:hidden h-9 w-auto" />
+          </Link>
         </div>
         <div className="flex items-center gap-6">
-          {SECTIONS.filter((s) => s !== 'contacto').map((id) => (
-            <a
-              key={id}
-              href={`#${id}`}
+          {NAV_ITEMS.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
               className={`text-sm font-medium transition-colors hidden md:block ${
-                active === id ? 'text-accent' : 'hover:text-accent'
+                pathname === href ? 'text-accent' : 'hover:text-accent'
               }`}
             >
-              {LABELS[id]}
-            </a>
+              {label}
+            </Link>
           ))}
-          <a
-            href="#contacto"
+          <Link
+            href="/#contacto"
             className={`text-sm font-medium px-4 py-2 rounded-sm transition-colors hidden md:block ${
-              active === 'contacto'
-                ? 'bg-[#C7A54A] text-background'
-                : 'bg-foreground text-background hover:bg-foreground/90'
+              pathname === '/' ? 'bg-foreground text-background hover:bg-foreground/90' : 'bg-foreground text-background hover:bg-foreground/90'
             }`}
           >
             Hablemos
-          </a>
+          </Link>
         </div>
       </nav>
       <div className="md:hidden px-6 md:px-12 pb-4 max-w-7xl mx-auto">
         <div className="mobile-nav-strip flex gap-2 overflow-x-auto pb-1">
-          {SECTIONS.filter((s) => s !== 'contacto').map((id) => (
-            <a
-              key={id}
-              href={`#${id}`}
+          {NAV_ITEMS.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
               className={`mobile-nav-chip ${
-                active === id ? 'border-[#C7A54A]/40 bg-[#C7A54A]/10 text-[#9A7B30]' : ''
+                pathname === href ? 'border-[#C7A54A]/40 bg-[#C7A54A]/10 text-[#9A7B30]' : ''
               }`}
             >
-              {LABELS[id]}
-            </a>
+              {label}
+            </Link>
           ))}
-          <a
-            href="#contacto"
-            className={`mobile-nav-chip mobile-nav-chip-cta ${
-              active === 'contacto'
-                ? 'bg-[#C7A54A] text-background border-[#C7A54A]'
-                : 'bg-foreground text-background border-[#1A1A1A]'
-            }`}
+          <Link
+            href="/#contacto"
+            className="mobile-nav-chip mobile-nav-chip-cta bg-foreground text-background border-[#1A1A1A]"
           >
             Hablemos
-          </a>
+          </Link>
         </div>
       </div>
     </header>
