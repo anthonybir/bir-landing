@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const NAV_ITEMS = [
+  { href: '/aula', label: 'AULA' },
   { href: '/servicios', label: 'Servicios' },
   { href: '/casos', label: 'Casos' },
   { href: '/nosotros', label: 'Nosotros' },
@@ -58,9 +59,7 @@ export default function NavBar() {
           ))}
           <Link
             href="/#contacto"
-            className={`text-sm font-medium px-4 py-2 rounded-sm transition-colors hidden md:block ${
-              pathname === '/' ? 'bg-foreground text-background hover:bg-foreground/90' : 'bg-foreground text-background hover:bg-foreground/90'
-            }`}
+            className="text-sm font-medium px-4 py-2 rounded-sm transition-colors hidden md:block bg-foreground text-background hover:bg-foreground/90"
           >
             Hablemos
           </Link>

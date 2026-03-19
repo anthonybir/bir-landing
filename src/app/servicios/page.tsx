@@ -4,60 +4,60 @@ import CTABanner from '../CTABanner';
 
 export const metadata: Metadata = {
   title: 'Servicios | ABN — Agencia Bir Nuñez',
-  description: 'Motor de IA institucional y consultoría en transformación. Diagnóstico, implementación y acompañamiento para colegios, ONGs e iglesias en Paraguay.',
+  description: 'Plataforma AULA: motor de IA con contexto institucional. Consultoría en transformación para colegios, seminarios e instituciones en Latinoamérica.',
 };
 
 export default function ServiciosPage() {
   return (
     <>
-      {/* AI Motor — Editorial AENA */}
+      {/* AI Motor — AULA Platform */}
       <section className="dark-section px-6 md:px-12 pt-24 pb-24 md:pt-32 md:pb-32 bg-foreground text-background overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
             {/* Copy */}
             <div className="scroll-reveal-left">
               <p className="font-sans text-sm tracking-widest text-accent mb-4 uppercase">
-                Nuestro Motor de IA
+                Plataforma AULA
               </p>
               <h1 className="font-serif font-bold text-3xl md:text-5xl leading-tight mb-6">
-                Tus docentes ya usan IA.<br />
-                <span className="text-accent">¿Quién define el estándar?</span>
+                Un motor genérico.<br />
+                <span className="text-accent">Tu contexto institucional.</span>
               </h1>
               <p className="font-sans text-background/70 leading-relaxed mb-8">
                 Hoy cada docente genera sus planes con ChatGPT de forma improvisada
-                — sin criterio institucional, sin alineación al MEC, sin coherencia
-                entre grados. Editorial AENA invierte esa lógica: la institución
-                define el estándar de aprendizaje, y la IA lo personaliza para cada
-                aula. Capacidades MEC, contexto local de tu colegio, planes anuales
-                y semanales — todo generado bajo una línea institucional consistente.
+                — sin criterio institucional, sin alineación curricular, sin coherencia
+                entre grados. AULA invierte esa lógica: ABN documenta cómo funciona
+                tu institución, carga ese contexto en la plataforma, y el motor
+                produce planificaciones que suenan a tu escuela — no a una plantilla
+                genérica.
               </p>
 
               <div className="space-y-5 mb-8">
                 <div className="flex items-start gap-4">
                   <span className="font-sans font-bold text-4xl text-accent/20 leading-none shrink-0 mt-0.5">01</span>
                   <div>
-                    <p className="font-sans font-medium text-sm">La institución configura su estándar</p>
-                    <p className="font-sans text-xs text-background/50">Capacidades MEC + contexto local + filosofía pedagógica del colegio</p>
+                    <p className="font-sans font-medium text-sm">ABN construye tu contexto institucional</p>
+                    <p className="font-sans text-xs text-background/50">Marco pedagógico + currículo + evaluación + cultura local — documentado y cargado en AULA</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <span className="font-sans font-bold text-4xl text-accent/20 leading-none shrink-0 mt-0.5">02</span>
                   <div>
-                    <p className="font-sans font-medium text-sm">La IA genera planes y 6 materiales por semana</p>
-                    <p className="font-sans text-xs text-background/50">Texto base, ficha, evaluación, comunicado, guía, y rúbrica — alineados al estándar</p>
+                    <p className="font-sans font-medium text-sm">El motor genera bajo tu estándar</p>
+                    <p className="font-sans text-xs text-background/50">Planes, materiales, evaluaciones — alineados a TU visión, no a una plantilla genérica</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <span className="font-sans font-bold text-4xl text-accent/20 leading-none shrink-0 mt-0.5">03</span>
                   <div>
-                    <p className="font-sans font-medium text-sm">El docente revisa, ajusta, imprime</p>
+                    <p className="font-sans font-medium text-sm">El docente revisa, ajusta, ejecuta</p>
                     <p className="font-sans text-xs text-background/50">DOCX y PDF listos — el docente aporta su criterio, no su fin de semana</p>
                   </div>
                 </div>
               </div>
 
               <div className="flex flex-wrap gap-2">
-                {['Texto base', 'Ficha de trabajo', 'Evaluación', 'Comunicación a padres', 'Guía de cuaderno', 'Rúbrica'].map((tag) => (
+                {['Planificaci\u00f3n semanal', 'Texto base', 'Ficha de trabajo', 'Evaluaci\u00f3n', 'Comunicaci\u00f3n a padres', 'R\u00fabrica'].map((tag) => (
                   <span
                     key={tag}
                     className="capability-tag font-sans text-xs px-3 py-1.5 bg-background/10 rounded-sm text-background/70 border border-[#F5F3EE]/10 cursor-default"
@@ -76,7 +76,7 @@ export default function ServiciosPage() {
                 </div>
                 <Image
                   src="/screenshots/editorial-aena.png"
-                  alt="Editorial AENA — Hub de generación de materiales educativos con IA"
+                  alt="AULA — Motor de planificación académica con contexto institucional"
                   width={2814}
                   height={1808}
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -85,7 +85,7 @@ export default function ServiciosPage() {
                 />
               </div>
               <p className="font-sans text-xs text-background/30 mt-4 text-center">
-                Editorial AENA — Planes y materiales generados bajo estándar institucional
+                Motor AULA — Planificaciones generadas bajo estándar institucional (AENA)
               </p>
             </div>
           </div>
@@ -112,7 +112,7 @@ export default function ServiciosPage() {
             <div className="card-hover engagement-card bg-background p-8 rounded-sm border border-[#1A1A1A]/10">
               <p className="engagement-step">01</p>
               <h3 className="font-sans font-semibold text-xl mb-2">Diagnóstico Institucional</h3>
-              <p className="font-sans text-sm text-accent mb-4">Para colegios, ONGs e iglesias que necesitan ordenar primero</p>
+              <p className="font-sans text-sm text-accent mb-4">Para colegios, seminarios e instituciones que necesitan ordenar primero</p>
               <p className="font-sans text-foreground/70 leading-relaxed mb-6">
                 Auditamos operación, estructura y puntos de riesgo para definir
                 qué conviene resolver ahora, qué puede esperar y qué sistema

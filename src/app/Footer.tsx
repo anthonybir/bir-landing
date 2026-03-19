@@ -17,6 +17,7 @@ export default function Footer() {
             <div>
               <p className="font-sans text-xs tracking-widest text-accent uppercase mb-3">Secciones</p>
               <nav className="font-sans text-sm space-y-2">
+                <Link href="/aula" className="block text-background/50 hover:text-background transition-colors">Plataforma AULA</Link>
                 <Link href="/servicios" className="block text-background/50 hover:text-background transition-colors">Servicios</Link>
                 <Link href="/casos" className="block text-background/50 hover:text-background transition-colors">Casos</Link>
                 <Link href="/nosotros" className="block text-background/50 hover:text-background transition-colors">Nosotros</Link>

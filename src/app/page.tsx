@@ -11,7 +11,7 @@ const jsonLd = {
   url: 'https://bir.com.py',
   email: 'anthony@bir.com.py',
   description:
-    'Consultoría en transformación institucional. Educación, tecnología y desarrollo institucional en Paraguay.',
+    'Consultoría en transformación institucional. Educación, tecnología y desarrollo institucional en Latinoamérica.',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Lambaré',
@@ -34,7 +34,7 @@ export default function ABNLanding() {
         <div className="max-w-7xl mx-auto relative">
           <div className="max-w-4xl fade-in">
             <p className="font-sans text-sm tracking-widest text-accent mb-4 uppercase">
-              Para colegios, ONGs e iglesias en Paraguay
+              Para colegios, seminarios e instituciones en Latinoamérica
             </p>
             <div className="w-12 h-px bg-[#C7A54A]/50 mb-8" />
             <h1 className="font-serif font-bold text-4xl md:text-6xl lg:text-7xl xl:text-[5.5rem] leading-[1.05] tracking-tight mb-6">
@@ -75,16 +75,16 @@ export default function ABNLanding() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center relative">
             <div className="proof-card">
-              <p className="font-sans font-bold text-3xl md:text-4xl text-foreground"><CountUp value="2" /></p>
+              <p className="font-sans font-bold text-3xl md:text-4xl text-foreground"><CountUp value="3" /></p>
               <p className="font-sans text-sm text-foreground/60 mt-1">Sistemas propios en producción</p>
+            </div>
+            <div className="proof-card">
+              <p className="font-sans font-bold text-3xl md:text-4xl text-foreground"><CountUp value="4" /></p>
+              <p className="font-sans text-sm text-foreground/60 mt-1">Países con instituciones activas</p>
             </div>
             <div className="proof-card">
               <p className="font-sans font-bold text-3xl md:text-4xl text-foreground"><CountUp value="20+" /></p>
               <p className="font-sans text-sm text-foreground/60 mt-1">Años de experiencia institucional</p>
-            </div>
-            <div className="proof-card">
-              <p className="font-sans font-bold text-3xl md:text-4xl text-foreground"><CountUp value="4" /></p>
-              <p className="font-sans text-sm text-foreground/60 mt-1">Socios con trayectoria global</p>
             </div>
             <div className="proof-card">
               <p className="font-sans font-bold text-3xl md:text-4xl text-accent"><CountUp value="100%" /></p>
@@ -108,7 +108,7 @@ export default function ABNLanding() {
               </div>
               <h3 className="font-sans font-semibold text-xl mb-2">Servicios</h3>
               <p className="font-sans text-sm text-foreground/60 mb-4">
-                Motor de IA institucional, diagnóstico, implementación y acompañamiento integral.
+                Plataforma AULA, diagnóstico institucional, implementación y acompañamiento integral.
               </p>
               <span className="font-sans text-sm font-medium text-accent group-hover:underline inline-flex items-center gap-1">
                 Ver servicios
@@ -124,7 +124,7 @@ export default function ABNLanding() {
               </div>
               <h3 className="font-sans font-semibold text-xl mb-2">Casos Reales</h3>
               <p className="font-sans text-sm text-foreground/60 mb-4">
-                AENA Admin y IPUPY Tesorería — sistemas en producción que usamos y ofrecemos.
+                AENA Admin, IBA Paraguay e IPUPY Tesorería — sistemas en producción que usamos y ofrecemos.
               </p>
               <span className="font-sans text-sm font-medium text-accent group-hover:underline inline-flex items-center gap-1">
                 Ver casos
@@ -151,28 +151,32 @@ export default function ABNLanding() {
         </div>
       </section>
 
-      {/* AI Motor Teaser */}
+      {/* AI Motor Teaser — AULA */}
       <section className="dark-section px-6 md:px-12 py-20 md:py-28 bg-foreground text-background overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl">
             <p className="font-sans text-sm tracking-widest text-accent mb-4 uppercase">
-              Nuestro Motor de IA
+              Plataforma AULA
             </p>
             <h2 className="font-serif font-bold text-3xl md:text-4xl leading-tight mb-6">
-              Tus docentes ya usan IA.<br />
-              <span className="text-accent">¿Quién define el estándar?</span>
+              Un motor. Tu contexto.<br />
+              <span className="text-accent">Inteligencia institucional.</span>
             </h2>
-            <p className="font-sans text-background/70 leading-relaxed mb-8">
-              Editorial AENA invierte la lógica: la institución define el estándar
-              de aprendizaje, y la IA lo personaliza para cada aula. Capacidades MEC,
-              contexto local, planes anuales y semanales — todo generado bajo una
-              línea institucional consistente.
+            <p className="font-sans text-background/70 leading-relaxed mb-4">
+              AULA es un motor de planificación académica asistido por IA cuya
+              calidad depende de una variable: el contexto institucional. ABN construye
+              ese contexto. El motor sin contexto es genérico. El motor con tu contexto
+              produce resultados que suenan a tu institución.
+            </p>
+            <p className="font-sans text-background/50 text-sm leading-relaxed mb-8">
+              Operando en Paraguay. Expandiendo a Brasil, Argentina y Ecuador
+              a través de la red IBA.
             </p>
             <Link
-              href="/servicios"
+              href="/aula"
               className="font-sans text-sm font-medium text-accent hover:underline inline-flex items-center gap-2"
             >
-              Conocer el motor de IA
+              Conocer la plataforma AULA
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
             </Link>
           </div>
@@ -193,9 +197,10 @@ export default function ABNLanding() {
               <p className="font-sans text-foreground/70 leading-relaxed max-w-xl">
                 La IA es una herramienta poderosa, pero sin estructura institucional
                 produce resultados aleatorios. Traemos metodologías de corporaciones
-                globales (Heinz, Kontron, Thermo Fisher) al contexto de escuelas, iglesias
-                y ONGs en Paraguay — diseñando sistemas donde la institución define
-                el estándar y la tecnología lo ejecuta a escala.
+                globales (Heinz, Kontron, Thermo Fisher) al contexto de colegios,
+                seminarios e instituciones en Latinoamérica — diseñando sistemas
+                donde la institución define el estándar y la tecnología lo ejecuta
+                a escala.
               </p>
             </div>
             <div className="space-y-6 scroll-reveal-right">
@@ -212,9 +217,9 @@ export default function ABNLanding() {
                 </p>
               </div>
               <div className="border-l-2 border-[#C7A54A] pl-6">
-                <h3 className="font-sans font-semibold text-xl mb-2">Contexto paraguayo, escala global</h3>
+                <h3 className="font-sans font-semibold text-xl mb-2">Contexto local, plataforma regional</h3>
                 <p className="font-sans text-sm text-foreground/60">
-                  20+ años diseñando para la realidad local con herramientas de clase mundial.
+                  Cada institución es única. AULA se adapta al contexto de cada país y cada realidad educativa.
                 </p>
               </div>
             </div>

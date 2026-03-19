@@ -4,7 +4,7 @@ import CTABanner from '../CTABanner';
 
 export const metadata: Metadata = {
   title: 'Casos | ABN — Agencia Bir Nuñez',
-  description: 'AENA Admin: sistema de gestión escolar con IA. IPUPY Tesorería: plataforma financiera para organizaciones eclesiásticas. Sistemas en producción en Paraguay.',
+  description: 'AENA Admin, IBA Paraguay y IPUPY Tesorería — sistemas en producción para instituciones educativas y eclesiásticas en Paraguay y Latinoamérica.',
 };
 
 export default function CasosPage() {
@@ -79,6 +79,66 @@ export default function CasosPage() {
                 className="w-full h-auto"
                 loading="lazy"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* IBA Paraguay Case */}
+      <section className="px-6 md:px-12 py-16 md:py-24 bg-background">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="md:order-2">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 stat-card rounded-sm flex items-center justify-center">
+                  <span className="text-background font-sans font-semibold text-xl">I</span>
+                </div>
+                <div>
+                  <h2 className="font-sans font-semibold text-xl">IBA Paraguay</h2>
+                  <p className="font-sans text-sm text-foreground/60">Instituto Bíblico Apostólico — ERP Académico</p>
+                </div>
+              </div>
+              <p className="font-sans text-foreground/70 leading-relaxed mb-6">
+                Sistema académico para seminario teológico: matrículas por nivel GATS,
+                calificaciones ponderadas, asistencia, transcriptos, y paquetes de
+                cumplimiento para sede central (UPCI). Primer tenant de la plataforma
+                AULA — expandiendo a IBA Brasil, Argentina y Ecuador.
+              </p>
+              <ul className="font-sans text-sm space-y-2 text-foreground/60">
+                <li className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  ERP académico en producción desde 2026
+                </li>
+                <li className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  Motor AULA en implementación para planificación teológica
+                </li>
+                <li className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  4 países en la red IBA (PY, BR, AR, EC)
+                </li>
+              </ul>
+              <a href="/#contacto" className="link-arrow font-sans text-sm font-medium text-accent mt-6 hover:underline">
+                Consultá sobre AULA para seminarios
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+              </a>
+            </div>
+            <div className="scroll-reveal-left md:order-1">
+              <div className="rounded-lg overflow-hidden bg-foreground/5 border border-[#1A1A1A]/10 p-12 flex items-center justify-center min-h-[300px]">
+                <div className="text-center">
+                  <p className="font-serif font-bold text-5xl text-accent/30 mb-4">IBA</p>
+                  <p className="font-sans text-sm text-foreground/40">Plataforma AULA en implementación</p>
+                  <p className="font-sans text-xs text-foreground/30 mt-2">Paraguay · Brasil · Argentina · Ecuador</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

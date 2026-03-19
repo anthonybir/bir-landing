@@ -3,7 +3,7 @@ import CTABanner from '../CTABanner';
 
 export const metadata: Metadata = {
   title: 'Nosotros | ABN — Agencia Bir Nuñez',
-  description: 'Conocé a la Junta Directiva de ABN. Experiencia corporativa internacional, misiones globales y pedagogía institucional al servicio de Paraguay.',
+  description: 'Conocé a la Junta Directiva de ABN. Experiencia corporativa internacional, misiones globales y pedagogía institucional al servicio de Latinoamérica.',
 };
 
 export default function NosotrosPage() {
@@ -37,9 +37,10 @@ export default function NosotrosPage() {
             <div className="font-sans text-foreground/70 leading-relaxed space-y-4">
               <p>
                 Cada sistema que ofrecemos lo usamos nosotros primero. AENA Admin
-                gestiona nuestra propia institución educativa — incluyendo el motor
-                de IA que genera planes y materiales bajo nuestro criterio
-                institucional, no el de ChatGPT. IPUPY Tesorería administra
+                gestiona nuestra propia institución educativa con la plataforma
+                AULA — el motor de IA que genera planes y materiales bajo nuestro
+                criterio institucional, no el de ChatGPT. IBA Paraguay opera
+                como ERP académico para seminarios, e IPUPY Tesorería administra
                 las finanzas de nuestra organización eclesiástica.
               </p>
               <p className="text-foreground font-medium">
@@ -78,7 +79,7 @@ export default function NosotrosPage() {
                   internacionales en Thermo Fisher Scientific, con contribuciones
                   significativas al proyecto KAUST en Jeddah, Arabia Saudita. Arquitecto
                   de los sistemas AENA Admin e IPUPY — las plataformas que ABN opera
-                  y ofrece a instituciones educativas y eclesiásticas en Paraguay.
+                  y ofrece a instituciones educativas y eclesiásticas en Latinoamérica.
                 </p>
               </div>
             </div>
@@ -133,7 +134,7 @@ export default function NosotrosPage() {
               <p className="font-sans text-sm text-foreground/70 leading-relaxed">
                 Maestría en Gestión Educativa (UNAES). Más de 20 años de experiencia
                 en pedagogía de escuelas privadas. Diseña la línea pedagógica
-                institucional que alimenta el motor de IA de AENA.
+                institucional que alimenta la plataforma AULA.
               </p>
             </div>
           </div>
