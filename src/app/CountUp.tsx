@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 interface CountUpProps {
   value: string;
@@ -11,6 +11,30 @@ export default function CountUp({ value, className }: CountUpProps) {
   const ref = useRef<HTMLSpanElement>(null);
   const [display, setDisplay] = useState(value);
   const hasAnimated = useRef(false);
+
+  const animate = useCallback(() => {
+    const match = value.match(/^(\d+)(.*)$/);
+    if (!match) {
+      setDisplay(value);
+      return;
+    }
+
+    const target = parseInt(match[1], 10);
+    const suffix = match[2];
+    const duration = 1200;
+    const start = performance.now();
+
+    function step(now: number) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(eased * target);
+      setDisplay(`${current}${suffix}`);
+      if (progress < 1) requestAnimationFrame(step);
+    }
+
+    requestAnimationFrame(step);
+  }, [value]);
 
   useEffect(() => {
     const el = ref.current;
@@ -28,33 +52,7 @@ export default function CountUp({ value, className }: CountUpProps) {
 
     observer.observe(el);
     return () => observer.disconnect();
-  });
-
-  function animate() {
-    // Extract numeric part and suffix (e.g., "20+" → 20, "+")
-    const match = value.match(/^(\d+)(.*)$/);
-    if (!match) {
-      setDisplay(value);
-      return;
-    }
-
-    const target = parseInt(match[1], 10);
-    const suffix = match[2];
-    const duration = 1200;
-    const start = performance.now();
-
-    function step(now: number) {
-      const elapsed = now - start;
-      const progress = Math.min(elapsed / duration, 1);
-      // Ease out cubic
-      const eased = 1 - Math.pow(1 - progress, 3);
-      const current = Math.round(eased * target);
-      setDisplay(`${current}${suffix}`);
-      if (progress < 1) requestAnimationFrame(step);
-    }
-
-    requestAnimationFrame(step);
-  }
+  }, [animate]);
 
   return (
     <span ref={ref} className={className}>

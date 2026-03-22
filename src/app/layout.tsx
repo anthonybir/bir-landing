@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Instrument_Sans, JetBrains_Mono, Cormorant_Garamond } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import WhatsAppFloat from "./WhatsAppFloat";
@@ -29,8 +28,6 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://bir.com.py'),
   title: "ABN | Agencia Bir Nuñez - Consultoría en Transformación Institucional",
   description: "Consultoría institucional en Latinoamérica. Sistemas donde la institución define el estándar y la tecnología lo ejecuta — educación, tecnología, y desarrollo institucional.",
-  keywords: ["consultoría", "transformación institucional", "Paraguay", "educación", "gobernanza", "tecnología"],
-  authors: [{ name: "Agencia Bir Nuñez" }],
   openGraph: {
     title: "ABN | Consultoría en Transformación Institucional",
     description: "Estructura donde otros improvisan",
@@ -38,13 +35,7 @@ export const metadata: Metadata = {
     siteName: "Agencia Bir Nuñez",
     locale: "es_PY",
     type: "website",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "ABN - Consultoría en Transformación Institucional" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "ABN | Consultoría en Transformación Institucional",
-    description: "Estructura donde otros improvisan",
-    images: ["/opengraph-image"],
+    images: "/opengraph-image",
   },
 };
 
@@ -62,7 +53,6 @@ export default function RootLayout({
           <WhatsAppFloat />
           <Footer />
         </div>
-        <Analytics />
       </body>
     </html>
   );

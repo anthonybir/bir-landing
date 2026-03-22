@@ -3,140 +3,159 @@ import CTABanner from '../CTABanner';
 
 export const metadata: Metadata = {
   title: 'Nosotros | ABN — Agencia Bir Nuñez',
-  description: 'Conocé a la Junta Directiva de ABN. Experiencia corporativa internacional, misiones globales y pedagogía institucional al servicio de Latinoamérica.',
+  description:
+    'Conocé a la Junta Directiva de ABN. Experiencia corporativa internacional, misiones globales y pedagogía institucional al servicio de Latinoamérica.',
 };
+
+const leaders = [
+  {
+    initials: 'JB',
+    role: 'Cofundador & Socio',
+    name: 'Joseph Bir',
+    copy:
+      'Licenciatura en Teología del Texas Bible College. Cuatro décadas de experiencia en Misiones Globales de la UPCI, con liderazgo misionero en Paraguay, Perú y la red GATS en Sudamérica.',
+  },
+  {
+    initials: 'LB',
+    role: 'Socia',
+    name: 'Loretta Bir',
+    copy:
+      'Licenciatura en Educación Cristiana del Texas Bible College. Líder GATS en IBA Paraguay y fundadora de la escuela K-12 en Lambaré que dio origen a los sistemas que hoy ABN ofrece.',
+  },
+  {
+    initials: 'DN',
+    role: 'Socia',
+    name: 'Diana Nunez',
+    copy:
+      'Maestría en Gestión Educativa. Más de 20 años de experiencia en pedagogía de escuelas privadas y responsable de la línea institucional que alimenta el criterio de AULA.',
+  },
+] as const;
 
 export default function NosotrosPage() {
   return (
     <>
-      {/* Narrative — Quiénes Somos */}
-      <section className="px-6 md:px-12 pt-24 pb-16 md:pt-32 md:pb-20 bg-background">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-16">
-            <p className="font-sans text-sm tracking-widest text-accent mb-4 uppercase">
-              Quiénes Somos
-            </p>
-            <h1 className="font-serif font-bold text-3xl md:text-5xl line-accent">
-              Una agencia con raíces profundas
+      <section className="bg-background px-6 pb-16 pt-18 md:px-12 md:pb-20 md:pt-24">
+        <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-end">
+          <div className="max-w-md">
+            <p className="section-kicker mb-4">Nosotros</p>
+            <h1 className="font-serif text-4xl font-semibold leading-[1.03] md:text-6xl">
+              Una dirección construida desde práctica institucional real.
             </h1>
           </div>
+          <div className="grid gap-5 text-foreground/68 md:max-w-2xl md:grid-cols-2">
+            <p className="font-sans text-base leading-relaxed">
+              ABN nace de una convergencia poco común: experiencia corporativa internacional,
+              décadas de servicio misionero y educativo en Sudamérica, y una operación propia
+              lo suficientemente exigente como para obligarnos a diseñar sistemas serios.
+            </p>
+            <p className="font-sans text-base leading-relaxed">
+              No hablamos de estructura desde afuera. La usamos todos los días en escuela,
+              seminario y tesorería. Esa mezcla de criterio y práctica es la que sostiene la
+              oferta completa de ABN.
+            </p>
+          </div>
+        </div>
+      </section>
 
-          <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-start">
-            <div className="font-sans text-foreground/70 leading-relaxed space-y-4">
-              <p>
-                ABN nace de la convergencia de trayectorias: experiencia corporativa
-                internacional, cuatro décadas de servicio misionero y educativo en
-                Sudamérica, y la visión compartida de una familia comprometida con
-                el desarrollo institucional.
-              </p>
-              <p>
-                Trabajamos con instituciones que entienden que la excelencia operativa
-                y los valores humanos no son opuestos, sino complementarios.
-              </p>
+      <section className="section-frame bg-background px-6 py-12 md:px-12 md:py-14">
+        <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-3">
+          <div className="proof-metric">
+            <p className="font-sans text-4xl font-semibold tracking-tight text-foreground">AENA</p>
+            <p className="mt-3 font-sans text-sm leading-relaxed text-foreground/62">
+              gestión escolar y AULA en operación cotidiana.
+            </p>
+          </div>
+          <div className="proof-metric">
+            <p className="font-sans text-4xl font-semibold tracking-tight text-foreground">IBA</p>
+            <p className="mt-3 font-sans text-sm leading-relaxed text-foreground/62">
+              ERP académico y expansión regional bajo la misma lógica institucional.
+            </p>
+          </div>
+          <div className="proof-metric">
+            <p className="font-sans text-4xl font-semibold tracking-tight text-accent">IPUPY</p>
+            <p className="mt-3 font-sans text-sm leading-relaxed text-foreground/62">
+              tesorería multi-sede con trazabilidad y gobernanza financiera.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white px-6 py-18 md:px-12 md:py-24">
+        <div className="mx-auto grid max-w-7xl gap-10 border-t border-[#1A1A1A]/10 pt-8 md:grid-cols-[0.34fr_0.66fr] md:gap-14">
+          <div>
+            <p className="section-kicker mb-4">Founder-led</p>
+            <p className="font-serif text-3xl leading-tight md:text-4xl">Anthony Bir</p>
+            <p className="mt-3 font-sans text-sm font-medium text-foreground/48">
+              Cofundador & Socio Director
+            </p>
+          </div>
+
+          <div className="grid gap-8">
+            <div className="grid gap-6 md:grid-cols-[auto_1fr] md:items-start">
+              <div className="team-avatar flex h-20 w-20 items-center justify-center rounded-2xl border border-[#1A1A1A]/10 bg-background text-foreground md:h-24 md:w-24">
+                <span className="font-sans text-2xl font-semibold md:text-3xl">AB</span>
+              </div>
+              <div>
+                <h2 className="font-serif text-4xl font-semibold leading-none md:text-5xl">
+                  Dirección con experiencia corporativa y ejecución institucional propia.
+                </h2>
+                <p className="mt-5 font-sans text-base leading-relaxed text-foreground/68">
+                  Anthony Bir aporta experiencia en ventas de exportación en Heinz, ventas
+                  de proyectos e implementación SAP en Kontron AG, y liderazgo de proyectos
+                  internacionales en Thermo Fisher Scientific, incluyendo contribuciones al
+                  proyecto KAUST en Jeddah, Arabia Saudita.
+                </p>
+                <p className="mt-4 font-sans text-base leading-relaxed text-foreground/68">
+                  En ABN, esa trayectoria se traduce en arquitectura institucional: es el
+                  responsable detrás de AENA Admin e IPUPY, plataformas que no solo se
+                  presentan al mercado, sino que sostienen la operación real de la agencia
+                  y su ecosistema.
+                </p>
+              </div>
             </div>
-            <div className="font-sans text-foreground/70 leading-relaxed space-y-4">
-              <p>
-                Cada sistema que ofrecemos lo usamos nosotros primero. AENA Admin
-                gestiona nuestra propia institución educativa con la plataforma
-                AULA — el motor de IA que genera planes y materiales bajo nuestro
-                criterio institucional, no el de ChatGPT. IBA Paraguay opera
-                como ERP académico para seminarios, e IPUPY Tesorería administra
-                las finanzas de nuestra organización eclesiástica.
+
+            <div className="border-t border-[#1A1A1A]/10 pt-6">
+              <p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-foreground/38">
+                Por qué importa
               </p>
-              <p className="text-foreground font-medium">
-                Creemos que la IA funciona cuando la institución le pone los límites.
-                Lo probamos en nuestra propia realidad todos los días.
+              <p className="mt-3 max-w-3xl font-sans text-sm leading-relaxed text-foreground/62">
+                La propuesta de ABN está dirigida por personas que combinan gobierno institucional,
+                disciplina operativa y práctica diaria sobre los mismos sistemas que ofrecen.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Board of Directors */}
-      <section className="px-6 md:px-12 py-20 md:py-28 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-16">
-            <p className="font-sans text-sm tracking-widest text-accent mb-4 uppercase">
-              Junta Directiva
-            </p>
-            <h2 className="font-serif font-bold text-3xl md:text-4xl line-accent">
-              Liderazgo con experiencia global
+      <section className="bg-background px-6 py-18 md:px-12 md:py-22">
+        <div className="mx-auto max-w-7xl">
+          <div className="max-w-2xl">
+            <p className="section-kicker mb-4">Junta directiva</p>
+            <h2 className="font-serif text-4xl font-semibold leading-[1.05] md:text-5xl">
+              Liderazgo complementario, no perfiles intercambiables.
             </h2>
           </div>
 
-          {/* Anthony — Distinguished Founder Card */}
-          <div className="bg-foreground text-background p-8 md:p-12 rounded-sm mb-8">
-            <div className="grid md:grid-cols-[auto_1fr] gap-8 items-center">
-              <div className="w-24 h-24 md:w-28 md:h-28 bg-background rounded-sm flex items-center justify-center mx-auto md:mx-0 team-avatar">
-                <span className="text-foreground font-sans font-semibold text-3xl md:text-4xl">AB</span>
-              </div>
-              <div>
-                <p className="font-sans text-xs tracking-widest text-accent uppercase mb-2">Cofundador & Socio Director</p>
-                <h3 className="font-serif font-bold text-2xl md:text-3xl mb-4">Anthony Bir</h3>
-                <p className="font-sans text-background/70 leading-relaxed max-w-3xl">
-                  Experiencia en ventas de exportación en Heinz, ventas de proyectos
-                  e implementación SAP en Kontron AG, y liderazgo de proyectos
-                  internacionales en Thermo Fisher Scientific, con contribuciones
-                  significativas al proyecto KAUST en Jeddah, Arabia Saudita. Arquitecto
-                  de los sistemas AENA Admin e IPUPY — las plataformas que ABN opera
-                  y ofrece a instituciones educativas y eclesiásticas en Latinoamérica.
+          <div className="mt-12 grid gap-10">
+            {leaders.map((leader) => (
+              <article
+                key={leader.name}
+                className="grid gap-5 border-t border-[#1A1A1A]/10 pt-6 md:grid-cols-[120px_280px_1fr] md:gap-8"
+              >
+                <div className="team-avatar flex h-16 w-16 items-center justify-center rounded-2xl border border-[#1A1A1A]/10 bg-white text-foreground md:h-18 md:w-18">
+                  <span className="font-sans text-xl font-semibold">{leader.initials}</span>
+                </div>
+                <div>
+                  <p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-accent">
+                    {leader.role}
+                  </p>
+                  <h3 className="mt-2 font-serif text-3xl leading-none">{leader.name}</h3>
+                </div>
+                <p className="max-w-3xl font-sans text-sm leading-relaxed text-foreground/64">
+                  {leader.copy}
                 </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Partners — 3 Cards */}
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Joseph Bir */}
-            <div className="bg-background p-8 rounded-sm border border-[#1A1A1A]/10">
-              <div className="w-20 h-20 bg-foreground rounded-sm flex items-center justify-center mx-auto mb-6 team-avatar">
-                <span className="text-background font-sans font-semibold text-2xl">JB</span>
-              </div>
-              <div className="text-center mb-4">
-                <p className="font-sans text-xs tracking-widest text-accent uppercase mb-1">Cofundador & Socio</p>
-                <h3 className="font-sans font-semibold text-xl">Joseph Bir</h3>
-              </div>
-              <p className="font-sans text-sm text-foreground/70 leading-relaxed">
-                Cofundador de ABN. Licenciatura en Teología del Texas Bible
-                College (TBC). 40 años de experiencia en Misiones Globales
-                de la UPCI. Misionero principal en Paraguay y Perú. Líder GATS
-                en Sudamérica y Coordinador de Área de la UPCI en múltiples
-                zonas del continente.
-              </p>
-            </div>
-
-            {/* Loretta Bir */}
-            <div className="bg-background p-8 rounded-sm border border-[#1A1A1A]/10">
-              <div className="w-20 h-20 bg-foreground rounded-sm flex items-center justify-center mx-auto mb-6 team-avatar">
-                <span className="text-background font-sans font-semibold text-2xl">LB</span>
-              </div>
-              <div className="text-center mb-4">
-                <p className="font-sans text-xs tracking-widest text-accent uppercase mb-1">Socia</p>
-                <h3 className="font-sans font-semibold text-xl">Loretta Bir</h3>
-              </div>
-              <p className="font-sans text-sm text-foreground/70 leading-relaxed">
-                Licenciatura en Educación Cristiana del Texas Bible College (TBC).
-                Líder GATS en IBA Paraguay. Fundadora de la escuela K-12 en
-                Lambaré, Asociación Educativa Nuevas Alturas — la institución
-                que originó los sistemas que hoy ABN ofrece al mercado.
-              </p>
-            </div>
-
-            {/* Diana Nunez */}
-            <div className="bg-background p-8 rounded-sm border border-[#1A1A1A]/10">
-              <div className="w-20 h-20 bg-foreground rounded-sm flex items-center justify-center mx-auto mb-6 team-avatar">
-                <span className="text-background font-sans font-semibold text-2xl">DN</span>
-              </div>
-              <div className="text-center mb-4">
-                <p className="font-sans text-xs tracking-widest text-accent uppercase mb-1">Socia</p>
-                <h3 className="font-sans font-semibold text-xl">Diana Nunez</h3>
-              </div>
-              <p className="font-sans text-sm text-foreground/70 leading-relaxed">
-                Maestría en Gestión Educativa (UNAES). Más de 20 años de experiencia
-                en pedagogía de escuelas privadas. Diseña la línea pedagógica
-                institucional que alimenta la plataforma AULA.
-              </p>
-            </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>

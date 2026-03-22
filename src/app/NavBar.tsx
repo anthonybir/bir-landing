@@ -32,26 +32,40 @@ export default function NavBar() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-lg border-b border-[#1A1A1A]/5">
+    <header className="sticky top-0 z-50 border-b border-[#1A1A1A]/8 bg-background/88 backdrop-blur-xl">
       {/* Scroll progress bar */}
       <div
         className="absolute top-0 left-0 h-[2px] bg-[#C7A54A] transition-[width] duration-150 ease-out"
         style={{ width: `${scrollProgress}%` }}
       />
-      <nav className="font-sans px-6 md:px-12 py-5 flex justify-between items-center max-w-7xl mx-auto">
+      <nav className="font-sans px-5 md:px-10 py-3.5 md:py-4 flex justify-between items-center max-w-7xl mx-auto">
         <div className="flex items-center gap-3">
           <Link href="/">
-            <Image src="/logos/abn-frame-lockup-light.svg" alt="Agencia Bir Nuñez" width={300} height={88} priority className="hidden md:block h-20 w-auto hover:opacity-80 transition-opacity duration-200" />
-            <Image src="/logos/abn-frame-light.svg" alt="ABN" width={40} height={34} priority className="md:hidden h-9 w-auto" />
+            <Image
+              src="/logos/abn-frame-lockup-light.svg"
+              alt="Agencia Bir Nuñez"
+              width={300}
+              height={88}
+              priority
+              className="hidden md:block h-14 w-auto transition-opacity duration-200 hover:opacity-80"
+            />
+            <Image
+              src="/logos/abn-frame-light.svg"
+              alt="ABN"
+              width={40}
+              height={34}
+              priority
+              className="md:hidden h-7 w-auto"
+            />
           </Link>
         </div>
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-5">
           {NAV_ITEMS.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
-              className={`text-sm font-medium transition-colors hidden md:block ${
-                pathname === href ? 'text-accent' : 'hover:text-accent'
+              className={`hidden md:block text-[0.82rem] font-medium tracking-[0.03em] transition-colors ${
+                pathname === href ? 'text-accent' : 'text-foreground/75 hover:text-accent'
               }`}
             >
               {label}
@@ -59,20 +73,20 @@ export default function NavBar() {
           ))}
           <Link
             href="/#contacto"
-            className="text-sm font-medium px-4 py-2 rounded-sm transition-colors hidden md:block bg-foreground text-background hover:bg-foreground/90"
+            className="hidden md:block rounded-full bg-foreground px-4 py-2 text-[0.78rem] font-medium tracking-[0.03em] text-background transition-colors hover:bg-foreground/90"
           >
             Hablemos
           </Link>
         </div>
       </nav>
-      <div className="md:hidden px-6 md:px-12 pb-4 max-w-7xl mx-auto">
+      <div className="mx-auto max-w-7xl px-5 pb-3 md:hidden">
         <div className="mobile-nav-strip flex gap-2 overflow-x-auto pb-1">
           {NAV_ITEMS.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
               className={`mobile-nav-chip ${
-                pathname === href ? 'border-[#C7A54A]/40 bg-[#C7A54A]/10 text-[#9A7B30]' : ''
+                pathname === href ? 'border-[#C7A54A]/45 bg-[#C7A54A]/10 text-[#8A6A20]' : ''
               }`}
             >
               {label}

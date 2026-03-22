@@ -4,163 +4,162 @@ import CTABanner from '../CTABanner';
 
 export const metadata: Metadata = {
   title: 'Servicios | ABN — Agencia Bir Nuñez',
-  description: 'Plataforma AULA: motor de IA con contexto institucional. Consultoría en transformación para colegios, seminarios e instituciones en Latinoamérica.',
+  description:
+    'Plataforma AULA: motor de IA con contexto institucional. Consultoría en transformación para colegios, seminarios e instituciones en Latinoamérica.',
 };
+
+const operatingModes = [
+  {
+    number: '01',
+    title: 'Diagnóstico institucional',
+    subtitle: 'Cuando el problema todavía no está bien definido',
+    copy:
+      'Auditamos operación, criterio y puntos de fricción para establecer qué necesita orden, qué necesita sistema y qué conviene dejar para después.',
+    bullets: [
+      'Diagnóstico operativo y pedagógico',
+      'Priorización de riesgos y cuellos de botella',
+      'Hoja de ruta inicial y responsables',
+    ],
+  },
+  {
+    number: '02',
+    title: 'Implementación por frente',
+    subtitle: 'Cuando ya hay una prioridad clara',
+    copy:
+      'Entramos sobre un frente concreto, con alcance definido, entregables claros y una lógica de implementación que no rompa la operación diaria.',
+    bullets: [
+      'Proyecto por área o por problema',
+      'Sistema, criterio y capacitación en el mismo frente',
+      'Ejecución escalonada con responsables visibles',
+    ],
+  },
+  {
+    number: '03',
+    title: 'Acompañamiento integral',
+    subtitle: 'Cuando varias áreas necesitan avanzar juntas',
+    copy:
+      'Coordinamos educación, tecnología y desarrollo institucional bajo una misma dirección para evitar proveedores sueltos y decisiones contradictorias.',
+    bullets: [
+      'Dirección transversal del proyecto',
+      'Ajuste continuo según operación real',
+      'Un solo equipo responsable del avance',
+    ],
+  },
+] as const;
 
 export default function ServiciosPage() {
   return (
     <>
-      {/* AI Motor — AULA Platform */}
-      <section className="dark-section px-6 md:px-12 pt-24 pb-24 md:pt-32 md:pb-32 bg-foreground text-background overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-            {/* Copy */}
-            <div className="scroll-reveal-left">
-              <p className="font-sans text-sm tracking-widest text-accent mb-4 uppercase">
-                Plataforma AULA
-              </p>
-              <h1 className="font-serif font-bold text-3xl md:text-5xl leading-tight mb-6">
-                Un motor genérico.<br />
-                <span className="text-accent">Tu contexto institucional.</span>
-              </h1>
-              <p className="font-sans text-background/70 leading-relaxed mb-8">
-                Hoy cada docente genera sus planes con ChatGPT de forma improvisada
-                — sin criterio institucional, sin alineación curricular, sin coherencia
-                entre grados. AULA invierte esa lógica: ABN documenta cómo funciona
-                tu institución, carga ese contexto en la plataforma, y el motor
-                produce planificaciones que suenan a tu escuela — no a una plantilla
-                genérica.
-              </p>
+      <section className="dark-section px-6 py-18 md:px-12 md:py-24">
+        <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.88fr_1.12fr] md:items-end">
+          <div className="fade-in max-w-xl">
+            <p className="section-kicker mb-4">Servicios ABN</p>
+            <h1 className="font-serif text-4xl font-semibold leading-[1.02] md:text-6xl">
+              Intervenimos donde la institución necesita criterio, no solo software.
+            </h1>
+            <p className="mt-6 font-sans text-base leading-relaxed text-background/70 md:text-lg">
+              ABN no vende una caja cerrada. Entra para leer la institución, construir
+              estándar operativo y traducirlo en sistemas que sigan sirviendo cuando cambie
+              el equipo o la herramienta.
+            </p>
+            <p className="mt-4 max-w-md font-sans text-sm leading-relaxed text-background/52">
+              AULA es uno de esos sistemas. El servicio es el método completo que permite
+              que plataformas, procesos y personas trabajen bajo el mismo marco.
+            </p>
+          </div>
 
-              <div className="space-y-5 mb-8">
-                <div className="flex items-start gap-4">
-                  <span className="font-sans font-bold text-4xl text-accent/20 leading-none shrink-0 mt-0.5">01</span>
-                  <div>
-                    <p className="font-sans font-medium text-sm">ABN construye tu contexto institucional</p>
-                    <p className="font-sans text-xs text-background/50">Marco pedagógico + currículo + evaluación + cultura local — documentado y cargado en AULA</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <span className="font-sans font-bold text-4xl text-accent/20 leading-none shrink-0 mt-0.5">02</span>
-                  <div>
-                    <p className="font-sans font-medium text-sm">El motor genera bajo tu estándar</p>
-                    <p className="font-sans text-xs text-background/50">Planes, materiales, evaluaciones — alineados a TU visión, no a una plantilla genérica</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <span className="font-sans font-bold text-4xl text-accent/20 leading-none shrink-0 mt-0.5">03</span>
-                  <div>
-                    <p className="font-sans font-medium text-sm">El docente revisa, ajusta, ejecuta</p>
-                    <p className="font-sans text-xs text-background/50">DOCX y PDF listos — el docente aporta su criterio, no su fin de semana</p>
-                  </div>
-                </div>
+          <div className="scroll-reveal-right">
+            <div className="editorial-media rounded-[1.75rem] border-[#F5F3EE]/10">
+              <div className="browser-chrome">
+                <div className="dot" />
+                <div className="dot" />
+                <div className="dot" />
               </div>
-
-              <div className="flex flex-wrap gap-2">
-                {['Planificaci\u00f3n semanal', 'Texto base', 'Ficha de trabajo', 'Evaluaci\u00f3n', 'Comunicaci\u00f3n a padres', 'R\u00fabrica'].map((tag) => (
-                  <span
-                    key={tag}
-                    className="capability-tag font-sans text-xs px-3 py-1.5 bg-background/10 rounded-sm text-background/70 border border-[#F5F3EE]/10 cursor-default"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Screenshot */}
-            <div className="scroll-reveal-right">
-              <div className="rounded-lg overflow-hidden shadow-2xl border border-[#F5F3EE]/10">
-                <div className="browser-chrome">
-                  <div className="dot" /><div className="dot" /><div className="dot" />
-                </div>
-                <Image
-                  src="/screenshots/editorial-aena.png"
-                  alt="AULA — Motor de planificación académica con contexto institucional"
-                  width={2814}
-                  height={1808}
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="w-full h-auto"
-                  loading="lazy"
-                />
-              </div>
-              <p className="font-sans text-xs text-background/30 mt-4 text-center">
-                Motor AULA — Planificaciones generadas bajo estándar institucional (AENA)
-              </p>
+              <Image
+                src="/screenshots/editorial-aena.png"
+                alt="AULA editorial planning surface"
+                width={2814}
+                height={1808}
+                className="h-auto w-full"
+                sizes="(max-width: 768px) 100vw, 56vw"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Packages / Engagement */}
-      <section className="px-6 md:px-12 py-24 md:py-32 bg-white">
-        <div className="max-w-7xl mx-auto scroll-reveal">
-          <div className="mb-16">
-            <p className="font-sans text-sm tracking-widest text-accent mb-4 uppercase">
-              Formas de trabajo
-            </p>
-            <h2 className="font-serif font-bold text-3xl md:text-4xl line-accent">Cómo empezamos y cómo escalamos</h2>
-            <p className="font-sans text-foreground/70 leading-relaxed max-w-3xl mt-6">
-              No vendemos una caja cerrada. Empezamos con un diagnóstico claro,
-              definimos una hoja de ruta y ejecutamos por fases según el nivel
-              de madurez de tu institución.
+      <section className="section-frame bg-background px-6 py-18 md:px-12 md:py-22">
+        <div className="mx-auto max-w-7xl">
+          <div className="max-w-2xl">
+            <p className="section-kicker mb-4">Modos de trabajo</p>
+            <h2 className="font-serif text-4xl font-semibold leading-[1.06] md:text-5xl">
+              Tres formas de entrar. Una sola lógica de ejecución.
+            </h2>
+            <p className="mt-5 font-sans text-base leading-relaxed text-foreground/66">
+              La diferencia no está en un paquete comercial. Está en cuánto criterio hay
+              que construir, cuánta coordinación hace falta y qué tan cerca necesita estar
+              ABN del proceso.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Institutional Package */}
-            <div className="card-hover engagement-card bg-background p-8 rounded-sm border border-[#1A1A1A]/10">
-              <p className="engagement-step">01</p>
-              <h3 className="font-sans font-semibold text-xl mb-2">Diagnóstico Institucional</h3>
-              <p className="font-sans text-sm text-accent mb-4">Para colegios, seminarios e instituciones que necesitan ordenar primero</p>
-              <p className="font-sans text-foreground/70 leading-relaxed mb-6">
-                Auditamos operación, estructura y puntos de riesgo para definir
-                qué conviene resolver ahora, qué puede esperar y qué sistema
-                hace falta construir.
-              </p>
-              <ul className="font-sans text-sm space-y-2 text-foreground/60">
-                <li>• Diagnóstico operativo e institucional</li>
-                <li>• Priorización de riesgos y cuellos de botella</li>
-                <li>• Recomendación por área</li>
-                <li>• Hoja de ruta inicial</li>
-              </ul>
-            </div>
+          <div className="mt-12 grid gap-10 md:grid-cols-3">
+            {operatingModes.map((mode) => (
+              <section key={mode.number} className="scroll-reveal border-t border-[#1A1A1A]/12 pt-5">
+                <p className="font-mono text-sm uppercase tracking-[0.2em] text-accent/80">
+                  {mode.number}
+                </p>
+                <h3 className="mt-4 font-serif text-3xl leading-tight">{mode.title}</h3>
+                <p className="mt-2 font-sans text-sm font-medium text-foreground/48">
+                  {mode.subtitle}
+                </p>
+                <p className="mt-5 font-sans text-sm leading-relaxed text-foreground/64">
+                  {mode.copy}
+                </p>
+                <ul className="mt-6 space-y-3 border-t border-[#1A1A1A]/8 pt-5">
+                  {mode.bullets.map((bullet) => (
+                    <li key={bullet} className="font-sans text-sm leading-relaxed text-foreground/62">
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            {/* Implementation Package — Recommended */}
-            <div className="card-hover engagement-card bg-background p-8 rounded-sm border-2 border-[#C7A54A]/40 relative">
-              <span className="engagement-badge">Más común</span>
-              <p className="engagement-step">02</p>
-              <h3 className="font-sans font-semibold text-xl mb-2">Implementación por Frente</h3>
-              <p className="font-sans text-sm text-accent mb-4">Para instituciones que ya saben qué problema quieren resolver</p>
-              <p className="font-sans text-foreground/70 leading-relaxed mb-6">
-                Ejecutamos un frente específico o combinamos varios: educación,
-                tecnología, o desarrollo institucional, con un alcance definido
-                y responsables claros.
-              </p>
-              <ul className="font-sans text-sm space-y-2 text-foreground/60">
-                <li>• Proyecto por frente o por problema</li>
-                <li>• Alcance, entregables y responsables definidos</li>
-                <li>• Implementación escalonada</li>
-                <li>• Capacitación del equipo interno</li>
-              </ul>
-            </div>
+      <section className="bg-white px-6 py-20 md:px-12 md:py-24">
+        <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.82fr_1.18fr] md:items-start">
+          <div className="max-w-md">
+            <p className="section-kicker mb-4">Dónde se ve el método</p>
+            <h2 className="font-serif text-4xl font-semibold leading-[1.06] md:text-5xl">
+              AULA es producto. El servicio es el contexto que lo hace valioso.
+            </h2>
+            <p className="mt-5 font-sans text-base leading-relaxed text-foreground/66">
+              Sin contexto institucional, un motor de IA es commodity. Con criterio
+              pedagógico, currículo, evaluación y lenguaje propios, empieza a comportarse
+              como una extensión de la institución.
+            </p>
+          </div>
 
-            {/* Consulting */}
-            <div className="card-hover engagement-card bg-background p-8 rounded-sm border border-[#1A1A1A]/10">
-              <p className="engagement-step">03</p>
-              <h3 className="font-sans font-semibold text-xl mb-2">Acompañamiento Integral</h3>
-              <p className="font-sans text-sm text-accent mb-4">Para instituciones que necesitan ejecución continua y coordinación central</p>
-              <p className="font-sans text-foreground/70 leading-relaxed mb-6">
-                Coordinamos varios frentes sobre una misma hoja de ruta para
-                que la institución avance sin fragmentarse entre proveedores,
-                planillas y decisiones aisladas.
+          <div className="grid gap-6 md:grid-cols-3">
+            <div className="border-t border-[#1A1A1A]/10 pt-5">
+              <p className="font-serif text-2xl">Marco pedagógico</p>
+              <p className="mt-3 font-sans text-sm leading-relaxed text-foreground/62">
+                Filosofía, límites, estructura de clase y criterios no negociables.
               </p>
-              <ul className="font-sans text-sm space-y-2 text-foreground/60">
-                <li>• Dirección transversal del proyecto</li>
-                <li>• Varios frentes trabajando sobre la misma prioridad</li>
-                <li>• Seguimiento y ajustes continuos</li>
-                <li>• Un solo equipo responsable del avance</li>
-              </ul>
+            </div>
+            <div className="border-t border-[#1A1A1A]/10 pt-5">
+              <p className="font-serif text-2xl">Pack curricular</p>
+              <p className="mt-3 font-sans text-sm leading-relaxed text-foreground/62">
+                Contenidos, capacidades, estándares de grado y adaptación local.
+              </p>
+            </div>
+            <div className="border-t border-[#1A1A1A]/10 pt-5">
+              <p className="font-serif text-2xl">Operación docente</p>
+              <p className="mt-3 font-sans text-sm leading-relaxed text-foreground/62">
+                Entregables, revisión, comunicación y uso real dentro del equipo.
+              </p>
             </div>
           </div>
         </div>

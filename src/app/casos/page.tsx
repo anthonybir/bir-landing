@@ -1,210 +1,198 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import CTABanner from '../CTABanner';
 
 export const metadata: Metadata = {
   title: 'Casos | ABN — Agencia Bir Nuñez',
-  description: 'AENA Admin, IBA Paraguay y IPUPY Tesorería — sistemas en producción para instituciones educativas y eclesiásticas en Paraguay y Latinoamérica.',
+  description:
+    'AENA Admin, IBA Paraguay y IPUPY Tesorería — sistemas en producción para instituciones educativas y eclesiásticas en Paraguay y Latinoamérica.',
 };
+
+const cases = [
+  {
+    name: 'AENA Admin',
+    label: 'Gestión escolar',
+    summary:
+      'Plataforma integral para administración escolar y generación de materiales bajo estándar institucional.',
+    points: [
+      'En producción desde 2024',
+      'Asistencia, calificaciones, gestión docente y reportes MEC',
+      'AULA integrado a operación académica real',
+    ],
+    cta: 'Consultá sobre AENA Admin',
+    media: (
+      <div className="editorial-media rounded-[1.5rem] border-[#1A1A1A]/10 bg-white shadow-[0_24px_60px_rgba(26,26,26,0.08)]">
+        <div className="browser-chrome">
+          <div className="dot" />
+          <div className="dot" />
+          <div className="dot" />
+        </div>
+        <Image
+          src="/screenshots/aena-dashboard.png"
+          alt="AENA Admin dashboard"
+          width={2842}
+          height={1794}
+          className="h-auto w-full"
+          sizes="(max-width: 768px) 100vw, 54vw"
+        />
+      </div>
+    ),
+  },
+  {
+    name: 'IBA Paraguay',
+    label: 'ERP académico + expansión regional',
+    summary:
+      'Seminario teológico usando la misma lógica de estructura institucional para operación académica y despliegue multinacional.',
+    points: [
+      'ERP académico en producción desde 2026',
+      'AULA en implementación para planificación teológica',
+      'Red IBA: Paraguay, Brasil, Argentina y Ecuador',
+    ],
+    cta: 'Consultá sobre AULA para seminarios',
+    media: (
+      <div className="rounded-[1.5rem] border border-[#1A1A1A]/10 bg-[linear-gradient(180deg,#f5f3ee_0%,#ece7da_100%)] p-8 shadow-[0_24px_60px_rgba(26,26,26,0.06)] md:p-10">
+        <div className="flex items-start justify-between gap-6 border-b border-[#1A1A1A]/10 pb-8">
+          <div>
+            <p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-foreground/38">
+              IBA rollout
+            </p>
+            <h3 className="mt-3 font-serif text-4xl leading-none text-foreground md:text-5xl">
+              De Paraguay hacia la red IBA.
+            </h3>
+          </div>
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">En implementación</p>
+        </div>
+        <div className="grid gap-6 pt-8 md:grid-cols-[1.1fr_0.9fr] md:items-end">
+          <div>
+            <p className="font-sans text-sm leading-relaxed text-foreground/66">
+              Este frente muestra cómo ABN adapta el mismo núcleo institucional a contextos
+              teológicos, cumplimiento académico y una expansión regional con reglas compartidas.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-3">
+            {['Paraguay', 'Brasil', 'Argentina', 'Ecuador'].map((country) => (
+              <div key={country} className="rounded-2xl border border-[#1A1A1A]/10 bg-white/60 px-4 py-4">
+                <p className="font-sans text-sm font-medium text-foreground">{country}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    ),
+  },
+  {
+    name: 'IPUPY Tesorería',
+    label: 'Gobernanza financiera',
+    summary:
+      'Sistema de tesorería para operación eclesiástica multi-sede con trazabilidad, rendición y control financiero claro.',
+    points: [
+      'En producción desde 2024',
+      'Rendición de cuentas multi-nivel',
+      'Gobernanza eclesiástica transparente',
+    ],
+    cta: 'Consultá sobre IPUPY',
+    media: (
+      <div className="editorial-media rounded-[1.5rem] border-[#1A1A1A]/10 bg-white shadow-[0_24px_60px_rgba(26,26,26,0.08)]">
+        <div className="browser-chrome">
+          <div className="dot" />
+          <div className="dot" />
+          <div className="dot" />
+        </div>
+        <Image
+          src="/screenshots/ipupy-dashboard.png"
+          alt="IPUPY Tesorería dashboard"
+          width={2846}
+          height={1822}
+          className="h-auto w-full"
+          sizes="(max-width: 768px) 100vw, 54vw"
+        />
+      </div>
+    ),
+  },
+] as const;
 
 export default function CasosPage() {
   return (
     <>
-      {/* Cases Header */}
-      <section className="px-6 md:px-12 pt-24 pb-8 md:pt-32 md:pb-12 bg-background">
-        <div className="max-w-7xl mx-auto">
-          <p className="font-sans text-sm tracking-widest text-accent mb-4 uppercase">
-            Casos Reales
-          </p>
-          <h1 className="font-serif font-bold text-3xl md:text-5xl line-accent">
-            Sistemas que construimos y usamos
+      <section className="bg-background px-6 pb-12 pt-18 md:px-12 md:pb-16 md:pt-24">
+        <div className="mx-auto max-w-7xl">
+          <p className="section-kicker mb-4">Casos reales</p>
+          <h1 className="max-w-4xl font-serif text-4xl font-semibold leading-[1.02] md:text-6xl">
+            Sistemas que ABN construye, usa y mantiene en producción.
           </h1>
+          <p className="mt-6 max-w-2xl font-sans text-base leading-relaxed text-foreground/66 md:text-lg">
+            Esta página no muestra demos aspiracionales. Muestra el tipo de plataforma e
+            infraestructura institucional que ABN diseña para su propia operación y para
+            organizaciones con exigencias reales.
+          </p>
         </div>
       </section>
 
-      {/* AENA Case */}
-      <section className="px-6 md:px-12 py-16 md:py-24 bg-background">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="scroll-reveal-left">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 stat-card rounded-sm flex items-center justify-center">
-                  <span className="text-background font-sans font-semibold text-xl">A</span>
-                </div>
-                <div>
-                  <h2 className="font-sans font-semibold text-xl">AENA Admin</h2>
-                  <p className="font-sans text-sm text-foreground/60">Sistema de Gestión Escolar</p>
-                </div>
-              </div>
-              <p className="font-sans text-foreground/70 leading-relaxed mb-6">
-                Plataforma integral para administración escolar: matrículas,
-                calificaciones, asistencia, gestión docente, y reportes al MEC
-                — con un motor de IA que genera materiales bajo el estándar institucional, no al criterio individual de cada docente.
-              </p>
-              <ul className="font-sans text-sm space-y-2 text-foreground/60">
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  En producción desde 2024
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Generación de materiales semanales con IA
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Alineado al programa oficial del MEC Paraguay
-                </li>
-              </ul>
-              <a href="/#contacto" className="link-arrow font-sans text-sm font-medium text-accent mt-6 hover:underline">
-                Consultá sobre AENA Admin
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-              </a>
-            </div>
-            <div className="scroll-reveal-right rounded-lg overflow-hidden shadow-xl border border-[#1A1A1A]/10">
-              <div className="browser-chrome">
-                <div className="dot" /><div className="dot" /><div className="dot" />
-              </div>
-              <Image
-                src="/screenshots/aena-dashboard.png"
-                alt="AENA Admin — Dashboard con asistencia por grado"
-                width={2842}
-                height={1794}
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="w-full h-auto"
-                loading="lazy"
-              />
-            </div>
+      <section className="section-frame bg-background px-6 py-10 md:px-12 md:py-12">
+        <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-3">
+          <div className="proof-metric">
+            <p className="font-sans text-4xl font-semibold tracking-tight text-foreground">3</p>
+            <p className="mt-3 font-sans text-sm leading-relaxed text-foreground/62">
+              frentes institucionales distintos: escolar, teológico y financiero.
+            </p>
+          </div>
+          <div className="proof-metric">
+            <p className="font-sans text-4xl font-semibold tracking-tight text-foreground">100%</p>
+            <p className="mt-3 font-sans text-sm leading-relaxed text-foreground/62">
+              diseñados alrededor de procesos que ABN ya opera y audita internamente.
+            </p>
+          </div>
+          <div className="proof-metric">
+            <p className="font-sans text-4xl font-semibold tracking-tight text-accent">1 lógica</p>
+            <p className="mt-3 font-sans text-sm leading-relaxed text-foreground/62">
+              la institución fija el estándar; el sistema lo vuelve ejecutable.
+            </p>
           </div>
         </div>
       </section>
 
-      <div className="section-divider" />
-
-      {/* IBA Paraguay Case */}
-      <section className="px-6 md:px-12 py-16 md:py-24 bg-background">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="md:order-2">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 stat-card rounded-sm flex items-center justify-center">
-                  <span className="text-background font-sans font-semibold text-xl">I</span>
-                </div>
-                <div>
-                  <h2 className="font-sans font-semibold text-xl">IBA Paraguay</h2>
-                  <p className="font-sans text-sm text-foreground/60">Instituto Bíblico Apostólico — ERP Académico</p>
-                </div>
+      <section className="bg-background px-6 py-18 md:px-12 md:py-24">
+        <div className="mx-auto flex max-w-7xl flex-col gap-18 md:gap-24">
+          {cases.map((item, index) => (
+            <article
+              key={item.name}
+              className={`grid gap-8 border-t border-[#1A1A1A]/10 pt-8 md:gap-12 ${
+                index === 1
+                  ? 'md:grid-cols-[1.05fr_0.95fr] md:items-start'
+                  : 'md:grid-cols-[0.88fr_1.12fr] md:items-center'
+              }`}
+            >
+              <div className={`${index === 1 ? 'md:order-2' : ''}`}>
+                <p className="font-mono text-[0.7rem] uppercase tracking-[0.24em] text-accent">
+                  {item.label}
+                </p>
+                <h2 className="mt-4 font-serif text-4xl leading-none tracking-tight md:text-5xl">
+                  {item.name}
+                </h2>
+                <p className="mt-5 max-w-xl font-sans text-base leading-relaxed text-foreground/66">
+                  {item.summary}
+                </p>
+                <ul className="mt-8 grid gap-3 border-t border-[#1A1A1A]/8 pt-5">
+                  {item.points.map((point) => (
+                    <li key={point} className="font-sans text-sm leading-relaxed text-foreground/62">
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href="/#contacto"
+                  className="link-arrow mt-8 font-sans text-sm font-medium text-accent"
+                >
+                  {item.cta}
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
               </div>
-              <p className="font-sans text-foreground/70 leading-relaxed mb-6">
-                Sistema académico para seminario teológico: matrículas por nivel GATS,
-                calificaciones ponderadas, asistencia, transcriptos, y paquetes de
-                cumplimiento para sede central (UPCI). Primer tenant de la plataforma
-                AULA — expandiendo a IBA Brasil, Argentina y Ecuador.
-              </p>
-              <ul className="font-sans text-sm space-y-2 text-foreground/60">
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  ERP académico en producción desde 2026
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Motor AULA en implementación para planificación teológica
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  4 países en la red IBA (PY, BR, AR, EC)
-                </li>
-              </ul>
-              <a href="/#contacto" className="link-arrow font-sans text-sm font-medium text-accent mt-6 hover:underline">
-                Consultá sobre AULA para seminarios
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-              </a>
-            </div>
-            <div className="scroll-reveal-left md:order-1">
-              <div className="rounded-lg overflow-hidden bg-foreground/5 border border-[#1A1A1A]/10 p-12 flex items-center justify-center min-h-[300px]">
-                <div className="text-center">
-                  <p className="font-serif font-bold text-5xl text-accent/30 mb-4">IBA</p>
-                  <p className="font-sans text-sm text-foreground/40">Plataforma AULA en implementación</p>
-                  <p className="font-sans text-xs text-foreground/30 mt-2">Paraguay · Brasil · Argentina · Ecuador</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
-      {/* IPUPY Case */}
-      <section className="px-6 md:px-12 py-16 md:py-24 bg-background">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="md:order-2">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 stat-card rounded-sm flex items-center justify-center">
-                  <span className="text-background font-sans font-semibold text-xl">I</span>
-                </div>
-                <div>
-                  <h2 className="font-sans font-semibold text-xl">IPUPY Tesorería</h2>
-                  <p className="font-sans text-sm text-foreground/60">Sistema de Gestión Financiera</p>
-                </div>
-              </div>
-              <p className="font-sans text-foreground/70 leading-relaxed mb-6">
-                Plataforma de tesorería para organización eclesiástica:
-                control de ingresos/egresos, reportes financieros,
-                gestión de múltiples congregaciones, y auditoría transparente.
-              </p>
-              <ul className="font-sans text-sm space-y-2 text-foreground/60">
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  En producción desde 2024
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Rendición de cuentas multi-nivel
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Gobernanza eclesiástica transparente
-                </li>
-              </ul>
-              <a href="/#contacto" className="link-arrow font-sans text-sm font-medium text-accent mt-6 hover:underline">
-                Consultá sobre IPUPY
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-              </a>
-            </div>
-            <div className="scroll-reveal-left rounded-lg overflow-hidden shadow-xl border border-[#1A1A1A]/10 md:order-1">
-              <div className="browser-chrome">
-                <div className="dot" /><div className="dot" /><div className="dot" />
-              </div>
-              <Image
-                src="/screenshots/ipupy-dashboard.png"
-                alt="IPUPY Tesorería — Dashboard financiero con ingresos y métricas"
-                width={2846}
-                height={1822}
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="w-full h-auto"
-                loading="lazy"
-              />
-            </div>
-          </div>
+              <div className={`${index === 1 ? 'md:order-1' : ''}`}>{item.media}</div>
+            </article>
+          ))}
         </div>
       </section>
 
