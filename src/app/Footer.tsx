@@ -4,12 +4,12 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer className="bg-foreground text-background">
-      <div className="h-px bg-gradient-to-r from-transparent via-[#C7A54A]/40 to-transparent" />
+      <div className="h-px bg-gradient-to-r from-transparent via-[#0F6E56]/40 to-transparent" />
       <div className="mx-auto max-w-7xl px-6 py-14 md:px-12 md:py-16">
         <div className="grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-start">
           <div className="max-w-md">
             <Image
-              src="/logos/abn-frame-lockup-dark.svg"
+              src="/logos/abn-lockup-horizontal-white.svg"
               alt="Agencia Bir Nuñez"
               width={200}
               height={50}

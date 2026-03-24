@@ -89,14 +89,14 @@ export default function ABNLanding() {
             <p className="section-kicker mb-5">ABN · Consultoría en transformación institucional</p>
             <div className="mb-8 flex items-center gap-4">
               <Image
-                src="/logos/abn-frame-light.svg"
+                src="/logos/abn-mark-white.svg"
                 alt="ABN"
                 width={72}
                 height={62}
                 priority
                 className="h-12 w-auto md:h-14"
               />
-              <div className="h-px flex-1 bg-[#C7A54A]/35" />
+              <div className="h-px flex-1 bg-[#0F6E56]/35" />
             </div>
             <h1 className="font-serif text-[3rem] font-bold leading-[0.98] tracking-tight sm:text-[3.8rem] md:text-[5.6rem]">
               <span className="hero-word">Estructura</span>
@@ -120,7 +120,7 @@ export default function ABNLanding() {
               </a>
               <Link
                 href="/casos"
-                className="btn-outline inline-flex items-center justify-center gap-2 rounded-full border border-[#F5F3EE]/24 px-6 py-3.5 font-sans text-sm font-medium text-background hover:bg-background hover:text-foreground"
+                className="btn-outline inline-flex items-center justify-center gap-2 rounded-full border border-[#F1EFE8]/24 px-6 py-3.5 font-sans text-sm font-medium text-background hover:bg-background hover:text-foreground"
               >
                 Ver sistemas en producción
               </Link>
@@ -128,7 +128,7 @@ export default function ABNLanding() {
           </div>
 
           <div className="scroll-reveal-right md:pl-6">
-            <div className="editorial-media rounded-[2rem] border-[#F5F3EE]/10 bg-white/4 shadow-[0_30px_90px_rgba(0,0,0,0.28)]">
+            <div className="editorial-media rounded-[2rem] border-[#F1EFE8]/10 bg-white/4 shadow-[0_30px_90px_rgba(0,0,0,0.28)]">
               <div className="browser-chrome">
                 <div className="dot" />
                 <div className="dot" />
@@ -243,7 +243,7 @@ export default function ABNLanding() {
           </div>
 
           <div className="scroll-reveal-scale">
-            <div className="editorial-media rounded-[1.75rem] border-[#F5F3EE]/10">
+            <div className="editorial-media rounded-[1.75rem] border-[#F1EFE8]/10">
               <div className="browser-chrome">
                 <div className="dot" />
                 <div className="dot" />

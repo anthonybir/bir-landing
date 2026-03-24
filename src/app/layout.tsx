@@ -1,28 +1,8 @@
 import type { Metadata } from "next";
-import { Instrument_Sans, JetBrains_Mono, Cormorant_Garamond } from "next/font/google";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import WhatsAppFloat from "./WhatsAppFloat";
 import "./globals.css";
-
-const instrumentSans = Instrument_Sans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  display: "swap",
-});
-
-const cormorantGaramond = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["600", "700"],
-  variable: "--font-serif",
-  display: "swap",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://bir.com.py'),
@@ -46,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${instrumentSans.variable} ${cormorantGaramond.variable} ${jetbrainsMono.variable} antialiased`}>
+      <body className="antialiased">
         <div className="min-h-screen bg-background text-foreground page-enter">
           <NavBar />
           <main>{children}</main>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 60" width="380" height="60">
+  <!-- Bracket mark -->
+  <path d="M8 6 L2 6 L2 54 L8 54" fill="none" stroke="#0F6E56" stroke-width="4" stroke-linecap="square"/>
+  <!-- ABN -->
+  <text x="20" y="36" font-family="'Helvetica Neue', 'Arial', sans-serif" font-size="28" font-weight="500" fill="#0F6E56" letter-spacing="4">ABN</text>
+  <!-- Divider -->
+  <line x1="104" y1="12" x2="104" y2="48" stroke="#B4B2A9" stroke-width="0.5"/>
+  <!-- Descriptor -->
+  <text x="116" y="28" font-family="'Helvetica Neue', 'Arial', sans-serif" font-size="11" font-weight="500" fill="#5F5E5A" letter-spacing="1">Agencia Bir Nuñez</text>
+  <text x="116" y="44" font-family="'Helvetica Neue', 'Arial', sans-serif" font-size="9" fill="#888780" letter-spacing="2.5">CONSULTORÍA INSTITUCIONAL</text>
+</svg>

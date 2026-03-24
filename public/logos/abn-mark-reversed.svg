@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 160" width="260" height="160">
+  <rect x="0" y="0" width="260" height="160" rx="8" fill="#0F6E56"/>
+  <path d="M46 32 L34 32 L34 128 L46 128" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="square"/>
+  <text x="66" y="92" font-family="'Helvetica Neue', 'Arial', sans-serif" font-size="56" font-weight="500" fill="#FFFFFF" letter-spacing="6">ABN</text>
+</svg>

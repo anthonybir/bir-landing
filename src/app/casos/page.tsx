@@ -51,7 +51,7 @@ const cases = [
     ],
     cta: 'Consultá sobre AULA para seminarios',
     media: (
-      <div className="rounded-[1.5rem] border border-[#1A1A1A]/10 bg-[linear-gradient(180deg,#f5f3ee_0%,#ece7da_100%)] p-8 shadow-[0_24px_60px_rgba(26,26,26,0.06)] md:p-10">
+      <div className="rounded-[1.5rem] border border-[#1A1A1A]/10 bg-[linear-gradient(180deg,#F1EFE8_0%,#e8e3d6_100%)] p-8 shadow-[0_24px_60px_rgba(26,26,26,0.06)] md:p-10">
         <div className="flex items-start justify-between gap-6 border-b border-[#1A1A1A]/10 pb-8">
           <div>
             <p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-foreground/38">
