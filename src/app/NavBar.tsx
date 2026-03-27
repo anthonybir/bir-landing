@@ -32,7 +32,7 @@ export default function NavBar() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[#1A1A1A]/8 bg-background/88 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-[#2C2C2A]/8 bg-background/88 backdrop-blur-xl">
       {/* Scroll progress bar */}
       <div
         className="absolute top-0 left-0 h-[2px] bg-[#0F6E56] transition-[width] duration-150 ease-out"
@@ -94,7 +94,7 @@ export default function NavBar() {
           ))}
           <Link
             href="/#contacto"
-            className="mobile-nav-chip mobile-nav-chip-cta bg-foreground text-background border-[#1A1A1A]"
+            className="mobile-nav-chip mobile-nav-chip-cta bg-foreground text-background border-[#2C2C2A]"
           >
             Hablemos
           </Link>

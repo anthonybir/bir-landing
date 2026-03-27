@@ -22,7 +22,7 @@ const cases = [
     ],
     cta: 'Consultá sobre AENA Admin',
     media: (
-      <div className="editorial-media rounded-[1.5rem] border-[#1A1A1A]/10 bg-white shadow-[0_24px_60px_rgba(26,26,26,0.08)]">
+      <div className="editorial-media rounded-[1.5rem] border-[#2C2C2A]/10 bg-white shadow-[0_24px_60px_rgba(26,26,26,0.08)]">
         <div className="browser-chrome">
           <div className="dot" />
           <div className="dot" />
@@ -51,13 +51,13 @@ const cases = [
     ],
     cta: 'Consultá sobre AULA para seminarios',
     media: (
-      <div className="rounded-[1.5rem] border border-[#1A1A1A]/10 bg-[linear-gradient(180deg,#F1EFE8_0%,#e8e3d6_100%)] p-8 shadow-[0_24px_60px_rgba(26,26,26,0.06)] md:p-10">
-        <div className="flex items-start justify-between gap-6 border-b border-[#1A1A1A]/10 pb-8">
+      <div className="rounded-[1.5rem] border border-[#2C2C2A]/10 bg-[linear-gradient(180deg,#F1EFE8_0%,#e8e3d6_100%)] p-8 shadow-[0_24px_60px_rgba(26,26,26,0.06)] md:p-10">
+        <div className="flex items-start justify-between gap-6 border-b border-[#2C2C2A]/10 pb-8">
           <div>
             <p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-foreground/38">
               IBA rollout
             </p>
-            <h3 className="mt-3 font-serif text-4xl leading-none text-foreground md:text-5xl">
+            <h3 className="mt-3 font-sans text-4xl leading-none text-foreground md:text-5xl">
               De Paraguay hacia la red IBA.
             </h3>
           </div>
@@ -72,7 +72,7 @@ const cases = [
           </div>
           <div className="grid grid-cols-2 gap-3">
             {['Paraguay', 'Brasil', 'Argentina', 'Ecuador'].map((country) => (
-              <div key={country} className="rounded-2xl border border-[#1A1A1A]/10 bg-white/60 px-4 py-4">
+              <div key={country} className="rounded-2xl border border-[#2C2C2A]/10 bg-white/60 px-4 py-4">
                 <p className="font-sans text-sm font-medium text-foreground">{country}</p>
               </div>
             ))}
@@ -93,7 +93,7 @@ const cases = [
     ],
     cta: 'Consultá sobre IPUPY',
     media: (
-      <div className="editorial-media rounded-[1.5rem] border-[#1A1A1A]/10 bg-white shadow-[0_24px_60px_rgba(26,26,26,0.08)]">
+      <div className="editorial-media rounded-[1.5rem] border-[#2C2C2A]/10 bg-white shadow-[0_24px_60px_rgba(26,26,26,0.08)]">
         <div className="browser-chrome">
           <div className="dot" />
           <div className="dot" />
@@ -118,7 +118,7 @@ export default function CasosPage() {
       <section className="bg-background px-6 pb-12 pt-18 md:px-12 md:pb-16 md:pt-24">
         <div className="mx-auto max-w-7xl">
           <p className="section-kicker mb-4">Casos reales</p>
-          <h1 className="max-w-4xl font-serif text-4xl font-semibold leading-[1.02] md:text-6xl">
+          <h1 className="max-w-4xl font-sans text-4xl font-semibold leading-[1.02] md:text-6xl">
             Sistemas que ABN construye, usa y mantiene en producción.
           </h1>
           <p className="mt-6 max-w-2xl font-sans text-base leading-relaxed text-foreground/66 md:text-lg">
@@ -157,7 +157,7 @@ export default function CasosPage() {
           {cases.map((item, index) => (
             <article
               key={item.name}
-              className={`grid gap-8 border-t border-[#1A1A1A]/10 pt-8 md:gap-12 ${
+              className={`grid gap-8 border-t border-[#2C2C2A]/10 pt-8 md:gap-12 ${
                 index === 1
                   ? 'md:grid-cols-[1.05fr_0.95fr] md:items-start'
                   : 'md:grid-cols-[0.88fr_1.12fr] md:items-center'
@@ -167,13 +167,13 @@ export default function CasosPage() {
                 <p className="font-mono text-[0.7rem] uppercase tracking-[0.24em] text-accent">
                   {item.label}
                 </p>
-                <h2 className="mt-4 font-serif text-4xl leading-none tracking-tight md:text-5xl">
+                <h2 className="mt-4 font-sans text-4xl leading-none tracking-tight md:text-5xl">
                   {item.name}
                 </h2>
                 <p className="mt-5 max-w-xl font-sans text-base leading-relaxed text-foreground/66">
                   {item.summary}
                 </p>
-                <ul className="mt-8 grid gap-3 border-t border-[#1A1A1A]/8 pt-5">
+                <ul className="mt-8 grid gap-3 border-t border-[#2C2C2A]/8 pt-5">
                   {item.points.map((point) => (
                     <li key={point} className="font-sans text-sm leading-relaxed text-foreground/62">
                       {point}

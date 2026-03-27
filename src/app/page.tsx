@@ -98,7 +98,7 @@ export default function ABNLanding() {
               />
               <div className="h-px flex-1 bg-[#0F6E56]/35" />
             </div>
-            <h1 className="font-serif text-[3rem] font-bold leading-[0.98] tracking-tight sm:text-[3.8rem] md:text-[5.6rem]">
+            <h1 className="font-sans text-[3rem] font-bold leading-[0.98] tracking-tight sm:text-[3.8rem] md:text-[5.6rem]">
               <span className="hero-word">Estructura</span>
               <span className="hero-word">donde</span>
               <span className="hero-word">otros</span>
@@ -128,7 +128,7 @@ export default function ABNLanding() {
           </div>
 
           <div className="scroll-reveal-right md:pl-6">
-            <div className="editorial-media rounded-[2rem] border-[#F1EFE8]/10 bg-white/4 shadow-[0_30px_90px_rgba(0,0,0,0.28)]">
+            <div className="editorial-media rounded-[2rem] border-[#F1EFE8]/10 bg-white/4 shadow-[0_30px_90px_rgba(44,44,42,0.28)]">
               <div className="browser-chrome">
                 <div className="dot" />
                 <div className="dot" />
@@ -149,7 +149,7 @@ export default function ABNLanding() {
                     <p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-accent/95">
                       Prueba institucional
                     </p>
-                    <p className="mt-3 max-w-sm font-serif text-2xl leading-tight text-background md:text-3xl">
+                    <p className="mt-3 max-w-sm font-sans text-2xl leading-tight text-background md:text-3xl">
                       Sistemas reales, operados por la misma agencia que los diseña.
                     </p>
                   </div>
@@ -191,13 +191,13 @@ export default function ABNLanding() {
 
       <section className="bg-background px-6 py-18 md:px-12 md:py-24">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-6 border-t border-[#1A1A1A]/10 pt-8 md:grid-cols-3 md:gap-10">
+          <div className="grid gap-6 border-t border-[#2C2C2A]/10 pt-8 md:grid-cols-3 md:gap-10">
             {pathways.map((item) => (
               <Link key={item.href} href={item.href} className="editorial-link group">
                 <p className="font-mono text-[0.7rem] uppercase tracking-[0.24em] text-foreground/36">
                   {item.kicker}
                 </p>
-                <h2 className="font-serif text-3xl leading-none tracking-tight md:text-[2.6rem]">
+                <h2 className="font-sans text-3xl leading-none tracking-tight md:text-[2.6rem]">
                   {item.title}
                 </h2>
                 <p className="max-w-sm font-sans text-base leading-relaxed text-foreground/65">
@@ -219,7 +219,7 @@ export default function ABNLanding() {
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-center">
           <div className="scroll-reveal-left max-w-xl">
             <p className="section-kicker mb-4">Flagship proof · AULA</p>
-            <h2 className="font-serif text-4xl font-semibold leading-[1.04] md:text-5xl">
+            <h2 className="font-sans text-4xl font-semibold leading-[1.04] md:text-5xl">
               El motor importa menos que el contexto que lo gobierna.
             </h2>
             <p className="mt-5 font-sans text-base leading-relaxed text-background/70 md:text-lg">
@@ -266,7 +266,7 @@ export default function ABNLanding() {
         <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[0.8fr_1.2fr] md:gap-16">
           <div className="max-w-md">
             <p className="section-kicker mb-4">Cómo trabaja ABN</p>
-            <h2 className="font-serif text-4xl font-semibold leading-[1.06] md:text-5xl">
+            <h2 className="font-sans text-4xl font-semibold leading-[1.06] md:text-5xl">
               Menos discurso. Más estándar operativo.
             </h2>
             <p className="mt-5 font-sans text-base leading-relaxed text-foreground/66">
@@ -280,12 +280,12 @@ export default function ABNLanding() {
             {operatingModel.map((item) => (
               <div
                 key={item.number}
-                className="scroll-reveal border-t border-[#1A1A1A]/12 pt-5"
+                className="scroll-reveal border-t border-[#2C2C2A]/12 pt-5"
               >
                 <p className="font-mono text-sm uppercase tracking-[0.2em] text-accent/80">
                   {item.number}
                 </p>
-                <h3 className="mt-4 font-serif text-2xl leading-tight">{item.title}</h3>
+                <h3 className="mt-4 font-sans text-2xl leading-tight">{item.title}</h3>
                 <p className="mt-4 font-sans text-sm leading-relaxed text-foreground/62">
                   {item.copy}
                 </p>
@@ -301,7 +301,7 @@ export default function ABNLanding() {
         <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[0.85fr_1.15fr] md:gap-20">
           <div className="max-w-lg">
             <p className="section-kicker mb-4">Contacto</p>
-            <h2 className="line-accent font-serif text-4xl font-semibold leading-tight md:text-5xl">
+            <h2 className="line-accent font-sans text-4xl font-semibold leading-tight md:text-5xl">
               Conversemos sobre tu institución
             </h2>
             <p className="mt-6 font-sans text-base leading-relaxed text-foreground/68">
@@ -309,7 +309,7 @@ export default function ABNLanding() {
               y prioridades. Si el problema todavía está desordenado, ahí es donde ABN suele
               entrar mejor.
             </p>
-            <div className="mt-10 grid gap-5 border-t border-[#1A1A1A]/10 pt-6">
+            <div className="mt-10 grid gap-5 border-t border-[#2C2C2A]/10 pt-6">
               <div>
                 <p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-foreground/38">
                   Base

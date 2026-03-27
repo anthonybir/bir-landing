@@ -54,7 +54,7 @@ export default function ServiciosPage() {
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.88fr_1.12fr] md:items-end">
           <div className="fade-in max-w-xl">
             <p className="section-kicker mb-4">Servicios ABN</p>
-            <h1 className="font-serif text-4xl font-semibold leading-[1.02] md:text-6xl">
+            <h1 className="font-sans text-4xl font-semibold leading-[1.02] md:text-6xl">
               Intervenimos donde la institución necesita criterio, no solo software.
             </h1>
             <p className="mt-6 font-sans text-base leading-relaxed text-background/70 md:text-lg">
@@ -92,7 +92,7 @@ export default function ServiciosPage() {
         <div className="mx-auto max-w-7xl">
           <div className="max-w-2xl">
             <p className="section-kicker mb-4">Modos de trabajo</p>
-            <h2 className="font-serif text-4xl font-semibold leading-[1.06] md:text-5xl">
+            <h2 className="font-sans text-4xl font-semibold leading-[1.06] md:text-5xl">
               Tres formas de entrar. Una sola lógica de ejecución.
             </h2>
             <p className="mt-5 font-sans text-base leading-relaxed text-foreground/66">
@@ -104,18 +104,18 @@ export default function ServiciosPage() {
 
           <div className="mt-12 grid gap-10 md:grid-cols-3">
             {operatingModes.map((mode) => (
-              <section key={mode.number} className="scroll-reveal border-t border-[#1A1A1A]/12 pt-5">
+              <section key={mode.number} className="scroll-reveal border-t border-[#2C2C2A]/12 pt-5">
                 <p className="font-mono text-sm uppercase tracking-[0.2em] text-accent/80">
                   {mode.number}
                 </p>
-                <h3 className="mt-4 font-serif text-3xl leading-tight">{mode.title}</h3>
+                <h3 className="mt-4 font-sans text-3xl leading-tight">{mode.title}</h3>
                 <p className="mt-2 font-sans text-sm font-medium text-foreground/48">
                   {mode.subtitle}
                 </p>
                 <p className="mt-5 font-sans text-sm leading-relaxed text-foreground/64">
                   {mode.copy}
                 </p>
-                <ul className="mt-6 space-y-3 border-t border-[#1A1A1A]/8 pt-5">
+                <ul className="mt-6 space-y-3 border-t border-[#2C2C2A]/8 pt-5">
                   {mode.bullets.map((bullet) => (
                     <li key={bullet} className="font-sans text-sm leading-relaxed text-foreground/62">
                       {bullet}
@@ -132,7 +132,7 @@ export default function ServiciosPage() {
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.82fr_1.18fr] md:items-start">
           <div className="max-w-md">
             <p className="section-kicker mb-4">Dónde se ve el método</p>
-            <h2 className="font-serif text-4xl font-semibold leading-[1.06] md:text-5xl">
+            <h2 className="font-sans text-4xl font-semibold leading-[1.06] md:text-5xl">
               AULA es producto. El servicio es el contexto que lo hace valioso.
             </h2>
             <p className="mt-5 font-sans text-base leading-relaxed text-foreground/66">
@@ -143,20 +143,20 @@ export default function ServiciosPage() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-3">
-            <div className="border-t border-[#1A1A1A]/10 pt-5">
-              <p className="font-serif text-2xl">Marco pedagógico</p>
+            <div className="border-t border-[#2C2C2A]/10 pt-5">
+              <p className="font-sans text-2xl">Marco pedagógico</p>
               <p className="mt-3 font-sans text-sm leading-relaxed text-foreground/62">
                 Filosofía, límites, estructura de clase y criterios no negociables.
               </p>
             </div>
-            <div className="border-t border-[#1A1A1A]/10 pt-5">
-              <p className="font-serif text-2xl">Pack curricular</p>
+            <div className="border-t border-[#2C2C2A]/10 pt-5">
+              <p className="font-sans text-2xl">Pack curricular</p>
               <p className="mt-3 font-sans text-sm leading-relaxed text-foreground/62">
                 Contenidos, capacidades, estándares de grado y adaptación local.
               </p>
             </div>
-            <div className="border-t border-[#1A1A1A]/10 pt-5">
-              <p className="font-serif text-2xl">Operación docente</p>
+            <div className="border-t border-[#2C2C2A]/10 pt-5">
+              <p className="font-sans text-2xl">Operación docente</p>
               <p className="mt-3 font-sans text-sm leading-relaxed text-foreground/62">
                 Entregables, revisión, comunicación y uso real dentro del equipo.
               </p>

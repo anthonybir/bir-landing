@@ -15,7 +15,7 @@ export default function Footer() {
               height={50}
               className="mb-4 h-10 w-auto"
             />
-            <p className="font-serif text-2xl leading-tight text-background md:text-3xl">
+            <p className="font-sans text-2xl leading-tight text-background md:text-3xl">
               Consultoría en transformación institucional para organizaciones que no
               pueden operar a punta de improvisación.
             </p>

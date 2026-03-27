@@ -3,12 +3,12 @@ import { WhatsAppIcon, WHATSAPP_URL } from './WhatsAppFloat';
 
 export default function CTABanner() {
   return (
-    <section className="cta-section border-y border-[#1A1A1A]/10 px-6 py-18 md:px-12 md:py-24">
+    <section className="cta-section border-y border-[#2C2C2A]/10 px-6 py-18 md:px-12 md:py-24">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-8 md:grid-cols-[1.35fr_0.85fr] md:items-end">
           <div className="max-w-3xl">
             <p className="section-kicker mb-4">Contacto directo</p>
-            <h2 className="font-serif text-3xl font-semibold leading-tight md:text-5xl">
+            <h2 className="font-sans text-3xl font-semibold leading-tight md:text-5xl">
               Ordenar primero. Escalar después.
             </h2>
             <p className="mt-5 max-w-2xl font-sans text-base leading-relaxed text-foreground/68 md:text-lg">
@@ -33,7 +33,7 @@ export default function CTABanner() {
           </a>
           <Link
             href="/#contacto"
-            className="btn-outline inline-flex items-center justify-center gap-2 rounded-full border border-[#1A1A1A]/20 px-8 py-4 font-sans text-sm font-medium text-foreground hover:bg-foreground hover:text-background"
+            className="btn-outline inline-flex items-center justify-center gap-2 rounded-full border border-[#2C2C2A]/20 px-8 py-4 font-sans text-sm font-medium text-foreground hover:bg-foreground hover:text-background"
           >
             Enviar mensaje
           </Link>

@@ -50,14 +50,14 @@ export default function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="success-appear bg-background p-8 rounded-sm border border-[#1A1A1A]/10 text-center">
+      <div className="success-appear bg-background p-8 rounded-sm border border-[#2C2C2A]/10 text-center">
         <div className="w-12 h-12 bg-foreground rounded-sm flex items-center justify-center mx-auto mb-4">
           <svg className="w-6 h-6 text-background" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
         <h3 className="font-sans font-semibold text-xl mb-2">Mensaje enviado</h3>
-        <p className="font-sans text-sm text-[#1A1A1A]/60">
+        <p className="font-sans text-sm text-[#2C2C2A]/60">
           Gracias por contactarnos. Respondemos pronto.
         </p>
       </div>
@@ -86,7 +86,7 @@ export default function ContactForm() {
           value={formData.nombre}
           onChange={handleChange}
           placeholder="Tu nombre completo"
-          className="font-sans w-full px-4 py-3 bg-background border border-[#1A1A1A]/20 rounded-sm input-focus transition-all"
+          className="font-sans w-full px-4 py-3 bg-background border border-[#2C2C2A]/20 rounded-sm input-focus transition-all"
         />
       </div>
       <div>
@@ -99,7 +99,7 @@ export default function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           placeholder="correo@ejemplo.com"
-          className="font-sans w-full px-4 py-3 bg-background border border-[#1A1A1A]/20 rounded-sm input-focus transition-all"
+          className="font-sans w-full px-4 py-3 bg-background border border-[#2C2C2A]/20 rounded-sm input-focus transition-all"
         />
       </div>
       <div>
@@ -111,7 +111,7 @@ export default function ContactForm() {
           value={formData.organizacion}
           onChange={handleChange}
           placeholder="Nombre de tu colegio, ONG o iglesia"
-          className="font-sans w-full px-4 py-3 bg-background border border-[#1A1A1A]/20 rounded-sm input-focus transition-all"
+          className="font-sans w-full px-4 py-3 bg-background border border-[#2C2C2A]/20 rounded-sm input-focus transition-all"
         />
       </div>
       <div>
@@ -123,7 +123,7 @@ export default function ContactForm() {
           required
           value={formData.mensaje}
           onChange={handleChange}
-          className="font-sans w-full px-4 py-3 bg-background border border-[#1A1A1A]/20 rounded-sm input-focus transition-all resize-none"
+          className="font-sans w-full px-4 py-3 bg-background border border-[#2C2C2A]/20 rounded-sm input-focus transition-all resize-none"
           placeholder="Contanos sobre tu institución y qué necesitás resolver..."
         />
       </div>
