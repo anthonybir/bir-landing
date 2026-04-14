@@ -32,10 +32,10 @@ export default function NavBar() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[#2C2C2A]/8 bg-background/88 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 bg-background/88 backdrop-blur-xl">
       {/* Scroll progress bar */}
       <div
-        className="absolute top-0 left-0 h-[2px] bg-[#0F6E56] transition-[width] duration-150 ease-out"
+        className="absolute top-0 left-0 h-[2px] bg-accent transition-[width] duration-150 ease-out"
         style={{ width: `${scrollProgress}%` }}
       />
       <nav className="font-sans px-5 md:px-10 py-3.5 md:py-4 flex justify-between items-center max-w-7xl mx-auto">
@@ -65,7 +65,9 @@ export default function NavBar() {
               key={href}
               href={href}
               className={`hidden md:block text-[0.82rem] font-medium tracking-[0.03em] transition-colors ${
-                pathname === href ? 'text-accent' : 'text-foreground/75 hover:text-accent'
+                pathname === href
+                  ? 'text-foreground'
+                  : 'text-foreground/75 hover:text-foreground'
               }`}
             >
               {label}
@@ -86,7 +88,7 @@ export default function NavBar() {
               key={href}
               href={href}
               className={`mobile-nav-chip ${
-                pathname === href ? 'border-[#0F6E56]/45 bg-[#0F6E56]/10 text-[#04342C]' : ''
+                pathname === href ? 'border-transparent bg-foreground/[0.08] text-foreground' : ''
               }`}
             >
               {label}

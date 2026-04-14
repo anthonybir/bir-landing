@@ -38,7 +38,7 @@ export default function NosotrosPage() {
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-end">
           <div className="max-w-md">
             <p className="section-kicker mb-4">Nosotros</p>
-            <h1 className="font-sans text-4xl font-semibold leading-[1.03] md:text-6xl">
+            <h1 className="font-display text-4xl font-semibold leading-[1.03] md:text-6xl">
               Una dirección construida desde práctica institucional real.
             </h1>
           </div>
@@ -60,19 +60,19 @@ export default function NosotrosPage() {
       <section className="section-frame bg-background px-6 py-12 md:px-12 md:py-14">
         <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-3">
           <div className="proof-metric">
-            <p className="font-sans text-4xl font-semibold tracking-tight text-foreground">AENA</p>
+            <p className="font-display text-4xl font-semibold tracking-tight text-foreground">AENA</p>
             <p className="mt-3 font-sans text-sm leading-relaxed text-foreground/62">
               gestión escolar y AULA en operación cotidiana.
             </p>
           </div>
           <div className="proof-metric">
-            <p className="font-sans text-4xl font-semibold tracking-tight text-foreground">IBA</p>
+            <p className="font-display text-4xl font-semibold tracking-tight text-foreground">IBA</p>
             <p className="mt-3 font-sans text-sm leading-relaxed text-foreground/62">
               ERP académico y expansión regional bajo la misma lógica institucional.
             </p>
           </div>
           <div className="proof-metric">
-            <p className="font-sans text-4xl font-semibold tracking-tight text-accent">IPUPY</p>
+            <p className="font-display text-4xl font-semibold tracking-tight text-foreground">IPUPY</p>
             <p className="mt-3 font-sans text-sm leading-relaxed text-foreground/62">
               tesorería multi-sede con trazabilidad y gobernanza financiera.
             </p>
@@ -81,10 +81,10 @@ export default function NosotrosPage() {
       </section>
 
       <section className="bg-white px-6 py-18 md:px-12 md:py-24">
-        <div className="mx-auto grid max-w-7xl gap-10 border-t border-[#2C2C2A]/10 pt-8 md:grid-cols-[0.34fr_0.66fr] md:gap-14">
+        <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[0.34fr_0.66fr] md:gap-16">
           <div>
             <p className="section-kicker mb-4">Founder-led</p>
-            <p className="font-sans text-3xl leading-tight md:text-4xl">Anthony Bir</p>
+            <p className="font-display text-3xl leading-tight md:text-4xl">Anthony Bir</p>
             <p className="mt-3 font-sans text-sm font-medium text-foreground/48">
               Cofundador & Socio Director
             </p>
@@ -92,11 +92,11 @@ export default function NosotrosPage() {
 
           <div className="grid gap-8">
             <div className="grid gap-6 md:grid-cols-[auto_1fr] md:items-start">
-              <div className="team-avatar flex h-20 w-20 items-center justify-center rounded-2xl border border-[#2C2C2A]/10 bg-background text-foreground md:h-24 md:w-24">
+              <div className="team-avatar flex h-20 w-20 items-center justify-center rounded-2xl bg-background text-foreground md:h-24 md:w-24">
                 <span className="font-sans text-2xl font-semibold md:text-3xl">AB</span>
               </div>
               <div>
-                <h2 className="font-sans text-4xl font-semibold leading-none md:text-5xl">
+                <h2 className="font-display text-4xl font-semibold leading-none md:text-5xl">
                   Dirección con experiencia corporativa y ejecución institucional propia.
                 </h2>
                 <p className="mt-5 font-sans text-base leading-relaxed text-foreground/68">
@@ -114,8 +114,8 @@ export default function NosotrosPage() {
               </div>
             </div>
 
-            <div className="border-t border-[#2C2C2A]/10 pt-6">
-              <p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-foreground/38">
+            <div className="pt-3">
+              <p className="font-mono text-[0.72rem] uppercase tracking-[0.22em] text-foreground/38">
                 Por qué importa
               </p>
               <p className="mt-3 max-w-3xl font-sans text-sm leading-relaxed text-foreground/62">
@@ -131,7 +131,7 @@ export default function NosotrosPage() {
         <div className="mx-auto max-w-7xl">
           <div className="max-w-2xl">
             <p className="section-kicker mb-4">Junta directiva</p>
-            <h2 className="font-sans text-4xl font-semibold leading-[1.05] md:text-5xl">
+            <h2 className="font-display text-4xl font-semibold leading-[1.05] md:text-5xl">
               Liderazgo complementario, no perfiles intercambiables.
             </h2>
           </div>
@@ -140,16 +140,16 @@ export default function NosotrosPage() {
             {leaders.map((leader) => (
               <article
                 key={leader.name}
-                className="grid gap-5 border-t border-[#2C2C2A]/10 pt-6 md:grid-cols-[120px_280px_1fr] md:gap-8"
+                className="grid gap-6 md:grid-cols-[120px_280px_1fr] md:gap-8"
               >
-                <div className="team-avatar flex h-16 w-16 items-center justify-center rounded-2xl border border-[#2C2C2A]/10 bg-white text-foreground md:h-18 md:w-18">
+                <div className="team-avatar flex h-16 w-16 items-center justify-center rounded-2xl bg-white text-foreground md:h-18 md:w-18">
                   <span className="font-sans text-xl font-semibold">{leader.initials}</span>
                 </div>
                 <div>
-                  <p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-accent">
+                  <p className="font-mono text-[0.72rem] uppercase tracking-[0.22em] text-foreground/38">
                     {leader.role}
                   </p>
-                  <h3 className="mt-2 font-sans text-3xl leading-none">{leader.name}</h3>
+                  <h3 className="mt-2 font-display text-3xl leading-none">{leader.name}</h3>
                 </div>
                 <p className="max-w-3xl font-sans text-sm leading-relaxed text-foreground/64">
                   {leader.copy}

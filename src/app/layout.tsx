@@ -1,8 +1,23 @@
 import type { Metadata } from "next";
+import { Instrument_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import WhatsAppFloat from "./WhatsAppFloat";
 import "./globals.css";
+
+const instrumentSans = Instrument_Sans({
+  subsets: ["latin"],
+  variable: "--font-instrument",
+  display: "swap",
+});
+
+const satoshi = localFont({
+  src: "../fonts/Satoshi-Variable.woff2",
+  variable: "--font-satoshi",
+  display: "swap",
+  weight: "400 700",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://bir.com.py'),
@@ -25,9 +40,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" className={`${instrumentSans.variable} ${satoshi.variable}`}>
       <body className="antialiased">
-        <div className="min-h-screen bg-background text-foreground page-enter">
+        <div className="min-h-screen bg-background text-foreground">
           <NavBar />
           <main>{children}</main>
           <WhatsAppFloat />

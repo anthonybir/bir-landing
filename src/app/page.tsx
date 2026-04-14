@@ -87,18 +87,15 @@ export default function ABNLanding() {
         <div className="grid min-h-[calc(100svh-9rem)] max-w-[1600px] gap-10 md:mx-auto md:grid-cols-[minmax(0,0.95fr)_minmax(520px,0.95fr)] md:items-end">
           <div className="fade-in flex max-w-xl flex-col justify-end md:pb-8">
             <p className="section-kicker mb-5">ABN · Consultoría en transformación institucional</p>
-            <div className="mb-8 flex items-center gap-4">
-              <Image
-                src="/logos/abn-mark-white.svg"
-                alt="ABN"
-                width={72}
-                height={62}
-                priority
-                className="h-12 w-auto md:h-14"
-              />
-              <div className="h-px flex-1 bg-[#0F6E56]/35" />
-            </div>
-            <h1 className="font-sans text-[3rem] font-bold leading-[0.98] tracking-tight sm:text-[3.8rem] md:text-[5.6rem]">
+            <Image
+              src="/logos/abn-mark-white.svg"
+              alt="ABN"
+              width={72}
+              height={62}
+              priority
+              className="mb-8 h-12 w-auto md:h-14"
+            />
+            <h1 className="font-display text-[3rem] font-bold leading-[0.98] tracking-tight sm:text-[3.8rem] md:text-[5.6rem]">
               <span className="hero-word">Estructura</span>
               <span className="hero-word">donde</span>
               <span className="hero-word">otros</span>
@@ -128,7 +125,7 @@ export default function ABNLanding() {
           </div>
 
           <div className="scroll-reveal-right md:pl-6">
-            <div className="editorial-media rounded-[2rem] border-[#F1EFE8]/10 bg-white/4 shadow-[0_30px_90px_rgba(44,44,42,0.28)]">
+            <div className="editorial-media rounded-[2rem] bg-white/4">
               <div className="browser-chrome">
                 <div className="dot" />
                 <div className="dot" />
@@ -146,22 +143,22 @@ export default function ABNLanding() {
                 />
                 <div className="absolute inset-x-0 bottom-0 grid gap-4 bg-gradient-to-t from-[#111111] via-[#111111]/88 to-transparent px-5 pb-5 pt-18 md:grid-cols-[1.1fr_0.9fr] md:px-8 md:pb-8">
                   <div>
-                    <p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-accent/95">
+                    <p className="font-mono text-[0.72rem] uppercase tracking-[0.22em] text-background/46">
                       Prueba institucional
                     </p>
-                    <p className="mt-3 max-w-sm font-sans text-2xl leading-tight text-background md:text-3xl">
+                    <p className="mt-3 max-w-sm font-display text-2xl leading-tight text-background md:text-3xl">
                       Sistemas reales, operados por la misma agencia que los diseña.
                     </p>
                   </div>
-                  <div className="grid grid-cols-2 gap-3 self-end text-background/78">
-                    <div className="border-l border-white/15 pl-3">
-                      <p className="font-mono text-[0.66rem] uppercase tracking-[0.18em]">AENA</p>
+                  <div className="grid grid-cols-2 gap-5 self-end text-background/78">
+                    <div>
+                      <p className="font-mono text-[0.72rem] uppercase tracking-[0.22em]">AENA</p>
                       <p className="mt-2 font-sans text-sm leading-relaxed">
                         Gestión escolar y AULA en producción.
                       </p>
                     </div>
-                    <div className="border-l border-white/15 pl-3">
-                      <p className="font-mono text-[0.66rem] uppercase tracking-[0.18em]">IPUPY</p>
+                    <div>
+                      <p className="font-mono text-[0.72rem] uppercase tracking-[0.22em]">IPUPY</p>
                       <p className="mt-2 font-sans text-sm leading-relaxed">
                         Tesorería multi-sede con gobernanza clara.
                       </p>
@@ -178,7 +175,7 @@ export default function ABNLanding() {
         <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-4">
           {proofMetrics.map((metric) => (
             <div key={metric.label} className="proof-metric">
-              <p className="font-sans text-4xl font-semibold tracking-tight text-foreground md:text-5xl">
+              <p className="font-display text-4xl font-semibold tracking-tight text-foreground md:text-5xl">
                 <CountUp value={metric.value} />
               </p>
               <p className="mt-3 max-w-[14rem] font-sans text-sm leading-relaxed text-foreground/62">
@@ -191,19 +188,19 @@ export default function ABNLanding() {
 
       <section className="bg-background px-6 py-18 md:px-12 md:py-24">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-6 border-t border-[#2C2C2A]/10 pt-8 md:grid-cols-3 md:gap-10">
+          <div className="grid gap-10 md:grid-cols-3 md:gap-12">
             {pathways.map((item) => (
               <Link key={item.href} href={item.href} className="editorial-link group">
-                <p className="font-mono text-[0.7rem] uppercase tracking-[0.24em] text-foreground/36">
+                <p className="font-mono text-[0.72rem] uppercase tracking-[0.22em] text-foreground/36">
                   {item.kicker}
                 </p>
-                <h2 className="font-sans text-3xl leading-none tracking-tight md:text-[2.6rem]">
+                <h2 className="font-display text-3xl leading-none tracking-tight md:text-[2.6rem]">
                   {item.title}
                 </h2>
                 <p className="max-w-sm font-sans text-base leading-relaxed text-foreground/65">
                   {item.copy}
                 </p>
-                <span className="link-arrow font-sans text-sm font-medium text-accent">
+                <span className="link-arrow font-sans text-sm font-medium text-foreground">
                   Abrir sección
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -219,7 +216,7 @@ export default function ABNLanding() {
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-center">
           <div className="scroll-reveal-left max-w-xl">
             <p className="section-kicker mb-4">Flagship proof · AULA</p>
-            <h2 className="font-sans text-4xl font-semibold leading-[1.04] md:text-5xl">
+            <h2 className="font-display text-4xl font-semibold leading-[1.04] md:text-5xl">
               El motor importa menos que el contexto que lo gobierna.
             </h2>
             <p className="mt-5 font-sans text-base leading-relaxed text-background/70 md:text-lg">
@@ -233,7 +230,7 @@ export default function ABNLanding() {
             </p>
             <Link
               href="/aula"
-              className="link-arrow mt-8 font-sans text-sm font-medium text-accent"
+              className="link-arrow mt-8 font-sans text-sm font-medium text-background"
             >
               Conocer la plataforma AULA
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -243,7 +240,7 @@ export default function ABNLanding() {
           </div>
 
           <div className="scroll-reveal-scale">
-            <div className="editorial-media rounded-[1.75rem] border-[#F1EFE8]/10">
+            <div className="editorial-media rounded-[1.75rem]">
               <div className="browser-chrome">
                 <div className="dot" />
                 <div className="dot" />
@@ -266,7 +263,7 @@ export default function ABNLanding() {
         <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[0.8fr_1.2fr] md:gap-16">
           <div className="max-w-md">
             <p className="section-kicker mb-4">Cómo trabaja ABN</p>
-            <h2 className="font-sans text-4xl font-semibold leading-[1.06] md:text-5xl">
+            <h2 className="font-display text-4xl font-semibold leading-[1.06] md:text-5xl">
               Menos discurso. Más estándar operativo.
             </h2>
             <p className="mt-5 font-sans text-base leading-relaxed text-foreground/66">
@@ -278,14 +275,11 @@ export default function ABNLanding() {
 
           <div className="grid gap-6 md:grid-cols-3">
             {operatingModel.map((item) => (
-              <div
-                key={item.number}
-                className="scroll-reveal border-t border-[#2C2C2A]/12 pt-5"
-              >
-                <p className="font-mono text-sm uppercase tracking-[0.2em] text-accent/80">
+              <div key={item.number} className="scroll-reveal">
+                <p className="font-mono text-sm uppercase tracking-[0.22em] text-foreground/38">
                   {item.number}
                 </p>
-                <h3 className="mt-4 font-sans text-2xl leading-tight">{item.title}</h3>
+                <h3 className="mt-4 font-display text-2xl leading-tight">{item.title}</h3>
                 <p className="mt-4 font-sans text-sm leading-relaxed text-foreground/62">
                   {item.copy}
                 </p>
@@ -301,7 +295,7 @@ export default function ABNLanding() {
         <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[0.85fr_1.15fr] md:gap-20">
           <div className="max-w-lg">
             <p className="section-kicker mb-4">Contacto</p>
-            <h2 className="line-accent font-sans text-4xl font-semibold leading-tight md:text-5xl">
+            <h2 className="line-accent font-display text-4xl font-semibold leading-tight md:text-5xl">
               Conversemos sobre tu institución
             </h2>
             <p className="mt-6 font-sans text-base leading-relaxed text-foreground/68">
@@ -309,15 +303,15 @@ export default function ABNLanding() {
               y prioridades. Si el problema todavía está desordenado, ahí es donde ABN suele
               entrar mejor.
             </p>
-            <div className="mt-10 grid gap-5 border-t border-[#2C2C2A]/10 pt-6">
+            <div className="mt-12 grid gap-7">
               <div>
-                <p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-foreground/38">
+                <p className="font-mono text-[0.72rem] uppercase tracking-[0.22em] text-foreground/38">
                   Base
                 </p>
                 <p className="mt-2 font-sans text-sm text-foreground/72">Lambaré, Paraguay</p>
               </div>
               <div>
-                <p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-foreground/38">
+                <p className="font-mono text-[0.72rem] uppercase tracking-[0.22em] text-foreground/38">
                   Contacto
                 </p>
                 <p className="mt-2 font-sans text-sm text-foreground/72">anthony@bir.com.py</p>

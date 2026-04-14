@@ -46,7 +46,7 @@ export default function AulaPage() {
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.82fr_1.18fr] md:items-end">
           <div className="fade-in max-w-xl">
             <p className="section-kicker mb-4">Plataforma AULA</p>
-            <h1 className="font-sans text-4xl font-semibold leading-[1.02] md:text-6xl">
+            <h1 className="font-display text-4xl font-semibold leading-[1.02] md:text-6xl">
               Inteligencia institucional, no generación genérica.
             </h1>
             <p className="mt-6 font-sans text-base leading-relaxed text-background/72 md:text-lg">
@@ -66,7 +66,7 @@ export default function AulaPage() {
           </div>
 
           <div className="scroll-reveal-right">
-            <div className="editorial-media rounded-[1.9rem] border-[#F1EFE8]/10 shadow-[0_28px_80px_rgba(44,44,42,0.28)]">
+            <div className="editorial-media rounded-[1.9rem]">
               <div className="browser-chrome">
                 <div className="dot" />
                 <div className="dot" />
@@ -90,18 +90,18 @@ export default function AulaPage() {
         <div className="mx-auto max-w-7xl">
           <div className="max-w-2xl">
             <p className="section-kicker mb-4">La fórmula</p>
-            <h2 className="font-sans text-4xl font-semibold leading-[1.06] md:text-5xl">
+            <h2 className="font-display text-4xl font-semibold leading-[1.06] md:text-5xl">
               Cómo funciona AULA en una institución real.
             </h2>
           </div>
 
           <div className="mt-12 grid gap-8 md:grid-cols-3">
             {formula.map((step) => (
-              <div key={step.number} className="border-t border-[#2C2C2A]/10 pt-5">
-                <p className="font-mono text-sm uppercase tracking-[0.2em] text-accent/80">
+              <div key={step.number}>
+                <p className="font-mono text-sm uppercase tracking-[0.22em] text-foreground/38">
                   {step.number}
                 </p>
-                <h3 className="mt-4 font-sans text-3xl leading-tight">{step.title}</h3>
+                <h3 className="mt-4 font-display text-3xl leading-tight">{step.title}</h3>
                 <p className="mt-4 font-sans text-sm leading-relaxed text-foreground/64">
                   {step.copy}
                 </p>
@@ -115,29 +115,29 @@ export default function AulaPage() {
         <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[0.8fr_1.2fr]">
           <div className="max-w-md">
             <p className="section-kicker mb-4">Dónde opera</p>
-            <h2 className="font-sans text-4xl font-semibold leading-[1.06] md:text-5xl">
+            <h2 className="font-display text-4xl font-semibold leading-[1.06] md:text-5xl">
               Dos contextos. Un mismo principio.
             </h2>
           </div>
 
           <div className="grid gap-8 md:grid-cols-2">
-            <div className="border-t border-[#2C2C2A]/10 pt-5">
-              <p className="font-sans text-3xl leading-tight">Seminarios teológicos</p>
+            <div>
+              <p className="font-display text-3xl leading-tight">Seminarios teológicos</p>
               <p className="mt-4 font-sans text-sm leading-relaxed text-foreground/64">
                 Sílabos teológicos, planificación de cursos, transcriptos, asistencia y cumplimiento
                 central bajo un marco institucional coherente.
               </p>
-              <p className="mt-5 font-mono text-[0.68rem] uppercase tracking-[0.22em] text-foreground/38">
+              <p className="mt-5 font-mono text-[0.72rem] uppercase tracking-[0.22em] text-foreground/38">
                 IBA Paraguay + red IBA
               </p>
             </div>
-            <div className="border-t border-[#2C2C2A]/10 pt-5">
-              <p className="font-sans text-3xl leading-tight">Colegios K-12</p>
+            <div>
+              <p className="font-display text-3xl leading-tight">Colegios K-12</p>
               <p className="mt-4 font-sans text-sm leading-relaxed text-foreground/64">
                 Planificaciones, materiales, evaluaciones y comunicación alineadas al programa,
                 al estilo de enseñanza y al marco institucional de cada colegio.
               </p>
-              <p className="mt-5 font-mono text-[0.68rem] uppercase tracking-[0.22em] text-foreground/38">
+              <p className="mt-5 font-mono text-[0.72rem] uppercase tracking-[0.22em] text-foreground/38">
                 MEC Paraguay + adaptación local
               </p>
             </div>
@@ -149,7 +149,7 @@ export default function AulaPage() {
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.78fr_1.22fr] md:items-start">
           <div className="max-w-md">
             <p className="section-kicker mb-4">Qué construye ABN</p>
-            <h2 className="font-sans text-4xl font-semibold leading-[1.05] md:text-5xl">
+            <h2 className="font-display text-4xl font-semibold leading-[1.05] md:text-5xl">
               El contexto institucional que vuelve útil al motor.
             </h2>
             <p className="mt-5 font-sans text-base leading-relaxed text-background/68">
@@ -160,7 +160,7 @@ export default function AulaPage() {
 
           <div className="grid gap-5 md:grid-cols-2">
             {contextAreas.map((item) => (
-              <div key={item} className="border-t border-white/12 pt-5">
+              <div key={item}>
                 <p className="font-sans text-sm leading-relaxed text-background/72">{item}</p>
               </div>
             ))}
@@ -171,30 +171,30 @@ export default function AulaPage() {
       <section className="bg-background px-6 py-18 md:px-12 md:py-22">
         <div className="mx-auto max-w-7xl">
           <p className="section-kicker mb-4">Resultado</p>
-          <h2 className="max-w-3xl font-sans text-4xl font-semibold leading-[1.06] md:text-5xl">
+          <h2 className="max-w-3xl font-display text-4xl font-semibold leading-[1.06] md:text-5xl">
             Probado en producción antes de llegar a cualquier demo.
           </h2>
           <div className="mt-12 grid gap-8 md:grid-cols-4">
             <div className="proof-metric">
-              <p className="font-sans text-4xl font-semibold tracking-tight text-foreground">AENA</p>
+              <p className="font-display text-4xl font-semibold tracking-tight text-foreground">AENA</p>
               <p className="mt-3 font-sans text-sm leading-relaxed text-foreground/62">
                 Colegio K-12 usando AULA dentro de su operación académica.
               </p>
             </div>
             <div className="proof-metric">
-              <p className="font-sans text-4xl font-semibold tracking-tight text-foreground">IBA</p>
+              <p className="font-display text-4xl font-semibold tracking-tight text-foreground">IBA</p>
               <p className="mt-3 font-sans text-sm leading-relaxed text-foreground/62">
                 Seminario teológico extendiendo el modelo a varios países.
               </p>
             </div>
             <div className="proof-metric">
-              <p className="font-sans text-4xl font-semibold tracking-tight text-foreground">DOCX + PDF</p>
+              <p className="font-display text-4xl font-semibold tracking-tight text-foreground">DOCX + PDF</p>
               <p className="mt-3 font-sans text-sm leading-relaxed text-foreground/62">
                 Salidas listas para revisión y uso real dentro del equipo.
               </p>
             </div>
             <div className="proof-metric">
-              <p className="font-sans text-4xl font-semibold tracking-tight text-accent">100%</p>
+              <p className="font-display text-4xl font-semibold tracking-tight text-foreground">100%</p>
               <p className="mt-3 font-sans text-sm leading-relaxed text-foreground/62">
                 Construido y operado por la misma estructura institucional.
               </p>

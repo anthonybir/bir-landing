@@ -4,7 +4,6 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer className="bg-foreground text-background">
-      <div className="h-px bg-gradient-to-r from-transparent via-[#0F6E56]/40 to-transparent" />
       <div className="mx-auto max-w-7xl px-6 py-14 md:px-12 md:py-16">
         <div className="grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-start">
           <div className="max-w-md">
@@ -22,7 +21,7 @@ export default function Footer() {
           </div>
           <div className="flex gap-12 md:justify-end">
             <div>
-              <p className="mb-3 font-mono text-[0.68rem] uppercase tracking-[0.24em] text-accent">
+              <p className="mb-3 font-mono text-[0.72rem] uppercase tracking-[0.22em] text-background/36">
                 Secciones
               </p>
               <nav className="space-y-2 font-sans text-sm">
@@ -34,7 +33,7 @@ export default function Footer() {
               </nav>
             </div>
             <div>
-              <p className="mb-3 font-mono text-[0.68rem] uppercase tracking-[0.24em] text-accent">
+              <p className="mb-3 font-mono text-[0.72rem] uppercase tracking-[0.22em] text-background/36">
                 Contacto
               </p>
               <div className="space-y-2 font-sans text-sm text-background/58">
@@ -44,8 +43,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mb-6 mt-10 h-px bg-background/10" />
-        <p className="font-sans text-xs text-background/30">
+        <p className="mt-14 font-sans text-xs text-background/30">
           © {new Date().getFullYear()} Agencia Bir Nuñez. Todos los derechos reservados.
         </p>
       </div>

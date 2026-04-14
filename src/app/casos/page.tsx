@@ -22,7 +22,7 @@ const cases = [
     ],
     cta: 'Consultá sobre AENA Admin',
     media: (
-      <div className="editorial-media rounded-[1.5rem] border-[#2C2C2A]/10 bg-white shadow-[0_24px_60px_rgba(26,26,26,0.08)]">
+      <div className="editorial-media rounded-[1.5rem] bg-white">
         <div className="browser-chrome">
           <div className="dot" />
           <div className="dot" />
@@ -51,17 +51,17 @@ const cases = [
     ],
     cta: 'Consultá sobre AULA para seminarios',
     media: (
-      <div className="rounded-[1.5rem] border border-[#2C2C2A]/10 bg-[linear-gradient(180deg,#F1EFE8_0%,#e8e3d6_100%)] p-8 shadow-[0_24px_60px_rgba(26,26,26,0.06)] md:p-10">
-        <div className="flex items-start justify-between gap-6 border-b border-[#2C2C2A]/10 pb-8">
+      <div className="rounded-[1.5rem] bg-[linear-gradient(180deg,#F1EFE8_0%,#e8e3d6_100%)] p-8 md:p-10">
+        <div className="flex items-start justify-between gap-6 pb-8">
           <div>
-            <p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-foreground/38">
+            <p className="font-mono text-[0.72rem] uppercase tracking-[0.22em] text-foreground/38">
               IBA rollout
             </p>
-            <h3 className="mt-3 font-sans text-4xl leading-none text-foreground md:text-5xl">
+            <h3 className="mt-3 font-display text-4xl leading-none text-foreground md:text-5xl">
               De Paraguay hacia la red IBA.
             </h3>
           </div>
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">En implementación</p>
+          <p className="font-mono text-xs uppercase tracking-[0.22em] text-foreground/42">En implementación</p>
         </div>
         <div className="grid gap-6 pt-8 md:grid-cols-[1.1fr_0.9fr] md:items-end">
           <div>
@@ -72,7 +72,7 @@ const cases = [
           </div>
           <div className="grid grid-cols-2 gap-3">
             {['Paraguay', 'Brasil', 'Argentina', 'Ecuador'].map((country) => (
-              <div key={country} className="rounded-2xl border border-[#2C2C2A]/10 bg-white/60 px-4 py-4">
+              <div key={country} className="rounded-2xl bg-white/60 px-4 py-4">
                 <p className="font-sans text-sm font-medium text-foreground">{country}</p>
               </div>
             ))}
@@ -93,7 +93,7 @@ const cases = [
     ],
     cta: 'Consultá sobre IPUPY',
     media: (
-      <div className="editorial-media rounded-[1.5rem] border-[#2C2C2A]/10 bg-white shadow-[0_24px_60px_rgba(26,26,26,0.08)]">
+      <div className="editorial-media rounded-[1.5rem] bg-white">
         <div className="browser-chrome">
           <div className="dot" />
           <div className="dot" />
@@ -118,7 +118,7 @@ export default function CasosPage() {
       <section className="bg-background px-6 pb-12 pt-18 md:px-12 md:pb-16 md:pt-24">
         <div className="mx-auto max-w-7xl">
           <p className="section-kicker mb-4">Casos reales</p>
-          <h1 className="max-w-4xl font-sans text-4xl font-semibold leading-[1.02] md:text-6xl">
+          <h1 className="max-w-4xl font-display text-4xl font-semibold leading-[1.02] md:text-6xl">
             Sistemas que ABN construye, usa y mantiene en producción.
           </h1>
           <p className="mt-6 max-w-2xl font-sans text-base leading-relaxed text-foreground/66 md:text-lg">
@@ -132,19 +132,19 @@ export default function CasosPage() {
       <section className="section-frame bg-background px-6 py-10 md:px-12 md:py-12">
         <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-3">
           <div className="proof-metric">
-            <p className="font-sans text-4xl font-semibold tracking-tight text-foreground">3</p>
+            <p className="font-display text-4xl font-semibold tracking-tight text-foreground">3</p>
             <p className="mt-3 font-sans text-sm leading-relaxed text-foreground/62">
               frentes institucionales distintos: escolar, teológico y financiero.
             </p>
           </div>
           <div className="proof-metric">
-            <p className="font-sans text-4xl font-semibold tracking-tight text-foreground">100%</p>
+            <p className="font-display text-4xl font-semibold tracking-tight text-foreground">100%</p>
             <p className="mt-3 font-sans text-sm leading-relaxed text-foreground/62">
               diseñados alrededor de procesos que ABN ya opera y audita internamente.
             </p>
           </div>
           <div className="proof-metric">
-            <p className="font-sans text-4xl font-semibold tracking-tight text-accent">1 lógica</p>
+            <p className="font-display text-4xl font-semibold tracking-tight text-foreground">1 lógica</p>
             <p className="mt-3 font-sans text-sm leading-relaxed text-foreground/62">
               la institución fija el estándar; el sistema lo vuelve ejecutable.
             </p>
@@ -153,27 +153,27 @@ export default function CasosPage() {
       </section>
 
       <section className="bg-background px-6 py-18 md:px-12 md:py-24">
-        <div className="mx-auto flex max-w-7xl flex-col gap-18 md:gap-24">
+          <div className="mx-auto flex max-w-7xl flex-col gap-20 md:gap-28">
           {cases.map((item, index) => (
             <article
               key={item.name}
-              className={`grid gap-8 border-t border-[#2C2C2A]/10 pt-8 md:gap-12 ${
+              className={`grid gap-10 md:gap-14 ${
                 index === 1
                   ? 'md:grid-cols-[1.05fr_0.95fr] md:items-start'
                   : 'md:grid-cols-[0.88fr_1.12fr] md:items-center'
               }`}
             >
               <div className={`${index === 1 ? 'md:order-2' : ''}`}>
-                <p className="font-mono text-[0.7rem] uppercase tracking-[0.24em] text-accent">
+                <p className="font-mono text-[0.72rem] uppercase tracking-[0.22em] text-foreground/38">
                   {item.label}
                 </p>
-                <h2 className="mt-4 font-sans text-4xl leading-none tracking-tight md:text-5xl">
+                <h2 className="mt-4 font-display text-4xl leading-none tracking-tight md:text-5xl">
                   {item.name}
                 </h2>
                 <p className="mt-5 max-w-xl font-sans text-base leading-relaxed text-foreground/66">
                   {item.summary}
                 </p>
-                <ul className="mt-8 grid gap-3 border-t border-[#2C2C2A]/8 pt-5">
+                <ul className="mt-8 grid gap-3">
                   {item.points.map((point) => (
                     <li key={point} className="font-sans text-sm leading-relaxed text-foreground/62">
                       {point}
@@ -182,7 +182,7 @@ export default function CasosPage() {
                 </ul>
                 <Link
                   href="/#contacto"
-                  className="link-arrow mt-8 font-sans text-sm font-medium text-accent"
+                  className="link-arrow mt-8 font-sans text-sm font-medium text-foreground"
                 >
                   {item.cta}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
