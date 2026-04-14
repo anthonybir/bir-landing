@@ -21,7 +21,7 @@ export default function Footer() {
           </div>
           <div className="flex gap-12 md:justify-end">
             <div>
-              <p className="mb-3 font-mono text-[0.72rem] uppercase tracking-[0.22em] text-background/36">
+              <p className="mb-3 font-mono text-[0.72rem] uppercase tracking-[0.22em] text-background/56">
                 Secciones
               </p>
               <nav className="space-y-2 font-sans text-sm">
@@ -33,7 +33,7 @@ export default function Footer() {
               </nav>
             </div>
             <div>
-              <p className="mb-3 font-mono text-[0.72rem] uppercase tracking-[0.22em] text-background/36">
+              <p className="mb-3 font-mono text-[0.72rem] uppercase tracking-[0.22em] text-background/56">
                 Contacto
               </p>
               <div className="space-y-2 font-sans text-sm text-background/58">
@@ -43,7 +43,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <p className="mt-14 font-sans text-xs text-background/30">
+        <p className="mt-14 font-sans text-xs text-background/48">
           © {new Date().getFullYear()} Agencia Bir Nuñez. Todos los derechos reservados.
         </p>
       </div>

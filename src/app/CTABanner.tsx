@@ -7,7 +7,7 @@ export default function CTABanner() {
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-8 md:grid-cols-[1.35fr_0.85fr] md:items-end">
           <div className="max-w-3xl">
-            <p className="section-kicker mb-4">Contacto directo</p>
+            <p className="section-kicker mb-4 text-foreground/64">Contacto directo</p>
             <h2 className="font-display text-3xl font-semibold leading-tight md:text-5xl">
               Ordenar primero. Escalar después.
             </h2>
@@ -18,7 +18,7 @@ export default function CTABanner() {
             </p>
           </div>
           <div className="flex flex-col gap-3 md:items-start">
-            <p className="font-mono text-[0.72rem] uppercase tracking-[0.22em] text-foreground/40">
+            <p className="font-mono text-[0.72rem] uppercase tracking-[0.22em] text-foreground/64">
               Respuesta habitual en 48 horas hábiles
             </p>
             <div className="flex w-full flex-col gap-4 sm:flex-row md:flex-col">

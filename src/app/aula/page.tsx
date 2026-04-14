@@ -45,7 +45,7 @@ export default function AulaPage() {
       <section className="dark-section px-6 py-18 md:px-12 md:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.82fr_1.18fr] md:items-end">
           <div className="fade-in max-w-xl">
-            <p className="section-kicker mb-4 text-background/44">Plataforma AULA</p>
+            <p className="section-kicker mb-4 text-background/56">Plataforma AULA</p>
             <h1 className="font-display text-4xl font-semibold leading-[1.02] md:text-6xl">
               Inteligencia institucional, no generación genérica.
             </h1>
@@ -53,7 +53,7 @@ export default function AulaPage() {
               AULA es un motor de planificación académica asistido por IA cuya calidad depende
               de una sola variable: cuánto contexto institucional se le entrega.
             </p>
-            <p className="mt-4 max-w-md font-sans text-sm leading-relaxed text-background/52">
+            <p className="mt-4 max-w-md font-sans text-sm leading-relaxed text-background/56">
               ABN construye ese contexto. El diferencial no es un prompt mejor. Es una institución
               mejor documentada y mejor gobernada dentro de la herramienta.
             </p>
@@ -89,7 +89,7 @@ export default function AulaPage() {
       <section className="section-frame bg-background px-6 py-18 md:px-12 md:py-22">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-2xl">
-            <p className="section-kicker mb-4">La fórmula</p>
+            <p className="section-kicker mb-4 text-foreground/62">La fórmula</p>
             <h2 className="font-display text-4xl font-semibold leading-[1.06] md:text-5xl">
               Cómo funciona AULA en una institución real.
             </h2>
@@ -98,7 +98,7 @@ export default function AulaPage() {
           <div className="mt-12 grid gap-8 md:grid-cols-3">
             {formula.map((step) => (
               <div key={step.number}>
-                <p className="font-mono text-sm uppercase tracking-[0.22em] text-foreground/38">
+                <p className="font-mono text-sm uppercase tracking-[0.22em] text-foreground/62">
                   {step.number}
                 </p>
                 <h3 className="mt-4 font-display text-3xl leading-tight">{step.title}</h3>
@@ -114,7 +114,7 @@ export default function AulaPage() {
       <section className="bg-white px-6 py-20 md:px-12 md:py-24">
         <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[0.8fr_1.2fr]">
           <div className="max-w-md">
-            <p className="section-kicker mb-4">Dónde opera</p>
+            <p className="section-kicker mb-4 text-foreground/62">Dónde opera</p>
             <h2 className="font-display text-4xl font-semibold leading-[1.06] md:text-5xl">
               Dos contextos. Un mismo principio.
             </h2>
@@ -127,7 +127,7 @@ export default function AulaPage() {
                 Sílabos teológicos, planificación de cursos, transcriptos, asistencia y cumplimiento
                 central bajo un marco institucional coherente.
               </p>
-              <p className="mt-5 font-mono text-[0.72rem] uppercase tracking-[0.22em] text-foreground/38">
+              <p className="mt-5 font-mono text-[0.72rem] uppercase tracking-[0.22em] text-foreground/62">
                 IBA Paraguay + red IBA
               </p>
             </div>
@@ -137,7 +137,7 @@ export default function AulaPage() {
                 Planificaciones, materiales, evaluaciones y comunicación alineadas al programa,
                 al estilo de enseñanza y al marco institucional de cada colegio.
               </p>
-              <p className="mt-5 font-mono text-[0.72rem] uppercase tracking-[0.22em] text-foreground/38">
+              <p className="mt-5 font-mono text-[0.72rem] uppercase tracking-[0.22em] text-foreground/62">
                 MEC Paraguay + adaptación local
               </p>
             </div>
@@ -148,7 +148,7 @@ export default function AulaPage() {
       <section className="dark-section px-6 py-20 md:px-12 md:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.78fr_1.22fr] md:items-start">
           <div className="max-w-md">
-            <p className="section-kicker mb-4 text-background/44">Qué construye ABN</p>
+            <p className="section-kicker mb-4 text-background/56">Qué construye ABN</p>
             <h2 className="font-display text-4xl font-semibold leading-[1.05] md:text-5xl">
               El contexto institucional que vuelve útil al motor.
             </h2>
@@ -170,7 +170,7 @@ export default function AulaPage() {
 
       <section className="bg-background px-6 py-18 md:px-12 md:py-22">
         <div className="mx-auto max-w-7xl">
-          <p className="section-kicker mb-4">Resultado</p>
+          <p className="section-kicker mb-4 text-foreground/62">Resultado</p>
           <h2 className="max-w-3xl font-display text-4xl font-semibold leading-[1.06] md:text-5xl">
             Probado en producción antes de llegar a cualquier demo.
           </h2>

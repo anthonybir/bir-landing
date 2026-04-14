@@ -53,7 +53,7 @@ export default function ServiciosPage() {
       <section className="dark-section px-6 py-18 md:px-12 md:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.88fr_1.12fr] md:items-end">
           <div className="fade-in max-w-xl">
-            <p className="section-kicker mb-4 text-background/44">Servicios ABN</p>
+            <p className="section-kicker mb-4 text-background/56">Servicios ABN</p>
             <h1 className="font-display text-4xl font-semibold leading-[1.02] md:text-6xl">
               Intervenimos donde la institución necesita criterio, no solo software.
             </h1>
@@ -62,7 +62,7 @@ export default function ServiciosPage() {
               estándar operativo y traducirlo en sistemas que sigan sirviendo cuando cambie
               el equipo o la herramienta.
             </p>
-            <p className="mt-4 max-w-md font-sans text-sm leading-relaxed text-background/52">
+            <p className="mt-4 max-w-md font-sans text-sm leading-relaxed text-background/56">
               AULA es uno de esos sistemas. El servicio es el método completo que permite
               que plataformas, procesos y personas trabajen bajo el mismo marco.
             </p>
@@ -91,7 +91,7 @@ export default function ServiciosPage() {
       <section className="section-frame bg-background px-6 py-18 md:px-12 md:py-22">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-2xl">
-            <p className="section-kicker mb-4">Modos de trabajo</p>
+            <p className="section-kicker mb-4 text-foreground/62">Modos de trabajo</p>
             <h2 className="font-display text-4xl font-semibold leading-[1.06] md:text-5xl">
               Tres formas de entrar. Una sola lógica de ejecución.
             </h2>
@@ -105,11 +105,11 @@ export default function ServiciosPage() {
           <div className="mt-12 grid gap-10 md:grid-cols-3">
             {operatingModes.map((mode) => (
               <section key={mode.number} className="scroll-reveal">
-                <p className="font-mono text-sm uppercase tracking-[0.22em] text-foreground/38">
+                <p className="font-mono text-sm uppercase tracking-[0.22em] text-foreground/62">
                   {mode.number}
                 </p>
                 <h3 className="mt-4 font-display text-3xl leading-tight">{mode.title}</h3>
-                <p className="mt-2 font-sans text-sm font-medium text-foreground/48">
+                <p className="mt-2 font-sans text-sm font-medium text-foreground/62">
                   {mode.subtitle}
                 </p>
                 <p className="mt-5 font-sans text-sm leading-relaxed text-foreground/64">
@@ -131,7 +131,7 @@ export default function ServiciosPage() {
       <section className="bg-white px-6 py-20 md:px-12 md:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.82fr_1.18fr] md:items-start">
           <div className="max-w-md">
-            <p className="section-kicker mb-4">Dónde se ve el método</p>
+            <p className="section-kicker mb-4 text-foreground/62">Dónde se ve el método</p>
             <h2 className="font-display text-4xl font-semibold leading-[1.06] md:text-5xl">
               AULA es producto. El servicio es el contexto que lo hace valioso.
             </h2>

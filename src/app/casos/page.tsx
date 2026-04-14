@@ -54,14 +54,14 @@ const cases = [
       <div className="rounded-3xl bg-[linear-gradient(180deg,var(--gray-50)_0%,var(--gray-200)_100%)] p-8 md:p-10">
         <div className="flex items-start justify-between gap-6 pb-8">
           <div>
-            <p className="font-mono text-[0.72rem] uppercase tracking-[0.22em] text-foreground/38">
+            <p className="font-mono text-[0.72rem] uppercase tracking-[0.22em] text-foreground/62">
               IBA rollout
             </p>
             <h3 className="mt-3 font-display text-4xl leading-none text-foreground md:text-5xl">
               De Paraguay hacia la red IBA.
             </h3>
           </div>
-          <p className="font-mono text-xs uppercase tracking-[0.22em] text-foreground/42">En implementación</p>
+          <p className="font-mono text-xs uppercase tracking-[0.22em] text-foreground/62">En implementación</p>
         </div>
         <div className="grid gap-6 pt-8 md:grid-cols-[1.1fr_0.9fr] md:items-end">
           <div>
@@ -117,7 +117,7 @@ export default function CasosPage() {
     <>
       <section className="bg-background px-6 pb-12 pt-18 md:px-12 md:pb-16 md:pt-24">
         <div className="mx-auto max-w-7xl">
-          <p className="section-kicker mb-4">Casos reales</p>
+          <p className="section-kicker mb-4 text-foreground/62">Casos reales</p>
           <h1 className="max-w-4xl font-display text-4xl font-semibold leading-[1.02] md:text-6xl">
             Sistemas que ABN construye, usa y mantiene en producción.
           </h1>
@@ -164,7 +164,7 @@ export default function CasosPage() {
               }`}
             >
               <div className={`${index === 1 ? 'md:order-2' : ''}`}>
-                <p className="font-mono text-[0.72rem] uppercase tracking-[0.22em] text-foreground/38">
+                <p className="font-mono text-[0.72rem] uppercase tracking-[0.22em] text-foreground/62">
                   {item.label}
                 </p>
                 <h2 className="mt-4 font-display text-4xl leading-none tracking-tight md:text-5xl">
