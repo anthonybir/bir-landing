@@ -22,7 +22,7 @@ const cases = [
     ],
     cta: 'Consultá sobre AENA Admin',
     media: (
-      <div className="editorial-media rounded-[1.5rem] bg-white">
+      <div className="editorial-media bg-white">
         <div className="browser-chrome">
           <div className="dot" />
           <div className="dot" />
@@ -51,7 +51,7 @@ const cases = [
     ],
     cta: 'Consultá sobre AULA para seminarios',
     media: (
-      <div className="rounded-[1.5rem] bg-[linear-gradient(180deg,#F1EFE8_0%,#e8e3d6_100%)] p-8 md:p-10">
+      <div className="rounded-3xl bg-[linear-gradient(180deg,var(--gray-50)_0%,var(--gray-200)_100%)] p-8 md:p-10">
         <div className="flex items-start justify-between gap-6 pb-8">
           <div>
             <p className="font-mono text-[0.72rem] uppercase tracking-[0.22em] text-foreground/38">
@@ -93,7 +93,7 @@ const cases = [
     ],
     cta: 'Consultá sobre IPUPY',
     media: (
-      <div className="editorial-media rounded-[1.5rem] bg-white">
+      <div className="editorial-media bg-white">
         <div className="browser-chrome">
           <div className="dot" />
           <div className="dot" />

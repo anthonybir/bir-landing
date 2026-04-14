@@ -117,7 +117,7 @@ export default function ABNLanding() {
               </a>
               <Link
                 href="/casos"
-                className="btn-outline inline-flex items-center justify-center gap-2 rounded-full border border-[#F1EFE8]/24 px-6 py-3.5 font-sans text-sm font-medium text-background hover:bg-background hover:text-foreground"
+                className="btn-outline inline-flex items-center justify-center gap-2 rounded-full border border-background/24 px-6 py-3.5 font-sans text-sm font-medium text-background hover:bg-background hover:text-foreground"
               >
                 Ver sistemas en producción
               </Link>
@@ -125,7 +125,7 @@ export default function ABNLanding() {
           </div>
 
           <div className="scroll-reveal-right md:pl-6">
-            <div className="editorial-media rounded-[2rem] bg-white/4">
+            <div className="editorial-media bg-white/4">
               <div className="browser-chrome">
                 <div className="dot" />
                 <div className="dot" />
@@ -141,7 +141,7 @@ export default function ABNLanding() {
                   className="h-auto w-full"
                   sizes="(max-width: 768px) 100vw, 52vw"
                 />
-                <div className="absolute inset-x-0 bottom-0 grid gap-4 bg-gradient-to-t from-[#111111] via-[#111111]/88 to-transparent px-5 pb-5 pt-18 md:grid-cols-[1.1fr_0.9fr] md:px-8 md:pb-8">
+                <div className="absolute inset-x-0 bottom-0 grid gap-4 bg-gradient-to-t from-gray-950 via-gray-950/88 to-transparent px-5 pb-5 pt-18 md:grid-cols-[1.1fr_0.9fr] md:px-8 md:pb-8">
                   <div>
                     <p className="font-mono text-[0.72rem] uppercase tracking-[0.22em] text-background/46">
                       Prueba institucional
@@ -240,7 +240,7 @@ export default function ABNLanding() {
           </div>
 
           <div className="scroll-reveal-scale">
-            <div className="editorial-media rounded-[1.75rem]">
+            <div className="editorial-media">
               <div className="browser-chrome">
                 <div className="dot" />
                 <div className="dot" />

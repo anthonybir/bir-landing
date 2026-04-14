@@ -69,7 +69,7 @@ export default function ServiciosPage() {
           </div>
 
           <div className="scroll-reveal-right">
-            <div className="editorial-media rounded-[1.75rem]">
+            <div className="editorial-media">
               <div className="browser-chrome">
                 <div className="dot" />
                 <div className="dot" />

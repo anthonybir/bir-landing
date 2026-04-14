@@ -66,7 +66,7 @@ export default function AulaPage() {
           </div>
 
           <div className="scroll-reveal-right">
-            <div className="editorial-media rounded-[1.9rem]">
+            <div className="editorial-media">
               <div className="browser-chrome">
                 <div className="dot" />
                 <div className="dot" />

@@ -96,7 +96,7 @@ export default function NavBar() {
           ))}
           <Link
             href="/#contacto"
-            className="mobile-nav-chip mobile-nav-chip-cta bg-foreground text-background border-[#2C2C2A]"
+            className="mobile-nav-chip mobile-nav-chip-cta bg-foreground text-background border-foreground"
           >
             Hablemos
           </Link>

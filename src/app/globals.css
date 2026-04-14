@@ -3,26 +3,34 @@
 :root {
   /* Warm gray scale — hue shifts 39° (warm beige) → 20° (warm charcoal) */
   --gray-50:  hsl(39 15% 98%);
-  --gray-100: hsl(38 14% 95%);
-  --gray-200: hsl(37 12% 90%);
-  --gray-300: hsl(35 10% 82%);
-  --gray-400: hsl(32 8% 70%);
-  --gray-500: hsl(28 6% 56%);
-  --gray-600: hsl(25 6% 44%);
-  --gray-700: hsl(23 8% 32%);
-  --gray-800: hsl(21 10% 20%);
+  --gray-100: hsl(37 12% 95%);
+  --gray-200: hsl(35 10% 90%);
+  --gray-300: hsl(33 8% 82%);
+  --gray-400: hsl(30 6% 65%);
+  --gray-500: hsl(27 5% 50%);
+  --gray-600: hsl(25 6% 40%);
+  --gray-700: hsl(23 8% 30%);
+  --gray-800: hsl(22 10% 20%);
   --gray-900: hsl(20 12% 10%);
+  --gray-950: hsl(20 12% 6%);
 
-  /* Semantic aliases */
-  --background: #F1EFE8;
-  --foreground: #2C2C2A;
-  --accent: #2A9D90;
-  --accent-hover: #24897D;
-  --accent-active: #1F756B;
-  --slate: #5F5E5A;
-  --light-gray: #e8e6e1;
-  --mid-gray: #B4B2A9;
-  --true-dark: #2c2c2a;
+  /* Directional atmosphere */
+  --atmosphere-top: hsl(39 15% 98%);
+  --atmosphere-bottom: hsl(37 13% 97%);
+
+  /* Semantic aliases → gray scale */
+  --background: var(--gray-50);
+  --foreground: var(--gray-900);
+
+  /* Deep teal accent (Color Ma) */
+  --accent: hsl(173 58% 39%);
+  --accent-hover: hsl(173 58% 34%);
+  --accent-active: hsl(173 58% 29%);
+  --accent-light: hsl(173 58% 95%);
+  --accent-lighter: hsl(173 58% 97%);
+  --accent-dark: hsl(173 58% 25%);
+  --accent-darker: hsl(173 58% 15%);
+  --accent-foreground: hsl(0 0% 100%);
 
   /* Ma spatial tokens */
   --ma-iki: 0.5rem;
@@ -30,15 +38,43 @@
   --ma-kukan: 4rem;
   --ma-mu: 6rem;
 
+  /* Border radius scale */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Hikari shadow system (光) — warm-tinted, light as material */
+  --shadow-xs: 0 1px 2px hsl(20 12% 10% / 0.04);
+  --shadow-sm: 0 2px 4px hsl(20 12% 10% / 0.06);
+  --shadow-md: 0 4px 8px hsl(20 12% 10% / 0.08);
+  --shadow-lg: 0 8px 16px hsl(20 12% 10% / 0.10);
+  --shadow-xl: 0 16px 32px hsl(20 12% 10% / 0.12);
+  --shadow-lift: 0 4px 12px hsl(20 12% 10% / 0.08);
+  --shadow-accent: 0 4px 12px hsl(173 58% 39% / 0.25);
+  --scrim-hikari: hsl(39 15% 98% / 0.60);
+
   /* Motion tokens */
   --ease-settle: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
   --duration-settle: 400ms;
   --duration-micro: 100ms;
   --duration-fast: 200ms;
+  --duration-normal: 300ms;
   --duration-stagger: 50ms;
+
+  /* Composed transitions */
+  --transition-fast: all 200ms var(--ease-out);
+  --transition-settle: all 400ms var(--ease-settle);
+  --transition-colors: color 200ms var(--ease-out), background-color 200ms var(--ease-out), border-color 200ms var(--ease-out);
+  --transition-lift: transform 200ms var(--ease-settle), box-shadow 200ms var(--ease-settle);
 }
 
 @theme inline {
+  /* Gray scale */
   --color-gray-50: var(--gray-50);
   --color-gray-100: var(--gray-100);
   --color-gray-200: var(--gray-200);
@@ -49,15 +85,23 @@
   --color-gray-700: var(--gray-700);
   --color-gray-800: var(--gray-800);
   --color-gray-900: var(--gray-900);
+  --color-gray-950: var(--gray-950);
+
+  /* Semantic */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  /* Accent + variants */
   --color-accent: var(--accent);
   --color-accent-hover: var(--accent-hover);
   --color-accent-active: var(--accent-active);
-  --color-slate: var(--slate);
-  --color-light-gray: var(--light-gray);
-  --color-mid-gray: var(--mid-gray);
-  --color-true-dark: var(--true-dark);
+  --color-accent-light: var(--accent-light);
+  --color-accent-lighter: var(--accent-lighter);
+  --color-accent-dark: var(--accent-dark);
+  --color-accent-darker: var(--accent-darker);
+  --color-accent-foreground: var(--accent-foreground);
+
+  /* Typography */
   --font-sans: var(--font-satoshi), "Helvetica Neue", system-ui, -apple-system, sans-serif;
   --font-display: var(--font-instrument), "Helvetica Neue", system-ui, sans-serif;
   --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace;
@@ -69,12 +113,12 @@ html {
 }
 
 body {
-  background: linear-gradient(180deg, hsl(39 15% 98%) 0%, hsl(37 13% 97%) 100%) fixed;
+  background: linear-gradient(180deg, var(--atmosphere-top) 0%, var(--atmosphere-bottom) 100%) fixed;
   color: var(--foreground);
 }
 
 ::selection {
-  background: rgba(42, 157, 144, 0.2);
+  background: hsl(173 58% 39% / 0.2);
   color: var(--foreground);
 }
 
@@ -171,7 +215,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(44, 44, 42, 0.44);
+  color: hsl(20 12% 10% / 0.44);
 }
 
 .section-frame {
@@ -193,18 +237,20 @@ body {
   gap: 0.95rem;
   align-content: start;
   padding-top: 0;
-  transition: transform 0.25s ease, color 0.25s ease;
+  transition: var(--transition-lift);
 }
 
 .editorial-link:hover {
   transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
 }
 
 .editorial-media {
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(241, 239, 232, 0.08);
-  background: rgba(241, 239, 232, 0.03);
+  border-radius: var(--radius-2xl);
+  border: 1px solid hsl(39 15% 98% / 0.08);
+  background: hsl(39 15% 98% / 0.03);
 }
 
 .editorial-media::after {
@@ -212,7 +258,7 @@ body {
   position: absolute;
   inset: auto 0 0 0;
   height: 34%;
-  background: linear-gradient(180deg, rgba(44, 44, 42, 0), rgba(44, 44, 42, 0.24));
+  background: linear-gradient(180deg, hsl(20 12% 10% / 0), hsl(20 12% 10% / 0.24));
   pointer-events: none;
 }
 
@@ -221,15 +267,15 @@ body {
   gap: 0.4rem;
   align-items: center;
   padding: 0.7rem 1rem;
-  background: rgba(22, 22, 22, 0.96);
-  border-bottom: 1px solid rgba(241, 239, 232, 0.08);
+  background: hsl(20 12% 6% / 0.96);
+  border-bottom: 1px solid hsl(39 15% 98% / 0.08);
 }
 
 .browser-chrome .dot {
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 999px;
-  background: rgba(241, 239, 232, 0.2);
+  background: hsl(39 15% 98% / 0.2);
 }
 
 .browser-chrome .dot:first-child {
@@ -256,34 +302,38 @@ body {
 .mobile-nav-chip {
   flex-shrink: 0;
   border-radius: 999px;
-  border: 1px solid rgba(44, 44, 42, 0.08);
-  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid hsl(20 12% 10% / 0.08);
+  background: hsl(0 0% 100% / 0.74);
   padding: 0.55rem 1rem;
   font-size: 0.78rem;
   font-weight: 600;
   color: var(--foreground);
-  transition: border-color 0.25s ease, background-color 0.25s ease, transform 0.25s ease;
+  transition: var(--transition-colors), transform var(--duration-fast) var(--ease-settle);
 }
 
 .mobile-nav-chip:hover {
   transform: translateY(-1px);
-  border-color: rgba(44, 44, 42, 0.14);
-  background: rgba(44, 44, 42, 0.04);
+  border-color: hsl(20 12% 10% / 0.14);
+  background: hsl(20 12% 10% / 0.04);
 }
 
 .mobile-nav-chip-cta:hover {
   border-color: var(--foreground);
-  background: rgba(44, 44, 42, 0.88);
-  color: #F1EFE8;
+  background: hsl(20 12% 10% / 0.88);
+  color: var(--gray-50);
 }
 
 .btn-primary,
 .btn-outline,
 .link-arrow {
-  transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+  transition: var(--transition-lift), var(--transition-colors);
 }
 
-.btn-primary:hover,
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lift);
+}
+
 .btn-outline:hover,
 .link-arrow:hover {
   transform: translateY(-1px);
@@ -296,7 +346,7 @@ body {
 }
 
 .link-arrow svg {
-  transition: transform 0.25s ease;
+  transition: transform var(--duration-fast) var(--ease-settle);
 }
 
 .link-arrow:hover svg {
@@ -313,33 +363,36 @@ body {
 }
 
 .form-card {
-  background: rgba(255, 255, 255, 0.74);
-  border: 1px solid rgba(44, 44, 42, 0.08);
+  background: hsl(0 0% 100% / 0.74);
+  border: 1px solid hsl(20 12% 10% / 0.08);
   padding: 2rem;
+  box-shadow: var(--shadow-sm);
   backdrop-filter: blur(12px);
 }
 
 .input-focus {
-  transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+  transition: var(--transition-colors), box-shadow var(--duration-fast) var(--ease-out);
 }
 
 .input-focus:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(42, 157, 144, 0.1);
+  box-shadow: 0 0 0 2px var(--accent), 0 0 8px hsl(173 58% 39% / 0.15);
   background: white;
 }
 
 .team-avatar {
-  transition: transform 0.25s ease, border-color 0.25s ease;
+  box-shadow: var(--shadow-xs);
+  transition: var(--transition-lift);
 }
 
 .team-avatar:hover {
   transform: translateY(-2px);
+  box-shadow: var(--shadow-lift);
 }
 
 .stat-card {
-  background: linear-gradient(135deg, #2c2c2a 0%, #3a3a37 100%);
+  background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-800) 100%);
 }
 
 .success-appear {
@@ -358,13 +411,13 @@ body {
   justify-content: center;
   border-radius: 999px;
   background: #25d366;
-  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.24);
-  transition: transform var(--duration-fast) var(--ease-settle), box-shadow var(--duration-fast) var(--ease-settle);
+  box-shadow: var(--shadow-md), 0 0 0 0 rgba(37, 211, 102, 0);
+  transition: var(--transition-lift);
 }
 
 .whatsapp-float:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.32);
+  box-shadow: var(--shadow-lg), 0 4px 12px rgba(37, 211, 102, 0.2);
 }
 
 @supports (animation-timeline: view()) {

@@ -33,7 +33,7 @@ export default function CTABanner() {
           </a>
           <Link
             href="/#contacto"
-            className="btn-outline inline-flex items-center justify-center gap-2 rounded-full border border-[#2C2C2A]/20 px-8 py-4 font-sans text-sm font-medium text-foreground hover:bg-foreground hover:text-background"
+            className="btn-outline inline-flex items-center justify-center gap-2 rounded-full border border-foreground/20 px-8 py-4 font-sans text-sm font-medium text-foreground hover:bg-foreground hover:text-background"
           >
             Enviar mensaje
           </Link>
