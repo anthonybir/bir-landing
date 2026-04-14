@@ -25,7 +25,7 @@ const leaders = [
   {
     initials: 'DN',
     role: 'Socia',
-    name: 'Diana Nunez',
+    name: 'Diana Nuñez',
     copy:
       'Maestría en Gestión Educativa. Más de 20 años de experiencia en pedagogía de escuelas privadas y responsable de la línea institucional que alimenta el criterio de AULA.',
   },
