@@ -45,7 +45,7 @@ export default function AulaPage() {
       <section className="dark-section px-6 py-18 md:px-12 md:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.82fr_1.18fr] md:items-end">
           <div className="fade-in max-w-xl">
-            <p className="section-kicker mb-4">Plataforma AULA</p>
+            <p className="section-kicker mb-4 text-background/44">Plataforma AULA</p>
             <h1 className="font-display text-4xl font-semibold leading-[1.02] md:text-6xl">
               Inteligencia institucional, no generación genérica.
             </h1>
@@ -148,7 +148,7 @@ export default function AulaPage() {
       <section className="dark-section px-6 py-20 md:px-12 md:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.78fr_1.22fr] md:items-start">
           <div className="max-w-md">
-            <p className="section-kicker mb-4">Qué construye ABN</p>
+            <p className="section-kicker mb-4 text-background/44">Qué construye ABN</p>
             <h2 className="font-display text-4xl font-semibold leading-[1.05] md:text-5xl">
               El contexto institucional que vuelve útil al motor.
             </h2>

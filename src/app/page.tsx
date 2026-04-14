@@ -86,7 +86,7 @@ export default function ABNLanding() {
       <section className="hero-dark min-h-[calc(100svh-4.75rem)] px-6 pb-14 pt-10 md:px-12 md:pb-18 md:pt-12">
         <div className="grid min-h-[calc(100svh-9rem)] max-w-[1600px] gap-10 md:mx-auto md:grid-cols-[minmax(0,0.95fr)_minmax(520px,0.95fr)] md:items-end">
           <div className="fade-in flex max-w-xl flex-col justify-end md:pb-8">
-            <p className="section-kicker mb-5">ABN · Consultoría en transformación institucional</p>
+            <p className="section-kicker mb-5 text-background/44">ABN · Consultoría en transformación institucional</p>
             <Image
               src="/logos/abn-mark-white.svg"
               alt="ABN"
@@ -215,7 +215,7 @@ export default function ABNLanding() {
       <section className="dark-section px-6 py-18 md:px-12 md:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-center">
           <div className="scroll-reveal-left max-w-xl">
-            <p className="section-kicker mb-4">Flagship proof · AULA</p>
+            <p className="section-kicker mb-4 text-background/44">Flagship proof · AULA</p>
             <h2 className="font-display text-4xl font-semibold leading-[1.04] md:text-5xl">
               El motor importa menos que el contexto que lo gobierna.
             </h2>

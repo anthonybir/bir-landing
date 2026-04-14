@@ -53,7 +53,7 @@ export default function ServiciosPage() {
       <section className="dark-section px-6 py-18 md:px-12 md:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.88fr_1.12fr] md:items-end">
           <div className="fade-in max-w-xl">
-            <p className="section-kicker mb-4">Servicios ABN</p>
+            <p className="section-kicker mb-4 text-background/44">Servicios ABN</p>
             <h1 className="font-display text-4xl font-semibold leading-[1.02] md:text-6xl">
               Intervenimos donde la institución necesita criterio, no solo software.
             </h1>
