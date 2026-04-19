@@ -1,43 +1,48 @@
 import Link from 'next/link';
+import { ArrowR, ArrowUR } from './Arrows';
 import { WhatsAppIcon, WHATSAPP_URL } from './WhatsAppFloat';
 
 export default function CTABanner() {
   return (
-    <section className="cta-section px-6 py-20 md:px-12 md:py-28">
-      <div className="mx-auto max-w-7xl">
-        <div className="grid gap-8 md:grid-cols-[1.35fr_0.85fr] md:items-end">
-          <div className="max-w-3xl">
-            <p className="section-kicker mb-4 text-foreground/64">Contacto directo</p>
-            <h2 className="font-display text-3xl font-semibold leading-tight md:text-5xl">
-              Ordenar primero. Escalar después.
+    <section className="cta-section px-6 py-24 md:px-12 md:py-32">
+      <div className="mx-auto max-w-[1440px]">
+        <div className="grid items-end gap-12 md:grid-cols-[1.3fr_0.7fr] md:gap-16">
+          <div>
+            <span className="eyebrow mb-6 inline-flex">
+              <span className="dot" />
+              Contacto directo
+            </span>
+            <h2 className="editorial-display text-[clamp(2.5rem,7vw,6.5rem)]">
+              Ordenar primero.
+              <br />
+              <span className="serif-it">Escalar después.</span>
             </h2>
-            <p className="mt-5 max-w-2xl font-sans text-base leading-relaxed text-foreground/68 md:text-lg">
-              Si ya sabés que Excel, WhatsApp y decisiones improvisadas no alcanzan,
-              conversemos. ABN entra donde hace falta criterio, estructura y un sistema
-              que siga funcionando cuando el entusiasmo inicial se vaya.
+            <p className="mt-8 max-w-[36rem] text-base leading-relaxed text-foreground/72 md:text-lg">
+              Si ya sabés que Excel, WhatsApp y decisiones improvisadas{' '}
+              <span className="serif-it">no alcanzan</span>, conversemos. ABN entra donde hace
+              falta criterio, estructura y un sistema que siga funcionando cuando el entusiasmo
+              inicial se vaya.
             </p>
           </div>
-          <div className="flex flex-col gap-3 md:items-start">
-            <p className="font-mono text-[0.72rem] uppercase tracking-[0.22em] text-foreground/64">
-              Respuesta habitual en 48 horas hábiles
-            </p>
-            <div className="flex w-full flex-col gap-4 sm:flex-row md:flex-col">
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-                className="btn-primary inline-flex items-center justify-center gap-2 rounded-full bg-foreground px-8 py-4 font-sans text-sm font-medium text-background hover:bg-foreground/90"
-          >
-            <WhatsAppIcon />
-            Escribinos por WhatsApp
-          </a>
-          <Link
-            href="/#contacto"
-            className="btn-outline inline-flex items-center justify-center gap-2 rounded-full border border-foreground/20 px-8 py-4 font-sans text-sm font-medium text-foreground hover:bg-foreground hover:text-background"
-          >
-            Enviar mensaje
-          </Link>
-            </div>
+          <div className="flex flex-col gap-3">
+            <span className="tick">Respuesta habitual en 48h hábiles</span>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-[color:var(--signal)] px-5 py-3.5 font-sans text-sm font-semibold text-foreground transition hover:-translate-y-px hover:bg-[color:var(--signal-light)]"
+            >
+              <WhatsAppIcon />
+              Escribinos por WhatsApp
+              <ArrowUR />
+            </a>
+            <Link
+              href="/#contacto"
+              className="inline-flex items-center gap-2 rounded-full border border-foreground px-5 py-3.5 font-sans text-sm font-medium text-foreground transition hover:-translate-y-px hover:bg-foreground hover:text-background"
+            >
+              Enviar mensaje
+              <ArrowR />
+            </Link>
           </div>
         </div>
       </div>

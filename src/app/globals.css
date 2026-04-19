@@ -32,6 +32,10 @@
   --accent-darker: hsl(173 58% 15%);
   --accent-foreground: hsl(0 0% 100%);
 
+  /* Signal — warm counterpoint, used scarcely (AENA color-Ma principle) */
+  --signal: #E9B031;
+  --signal-light: #F4C960;
+
   /* Ma spatial tokens */
   --ma-iki: 0.5rem;
   --ma-yohaku: 3rem;
@@ -104,7 +108,12 @@
   /* Typography */
   --font-sans: var(--font-satoshi), "Helvetica Neue", system-ui, -apple-system, sans-serif;
   --font-display: var(--font-instrument), "Helvetica Neue", system-ui, sans-serif;
-  --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace;
+  --font-serif: var(--font-instrument-serif), Georgia, "Times New Roman", serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace;
+
+  /* Signal */
+  --color-signal: var(--signal);
+  --color-signal-light: var(--signal-light);
 }
 
 html {
@@ -547,4 +556,236 @@ body {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* ── Editorial typographic accents (v2) ─────────────────── */
+.serif-it {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--accent-dark);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gray-600);
+}
+
+.eyebrow .dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--signal);
+  flex-shrink: 0;
+}
+
+.eyebrow--on-dark {
+  color: var(--gray-200);
+}
+
+.eyebrow--on-dark .dot {
+  background: var(--signal);
+}
+
+.tick {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--gray-600);
+  text-transform: uppercase;
+}
+
+.tick::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid hsl(20 12% 10% / 0.12);
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray-600);
+  background: hsl(0 0% 100% / 0.72);
+  backdrop-filter: blur(8px);
+}
+
+.pill .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--signal);
+  flex-shrink: 0;
+}
+
+.pill--on-dark {
+  background: hsl(0 0% 100% / 0.06);
+  border-color: hsl(0 0% 100% / 0.14);
+  color: var(--gray-200);
+  backdrop-filter: none;
+}
+
+/* Editorial display — tight tracking, balanced wrap.
+   Color inherits from parent so Tailwind text-* utilities can override on dark sections. */
+.editorial-display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 0.95;
+  text-wrap: balance;
+}
+
+/* Editorial issue marker (№ 001 / 26) */
+.issue-marker {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--gray-400);
+  padding-top: 0.4rem;
+}
+
+/* Ink-rule top (2px solid foreground) used under hero / stats */
+.rule-ink {
+  border-top: 2px solid var(--foreground);
+}
+
+/* Manifesto row */
+.manifesto-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.manifesto-row + .manifesto-row {
+  border-top: 1px solid hsl(20 12% 10% / 0.1);
+}
+
+.manifesto-row > :first-child {
+  align-self: end;
+}
+
+@media (max-width: 640px) {
+  .manifesto-row {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+    padding: 0.75rem 0;
+  }
+  .manifesto-row > :first-child {
+    font-size: 0.72rem;
+    font-family: var(--font-mono);
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gray-500);
+    align-self: start;
+  }
+}
+
+/* Case row (editorial index list) */
+.case-row {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1.6fr) minmax(0, 1fr) 120px 96px 18px;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.75rem 0.5rem;
+  border-top: 1px solid hsl(20 12% 10% / 0.1);
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--ease-out);
+}
+
+.case-row:hover {
+  background: hsl(20 12% 10% / 0.03);
+}
+
+.case-row:last-of-type {
+  border-bottom: 1px solid hsl(20 12% 10% / 0.1);
+}
+
+@media (max-width: 768px) {
+  .case-row {
+    grid-template-columns: 36px 1fr 18px;
+    gap: 1rem;
+    padding: 1.25rem 0.5rem;
+  }
+  .case-row > .case-row__frame,
+  .case-row > .case-row__sector,
+  .case-row > .case-row__year {
+    display: none;
+  }
+}
+
+/* Method card (dark section) */
+.method-card {
+  padding: 2.5rem 2rem 2.5rem 0;
+  border-right: 1px solid hsl(0 0% 100% / 0.18);
+}
+
+.method-card:last-child {
+  border-right: none;
+}
+
+.method-card:not(:first-child) {
+  padding-left: 2rem;
+}
+
+@media (max-width: 768px) {
+  .method-card {
+    padding: 2rem 0;
+    border-right: none;
+    border-top: 1px solid hsl(0 0% 100% / 0.18);
+  }
+  .method-card:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+  .method-card:not(:first-child) {
+    padding-left: 0;
+  }
+}
+
+/* Proof plate (gradient-teal CTA card) */
+.proof-plate {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-2xl);
+  padding: clamp(1.75rem, 4vw, 3rem);
+  background: linear-gradient(180deg, var(--gray-800) 0%, var(--gray-900) 100%);
+  color: var(--gray-50);
+}
+
+.proof-plate::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(1200px 400px at 80% -20%, hsl(173 58% 39% / 0.22), transparent 60%),
+    radial-gradient(800px 260px at 10% 110%, hsl(39 50% 50% / 0.1), transparent 60%);
+  pointer-events: none;
+}
+
+.proof-plate > * {
+  position: relative;
+  z-index: 1;
 }

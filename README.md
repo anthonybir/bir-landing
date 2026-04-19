@@ -5,8 +5,10 @@ Landing page for [bir.com.py](https://bir.com.py) - Software consulting and deve
 ## Tech Stack
 
 - **Framework:** Next.js 16
-- **Styling:** Tailwind CSS
+- **UI:** React 19
+- **Styling:** Tailwind CSS v4
 - **Email:** Resend API
+- **Analytics:** Vercel Analytics
 - **Deployment:** Vercel
 
 ## Features

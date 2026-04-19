@@ -7,154 +7,209 @@ export const metadata: Metadata = {
     'Conocé a la Junta Directiva de ABN. Experiencia corporativa internacional, misiones globales y pedagogía institucional al servicio de Latinoamérica.',
 };
 
-const leaders = [
+const directors = [
+  {
+    initials: 'AB',
+    role: 'Cofundador & Socio Director',
+    name: 'Anthony Bir',
+    tag: 'Dirección + sistema',
+    bio: 'Experiencia en ventas de exportación en Heinz, ventas de proyectos e implementación SAP en Kontron AG, y liderazgo internacional en Thermo Fisher Scientific (incluyendo el proyecto KAUST en Arabia Saudita). Hoy sostiene la arquitectura técnica y el estándar operativo de ABN.',
+    tags: ['Arquitectura', 'Producto', 'Operación'],
+    gradient: 'linear-gradient(135deg, hsl(173 58% 25%) 0%, hsl(173 58% 39%) 100%)',
+  },
   {
     initials: 'JB',
     role: 'Cofundador & Socio',
     name: 'Joseph Bir',
-    copy:
-      'Licenciatura en Teología del Texas Bible College. Cuatro décadas de experiencia en Misiones Globales de la UPCI, con liderazgo misionero en Paraguay, Perú y la red GATS en Sudamérica.',
+    tag: 'Misiones + teología',
+    bio: 'Licenciatura en Teología del Texas Bible College. Cuatro décadas de experiencia en Misiones Globales de la UPCI, con liderazgo misionero en Paraguay, Perú y la red GATS en Sudamérica.',
+    tags: ['Misiones', 'Teología', 'GATS'],
+    gradient: 'linear-gradient(135deg, hsl(173 58% 15%) 0%, hsl(173 58% 34%) 100%)',
   },
   {
     initials: 'LB',
     role: 'Socia',
     name: 'Loretta Bir',
-    copy:
-      'Licenciatura en Educación Cristiana del Texas Bible College. Líder GATS en IBA Paraguay y fundadora de la escuela K-12 en Lambaré que dio origen a los sistemas que hoy ABN ofrece.',
+    tag: 'Pedagogía + formación',
+    bio: 'Licenciatura en Educación Cristiana del Texas Bible College. Líder GATS en IBA Paraguay y fundadora de la escuela K-12 en Lambaré que dio origen a los sistemas que hoy ABN ofrece.',
+    tags: ['Pedagogía', 'IBA', 'K-12'],
+    gradient: 'linear-gradient(135deg, hsl(173 58% 29%) 0%, hsl(173 58% 50%) 100%)',
   },
   {
     initials: 'DN',
     role: 'Socia',
     name: 'Diana Nuñez',
-    copy:
-      'Maestría en Gestión Educativa. Más de 20 años de experiencia en pedagogía de escuelas privadas y responsable de la línea institucional que alimenta el criterio de AULA.',
+    tag: 'Gestión educativa',
+    bio: 'Maestría en Gestión Educativa. Más de 20 años de experiencia en pedagogía de escuelas privadas y responsable de la línea institucional que alimenta el criterio de AULA.',
+    tags: ['Gestión', 'Currículum', 'Criterio'],
+    gradient: 'linear-gradient(135deg, hsl(173 58% 34%) 0%, hsl(173 58% 55%) 100%)',
   },
+] as const;
+
+const principles = [
+  [
+    '01',
+    'La institución manda',
+    'No hay "mejores prácticas" genéricas que ganen contra el criterio institucional. Si hay tensión, se resuelve arriba, no por default técnico.',
+  ],
+  [
+    '02',
+    'El estándar sobrevive a las personas',
+    'Un sistema que sólo funciona cuando alguien está encima es un fracaso futuro. Diseñamos para que siga ordenado sin héroes.',
+  ],
+  [
+    '03',
+    'Producción antes que promesa',
+    'Todo lo que ofrecemos vive primero en nuestra propia operación. Lo que no aguantó AENA o IPUPY, no llega al cliente.',
+  ],
+  [
+    '04',
+    'Honestidad sobre alcance',
+    'Preferimos decir "esto no entra" antes que entregar un sistema que no se sostenga en 6 meses. El "sí" de ABN cuesta, y por eso aguanta.',
+  ],
 ] as const;
 
 export default function NosotrosPage() {
   return (
     <>
-      <section className="bg-background px-6 pb-16 pt-18 md:px-12 md:pb-20 md:pt-24">
-        <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-end">
-          <div className="max-w-md">
-            <p className="section-kicker mb-4 text-foreground/62">Nosotros</p>
-            <h1 className="font-display text-4xl font-semibold leading-[1.03] md:text-6xl">
-              Una dirección construida desde práctica institucional real.
-            </h1>
+      {/* ── Editorial hero ───────────────────────── */}
+      <section className="px-6 pt-10 pb-6 md:px-12 md:pt-14 md:pb-10">
+        <div className="mx-auto max-w-[1440px]">
+          <div className="mb-8 grid items-start gap-8 md:grid-cols-[80px_1fr]">
+            <span className="issue-marker">TEAM</span>
+            <span className="eyebrow">
+              <span className="dot" />
+              Quién sostiene el estándar
+            </span>
           </div>
-          <div className="grid gap-5 text-foreground/68 md:max-w-2xl md:grid-cols-2">
-            <p className="font-sans text-base leading-relaxed">
-              ABN nace de una convergencia poco común: experiencia corporativa internacional,
-              décadas de servicio misionero y educativo en Sudamérica, y una operación propia
-              lo suficientemente exigente como para obligarnos a diseñar sistemas serios.
-            </p>
-            <p className="font-sans text-base leading-relaxed">
-              No hablamos de estructura desde afuera. La usamos todos los días en escuela,
-              seminario y tesorería. Esa mezcla de criterio y práctica es la que sostiene la
-              oferta completa de ABN.
-            </p>
-          </div>
-        </div>
-      </section>
 
-      <section className="section-frame bg-background px-6 py-12 md:px-12 md:py-14">
-        <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-3">
-          <div className="proof-metric">
-            <p className="font-display text-4xl font-semibold tracking-tight text-foreground">AENA</p>
-            <p className="mt-3 font-sans text-sm leading-relaxed text-foreground/62">
-              gestión escolar y AULA en operación cotidiana.
+          <h1 className="editorial-display my-4 text-[clamp(2.5rem,11vw,10.75rem)] md:my-8">
+            Experiencia
+            <br />
+            corporativa,{' '}
+            <span className="serif-it">
+              formación
+              <br />
+              pedagógica
+            </span>
+            ,<br />
+            décadas juntas.
+          </h1>
+
+          <div className="rule-ink grid items-start gap-10 pt-8 md:grid-cols-2">
+            <p className="max-w-[32rem] font-display text-lg font-medium leading-snug tracking-tight text-foreground md:text-xl">
+              ABN es la reunión de trayectorias que, por separado, resuelven{' '}
+              <span className="serif-it">una pieza</span>. Juntas, sostienen un estándar.
             </p>
-          </div>
-          <div className="proof-metric">
-            <p className="font-display text-4xl font-semibold tracking-tight text-foreground">IBA</p>
-            <p className="mt-3 font-sans text-sm leading-relaxed text-foreground/62">
-              ERP académico y expansión regional bajo la misma lógica institucional.
-            </p>
-          </div>
-          <div className="proof-metric">
-            <p className="font-display text-4xl font-semibold tracking-tight text-foreground">IPUPY</p>
-            <p className="mt-3 font-sans text-sm leading-relaxed text-foreground/62">
-              tesorería multi-sede con trazabilidad y gobernanza financiera.
+            <p className="max-w-[30rem] text-[0.95rem] text-foreground/72">
+              No somos una consultora de slide deck. Cada sistema que entregamos vive primero en
+              nuestra propia operación — AENA, IPUPY, IBA — antes de llegar a una institución
+              cliente.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="bg-white px-6 py-18 md:px-12 md:py-24">
-        <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[0.34fr_0.66fr] md:gap-16">
-          <div>
-            <p className="section-kicker mb-4 text-foreground/62">Founder-led</p>
-            <p className="font-display text-3xl leading-tight md:text-4xl">Anthony Bir</p>
-            <p className="mt-3 font-sans text-sm font-medium text-foreground/62">
-              Cofundador & Socio Director
-            </p>
-          </div>
-
-          <div className="grid gap-8">
-            <div className="grid gap-6 md:grid-cols-[auto_1fr] md:items-start">
-              <div className="team-avatar flex h-20 w-20 items-center justify-center rounded-2xl bg-background text-foreground md:h-24 md:w-24">
-                <span className="font-sans text-2xl font-semibold md:text-3xl">AB</span>
-              </div>
-              <div>
-                <h2 className="font-display text-4xl font-semibold leading-none md:text-5xl">
-                  Dirección con experiencia corporativa y ejecución institucional propia.
-                </h2>
-                <p className="mt-5 font-sans text-base leading-relaxed text-foreground/68">
-                  Anthony Bir aporta experiencia en ventas de exportación en Heinz, ventas
-                  de proyectos e implementación SAP en Kontron AG, y liderazgo de proyectos
-                  internacionales en Thermo Fisher Scientific, incluyendo contribuciones al
-                  proyecto KAUST en Jeddah, Arabia Saudita.
-                </p>
-                <p className="mt-4 font-sans text-base leading-relaxed text-foreground/68">
-                  En ABN, esa trayectoria se traduce en arquitectura institucional: es el
-                  responsable detrás de AENA Admin e IPUPY, plataformas que no solo se
-                  presentan al mercado, sino que sostienen la operación real de la agencia
-                  y su ecosistema.
-                </p>
-              </div>
-            </div>
-
-            <div className="pt-3">
-              <p className="font-mono text-[0.72rem] uppercase tracking-[0.22em] text-foreground/62">
-                Por qué importa
-              </p>
-              <p className="mt-3 max-w-3xl font-sans text-sm leading-relaxed text-foreground/62">
-                La propuesta de ABN está dirigida por personas que combinan gobierno institucional,
-                disciplina operativa y práctica diaria sobre los mismos sistemas que ofrecen.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-background px-6 py-18 md:px-12 md:py-22">
-        <div className="mx-auto max-w-7xl">
-          <div className="max-w-2xl">
-            <p className="section-kicker mb-4 text-foreground/62">Junta directiva</p>
-            <h2 className="font-display text-4xl font-semibold leading-[1.05] md:text-5xl">
-              Liderazgo complementario, no perfiles intercambiables.
-            </h2>
-          </div>
-
-          <div className="mt-12 grid gap-10">
-            {leaders.map((leader) => (
-              <article
-                key={leader.name}
-                className="grid gap-6 md:grid-cols-[120px_280px_1fr] md:gap-8"
+      {/* ── Directors ────────────────────────────── */}
+      <section aria-label="Equipo directivo" className="mt-20 px-6 py-20 md:px-12 md:py-24">
+        <div className="mx-auto max-w-[1440px]">
+          <h2 className="eyebrow mb-12 inline-flex">
+            <span className="dot" />
+            Dirección
+          </h2>
+          <div className="grid gap-8 md:grid-cols-2">
+            {directors.map((p) => (
+              <div
+                key={p.name}
+                className="rounded-2xl border border-[hsl(20_12%_10%/0.1)] bg-white p-8"
               >
-                <div className="team-avatar flex h-16 w-16 items-center justify-center rounded-2xl bg-white text-foreground md:h-18 md:w-18">
-                  <span className="font-sans text-xl font-semibold">{leader.initials}</span>
+                <div
+                  className="relative mb-6 overflow-hidden rounded-xl"
+                  style={{ aspectRatio: '1 / 1', background: p.gradient }}
+                >
+                  <div
+                    className="pointer-events-none absolute inset-0"
+                    style={{
+                      backgroundImage:
+                        'radial-gradient(400px 200px at 30% 20%, rgba(255,255,255,0.22), transparent)',
+                    }}
+                  />
+                  <span
+                    className="absolute font-display font-bold"
+                    style={{
+                      bottom: 20,
+                      left: 24,
+                      fontSize: 148,
+                      color: 'rgba(255,255,255,0.22)',
+                      letterSpacing: '-0.05em',
+                      lineHeight: 0.8,
+                    }}
+                  >
+                    {p.initials}
+                  </span>
+                  <span className="pill pill--on-dark" style={{ position: 'absolute', top: 18, left: 20 }}>
+                    <span className="dot" />
+                    Foto en próxima versión
+                  </span>
                 </div>
-                <div>
-                  <p className="font-mono text-[0.72rem] uppercase tracking-[0.22em] text-foreground/62">
-                    {leader.role}
-                  </p>
-                  <h3 className="mt-2 font-display text-3xl leading-none">{leader.name}</h3>
+                <div className="font-mono text-[0.7rem] uppercase tracking-[0.14em] text-[color:var(--accent-dark)]">
+                  {p.tag}
                 </div>
-                <p className="max-w-3xl font-sans text-sm leading-relaxed text-foreground/64">
-                  {leader.copy}
-                </p>
-              </article>
+                <h3 className="editorial-display mt-3 mb-2 text-3xl md:text-4xl">{p.name}</h3>
+                <p className="mb-5 text-sm font-medium text-foreground/66">{p.role}</p>
+                <p className="mb-6 text-[0.95rem] leading-relaxed text-foreground/72">{p.bio}</p>
+                <div className="flex flex-wrap gap-1.5">
+                  {p.tags.map((t) => (
+                    <span
+                      key={t}
+                      className="rounded-full border border-[hsl(20_12%_10%/0.1)] px-2.5 py-1 font-mono text-[0.65rem] uppercase tracking-[0.1em] text-foreground/55"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Principles (dark panel) ──────────────── */}
+      <section className="dark-section px-6 py-24 md:px-12 md:py-32">
+        <div className="mx-auto max-w-[1440px]">
+          <span className="eyebrow eyebrow--on-dark mb-6 inline-flex">
+            <span className="dot" />
+            Principios
+          </span>
+          <h2 className="editorial-display mb-16 max-w-[72rem] text-background text-[clamp(2.5rem,6vw,5.75rem)]">
+            Cómo decide ABN
+            <br />
+            cuando{' '}
+            <span className="serif-it" style={{ color: 'var(--signal)' }}>
+              nadie está mirando.
+            </span>
+          </h2>
+          <div className="grid md:grid-cols-2">
+            {principles.map(([n, t, d], i) => (
+              <div
+                key={n}
+                className="p-8 md:p-10"
+                style={{
+                  borderTop: '1px solid hsl(0 0% 100% / 0.18)',
+                  borderRight: i % 2 === 0 ? '1px solid hsl(0 0% 100% / 0.18)' : undefined,
+                }}
+              >
+                <span
+                  className="font-display text-4xl font-semibold tracking-tight md:text-5xl"
+                  style={{ color: 'var(--signal)' }}
+                >
+                  {n}
+                </span>
+                <h3 className="editorial-display mt-3 mb-3 text-2xl text-background md:text-[1.75rem]">
+                  {t}
+                </h3>
+                <p className="text-sm leading-relaxed text-background/72">{d}</p>
+              </div>
             ))}
           </div>
         </div>

@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import CTABanner from '../CTABanner';
 
 export const metadata: Metadata = {
@@ -8,13 +7,13 @@ export const metadata: Metadata = {
     'Plataforma AULA: motor de IA con contexto institucional. Consultoría en transformación para colegios, seminarios e instituciones en Latinoamérica.',
 };
 
-const operatingModes = [
+const modes = [
   {
-    number: '01',
-    title: 'Diagnóstico institucional',
-    subtitle: 'Cuando el problema todavía no está bien definido',
-    copy:
-      'Auditamos operación, criterio y puntos de fricción para establecer qué necesita orden, qué necesita sistema y qué conviene dejar para después.',
+    k: '01',
+    t: 'Diagnóstico institucional',
+    sub: 'Cuando el problema todavía no está bien definido',
+    p: '2–4 semanas',
+    d: 'Auditamos operación, criterio y puntos de fricción para establecer qué necesita orden, qué necesita sistema y qué conviene dejar para después.',
     bullets: [
       'Diagnóstico operativo y pedagógico',
       'Priorización de riesgos y cuellos de botella',
@@ -22,11 +21,11 @@ const operatingModes = [
     ],
   },
   {
-    number: '02',
-    title: 'Implementación por frente',
-    subtitle: 'Cuando ya hay una prioridad clara',
-    copy:
-      'Entramos sobre un frente concreto, con alcance definido, entregables claros y una lógica de implementación que no rompa la operación diaria.',
+    k: '02',
+    t: 'Implementación por frente',
+    sub: 'Cuando ya hay una prioridad clara',
+    p: '3–6 meses',
+    d: 'Entramos sobre un frente concreto, con alcance definido, entregables claros y una lógica de implementación que no rompa la operación diaria.',
     bullets: [
       'Proyecto por área o por problema',
       'Sistema, criterio y capacitación en el mismo frente',
@@ -34,11 +33,11 @@ const operatingModes = [
     ],
   },
   {
-    number: '03',
-    title: 'Acompañamiento integral',
-    subtitle: 'Cuando varias áreas necesitan avanzar juntas',
-    copy:
-      'Coordinamos educación, tecnología y desarrollo institucional bajo una misma dirección para evitar proveedores sueltos y decisiones contradictorias.',
+    k: '03',
+    t: 'Acompañamiento integral',
+    sub: 'Cuando varias áreas necesitan avanzar juntas',
+    p: 'Continuo',
+    d: 'Coordinamos educación, tecnología y desarrollo institucional bajo una misma dirección para evitar proveedores sueltos y decisiones contradictorias.',
     bullets: [
       'Dirección transversal del proyecto',
       'Ajuste continuo según operación real',
@@ -47,120 +46,180 @@ const operatingModes = [
   },
 ] as const;
 
+const context = [
+  {
+    t: 'Marco pedagógico',
+    d: 'Filosofía, límites, estructura de clase y criterios no negociables.',
+  },
+  {
+    t: 'Pack curricular',
+    d: 'Contenidos, capacidades, estándares de grado y adaptación local.',
+  },
+  {
+    t: 'Operación docente',
+    d: 'Entregables, revisión, comunicación y uso real dentro del equipo.',
+  },
+] as const;
+
+const notForUs = [
+  'Instituciones que quieren sólo una licencia de software, sin conversar del criterio detrás.',
+  'Organizaciones que buscan que la agencia decida qué enseñar, cómo gobernar y qué priorizar.',
+  'Proyectos que esperan una integración "llave en mano" sin involucrar a la dirección.',
+] as const;
+
 export default function ServiciosPage() {
   return (
     <>
-      <section className="dark-section px-6 py-18 md:px-12 md:py-24">
-        <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.88fr_1.12fr] md:items-end">
-          <div className="fade-in max-w-xl">
-            <p className="section-kicker mb-4 text-background/56">Servicios ABN</p>
-            <h1 className="font-display text-4xl font-semibold leading-[1.02] md:text-6xl">
-              Intervenimos donde la institución necesita criterio, no solo software.
-            </h1>
-            <p className="mt-6 font-sans text-base leading-relaxed text-background/70 md:text-lg">
-              ABN no vende una caja cerrada. Entra para leer la institución, construir
-              estándar operativo y traducirlo en sistemas que sigan sirviendo cuando cambie
-              el equipo o la herramienta.
-            </p>
-            <p className="mt-4 max-w-md font-sans text-sm leading-relaxed text-background/56">
-              AULA es uno de esos sistemas. El servicio es el método completo que permite
-              que plataformas, procesos y personas trabajen bajo el mismo marco.
-            </p>
+      {/* ── Editorial hero ───────────────────────── */}
+      <section className="px-6 pt-10 pb-6 md:px-12 md:pt-14 md:pb-10">
+        <div className="mx-auto max-w-[1440px]">
+          <div className="mb-8 grid items-start gap-8 md:grid-cols-[80px_1fr]">
+            <span className="issue-marker">SERVICES</span>
+            <span className="eyebrow">
+              <span className="dot" />
+              Cómo trabajamos
+            </span>
           </div>
 
-          <div className="scroll-reveal-right">
-            <div className="editorial-media">
-              <div className="browser-chrome">
-                <div className="dot" />
-                <div className="dot" />
-                <div className="dot" />
-              </div>
-              <Image
-                src="/screenshots/editorial-aena.png"
-                alt="AULA editorial planning surface"
-                width={2814}
-                height={1808}
-                className="h-auto w-full"
-                sizes="(max-width: 768px) 100vw, 56vw"
-              />
-            </div>
+          <h1 className="editorial-display my-4 text-[clamp(2.5rem,11vw,10.75rem)] md:my-8">
+            Diagnóstico,
+            <br />
+            implementación,
+            <br />
+            <span className="serif-it">acompañamiento.</span>
+          </h1>
+
+          <div className="rule-ink grid items-start gap-10 pt-8 md:grid-cols-2">
+            <p className="max-w-[32rem] font-display text-lg font-medium leading-snug tracking-tight text-foreground md:text-xl">
+              Tres modos que funcionan como un solo sistema.{' '}
+              <span className="serif-it">Sin fragmentar</span> criterio ni ejecución.
+            </p>
+            <p className="max-w-[30rem] text-[0.95rem] text-foreground/72">
+              ABN no reparte responsabilidades entre integradores, consultores y &ldquo;el que
+              maneja el Excel&rdquo;. Entramos completos, salimos completos.
+            </p>
           </div>
         </div>
       </section>
 
-      <section className="section-frame bg-background px-6 py-18 md:px-12 md:py-22">
-        <div className="mx-auto max-w-7xl">
-          <div className="max-w-2xl">
-            <p className="section-kicker mb-4 text-foreground/62">Modos de trabajo</p>
-            <h2 className="font-display text-4xl font-semibold leading-[1.06] md:text-5xl">
-              Tres formas de entrar. Una sola lógica de ejecución.
-            </h2>
-            <p className="mt-5 font-sans text-base leading-relaxed text-foreground/66">
-              La diferencia no está en un paquete comercial. Está en cuánto criterio hay
-              que construir, cuánta coordinación hace falta y qué tan cerca necesita estar
-              ABN del proceso.
+      {/* ── Services magazine grid ───────────────── */}
+      <section aria-label="Modos de trabajo" className="mt-16 px-6 py-10 md:px-12 md:py-16">
+        <div className="mx-auto max-w-[1440px]">
+          {modes.map((s, i) => (
+            <div
+              key={s.k}
+              className="grid items-start gap-8 py-10 md:grid-cols-[80px_minmax(0,1.2fr)_minmax(0,1.2fr)_minmax(0,0.9fr)] md:gap-12 md:py-12"
+              style={{
+                borderTop: i === 0 ? '2px solid var(--foreground)' : '1px solid hsl(20 12% 10% / 0.1)',
+              }}
+            >
+              <span
+                className="font-display text-4xl font-semibold tracking-tight md:text-5xl"
+                style={{ color: 'var(--accent-dark)' }}
+              >
+                {s.k}
+              </span>
+              <div>
+                <h3 className="editorial-display mb-4 text-3xl md:text-[2.25rem]">{s.t}</h3>
+                <p className="mb-4 text-sm font-medium text-foreground/72">{s.sub}</p>
+                <span className="pill">
+                  <span className="dot" />
+                  {s.p}
+                </span>
+              </div>
+              <p className="text-[0.95rem] leading-relaxed text-foreground/72">{s.d}</p>
+              <ul className="m-0 list-none p-0">
+                {s.bullets.map((b, j) => (
+                  <li
+                    key={b}
+                    className="flex gap-2 py-1.5 text-[0.85rem] text-foreground/66"
+                    style={{
+                      borderTop:
+                        j === 0
+                          ? '1px solid hsl(20 12% 10% / 0.1)'
+                          : '1px solid hsl(20 12% 10% / 0.06)',
+                      paddingTop: '0.5rem',
+                      paddingBottom: '0.5rem',
+                    }}
+                  >
+                    <span style={{ color: 'var(--accent-dark)' }}>→</span>
+                    {b}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+          <div style={{ borderTop: '1px solid hsl(20 12% 10% / 0.1)' }} />
+        </div>
+      </section>
+
+      {/* ── Dónde se ve el método (AULA as product) ─ */}
+      <section className="bg-gray-100 border-y border-[hsl(20_12%_10%/0.1)] px-6 py-24 md:px-12 md:py-28">
+        <div className="mx-auto max-w-[1440px]">
+          <div className="mb-16 grid items-start gap-10 md:grid-cols-[0.85fr_1.15fr] md:gap-16">
+            <div>
+              <span className="eyebrow">
+                <span className="dot" />
+                Dónde se ve el método
+              </span>
+              <h2 className="editorial-display mt-6 text-[clamp(2.5rem,5vw,4.75rem)]">
+                AULA es producto.
+                <br />
+                <span className="serif-it">El servicio</span> es lo que lo hace valioso.
+              </h2>
+            </div>
+            <p className="max-w-[38rem] text-base leading-relaxed text-foreground/72 md:text-lg">
+              Sin contexto institucional, un motor de IA es commodity. Con criterio pedagógico,
+              currículo, evaluación y lenguaje propios, empieza a comportarse como una extensión
+              de la institución.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-10 md:grid-cols-3">
-            {operatingModes.map((mode) => (
-              <section key={mode.number} className="scroll-reveal">
-                <p className="font-mono text-sm uppercase tracking-[0.22em] text-foreground/62">
-                  {mode.number}
-                </p>
-                <h3 className="mt-4 font-display text-3xl leading-tight">{mode.title}</h3>
-                <p className="mt-2 font-sans text-sm font-medium text-foreground/62">
-                  {mode.subtitle}
-                </p>
-                <p className="mt-5 font-sans text-sm leading-relaxed text-foreground/64">
-                  {mode.copy}
-                </p>
-                <ul className="mt-6 space-y-3 pt-1">
-                  {mode.bullets.map((bullet) => (
-                    <li key={bullet} className="font-sans text-sm leading-relaxed text-foreground/62">
-                      {bullet}
-                    </li>
-                  ))}
-                </ul>
-              </section>
+          <div className="grid gap-8 md:grid-cols-3 md:gap-10">
+            {context.map((c, i) => (
+              <div
+                key={c.t}
+                className="pt-6"
+                style={{
+                  borderTop: '2px solid var(--foreground)',
+                }}
+              >
+                <div className="mb-3 font-mono text-[0.7rem] uppercase tracking-[0.14em] text-foreground/55">
+                  {String(i + 1).padStart(2, '0')}
+                </div>
+                <h3 className="editorial-display mb-3 text-2xl md:text-[1.75rem]">{c.t}</h3>
+                <p className="text-sm leading-relaxed text-foreground/66">{c.d}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-white px-6 py-20 md:px-12 md:py-24">
-        <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.82fr_1.18fr] md:items-start">
-          <div className="max-w-md">
-            <p className="section-kicker mb-4 text-foreground/62">Dónde se ve el método</p>
-            <h2 className="font-display text-4xl font-semibold leading-[1.06] md:text-5xl">
-              AULA es producto. El servicio es el contexto que lo hace valioso.
-            </h2>
-            <p className="mt-5 font-sans text-base leading-relaxed text-foreground/66">
-              Sin contexto institucional, un motor de IA es commodity. Con criterio
-              pedagógico, currículo, evaluación y lenguaje propios, empieza a comportarse
-              como una extensión de la institución.
-            </p>
-          </div>
-
+      {/* ── No somos para todos ──────────────────── */}
+      <section className="px-6 py-24 md:px-12 md:py-32">
+        <div className="mx-auto max-w-[1440px]">
+          <span className="eyebrow mb-6 inline-flex">
+            <span className="dot" />
+            No somos para todos
+          </span>
+          <h2 className="mb-16 max-w-[60rem] editorial-display text-[clamp(2.25rem,5vw,4.75rem)]">
+            ABN <span className="serif-it">no es</span> para instituciones que:
+          </h2>
           <div className="grid gap-6 md:grid-cols-3">
-            <div>
-              <p className="font-display text-2xl">Marco pedagógico</p>
-              <p className="mt-3 font-sans text-sm leading-relaxed text-foreground/62">
-                Filosofía, límites, estructura de clase y criterios no negociables.
-              </p>
-            </div>
-            <div>
-              <p className="font-display text-2xl">Pack curricular</p>
-              <p className="mt-3 font-sans text-sm leading-relaxed text-foreground/62">
-                Contenidos, capacidades, estándares de grado y adaptación local.
-              </p>
-            </div>
-            <div>
-              <p className="font-display text-2xl">Operación docente</p>
-              <p className="mt-3 font-sans text-sm leading-relaxed text-foreground/62">
-                Entregables, revisión, comunicación y uso real dentro del equipo.
-              </p>
-            </div>
+            {notForUs.map((l, i) => (
+              <div
+                key={i}
+                className="rounded-2xl border border-[hsl(20_12%_10%/0.1)] bg-white p-7"
+              >
+                <span
+                  className="font-display text-3xl font-semibold tracking-tight"
+                  style={{ color: 'var(--gray-400)' }}
+                >
+                  —
+                </span>
+                <p className="mt-3 text-[0.95rem] leading-relaxed text-foreground/72">{l}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
