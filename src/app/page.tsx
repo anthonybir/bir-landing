@@ -123,10 +123,8 @@ export default function ABNLanding() {
           <div className="rule-ink grid items-start gap-6 pt-8 md:grid-cols-[80px_1fr_1fr] md:gap-10">
             <span className="issue-marker">LEAD</span>
             <p className="max-w-[32rem] font-display text-lg font-medium leading-snug tracking-tight text-foreground md:text-xl">
-              ABN diseña{' '}
-              <span className="serif-it">sistemas para colegios, seminarios e instituciones</span>{' '}
-              que necesitan criterio estable, operación clara y tecnología obedeciendo a su
-              estándar.
+              ABN diseña sistemas para colegios, seminarios e instituciones que necesitan criterio
+              estable, operación clara y tecnología obedeciendo a su estándar.
             </p>
             <div className="flex flex-col items-start gap-4">
               <div className="flex flex-wrap gap-2.5">
@@ -134,7 +132,7 @@ export default function ABNLanding() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-[color:var(--signal)] px-5 py-3 font-sans text-sm font-semibold text-foreground transition hover:-translate-y-px hover:bg-[color:var(--signal-light)]"
+                  className="inline-flex items-center gap-2 rounded-full bg-signal px-5 py-3 font-sans text-sm font-semibold text-foreground transition hover:-translate-y-px hover:bg-signal-light"
                 >
                   <WhatsAppIcon />
                   Escribinos por WhatsApp
@@ -152,10 +150,6 @@ export default function ABNLanding() {
             </div>
           </div>
         </div>
-
-        <div className="mx-auto mt-16 max-w-[1440px] md:mt-20">
-          <AulaScreenMock big />
-        </div>
       </section>
 
       {/* ── Stats band ───────────────────────────── */}
@@ -169,8 +163,8 @@ export default function ABNLanding() {
             <span className="eyebrow">Al cierre de marzo 2026</span>
           </div>
           <h2 className="mb-16 max-w-[52rem] font-display text-[clamp(1.5rem,3vw,2.125rem)] font-medium leading-tight tracking-tight">
-            Sistemas reales, operados por la misma agencia que los diseña.{' '}
-            <span className="serif-it">Nada de demo. Nada de prototipo indefinido.</span>
+            Sistemas reales, operados por la misma agencia que los diseña. Nada de demo, nada de
+            prototipo indefinido.
           </h2>
           <div className="grid gap-6 md:grid-cols-4">
             {stats.map((s) => (
@@ -193,8 +187,7 @@ export default function ABNLanding() {
                 Flagship proof · AULA
               </span>
               <h2 className="editorial-display mt-6 mb-6 text-[clamp(2.75rem,5vw,5.25rem)]">
-                El motor importa menos que el <span className="serif-it">contexto</span> que lo
-                gobierna.
+                El motor importa menos que el contexto que lo gobierna.
               </h2>
               <p className="mb-4 max-w-[32rem] text-lg text-foreground/72">
                 AULA es la demostración más clara del método ABN: una plataforma que genera
@@ -280,7 +273,7 @@ export default function ABNLanding() {
               <h2 className="editorial-display mt-4 text-[clamp(2.75rem,6vw,5.75rem)]">
                 Tres instituciones.
                 <br />
-                <span className="serif-it">Un mismo criterio.</span>
+                Un mismo criterio.
               </h2>
             </div>
             <Link
@@ -328,7 +321,7 @@ export default function ABNLanding() {
           <div className="editorial-display text-[clamp(3rem,8vw,8rem)]">
             {manifesto.map(([label, phrase], i) => (
               <div key={i} className="manifesto-row">
-                <span className="font-medium text-foreground/48">{label}</span>
+                <span className="font-medium text-foreground/56">{label}</span>
                 <span>{phrase}</span>
               </div>
             ))}
@@ -346,8 +339,7 @@ export default function ABNLanding() {
                 Contacto directo
               </span>
               <h2 className="editorial-display mt-4 mb-6 text-[clamp(2.5rem,5vw,4.5rem)]">
-                Si Excel, WhatsApp y decisiones improvisadas{' '}
-                <span className="serif-it">no alcanzan</span>, conversemos.
+                Si Excel, WhatsApp y decisiones improvisadas no alcanzan, conversemos.
               </h2>
               <p className="max-w-[32rem] text-lg text-foreground/72">
                 ABN entra donde hace falta criterio, estructura y un sistema que siga funcionando
@@ -374,7 +366,7 @@ export default function ABNLanding() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-[color:var(--signal)] px-5 py-3 font-sans text-sm font-semibold text-foreground transition hover:-translate-y-px hover:bg-[color:var(--signal-light)]"
+                  className="inline-flex items-center gap-2 rounded-full bg-signal px-5 py-3 font-sans text-sm font-semibold text-foreground transition hover:-translate-y-px hover:bg-signal-light"
                 >
                   WhatsApp
                   <ArrowUR />
@@ -396,9 +388,12 @@ export default function ABNLanding() {
       <section id="contacto" className="bg-white px-6 py-20 md:px-12 md:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[0.85fr_1.15fr] md:gap-20">
           <div className="max-w-lg">
-            <p className="section-kicker mb-4 text-foreground/62">Contacto</p>
+            <span className="eyebrow mb-4 inline-flex">
+              <span className="dot" />
+              Contacto
+            </span>
             <h2 className="line-accent font-display text-4xl font-semibold leading-tight md:text-5xl">
-              Conversemos sobre tu <span className="serif-it">institución.</span>
+              Conversemos sobre tu institución.
             </h2>
             <p className="mt-6 text-base leading-relaxed text-foreground/68">
               Cada proyecto empieza con una conversación honesta sobre operación, criterio y

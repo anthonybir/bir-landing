@@ -91,8 +91,7 @@ export default function ServiciosPage() {
 
           <div className="rule-ink grid items-start gap-10 pt-8 md:grid-cols-2">
             <p className="max-w-[32rem] font-display text-lg font-medium leading-snug tracking-tight text-foreground md:text-xl">
-              Tres modos que funcionan como un solo sistema.{' '}
-              <span className="serif-it">Sin fragmentar</span> criterio ni ejecución.
+              Tres modos que funcionan como un solo sistema. Sin fragmentar criterio ni ejecución.
             </p>
             <p className="max-w-[30rem] text-[0.95rem] text-foreground/72">
               ABN no reparte responsabilidades entre integradores, consultores y &ldquo;el que
@@ -203,7 +202,7 @@ export default function ServiciosPage() {
             No somos para todos
           </span>
           <h2 className="mb-16 max-w-[60rem] editorial-display text-[clamp(2.25rem,5vw,4.75rem)]">
-            ABN <span className="serif-it">no es</span> para instituciones que:
+            ABN no es para instituciones que:
           </h2>
           <div className="grid gap-6 md:grid-cols-3">
             {notForUs.map((l, i) => (

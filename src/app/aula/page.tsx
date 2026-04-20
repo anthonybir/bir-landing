@@ -64,9 +64,8 @@ export default function AulaPage() {
           <div className="rule-ink grid items-start gap-6 pt-8 md:grid-cols-[80px_1fr_1fr] md:gap-10">
             <span className="issue-marker">LEAD</span>
             <p className="max-w-[32rem] font-display text-lg font-medium leading-snug tracking-tight text-foreground md:text-xl">
-              AULA no es &ldquo;IA para colegios&rdquo;. Es el{' '}
-              <span className="serif-it">sistema de gestión</span> donde el criterio pedagógico se
-              codifica, se audita y se ejecuta sin improvisación individual.
+              AULA no es &ldquo;IA para colegios&rdquo;. Es el sistema de gestión donde el criterio
+              pedagógico se codifica, se audita y se ejecuta sin improvisación individual.
             </p>
             <div className="flex flex-col items-start gap-4">
               <p className="max-w-[26rem] text-sm text-foreground/72">
@@ -100,8 +99,7 @@ export default function AulaPage() {
             <span className="eyebrow">En una institución real</span>
           </div>
           <h2 className="mb-16 max-w-[56rem] editorial-display text-[clamp(2.25rem,5vw,4.5rem)]">
-            Cómo funciona AULA dentro de una{' '}
-            <span className="serif-it">institución ya ordenada.</span>
+            Cómo funciona AULA dentro de una institución ya ordenada.
           </h2>
           <div className="grid gap-8 md:grid-cols-3">
             {formula.map((s) => (
@@ -152,9 +150,7 @@ export default function AulaPage() {
               <h2 className="editorial-display mt-6 text-background text-[clamp(2.5rem,6vw,5.5rem)]">
                 Dos contextos.
                 <br />
-                <span className="serif-it" style={{ color: 'var(--signal)' }}>
-                  Un mismo principio.
-                </span>
+                Un mismo principio.
               </h2>
             </div>
             <p className="max-w-[32rem] text-base leading-relaxed text-background/72 md:text-lg">
@@ -169,10 +165,7 @@ export default function AulaPage() {
                 Seminarios teológicos
               </div>
               <h3 className="editorial-display mb-4 text-2xl text-background md:text-3xl">
-                <span className="serif-it" style={{ color: 'var(--signal)' }}>
-                  Sílabos
-                </span>{' '}
-                y planificación bajo marco institucional.
+                Sílabos y planificación bajo marco institucional.
               </h3>
               <p className="mb-6 text-[0.95rem] leading-relaxed text-background/72">
                 Sílabos teológicos, planificación de cursos, transcriptos, asistencia y
@@ -187,11 +180,7 @@ export default function AulaPage() {
                 Colegios K-12
               </div>
               <h3 className="editorial-display mb-4 text-2xl text-background md:text-3xl">
-                Planificación y materiales{' '}
-                <span className="serif-it" style={{ color: 'var(--signal)' }}>
-                  alineados
-                </span>{' '}
-                al programa.
+                Planificación y materiales alineados al programa.
               </h3>
               <p className="mb-6 text-[0.95rem] leading-relaxed text-background/72">
                 Planificaciones, materiales, evaluaciones y comunicación alineadas al programa, al
@@ -213,8 +202,7 @@ export default function AulaPage() {
             Resultado
           </span>
           <h2 className="mb-16 max-w-[56rem] editorial-display text-[clamp(2.25rem,5vw,4.5rem)]">
-            Probado en producción{' '}
-            <span className="serif-it">antes</span> de llegar a cualquier demo.
+            Probado en producción antes de llegar a cualquier demo.
           </h2>
           <div className="grid gap-6 md:grid-cols-4">
             {proof.map((p) => (
@@ -256,7 +244,7 @@ export default function AulaPage() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-[color:var(--signal)] px-5 py-3 font-sans text-sm font-semibold text-foreground transition hover:-translate-y-px hover:bg-[color:var(--signal-light)]"
+                  className="inline-flex items-center gap-2 rounded-full bg-signal px-5 py-3 font-sans text-sm font-semibold text-foreground transition hover:-translate-y-px hover:bg-signal-light"
                 >
                   WhatsApp
                   <ArrowUR />

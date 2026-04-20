@@ -18,10 +18,9 @@ export default function CTABanner() {
               <span className="serif-it">Escalar después.</span>
             </h2>
             <p className="mt-8 max-w-[36rem] text-base leading-relaxed text-foreground/72 md:text-lg">
-              Si ya sabés que Excel, WhatsApp y decisiones improvisadas{' '}
-              <span className="serif-it">no alcanzan</span>, conversemos. ABN entra donde hace
-              falta criterio, estructura y un sistema que siga funcionando cuando el entusiasmo
-              inicial se vaya.
+              Si ya sabés que Excel, WhatsApp y decisiones improvisadas no alcanzan, conversemos.
+              ABN entra donde hace falta criterio, estructura y un sistema que siga funcionando
+              cuando el entusiasmo inicial se vaya.
             </p>
           </div>
           <div className="flex flex-col gap-3">
@@ -30,7 +29,7 @@ export default function CTABanner() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-[color:var(--signal)] px-5 py-3.5 font-sans text-sm font-semibold text-foreground transition hover:-translate-y-px hover:bg-[color:var(--signal-light)]"
+              className="inline-flex items-center gap-2 rounded-full bg-signal px-5 py-3.5 font-sans text-sm font-semibold text-foreground transition hover:-translate-y-px hover:bg-signal-light"
             >
               <WhatsAppIcon />
               Escribinos por WhatsApp

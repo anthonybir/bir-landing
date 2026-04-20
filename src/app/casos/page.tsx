@@ -49,9 +49,8 @@ export default function CasosPage() {
 
           <div className="rule-ink grid items-start gap-10 pt-8 md:grid-cols-2">
             <p className="max-w-[32rem] font-display text-lg font-medium leading-snug tracking-tight text-foreground md:text-xl">
-              Esta página no muestra demos aspiracionales.{' '}
-              <span className="serif-it">Muestra plataformas</span> que ABN diseña para su propia
-              operación y para organizaciones con exigencias reales.
+              Esta página no muestra demos aspiracionales. Muestra plataformas que ABN diseña para
+              su propia operación y para organizaciones con exigencias reales.
             </p>
             <p className="max-w-[30rem] text-[0.95rem] text-foreground/72">
               Tres frentes distintos — escolar, teológico y financiero — que comparten la misma
@@ -111,7 +110,7 @@ export default function CasosPage() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-[color:var(--signal)] px-5 py-3 font-sans text-sm font-semibold text-foreground transition hover:-translate-y-px hover:bg-[color:var(--signal-light)]"
+                  className="inline-flex items-center gap-2 rounded-full bg-signal px-5 py-3 font-sans text-sm font-semibold text-foreground transition hover:-translate-y-px hover:bg-signal-light"
                 >
                   WhatsApp
                   <ArrowUR />

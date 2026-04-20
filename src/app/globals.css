@@ -36,6 +36,9 @@
   --signal: #E9B031;
   --signal-light: #F4C960;
 
+  /* Brand fixed colors */
+  --whatsapp: #25d366;
+
   /* Ma spatial tokens */
   --ma-iki: 0.5rem;
   --ma-yohaku: 3rem;
@@ -156,74 +159,6 @@ body {
 .dark-section > * {
   position: relative;
   z-index: 1;
-}
-
-.hero-word {
-  display: inline-block;
-  margin-right: 0.22em;
-  opacity: 0;
-  animation: fadeInUp var(--duration-settle) var(--ease-settle) forwards;
-}
-
-.hero-word:last-child {
-  margin-right: 0;
-}
-
-.hero-word:nth-child(1) {
-  animation-delay: 100ms;
-}
-
-.hero-word:nth-child(2) {
-  animation-delay: 150ms;
-}
-
-.hero-word:nth-child(3) {
-  animation-delay: 200ms;
-}
-
-.hero-word:nth-child(4) {
-  animation-delay: 250ms;
-}
-
-.hero-word:nth-child(5) {
-  animation-delay: 300ms;
-}
-
-.fade-in > * {
-  opacity: 0;
-  animation: fadeInUp var(--duration-settle) var(--ease-settle) forwards;
-}
-
-.fade-in > *:nth-child(1) {
-  animation-delay: 100ms;
-}
-
-.fade-in > *:nth-child(2) {
-  animation-delay: 150ms;
-}
-
-.fade-in > *:nth-child(3) {
-  animation-delay: 200ms;
-}
-
-.fade-in > *:nth-child(4) {
-  animation-delay: 250ms;
-}
-
-.fade-in > *:nth-child(5) {
-  animation-delay: 300ms;
-}
-
-.fade-in > *:nth-child(6) {
-  animation-delay: 350ms;
-}
-
-.section-kicker {
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
 }
 
 .section-frame {
@@ -418,14 +353,14 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  background: #25d366;
-  box-shadow: var(--shadow-md), 0 0 0 0 rgba(37, 211, 102, 0);
+  background: var(--whatsapp);
+  box-shadow: var(--shadow-md), 0 0 0 0 hsl(142 70% 49% / 0);
   transition: var(--transition-lift);
 }
 
 .whatsapp-float:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-lg), 0 4px 12px rgba(37, 211, 102, 0.2);
+  box-shadow: var(--shadow-lg), 0 4px 12px hsl(142 70% 49% / 0.2);
 }
 
 @supports (animation-timeline: view()) {
@@ -716,8 +651,16 @@ body {
   transition: background var(--duration-fast) var(--ease-out);
 }
 
+.case-row svg {
+  transition: transform var(--duration-fast) var(--ease-settle);
+}
+
 .case-row:hover {
   background: hsl(20 12% 10% / 0.03);
+}
+
+.case-row:hover svg {
+  transform: translate(3px, -3px);
 }
 
 .case-row:last-of-type {

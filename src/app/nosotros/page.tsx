@@ -98,8 +98,8 @@ export default function NosotrosPage() {
 
           <div className="rule-ink grid items-start gap-10 pt-8 md:grid-cols-2">
             <p className="max-w-[32rem] font-display text-lg font-medium leading-snug tracking-tight text-foreground md:text-xl">
-              ABN es la reunión de trayectorias que, por separado, resuelven{' '}
-              <span className="serif-it">una pieza</span>. Juntas, sostienen un estándar.
+              ABN es la reunión de trayectorias que, por separado, resuelven una pieza. Juntas,
+              sostienen un estándar.
             </p>
             <p className="max-w-[30rem] text-[0.95rem] text-foreground/72">
               No somos una consultora de slide deck. Cada sistema que entregamos vive primero en
@@ -146,10 +146,6 @@ export default function NosotrosPage() {
                     }}
                   >
                     {p.initials}
-                  </span>
-                  <span className="pill pill--on-dark" style={{ position: 'absolute', top: 18, left: 20 }}>
-                    <span className="dot" />
-                    Foto en próxima versión
                   </span>
                 </div>
                 <div className="font-mono text-[0.7rem] uppercase tracking-[0.14em] text-[color:var(--accent-dark)]">
