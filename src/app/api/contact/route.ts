@@ -5,6 +5,7 @@ type ContactPayload = {
   nombre?: string;
   email?: string;
   organizacion?: string;
+  tipoInstitucion?: string;
   mensaje?: string;
   website?: string;
 };
@@ -57,6 +58,7 @@ const MAX_LENGTH = {
   nombre: 100,
   email: 254,
   organizacion: 200,
+  tipoInstitucion: 80,
   mensaje: 5000,
 };
 
@@ -83,6 +85,7 @@ export async function POST(request: Request) {
   const nombre = payload.nombre?.trim() ?? '';
   const email = payload.email?.trim() ?? '';
   const organizacion = payload.organizacion?.trim() ?? '';
+  const tipoInstitucion = payload.tipoInstitucion?.trim() ?? '';
   const mensaje = payload.mensaje?.trim() ?? '';
   const website = payload.website?.trim() ?? '';
 
@@ -103,6 +106,7 @@ export async function POST(request: Request) {
     nombre.length > MAX_LENGTH.nombre ||
     email.length > MAX_LENGTH.email ||
     organizacion.length > MAX_LENGTH.organizacion ||
+    tipoInstitucion.length > MAX_LENGTH.tipoInstitucion ||
     mensaje.length > MAX_LENGTH.mensaje
   ) {
     return NextResponse.json({ error: 'Datos demasiado largos.' }, { status: 400 });
@@ -125,11 +129,12 @@ export async function POST(request: Request) {
     <p><strong>Nombre:</strong> ${escapeHtml(nombre)}</p>
     <p><strong>Email:</strong> ${escapeHtml(email)}</p>
     <p><strong>Organización:</strong> ${escapeHtml(organizacion || '-')}</p>
+    <p><strong>Tipo de institución:</strong> ${escapeHtml(tipoInstitucion || '-')}</p>
     <p><strong>Mensaje:</strong></p>
     <p>${escapeHtml(mensaje).replace(/\n/g, '<br />')}</p>
   `;
 
-  const text = `Nuevo contacto\n\nNombre: ${nombre}\nEmail: ${email}\nOrganización: ${organizacion || '-'}\n\nMensaje:\n${mensaje}`;
+  const text = `Nuevo contacto\n\nNombre: ${nombre}\nEmail: ${email}\nOrganización: ${organizacion || '-'}\nTipo de institución: ${tipoInstitucion || '-'}\n\nMensaje:\n${mensaje}`;
 
   try {
     const response = await fetch('https://api.resend.com/emails', {

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import AulaScreenMock from './AulaScreenMock';
 import ContactForm from './ContactForm';
 import { ArrowR, ArrowUR } from './Arrows';
-import { WhatsAppIcon, WHATSAPP_URL } from './WhatsAppFloat';
+import { WHATSAPP_URL } from './WhatsAppFloat';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -26,7 +26,19 @@ const stats = [
   { n: '03', l: 'Sistemas propios en producción' },
   { n: '04', l: 'Países con instituciones activas' },
   { n: '20+', l: 'Años de experiencia institucional' },
-  { n: '100%', l: 'Construido y operado internamente' },
+  { n: '03', l: 'Sectores institucionales cubiertos' },
+] as const;
+
+const heroProofs = [
+  { label: 'AULA', value: 'Planificación y gestión escolar', meta: 'AENA · producción' },
+  { label: 'IPUPY', value: 'Tesorería multi-sede', meta: 'finanzas institucionales' },
+  { label: 'IBA', value: 'Marco curricular unificado', meta: 'seminario y editorial' },
+] as const;
+
+const aulaSignals = [
+  'Planificación anual, semanal y materiales bajo criterio institucional',
+  'Revisión operativa antes de publicar resultados docentes',
+  'Datos escolares y estándar pedagógico en un mismo flujo',
 ] as const;
 
 const methodSteps = [
@@ -61,6 +73,11 @@ const cases = [
     frame: 'Plataforma + operación',
     sector: 'Educación escolar',
     year: '2023 —',
+    impact:
+      'De planificación dispersa a una operación escolar donde currículo, evaluación y administración responden al mismo estándar.',
+    proof: 'AULA ordena planificación, tesorería, editorial y comunicación desde un criterio institucional vivo.',
+    image: '/screenshots/aena-dashboard.png',
+    featured: true,
   },
   {
     num: '02',
@@ -69,6 +86,11 @@ const cases = [
     frame: 'Finanzas institucionales',
     sector: 'Denominación religiosa',
     year: '2024 —',
+    impact:
+      'De cierres manuales y criterios variables a reportes trazables para sedes, responsables y administración central.',
+    proof: 'Flujos financieros diseñados para rendición clara sin convertir la institución en burocracia.',
+    image: '/screenshots/ipupy-dashboard.png',
+    featured: false,
   },
   {
     num: '03',
@@ -77,6 +99,11 @@ const cases = [
     frame: 'Seminario + editorial',
     sector: 'Seminario teológico',
     year: '2025 —',
+    impact:
+      'De documentos aislados a un marco común para formación, materiales y revisión académica.',
+    proof: 'Criterio curricular traducido en procesos editoriales que pueden sostenerse por el equipo.',
+    image: '/screenshots/editorial-aena.png',
+    featured: false,
   },
 ] as const;
 
@@ -93,6 +120,13 @@ const nextSteps = [
   'Arranque en 2–4 semanas',
 ] as const;
 
+const manifestoTranslation = [
+  'Reglas claras antes de automatizar',
+  'Flujos auditables por el equipo',
+  'Documentación viva para sostener criterio',
+  'Sistemas que obedecen la operación real',
+] as const;
+
 export default function ABNLanding() {
   return (
     <>
@@ -106,19 +140,61 @@ export default function ABNLanding() {
         <div className="mx-auto max-w-[1440px]">
           <div className="mb-8 grid items-start gap-8 md:grid-cols-[80px_1fr]">
             <span className="issue-marker">№ 001 / 26</span>
-            <span className="eyebrow">
-              <span className="dot" />
-              Consultoría en transformación institucional
-            </span>
+            <div className="grid gap-3 md:grid-cols-[1fr_auto] md:items-start">
+              <div>
+                <p className="font-mono text-[0.72rem] uppercase tracking-[0.24em] text-foreground">
+                  Agencia Bir Nuñez / ABN
+                </p>
+                <span className="eyebrow mt-2">
+                  <span className="dot" />
+                  Consultoría en transformación institucional
+                </span>
+              </div>
+              <p className="max-w-[21rem] text-sm leading-relaxed text-foreground/62 md:text-right">
+                Sistemas institucionales para educación, iglesias y organizaciones de escala humana.
+              </p>
+            </div>
           </div>
 
-          <h1 className="editorial-display my-4 text-[clamp(2.75rem,13vw,12.25rem)] md:my-8">
-            Estructura
-            <br />
-            <span className="serif-it">donde otros</span>
-            <br />
-            improvisan.
-          </h1>
+          <div className="hero-grid">
+            <h1 className="editorial-display my-4 text-[clamp(2.75rem,13vw,12.25rem)] md:my-8">
+              Estructura
+              <br />
+              <span className="serif-it">donde otros</span>
+              <br />
+              improvisan.
+            </h1>
+
+            <aside className="hero-proof" aria-label="Sistemas ABN en producción">
+              <div className="mb-5 flex items-center justify-between gap-4">
+                <span className="eyebrow">
+                  <span className="dot" />
+                  Sistemas vivos
+                </span>
+                <span className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-foreground/42">
+                  marzo 2026
+                </span>
+              </div>
+              <div className="space-y-3">
+                {heroProofs.map((proof) => (
+                  <div key={proof.label} className="hero-proof__row">
+                    <span className="font-mono text-[0.72rem] font-semibold text-[color:var(--accent-dark)]">
+                      {proof.label}
+                    </span>
+                    <span className="font-display text-base font-semibold leading-tight tracking-tight">
+                      {proof.value}
+                    </span>
+                    <span className="font-mono text-[0.68rem] uppercase tracking-[0.1em] text-foreground/46">
+                      {proof.meta}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-5 border-t border-foreground/10 pt-5">
+                <AulaScreenMock />
+              </div>
+            </aside>
+          </div>
 
           <div className="rule-ink grid items-start gap-6 pt-8 md:grid-cols-[80px_1fr_1fr] md:gap-10">
             <span className="issue-marker">LEAD</span>
@@ -129,13 +205,10 @@ export default function ABNLanding() {
             <div className="flex flex-col items-start gap-4">
               <div className="flex flex-wrap gap-2.5">
                 <a
-                  href={WHATSAPP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#contacto"
                   className="inline-flex items-center gap-2 rounded-full bg-signal px-5 py-3 font-sans text-sm font-semibold text-foreground transition hover:-translate-y-px hover:bg-signal-light"
                 >
-                  <WhatsAppIcon />
-                  Escribinos por WhatsApp
+                  Solicitar diagnóstico
                   <ArrowUR />
                 </a>
                 <Link
@@ -146,7 +219,9 @@ export default function ABNLanding() {
                   <ArrowR />
                 </Link>
               </div>
-              <span className="tick">Respuesta habitual en 48h hábiles</span>
+              <span className="tick">
+                WhatsApp disponible para coordinación rápida · respuesta habitual en 48h hábiles
+              </span>
             </div>
           </div>
         </div>
@@ -168,7 +243,7 @@ export default function ABNLanding() {
           </h2>
           <div className="grid gap-6 md:grid-cols-4">
             {stats.map((s) => (
-              <div key={s.n} className="border-t-2 border-foreground pt-5">
+              <div key={`${s.n}-${s.l}`} className="border-t-2 border-foreground pt-5">
                 <div className="editorial-display text-[clamp(3rem,6vw,5.75rem)]">{s.n}</div>
                 <p className="mt-3 max-w-[11rem] text-sm text-foreground/66">{s.l}</p>
               </div>
@@ -198,6 +273,13 @@ export default function ABNLanding() {
                 El mismo marco que ordena AULA es el que usamos para diagnosticar, implementar y
                 sostener sistemas educativos y administrativos.
               </p>
+              <ul className="mb-8 grid gap-3">
+                {aulaSignals.map((signal) => (
+                  <li key={signal} className="proof-line">
+                    {signal}
+                  </li>
+                ))}
+              </ul>
               <Link
                 href="/aula"
                 className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3.5 font-sans text-sm font-medium text-background transition hover:-translate-y-px hover:bg-[color:var(--accent-darker)]"
@@ -285,26 +367,38 @@ export default function ABNLanding() {
             </Link>
           </div>
 
-          <div>
+          <div className="case-proof-grid">
             {cases.map((c) => (
-              <Link key={c.num} href="/casos" className="case-row">
-                <span className="font-mono text-xs uppercase tracking-[0.08em] text-foreground/50">
-                  {c.num}
-                </span>
-                <div>
-                  <div className="mb-1.5 font-mono text-[0.7rem] uppercase tracking-[0.1em] text-[color:var(--accent-dark)]">
-                    {c.client}
+              <Link
+                key={c.num}
+                href="/casos"
+                className={c.featured ? 'case-proof case-proof--featured' : 'case-proof'}
+              >
+                <div
+                  className="case-proof__media"
+                  style={{ backgroundImage: `url(${c.image})` }}
+                  aria-hidden="true"
+                />
+                <div className="case-proof__body">
+                  <div className="mb-5 flex items-start justify-between gap-4">
+                    <div>
+                      <span className="font-mono text-xs uppercase tracking-[0.08em] text-foreground/44">
+                        {c.num} · {c.year}
+                      </span>
+                      <div className="mt-2 font-mono text-[0.72rem] uppercase tracking-[0.12em] text-[color:var(--accent-dark)]">
+                        {c.client} / {c.frame}
+                      </div>
+                    </div>
+                    <ArrowUR size={14} />
                   </div>
-                  <div className="editorial-display text-xl leading-tight md:text-2xl">
+                  <h3 className="editorial-display mb-4 text-3xl leading-none md:text-4xl">
                     {c.title}
-                  </div>
+                  </h3>
+                  <p className="mb-5 text-base leading-relaxed text-foreground/72">{c.impact}</p>
+                  <p className="border-t border-foreground/10 pt-4 text-sm leading-relaxed text-foreground/58">
+                    {c.proof}
+                  </p>
                 </div>
-                <span className="case-row__frame text-sm text-foreground/66">{c.frame}</span>
-                <span className="case-row__sector text-sm text-foreground/66">{c.sector}</span>
-                <span className="case-row__year font-mono text-xs text-foreground/66">
-                  {c.year}
-                </span>
-                <ArrowUR size={12} />
               </Link>
             ))}
           </div>
@@ -318,13 +412,29 @@ export default function ABNLanding() {
             <span className="dot" />
             Manifiesto operativo
           </h2>
-          <div className="editorial-display text-[clamp(3rem,8vw,8rem)]">
-            {manifesto.map(([label, phrase], i) => (
-              <div key={i} className="manifesto-row">
-                <span className="font-medium text-foreground/56">{label}</span>
-                <span>{phrase}</span>
-              </div>
-            ))}
+          <div className="grid gap-14">
+            <div className="editorial-display text-[clamp(3rem,8vw,8rem)]">
+              {manifesto.map(([label, phrase], i) => (
+                <div key={i} className="manifesto-row">
+                  <span className="font-medium text-foreground/56">{label}</span>
+                  <span>{phrase}</span>
+                </div>
+              ))}
+            </div>
+            <div className="manifesto-translation max-w-3xl">
+              <span className="eyebrow">
+                <span className="dot" />
+                En la práctica
+              </span>
+              <ul className="mt-8 grid gap-0">
+                {manifestoTranslation.map((item, index) => (
+                  <li key={item} className="translation-row">
+                    <span>{String(index + 1).padStart(2, '0')}</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -336,10 +446,10 @@ export default function ABNLanding() {
             <div>
               <span className="eyebrow">
                 <span className="dot" />
-                Contacto directo
+                Diagnóstico inicial
               </span>
               <h2 className="editorial-display mt-4 mb-6 text-[clamp(2.5rem,5vw,4.5rem)]">
-                Si Excel, WhatsApp y decisiones improvisadas no alcanzan, conversemos.
+                Si Excel, WhatsApp y decisiones improvisadas no alcanzan, empecemos por ordenar.
               </h2>
               <p className="max-w-[32rem] text-lg text-foreground/72">
                 ABN entra donde hace falta criterio, estructura y un sistema que siga funcionando
@@ -368,14 +478,14 @@ export default function ABNLanding() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-signal px-5 py-3 font-sans text-sm font-semibold text-foreground transition hover:-translate-y-px hover:bg-signal-light"
                 >
-                  WhatsApp
+                  Coordinar por WhatsApp
                   <ArrowUR />
                 </a>
                 <a
                   href="#contacto"
                   className="inline-flex items-center gap-2 rounded-full border border-foreground px-5 py-3 font-sans text-sm font-medium text-foreground transition hover:-translate-y-px hover:bg-foreground hover:text-background"
                 >
-                  Enviar mensaje
+                  Enviar solicitud
                   <ArrowR />
                 </a>
               </div>
@@ -388,18 +498,18 @@ export default function ABNLanding() {
       <section id="contacto" className="bg-white px-6 py-20 md:px-12 md:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[0.85fr_1.15fr] md:gap-20">
           <div className="max-w-lg">
-            <span className="eyebrow mb-4 inline-flex">
-              <span className="dot" />
-              Contacto
-            </span>
-            <h2 className="line-accent font-display text-4xl font-semibold leading-tight md:text-5xl">
-              Conversemos sobre tu institución.
-            </h2>
-            <p className="mt-6 text-base leading-relaxed text-foreground/68">
-              Cada proyecto empieza con una conversación honesta sobre operación, criterio y
-              prioridades. Si el problema todavía está desordenado, ahí es donde ABN suele entrar
-              mejor.
-            </p>
+              <span className="eyebrow mb-4 inline-flex">
+                <span className="dot" />
+                Solicitud de diagnóstico
+              </span>
+              <h2 className="line-accent font-display text-4xl font-semibold leading-tight md:text-5xl">
+                Empecemos con una primera lectura.
+              </h2>
+              <p className="mt-6 text-base leading-relaxed text-foreground/68">
+                Contanos qué se está desordenando, qué decisiones se repiten y qué debería seguir
+                funcionando aunque cambien las personas. Respondemos con próximos pasos dentro de
+                48h hábiles.
+              </p>
             <div className="mt-12 grid gap-7">
               <div>
                 <p className="font-mono text-[0.72rem] uppercase tracking-[0.22em] text-foreground/62">

@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -14,30 +13,10 @@ const NAV_ITEMS = [
 
 export default function NavBar() {
   const pathname = usePathname();
-  const [scrollProgress, setScrollProgress] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      setScrollProgress(docHeight > 0 ? (scrollTop / docHeight) * 100 : 0);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   return (
     <header className="sticky top-0 z-50 bg-background/88 backdrop-blur-xl">
-      {/* Scroll progress bar */}
-      <div
-        className="absolute top-0 left-0 h-[2px] bg-accent transition-[width] duration-150 ease-out"
-        style={{ width: `${scrollProgress}%` }}
-      />
+      <div className="scroll-progress" />
       <nav className="font-sans px-5 md:px-10 py-3.5 md:py-4 flex justify-between items-center max-w-7xl mx-auto">
         <div className="flex items-center gap-3">
           <Link href="/">

@@ -6,6 +6,7 @@ interface FormData {
   nombre: string;
   email: string;
   organizacion: string;
+  tipoInstitucion: string;
   mensaje: string;
   website: string;
 }
@@ -15,6 +16,7 @@ export default function ContactForm() {
     nombre: '',
     email: '',
     organizacion: '',
+    tipoInstitucion: '',
     mensaje: '',
     website: '',
   });
@@ -44,7 +46,7 @@ export default function ContactForm() {
     }
   };
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -58,7 +60,7 @@ export default function ContactForm() {
         </div>
         <h3 className="font-sans font-semibold text-xl mb-2">Mensaje enviado</h3>
         <p className="font-sans text-sm text-foreground/60">
-          Gracias por contactarnos. Respondemos pronto.
+          Gracias por escribir. Respondemos con una primera lectura dentro de 48h hábiles.
         </p>
       </div>
     );
@@ -115,6 +117,25 @@ export default function ContactForm() {
         />
       </div>
       <div>
+        <label htmlFor="tipoInstitucion" className="font-sans text-sm font-medium block mb-2">
+          Tipo de institución
+        </label>
+        <select
+          id="tipoInstitucion"
+          name="tipoInstitucion"
+          value={formData.tipoInstitucion}
+          onChange={handleChange}
+          className="font-sans w-full px-4 py-3 bg-background border border-foreground/20 rounded-xl input-focus transition-all"
+        >
+          <option value="">Seleccionar</option>
+          <option value="Colegio">Colegio</option>
+          <option value="Iglesia">Iglesia</option>
+          <option value="Seminario">Seminario</option>
+          <option value="Organización">Organización</option>
+          <option value="Otro">Otro</option>
+        </select>
+      </div>
+      <div>
         <label htmlFor="mensaje" className="font-sans text-sm font-medium block mb-2">Mensaje</label>
         <textarea
           id="mensaje"
@@ -124,7 +145,7 @@ export default function ContactForm() {
           value={formData.mensaje}
           onChange={handleChange}
           className="font-sans w-full px-4 py-3 bg-background border border-foreground/20 rounded-xl input-focus transition-all resize-none"
-          placeholder="Contanos sobre tu institución y qué necesitás resolver..."
+          placeholder="Contanos qué se está desordenando, qué decisiones se repiten y qué debería seguir funcionando..."
         />
       </div>
       <button
@@ -132,7 +153,7 @@ export default function ContactForm() {
         disabled={submitting}
         className="font-sans w-full bg-foreground text-background py-4 rounded-xl font-medium hover:bg-foreground/90 transition-colors disabled:opacity-60"
       >
-        {submitting ? 'Enviando...' : 'Enviar mensaje'}
+        {submitting ? 'Enviando...' : 'Enviar solicitud'}
       </button>
       {submitError && (
         <p className="font-sans text-sm text-red-600">{submitError}</p>
