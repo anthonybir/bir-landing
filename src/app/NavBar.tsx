@@ -3,6 +3,7 @@
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import { WHATSAPP_URL } from './WhatsAppFloat';
 
 const NAV_ITEMS = [
   { href: '/aula', label: 'AULA' },
@@ -11,8 +12,11 @@ const NAV_ITEMS = [
   { href: '/nosotros', label: 'Nosotros' },
 ] as const;
 
+const ABSD_ROUTES = new Set(['/', '/nosotros']);
+
 export default function NavBar() {
   const pathname = usePathname();
+  if (ABSD_ROUTES.has(pathname)) return null;
 
   return (
     <header className="sticky top-0 z-50 bg-background/88 backdrop-blur-xl">
@@ -52,12 +56,14 @@ export default function NavBar() {
               {label}
             </Link>
           ))}
-          <Link
-            href="/#contacto"
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden md:block rounded-full bg-foreground px-4 py-2 text-[0.78rem] font-medium tracking-[0.03em] text-background transition-colors hover:bg-foreground/90"
           >
             Hablemos
-          </Link>
+          </a>
         </div>
       </nav>
       <div className="mx-auto max-w-7xl px-5 pb-3 md:hidden">
@@ -73,12 +79,14 @@ export default function NavBar() {
               {label}
             </Link>
           ))}
-          <Link
-            href="/#contacto"
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="mobile-nav-chip mobile-nav-chip-cta bg-foreground text-background border-foreground"
           >
             Hablemos
-          </Link>
+          </a>
         </div>
       </div>
     </header>

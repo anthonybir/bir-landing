@@ -72,13 +72,15 @@ export default function AulaPage() {
                 En producción desde 2023 con AENA. Multi-sede desde 2024. Plataforma de escuela
                 completa hoy.
               </p>
-              <Link
-                href="/#contacto"
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-3 font-sans text-sm font-medium text-background transition hover:-translate-y-px hover:bg-[color:var(--accent-darker)]"
               >
                 Solicitar demo guiada
                 <ArrowR />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -249,13 +251,13 @@ export default function AulaPage() {
                   WhatsApp
                   <ArrowUR />
                 </a>
-                <Link
-                  href="/#contacto"
+                <a
+                  href={`mailto:anthony@bir.com.py?subject=${encodeURIComponent('Demo de AULA')}`}
                   className="inline-flex items-center gap-2 rounded-full border border-background/30 px-5 py-3 font-sans text-sm font-medium text-background transition hover:-translate-y-px hover:border-background"
                 >
-                  Pedir demo
+                  Pedir demo por email
                   <ArrowR />
-                </Link>
+                </a>
               </div>
             </div>
           </div>

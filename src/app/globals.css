@@ -880,3 +880,119 @@ body {
   position: relative;
   z-index: 1;
 }
+/* ============================================================
+   ABN — bone & ink additions (ABSD)
+   Append to globals.css (after the existing :root block).
+   These tokens coexist with the warm-gray system; the new
+   home + /nosotros opt into them via .absd / .absd-section.
+   ============================================================ */
+
+:root {
+  /* ABSD core */
+  --abir-teal:          #0F3B3E;
+  --abir-cream:         #EFE6D2;
+  --abir-cream-muted:   rgba(239, 230, 210, 0.78);
+  --abir-cream-whisper: rgba(239, 230, 210, 0.6);
+}
+
+/* Surface scope: any element with .absd flips to bone & ink. */
+.absd {
+  background: var(--abir-teal);
+  color: var(--abir-cream);
+}
+
+.absd-section {
+  position: relative;
+  background: var(--abir-teal);
+  color: var(--abir-cream);
+  overflow: hidden;
+}
+
+/* Strip the global warm-gradient body bg when this scope is full-bleed. */
+.absd-fullbleed {
+  background: var(--abir-teal);
+}
+
+/* Voice — italic Instrument Serif, regular weight, never bold. */
+.absd .voice,
+.absd-section .voice {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+  text-wrap: balance;
+  color: var(--abir-cream);
+}
+
+/* Caps — sans, uppercase, 0.3em tracking. Institutional only. */
+.absd .caps,
+.absd-section .caps {
+  font-family: var(--font-sans);
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--abir-cream-muted);
+}
+
+/* Hairline — right-anchored or centered; never left-anchored except as
+   structural underline of a left-anchored block (use .hl--left only there). */
+.absd .hl,
+.absd-section .hl {
+  display: block;
+  width: 80px;
+  height: 1px;
+  background: var(--abir-cream);
+  border: 0;
+  margin: 0;
+}
+.absd .hl--whisper,
+.absd-section .hl--whisper { background: var(--abir-cream-whisper); }
+
+/* Corner ticks — pseudo-element pair on the section root.
+   Omit one corner intentionally; here we omit bottom-right by default. */
+.absd-ticks {
+  position: relative;
+}
+.absd-ticks::before,
+.absd-ticks::after {
+  content: "";
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  border: 1.5px solid var(--abir-cream-whisper);
+  pointer-events: none;
+}
+.absd-ticks::before {
+  top: 24px; left: 24px;
+  border-right: 0; border-bottom: 0;
+}
+.absd-ticks::after {
+  top: 24px; right: 24px;
+  border-left: 0; border-bottom: 0;
+}
+
+/* Decorative third tick (bottom-left) via an inner element if desired:
+   <span class="absd-tick-bl" aria-hidden /> */
+.absd-tick-bl {
+  position: absolute;
+  bottom: 24px; left: 24px;
+  width: 56px; height: 56px;
+  border: 1.5px solid var(--abir-cream-whisper);
+  border-right: 0; border-top: 0;
+  pointer-events: none;
+}
+
+/* Underlined italic CTA — the only "button" form in the bone & ink scope. */
+.absd-link {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--abir-cream);
+  text-decoration: none;
+  border-bottom: 1px solid var(--abir-cream);
+  padding-bottom: 2px;
+  transition: opacity 240ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.absd-link:hover { opacity: 0.78; }

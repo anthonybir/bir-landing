@@ -1,7 +1,15 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
+const ABSD_ROUTES = new Set(['/', '/nosotros']);
 
 export default function Footer() {
+  const pathname = usePathname();
+  if (ABSD_ROUTES.has(pathname)) return null;
+
   return (
     <footer className="bg-foreground text-background">
       <div className="mx-auto max-w-7xl px-6 py-14 md:px-12 md:py-16">
@@ -29,7 +37,7 @@ export default function Footer() {
                 <Link href="/servicios" className="block text-background/58 transition-colors hover:text-background">Servicios</Link>
                 <Link href="/casos" className="block text-background/58 transition-colors hover:text-background">Casos</Link>
                 <Link href="/nosotros" className="block text-background/58 transition-colors hover:text-background">Nosotros</Link>
-                <Link href="/#contacto" className="block text-background/58 transition-colors hover:text-background">Contacto</Link>
+                <a href="mailto:anthony@bir.com.py" className="block text-background/58 transition-colors hover:text-background">Contacto</a>
               </nav>
             </div>
             <div>

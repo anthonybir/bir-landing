@@ -115,13 +115,13 @@ export default function CasosPage() {
                   WhatsApp
                   <ArrowUR />
                 </a>
-                <Link
-                  href="/#contacto"
+                <a
+                  href="mailto:anthony@bir.com.py"
                   className="inline-flex items-center gap-2 rounded-full border border-background/30 px-5 py-3 font-sans text-sm font-medium text-background transition hover:-translate-y-px hover:border-background"
                 >
-                  Conversemos
+                  Conversemos por email
                   <ArrowUR />
-                </Link>
+                </a>
               </div>
             </div>
           </div>

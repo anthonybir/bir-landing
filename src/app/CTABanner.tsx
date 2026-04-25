@@ -35,13 +35,13 @@ export default function CTABanner() {
               Escribinos por WhatsApp
               <ArrowUR />
             </a>
-            <Link
-              href="/#contacto"
+            <a
+              href="mailto:anthony@bir.com.py"
               className="inline-flex items-center gap-2 rounded-full border border-foreground px-5 py-3.5 font-sans text-sm font-medium text-foreground transition hover:-translate-y-px hover:bg-foreground hover:text-background"
             >
-              Enviar mensaje
+              Enviar email
               <ArrowR />
-            </Link>
+            </a>
           </div>
         </div>
       </div>

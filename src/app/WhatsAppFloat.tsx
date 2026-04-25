@@ -1,5 +1,7 @@
 'use client';
 
+import { usePathname } from 'next/navigation';
+
 const WHATSAPP_NUMBER = '595991402548';
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola, me interesa conocer más sobre los servicios de ABN.')}`;
 
@@ -12,6 +14,9 @@ export const WhatsAppIcon = ({ className = 'w-5 h-5' }: { className?: string }) 
 export { WHATSAPP_URL };
 
 export default function WhatsAppFloat() {
+  const pathname = usePathname();
+  if (pathname === '/') return null;
+
   return (
     <a
       href={WHATSAPP_URL}
