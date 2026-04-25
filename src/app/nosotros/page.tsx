@@ -1,23 +1,54 @@
-// src/app/nosotros/page.tsx — ABN /nosotros (the person behind the firm)
-//
-// Replace the existing src/app/nosotros/page.tsx with this file.
-// Requires:
-//   - the additions in _handoff/globals.absd.additions.css
-//   - the photo at public/anthony.jpeg (copy from _handoff/public_anthony.jpeg)
-
 import type { Metadata } from 'next';
-import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Nosotros · ABN — Anthony Bir',
   description:
-    'Anthony Bir es ABN. Una persona, una firma, una vida real detrás.',
+    'Anthony Bir es ABN. Una persona, varias instituciones — educación, pastoral, formación, consultoría, software.',
 };
+
+const portfolio = [
+  {
+    tag: 'Educación',
+    inst: 'AENA',
+    role: 'Director Institucional · Presidente del Consejo',
+    line: '≈ 300 estudiantes. Marco MEAA 3.0 — sin tareas, sin exámenes, ABP, alineado al MEC.',
+  },
+  {
+    tag: 'Pastoral',
+    inst: 'Los Pentecostales de Lambaré',
+    role: 'Pastor',
+    line: 'Congregación pentecostal liberal, ≈ 50 miembros. Exégesis griega, lente progresista.',
+  },
+  {
+    tag: 'Pastoral · nacional',
+    inst: 'IPU PY',
+    role: 'Secretario Nacional',
+    line: 'Tesorería de doble entrada para 300+ iglesias. tesoreria.ipupy.org.py.',
+  },
+  {
+    tag: 'Formación',
+    inst: 'IBA',
+    role: 'Marco curricular',
+    line: 'Documentos de formación pastoral y editorial, junto a Diana.',
+  },
+  {
+    tag: 'Consultoría',
+    inst: 'ABN',
+    role: 'Fundador · arquitecto',
+    line: 'Agencia familiar. Diana (pedagogía), Danae (derecho), Stephanie (financiero).',
+  },
+  {
+    tag: 'Software',
+    inst: 'ABSD',
+    role: 'Bir Systems Design',
+    line: 'AENA_Admin, ipupy_admin, Kairós Live. Producción institucional.',
+  },
+] as const;
 
 const operative = [
   'El criterio de la institución antes que la herramienta.',
-  'Sistemas que sobreviven mi ausencia.',
-  'Una conversación, no una propuesta.',
+  'Construyo primero adentro; el cliente recibe lo que ya sobrevivió.',
+  'Sistemas que viven sin mí.',
 ] as const;
 
 export default function NosotrosPage() {
@@ -50,28 +81,121 @@ export default function NosotrosPage() {
         </a>
       </header>
 
-      {/* Two-column body — photo anchored to left edge, text right */}
+      {/* Two-column body — portfolio left, text right */}
       <div
         style={{
           display: 'grid',
-          gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1.05fr)',
+          gridTemplateColumns: 'minmax(0, 1.05fr) minmax(0, 1fr)',
           gap: 96,
           alignItems: 'start',
         }}
       >
-        {/* Photo — container matches photo's 3:4 aspect, fills column edge-to-edge */}
-        <div style={{ position: 'relative', width: '100%', aspectRatio: '3 / 4' }}>
-          <Image
-            src="/anthony.jpeg"
-            alt="Anthony Bir y Diana en Asunción, 2026"
-            fill
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            style={{ objectFit: 'cover' }}
-            priority
-          />
+        {/* Portfolio panel — anchored to the left edge of the viewport.
+            Replaces the old photo: the work IS the portrait. */}
+        <div
+          style={{
+            position: 'relative',
+            borderTop: '1px solid var(--abir-cream-whisper)',
+            borderBottom: '1px solid var(--abir-cream-whisper)',
+            borderRight: '1px solid var(--abir-cream-whisper)',
+            display: 'flex',
+            flexDirection: 'column',
+          }}
+        >
+          {/* Header */}
+          <div
+            style={{
+              padding: '24px 40px 16px 40px',
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'baseline',
+              borderBottom: '1px solid var(--abir-cream-whisper)',
+            }}
+          >
+            <span className="caps">Donde vive el trabajo</span>
+            <span className="caps">06 / 06</span>
+          </div>
+
+          {/* Items */}
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            {portfolio.map((p, i) => (
+              <div
+                key={p.inst}
+                style={{
+                  padding: '20px 40px',
+                  borderBottom:
+                    i < portfolio.length - 1
+                      ? '1px solid var(--abir-cream-whisper)'
+                      : 'none',
+                  display: 'grid',
+                  gridTemplateColumns: '44px 1fr',
+                  gap: 16,
+                  alignItems: 'start',
+                }}
+              >
+                <span
+                  className="caps"
+                  style={{ paddingTop: 4 }}
+                >
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <div>
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignItems: 'baseline',
+                      gap: 12,
+                      marginBottom: 6,
+                      flexWrap: 'wrap',
+                    }}
+                  >
+                    <span
+                      className="caps"
+                      style={{ color: 'var(--abir-cream)', fontSize: 12 }}
+                    >
+                      {p.inst}
+                    </span>
+                    <span
+                      className="caps"
+                      style={{ fontSize: 10, letterSpacing: '0.25em' }}
+                    >
+                      · {p.tag}
+                    </span>
+                  </div>
+                  <div
+                    className="voice"
+                    style={{
+                      fontSize: 14,
+                      lineHeight: 1.4,
+                      color: 'var(--abir-cream-muted)',
+                      marginBottom: 4,
+                    }}
+                  >
+                    {p.role}
+                  </div>
+                  <div
+                    className="voice"
+                    style={{ fontSize: 15, lineHeight: 1.4 }}
+                  >
+                    {p.line}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Footnote */}
+          <div
+            style={{
+              padding: '14px 40px',
+              borderTop: '1px solid var(--abir-cream-whisper)',
+            }}
+          >
+            <span className="caps">Lambaré, Paraguay · UTC−03</span>
+          </div>
         </div>
 
-        {/* Text */}
+        {/* Text column */}
         <div style={{ paddingRight: 96, paddingTop: 16 }}>
           <h1
             className="voice"
@@ -82,39 +206,14 @@ export default function NosotrosPage() {
               maxWidth: 480,
             }}
           >
-            Una persona, una firma.
+            Una persona, varias instituciones.
           </h1>
           <span className="hl" style={{ marginBottom: 32 }} aria-hidden />
           <p
             className="voice"
             style={{
-              fontSize: 22,
+              fontSize: 21,
               lineHeight: 1.45,
-              color: 'var(--abir-cream-muted)',
-              maxWidth: 480,
-              margin: 0,
-              marginBottom: 56,
-              textWrap: 'pretty',
-            }}
-          >
-            Anthony pasa los días resolviendo problemas difíciles de IA y las
-            noches recorriendo la creciente escena gastronómica de Asunción
-            con su esposa Diana. Pastorea una congregación pequeña en Lambaré,
-            cría a cuatro hijos increíbles y, junto a Diana, dirige{' '}
-            <span style={{ color: 'var(--abir-cream)' }}>AENA</span> — el
-            proyecto educativo comunitario de la familia.
-          </p>
-
-          <span
-            className="hl hl--whisper"
-            style={{ marginBottom: 32 }}
-            aria-hidden
-          />
-          <p
-            className="voice"
-            style={{
-              fontSize: 18,
-              lineHeight: 1.5,
               color: 'var(--abir-cream-muted)',
               maxWidth: 480,
               margin: 0,
@@ -124,10 +223,11 @@ export default function NosotrosPage() {
           >
             Veinte años corporativos en{' '}
             <span style={{ color: 'var(--abir-cream)' }}>Heinz</span> y{' '}
-            <span style={{ color: 'var(--abir-cream)' }}>Thermo Fisher</span>{' '}
-            antes de volver a Paraguay. Hoy, los sistemas que ABN ofrece viven
-            primero en mis propias instituciones — AENA, IPUPY, IBA — antes de
-            llegar a un cliente. Todos sostenidos por una persona. Todos vivos.
+            <span style={{ color: 'var(--abir-cream)' }}>Thermo Fisher</span> —
+            gestión de proyectos internacionales, migraciones JD Edwards a SAP
+            — antes de volver a Paraguay. Hoy construyo sistemas que viven
+            primero dentro de mis propias instituciones; cuando sobreviven ahí,
+            llegan al cliente.
           </p>
 
           <div className="caps" style={{ marginBottom: 16 }}>
@@ -153,7 +253,7 @@ export default function NosotrosPage() {
                   borderBottom: '1px solid var(--abir-cream-whisper)',
                 }}
               >
-                <span className="caps" style={{ color: 'var(--abir-cream-muted)' }}>
+                <span className="caps">
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 <span
