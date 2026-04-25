@@ -40,7 +40,10 @@ export default function NosotrosPage() {
           marginBottom: 80,
         }}
       >
-        <span className="caps">anthony bir &nbsp;/&nbsp; ABN &nbsp;·&nbsp; /nosotros</span>
+        <span className="caps">
+          <a href="/">anthony bir</a>
+          &nbsp;/&nbsp; ABN &nbsp;/&nbsp; nosotros
+        </span>
         <a href="/" className="caps" style={{ textDecoration: 'none' }}>
           ← Volver a la portada
         </a>
@@ -52,7 +55,7 @@ export default function NosotrosPage() {
           display: 'grid',
           gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1.05fr)',
           gap: 96,
-          alignItems: 'stretch',
+          alignItems: 'start',
         }}
       >
         {/* Photo — anchored to the left edge of the viewport */}
@@ -69,16 +72,6 @@ export default function NosotrosPage() {
             role="img"
             aria-label="Anthony Bir en Asunción, 2026"
           />
-          <span
-            className="caps"
-            style={{
-              position: 'absolute',
-              bottom: -28,
-              left: 0,
-            }}
-          >
-            Asunción · 2026
-          </span>
         </div>
 
         {/* Text */}

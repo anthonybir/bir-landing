@@ -13,9 +13,11 @@ export const WhatsAppIcon = ({ className = 'w-5 h-5' }: { className?: string }) 
 
 export { WHATSAPP_URL };
 
+const ABSD_ROUTES = new Set(['/', '/nosotros']);
+
 export default function WhatsAppFloat() {
   const pathname = usePathname();
-  if (pathname === '/') return null;
+  if (ABSD_ROUTES.has(pathname)) return null;
 
   return (
     <a
