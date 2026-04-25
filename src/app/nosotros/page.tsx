@@ -59,14 +59,14 @@ export default function NosotrosPage() {
           alignItems: 'start',
         }}
       >
-        {/* Photo — natural 3:4 aspect, anchored left, full image visible */}
-        <div style={{ position: 'relative', width: '100%', height: 600 }}>
+        {/* Photo — container matches photo's 3:4 aspect, fills column edge-to-edge */}
+        <div style={{ position: 'relative', width: '100%', aspectRatio: '3 / 4' }}>
           <Image
             src="/anthony.jpeg"
             alt="Anthony Bir y Diana en Asunción, 2026"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
-            style={{ objectFit: 'contain', objectPosition: 'left center' }}
+            style={{ objectFit: 'cover' }}
             priority
           />
         </div>
