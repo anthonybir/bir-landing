@@ -16,8 +16,8 @@ const proof = [
     d: 'frentes institucionales distintos: escolar, teológico y financiero.',
   },
   {
-    n: '100%',
-    d: 'diseñados alrededor de procesos que ABN ya opera y audita internamente.',
+    n: '70 → 2.9%',
+    d: 'morosidad recuperada en AENA en tres años, dentro de regulación MEC.',
   },
   {
     n: '1 lógica',

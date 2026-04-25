@@ -29,10 +29,10 @@ const cases: ReadonlyArray<Case> = [
       'Comunicación con familias',
     ],
     result: [
-      'Operación cotidiana desde 2023',
-      'Asistencia, calificaciones y reportes MEC',
+      'Morosidad institucional 70% → 2.9% en tres años',
+      'Planificación digital diaria, libreta y portal autónomos',
+      'Reportes MEC sistematizados',
       'AULA integrado al flujo docente',
-      'Ciclo de planificación acortado',
     ],
     image: {
       src: '/screenshots/aena-dashboard.png',
@@ -41,9 +41,9 @@ const cases: ReadonlyArray<Case> = [
       alt: 'AENA Admin dashboard',
     },
     kpis: [
-      { l: 'En producción', v: '3 años' },
-      { l: 'Uptime', v: '99.9%' },
-      { l: 'Ajustes / mes', v: '12 avg' },
+      { l: 'Morosidad', v: '70% → 2.9%' },
+      { l: 'Estudiantes', v: '≈ 300' },
+      { l: 'Modelo', v: 'MEAA 3.0' },
     ],
   },
   {
@@ -59,10 +59,10 @@ const cases: ReadonlyArray<Case> = [
       'Sílabos, asistencia y cumplimiento',
     ],
     result: [
-      'Paraguay, Brasil, Argentina, Ecuador',
-      'Marco compartido por la red IBA',
-      'Tiempo de aprobación editorial reducido',
-      'Un solo idioma institucional',
+      'Enseñanza pastoral artesanal → material y alcance asistido por IA',
+      'Red multipaís: Paraguay, Brasil, Argentina, Ecuador',
+      'Un solo estándar editorial bajo la red IBA',
+      'Aprobación editorial acortada',
     ],
     image: {
       src: '/screenshots/editorial-aena.png',
@@ -89,10 +89,10 @@ const cases: ReadonlyArray<Case> = [
       'Audit trail regulatorio',
     ],
     result: [
-      '22 sedes integradas',
-      'Reportes mensuales en 1 día vs. 3 semanas',
+      'Tesorería fragmentada → contabilidad institucional auditable',
+      'Cierre mensual: 3 semanas → 1 día',
+      '22 sedes integradas, trazabilidad 100% digital',
       'Cierre trimestral auditable',
-      'Trazabilidad 100% digital',
     ],
     image: {
       src: '/screenshots/ipupy-dashboard.png',

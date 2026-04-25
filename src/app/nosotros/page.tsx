@@ -11,7 +11,7 @@ const portfolio = [
     tag: 'Educación',
     inst: 'AENA',
     role: 'Director Institucional · Presidente del Consejo',
-    line: '≈ 300 estudiantes. Marco MEAA 3.0 — sin tareas, sin exámenes, ABP, alineado al MEC.',
+    line: 'Rescate 2020. ≈ 300 alumnos bajo MEAA 3.0 (sin tareas, sin exámenes, ABP). Morosidad 70% → 2.9%.',
   },
   {
     tag: 'Pastoral',
@@ -221,13 +221,13 @@ export default function NosotrosPage() {
               textWrap: 'pretty',
             }}
           >
-            Veinte años corporativos en{' '}
-            <span style={{ color: 'var(--abir-cream)' }}>Heinz</span> y{' '}
-            <span style={{ color: 'var(--abir-cream)' }}>Thermo Fisher</span> —
-            gestión de proyectos internacionales, migraciones JD Edwards a SAP
-            — antes de volver a Paraguay. Hoy construyo sistemas que viven
-            primero dentro de mis propias instituciones; cuando sobreviven ahí,
-            llegan al cliente.
+            Veinte años corporativos en Heinz y Thermo Fisher — gestión de
+            proyectos internacionales, migraciones JD Edwards a SAP — antes de
+            volver a Paraguay. En 2020 dirigí el rescate de AENA: morosidad
+            institucional{' '}
+            <span style={{ color: 'var(--abir-cream)' }}>70% → 2.9%</span> en
+            tres años. Hoy construyo sistemas que viven primero dentro de mis
+            propias instituciones; cuando sobreviven ahí, llegan al cliente.
           </p>
 
           <div className="caps" style={{ marginBottom: 16 }}>
