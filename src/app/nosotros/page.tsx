@@ -17,13 +17,13 @@ const portfolio = [
     tag: 'Pastoral',
     inst: 'Los Pentecostales de Lambaré',
     role: 'Pastor',
-    line: 'Congregación pentecostal liberal, ≈ 50 miembros. Exégesis griega, lente progresista.',
+    line: 'Congregación pentecostal. Exégesis griega, lente progresista.',
   },
   {
     tag: 'Pastoral · nacional',
     inst: 'IPU PY',
-    role: 'Secretario Nacional',
-    line: 'Tesorería de doble entrada para 300+ iglesias. tesoreria.ipupy.org.py.',
+    role: 'Tesorero Nacional',
+    line: 'Tesorería de doble entrada para 30 iglesias. tesoreria.ipupy.org.py.',
   },
   {
     tag: 'Formación',
