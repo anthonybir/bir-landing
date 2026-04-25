@@ -6,6 +6,7 @@
 //   - the photo at public/anthony.jpeg (copy from _handoff/public_anthony.jpeg)
 
 import type { Metadata } from 'next';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Nosotros · ABN — Anthony Bir',
@@ -58,19 +59,15 @@ export default function NosotrosPage() {
           alignItems: 'start',
         }}
       >
-        {/* Photo — anchored to the left edge of the viewport */}
-        <div style={{ position: 'relative', minHeight: 600 }}>
-          <div
-            style={{
-              width: '100%',
-              height: '100%',
-              minHeight: 600,
-              backgroundImage: 'url(/anthony.jpeg)',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center 35%',
-            }}
-            role="img"
-            aria-label="Anthony Bir en Asunción, 2026"
+        {/* Photo — natural 3:4 aspect, anchored left, full image visible */}
+        <div style={{ position: 'relative', width: '100%', height: 600 }}>
+          <Image
+            src="/anthony.jpeg"
+            alt="Anthony Bir y Diana en Asunción, 2026"
+            fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            style={{ objectFit: 'contain', objectPosition: 'left center' }}
+            priority
           />
         </div>
 
