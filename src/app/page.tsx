@@ -4,12 +4,33 @@
 // Requires the additions in _handoff/globals.absd.additions.css.
 
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { WHATSAPP_URL } from './WhatsAppFloat';
 
 export const metadata: Metadata = {
   title: 'ABN — Anthony Bir',
   description: 'Estructura donde otros improvisan. Sistemas para instituciones de escala humana.',
 };
+
+export const revalidate = 3600;
+
+const MONTHS_ES = [
+  'ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN',
+  'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC',
+] as const;
+
+function todayInAsuncion(): string {
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/Asuncion',
+    day: '2-digit',
+    month: 'numeric',
+    year: 'numeric',
+  }).formatToParts(new Date());
+  const day = parts.find((p) => p.type === 'day')?.value ?? '';
+  const monthNum = Number(parts.find((p) => p.type === 'month')?.value ?? '1');
+  const year = parts.find((p) => p.type === 'year')?.value ?? '';
+  return `${day} ${MONTHS_ES[monthNum - 1]} ${year}`;
+}
 
 const proofs = [
   { num: '01', inst: 'AENA', line: 'AULA — planificación inicial-bachillerato, ~300 alumnos.' },
@@ -18,6 +39,8 @@ const proofs = [
 ] as const;
 
 export default function ABNHome() {
+  const today = todayInAsuncion();
+
   return (
     <section
       className="absd-section absd-ticks absd-fullbleed"
@@ -38,8 +61,11 @@ export default function ABNHome() {
           alignItems: 'baseline',
         }}
       >
-        <span className="caps">anthony bir &nbsp;/&nbsp; ABN</span>
-        <span className="caps">№ 001 / 26 · Lambaré, py</span>
+        <span className="caps">
+          <Link href="/nosotros">anthony bir</Link>
+          &nbsp;/&nbsp; ABN
+        </span>
+        <span className="caps">{today} &nbsp;·&nbsp; Lambaré, py</span>
       </header>
 
       {/* ── Hero voice ─────────────────────────── */}
@@ -180,6 +206,13 @@ export default function ABNHome() {
           >
             anthony@bir.com.py
           </a>
+          <Link
+            href="/nosotros"
+            className="caps"
+            style={{ marginTop: 6 }}
+          >
+            sobre anthony →
+          </Link>
         </div>
       </footer>
     </section>
