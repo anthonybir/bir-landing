@@ -58,18 +58,18 @@ export default function NosotrosPage() {
       style={{
         minHeight: '100dvh',
         position: 'relative',
-        padding: '56px 0 96px',
+        paddingTop: 'clamp(28px, 6vw, 56px)',
+        paddingBottom: 'clamp(48px, 10vw, 96px)',
       }}
       aria-label="Sobre Anthony Bir"
     >
       {/* Top frame */}
       <header
+        className="absd-frame"
         style={{
-          padding: '0 96px',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'baseline',
-          marginBottom: 80,
+          paddingLeft: 'clamp(20px, 6vw, 96px)',
+          paddingRight: 'clamp(20px, 6vw, 96px)',
+          marginBottom: 'clamp(40px, 8vw, 80px)',
         }}
       >
         <span className="caps">
@@ -81,37 +81,13 @@ export default function NosotrosPage() {
         </a>
       </header>
 
-      {/* Two-column body — portfolio left, text right */}
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'minmax(0, 1.05fr) minmax(0, 1fr)',
-          gap: 96,
-          alignItems: 'start',
-        }}
-      >
+      {/* Two-column body — portfolio left, text right (stacks on mobile) */}
+      <div className="absd-nosotros-body">
         {/* Portfolio panel — anchored to the left edge of the viewport.
             Replaces the old photo: the work IS the portrait. */}
-        <div
-          style={{
-            position: 'relative',
-            borderTop: '1px solid var(--abir-cream-whisper)',
-            borderBottom: '1px solid var(--abir-cream-whisper)',
-            borderRight: '1px solid var(--abir-cream-whisper)',
-            display: 'flex',
-            flexDirection: 'column',
-          }}
-        >
+        <div className="absd-portfolio">
           {/* Header */}
-          <div
-            style={{
-              padding: '24px 40px 16px 40px',
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'baseline',
-              borderBottom: '1px solid var(--abir-cream-whisper)',
-            }}
-          >
+          <div className="absd-portfolio-head">
             <span className="caps">Donde vive el trabajo</span>
             <span className="caps">06 / 06</span>
           </div>
@@ -119,24 +95,8 @@ export default function NosotrosPage() {
           {/* Items */}
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             {portfolio.map((p, i) => (
-              <div
-                key={p.inst}
-                style={{
-                  padding: '20px 40px',
-                  borderBottom:
-                    i < portfolio.length - 1
-                      ? '1px solid var(--abir-cream-whisper)'
-                      : 'none',
-                  display: 'grid',
-                  gridTemplateColumns: '44px 1fr',
-                  gap: 16,
-                  alignItems: 'start',
-                }}
-              >
-                <span
-                  className="caps"
-                  style={{ paddingTop: 4 }}
-                >
+              <div key={p.inst} className="absd-portfolio-row">
+                <span className="caps" style={{ paddingTop: 4 }}>
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 <div>
@@ -185,22 +145,17 @@ export default function NosotrosPage() {
           </div>
 
           {/* Footnote */}
-          <div
-            style={{
-              padding: '14px 40px',
-              borderTop: '1px solid var(--abir-cream-whisper)',
-            }}
-          >
+          <div className="absd-portfolio-foot">
             <span className="caps">Lambaré, Paraguay · UTC−03</span>
           </div>
         </div>
 
         {/* Text column */}
-        <div style={{ paddingRight: 96, paddingTop: 16 }}>
+        <div className="absd-text-col">
           <h1
             className="voice"
             style={{
-              fontSize: 'clamp(36px, 4vw, 56px)',
+              fontSize: 'clamp(34px, 7vw, 56px)',
               margin: 0,
               marginBottom: 32,
               maxWidth: 480,
@@ -212,7 +167,7 @@ export default function NosotrosPage() {
           <p
             className="voice"
             style={{
-              fontSize: 21,
+              fontSize: 'clamp(18px, 5vw, 21px)',
               lineHeight: 1.45,
               color: 'var(--abir-cream-muted)',
               maxWidth: 480,
@@ -258,7 +213,7 @@ export default function NosotrosPage() {
                 </span>
                 <span
                   className="voice"
-                  style={{ fontSize: 18, lineHeight: 1.4 }}
+                  style={{ fontSize: 'clamp(16px, 4.5vw, 18px)', lineHeight: 1.4 }}
                 >
                   {line}
                 </span>

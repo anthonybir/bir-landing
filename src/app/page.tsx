@@ -43,10 +43,9 @@ export default function ABNHome() {
 
   return (
     <section
-      className="absd-section absd-ticks absd-fullbleed"
+      className="absd-section absd-ticks absd-fullbleed absd-page-pad"
       style={{
         minHeight: '100dvh',
-        padding: '56px 96px',
         display: 'grid',
         gridTemplateRows: 'auto 1fr auto auto',
         gap: '0',
@@ -54,13 +53,7 @@ export default function ABNHome() {
       aria-label="ABN"
     >
       {/* ── Identity strip ─────────────────────── */}
-      <header
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'baseline',
-        }}
-      >
+      <header className="absd-frame">
         <span className="caps">
           <Link href="/nosotros">anthony bir</Link>
           &nbsp;/&nbsp; ABN
@@ -69,11 +62,11 @@ export default function ABNHome() {
       </header>
 
       {/* ── Hero voice ─────────────────────────── */}
-      <div style={{ paddingTop: 80, maxWidth: 720 }}>
+      <div style={{ paddingTop: 'clamp(48px, 10vw, 80px)', maxWidth: 720 }}>
         <h1
           className="voice"
           style={{
-            fontSize: 'clamp(40px, 6vw, 72px)',
+            fontSize: 'clamp(36px, 7vw, 72px)',
             margin: 0,
           }}
         >
@@ -87,7 +80,7 @@ export default function ABNHome() {
         <p
           className="voice"
           style={{
-            fontSize: 19,
+            fontSize: 'clamp(17px, 4.5vw, 19px)',
             lineHeight: 1.35,
             color: 'var(--abir-cream-muted)',
             maxWidth: 460,
@@ -100,29 +93,13 @@ export default function ABNHome() {
       </div>
 
       {/* ── Three proofs ───────────────────────── */}
-      <div style={{ paddingBottom: 48 }}>
+      <div style={{ paddingBottom: 'clamp(32px, 6vw, 48px)' }}>
         <div className="caps" style={{ marginBottom: 24 }}>
           Sistemas en producción
         </div>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            borderTop: '1px solid var(--abir-cream-whisper)',
-          }}
-        >
-          {proofs.map((p, i) => (
-            <div
-              key={p.num}
-              style={{
-                paddingTop: 20,
-                paddingRight: 32,
-                paddingBottom: 0,
-                paddingLeft: i > 0 ? 32 : 0,
-                borderRight:
-                  i < 2 ? '1px solid var(--abir-cream-whisper)' : 'none',
-              }}
-            >
+        <div className="absd-proofs">
+          {proofs.map((p) => (
+            <div key={p.num}>
               <div
                 style={{
                   display: 'flex',
@@ -143,7 +120,7 @@ export default function ABNHome() {
               </div>
               <div
                 className="voice"
-                style={{ fontSize: 19, lineHeight: 1.3 }}
+                style={{ fontSize: 'clamp(17px, 4.5vw, 19px)', lineHeight: 1.3 }}
               >
                 {p.line}
               </div>
@@ -153,16 +130,7 @@ export default function ABNHome() {
       </div>
 
       {/* ── CTA — single decision (stacked) ────── */}
-      <footer
-        style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr auto',
-          gap: 64,
-          alignItems: 'start',
-          borderTop: '1px solid var(--abir-cream-whisper)',
-          paddingTop: 20,
-        }}
-      >
+      <footer className="absd-cta-row">
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
           <span className="caps">Diagnóstico</span>
           <a
@@ -170,7 +138,7 @@ export default function ABNHome() {
             target="_blank"
             rel="noopener noreferrer"
             className="absd-link"
-            style={{ fontSize: 24, alignSelf: 'flex-start' }}
+            style={{ fontSize: 'clamp(20px, 5vw, 24px)', alignSelf: 'flex-start' }}
           >
             Coordinar por WhatsApp
           </a>
@@ -185,23 +153,16 @@ export default function ABNHome() {
             respuesta habitual en 48h hábiles.
           </span>
         </div>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 8,
-            textAlign: 'right',
-          }}
-        >
+        <div className="absd-cta-secondary">
           <span className="caps">O escribime</span>
           <a
             href="mailto:anthony@bir.com.py"
             className="voice"
             style={{
-              fontSize: 19,
+              fontSize: 'clamp(17px, 4.5vw, 19px)',
               color: 'var(--abir-cream)',
               textDecoration: 'none',
-              whiteSpace: 'nowrap',
+              wordBreak: 'break-word',
             }}
           >
             anthony@bir.com.py

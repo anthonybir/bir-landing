@@ -1009,3 +1009,164 @@ body {
 .absd-section a.caps:hover {
   border-bottom-color: var(--abir-cream);
 }
+
+/* ============================================================
+   ABSD — mobile responsive layout primitives.
+   "Ma" still rules: empty space scales down, never disappears.
+   ============================================================ */
+
+/* Page-level vertical/horizontal pad that scales smoothly. */
+.absd-page-pad {
+  padding: clamp(28px, 6vw, 56px) clamp(20px, 6vw, 96px);
+}
+.absd-page-pad--bottom-extra {
+  padding-bottom: clamp(48px, 10vw, 96px);
+}
+
+/* Identity strip — wrap on narrow screens instead of truncating. */
+.absd-frame {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px 16px;
+  flex-wrap: wrap;
+}
+
+/* 3-up proof grid (home). Stacks below 768px with bottom borders;
+   becomes a 3-col grid with right borders on tablet+. */
+.absd-proofs {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-top: 1px solid var(--abir-cream-whisper);
+}
+.absd-proofs > * {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--abir-cream-whisper);
+}
+.absd-proofs > *:last-child {
+  border-bottom: 0;
+}
+@media (min-width: 768px) {
+  .absd-proofs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .absd-proofs > * {
+    padding: 20px 32px 0 32px;
+    border-bottom: 0;
+    border-right: 1px solid var(--abir-cream-whisper);
+  }
+  .absd-proofs > *:first-child { padding-left: 0; }
+  .absd-proofs > *:last-child { padding-right: 0; border-right: 0; }
+}
+
+/* Stacked CTA footer (home). Single column on mobile,
+   1fr/auto on desktop. */
+.absd-cta-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: start;
+  border-top: 1px solid var(--abir-cream-whisper);
+  padding-top: 20px;
+}
+@media (min-width: 768px) {
+  .absd-cta-row {
+    grid-template-columns: 1fr auto;
+    gap: 64px;
+  }
+}
+.absd-cta-secondary {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+@media (min-width: 768px) {
+  .absd-cta-secondary { text-align: right; }
+}
+
+/* /nosotros — portfolio + text body. */
+.absd-nosotros-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: start;
+}
+@media (min-width: 768px) {
+  .absd-nosotros-body {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    gap: 96px;
+  }
+}
+
+.absd-portfolio {
+  position: relative;
+  border-top: 1px solid var(--abir-cream-whisper);
+  border-bottom: 1px solid var(--abir-cream-whisper);
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .absd-portfolio {
+    border-right: 1px solid var(--abir-cream-whisper);
+  }
+}
+
+.absd-portfolio-head,
+.absd-portfolio-foot {
+  padding: 18px clamp(20px, 5vw, 40px);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+.absd-portfolio-head {
+  border-bottom: 1px solid var(--abir-cream-whisper);
+}
+.absd-portfolio-foot {
+  border-top: 1px solid var(--abir-cream-whisper);
+}
+
+.absd-portfolio-row {
+  padding: 20px clamp(20px, 5vw, 40px);
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 12px;
+  align-items: start;
+  border-bottom: 1px solid var(--abir-cream-whisper);
+}
+.absd-portfolio-row:last-child {
+  border-bottom: 0;
+}
+@media (min-width: 768px) {
+  .absd-portfolio-row {
+    grid-template-columns: 44px 1fr;
+    gap: 16px;
+  }
+}
+
+.absd-text-col {
+  padding: 8px clamp(20px, 6vw, 24px) 0;
+}
+@media (min-width: 768px) {
+  .absd-text-col {
+    padding: 16px 96px 0 0;
+  }
+}
+
+/* Decorative corner ticks shrink on mobile so they never crowd content. */
+@media (max-width: 767px) {
+  .absd-ticks::before,
+  .absd-ticks::after {
+    width: 32px;
+    height: 32px;
+    top: 12px;
+  }
+  .absd-ticks::before { left: 12px; }
+  .absd-ticks::after  { right: 12px; }
+  .absd-tick-bl {
+    width: 32px;
+    height: 32px;
+    bottom: 12px;
+    left: 12px;
+  }
+}
