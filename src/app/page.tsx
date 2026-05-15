@@ -1,15 +1,14 @@
-// src/app/page.tsx — ABN bone & ink home (one screen, four elements)
+// src/app/page.tsx - ABN bone & ink home
 //
 // Replace the existing src/app/page.tsx with this file.
 // Requires the additions in _handoff/globals.absd.additions.css.
 
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import { WHATSAPP_URL } from './WhatsAppFloat';
 
 export const metadata: Metadata = {
-  title: 'ABN — Anthony Bir',
+  title: 'ABN | Anthony Bir',
   description: 'Estructura donde otros improvisan. Sistemas para instituciones de escala humana.',
 };
 
@@ -34,8 +33,8 @@ function todayInAsuncion(): string {
 }
 
 const proofs = [
-  { num: '01', inst: 'AENA', line: 'Planificación inicial-bachillerato, ~300 alumnos.' },
-  { num: '02', inst: 'IPUPY', line: 'Tesorería doble-entrada, ~30 iglesias.' },
+  { num: '01', inst: 'AENA', line: 'Planificación de inicial a bachillerato, ~300 alumnos.' },
+  { num: '02', inst: 'IPUPY', line: 'Tesorería de doble entrada, ~30 iglesias.' },
   { num: '03', inst: 'IBA', line: 'Marco curricular y editorial.' },
 ] as const;
 
@@ -53,7 +52,7 @@ export default function ABNHome() {
       }}
       aria-label="ABN"
     >
-      {/* ── Identity strip ─────────────────────── */}
+      {/* Identity strip */}
       <header className="absd-frame">
         <span className="caps">
           <Link href="/nosotros">anthony bir</Link>
@@ -62,7 +61,7 @@ export default function ABNHome() {
         <span className="caps">{today} &nbsp;·&nbsp; Lambaré, py</span>
       </header>
 
-      {/* ── Hero voice + institutional artifact ── */}
+      {/* Hero voice */}
       <div className="absd-hero-lockup">
         <div>
           <h1
@@ -92,39 +91,15 @@ export default function ABNHome() {
             anthony bir es ABN. Una persona, una firma, sistemas para
             instituciones de escala humana.
           </p>
-        </div>
-
-        <aside className="absd-artifact" aria-label="Evidencia institucional">
-          <div className="absd-artifact-head">
-            <Image
-              src="/logos/abn-mark-white.svg"
-              alt=""
-              width={48}
-              height={41}
-              aria-hidden
-            />
-            <span className="caps">registro operativo</span>
+          <div className="absd-hero-evidence" aria-label="Evidencia institucional">
+            <span className="caps">AENA</span>
+            <strong>del 70% <span>al</span> 2.9%</strong>
+            <span>morosidad institucional recuperada en tres años.</span>
           </div>
-          <dl className="absd-ledger">
-            <div>
-              <dt className="caps">Morosidad AENA</dt>
-              <dd className="voice">
-                70% <span className="absd-signal">→</span> 2.9%
-              </dd>
-            </div>
-            <div>
-              <dt className="caps">Alcance vivo</dt>
-              <dd className="voice">colegio, iglesia, seminario</dd>
-            </div>
-            <div>
-              <dt className="caps">Criterio</dt>
-              <dd className="voice">primero adentro</dd>
-            </div>
-          </dl>
-        </aside>
+        </div>
       </div>
 
-      {/* ── Three proofs ───────────────────────── */}
+      {/* Three proofs */}
       <div style={{ paddingBottom: 'clamp(32px, 6vw, 48px)' }}>
         <div className="caps" style={{ marginBottom: 24 }}>
           Sistemas en producción
@@ -161,7 +136,7 @@ export default function ABNHome() {
         </div>
       </div>
 
-      {/* ── CTA — single decision (stacked) ────── */}
+      {/* CTA */}
       <footer className="absd-cta-row">
         <a
           href={WHATSAPP_URL}
@@ -183,7 +158,7 @@ export default function ABNHome() {
             <span>Para conversaciones con más contexto.</span>
           </a>
           <Link href="/nosotros" className="caps">
-            sobre anthony →
+            sobre anthony
           </Link>
         </div>
       </footer>

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  /* Warm gray scale — hue shifts 39° (warm beige) → 20° (warm charcoal) */
+  /* Warm gray scale: hue shifts from 39deg warm beige to 20deg warm charcoal. */
   --gray-50:  hsl(39 15% 98%);
   --gray-100: hsl(37 12% 95%);
   --gray-200: hsl(35 10% 90%);
@@ -18,7 +18,7 @@
   --atmosphere-top: hsl(39 15% 98%);
   --atmosphere-bottom: hsl(37 13% 97%);
 
-  /* Semantic aliases → gray scale */
+  /* Semantic aliases for the gray scale. */
   --background: var(--gray-50);
   --foreground: var(--gray-900);
 
@@ -32,7 +32,7 @@
   --accent-darker: hsl(173 58% 15%);
   --accent-foreground: hsl(0 0% 100%);
 
-  /* Signal — warm counterpoint, used scarcely (AENA color-Ma principle) */
+  /* Signal: warm counterpoint, used scarcely. */
   --signal: #E9B031;
   --signal-light: #F4C960;
 
@@ -53,7 +53,7 @@
   --radius-2xl: 1.5rem;
   --radius-full: 9999px;
 
-  /* Hikari shadow system (光) — warm-tinted, light as material */
+  /* Hikari shadow system: warm-tinted, light as material. */
   --shadow-xs: 0 1px 2px hsl(20 12% 10% / 0.04);
   --shadow-sm: 0 2px 4px hsl(20 12% 10% / 0.06);
   --shadow-md: 0 4px 8px hsl(20 12% 10% / 0.08);
@@ -171,7 +171,7 @@ body {
   }
 }
 /* ============================================================
-   ABN — bone & ink additions (ABSD)
+   ABN bone and ink additions (ABSD)
    Append to globals.css (after the existing :root block).
    These tokens coexist with the warm-gray system; the new
    home + /nosotros opt into them via .absd / .absd-section.
@@ -203,7 +203,7 @@ body {
   background: var(--abir-teal);
 }
 
-/* Voice — controlled sans display, regular upright posture. */
+/* Voice: controlled sans display, regular upright posture. */
 .absd .voice,
 .absd-section .voice {
   font-family: var(--font-sans);
@@ -215,7 +215,7 @@ body {
   color: var(--abir-cream);
 }
 
-/* Caps — sans, uppercase, 0.3em tracking. Institutional only. */
+/* Caps: sans, uppercase, 0.3em tracking. Institutional only. */
 .absd .caps,
 .absd-section .caps {
   font-family: var(--font-sans);
@@ -227,7 +227,7 @@ body {
   color: var(--abir-cream-muted);
 }
 
-/* Hairline — right-anchored or centered; never left-anchored except as
+/* Hairline: right-anchored or centered; never left-anchored except as
    structural underline of a left-anchored block (use .hl--left only there). */
 .absd .hl,
 .absd-section .hl {
@@ -245,7 +245,7 @@ body {
   color: var(--signal);
 }
 
-/* Corner ticks — pseudo-element pair on the section root.
+/* Corner ticks: pseudo-element pair on the section root.
    Omit one corner intentionally; here we omit bottom-right by default. */
 .absd-ticks {
   position: relative;
@@ -279,7 +279,7 @@ body {
   pointer-events: none;
 }
 
-/* Underlined CTA — the only "button" form in the bone & ink scope. */
+/* Underlined CTA: the only "button" form in the bone and ink scope. */
 .absd-link {
   font-family: var(--font-sans);
   font-style: normal;
@@ -293,7 +293,7 @@ body {
 }
 .absd-link:hover { opacity: 0.78; }
 
-/* Caps links — inherit color, whisper underline on hover. */
+/* Caps links: inherit color, whisper underline on hover. */
 .absd-section .caps a,
 .absd-section a.caps {
   color: inherit;
@@ -307,82 +307,42 @@ body {
 }
 
 .absd-hero-lockup {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: clamp(32px, 7vw, 88px);
-  align-items: end;
   padding-top: clamp(48px, 10vw, 80px);
+  max-width: 760px;
 }
 
-@media (min-width: 900px) {
-  .absd-hero-lockup {
-    grid-template-columns: minmax(0, 720px) minmax(280px, 0.52fr);
-  }
-}
-
-.absd-artifact {
-  position: relative;
-  overflow: hidden;
+.absd-hero-evidence {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 6px 18px;
+  max-width: 460px;
+  margin-top: 28px;
+  padding: 14px 0;
   border-top: 1px solid var(--abir-cream-whisper);
   border-bottom: 1px solid var(--abir-cream-whisper);
-  background:
-    linear-gradient(90deg, rgba(233, 176, 49, 0.1), transparent 34%),
-    rgba(239, 230, 210, 0.035);
 }
 
-.absd-artifact::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(var(--abir-cream-whisper) 1px, transparent 1px),
-    linear-gradient(90deg, var(--abir-cream-whisper) 1px, transparent 1px);
-  background-size: 44px 44px;
-  opacity: 0.08;
-  pointer-events: none;
+.absd-hero-evidence strong {
+  color: var(--abir-cream);
+  font-family: var(--font-sans);
+  font-size: clamp(24px, 4vw, 34px);
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  line-height: 1;
 }
 
-.absd-artifact > * {
-  position: relative;
+.absd-hero-evidence strong span {
+  color: var(--signal);
+  font-size: 0.72em;
+  letter-spacing: 0;
 }
 
-.absd-artifact-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 18px 0;
-  border-bottom: 1px solid var(--abir-cream-whisper);
-}
-
-.absd-artifact-head img {
-  opacity: 0.9;
-}
-
-.absd-ledger {
-  margin: 0;
-}
-
-.absd-ledger > div {
-  display: grid;
-  grid-template-columns: minmax(104px, 0.44fr) 1fr;
-  gap: 16px;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--abir-cream-whisper);
-}
-
-.absd-ledger > div:last-child {
-  border-bottom: 0;
-}
-
-.absd-ledger dt,
-.absd-ledger dd {
-  margin: 0;
-}
-
-.absd-ledger dd {
-  font-size: clamp(18px, 3vw, 24px);
-  line-height: 1.08;
+.absd-hero-evidence > span:last-child {
+  grid-column: 2;
+  color: var(--abir-cream-muted);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 .absd-contact {
@@ -453,6 +413,8 @@ body {
 
 .absd-proof-strip strong span {
   color: var(--signal);
+  font-size: 0.72em;
+  letter-spacing: 0;
 }
 
 .absd-proof-strip > span:last-child {
@@ -464,7 +426,7 @@ body {
 }
 
 /* ============================================================
-   ABSD — mobile responsive layout primitives.
+   ABSD mobile responsive layout primitives.
    "Ma" still rules: empty space scales down, never disappears.
    ============================================================ */
 
@@ -476,7 +438,7 @@ body {
   padding-bottom: clamp(48px, 10vw, 96px);
 }
 
-/* Identity strip — wrap on narrow screens instead of truncating. */
+/* Identity strip: wrap on narrow screens instead of truncating. */
 .absd-frame {
   display: flex;
   justify-content: space-between;
@@ -540,7 +502,7 @@ body {
   }
 }
 
-/* /nosotros — portfolio + text body. */
+/* /nosotros: portfolio and text body. */
 .absd-nosotros-body {
   display: grid;
   grid-template-columns: 1fr;

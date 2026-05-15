@@ -27,7 +27,7 @@ const satoshi = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL('https://bir.com.py'),
   title: "ABN | Agencia Bir Nuñez - Consultoría en Transformación Institucional",
-  description: "Consultoría institucional en Latinoamérica. Sistemas donde la institución define el estándar y la tecnología lo ejecuta — educación, tecnología, y desarrollo institucional.",
+  description: "Consultoría institucional en Latinoamérica. Sistemas donde la institución define el estándar y la tecnología lo ejecuta: educación, tecnología y desarrollo institucional.",
   openGraph: {
     title: "ABN | Consultoría en Transformación Institucional",
     description: "Estructura donde otros improvisan",

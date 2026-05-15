@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Nosotros · ABN — Anthony Bir',
+  title: 'Nosotros · ABN | Anthony Bir',
   description:
-    'Anthony Bir es ABN. Una persona, varias instituciones — educación, pastoral, formación, consultoría, software.',
+    'Anthony Bir es ABN. Una persona, varias instituciones: educación, pastoral, formación, consultoría y software.',
 };
 
 const portfolio = [
@@ -12,7 +12,7 @@ const portfolio = [
     tag: 'Educación',
     inst: 'AENA',
     role: 'Director Institucional · Presidente del Consejo',
-    line: 'Rescate 2020. ≈ 300 alumnos bajo MEAA 3.0 (sin tareas, sin exámenes, ABP). Morosidad 70% → 2.9%.',
+    line: 'Rescate 2020. ≈ 300 alumnos bajo MEAA 3.0 (sin tareas, sin exámenes, ABP). Morosidad del 70% al 2.9%.',
   },
   {
     tag: 'Pastoral',
@@ -78,14 +78,13 @@ export default function NosotrosPage() {
           &nbsp;/&nbsp; ABN &nbsp;/&nbsp; nosotros
         </span>
         <Link href="/" className="caps" style={{ textDecoration: 'none' }}>
-          ← Volver a la portada
+          Volver a la portada
         </Link>
       </header>
 
-      {/* Two-column body — portfolio left, text right (stacks on mobile) */}
+      {/* Two-column body: portfolio left, text right. */}
       <div className="absd-nosotros-body">
-        {/* Portfolio panel — anchored to the left edge of the viewport.
-            Replaces the old photo: the work IS the portrait. */}
+        {/* Portfolio panel. The work is the portrait. */}
         <div className="absd-portfolio">
           {/* Header */}
           <div className="absd-portfolio-head">
@@ -147,7 +146,7 @@ export default function NosotrosPage() {
 
           {/* Footnote */}
           <div className="absd-portfolio-foot">
-            <span className="caps">Lambaré, Paraguay · UTC−03</span>
+            <span className="caps">Lambaré, Paraguay · UTC-03</span>
           </div>
         </div>
 
@@ -177,18 +176,18 @@ export default function NosotrosPage() {
               textWrap: 'pretty',
             }}
           >
-            Veinte años corporativos en Heinz y Thermo Fisher — gestión de
-            proyectos internacionales, migraciones JD Edwards a SAP — antes de
+            Veinte años corporativos en Heinz y Thermo Fisher: gestión de
+            proyectos internacionales, migraciones JD Edwards a SAP, antes de
             volver a Paraguay. En 2020 dirigí el rescate de AENA: morosidad
             institucional{' '}
-            <span style={{ color: 'var(--abir-cream)' }}>70% → 2.9%</span> en
+            <span style={{ color: 'var(--abir-cream)' }}>del 70% al 2.9%</span> en
             tres años. Hoy construyo sistemas que viven primero dentro de mis
             propias instituciones; cuando sobreviven ahí, llegan al cliente.
           </p>
 
           <div className="absd-proof-strip" aria-label="Prueba operativa">
             <span className="caps">prueba</span>
-            <strong>70% <span>→</span> 2.9%</strong>
+            <strong>del 70% <span>al</span> 2.9%</strong>
             <span>morosidad institucional recuperada en tres años.</span>
           </div>
 
