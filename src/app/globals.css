@@ -306,6 +306,47 @@ body {
   border-bottom-color: var(--abir-cream);
 }
 
+.absd-hero-mark {
+  position: absolute;
+  top: clamp(188px, 30vh, 300px);
+  right: clamp(112px, 17vw, 320px);
+  width: clamp(132px, 13vw, 220px);
+  padding: clamp(18px, 2vw, 28px);
+  background: var(--abir-cream);
+  opacity: 0.92;
+  pointer-events: none;
+}
+
+.absd-hero-mark::before,
+.absd-hero-mark::after {
+  content: "";
+  position: absolute;
+  border: 1px solid var(--abir-cream);
+  opacity: 0.72;
+}
+
+.absd-hero-mark::before {
+  inset: -22px auto auto -22px;
+  width: 64px;
+  height: 64px;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.absd-hero-mark::after {
+  inset: auto -22px -22px auto;
+  width: 64px;
+  height: 64px;
+  border-left: 0;
+  border-top: 0;
+}
+
+.absd-hero-mark img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .absd-hero-lockup {
   padding-top: clamp(48px, 10vw, 80px);
   max-width: 760px;
@@ -586,5 +627,8 @@ body {
     height: 32px;
     bottom: 12px;
     left: 12px;
+  }
+  .absd-hero-mark {
+    display: none;
   }
 }

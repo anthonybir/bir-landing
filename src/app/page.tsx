@@ -4,6 +4,7 @@
 // Requires the additions in _handoff/globals.absd.additions.css.
 
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { WHATSAPP_URL } from './WhatsAppFloat';
 
@@ -60,6 +61,16 @@ export default function ABNHome() {
         </span>
         <span className="caps">{today} &nbsp;·&nbsp; Lambaré, py</span>
       </header>
+
+      <div className="absd-hero-mark" aria-hidden>
+        <Image
+          src="/logos/abn-mark-dark.svg"
+          alt=""
+          width={220}
+          height={188}
+          priority
+        />
+      </div>
 
       {/* Hero voice */}
       <div className="absd-hero-lockup">
