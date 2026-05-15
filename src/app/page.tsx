@@ -4,6 +4,7 @@
 // Requires the additions in _handoff/globals.absd.additions.css.
 
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { WHATSAPP_URL } from './WhatsAppFloat';
 
@@ -33,7 +34,7 @@ function todayInAsuncion(): string {
 }
 
 const proofs = [
-  { num: '01', inst: 'AENA', line: 'AULA — planificación inicial-bachillerato, ~300 alumnos.' },
+  { num: '01', inst: 'AENA', line: 'Planificación inicial-bachillerato, ~300 alumnos.' },
   { num: '02', inst: 'IPUPY', line: 'Tesorería doble-entrada, ~30 iglesias.' },
   { num: '03', inst: 'IBA', line: 'Marco curricular y editorial.' },
 ] as const;
@@ -61,35 +62,66 @@ export default function ABNHome() {
         <span className="caps">{today} &nbsp;·&nbsp; Lambaré, py</span>
       </header>
 
-      {/* ── Hero voice ─────────────────────────── */}
-      <div style={{ paddingTop: 'clamp(48px, 10vw, 80px)', maxWidth: 720 }}>
-        <h1
-          className="voice"
-          style={{
-            fontSize: 'clamp(36px, 7vw, 72px)',
-            margin: 0,
-          }}
-        >
-          Estructura donde otros improvisan.
-        </h1>
-        <span
-          className="hl"
-          style={{ marginTop: 32, marginBottom: 24 }}
-          aria-hidden
-        />
-        <p
-          className="voice"
-          style={{
-            fontSize: 'clamp(17px, 4.5vw, 19px)',
-            lineHeight: 1.35,
-            color: 'var(--abir-cream-muted)',
-            maxWidth: 460,
-            margin: 0,
-          }}
-        >
-          anthony bir es ABN. Una persona, una firma, sistemas para
-          instituciones de escala humana.
-        </p>
+      {/* ── Hero voice + institutional artifact ── */}
+      <div className="absd-hero-lockup">
+        <div>
+          <h1
+            className="voice"
+            style={{
+              fontSize: 'clamp(36px, 7vw, 72px)',
+              margin: 0,
+            }}
+          >
+            Estructura donde otros improvisan.
+          </h1>
+          <span
+            className="hl"
+            style={{ marginTop: 32, marginBottom: 24 }}
+            aria-hidden
+          />
+          <p
+            className="voice"
+            style={{
+              fontSize: 'clamp(17px, 4.5vw, 19px)',
+              lineHeight: 1.35,
+              color: 'var(--abir-cream-muted)',
+              maxWidth: 460,
+              margin: 0,
+            }}
+          >
+            anthony bir es ABN. Una persona, una firma, sistemas para
+            instituciones de escala humana.
+          </p>
+        </div>
+
+        <aside className="absd-artifact" aria-label="Evidencia institucional">
+          <div className="absd-artifact-head">
+            <Image
+              src="/logos/abn-mark-white.svg"
+              alt=""
+              width={48}
+              height={41}
+              aria-hidden
+            />
+            <span className="caps">registro operativo</span>
+          </div>
+          <dl className="absd-ledger">
+            <div>
+              <dt className="caps">Morosidad AENA</dt>
+              <dd className="voice">
+                70% <span className="absd-signal">→</span> 2.9%
+              </dd>
+            </div>
+            <div>
+              <dt className="caps">Alcance vivo</dt>
+              <dd className="voice">colegio, iglesia, seminario</dd>
+            </div>
+            <div>
+              <dt className="caps">Criterio</dt>
+              <dd className="voice">primero adentro</dd>
+            </div>
+          </dl>
+        </aside>
       </div>
 
       {/* ── Three proofs ───────────────────────── */}
@@ -131,47 +163,26 @@ export default function ABNHome() {
 
       {/* ── CTA — single decision (stacked) ────── */}
       <footer className="absd-cta-row">
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+        <a
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absd-contact absd-contact--primary"
+        >
           <span className="caps">Diagnóstico</span>
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="absd-link"
-            style={{ fontSize: 'clamp(20px, 5vw, 24px)', alignSelf: 'flex-start' }}
-          >
-            Coordinar por WhatsApp
-          </a>
-          <span
-            className="voice"
-            style={{
-              fontSize: 14,
-              color: 'var(--abir-cream-muted)',
-              marginTop: 2,
-            }}
-          >
-            respuesta habitual en 48h hábiles.
-          </span>
-        </div>
+          <strong>Coordinar por WhatsApp</strong>
+          <span>Respuesta habitual en 48h hábiles.</span>
+        </a>
         <div className="absd-cta-secondary">
-          <span className="caps">O escribime</span>
           <a
             href="mailto:anthony@bir.com.py"
-            className="voice"
-            style={{
-              fontSize: 'clamp(17px, 4.5vw, 19px)',
-              color: 'var(--abir-cream)',
-              textDecoration: 'none',
-              wordBreak: 'break-word',
-            }}
+            className="absd-contact absd-contact--secondary"
           >
-            anthony@bir.com.py
+            <span className="caps">O escribime</span>
+            <strong>anthony@bir.com.py</strong>
+            <span>Para conversaciones con más contexto.</span>
           </a>
-          <Link
-            href="/nosotros"
-            className="caps"
-            style={{ marginTop: 6 }}
-          >
+          <Link href="/nosotros" className="caps">
             sobre anthony →
           </Link>
         </div>

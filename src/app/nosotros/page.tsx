@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Nosotros · ABN — Anthony Bir',
@@ -54,7 +55,7 @@ const operative = [
 export default function NosotrosPage() {
   return (
     <section
-      className="absd-section absd-fullbleed"
+      className="absd-section absd-ticks absd-fullbleed"
       style={{
         minHeight: '100dvh',
         position: 'relative',
@@ -73,12 +74,12 @@ export default function NosotrosPage() {
         }}
       >
         <span className="caps">
-          <a href="/">anthony bir</a>
+          <Link href="/">anthony bir</Link>
           &nbsp;/&nbsp; ABN &nbsp;/&nbsp; nosotros
         </span>
-        <a href="/" className="caps" style={{ textDecoration: 'none' }}>
+        <Link href="/" className="caps" style={{ textDecoration: 'none' }}>
           ← Volver a la portada
-        </a>
+        </Link>
       </header>
 
       {/* Two-column body — portfolio left, text right (stacks on mobile) */}
@@ -184,6 +185,12 @@ export default function NosotrosPage() {
             tres años. Hoy construyo sistemas que viven primero dentro de mis
             propias instituciones; cuando sobreviven ahí, llegan al cliente.
           </p>
+
+          <div className="absd-proof-strip" aria-label="Prueba operativa">
+            <span className="caps">prueba</span>
+            <strong>70% <span>→</span> 2.9%</strong>
+            <span>morosidad institucional recuperada en tres años.</span>
+          </div>
 
           <div className="caps" style={{ marginBottom: 16 }}>
             Cómo trabajo

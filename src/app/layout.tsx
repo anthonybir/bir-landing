@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { Instrument_Sans, Instrument_Serif, Geist_Mono } from "next/font/google";
+import { Instrument_Sans, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
-import NavBar from "./NavBar";
-import Footer from "./Footer";
 import WhatsAppFloat from "./WhatsAppFloat";
 import "./globals.css";
 
@@ -10,14 +8,6 @@ const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
   variable: "--font-instrument",
   display: "swap",
-});
-
-const instrumentSerif = Instrument_Serif({
-  subsets: ["latin"],
-  variable: "--font-instrument-serif",
-  display: "swap",
-  weight: "400",
-  style: ["normal", "italic"],
 });
 
 const geistMono = Geist_Mono({
@@ -55,13 +45,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${instrumentSans.variable} ${instrumentSerif.variable} ${geistMono.variable} ${satoshi.variable}`}>
+    <html lang="es" className={`${instrumentSans.variable} ${geistMono.variable} ${satoshi.variable}`}>
       <body className="antialiased">
         <div className="min-h-screen bg-background text-foreground">
-          <NavBar />
           <main>{children}</main>
           <WhatsAppFloat />
-          <Footer />
         </div>
       </body>
     </html>
