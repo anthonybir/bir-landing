@@ -26,6 +26,18 @@
 
 # brand source assets
 /ABN
+/ABN_kit
+/design_philosophy_absd_v7
+
+# local scratch / tooling
+/.codex
+/.playwright-cli
+/IMG_*.jpeg
+/IMG_*.JPG
+
+# blog content workspace (only published posts under content/blog/published are tracked)
+/content/blog/aena
+/content/blog/ipupy
 
 # debug
 npm-debug.log*
