@@ -2,232 +2,135 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Nosotros · ABN | Anthony Bir',
+  title: 'Nosotros | ABN · Agencia Bir Núñez',
   description:
-    'Anthony Bir es ABN. Una persona, varias instituciones: educación, pastoral, formación, consultoría y software.',
+    'ABN es una agencia familiar: dirección, pedagogía, derecho y finanzas en una sola unidad. El trabajo es el retrato.',
 };
+
+const team = [
+  {
+    name: 'Anthony Bir',
+    area: 'Dirección · Arquitectura de sistemas',
+    line: 'Director institucional de AENA y arquitecto de los sistemas que ABN pone en producción. La persona que firma es la que opera.',
+  },
+  {
+    name: 'Diana',
+    area: 'Pedagogía',
+    line: 'Marco curricular MEAA 3.0: sin tareas, sin exámenes, ABP, alineado al MEC. En producción desde hace seis años.',
+  },
+  {
+    name: 'Danae',
+    area: 'Derecho',
+    line: 'Encuadre legal y regulatorio de cada implementación: contratos, cumplimiento y relación con el MEC.',
+  },
+  {
+    name: 'Stephanie',
+    area: 'Finanzas',
+    line: 'Operación financiera y cobranzas. La recuperación de morosidad de AENA pasó por este escritorio.',
+  },
+] as const;
 
 const portfolio = [
   {
     tag: 'Educación',
     inst: 'AENA',
-    role: 'Director Institucional · Presidente del Consejo',
-    line: 'Rescate 2020. ≈ 300 alumnos bajo MEAA 3.0 (sin tareas, sin exámenes, ABP). Morosidad del 70% al 2.9%.',
+    line: 'Rescate 2020. ~300 alumnos bajo MEAA 3.0. Morosidad del 70% al 2,9% en tres años.',
   },
   {
-    tag: 'Pastoral',
-    inst: 'Los Pentecostales de Lambaré',
-    role: 'Pastor',
-    line: 'Congregación pentecostal. Exégesis griega, lente progresista.',
+    tag: 'Tesorería',
+    inst: 'IPUPY',
+    line: 'Tesorería por partida doble para ~30 iglesias. Cierre mensual de un día.',
   },
   {
-    tag: 'Pastoral · nacional',
-    inst: 'IPU PY',
-    role: 'Tesorero Nacional',
-    line: 'Tesorería de doble entrada para 30 iglesias. tesoreria.ipupy.org.py.',
-  },
-  {
-    tag: 'Formación',
+    tag: 'Editorial',
     inst: 'IBA',
-    role: 'Marco curricular',
-    line: 'Documentos de formación pastoral y editorial, junto a Diana.',
-  },
-  {
-    tag: 'Consultoría',
-    inst: 'ABN',
-    role: 'Fundador · arquitecto',
-    line: 'Agencia familiar. Diana (pedagogía), Danae (derecho), Stephanie (financiero).',
+    line: 'Marco curricular y editorial de formación pastoral, multipaís.',
   },
   {
     tag: 'Software',
     inst: 'ABSD',
-    role: 'Bir Systems Design',
-    line: 'AENA_Admin, ipupy_admin, Kairós Live. Producción institucional.',
+    line: 'Anthony Bir System Designs: AENA_Admin, ipupy_admin, Kairós Live. Producción institucional.',
   },
 ] as const;
 
-const operative = [
+const principles = [
   'El criterio de la institución antes que la herramienta.',
-  'Construyo primero adentro; el cliente recibe lo que ya sobrevivió.',
-  'Sistemas que viven sin mí.',
+  'Construimos primero adentro; el cliente recibe lo que ya sobrevivió.',
+  'Sistemas que viven sin nosotros.',
 ] as const;
 
 export default function NosotrosPage() {
   return (
-    <section
-      className="absd-section absd-ticks absd-fullbleed"
-      style={{
-        minHeight: '100dvh',
-        position: 'relative',
-        paddingTop: 'clamp(28px, 6vw, 56px)',
-        paddingBottom: 'clamp(48px, 10vw, 96px)',
-      }}
-      aria-label="Sobre Anthony Bir"
-    >
-      {/* Top frame */}
-      <header
-        className="absd-frame"
-        style={{
-          paddingLeft: 'clamp(20px, 6vw, 96px)',
-          paddingRight: 'clamp(20px, 6vw, 96px)',
-          marginBottom: 'clamp(40px, 8vw, 80px)',
-        }}
-      >
-        <span className="caps">
-          <Link href="/">anthony bir</Link>
-          &nbsp;/&nbsp; ABN &nbsp;/&nbsp; nosotros
-        </span>
-        <Link href="/" className="caps" style={{ textDecoration: 'none' }}>
-          Volver a la portada
-        </Link>
-      </header>
+    <>
+      {/* Header */}
+      <section className="mx-auto max-w-6xl px-4 pb-16 pt-24 md:px-8">
+        <p className="label-caps settle mb-6">Nosotros</p>
+        <h1 className="display display-hero settle settle-2 max-w-3xl">
+          Una agencia familiar. Una sola dirección.
+        </h1>
+        <p className="settle settle-3 mt-8 max-w-xl font-sans text-base leading-relaxed text-gray-600">
+          ABN no es una red de freelancers. Es una unidad. Pedagogía, derecho y
+          finanzas bajo una dirección que también opera las instituciones que
+          presenta como casos. No vas a encontrar una foto acá. El trabajo es el
+          retrato.
+        </p>
+      </section>
 
-      {/* Two-column body: portfolio left, text right. */}
-      <div className="absd-nosotros-body">
-        {/* Portfolio panel. The work is the portrait. */}
-        <div className="absd-portfolio">
-          {/* Header */}
-          <div className="absd-portfolio-head">
-            <span className="caps">Donde vive el trabajo</span>
-            <span className="caps">06 / 06</span>
-          </div>
-
-          {/* Items */}
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            {portfolio.map((p, i) => (
-              <div key={p.inst} className="absd-portfolio-row">
-                <span className="caps" style={{ paddingTop: 4 }}>
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <div>
-                  <div
-                    style={{
-                      display: 'flex',
-                      alignItems: 'baseline',
-                      gap: 12,
-                      marginBottom: 6,
-                      flexWrap: 'wrap',
-                    }}
-                  >
-                    <span
-                      className="caps"
-                      style={{ color: 'var(--abir-cream)', fontSize: 12 }}
-                    >
-                      {p.inst}
-                    </span>
-                    <span
-                      className="caps"
-                      style={{ fontSize: 10, letterSpacing: '0.25em' }}
-                    >
-                      · {p.tag}
-                    </span>
-                  </div>
-                  <div
-                    className="voice"
-                    style={{
-                      fontSize: 14,
-                      lineHeight: 1.4,
-                      color: 'var(--abir-cream-muted)',
-                      marginBottom: 4,
-                    }}
-                  >
-                    {p.role}
-                  </div>
-                  <div
-                    className="voice"
-                    style={{ fontSize: 15, lineHeight: 1.4 }}
-                  >
-                    {p.line}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Footnote */}
-          <div className="absd-portfolio-foot">
-            <span className="caps">Lambaré, Paraguay · UTC-03</span>
-          </div>
+      {/* Team */}
+      <section className="mx-auto max-w-6xl px-4 pb-24 md:px-8" aria-label="Equipo">
+        <p className="label-caps mb-10">La unidad</p>
+        <div className="grid gap-6 md:grid-cols-2">
+          {team.map((t) => (
+            <article key={t.name} className="card p-6 md:p-8">
+              <h2 className="font-sans text-base font-semibold text-gray-900">{t.name}</h2>
+              <p className="label-caps mt-1">{t.area}</p>
+              <p className="mt-4 font-sans text-base leading-relaxed text-gray-600">{t.line}</p>
+            </article>
+          ))}
         </div>
+      </section>
 
-        {/* Text column */}
-        <div className="absd-text-col">
-          <h1
-            className="voice"
-            style={{
-              fontSize: 'clamp(34px, 7vw, 56px)',
-              margin: 0,
-              marginBottom: 32,
-              maxWidth: 480,
-            }}
-          >
-            Una persona, varias instituciones.
-          </h1>
-          <span className="hl" style={{ marginBottom: 32 }} aria-hidden />
-          <p
-            className="voice"
-            style={{
-              fontSize: 'clamp(18px, 5vw, 21px)',
-              lineHeight: 1.45,
-              color: 'var(--abir-cream-muted)',
-              maxWidth: 480,
-              margin: 0,
-              marginBottom: 56,
-              textWrap: 'pretty',
-            }}
-          >
-            Veinte años corporativos en Heinz y Thermo Fisher: gestión de
-            proyectos internacionales, migraciones JD Edwards a SAP, antes de
-            volver a Paraguay. En 2020 dirigí el rescate de AENA: morosidad
-            institucional{' '}
-            <span style={{ color: 'var(--abir-cream)' }}>del 70% al 2.9%</span> en
-            tres años. Hoy construyo sistemas que viven primero dentro de mis
-            propias instituciones; cuando sobreviven ahí, llegan al cliente.
+      {/* Portfolio as portrait */}
+      <section className="mx-auto max-w-6xl px-4 pb-24 md:px-8" aria-label="Portfolio">
+        <p className="label-caps mb-10">El retrato</p>
+        <div className="border-t border-gray-200">
+          {portfolio.map((p) => (
+            <div
+              key={p.inst}
+              className="grid gap-2 border-b border-gray-200 py-6 md:grid-cols-[8rem_8rem_1fr] md:gap-8"
+            >
+              <span className="label-caps">{p.tag}</span>
+              <span className="font-sans text-base font-semibold text-gray-900">{p.inst}</span>
+              <span className="font-sans text-base text-gray-600">{p.line}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Principles */}
+      <section className="mx-auto max-w-6xl px-4 pb-24 md:px-8" aria-label="Principios">
+        <p className="label-caps mb-10">Cómo decidimos</p>
+        <ol className="max-w-2xl space-y-6">
+          {principles.map((p, i) => (
+            <li key={p} className="flex gap-6">
+              <span className="font-mono text-xs text-gray-500">0{i + 1}</span>
+              <span className="font-sans text-base leading-relaxed text-gray-900">{p}</span>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      {/* CTA */}
+      <section className="mx-auto max-w-6xl px-4 pb-32 md:px-8">
+        <div className="flex flex-col items-start gap-6 border-t border-gray-200 pt-12">
+          <p className="max-w-xl font-sans text-base text-gray-600">
+            Si esta forma de trabajar le sirve a tu institución, hablemos.
           </p>
-
-          <div className="absd-proof-strip" aria-label="Prueba operativa">
-            <span className="caps">prueba</span>
-            <strong>del 70% <span>al</span> 2.9%</strong>
-            <span>morosidad institucional recuperada en tres años.</span>
-          </div>
-
-          <div className="caps" style={{ marginBottom: 16 }}>
-            Cómo trabajo
-          </div>
-          <ol
-            style={{
-              listStyle: 'none',
-              padding: 0,
-              margin: 0,
-              maxWidth: 480,
-              borderTop: '1px solid var(--abir-cream-whisper)',
-            }}
-          >
-            {operative.map((line, i) => (
-              <li
-                key={i}
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: '32px 1fr',
-                  gap: 16,
-                  padding: '14px 0',
-                  borderBottom: '1px solid var(--abir-cream-whisper)',
-                }}
-              >
-                <span className="caps">
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <span
-                  className="voice"
-                  style={{ fontSize: 'clamp(16px, 4.5vw, 18px)', lineHeight: 1.4 }}
-                >
-                  {line}
-                </span>
-              </li>
-            ))}
-          </ol>
+          <Link href="/contacto" className="btn-primary">
+            Iniciar conversación
+          </Link>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

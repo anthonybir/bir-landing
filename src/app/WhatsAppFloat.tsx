@@ -13,11 +13,13 @@ export const WhatsAppIcon = ({ className = 'w-5 h-5' }: { className?: string }) 
 
 export { WHATSAPP_URL };
 
-const ABSD_ROUTES = new Set(['/', '/nosotros']);
+// Hidden where the page already owns the contact action
+// (/en has its own English-prefilled WhatsApp link).
+const HIDDEN_ROUTES = new Set(['/contacto', '/en']);
 
 export default function WhatsAppFloat() {
   const pathname = usePathname();
-  if (ABSD_ROUTES.has(pathname)) return null;
+  if (HIDDEN_ROUTES.has(pathname)) return null;
 
   return (
     <a

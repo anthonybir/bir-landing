@@ -21,6 +21,7 @@
   /* Semantic aliases for the gray scale. */
   --background: var(--gray-50);
   --foreground: var(--gray-900);
+  --surface: hsl(0 0% 100%);
 
   /* Deep teal accent (Color Ma) */
   --accent: hsl(173 58% 39%);
@@ -31,6 +32,11 @@
   --accent-dark: hsl(173 58% 25%);
   --accent-darker: hsl(173 58% 15%);
   --accent-foreground: hsl(0 0% 100%);
+
+  /* Brand teal band (footer / dark surfaces) + cream foreground. */
+  --brand-teal: #0F3B3E;
+  --brand-cream: #EFE6D2;
+  --brand-cream-muted: rgba(239, 230, 210, 0.72);
 
   /* Signal: warm counterpoint, used scarcely. */
   --signal: #E9B031;
@@ -97,6 +103,7 @@
   /* Semantic */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
 
   /* Accent + variants */
   --color-accent: var(--accent);
@@ -107,6 +114,11 @@
   --color-accent-dark: var(--accent-dark);
   --color-accent-darker: var(--accent-darker);
   --color-accent-foreground: var(--accent-foreground);
+
+  /* Brand band */
+  --color-brand-teal: var(--brand-teal);
+  --color-brand-cream: var(--brand-cream);
+  --color-brand-cream-muted: var(--brand-cream-muted);
 
   /* Typography */
   --font-sans: var(--font-satoshi), "Helvetica Neue", system-ui, -apple-system, sans-serif;
@@ -134,11 +146,249 @@ body {
   color: var(--foreground);
 }
 
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   ABN agency layer (ABSD v7.1 components).
+   Sanshu per view: one display size, 16px body, 12px caps labels.
+   ============================================================ */
+
+/* Caps label: the section voice. Replaces big intermediate headings. */
+.label-caps {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gray-600);
+}
+
+/* Display voice: h1 / hero statements / case names / key numbers. */
+.display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  text-wrap: balance;
+  color: var(--gray-900);
+  font-variant-numeric: tabular-nums;
+}
+
+.display-hero  { font-size: clamp(2.369rem, 6vw, 4.209rem); }
+.display-num   { font-size: clamp(2.369rem, 5vw, 3.157rem); }
+
+/* Buttons. One .btn-primary per screen: the accent event. */
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 3rem;
+  padding: 0 1.5rem;
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: var(--transition-fast);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
+.btn-primary:hover { background: var(--accent-hover); }
+.btn-primary:active { background: var(--accent-active); }
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid var(--gray-300);
+  color: var(--gray-900);
+}
+.btn-secondary:hover { background: var(--gray-100); }
+
+/* Quiet inline link: text weight, not block weight (Color Ma). */
+.link-quiet {
+  color: var(--gray-900);
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid var(--gray-300);
+  padding-bottom: 1px;
+  transition: border-color var(--duration-fast) var(--ease-out);
+}
+.link-quiet:hover { border-bottom-color: var(--gray-900); }
+
+/* Card at rest → lifted on hover (Hikari). */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xs);
+}
+.card-lift {
+  transition: var(--transition-lift);
+}
+.card-lift:hover {
+  transform: translateY(-2px) scale(1.005);
+  box-shadow: var(--shadow-lift);
+}
+
+/* The Settle: entrance for above-the-fold content. */
+@keyframes settle {
+  0%   { opacity: 0; transform: translateY(12px); }
+  90%  { opacity: 1; transform: translateY(-1px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.settle {
+  animation: settle var(--duration-settle) var(--ease-settle) both;
+  animation-delay: var(--ma-temporal-brief, 100ms);
+}
+.settle-2 { animation-delay: 150ms; }
+.settle-3 { animation-delay: 200ms; }
+.settle-4 { animation-delay: 250ms; }
+
+/* Header: atmosphere at reduced opacity, light removal not darkness. */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: hsl(39 15% 98% / 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+/* Footer band: the brand-teal anchor surface. */
+.footer-band {
+  background: var(--brand-teal);
+  color: var(--brand-cream);
+}
+.footer-band .label-caps { color: var(--brand-cream-muted); }
+.footer-band a {
+  color: var(--brand-cream);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--duration-fast) var(--ease-out);
+}
+.footer-band a:hover { border-bottom-color: var(--brand-cream); }
+
+/* Form fields. */
+.field-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gray-600);
+}
+.field-label--optional { color: var(--gray-500); font-weight: 400; }
+
+.field-input {
+  width: 100%;
+  height: 2.75rem;
+  padding: 0 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--gray-900);
+  transition: var(--transition-colors);
+}
+.field-input::placeholder { color: var(--gray-400); }
+.field-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px hsl(173 58% 39% / 0.15);
+}
+textarea.field-input {
+  height: auto;
+  min-height: 9rem;
+  padding: 0.75rem;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   Long-form article (blog post body). Reading-first typography;
+   long-form earns more than the Sanshu 3 sizes a marketing view gets.
+   ============================================================ */
+.article {
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--gray-700);
+}
+.article > *:first-child { margin-top: 0; }
+.article p,
+.article ul,
+.article ol,
+.article blockquote { margin-top: 1.5rem; }
+.article strong { font-weight: 600; color: var(--gray-900); }
+.article em { font-style: italic; }
+
+.article h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 1.802rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--gray-900);
+  margin-top: 3rem;
+}
+.article h2 + * { margin-top: 1rem; }
+.article h3 {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-top: 2rem;
+}
+.article h3 + * { margin-top: 0.5rem; }
+
+.article ol { list-style: decimal; padding-left: 1.5rem; }
+.article ol li::marker { color: var(--gray-400); }
+.article ul { list-style: none; padding-left: 0; }
+.article ul li { position: relative; padding-left: 1.5rem; }
+.article ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.75em;
+  width: 0.75rem;
+  height: 1px;
+  background: var(--gray-300);
+}
+.article li + li { margin-top: 0.5rem; }
+
+.article blockquote {
+  border-left: 2px solid var(--accent);
+  padding-left: 1.25rem;
+  color: var(--gray-600);
+}
+.article hr { border: none; border-top: 1px solid var(--gray-200); margin: 3rem 0; }
+.article .article-figure { margin: 2.5rem 0; }
+
+/* Figure caption: lead image and inline figures. */
+.article-figure figcaption {
+  margin-top: 0.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--gray-500);
+}
+
 .whatsapp-float {
   position: fixed;
   right: 1.25rem;
   bottom: 1.25rem;
-  z-index: 50;
+  z-index: 300;
   display: flex;
   height: 3.5rem;
   width: 3.5rem;
@@ -155,11 +405,6 @@ body {
   box-shadow: var(--shadow-lg), 0 4px 12px hsl(142 70% 49% / 0.2);
 }
 
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-}
-
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -168,467 +413,5 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
-  }
-}
-/* ============================================================
-   ABN bone and ink additions (ABSD)
-   Append to globals.css (after the existing :root block).
-   These tokens coexist with the warm-gray system; the new
-   home + /nosotros opt into them via .absd / .absd-section.
-   ============================================================ */
-
-:root {
-  /* ABSD core */
-  --abir-teal:          #0F3B3E;
-  --abir-cream:         #EFE6D2;
-  --abir-cream-muted:   rgba(239, 230, 210, 0.78);
-  --abir-cream-whisper: rgba(239, 230, 210, 0.6);
-}
-
-/* Surface scope: any element with .absd flips to bone & ink. */
-.absd {
-  background: var(--abir-teal);
-  color: var(--abir-cream);
-}
-
-.absd-section {
-  position: relative;
-  background: var(--abir-teal);
-  color: var(--abir-cream);
-  overflow: hidden;
-}
-
-/* Strip the global warm-gradient body bg when this scope is full-bleed. */
-.absd-fullbleed {
-  background: var(--abir-teal);
-}
-
-/* Voice: controlled sans display, regular upright posture. */
-.absd .voice,
-.absd-section .voice {
-  font-family: var(--font-sans);
-  font-style: normal;
-  font-weight: 500;
-  letter-spacing: -0.025em;
-  line-height: 1.05;
-  text-wrap: balance;
-  color: var(--abir-cream);
-}
-
-/* Caps: sans, uppercase, 0.3em tracking. Institutional only. */
-.absd .caps,
-.absd-section .caps {
-  font-family: var(--font-sans);
-  font-style: normal;
-  text-transform: uppercase;
-  letter-spacing: 0.3em;
-  font-size: 11px;
-  line-height: 1.6;
-  color: var(--abir-cream-muted);
-}
-
-/* Hairline: right-anchored or centered; never left-anchored except as
-   structural underline of a left-anchored block (use .hl--left only there). */
-.absd .hl,
-.absd-section .hl {
-  display: block;
-  width: 80px;
-  height: 1px;
-  background: var(--abir-cream);
-  border: 0;
-  margin: 0;
-}
-.absd .hl--whisper,
-.absd-section .hl--whisper { background: var(--abir-cream-whisper); }
-
-.absd-signal {
-  color: var(--signal);
-}
-
-/* Corner ticks: pseudo-element pair on the section root.
-   Omit one corner intentionally; here we omit bottom-right by default. */
-.absd-ticks {
-  position: relative;
-}
-.absd-ticks::before,
-.absd-ticks::after {
-  content: "";
-  position: absolute;
-  width: 56px;
-  height: 56px;
-  border: 1.5px solid var(--abir-cream-whisper);
-  pointer-events: none;
-}
-.absd-ticks::before {
-  top: 24px; left: 24px;
-  border-right: 0; border-bottom: 0;
-}
-.absd-ticks::after {
-  top: 24px; right: 24px;
-  border-left: 0; border-bottom: 0;
-}
-
-/* Decorative third tick (bottom-left) via an inner element if desired:
-   <span class="absd-tick-bl" aria-hidden /> */
-.absd-tick-bl {
-  position: absolute;
-  bottom: 24px; left: 24px;
-  width: 56px; height: 56px;
-  border: 1.5px solid var(--abir-cream-whisper);
-  border-right: 0; border-top: 0;
-  pointer-events: none;
-}
-
-/* Underlined CTA: the only "button" form in the bone and ink scope. */
-.absd-link {
-  font-family: var(--font-sans);
-  font-style: normal;
-  font-weight: 650;
-  letter-spacing: -0.02em;
-  color: var(--abir-cream);
-  text-decoration: none;
-  border-bottom: 1px solid var(--abir-cream);
-  padding-bottom: 2px;
-  transition: opacity 240ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.absd-link:hover { opacity: 0.78; }
-
-/* Caps links: inherit color, whisper underline on hover. */
-.absd-section .caps a,
-.absd-section a.caps {
-  color: inherit;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 240ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.absd-section .caps a:hover,
-.absd-section a.caps:hover {
-  border-bottom-color: var(--abir-cream);
-}
-
-.absd-hero-mark {
-  position: absolute;
-  top: clamp(188px, 30vh, 300px);
-  right: clamp(112px, 17vw, 320px);
-  width: clamp(132px, 13vw, 220px);
-  padding: clamp(18px, 2vw, 28px);
-  background: var(--abir-cream);
-  opacity: 0.92;
-  pointer-events: none;
-}
-
-.absd-hero-mark::before,
-.absd-hero-mark::after {
-  content: "";
-  position: absolute;
-  border: 1px solid var(--abir-cream);
-  opacity: 0.72;
-}
-
-.absd-hero-mark::before {
-  inset: -22px auto auto -22px;
-  width: 64px;
-  height: 64px;
-  border-right: 0;
-  border-bottom: 0;
-}
-
-.absd-hero-mark::after {
-  inset: auto -22px -22px auto;
-  width: 64px;
-  height: 64px;
-  border-left: 0;
-  border-top: 0;
-}
-
-.absd-hero-mark img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.absd-hero-lockup {
-  padding-top: clamp(48px, 10vw, 80px);
-  max-width: 760px;
-}
-
-.absd-hero-evidence {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: 6px 18px;
-  max-width: 460px;
-  margin-top: 28px;
-  padding: 14px 0;
-  border-top: 1px solid var(--abir-cream-whisper);
-  border-bottom: 1px solid var(--abir-cream-whisper);
-}
-
-.absd-hero-evidence strong {
-  color: var(--abir-cream);
-  font-family: var(--font-sans);
-  font-size: clamp(24px, 4vw, 34px);
-  font-weight: 650;
-  letter-spacing: -0.03em;
-  line-height: 1;
-}
-
-.absd-hero-evidence strong span {
-  color: var(--signal);
-  font-size: 0.72em;
-  letter-spacing: 0;
-}
-
-.absd-hero-evidence > span:last-child {
-  grid-column: 2;
-  color: var(--abir-cream-muted);
-  font-family: var(--font-sans);
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-.absd-contact {
-  display: grid;
-  gap: 8px;
-  color: inherit;
-  text-decoration: none;
-  transition:
-    transform var(--duration-fast) var(--ease-settle),
-    border-color var(--duration-fast) var(--ease-out),
-    background-color var(--duration-fast) var(--ease-out);
-}
-
-.absd-contact:hover {
-  transform: translateY(-1px);
-}
-
-.absd-contact:active {
-  transform: scale(0.99);
-}
-
-.absd-contact strong {
-  color: var(--abir-cream);
-  font-family: var(--font-sans);
-  font-size: clamp(20px, 5vw, 28px);
-  font-weight: 650;
-  letter-spacing: -0.025em;
-  line-height: 1.05;
-}
-
-.absd-contact span:last-child {
-  color: var(--abir-cream-muted);
-  font-family: var(--font-sans);
-  font-size: 14px;
-  line-height: 1.45;
-}
-
-.absd-contact--primary {
-  align-self: stretch;
-  border-left: 2px solid var(--signal);
-  padding: 2px 0 2px 18px;
-}
-
-.absd-contact--secondary {
-  border-top: 1px solid var(--abir-cream-whisper);
-  padding-top: 14px;
-}
-
-.absd-proof-strip {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: 6px 16px;
-  max-width: 480px;
-  margin: -24px 0 48px;
-  padding: 16px 0;
-  border-top: 1px solid var(--abir-cream-whisper);
-  border-bottom: 1px solid var(--abir-cream-whisper);
-}
-
-.absd-proof-strip strong {
-  color: var(--abir-cream);
-  font-family: var(--font-sans);
-  font-size: clamp(22px, 5vw, 32px);
-  font-weight: 650;
-  letter-spacing: -0.03em;
-  line-height: 1;
-}
-
-.absd-proof-strip strong span {
-  color: var(--signal);
-  font-size: 0.72em;
-  letter-spacing: 0;
-}
-
-.absd-proof-strip > span:last-child {
-  grid-column: 2;
-  color: var(--abir-cream-muted);
-  font-family: var(--font-sans);
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-/* ============================================================
-   ABSD mobile responsive layout primitives.
-   "Ma" still rules: empty space scales down, never disappears.
-   ============================================================ */
-
-/* Page-level vertical/horizontal pad that scales smoothly. */
-.absd-page-pad {
-  padding: clamp(28px, 6vw, 56px) clamp(20px, 6vw, 96px);
-}
-.absd-page-pad--bottom-extra {
-  padding-bottom: clamp(48px, 10vw, 96px);
-}
-
-/* Identity strip: wrap on narrow screens instead of truncating. */
-.absd-frame {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 8px 16px;
-  flex-wrap: wrap;
-}
-
-/* 3-up proof grid (home). Stacks below 768px with bottom borders;
-   becomes a 3-col grid with right borders on tablet+. */
-.absd-proofs {
-  display: grid;
-  grid-template-columns: 1fr;
-  border-top: 1px solid var(--abir-cream-whisper);
-}
-.absd-proofs > * {
-  padding: 20px 0;
-  border-bottom: 1px solid var(--abir-cream-whisper);
-}
-.absd-proofs > *:last-child {
-  border-bottom: 0;
-}
-@media (min-width: 768px) {
-  .absd-proofs {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .absd-proofs > * {
-    padding: 20px 32px 0 32px;
-    border-bottom: 0;
-    border-right: 1px solid var(--abir-cream-whisper);
-  }
-  .absd-proofs > *:first-child { padding-left: 0; }
-  .absd-proofs > *:last-child { padding-right: 0; border-right: 0; }
-}
-
-/* Stacked CTA footer (home). Single column on mobile,
-   1fr/auto on desktop. */
-.absd-cta-row {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  align-items: start;
-  border-top: 1px solid var(--abir-cream-whisper);
-  padding-top: 20px;
-}
-@media (min-width: 768px) {
-  .absd-cta-row {
-    grid-template-columns: 1fr auto;
-    gap: 64px;
-  }
-}
-.absd-cta-secondary {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-@media (min-width: 768px) {
-  .absd-cta-secondary { text-align: right; }
-  .absd-contact--secondary {
-    align-items: end;
-  }
-}
-
-/* /nosotros: portfolio and text body. */
-.absd-nosotros-body {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 48px;
-  align-items: start;
-}
-@media (min-width: 768px) {
-  .absd-nosotros-body {
-    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-    gap: 96px;
-  }
-}
-
-.absd-portfolio {
-  position: relative;
-  border-top: 1px solid var(--abir-cream-whisper);
-  border-bottom: 1px solid var(--abir-cream-whisper);
-  display: flex;
-  flex-direction: column;
-}
-@media (min-width: 768px) {
-  .absd-portfolio {
-    border-right: 1px solid var(--abir-cream-whisper);
-  }
-}
-
-.absd-portfolio-head,
-.absd-portfolio-foot {
-  padding: 18px clamp(20px, 5vw, 40px);
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 12px;
-}
-.absd-portfolio-head {
-  border-bottom: 1px solid var(--abir-cream-whisper);
-}
-.absd-portfolio-foot {
-  border-top: 1px solid var(--abir-cream-whisper);
-}
-
-.absd-portfolio-row {
-  padding: 20px clamp(20px, 5vw, 40px);
-  display: grid;
-  grid-template-columns: 32px 1fr;
-  gap: 12px;
-  align-items: start;
-  border-bottom: 1px solid var(--abir-cream-whisper);
-}
-.absd-portfolio-row:last-child {
-  border-bottom: 0;
-}
-@media (min-width: 768px) {
-  .absd-portfolio-row {
-    grid-template-columns: 44px 1fr;
-    gap: 16px;
-  }
-}
-
-.absd-text-col {
-  padding: 8px clamp(20px, 6vw, 24px) 0;
-}
-@media (min-width: 768px) {
-  .absd-text-col {
-    padding: 16px 96px 0 0;
-  }
-}
-
-/* Decorative corner ticks shrink on mobile so they never crowd content. */
-@media (max-width: 767px) {
-  .absd-ticks::before,
-  .absd-ticks::after {
-    width: 32px;
-    height: 32px;
-    top: 12px;
-  }
-  .absd-ticks::before { left: 12px; }
-  .absd-ticks::after  { right: 12px; }
-  .absd-tick-bl {
-    width: 32px;
-    height: 32px;
-    bottom: 12px;
-    left: 12px;
-  }
-  .absd-hero-mark {
-    display: none;
   }
 }
