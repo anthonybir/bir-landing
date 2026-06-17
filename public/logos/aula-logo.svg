@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" role="img" aria-labelledby="title desc">
+  <title id="title">Aula logo</title>
+  <desc id="desc">Aula wordmark with open book and doorway mark.</desc>
+  <g transform="translate(20 10) scale(.82)">
+    <path
+      d="M54 177c30-7 55-2 74 20 19-22 44-27 74-20"
+      fill="none"
+      stroke="#00796f"
+      stroke-width="13"
+      stroke-linecap="round"
+    />
+    <path
+      d="M44 194c37-9 65-1 84 24 19-25 47-33 84-24"
+      fill="none"
+      stroke="#211f1c"
+      stroke-width="9"
+      stroke-linecap="round"
+    />
+    <path
+      d="M46 184c36-8 63-1 82 22 19-23 46-30 82-22"
+      fill="none"
+      stroke="#f8f5ef"
+      stroke-width="4"
+      stroke-linecap="round"
+    />
+    <path d="M83 42v111l21 12V64l70 16V60L83 42Z" fill="#211f1c" />
+    <path d="M124 86l52-13v82l-52 18V86Z" fill="#00796f" />
+    <path d="M94 58v92l11 6V67l58 13v-8L94 58Z" fill="#2f2b26" opacity=".45" />
+    <path d="M132 93l35-9v65l-35 12V93Z" fill="#00877c" opacity=".72" />
+  </g>
+  <text
+    x="255"
+    y="152"
+    fill="#211f1c"
+    font-family="Instrument Sans, Satoshi, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-size="122"
+    font-weight="650"
+    letter-spacing="0"
+  >
+    Aula
+  </text>
+</svg>

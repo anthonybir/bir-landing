@@ -10,12 +10,12 @@ export const metadata: Metadata = {
 const team = [
   {
     name: 'Anthony Bir',
-    area: 'Dirección · Arquitectura de sistemas',
-    line: 'Director institucional de AENA y arquitecto de los sistemas que ABN pone en producción. La persona que firma es la que opera.',
+    area: 'Dirección · Presidente del Consejo Administrativo de AENA',
+    line: 'Presidente del Consejo Administrativo de AENA y arquitecto de los sistemas que ABN pone en producción. La persona que firma es la que opera.',
   },
   {
     name: 'Diana',
-    area: 'Pedagogía',
+    area: 'Directora Pedagógica de AENA',
     line: 'Marco curricular MEAA 3.0: sin tareas, sin exámenes, ABP, alineado al MEC. En producción desde hace seis años.',
   },
   {

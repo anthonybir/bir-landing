@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const cases = [
   {
     inst: 'AENA',
-    sector: 'Educación · Asociación Educativa del Norte Apostólico',
+    sector: 'Educación · Asociación Educativa Nuevas Alturas',
     antes:
       'En 2020, papel y lápiz, riesgo de cierre por COVID y una morosidad institucional del 70%.',
     ahora:
@@ -117,6 +117,28 @@ export default function CasosPage() {
             </div>
           </article>
         ))}
+      </section>
+
+      {/* Plataforma — Aula, ABN-owned platform behind the three cases */}
+      <section className="mx-auto max-w-6xl px-4 pb-24 md:px-8">
+        <div className="card flex flex-col gap-8 p-8 md:flex-row md:items-center md:justify-between md:p-10">
+          <div className="max-w-md">
+            <p className="label-caps mb-3">Plataforma</p>
+            <p className="font-sans text-base leading-relaxed text-gray-600">
+              Los tres casos corren sobre{' '}
+              <strong className="font-medium text-gray-900">Aula</strong>, el motor
+              de planificación académica con IA de ABN. Una sola plataforma,
+              propiedad de la agencia, desplegada por institución.
+            </p>
+          </div>
+          <Image
+            src="/logos/aula-logo.svg"
+            alt="Aula, el motor de planificación académica con IA de ABN"
+            width={200}
+            height={61}
+            className="shrink-0"
+          />
+        </div>
       </section>
 
       {/* CTA */}
