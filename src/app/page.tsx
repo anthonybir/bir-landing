@@ -37,6 +37,8 @@ const loop = [
   { num: '05', step: 'Acompañamiento', line: 'Ajustes según la operación real.' },
 ] as const;
 
+const caseLogoClassName = 'h-16 w-16 object-contain object-left';
+
 const cases = [
   {
     inst: 'AENA',
@@ -44,7 +46,7 @@ const cases = [
     logo: {
       src: '/logos/aena-badge.png',
       alt: 'Logotipo oficial de AENA',
-      className: 'h-20 w-20 object-contain object-left',
+      className: caseLogoClassName,
     },
     antes: 'Papel y lápiz, riesgo de cierre y morosidad del 70%.',
     sistema:
@@ -58,7 +60,7 @@ const cases = [
     logo: {
       src: '/logos/ipupy-mark.png',
       alt: 'Logotipo oficial de IPUPY',
-      className: 'h-16 w-16 object-contain object-left',
+      className: caseLogoClassName,
     },
     antes: 'Tesorería fragmentada: cada congregación con su planilla, sin consolidación.',
     sistema: 'Contabilidad institucional por partida doble, auditable, con reportes por sede.',
@@ -71,7 +73,7 @@ const cases = [
     logo: {
       src: '/logos/iba-mark.png',
       alt: 'Logotipo oficial de IBA',
-      className: 'h-16 w-16 object-contain object-left',
+      className: caseLogoClassName,
     },
     antes: 'Enseñanza pastoral artesanal: cada docente con su material, sin estándar.',
     sistema:
@@ -170,7 +172,7 @@ export default function HomePage() {
         <div className="grid gap-x-12 gap-y-12 md:grid-cols-3">
           {cases.map((c) => (
             <div key={c.inst}>
-              <div className="mb-6 flex h-20 items-center">
+              <div className="mb-6 flex h-16 items-center">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={c.logo.src} alt={c.logo.alt} className={c.logo.className} />
               </div>
