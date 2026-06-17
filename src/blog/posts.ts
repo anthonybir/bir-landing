@@ -43,13 +43,13 @@ const POSTS: readonly PostMeta[] = [
     title:
       'IA al servicio del aula: cómo planifican nuestros docentes con inteligencia artificial',
     description:
-      'AULA, nuestra plataforma educativa, suma IA al módulo de planificación con una regla que no se negocia: la IA propone, el docente decide. Siempre.',
+      'Aula, nuestra plataforma educativa, suma IA al módulo de planificación con una regla que no se negocia: la IA propone, el docente decide. Siempre.',
     dateISO: '2026-06-10',
     tag: 'Educación · IA responsable',
     institution: 'AENA · Nuevas Alturas',
     lead: {
       src: '/blog/ia-aula-planificacion-docente/hub-docente.png',
-      alt: 'El panel de planificación de AULA organiza el trabajo del docente en una ruta clara: del plan anual al borrador semanal con IA.',
+      alt: 'El panel de planificación de Aula organiza el trabajo del docente en una ruta clara: del plan anual al borrador semanal con IA.',
     },
   },
 ] as const;

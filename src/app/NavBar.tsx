@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 
 const LINKS_ES = [
   { href: '/servicios', label: 'Servicios' },
+  { href: '/ia-gobernada', label: 'IA gobernada' },
   { href: '/casos', label: 'Casos' },
   { href: '/blog', label: 'Blog' },
   { href: '/nosotros', label: 'Nosotros' },
@@ -39,7 +40,7 @@ export default function NavBar() {
         </Link>
 
         {/* Desktop */}
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-6 md:flex lg:gap-8">
           {links.map((l) => (
             <Link
               key={l.href}

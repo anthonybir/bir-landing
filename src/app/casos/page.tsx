@@ -15,11 +15,11 @@ const cases = [
     antes:
       'En 2020, papel y lápiz, riesgo de cierre por COVID y una morosidad institucional del 70%.',
     ahora:
-      'Planificación anual y diaria de inicial a bachillerato, libreta digital, portal de padres y curriculum builder con IA por encima del estándar MEC. ~300 alumnos. En producción desde 2024.',
+      'Planificación anual y diaria de inicial a bachillerato, libreta digital, portal de padres y generador de currículo con IA por encima del estándar MEC. ~300 alumnos. En producción desde 2024.',
     kpi: { num: '70% → 2,9%', label: 'Morosidad en tres años' },
     img: {
       src: '/screenshots/aena-mec-programs.png',
-      alt: 'Alineación curricular con el estándar MEC en AULA, el sistema de AENA',
+      alt: 'Alineación curricular con el estándar MEC en Aula, el sistema de AENA',
       width: 1440,
       height: 1140,
     },
@@ -45,11 +45,11 @@ const cases = [
     antes:
       'Enseñanza pastoral artesanal: cada docente con su material, sin estándar común.',
     ahora:
-      'Marco curricular y editorial bajo un solo estándar. Primer tenant de AULA, el motor de planificación académica con IA de ABN. El mismo marco se enseña hoy en vivo: diplomado «Métodos de estudiar la Biblia con uso responsable de IA».',
+      'Marco curricular y editorial bajo un solo estándar. Primer tenant de Aula, el motor de planificación académica con IA de ABN. El mismo marco se enseña hoy en vivo: diplomado «Métodos de estudiar la Biblia con uso responsable de IA».',
     kpi: { num: '1 estándar', label: 'Marco curricular y editorial único' },
     img: {
       src: '/screenshots/editorial-biblioteca.png',
-      alt: 'Biblioteca editorial institucional bajo un solo estándar en AULA',
+      alt: 'Biblioteca editorial institucional bajo un solo estándar en Aula',
       width: 1440,
       height: 1240,
     },

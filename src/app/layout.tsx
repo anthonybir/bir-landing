@@ -28,11 +28,11 @@ const satoshi = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://bir.com.py'),
-  title: "ABN · Agencia Bir Núñez | Consultoría y sistemas para instituciones",
-  description: "Agencia de servicios en Paraguay: diagnóstico, implementación y acompañamiento para instituciones educativas, eclesiásticas y organizaciones de escala humana.",
+  title: "ABN · Orden institucional convertido en software",
+  description: "ABN ordena instituciones y convierte ese criterio en software con IA gobernada. Diagnóstico, sistemas en producción y acompañamiento para colegios, iglesias y redes de formación en Paraguay.",
   openGraph: {
-    title: "ABN · Agencia Bir Núñez",
-    description: "Estructura donde otros improvisan.",
+    title: "ABN · Orden institucional convertido en software",
+    description: "Ordenamos la operación, construimos el sistema y usamos IA gobernada donde devuelve tiempo sin ceder control.",
     url: "https://bir.com.py",
     siteName: "Agencia Bir Núñez",
     locale: "es_PY",
@@ -47,7 +47,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${instrumentSans.variable} ${geistMono.variable} ${satoshi.variable}`}>
+    <html
+      lang="es"
+      data-scroll-behavior="smooth"
+      className={`${instrumentSans.variable} ${geistMono.variable} ${satoshi.variable}`}
+    >
       <body className="antialiased">
         <div className="flex min-h-screen flex-col text-foreground">
           <NavBar />

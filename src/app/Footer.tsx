@@ -7,13 +7,14 @@ import { WHATSAPP_URL } from './WhatsAppFloat';
 
 const es = {
   blurb:
-    'Agencia de servicios para instituciones: consultoría, sistemas y acompañamiento bajo una sola dirección.',
+    'Ordenamos instituciones y convertimos ese criterio en software con IA gobernada. Bajo una sola dirección.',
   site: 'Sitio',
   contact: 'Contacto',
   whatsapp: 'WhatsApp',
   location: 'Lambaré, Paraguay',
   links: [
     { href: '/servicios', label: 'Servicios' },
+    { href: '/ia-gobernada', label: 'IA gobernada' },
     { href: '/casos', label: 'Casos' },
     { href: '/blog', label: 'Blog' },
     { href: '/nosotros', label: 'Nosotros' },

@@ -1,12 +1,12 @@
 Planificar bien una clase toma tiempo. Mucho tiempo. Alinear los contenidos con el currículo oficial, secuenciar las semanas, preparar materiales, redactar evaluaciones, escribir informes para las familias… es trabajo invisible que se acumula fuera del horario escolar.
 
-En **Nuevas Alturas**, la escuela de **AENA**, decidimos atacar ese problema con tecnología propia. Construimos **AULA**, nuestra plataforma de gestión académica, y este año incorporamos asistencia de inteligencia artificial al módulo de planificación.
+En **Nuevas Alturas**, la escuela de **AENA**, decidimos atacar ese problema con tecnología propia. Construimos **Aula**, nuestra plataforma de gestión académica, y este año incorporamos asistencia de inteligencia artificial al módulo de planificación.
 
 Pero la pregunta que nos hicimos no fue *"¿usamos IA?"*. Fue **"¿cómo usamos IA de forma responsable en una escuela?"**. Esa diferencia define todo lo que sigue.
 
 ## El docente, en el centro. La IA, como asistente.
 
-La IA en AULA **nunca publica nada por su cuenta**. Propone borradores; el docente los lee, los ajusta y los aprueba. Nada se vuelve "oficial", ni visible para coordinación o familias, sin esa aprobación humana explícita.
+La IA en Aula **nunca publica nada por su cuenta**. Propone borradores; el docente los lee, los ajusta y los aprueba. Nada se vuelve "oficial", ni visible para coordinación o familias, sin esa aprobación humana explícita.
 
 El sistema incluso **bloquea la aprobación** cuando faltan condiciones (por ejemplo, datos de calificaciones que aún no están listos) y le explica al docente, en lenguaje claro, qué falta para poder avanzar. La IA acelera; el criterio profesional sigue siendo del docente.
 
@@ -14,7 +14,7 @@ El sistema incluso **bloquea la aprobación** cuando faltan condiciones (por eje
 
 ## Un camino sistemático: del currículo nacional al aula
 
-La planificación en AULA no es un chat improvisado donde uno "le pide cosas a la IA". Es un **flujo ordenado y repetible**:
+La planificación en Aula no es un chat improvisado donde uno "le pide cosas a la IA". Es un **flujo ordenado y repetible**:
 
 1. **Fuente anual:** el plan del año como punto de partida.
 2. **Diseño alineado al MEC:** competencias, indicadores y la escala de calificación del 1 al 5 del Ministerio de Educación, incorporados en cada generación.
@@ -27,7 +27,7 @@ Cada plan semanal queda etiquetado según si tuvo o no apoyo de IA, de modo que 
 
 ## Materiales en minutos, no en horas
 
-Más allá del plan semanal, AULA ayuda al docente a generar **materiales didácticos** alineados a su planificación: guías de cuaderno, guías didácticas, guías de proyecto, fichas de trabajo, evaluaciones y rúbricas.
+Más allá del plan semanal, Aula ayuda al docente a generar **materiales didácticos** alineados a su planificación: guías de cuaderno, guías didácticas, guías de proyecto, fichas de trabajo, evaluaciones y rúbricas.
 
 El docente elige el tipo de material, da instrucciones, y la IA produce un borrador listo para revisar y descargar (por ejemplo, en Word). El modelo de IA utilizado se muestra **abiertamente en pantalla**. Usamos modelos de Claude, de Anthropic. El docente siempre sabe con qué herramienta está trabajando.
 
@@ -45,7 +45,7 @@ Y cada material es una **pieza institucional trazable**: su área, su grado, su 
 
 Esta es la parte que rara vez se ve, pero que más nos importa.
 
-En muchos lugares, "usar IA" significa que cada persona escribe las instrucciones que quiere, cuando quiere. En AULA es lo contrario: **cada comportamiento de la IA está definido por un *prompt* gobernado**, escrito, revisado, versionado y *publicado*, como si fuera una política institucional.
+En muchos lugares, "usar IA" significa que cada persona escribe las instrucciones que quiere, cuando quiere. En Aula es lo contrario: **cada comportamiento de la IA está definido por un *prompt* gobernado**, escrito, revisado, versionado y *publicado*, como si fuera una política institucional.
 
 Hoy tenemos un **catálogo de más de 120 prompts publicados**, cada uno con su versión y su estado. Cuando mejoramos uno, se crea una nueva versión, pasa controles automáticos y se publica con registro de quién lo hizo y cuándo. No hay instrucciones secretas ni ajustes "a mano" sin trazabilidad.
 
