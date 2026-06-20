@@ -26,10 +26,23 @@ export type Post = PostMeta & {
 /** Single source of truth for published posts (newest first). */
 const POSTS: readonly PostMeta[] = [
   {
+    slug: 'aula-calma-como-estructura',
+    title: 'La calma como estructura: cómo rediseñamos la planificación en Aula',
+    description:
+      'Rediseñamos por completo la planificación de Aula con una idea: la calma es estructura. Menos ruido, una ruta visible del plan anual al paquete semanal, y una sola fuente de verdad para docentes y dirección.',
+    dateISO: '2026-06-20',
+    tag: 'Diseño · Producto',
+    institution: 'AENA · Nuevas Alturas',
+    lead: {
+      src: '/blog/aula-calma-como-estructura/hub-llegada.png',
+      alt: 'El panel de planificación de Aula abre con una sola decisión a la vista, elegir el curso, y una ruta clara del plan anual al paquete semanal.',
+    },
+  },
+  {
     slug: 'ia-administracion-fiel',
     title: 'Inteligencia artificial al servicio de la administración fiel',
     description:
-      'Cómo la tesorería de IPUPY incorpora IA sin debilitar la transparencia: cuatro principios escritos en el código, no solo en las intenciones.',
+      'Cómo la tesorería de IPUPY incorpora IA sin debilitar la transparencia: cuatro principios escritos en el código mismo del sistema.',
     dateISO: '2026-06-12',
     tag: 'Tesorería · IA responsable',
     institution: 'IPUPY',
@@ -43,7 +56,7 @@ const POSTS: readonly PostMeta[] = [
     title:
       'IA al servicio del aula: cómo planifican nuestros docentes con inteligencia artificial',
     description:
-      'Aula, nuestra plataforma educativa, suma IA al módulo de planificación con una regla que no se negocia: la IA propone, el docente decide. Siempre.',
+      'Aula, nuestra plataforma educativa, suma IA al módulo de planificación con una regla firme: la IA propone, el docente decide.',
     dateISO: '2026-06-10',
     tag: 'Educación · IA responsable',
     institution: 'AENA · Nuevas Alturas',
