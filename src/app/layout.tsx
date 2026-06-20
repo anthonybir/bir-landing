@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Instrument_Sans, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import WhatsAppFloat from "./WhatsAppFloat";
@@ -59,6 +60,7 @@ export default function RootLayout({
           <Footer />
           <WhatsAppFloat />
         </div>
+        <Analytics />
       </body>
     </html>
   );
