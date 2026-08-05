@@ -15,13 +15,15 @@ const cases = [
     antes:
       'En 2020, papel y lápiz, riesgo de cierre por COVID y una morosidad institucional del 70%.',
     ahora:
-      'Planificación anual y diaria de inicial a bachillerato, libreta digital, portal de padres y generador de currículo con IA por encima del estándar MEC. ~300 alumnos. En producción desde 2024.',
+      'Planificación anual y semanal de inicial a bachillerato, libreta digital, portal de padres y coordinación académica asistida por IA sobre el estándar MEC. ~300 alumnos. En producción desde 2024.',
     kpi: { num: '70% → 2,9%', label: 'Morosidad en tres años' },
     img: {
-      src: '/screenshots/aena-mec-programs.png',
-      alt: 'Alineación curricular con el estándar MEC en Aula, el sistema de AENA',
-      width: 1440,
-      height: 1140,
+      src: '/screenshots/aena-centro-coordinacion-public.png',
+      alt: 'Centro de Coordinación de AENA Admin con prioridades directivas y seguimiento docente semanal',
+      width: 1280,
+      height: 960,
+      className:
+        'aspect-[4/3] w-full rounded-[calc(var(--radius-lg)-0.25rem)] object-cover object-top',
     },
   },
   {
@@ -109,7 +111,11 @@ export default function CasosPage() {
                     alt={c.img.alt}
                     width={c.img.width}
                     height={c.img.height}
-                    className="h-auto w-full rounded-[calc(var(--radius-lg)-0.25rem)]"
+                    className={
+                      'className' in c.img
+                        ? c.img.className
+                        : 'h-auto w-full rounded-[calc(var(--radius-lg)-0.25rem)]'
+                    }
                     sizes="(min-width: 768px) 45vw, 100vw"
                   />
                 </div>
