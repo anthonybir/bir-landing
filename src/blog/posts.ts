@@ -26,6 +26,19 @@ export type Post = PostMeta & {
 /** Single source of truth for published posts (newest first). */
 const POSTS: readonly PostMeta[] = [
   {
+    slug: 'planes-semanales-v2',
+    title: 'Planes Semanales V2: cinco maneras de enseñar, una sola fuente de verdad',
+    description:
+      'Aula permite variar el acompañamiento pedagógico sin romper la capacidad anual, la evaluación institucional ni la autoridad final del docente.',
+    dateISO: '2026-08-04',
+    tag: 'Educación · Producto',
+    institution: 'AENA · Nuevas Alturas',
+    lead: {
+      src: '/blog/planes-semanales-v2/slide-01.png',
+      alt: 'Presentación de Planes Semanales V2 de AENA: una capacidad anual, cinco maneras de enseñar y una evaluación coherente.',
+    },
+  },
+  {
     slug: 'aula-calma-como-estructura',
     title: 'La calma como estructura: cómo rediseñamos la planificación en Aula',
     description:
