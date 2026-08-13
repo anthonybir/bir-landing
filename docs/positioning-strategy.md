@@ -40,7 +40,7 @@ Además, el sitio actual habla de capacidades (qué hace el sistema) cuando debe
 
 **`/nosotros`** — Origen. Estructura actual mantenida — el portfolio como retrato (sin foto) funciona y es raro en el mercado. Necesita dos beats que hoy faltan: el rescate de 2020 y la morosidad recuperada. Una sola oración bien colocada cierra el hueco.
 
-**`/servicios`** — Oferta. Hoy sesgada a colegios. Para sostener "no solo escuelas", los tres modos (diagnóstico, implementación, acompañamiento) deben presentarse como sector-agnósticos en la cabecera. El bloque pedagógico actual queda como ejemplo de una vertical, no como el modelo de la casa.
+**`/servicios`** — Oferta. **Dos verticales con prueba: educación y organizaciones eclesiásticas.** Los tres modos (diagnóstico, implementación, acompañamiento) se presentan sector-agnósticos; el detalle nombra las dos verticales sin que ninguna sea el modelo de la casa. El MEC aparece como el regulador del caso educativo, no como el regulador a secas.
 
 **`/aula`** — Producto. Vertical educativa específica. Mantiene su lógica actual.
 
@@ -83,6 +83,31 @@ Dos reglas más condicionan qué se puede escribir:
   recibe es decisión de posicionamiento, no de diseño. Hoy: la morosidad
   recuperada en `/` y los prompts publicados en `/ia-gobernada`.
 
+## Alcance institucional: la decisión de `/servicios`
+
+*Resuelta 2026-08-13.*
+
+**Dos verticales con prueba, no tres con una aspiracional.** El sitio nombra
+educación y organizaciones eclesiásticas. Nada más.
+
+La tensión real nunca fue colegios contra no-colegios. Fue prueba contra
+aspiración. Tres de las cuatro asimetrías son de forma educativa, pero dos
+también se sostienen en IPUPY: el director es el operador (Anthony es pastor de
+IPUPY) y hay recuperación medible (~30 iglesias, cierre mensual de un día). No
+hay una vertical con prueba. Hay dos.
+
+"Instituciones y pymes" no tenía ninguna de las dos: sin caso, sin identidad de
+operador, sin número. Era la única línea del sitio que rompía su propia regla de
+que la operación propia es el testimonio hasta que exista caso 04. Salió.
+
+Abrir a pymes disuelve las cuatro asimetrías a la vez: una pyme compra
+consultoría de proceso, donde ABN compite por precio contra cualquier fábrica de
+software. Es el mismo error que "reabrir la categoría ed-tech", apuntado en la
+otra dirección. Por eso el filtro es explícito y vive en «No somos para».
+
+Nombrar un sector que no se puede probar no amplía el mercado. Hace que las dos
+verticales probadas parezcan un menú en vez de una frontera.
+
 ## Lo que el sitio no debe hacer
 
 - Reabrir la categoría *ed-tech latinoamericana*. Baja precio, borra frontera.
@@ -104,11 +129,9 @@ La home necesita la línea de morosidad como ancla numérica. Servicios necesita
 
 Pasos 1 y 2 son edición quirúrgica. Paso 3 es decisión de posicionamiento.
 
-**Estado a 2026-08-13.** Pasos 1 y 2 ejecutados: el arco *antes → ahora* y el
-KPI de morosidad están en `/nosotros` y `/casos`. De paso 3, la home ya lleva
-`70% → 2,9%` como ancla numérica. **Sigue abierta la decisión de fondo de
-`/servicios`**: cuánto se abre el alcance institucional más allá de colegios.
-Esa conversación no ocurrió y el copy de la página no cambió de eje.
+**Estado a 2026-08-13.** Los tres pasos están ejecutados. El arco *antes → ahora*
+y el KPI de morosidad están en `/nosotros` y `/casos`; la home lleva
+`70% → 2,9%` como ancla numérica; `/servicios` cerró su decisión de alcance.
 
 ## Riesgo y disciplina
 

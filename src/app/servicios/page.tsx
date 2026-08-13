@@ -18,7 +18,7 @@ const modes = [
     plazo: '2 a 4 semanas',
     desc: 'Auditamos operación, criterio y puntos de fricción para establecer qué necesita orden, qué necesita sistema y qué conviene dejar para después.',
     bullets: [
-      'Diagnóstico operativo y pedagógico',
+      'Diagnóstico operativo, financiero y pedagógico',
       'Priorización de riesgos y cuellos de botella',
       'Hoja de ruta inicial con responsables',
     ],
@@ -28,7 +28,7 @@ const modes = [
     title: 'Implementación por frente',
     when: 'Cuando ya hay una prioridad clara',
     plazo: '3 a 6 meses',
-    desc: 'Entramos sobre un frente concreto, con alcance definido, entregables claros y una lógica de implementación que no rompe la operación diaria. Cada implementación sale con su encuadre legal: contratos, cumplimiento y relación con el MEC.',
+    desc: 'Entramos sobre un frente concreto, con alcance definido, entregables claros y una lógica de implementación que no rompe la operación diaria. Cada implementación sale con su encuadre legal: contratos, cumplimiento y relación con el regulador correspondiente, el MEC en el caso educativo.',
     bullets: [
       'Proyecto por área o por problema',
       'Sistema, criterio y capacitación en el mismo frente',
@@ -40,7 +40,7 @@ const modes = [
     title: 'Acompañamiento integral',
     when: 'Cuando varias áreas necesitan avanzar juntas',
     plazo: 'Continuo',
-    desc: 'Coordinamos pedagogía, finanzas, derecho y tecnología bajo una misma dirección para evitar proveedores sueltos y decisiones contradictorias.',
+    desc: 'Coordinamos finanzas, derecho, tecnología y pedagogía bajo una misma dirección para evitar proveedores sueltos y decisiones contradictorias.',
     bullets: [
       'Dirección transversal del proyecto',
       'Ajuste continuo según operación real',
@@ -58,16 +58,13 @@ const sectors = [
     title: 'Organizaciones eclesiásticas',
     desc: 'Tesorería por partida doble, reportes por sede y cierres mensuales auditables para redes de iglesias.',
   },
-  {
-    title: 'Instituciones y pymes',
-    desc: 'Procesos administrativos, financieros y editoriales que hoy dependen de planillas sueltas y memoria personal.',
-  },
 ] as const;
 
 const notForUs = [
   'Organizaciones que quieren solo una licencia de software, sin conversar del criterio detrás.',
   'Proyectos que esperan una integración «llave en mano» sin involucrar a la dirección.',
   'Instituciones que buscan que la agencia decida qué enseñar, cómo gobernar o qué priorizar.',
+  'Empresas que buscan desarrollo de software a medida, sin una institución que ordenar detrás.',
 ] as const;
 
 export default function ServiciosPage() {
@@ -120,7 +117,7 @@ export default function ServiciosPage() {
       {/* Sectors */}
       <section className="mx-auto max-w-6xl px-4 pb-24 md:px-8" aria-label="Sectores">
         <p className="label-caps mb-10">Dónde trabajamos</p>
-        <div className="grid gap-x-12 gap-y-10 md:grid-cols-3">
+        <div className="grid max-w-4xl gap-x-12 gap-y-10 md:grid-cols-2">
           {sectors.map((s) => (
             <div key={s.title}>
               <h2 className="font-sans text-base font-semibold text-gray-900">{s.title}</h2>
