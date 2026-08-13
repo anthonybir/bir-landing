@@ -16,8 +16,11 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const post = getPostBySlug(slug);
   if (!post) return {};
   return {
-    title: `${post.title} | ABN · Agencia Bir Núñez`,
+    title: post.title,
     description: post.description,
+    alternates: {
+      canonical: `/blog/${post.slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.description,
@@ -33,8 +36,34 @@ export default async function PostPage({ params }: Params) {
   const post = getPostBySlug(slug);
   if (!post) notFound();
 
+  const postUrl = `https://bir.com.py/blog/${post.slug}`;
+  const blogPostingJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.description,
+    datePublished: post.dateISO,
+    author: {
+      '@type': 'Person',
+      name: 'Anthony Bir',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'ABN · Agencia Bir Núñez',
+      legalName: 'Agencia Bir Núñez EAS',
+      url: 'https://bir.com.py',
+      logo: 'https://bir.com.py/icon.svg',
+    },
+    mainEntityOfPage: postUrl,
+    inLanguage: 'es',
+  } as const;
+
   return (
     <article className="mx-auto max-w-3xl px-4 pb-32 pt-24 md:px-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingJsonLd) }}
+      />
       {/* Header */}
       <header>
         <Link href="/blog" className="label-caps inline-block transition-colors hover:text-gray-900">

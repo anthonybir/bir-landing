@@ -4,9 +4,12 @@ import Link from 'next/link';
 import { getAllPosts } from '@/blog/posts';
 
 export const metadata: Metadata = {
-  title: 'Blog | ABN · Agencia Bir Núñez',
+  title: 'Blog',
   description:
     'Notas sobre los sistemas que ABN diseña y opera: IA responsable, administración transparente y tecnología institucional, verificadas contra el código real.',
+  alternates: {
+    canonical: '/blog',
+  },
 };
 
 export default function BlogPage() {
@@ -46,7 +49,7 @@ export default function BlogPage() {
               </div>
               <div className="flex flex-1 flex-col p-6 md:p-8">
                 <p className="label-caps">{p.tag}</p>
-                <h2 className="display mt-3 text-[1.5rem] leading-tight">{p.title}</h2>
+                <h2 className="mt-3 font-sans text-base font-semibold text-gray-900">{p.title}</h2>
                 <p className="mt-3 font-sans text-base leading-relaxed text-gray-600">
                   {p.description}
                 </p>

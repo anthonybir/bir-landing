@@ -1,16 +1,33 @@
 import { NextResponse } from 'next/server';
 import { headers } from 'next/headers';
+import { z } from 'zod';
 
-type ContactPayload = {
-  nombre?: string;
-  email?: string;
-  organizacion?: string;
-  tipoInstitucion?: string;
-  mensaje?: string;
-  website?: string;
-};
-
-const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const ContactSchema = z.object({
+  nombre: z
+    .string({ error: 'El nombre es obligatorio.' })
+    .trim()
+    .min(1, 'El nombre es obligatorio.')
+    .max(100, 'El nombre es demasiado largo.'),
+  email: z
+    .email({ error: 'Correo electrónico inválido.' })
+    .max(254, 'El correo es demasiado largo.'),
+  organizacion: z
+    .string()
+    .trim()
+    .max(200, 'La organización es demasiado larga.')
+    .optional(),
+  tipoInstitucion: z
+    .string()
+    .trim()
+    .max(200, 'El tipo de institución es demasiado largo.')
+    .optional(),
+  mensaje: z
+    .string({ error: 'El mensaje es obligatorio.' })
+    .trim()
+    .min(10, 'El mensaje debe tener al menos 10 caracteres.')
+    .max(3000, 'El mensaje es demasiado largo.'),
+  website: z.string().trim().optional(),
+});
 
 // Rate limiting configuration
 const RATE_LIMIT_MAX = 5; // Max requests
@@ -53,15 +70,6 @@ function isRateLimited(ip: string): boolean {
   return false;
 }
 
-// Input length limits
-const MAX_LENGTH = {
-  nombre: 100,
-  email: 254,
-  organizacion: 200,
-  tipoInstitucion: 80,
-  mensaje: 5000,
-};
-
 export async function POST(request: Request) {
   // Rate limiting check
   const headersList = await headers();
@@ -74,43 +82,33 @@ export async function POST(request: Request) {
     );
   }
 
-  let payload: ContactPayload;
+  let json: unknown;
 
   try {
-    payload = (await request.json()) as ContactPayload;
+    json = await request.json();
   } catch {
     return NextResponse.json({ error: 'Solicitud inválida.' }, { status: 400 });
   }
 
-  const nombre = payload.nombre?.trim() ?? '';
-  const email = payload.email?.trim() ?? '';
-  const organizacion = payload.organizacion?.trim() ?? '';
-  const tipoInstitucion = payload.tipoInstitucion?.trim() ?? '';
-  const mensaje = payload.mensaje?.trim() ?? '';
-  const website = payload.website?.trim() ?? '';
+  // Honeypot short-circuit: bots that fill the hidden field get a silent
+  // success without any validation feedback that could help them adapt.
+  const rawWebsite =
+    typeof json === 'object' && json !== null && 'website' in json
+      ? String((json as Record<string, unknown>).website ?? '').trim()
+      : '';
 
-  if (website) {
+  if (rawWebsite) {
     return NextResponse.json({ ok: true });
   }
 
-  if (!nombre || !email || !mensaje) {
-    return NextResponse.json({ error: 'Faltan campos obligatorios.' }, { status: 400 });
+  const parsed = ContactSchema.safeParse(json);
+
+  if (!parsed.success) {
+    const message = parsed.error.issues[0]?.message ?? 'Datos inválidos.';
+    return NextResponse.json({ error: message }, { status: 400 });
   }
 
-  if (!EMAIL_REGEX.test(email)) {
-    return NextResponse.json({ error: 'Correo electrónico inválido.' }, { status: 400 });
-  }
-
-  // Input length validation
-  if (
-    nombre.length > MAX_LENGTH.nombre ||
-    email.length > MAX_LENGTH.email ||
-    organizacion.length > MAX_LENGTH.organizacion ||
-    tipoInstitucion.length > MAX_LENGTH.tipoInstitucion ||
-    mensaje.length > MAX_LENGTH.mensaje
-  ) {
-    return NextResponse.json({ error: 'Datos demasiado largos.' }, { status: 400 });
-  }
+  const { nombre, email, organizacion, tipoInstitucion, mensaje } = parsed.data;
 
   const apiKey = process.env.RESEND_API_KEY;
   const to = process.env.CONTACT_TO;
@@ -118,8 +116,9 @@ export async function POST(request: Request) {
   const subject = process.env.CONTACT_SUBJECT || 'Nuevo contacto desde bir.com.py';
 
   if (!apiKey || !to) {
+    console.error('Contact form misconfigured: missing RESEND_API_KEY or CONTACT_TO.');
     return NextResponse.json(
-      { error: 'Falta configuración de correo (RESEND_API_KEY, CONTACT_TO).' },
+      { error: 'No se pudo enviar el mensaje. Intentá de nuevo más tarde.' },
       { status: 500 }
     );
   }
