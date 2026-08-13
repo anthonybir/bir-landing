@@ -1,7 +1,7 @@
 # ABN — Estrategia de posicionamiento
 
 *Documento operativo. Lectura única, regreso frecuente.*
-*Última revisión: 2026-04-25*
+*Última revisión: 2026-08-13*
 
 ---
 
@@ -50,6 +50,39 @@ Además, el sitio actual habla de capacidades (qué hace el sistema) cuando debe
 
 **`/en`** — Línea de negocio separada: servicios de relocación para familias angloparlantes. No participa de la tesis de rehabilitación institucional y se gobierna aparte. No mezclar con la narrativa institucional en español.
 
+## Plano visual
+
+Las reglas de diseño no viven acá. Viven en `README.md`, y el sistema de tokens
+en `src/app/globals.css`. Este documento define qué dice el sitio; el README
+define cómo se ve. Una regla vive en un solo lugar.
+
+Lo que sí corresponde registrar acá es la consecuencia para el copy: **cada
+página larga necesita una sección que aguante ser la más fuerte visualmente**,
+porque lleva una sola banda oscura a media altura y esa banda es el momento de
+mayor peso de la página. Hoy la banda cae en:
+
+| Página | Sección | Por qué |
+|---|---|---|
+| `/` | Prueba numérica | La morosidad recuperada es el ancla de toda la tesis. |
+| `/servicios` | No somos para | El límite es lo más fuerte que dice la página. |
+| `/ia-gobernada` | En producción, hoy | Números verificables, no promesa de IA. |
+| `/casos` | Plataforma | Aula es propiedad de la agencia, no software suelto. |
+| `/nosotros` | Cómo decidimos | El criterio es el retrato. |
+| `/en` | Why ABN | Credibilidad, la única barrera en relocación. |
+
+Las páginas cortas o funcionales (`/aula`, `/blog`, `/contacto`) no llevan
+banda. Si una página nueva no tiene una sección que merezca ese peso, el
+problema es del copy, no del diseño.
+
+Dos reglas más condicionan qué se puede escribir:
+
+- El marco con barra de navegador marca **software real en producción**. No se
+  usa para diagramas ni para láminas. Un caso sin captura de producto no puede
+  fingir una.
+- El dorado de señal se gasta **una vez por vista**. Elegir cuál número lo
+  recibe es decisión de posicionamiento, no de diseño. Hoy: la morosidad
+  recuperada en `/` y los prompts publicados en `/ia-gobernada`.
+
 ## Lo que el sitio no debe hacer
 
 - Reabrir la categoría *ed-tech latinoamericana*. Baja precio, borra frontera.
@@ -70,6 +103,12 @@ Agregar KPI de morosidad al caso AENA. Reemplazar una métrica del hero por dato
 La home necesita la línea de morosidad como ancla numérica. Servicios necesita rebalanceo para abrir TAM más allá de colegios. Antes de editar: alineación explícita sobre cuánto se abre el alcance institucional y cuánto se mantiene la verticalidad educativa como vidriera principal.
 
 Pasos 1 y 2 son edición quirúrgica. Paso 3 es decisión de posicionamiento.
+
+**Estado a 2026-08-13.** Pasos 1 y 2 ejecutados: el arco *antes → ahora* y el
+KPI de morosidad están en `/nosotros` y `/casos`. De paso 3, la home ya lleva
+`70% → 2,9%` como ancla numérica. **Sigue abierta la decisión de fondo de
+`/servicios`**: cuánto se abre el alcance institucional más allá de colegios.
+Esa conversación no ocurrió y el copy de la página no cambió de eje.
 
 ## Riesgo y disciplina
 
