@@ -38,7 +38,7 @@ Además, el sitio actual habla de capacidades (qué hace el sistema) cuando debe
 
 **`/casos`** — Prueba. Tres rescates, no tres productos. KPIs reales (morosidad, sedes, países, tiempo de cierre); no métricas operativas internas tipo "ajustes/mes" que sólo significan algo adentro de ABN.
 
-**`/nosotros`** — Origen. Estructura actual mantenida — el portfolio como retrato (sin foto) funciona y es raro en el mercado. Necesita dos beats que hoy faltan: el rescate de 2020 y la morosidad recuperada. Una sola oración bien colocada cierra el hueco.
+**`/nosotros`** — Origen. Estructura actual mantenida: el portfolio como retrato (sin foto) funciona y es raro en el mercado. Lleva el rescate de 2020, la morosidad recuperada y **las dos verticales nombradas**: un colegio de ~300 alumnos y la tesorería de ~30 iglesias. La asimetría 2 (el director es el operador) se sostiene en las dos porque la ficha de dirección nombra los dos cargos. Sin ese dato, la vertical de tesorería se lee como cliente y no como operación propia.
 
 **`/servicios`** — Oferta. **Dos verticales con prueba: educación y organizaciones eclesiásticas.** Los tres modos (diagnóstico, implementación, acompañamiento) se presentan sector-agnósticos; el detalle nombra las dos verticales sin que ninguna sea el modelo de la casa. El MEC aparece como el regulador del caso educativo, no como el regulador a secas.
 

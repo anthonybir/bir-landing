@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 const team = [
   {
     name: 'Anthony Bir',
-    area: 'Dirección · Presidente del Consejo Administrativo de AENA',
-    line: 'Presidente del Consejo Administrativo de AENA y arquitecto de los sistemas que ABN pone en producción. La persona que firma es la que opera.',
+    area: 'Dirección · Presidente del Consejo Administrativo de AENA · Pastor en IPUPY',
+    line: 'Presidente del Consejo Administrativo de AENA y pastor en IPUPY. Arquitecto de los sistemas que ABN pone en producción. La persona que firma es la que opera, en el colegio y en la tesorería.',
   },
   {
     name: 'Diana',
@@ -74,7 +74,8 @@ export default function NosotrosPage() {
         <p className="settle settle-3 mt-8 max-w-xl font-sans text-base leading-relaxed text-gray-600">
           ABN no es una red de freelancers. Es una unidad. Pedagogía, derecho y
           finanzas bajo una dirección que también opera las instituciones que
-          presenta como casos. No vas a encontrar una foto acá. El trabajo es el
+          presenta como casos: un colegio de ~300 alumnos y la tesorería de una
+          red de ~30 iglesias. No vas a encontrar una foto acá. El trabajo es el
           retrato.
         </p>
       </section>
