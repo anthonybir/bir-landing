@@ -145,7 +145,7 @@ const systems = [
   },
   {
     name: 'Tesorería',
-    tag: 'IPUPY · Contabilidad',
+    tag: 'IPU PY · Contabilidad',
     rows: [
       {
         k: 'Qué hace',
@@ -231,7 +231,7 @@ export default function IaGobernadaPage() {
 
       <section className="mx-auto max-w-6xl px-4 pb-24 md:px-8" aria-label="Asistentes">
         <p className="max-w-2xl font-sans text-base leading-relaxed text-gray-600">
-          Cuatro asistentes en AENA y los servicios de tesorería de IPUPY. En cada uno, la IA
+          Cuatro asistentes en AENA y los servicios de tesorería de IPU Paraguay. En cada uno, la IA
           prepara; la persona autorizada decide.
         </p>
         <div className="mt-8 grid gap-6 md:grid-cols-2">

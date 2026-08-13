@@ -29,7 +29,7 @@ El número que vuelve creíble todo lo demás — 70% → 2.9% — está fuera d
 Además, el sitio actual habla de capacidades (qué hace el sistema) cuando debería hablar de transformaciones (qué pasó en la institución). El arco *antes → ahora* está implícito y debería ser explícito en cada caso:
 
 - **AENA**: papel y lápiz (2020, riesgo de cierre por COVID) → planificación anual y diaria, libreta digital, portal de padres, *curriculum builder* con IA por encima del estándar MEC. Morosidad institucional 70% → 2.9%.
-- **IPUPY**: tesorería fragmentada → contabilidad institucional auditable, ~30 iglesias, cierre mensual de un día.
+- **IPU PY**: tesorería fragmentada → contabilidad institucional auditable, ~30 iglesias, cierre mensual de un día.
 - **IBA**: enseñanza pastoral artesanal → material de estudio bíblico y alcance asistido por IA, red multipaís bajo un solo estándar editorial.
 
 ## Arquitectura por página
@@ -92,8 +92,9 @@ educación y organizaciones eclesiásticas. Nada más.
 
 La tensión real nunca fue colegios contra no-colegios. Fue prueba contra
 aspiración. Tres de las cuatro asimetrías son de forma educativa, pero dos
-también se sostienen en IPUPY: el director es el operador (Anthony es tesorero de
-IPUPY) y hay recuperación medible (~30 iglesias, cierre mensual de un día). No
+también se sostienen en IPU Paraguay: el director es el operador (Anthony es
+tesorero de IPU Paraguay) y hay recuperación medible (~30 iglesias, cierre
+mensual de un día). No
 hay una vertical con prueba. Hay dos.
 
 "Instituciones y pymes" no tenía ninguna de las dos: sin caso, sin identidad de

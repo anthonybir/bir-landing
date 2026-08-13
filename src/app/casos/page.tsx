@@ -6,7 +6,7 @@ import AnimatedNumber from '../AnimatedNumber';
 export const metadata: Metadata = {
   title: 'Casos',
   description:
-    'AENA, IPUPY e IBA: tres instituciones reales, tres transformaciones medibles. Sistemas operados por la misma agencia que los diseñó.',
+    'AENA, IPU Paraguay e IBA: tres instituciones reales, tres transformaciones medibles. Sistemas operados por la misma agencia que los diseñó.',
   alternates: {
     canonical: '/casos',
   },
@@ -35,7 +35,7 @@ const cases = [
     },
   },
   {
-    inst: 'IPUPY',
+    inst: 'IPU PY',
     sector: 'Tesorería · Iglesia Pentecostal Unida del Paraguay',
     antes:
       'Tesorería fragmentada: cada congregación con su planilla, sin consolidación ni trazabilidad.',
@@ -44,7 +44,7 @@ const cases = [
     kpi: { num: '1 día', label: 'Cierre mensual consolidado' },
     img: {
       src: '/screenshots/ipupy-dashboard.png',
-      alt: 'Panel de tesorería de IPUPY',
+      alt: 'Panel de tesorería de IPU Paraguay',
       width: 2846,
       height: 1822,
     },

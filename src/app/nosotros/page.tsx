@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 const team = [
   {
     name: 'Anthony Bir',
-    area: 'Dirección · Presidente del Consejo Administrativo de AENA · Tesorero de IPUPY',
-    line: 'Presidente del Consejo Administrativo de AENA y tesorero de IPUPY. Arquitecto de los sistemas que ABN pone en producción. La persona que firma es la que opera, en el colegio y en la tesorería.',
+    area: 'Dirección · Presidente del Consejo Administrativo de AENA · Tesorero de IPU Paraguay',
+    line: 'Presidente del Consejo Administrativo de AENA y tesorero de IPU Paraguay. Arquitecto de los sistemas que ABN pone en producción. La persona que firma es la que opera, en el colegio y en la tesorería.',
   },
   {
     name: 'Diana',
@@ -41,7 +41,7 @@ const portfolio = [
   },
   {
     tag: 'Tesorería',
-    inst: 'IPUPY',
+    inst: 'IPU PY',
     line: 'Tesorería por partida doble para ~30 iglesias. Cierre mensual de un día.',
   },
   {

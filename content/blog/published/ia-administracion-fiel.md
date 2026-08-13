@@ -1,6 +1,6 @@
 Administrar los recursos de una iglesia es, antes que un problema técnico, una cuestión de confianza. Las ofrendas y los diezmos representan el esfuerzo y la fe de muchas familias. Quien los administra responde ante una planilla, ante la congregación y ante Dios.
 
-Por eso, cuando incorporamos inteligencia artificial al sistema de tesorería de IPUPY, partimos de una condición clara: usar la herramienta sin debilitar la transparencia y el control que la buena administración exige.
+Por eso, cuando incorporamos inteligencia artificial al sistema de tesorería de IPU Paraguay, partimos de una condición clara: usar la herramienta sin debilitar la transparencia y el control que la buena administración exige.
 
 La respuesta tomó la forma de cuatro principios. Cada uno está escrito en el código del sistema.
 

@@ -55,10 +55,10 @@ const POSTS: readonly PostMeta[] = [
     slug: 'ia-administracion-fiel',
     title: 'Inteligencia artificial al servicio de la administración fiel',
     description:
-      'Cómo la tesorería de IPUPY incorpora IA sin debilitar la transparencia: cuatro principios escritos en el código mismo del sistema.',
+      'Cómo la tesorería de IPU Paraguay incorpora IA sin debilitar la transparencia: cuatro principios escritos en el código mismo del sistema.',
     dateISO: '2026-06-12',
     tag: 'Tesorería · IA responsable',
-    institution: 'IPUPY',
+    institution: 'IPU PY',
     lead: {
       src: '/blog/ia-administracion-fiel/ai-governance.png',
       alt: 'Panel de servicios de IA del sistema de tesorería: cada servicio con su versión de instrucciones, su tasa de éxito y su confianza promedio.',

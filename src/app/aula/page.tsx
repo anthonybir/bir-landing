@@ -47,7 +47,7 @@ export default function AulaPage() {
 
       <section className="mx-auto max-w-6xl px-4 pb-32 md:px-8">
         <p className="max-w-xl font-sans text-base leading-relaxed text-gray-600">
-          AENA, IPUPY e IBA corren sobre la misma plataforma. El criterio de cada
+          AENA, IPU Paraguay e IBA corren sobre la misma plataforma. El criterio de cada
           institución queda adentro. El software no se vende suelto.
         </p>
         <div className="mt-10 flex flex-wrap items-center gap-6">
