@@ -29,7 +29,7 @@ El número que vuelve creíble todo lo demás — 70% → 2.9% — está fuera d
 Además, el sitio actual habla de capacidades (qué hace el sistema) cuando debería hablar de transformaciones (qué pasó en la institución). El arco *antes → ahora* está implícito y debería ser explícito en cada caso:
 
 - **AENA**: papel y lápiz (2020, riesgo de cierre por COVID) → planificación anual y diaria, libreta digital, portal de padres, *curriculum builder* con IA por encima del estándar MEC. Morosidad institucional 70% → 2.9%.
-- **IPUPY**: tesorería fragmentada → contabilidad institucional auditable, 22 sedes, cierre mensual de un día.
+- **IPUPY**: tesorería fragmentada → contabilidad institucional auditable, ~30 iglesias, cierre mensual de un día.
 - **IBA**: enseñanza pastoral artesanal → material de estudio bíblico y alcance asistido por IA, red multipaís bajo un solo estándar editorial.
 
 ## Arquitectura por página
@@ -43,6 +43,12 @@ Además, el sitio actual habla de capacidades (qué hace el sistema) cuando debe
 **`/servicios`** — Oferta. Hoy sesgada a colegios. Para sostener "no solo escuelas", los tres modos (diagnóstico, implementación, acompañamiento) deben presentarse como sector-agnósticos en la cabecera. El bloque pedagógico actual queda como ejemplo de una vertical, no como el modelo de la casa.
 
 **`/aula`** — Producto. Vertical educativa específica. Mantiene su lógica actual.
+
+**`/ia-gobernada`** — Método. Cómo ABN usa IA: gobernada, trazable, con revisión humana obligatoria. Sostiene la frontera frente al chatbot mágico. No vende IA; vende gobierno de IA.
+
+**`/blog`** — Evidencia en el tiempo. Criterio y casos contados en primera persona. Cada post refuerza la tesis de rehabilitación institucional. Nada de contenido genérico de marketing.
+
+**`/en`** — Línea de negocio separada: servicios de relocación para familias angloparlantes. No participa de la tesis de rehabilitación institucional y se gobierna aparte. No mezclar con la narrativa institucional en español.
 
 ## Lo que el sitio no debe hacer
 

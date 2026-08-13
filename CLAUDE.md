@@ -17,7 +17,7 @@ At Tier D only Law VI (Spanish-first copy), the build gate, and the design plane
 
 **Stack**: Next.js 16 + React 19 + Tailwind CSS v4 + Resend (contact email) + Vercel Analytics, deployed on Vercel. No database, no auth.
 
-**Design system**: `@design_philosophy_absd_v7/` — repo-local ABSD v7.1 snapshot.
+**Design system**: ABSD v7.1 via the `absd-product-design` skill. There is no repo-local snapshot.
 
 **Content**: `content/blog/` holds posts. `docs/positioning-strategy.md` is the messaging SSOT — read it before writing or editing any user-facing copy.
 
