@@ -92,7 +92,7 @@ educación y organizaciones eclesiásticas. Nada más.
 
 La tensión real nunca fue colegios contra no-colegios. Fue prueba contra
 aspiración. Tres de las cuatro asimetrías son de forma educativa, pero dos
-también se sostienen en IPUPY: el director es el operador (Anthony es pastor de
+también se sostienen en IPUPY: el director es el operador (Anthony es tesorero de
 IPUPY) y hay recuperación medible (~30 iglesias, cierre mensual de un día). No
 hay una vertical con prueba. Hay dos.
 

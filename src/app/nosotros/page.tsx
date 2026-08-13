@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 const team = [
   {
     name: 'Anthony Bir',
-    area: 'Dirección · Presidente del Consejo Administrativo de AENA · Pastor en IPUPY',
-    line: 'Presidente del Consejo Administrativo de AENA y pastor en IPUPY. Arquitecto de los sistemas que ABN pone en producción. La persona que firma es la que opera, en el colegio y en la tesorería.',
+    area: 'Dirección · Presidente del Consejo Administrativo de AENA · Tesorero de IPUPY',
+    line: 'Presidente del Consejo Administrativo de AENA y tesorero de IPUPY. Arquitecto de los sistemas que ABN pone en producción. La persona que firma es la que opera, en el colegio y en la tesorería.',
   },
   {
     name: 'Diana',
