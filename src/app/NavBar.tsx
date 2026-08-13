@@ -47,14 +47,14 @@ export default function NavBar() {
               href={l.href}
               className={`font-sans text-base transition-colors ${
                 pathname === l.href || pathname.startsWith(`${l.href}/`)
-                  ? 'font-medium text-gray-900'
+                  ? 'font-medium text-gray-900 underline decoration-gray-300 underline-offset-8'
                   : 'text-gray-600 hover:text-gray-900'
               }`}
             >
               {l.label}
             </Link>
           ))}
-          <Link href={ctaHref} className="btn-secondary !h-10 !px-4 text-sm">
+          <Link href={ctaHref} className="btn-secondary !h-10 !px-4">
             {ctaLabel}
           </Link>
         </div>

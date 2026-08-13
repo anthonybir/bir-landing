@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { Instrument_Sans, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
-import WhatsAppFloat from "./WhatsAppFloat";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import "./globals.css";
@@ -29,11 +28,14 @@ const satoshi = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://bir.com.py'),
-  title: "ABN · Orden institucional convertido en software",
-  description: "ABN ordena instituciones y convierte ese criterio en software con IA gobernada. Diagnóstico, sistemas en producción y acompañamiento para colegios, iglesias y redes de formación en Paraguay.",
+  title: {
+    template: '%s | ABN · Agencia Bir Núñez',
+    default: 'ABN · Te construimos el sistema',
+  },
+  description: "Tu institución no tiene un sistema. ABN lo construye: administración educativa, financiera y legal, bajo una sola dirección.",
   openGraph: {
-    title: "ABN · Orden institucional convertido en software",
-    description: "Ordenamos la operación, construimos el sistema y usamos IA gobernada donde devuelve tiempo sin ceder control.",
+    title: "ABN · Te construimos el sistema",
+    description: "Educación, finanzas y derecho. Una sola dirección.",
     url: "https://bir.com.py",
     siteName: "Agencia Bir Núñez",
     locale: "es_PY",
@@ -41,6 +43,24 @@ export const metadata: Metadata = {
     images: "/opengraph-image",
   },
 };
+
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'ABN · Agencia Bir Núñez',
+  legalName: 'Agencia Bir Núñez EAS',
+  url: 'https://bir.com.py',
+  logo: 'https://bir.com.py/icon.svg',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Lambaré',
+    addressCountry: 'PY',
+  },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    email: 'anthony@bir.com.py',
+  },
+} as const;
 
 export default function RootLayout({
   children,
@@ -54,11 +74,19 @@ export default function RootLayout({
       className={`${instrumentSans.variable} ${geistMono.variable} ${satoshi.variable}`}
     >
       <body className="antialiased">
-        <div className="flex min-h-screen flex-col text-foreground">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <div className="flex min-h-[100dvh] flex-col text-foreground">
+          <a href="#contenido" className="skip-link">
+            Ir al contenido
+          </a>
           <NavBar />
-          <main className="flex-1">{children}</main>
+          <main id="contenido" className="flex-1">
+            {children}
+          </main>
           <Footer />
-          <WhatsAppFloat />
         </div>
         <Analytics />
       </body>

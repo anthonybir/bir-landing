@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '', priority: 1 },
     { path: '/servicios', priority: 0.9 },
     { path: '/ia-gobernada', priority: 0.9 },
+    { path: '/aula', priority: 0.8 },
     { path: '/casos', priority: 0.9 },
     { path: '/blog', priority: 0.8 },
     { path: '/nosotros', priority: 0.7 },

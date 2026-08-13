@@ -42,8 +42,13 @@
   --signal: #E9B031;
   --signal-light: #F4C960;
 
+  /* Status */
+  --error: hsl(0 60% 42%);
+
+  /* Focus indicator: 3:1+ non-text contrast, accent-colored. */
+  --focus-glow: 0 0 0 2px var(--accent), 0 0 8px hsl(173 58% 39% / 0.25);
+
   /* Brand fixed colors */
-  --whatsapp: #25d366;
 
   /* Ma spatial tokens */
   --ma-iki: 0.5rem;
@@ -135,6 +140,24 @@ html {
   scroll-padding-top: 6rem;
 }
 
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  z-index: 400;
+  transform: translateY(-120%);
+  padding: 0.75rem 1rem;
+  background: var(--gray-900);
+  color: var(--gray-50);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: var(--radius-md);
+}
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
 body {
   background: linear-gradient(180deg, var(--atmosphere-top) 0%, var(--atmosphere-bottom) 100%) fixed;
   color: var(--foreground);
@@ -179,6 +202,10 @@ body {
 
 .display-hero  { font-size: clamp(2.369rem, 6vw, 4.209rem); }
 .display-num   { font-size: clamp(2.369rem, 5vw, 3.157rem); }
+.display-poster {
+  font-size: clamp(3.8rem, 12vw, 7rem);
+  line-height: 0.95;
+}
 
 /* Buttons. One .btn-primary per screen: the accent event. */
 .btn-primary,
@@ -204,6 +231,10 @@ body {
 }
 .btn-primary:hover { background: var(--accent-hover); }
 .btn-primary:active { background: var(--accent-active); }
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 
 .btn-secondary {
   background: transparent;
@@ -302,10 +333,10 @@ body {
   transition: var(--transition-colors);
 }
 .field-input::placeholder { color: var(--gray-400); }
-.field-input:focus {
+.field-input:focus-visible {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 2px hsl(173 58% 39% / 0.15);
+  box-shadow: var(--focus-glow);
 }
 textarea.field-input {
   height: auto;
@@ -384,32 +415,12 @@ textarea.field-input {
   color: var(--gray-500);
 }
 
-.whatsapp-float {
-  position: fixed;
-  right: 1.25rem;
-  bottom: 1.25rem;
-  z-index: 300;
-  display: flex;
-  height: 3.5rem;
-  width: 3.5rem;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  background: var(--whatsapp);
-  box-shadow: var(--shadow-md), 0 0 0 0 hsl(142 70% 49% / 0);
-  transition: var(--transition-lift);
-}
-
-.whatsapp-float:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg), 0 4px 12px hsl(142 70% 49% / 0.2);
-}
-
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;

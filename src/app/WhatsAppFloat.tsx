@@ -1,7 +1,3 @@
-'use client';
-
-import { usePathname } from 'next/navigation';
-
 const WHATSAPP_NUMBER = '595991402548';
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola, me interesa conocer más sobre los servicios de ABN.')}`;
 
@@ -12,24 +8,3 @@ export const WhatsAppIcon = ({ className = 'w-5 h-5' }: { className?: string }) 
 );
 
 export { WHATSAPP_URL };
-
-// Hidden where the page already owns the contact action
-// (/en has its own English-prefilled WhatsApp link).
-const HIDDEN_ROUTES = new Set(['/contacto', '/en']);
-
-export default function WhatsAppFloat() {
-  const pathname = usePathname();
-  if (HIDDEN_ROUTES.has(pathname)) return null;
-
-  return (
-    <a
-      href={WHATSAPP_URL}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="whatsapp-float"
-      aria-label="Contactar por WhatsApp"
-    >
-      <WhatsAppIcon className="w-6 h-6 text-white" />
-    </a>
-  );
-}
