@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import AnimatedNumber from '../AnimatedNumber';
 
 export const metadata: Metadata = {
   title: 'IA gobernada',
@@ -44,8 +45,18 @@ const principles = [
 ] as const;
 
 const proof = [
-  { num: '+120', label: 'Prompts publicados', detail: 'Cada función de IA es una instrucción con versión y estado.' },
-  { num: '+140', label: 'Materiales trazables', detail: 'Biblioteca editorial catalogada por área, grado y semana.' },
+  {
+    to: 120,
+    label: 'Prompts publicados',
+    detail: 'Cada función de IA es una instrucción con versión y estado.',
+    signal: true,
+  },
+  {
+    to: 140,
+    label: 'Materiales trazables',
+    detail: 'Biblioteca editorial catalogada por área, grado y semana.',
+    signal: false,
+  },
 ] as const;
 
 const systems = [
@@ -195,24 +206,31 @@ export default function IaGobernadaPage() {
         </ol>
       </section>
 
-      {/* In production */}
+      {/* In production. The one dark surface on this page, and the one place
+          the signal gold is spent. */}
       <section
         id="produccion"
-        className="mx-auto max-w-6xl px-4 pb-24 md:px-8"
+        className="teal-band brand-texture mb-24"
         aria-label="En producción"
       >
-        <p className="label-caps mb-10">En producción, hoy</p>
-        <div className="grid gap-12 md:grid-cols-2">
-          {proof.map((m) => (
-            <div key={m.label}>
-              <p className="display display-num">{m.num}</p>
-              <p className="label-caps mt-3">{m.label}</p>
-              <p className="mt-2 font-sans text-base text-gray-600">{m.detail}</p>
-            </div>
-          ))}
+        <div className="mx-auto max-w-6xl px-4 py-20 md:px-8 md:py-24">
+          <p className="label-caps mb-10">En producción, hoy</p>
+          <div className="grid gap-12 md:grid-cols-2">
+            {proof.map((m) => (
+              <div key={m.label}>
+                <p className={`display display-num${m.signal ? ' num-signal' : ''}`}>
+                  +<AnimatedNumber to={m.to} />
+                </p>
+                <p className="label-caps mt-3">{m.label}</p>
+                <p className="mt-2 font-sans text-base text-brand-cream-muted">{m.detail}</p>
+              </div>
+            ))}
+          </div>
         </div>
+      </section>
 
-        <p className="mt-16 max-w-2xl font-sans text-base leading-relaxed text-gray-600">
+      <section className="mx-auto max-w-6xl px-4 pb-24 md:px-8" aria-label="Asistentes">
+        <p className="max-w-2xl font-sans text-base leading-relaxed text-gray-600">
           Cuatro asistentes en AENA y los servicios de tesorería de IPUPY. En cada uno, la IA
           prepara; la persona autorizada decide.
         </p>

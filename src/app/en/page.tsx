@@ -74,7 +74,7 @@ const credibility = [
   },
   {
     title: 'A real firm, not a fixer',
-    desc: 'Agencia Bir Núñez EAS is a registered Paraguayan company with legal counsel in-house. Engagement letters, invoices and accountability in writing.',
+    desc: 'Agencia Bir Núñez is a registered Paraguayan company with legal counsel in-house. Engagement letters, invoices and accountability in writing.',
   },
   {
     title: 'We run institutions in Paraguay',
@@ -86,7 +86,7 @@ export default function RelocationPage() {
   return (
     <div lang="en">
       {/* Hero */}
-      <section className="mx-auto max-w-6xl px-4 pb-24 pt-24 md:px-8 md:pt-32">
+      <section className="mx-auto max-w-6xl px-4 pb-16 pt-24 md:px-8">
         <p className="label-caps settle mb-6">ABN · Lambaré, Paraguay · Relocation services</p>
         <h1 className="display display-hero settle settle-2 max-w-3xl">
           Structure where others improvise.
@@ -160,16 +160,20 @@ export default function RelocationPage() {
         </div>
       </section>
 
-      {/* Why ABN */}
-      <section className="mx-auto max-w-6xl px-4 pb-24 md:px-8" aria-label="Why ABN">
-        <p className="label-caps mb-10">Why ABN</p>
-        <div className="grid gap-x-12 gap-y-10 md:grid-cols-3">
-          {credibility.map((c) => (
-            <div key={c.title}>
-              <h2 className="font-sans text-base font-semibold text-gray-900">{c.title}</h2>
-              <p className="mt-3 font-sans text-base leading-relaxed text-gray-600">{c.desc}</p>
-            </div>
-          ))}
+      {/* Why ABN. The one dark surface on this page. */}
+      <section className="teal-band brand-texture mb-24" aria-label="Why ABN">
+        <div className="mx-auto max-w-6xl px-4 py-20 md:px-8 md:py-24">
+          <p className="label-caps mb-10">Why ABN</p>
+          <div className="grid gap-x-12 gap-y-10 md:grid-cols-3">
+            {credibility.map((c) => (
+              <div key={c.title}>
+                <h2 className="font-sans text-base font-semibold text-brand-cream">{c.title}</h2>
+                <p className="mt-3 font-sans text-base leading-relaxed text-brand-cream-muted">
+                  {c.desc}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

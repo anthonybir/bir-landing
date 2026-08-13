@@ -48,7 +48,6 @@ const organizationJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'ABN · Agencia Bir Núñez',
-  legalName: 'Agencia Bir Núñez EAS',
   url: 'https://bir.com.py',
   logo: 'https://bir.com.py/icon.svg',
   address: {

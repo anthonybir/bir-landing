@@ -44,7 +44,7 @@ export default function Footer() {
   const t = pathname.startsWith('/en') ? en : es;
 
   return (
-    <footer className="footer-band">
+    <footer className="footer-band brand-texture">
       <div className="mx-auto max-w-6xl px-4 py-16 md:px-8 md:py-24">
         <div className="grid gap-12 md:grid-cols-[1fr_auto_auto] md:gap-24">
           <div className="max-w-sm">
@@ -92,7 +92,7 @@ export default function Footer() {
         </div>
 
         <p className="mt-16 border-t border-white/10 pt-6 font-sans text-xs uppercase tracking-[0.1em] text-brand-cream-muted">
-          © {new Date().getFullYear()} Agencia Bir Núñez EAS · bir.com.py
+          © {new Date().getFullYear()} Agencia Bir Núñez · bir.com.py
         </p>
       </div>
     </footer>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import AnimatedNumber from '../AnimatedNumber';
 
 export const metadata: Metadata = {
   title: 'Casos',
@@ -19,7 +20,11 @@ const cases = [
       'En 2020, papel y lápiz, riesgo de cierre por COVID y una morosidad institucional del 70%.',
     ahora:
       'Planificación anual y semanal de inicial a bachillerato, libreta digital, portal de padres y coordinación académica asistida por IA sobre el estándar MEC. ~300 alumnos. En producción desde 2024.',
-    kpi: { num: '70% → 2,9%', label: 'Morosidad en tres años' },
+    kpi: {
+      lead: '70% → ',
+      count: { from: 70, to: 2.9, decimals: 1, suffix: '%' },
+      label: 'Morosidad en tres años',
+    },
     img: {
       src: '/screenshots/aena-centro-coordinacion-public.png',
       alt: 'Centro de Coordinación de AENA Admin con prioridades directivas y seguimiento docente semanal',
@@ -103,24 +108,45 @@ export default function CasosPage() {
                   </dl>
 
                   <div className="mt-10">
-                    <p className="display display-num">{c.kpi.num}</p>
+                    <p className="display display-num">
+                      {'count' in c.kpi ? (
+                        <>
+                          {c.kpi.lead}
+                          <AnimatedNumber
+                            from={c.kpi.count.from}
+                            to={c.kpi.count.to}
+                            decimals={c.kpi.count.decimals}
+                            suffix={c.kpi.count.suffix}
+                          />
+                        </>
+                      ) : (
+                        c.kpi.num
+                      )}
+                    </p>
                     <p className="label-caps mt-2">{c.kpi.label}</p>
                   </div>
                 </div>
 
-                <div className="card overflow-hidden self-start p-2">
-                  <Image
-                    src={c.img.src}
-                    alt={c.img.alt}
-                    width={c.img.width}
-                    height={c.img.height}
-                    className={
-                      'className' in c.img
-                        ? c.img.className
-                        : 'h-auto w-full rounded-[calc(var(--radius-lg)-0.25rem)]'
-                    }
-                    sizes="(min-width: 768px) 45vw, 100vw"
-                  />
+                <div className="shot self-start">
+                  <div className="shot-chrome" aria-hidden="true">
+                    <span />
+                    <span />
+                    <span />
+                  </div>
+                  <div className="shot-body">
+                    <Image
+                      src={c.img.src}
+                      alt={c.img.alt}
+                      width={c.img.width}
+                      height={c.img.height}
+                      className={
+                        'className' in c.img
+                          ? c.img.className
+                          : 'h-auto w-full rounded-[calc(var(--radius-lg)-0.25rem)]'
+                      }
+                      sizes="(min-width: 768px) 45vw, 100vw"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -128,27 +154,22 @@ export default function CasosPage() {
         ))}
       </section>
 
-      {/* Plataforma — Aula, ABN-owned platform behind the three cases */}
-      <section className="mx-auto max-w-6xl px-4 pb-24 md:px-8">
-        <div className="card flex flex-col gap-8 p-8 md:flex-row md:items-center md:justify-between md:p-10">
-          <div className="max-w-md">
+      {/* Plataforma — Aula, ABN-owned platform behind the three cases.
+          The one dark surface on this page, placed mid-scroll. */}
+      <section className="teal-band brand-texture mb-24" aria-label="Plataforma">
+        <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-20 md:flex-row md:items-end md:justify-between md:px-8 md:py-24">
+          <div className="max-w-lg">
             <p className="label-caps mb-3">Plataforma</p>
-            <p className="font-sans text-base leading-relaxed text-gray-600">
+            <p className="font-sans text-base leading-relaxed text-brand-cream-muted">
               Los tres casos corren sobre{' '}
-              <Link href="/aula" className="link-quiet font-medium text-gray-900">
+              <Link href="/aula" className="link-quiet">
                 Aula
               </Link>
               , el motor de planificación académica con IA de ABN. Una sola
               plataforma, propiedad de la agencia, desplegada por institución.
             </p>
           </div>
-          <Image
-            src="/logos/aula-logo.svg"
-            alt="Aula, el motor de planificación académica con IA de ABN"
-            width={200}
-            height={61}
-            className="shrink-0"
-          />
+          <p className="display shrink-0 text-[2.5rem] leading-none">Aula</p>
         </div>
       </section>
 

@@ -50,7 +50,6 @@ export default async function PostPage({ params }: Params) {
     publisher: {
       '@type': 'Organization',
       name: 'ABN · Agencia Bir Núñez',
-      legalName: 'Agencia Bir Núñez EAS',
       url: 'https://bir.com.py',
       logo: 'https://bir.com.py/icon.svg',
     },

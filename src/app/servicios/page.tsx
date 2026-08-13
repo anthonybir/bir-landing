@@ -130,23 +130,29 @@ export default function ServiciosPage() {
         </div>
       </section>
 
-      {/* Honest filter */}
-      <section className="mx-auto max-w-6xl px-4 pb-24 md:px-8" aria-label="Cuándo no somos la mejor opción">
-        <div className="max-w-2xl border-t border-gray-200 pt-12">
-          <p className="label-caps mb-6">No somos para</p>
-          <ul className="space-y-4">
-            {notForUs.map((n) => (
-              <li key={n} className="font-sans text-base leading-relaxed text-gray-600">
-                {n}
-              </li>
-            ))}
-          </ul>
+      {/* Honest filter. The one dark surface on this page: the boundary is
+          the strongest thing said here, so it gets the brand band. */}
+      <section
+        className="teal-band brand-texture mb-24"
+        aria-label="Cuándo no somos la mejor opción"
+      >
+        <div className="mx-auto max-w-6xl px-4 py-20 md:px-8 md:py-24">
+          <div className="max-w-2xl">
+            <p className="label-caps mb-6">No somos para</p>
+            <ul className="space-y-4">
+              {notForUs.map((n) => (
+                <li key={n} className="font-sans text-base leading-relaxed text-brand-cream-muted">
+                  {n}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
       {/* CTA */}
       <section className="mx-auto max-w-6xl px-4 pb-32 md:px-8">
-        <div className="flex flex-col items-start gap-6">
+        <div className="flex flex-col items-start gap-6 border-t border-gray-200 pt-12">
           <p className="max-w-xl font-sans text-base text-gray-600">
             Si no sabés por cuál de los tres modos empezar, esa es exactamente
             la conversación de diagnóstico.

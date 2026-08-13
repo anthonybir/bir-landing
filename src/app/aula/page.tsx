@@ -24,19 +24,28 @@ export default function AulaPage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 pb-16 md:px-8">
-        <div className="relative aspect-[16/10] overflow-hidden bg-gray-100">
-          <Image
-            src="/blog/aula-calma-como-estructura/hub-llegada.png"
-            alt="Planificación académica en Aula: una sola decisión a la vista, elegir el curso"
-            fill
-            priority
-            sizes="(min-width: 768px) 72rem, 100vw"
-            className="object-cover object-top"
-          />
+        <div className="shot">
+          <div className="shot-chrome" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+          </div>
+          <div className="shot-body">
+            <div className="relative aspect-[16/10] overflow-hidden rounded-[calc(var(--radius-lg)-0.25rem)] bg-gray-100">
+              <Image
+                src="/blog/aula-calma-como-estructura/hub-llegada.png"
+                alt="Planificación académica en Aula: una sola decisión a la vista, elegir el curso"
+                fill
+                priority
+                sizes="(min-width: 768px) 72rem, 100vw"
+                className="object-cover object-top"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 pb-24 md:px-8">
+      <section className="mx-auto max-w-6xl px-4 pb-32 md:px-8">
         <p className="max-w-xl font-sans text-base leading-relaxed text-gray-600">
           AENA, IPUPY e IBA corren sobre la misma plataforma. El criterio de cada
           institución queda adentro. El software no se vende suelto.

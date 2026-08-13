@@ -426,3 +426,97 @@ textarea.field-input {
     scroll-behavior: auto !important;
   }
 }
+
+/* ============================================================
+   Brand texture: the ABN micro-grid, tiled at near-threshold
+   opacity. Gives dark surfaces material instead of flat fill.
+   Static background-image, so it costs nothing on scroll.
+   ============================================================ */
+.brand-texture {
+  position: relative;
+  isolation: isolate;
+}
+.brand-texture > * {
+  position: relative;
+}
+.brand-texture::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Crect x='4' y='4' width='34' height='34' rx='3' fill='%23EFE6D2' opacity='.018'/%3E%3Crect x='42' y='4' width='34' height='34' rx='3' fill='%23EFE6D2' opacity='.032'/%3E%3Crect x='4' y='42' width='34' height='34' rx='3' fill='%23EFE6D2' opacity='.026'/%3E%3Crect x='42' y='42' width='34' height='34' rx='3' fill='%23EFE6D2' opacity='.012'/%3E%3C/svg%3E");
+  background-size: 80px 80px;
+}
+
+/* ============================================================
+   Teal band: the second dark surface. One per page, mid-scroll,
+   so the footer is not the only anchor in a full cream field.
+   ============================================================ */
+.teal-band {
+  background: var(--brand-teal);
+  color: var(--brand-cream);
+}
+.teal-band .display { color: var(--brand-cream); }
+.teal-band .label-caps { color: var(--brand-cream-muted); }
+.teal-band .link-quiet {
+  color: var(--brand-cream);
+  border-bottom-color: rgba(239, 230, 210, 0.45);
+}
+.teal-band .link-quiet:hover { border-bottom-color: var(--brand-cream); }
+
+/* Signal gold: one number per view, and only on a dark surface,
+   where the gold carries text contrast. Never on cream. */
+.teal-band .num-signal { color: var(--signal); }
+
+/* ============================================================
+   Hero grid motif: the ABN progression pattern, assembled.
+   Six tiles rise from near-invisible to solid: the page says
+   "no system", the motif builds one. Decorative, aria-hidden.
+   ============================================================ */
+@keyframes tile-settle {
+  0%   { opacity: 0; transform: translateY(10px) scale(0.94); }
+  90%  { opacity: var(--tile-o); transform: translateY(-1px) scale(1); }
+  100% { opacity: var(--tile-o); transform: translateY(0) scale(1); }
+}
+.hero-grid rect {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: tile-settle var(--duration-settle) var(--ease-settle) both;
+  animation-delay: calc(300ms + var(--tile-i) * 90ms);
+}
+
+/* ============================================================
+   Screenshot frame: real software, shown as software.
+   Chrome bar + Hikari lift, resting on the page rather than
+   pasted onto it.
+   ============================================================ */
+.shot {
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lift);
+  transition: var(--transition-lift);
+}
+.shot:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+}
+.shot-chrome {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  height: 1.75rem;
+  padding: 0 0.75rem;
+  background: var(--gray-100);
+  border-bottom: 1px solid var(--gray-200);
+}
+.shot-chrome span {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: var(--radius-full);
+  background: var(--gray-300);
+}
+.shot-body { padding: 0.5rem; }

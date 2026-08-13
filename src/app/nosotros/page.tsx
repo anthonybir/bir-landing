@@ -110,17 +110,19 @@ export default function NosotrosPage() {
         </div>
       </section>
 
-      {/* Principles */}
-      <section className="mx-auto max-w-6xl px-4 pb-24 md:px-8" aria-label="Principios">
-        <p className="label-caps mb-10">Cómo decidimos</p>
-        <ol className="max-w-2xl space-y-6">
-          {principles.map((p, i) => (
-            <li key={p} className="flex gap-6">
-              <span className="font-mono text-xs text-gray-500">0{i + 1}</span>
-              <span className="font-sans text-base leading-relaxed text-gray-900">{p}</span>
-            </li>
-          ))}
-        </ol>
+      {/* Principles. The one dark surface on this page. */}
+      <section className="teal-band brand-texture mb-24" aria-label="Principios">
+        <div className="mx-auto max-w-6xl px-4 py-20 md:px-8 md:py-24">
+          <p className="label-caps mb-10">Cómo decidimos</p>
+          <ol className="max-w-2xl space-y-6">
+            {principles.map((p, i) => (
+              <li key={p} className="flex gap-6">
+                <span className="font-mono text-xs text-brand-cream-muted">0{i + 1}</span>
+                <span className="font-sans text-base leading-relaxed text-brand-cream">{p}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
       </section>
 
       {/* CTA */}
