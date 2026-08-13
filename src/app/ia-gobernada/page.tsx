@@ -2,9 +2,12 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'IA gobernada | ABN · Agencia Bir Núñez',
+  title: 'IA gobernada',
   description:
     'Cómo ABN usa inteligencia artificial dentro de instituciones reales: la IA propone, la persona decide. Prompts versionados, contexto anclado en la fuente, permisos a nivel de datos y verificación automática.',
+  alternates: {
+    canonical: '/ia-gobernada',
+  },
 };
 
 const principles = [
@@ -30,8 +33,8 @@ const principles = [
   },
   {
     num: '05',
-    title: 'Verificación automática de calidad y seguridad.',
-    line: 'Lo que genera la IA pasa por controles de calidad, alineación y seguridad antes de usarse. Si no los supera, se reintenta con reglas más estrictas o se descarta.',
+    title: 'Verificación de calidad y revisión humana obligatoria.',
+    line: 'Lo que genera la IA pasa por controles de calidad y alineación curricular. Nada llega a un estudiante o a una familia sin la aprobación de la persona responsable.',
   },
   {
     num: '06',
@@ -61,7 +64,7 @@ const systems = [
       },
       {
         k: 'Controles',
-        v: 'Evaluación con casos dorados; rechaza evidencia fuera de alcance; marca la baja confianza.',
+        v: 'Evaluación con casos de referencia; rechaza evidencia fuera de alcance; marca la baja confianza.',
       },
       { k: 'Retención', v: 'Las imágenes se eliminan 180 días después del cierre del libro de notas.' },
     ],
@@ -78,7 +81,7 @@ const systems = [
       },
       {
         k: 'Controles',
-        v: 'Evaluaciones con datasets dorados y rúbrica; control de fidelidad al plan anual.',
+        v: 'Evaluaciones con conjuntos de referencia y rúbrica; control de fidelidad al plan anual.',
       },
       {
         k: 'Retención',
@@ -93,7 +96,7 @@ const systems = [
       { k: 'Qué hace', v: 'Genera y renderiza recursos y materiales docentes: guías, fichas y evaluaciones.' },
       {
         k: 'Proveedor',
-        v: 'Claude (Anthropic) para el contenido; archivos con Anthropic Skills y OpenAI de respaldo; un juez de calidad automático.',
+        v: 'Claude (Anthropic) para el contenido; archivos con Anthropic Skills y OpenAI de respaldo; un control automático de calidad.',
       },
       {
         k: 'Revisión humana',
@@ -126,7 +129,7 @@ const systems = [
         k: 'Controles',
         v: 'Tono institucional en español, cero invenciones; la lectura financiera exige permiso.',
       },
-      { k: 'Retención', v: 'El borrador no se guarda solo; queda solo si el personal lo copia o envía.' },
+      { k: 'Retención', v: 'El borrador no se guarda por sí mismo. Queda registrado únicamente si el personal lo copia o lo envía.' },
     ],
   },
   {
@@ -161,7 +164,7 @@ export default function IaGobernadaPage() {
         </h1>
         <p className="settle settle-3 mt-8 max-w-xl font-sans text-base leading-relaxed text-gray-600">
           En las instituciones que ABN opera, la inteligencia artificial no toma decisiones ni
-          reemplaza criterio. Entra dentro del flujo, con trazabilidad y revisión humana, para
+          reemplaza criterio. Trabaja dentro del flujo, con trazabilidad y revisión humana, para
           devolver tiempo sin ceder control.
         </p>
         <p className="settle settle-4 mt-12">

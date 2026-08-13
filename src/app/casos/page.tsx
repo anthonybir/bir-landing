@@ -3,9 +3,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Casos | ABN · Agencia Bir Núñez',
+  title: 'Casos',
   description:
     'AENA, IPUPY e IBA: tres instituciones reales, tres transformaciones medibles. Sistemas operados por la misma agencia que los diseñó.',
+  alternates: {
+    canonical: '/casos',
+  },
 };
 
 const cases = [
@@ -47,7 +50,7 @@ const cases = [
     antes:
       'Enseñanza pastoral artesanal: cada docente con su material, sin estándar común.',
     ahora:
-      'Marco curricular y editorial bajo un solo estándar. Primer tenant de Aula, el motor de planificación académica con IA de ABN. El mismo marco se enseña hoy en vivo: diplomado «Métodos de estudiar la Biblia con uso responsable de IA».',
+      'Marco curricular y editorial bajo un solo estándar. La primera institución desplegada en Aula, el motor de planificación académica con IA de ABN. El mismo marco se enseña hoy en vivo: diplomado «Métodos de estudiar la Biblia con uso responsable de IA».',
     kpi: { num: '1 estándar', label: 'Marco curricular y editorial único' },
     img: {
       src: '/screenshots/editorial-biblioteca.png',
@@ -81,7 +84,7 @@ export default function CasosPage() {
             <div className="border-t border-gray-200 pt-10">
               <div className="grid gap-10 md:grid-cols-[1.1fr_1fr] md:gap-16">
                 <div>
-                  <h2 className="display text-[1.777rem]">{c.inst}</h2>
+                  <h2 className="font-sans text-base font-semibold text-gray-900">{c.inst}</h2>
                   <p className="label-caps mt-2">{c.sector}</p>
 
                   <dl className="mt-10 space-y-8">
@@ -132,9 +135,11 @@ export default function CasosPage() {
             <p className="label-caps mb-3">Plataforma</p>
             <p className="font-sans text-base leading-relaxed text-gray-600">
               Los tres casos corren sobre{' '}
-              <strong className="font-medium text-gray-900">Aula</strong>, el motor
-              de planificación académica con IA de ABN. Una sola plataforma,
-              propiedad de la agencia, desplegada por institución.
+              <Link href="/aula" className="link-quiet font-medium text-gray-900">
+                Aula
+              </Link>
+              , el motor de planificación académica con IA de ABN. Una sola
+              plataforma, propiedad de la agencia, desplegada por institución.
             </p>
           </div>
           <Image
@@ -155,7 +160,7 @@ export default function CasosPage() {
             diagnóstico, no un contrato.
           </p>
           <Link href="/contacto" className="btn-primary">
-            Conversar sobre tu institución
+            Agendar un diagnóstico
           </Link>
         </div>
       </section>

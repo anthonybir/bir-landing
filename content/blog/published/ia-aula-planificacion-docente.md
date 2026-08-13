@@ -51,11 +51,11 @@ Hoy tenemos un **catálogo de más de 120 prompts publicados**, cada uno con su 
 
 ![Catálogo de prompts: cada función de IA del sistema es una instrucción versionada y publicada.](/blog/ia-aula-planificacion-docente/prompts-catalog.png)
 
-## Verificación automática de calidad y seguridad
+## Verificación de calidad y revisión humana
 
 Una IA puede equivocarse. Por eso verificamos lo que produce.
 
-Antes y durante su uso, lo que genera la IA pasa por controles automáticos de calidad: que el contenido sea **apropiado para la edad**, que esté **alineado pedagógicamente** con el currículo, que sea **claro y bien estructurado**, y que cumpla criterios de **seguridad** para contenido escolar K-12. Si una generación no supera los controles de seguridad, el sistema **reintenta con reglas más estrictas** y, si hace falta, ofrece una plantilla segura alineada al MEC.
+Antes de llegar al docente, lo que genera la IA pasa por controles automáticos de calidad: que esté **alineado pedagógicamente** con el currículo, que sea **claro y bien estructurado**, y que mantenga **fidelidad al plan anual**. Si una generación no supera esos controles, el sistema **reintenta con reglas más estrictas** y, si hace falta, ofrece una plantilla alineada al MEC. Que el contenido sea apropiado para la edad y seguro para el aula lo confirma siempre una persona: ningún material llega a un estudiante o a una familia sin **revisión humana obligatoria**.
 
 Incluso tenemos una herramienta interna para **correr evaluaciones del generador semanal** sobre casos reales y obtener un reporte consolidado de calidad. El control de calidad es continuo y medible.
 

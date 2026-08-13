@@ -3,9 +3,12 @@ import ContactForm from './ContactForm';
 import { WHATSAPP_URL } from '../WhatsAppFloat';
 
 export const metadata: Metadata = {
-  title: 'Contacto | ABN · Agencia Bir Núñez',
+  title: 'Contacto',
   description:
     'Iniciá la conversación de diagnóstico. Respuesta habitual en 48 horas hábiles, por formulario, email o WhatsApp.',
+  alternates: {
+    canonical: '/contacto',
+  },
 };
 
 export default function ContactoPage() {
@@ -17,7 +20,7 @@ export default function ContactoPage() {
       </h1>
       <p className="settle settle-3 mt-8 max-w-xl font-sans text-base leading-relaxed text-gray-600">
         Contanos qué necesita orden en tu institución. Una conversación inicial
-        no compromete a nada y suele ahorrar meses de decisiones a ciegas.
+        no te compromete a nada y suele ahorrar meses de decisiones a ciegas.
       </p>
 
       <div className="mt-16 grid gap-12 md:grid-cols-[1.4fr_1fr] md:gap-16">

@@ -2,9 +2,12 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Nosotros | ABN · Agencia Bir Núñez',
+  title: 'Nosotros',
   description:
     'ABN es una agencia familiar: dirección, pedagogía, derecho y finanzas en una sola unidad. El trabajo es el retrato.',
+  alternates: {
+    canonical: '/nosotros',
+  },
 };
 
 const team = [
@@ -127,7 +130,7 @@ export default function NosotrosPage() {
             Si esta forma de trabajar le sirve a tu institución, hablemos.
           </p>
           <Link href="/contacto" className="btn-primary">
-            Iniciar conversación
+            Agendar un diagnóstico
           </Link>
         </div>
       </section>

@@ -1,12 +1,21 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Paraguay Residency & Relocation Services | ABN · Agencia Bir Núñez',
+  title: {
+    absolute: 'Paraguay Residency & Relocation Services | ABN · Agencia Bir Núñez',
+  },
   description:
     'End-to-end Paraguayan temporary residency for English-speaking families: translations, notarizations, Interpol and Migraciones filings, with transparent USD pricing.',
   alternates: {
     canonical: '/en',
     languages: { es: '/', en: '/en' },
+  },
+  openGraph: {
+    title: 'Paraguay Residency & Relocation Services | ABN · Agencia Bir Núñez',
+    description:
+      'End-to-end Paraguayan temporary residency for English-speaking families: translations, notarizations, Interpol and Migraciones filings, with transparent USD pricing.',
+    url: '/en',
+    locale: 'en_US',
   },
 };
 
@@ -85,10 +94,10 @@ export default function RelocationPage() {
         <p className="settle settle-3 mt-8 max-w-xl font-sans text-base leading-relaxed text-gray-600">
           We manage the entire Paraguayan side of your family&rsquo;s Temporary
           Residency: translations, notarizations, Interpol, police certificates
-          and the Migraciones filing. You arrive to a process, not a maze.
+          and the Migraciones filing. You land in a process, not a maze.
         </p>
         <div className="settle settle-4 mt-12 flex flex-wrap items-center gap-6">
-          <a href="#contact" className="btn-primary">
+          <a href="#contact" className="btn-secondary">
             Request a quote
           </a>
           <a
@@ -169,7 +178,7 @@ export default function RelocationPage() {
         <div className="card p-8 md:p-12">
           <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
             <div className="max-w-lg">
-              <h2 className="display text-[1.777rem]">Tell us about your family.</h2>
+              <h2 className="font-sans text-base font-semibold text-gray-900">Tell us about your family.</h2>
               <p className="mt-3 font-sans text-base text-gray-600">
                 Write a few lines: how many adults, how many children, your
                 timeline. You&rsquo;ll have an itemized quote within 48 business

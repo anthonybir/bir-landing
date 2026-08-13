@@ -7,7 +7,7 @@ import { WHATSAPP_URL } from './WhatsAppFloat';
 
 const es = {
   blurb:
-    'Ordenamos instituciones y convertimos ese criterio en software con IA gobernada. Bajo una sola dirección.',
+    'Ordenamos instituciones y convertimos su criterio en software con IA gobernada. Bajo una sola dirección.',
   site: 'Sitio',
   contact: 'Contacto',
   whatsapp: 'WhatsApp',
@@ -15,6 +15,7 @@ const es = {
   links: [
     { href: '/servicios', label: 'Servicios' },
     { href: '/ia-gobernada', label: 'IA gobernada' },
+    { href: '/aula', label: 'Aula' },
     { href: '/casos', label: 'Casos' },
     { href: '/blog', label: 'Blog' },
     { href: '/nosotros', label: 'Nosotros' },
@@ -25,7 +26,7 @@ const es = {
 
 const en = {
   blurb:
-    'A services agency for human-scale institutions: consulting, systems and relocation support under one direction.',
+    'A services agency for human-scale institutions: consulting, systems and relocation support, run by one team.',
   site: 'Site',
   contact: 'Contact',
   whatsapp: 'WhatsApp',

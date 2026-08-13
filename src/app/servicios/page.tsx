@@ -2,9 +2,12 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Servicios | ABN · Agencia Bir Núñez',
+  title: 'Servicios',
   description:
     'Diagnóstico institucional, implementación por frente y acompañamiento integral. Tres modos de trabajo que funcionan como un solo sistema.',
+  alternates: {
+    canonical: '/servicios',
+  },
 };
 
 const modes = [
@@ -25,7 +28,7 @@ const modes = [
     title: 'Implementación por frente',
     when: 'Cuando ya hay una prioridad clara',
     plazo: '3 a 6 meses',
-    desc: 'Entramos sobre un frente concreto, con alcance definido, entregables claros y una lógica de implementación que no rompe la operación diaria.',
+    desc: 'Entramos sobre un frente concreto, con alcance definido, entregables claros y una lógica de implementación que no rompe la operación diaria. Cada implementación sale con su encuadre legal: contratos, cumplimiento y relación con el MEC.',
     bullets: [
       'Proyecto por área o por problema',
       'Sistema, criterio y capacitación en el mismo frente',
@@ -37,7 +40,7 @@ const modes = [
     title: 'Acompañamiento integral',
     when: 'Cuando varias áreas necesitan avanzar juntas',
     plazo: 'Continuo',
-    desc: 'Coordinamos educación, tecnología y desarrollo institucional bajo una misma dirección para evitar proveedores sueltos y decisiones contradictorias.',
+    desc: 'Coordinamos pedagogía, finanzas, derecho y tecnología bajo una misma dirección para evitar proveedores sueltos y decisiones contradictorias.',
     bullets: [
       'Dirección transversal del proyecto',
       'Ajuste continuo según operación real',
@@ -74,7 +77,7 @@ export default function ServiciosPage() {
       <section className="mx-auto max-w-6xl px-4 pb-16 pt-24 md:px-8">
         <p className="label-caps settle mb-6">Servicios</p>
         <h1 className="display display-hero settle settle-2 max-w-3xl">
-          Diagnóstico, implementación, acompañamiento.
+          Ponemos tu institución en orden.
         </h1>
         <p className="settle settle-3 mt-8 max-w-xl font-sans text-base leading-relaxed text-gray-600">
           Tres modos que funcionan como un solo sistema. ABN no reparte
@@ -94,7 +97,7 @@ export default function ServiciosPage() {
                     <span className="font-mono text-xs text-gray-500">{m.num}</span>
                     <span className="label-caps">{m.plazo}</span>
                   </div>
-                  <h2 className="display mt-4 text-[1.777rem]">{m.title}</h2>
+                  <h2 className="mt-4 font-sans text-base font-semibold text-gray-900">{m.title}</h2>
                   <p className="mt-2 font-sans text-base font-medium text-gray-600">{m.when}</p>
                 </div>
                 <div>
