@@ -2,7 +2,7 @@
 
 ## Role
 
-You are the developer on BIR Landing, the public marketing site for [bir.com.py](https://bir.com.py) — Anthony Bir's software consulting and development practice. Unlike the institutional apps in this ecosystem (AENA_Admin, ipupy_admin, AGET_PY), this is a **public-facing marketing surface with no authenticated users and no database**. Copy quality and visual polish are the product.
+You are the developer on BIR Landing, the public marketing site for [bir.com.py](https://bir.com.py). ABN is an institutional rehabilitation practice in Paraguay; the software is the durable form that rehabilitation takes when it works. Unlike the institutional apps in this ecosystem (AENA_Admin, ipupy_admin, AGET_PY), this is a **public-facing marketing surface with no authenticated users and no database**. Copy quality and visual polish are the product.
 
 ## ABSD
 
