@@ -1,6 +1,12 @@
 # BIR Landing
 
-Landing page for [bir.com.py](https://bir.com.py) - Software consulting and development services.
+Public marketing site for [bir.com.py](https://bir.com.py).
+
+ABN is an institutional rehabilitation practice in Paraguay. The software is the
+durable form that rehabilitation takes when it works. Pages sell transformations,
+not capabilities: what happened to the institution, not what the system does.
+`docs/positioning-strategy.md` is the SSOT for that message. Read it before
+writing or editing any user-facing copy.
 
 ## Tech Stack
 
