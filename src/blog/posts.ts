@@ -27,9 +27,9 @@ export type Post = PostMeta & {
 const POSTS: readonly PostMeta[] = [
   {
     slug: 'planes-semanales-v2',
-    title: 'Planes Semanales V2: cinco maneras de enseñar, una sola fuente de verdad',
+    title: 'Planes Semanales V2: cinco formas de acompañar al grupo',
     description:
-      'Aula permite variar el acompañamiento pedagógico sin romper la capacidad anual, la evaluación institucional ni la autoridad final del docente.',
+      'El docente puede cambiar el ritmo y la forma de enseñar sin perder la capacidad anual, la evaluación institucional ni su decisión final.',
     dateISO: '2026-08-04',
     tag: 'Educación · Producto',
     institution: 'AENA · Nuevas Alturas',
@@ -40,9 +40,9 @@ const POSTS: readonly PostMeta[] = [
   },
   {
     slug: 'aula-calma-como-estructura',
-    title: 'La calma como estructura: cómo rediseñamos la planificación en Aula',
+    title: 'Quitamos ruido de la planificación docente',
     description:
-      'Rediseñamos por completo la planificación de Aula con una idea: la calma es estructura. Menos ruido, una ruta visible del plan anual al paquete semanal, y una sola fuente de verdad para docentes y dirección.',
+      'Rediseñamos la planificación de Aula para que cada docente vea dónde está, qué sigue y qué decisión le corresponde.',
     dateISO: '2026-06-20',
     tag: 'Diseño · Producto',
     institution: 'AENA · Nuevas Alturas',
@@ -53,9 +53,9 @@ const POSTS: readonly PostMeta[] = [
   },
   {
     slug: 'ia-administracion-fiel',
-    title: 'Inteligencia artificial al servicio de la administración fiel',
+    title: 'Cómo usamos IA sin perder control sobre la tesorería',
     description:
-      'Cómo la tesorería de IPU Paraguay incorpora IA sin debilitar la transparencia: cuatro principios escritos en el código mismo del sistema.',
+      'Cuatro reglas para usar inteligencia artificial en la tesorería de IPU Paraguay sin debilitar la responsabilidad ni la rendición de cuentas.',
     dateISO: '2026-06-12',
     tag: 'Tesorería · IA responsable',
     institution: 'IPU PY',
@@ -66,10 +66,9 @@ const POSTS: readonly PostMeta[] = [
   },
   {
     slug: 'ia-aula-planificacion-docente',
-    title:
-      'IA al servicio del aula: cómo planifican nuestros docentes con inteligencia artificial',
+    title: 'La IA propone. El docente decide.',
     description:
-      'Aula, nuestra plataforma educativa, suma IA al módulo de planificación con una regla firme: la IA propone, el docente decide.',
+      'Así usamos inteligencia artificial en Aula para preparar planes y materiales sin quitar autoridad al docente.',
     dateISO: '2026-06-10',
     tag: 'Educación · IA responsable',
     institution: 'AENA · Nuevas Alturas',

@@ -1,71 +1,87 @@
-Casi todo rediseño agrega. Más botones, más paneles, más opciones a la vista. Con la planificación de **Aula** hicimos lo contrario. Quitamos.
+Casi todo rediseño agrega algo. Más botones. Más paneles. Más opciones.
 
-La planificación es el centro del trabajo docente en **Nuevas Alturas**, la escuela de **AENA**. Un centro necesita silencio alrededor. Este año rediseñamos esa experiencia completa sobre una sola idea: la calma es estructura.
+Con la planificación de **Aula** hicimos lo contrario. Quitamos.
 
-Una pantalla en calma deja ver antes de actuar. El docente sabe dónde está, qué sigue y qué le toca decidir. Eso se construye con menos ruido y más espacio. Pocos elementos, bien dispuestos, con aire entre ellos.
+La planificación está en el centro del trabajo docente de **Nuevas Alturas**, la escuela de **AENA**. Si esa pantalla se siente pesada, el trabajo también se siente pesado. Por eso rediseñamos la experiencia con una idea: la calma también es estructura.
 
-## El punto de partida: una sola decisión
+No buscamos una pantalla vacía. Buscamos una pantalla que le diga al docente dónde está, qué sigue y qué decisión le corresponde.
 
-El panel abre con una sola petición: elegir el curso. Todo lo demás espera.
+## Primero, elegir el curso
 
-Alrededor de esa decisión, una banda de contexto responde lo que el docente necesita antes de empezar: su última sesión, el estado de preparación, la semana sugerida. No tiene que buscarlo. Debajo, una ruta nombra el camino completo, de la fuente anual al paquete semanal, en cuatro pasos visibles: plan anual, objetivo del MEC, paquete semanal con IA y exportación.
+El panel abre con una sola pregunta: ¿con qué curso vas a trabajar?
 
-El espacio en blanco sostiene la atención en el único paso que importa ahora.
+El resto espera.
 
-## Del año a la semana, en una ruta visible
+Una banda pequeña muestra lo necesario antes de empezar: la última sesión, el estado de preparación y la semana sugerida. Debajo aparece la ruta completa. Plan anual. Objetivo del MEC. Paquete semanal con IA. Exportación.
 
-Crear una planificación es seguir una secuencia que el sistema mantiene a la vista.
+El docente puede ver el camino sin tener que enfrentarlo todo al mismo tiempo.
 
-El lienzo de creación ordena el trabajo en dos tiempos: Contexto y Creación. Antes de generar nada, declara qué va a leer la IA: el programa del MEC de la materia, la memoria de planificaciones previas y el contexto del curso y la semana. La generación es un paso intermedio. El asistente prepara un borrador y se detiene. **El plan se aplica solo después de la revisión y la aprobación del docente.**
+## Del contexto a la creación
 
-Cuando se acerca un cierre, el sistema lo dice en su lugar, con calma: cuántos días quedan y qué conviene tener listo antes.
+El lienzo de trabajo tiene dos momentos claros: Contexto y Creación.
 
-![El lienzo de creación mantiene la ruta a la vista: primero el contexto, después la generación. Antes de proponer nada, el sistema declara qué fuentes va a leer.](/blog/aula-calma-como-estructura/lienzo-creacion.png)
+Antes de generar un borrador, Aula dice qué va a leer la IA: el programa del MEC, las planificaciones anteriores y el contexto del curso y de la semana.
 
-## La fuente: el plan anual
+Después prepara una propuesta y se detiene. **El docente revisa y aprueba antes de aplicar el plan.**
 
-Cada semana desciende de un plan anual. Esa es la fuente, y el rediseño la trata como tal: el plan del año que define cada semana, con su versión, su estado y su trazabilidad.
+Cuando se acerca un cierre, el aviso aparece en el lugar donde hace falta. Dice cuántos días quedan y qué conviene preparar. No interrumpe todo el trabajo.
 
-Desde aquí la institución ve qué cursos están al día y cuáles necesitan ajuste, y prepara redistribuciones sin tocar el original. La estructura es honesta. Si un curso todavía no tiene plan anual activo, el sistema lo dice en lugar de improvisar uno.
+![El lienzo mantiene la ruta a la vista: primero el contexto y después la creación. También muestra las fuentes que usará la IA.](/blog/aula-calma-como-estructura/lienzo-creacion.png)
 
-![Los planes anuales son la fuente de cada semana: versionados, con estado visible, y con redistribución preparada sin alterar el original.](/blog/aula-calma-como-estructura/plan-anual.png)
+## El plan anual sigue siendo la fuente
 
-## El calendario que existe
+Cada semana nace de un plan anual. Aula no inventa una fuente nueva para que la generación parezca más fácil.
 
-Una buena planificación respeta el calendario que existe. El calendario de Aula integra el contexto real de la institución: dónde está cada curso en el año, semana por semana, y qué fechas no cuentan. Fines de semana, feriados, jornadas de toda la institución, con su impacto operativo a la vista.
+El plan anual conserva su versión, su estado y su historial. La institución puede ver qué cursos están al día y cuáles necesitan ajuste. También puede preparar una redistribución sin cambiar el original.
 
-Planificar deja de pelear contra el almanaque. Lo incorpora.
+Si un curso todavía no tiene un plan anual activo, el sistema lo dice. No improvisa uno.
 
-![El calendario integra el contexto real de la institución: fines de semana, fechas no computables y jornadas institucionales, para que la planificación respete el año que de verdad existe.](/blog/aula-calma-como-estructura/calendario.png)
+![Cada plan anual conserva su versión y su estado. También permite preparar una redistribución sin cambiar el original.](/blog/aula-calma-como-estructura/plan-anual.png)
 
-## Lo que queda: una línea de planes
+## El calendario real entra en la planificación
 
-Terminada la semana, queda algo. Aula lo guarda como una línea de planes, de lo más reciente hacia atrás. Es la memoria del curso, lista para retomar.
+Una semana escolar no existe aislada.
 
-Los filtros esperan plegados. El trabajo aparece primero. Cada plan queda marcado según si tuvo o no apoyo de IA, y la misma información se ve como línea, por curso o en tabla, según lo que el docente necesite mirar.
+Hay feriados, jornadas institucionales, fines de semana y fechas que no cuentan. Aula incorpora ese contexto y muestra su impacto antes de preparar el plan.
 
-![Mis planes guarda el trabajo como una línea, de lo más reciente hacia atrás. Los filtros esperan plegados: primero el trabajo, después el control fino.](/blog/aula-calma-como-estructura/mis-planes.png)
+Así dejamos de planificar contra un calendario ideal. Trabajamos con el año que la institución tiene de verdad.
 
-## La misma calma para la dirección
+![El calendario muestra fines de semana, fechas no computables y jornadas institucionales con su impacto operativo.](/blog/aula-calma-como-estructura/calendario.png)
 
-El rediseño usa una sola estructura para todos los roles. La dirección entra al mismo panel que el docente, con las mismas reglas de lectura, y encima una bitácora que recuerda el movimiento reciente de la institución.
+## El trabajo queda disponible
 
-Esto es deliberado. Una estructura honesta no depende de quién esté mirando, ni de que alguien explique cómo funciona. Sostiene sola. La dirección ve el estado real, incluidos los cursos que todavía requieren plan anual, sin paneles paralelos ni versiones privilegiadas de la verdad.
+Cuando termina una semana, el plan no desaparece en una carpeta.
 
-![La dirección entra a la misma estructura que el docente, con una bitácora del movimiento reciente. Una sola fuente de verdad, sin paneles paralelos.](/blog/aula-calma-como-estructura/hub-direccion.png)
+Aula lo guarda en una línea de tiempo, con lo más reciente primero. Los filtros quedan plegados hasta que hacen falta. Cada plan indica si tuvo apoyo de IA.
 
-## Calma en cualquier pantalla
+El docente puede volver al trabajo por curso, en una lista o en una tabla. La información es la misma. Solo cambia la forma de verla.
 
-La misma calma se mantiene en un teléfono. La pantalla de llegada se reordena en vertical sin perder jerarquía: primero la decisión, después el contexto, después la ruta. Nada esencial se esconde detrás de un menú.
+![Mis planes muestra primero el trabajo reciente. Los filtros esperan plegados hasta que hacen falta.](/blog/aula-calma-como-estructura/mis-planes.png)
 
-![En el teléfono, la pantalla de llegada se reordena en vertical sin perder jerarquía: la decisión primero, el contexto y la ruta después.](/blog/aula-calma-como-estructura/vista-movil.png)
+## Dirección ve la misma verdad
 
-## Lo que permanece
+No construimos un sistema para docentes y otro para dirección.
 
-Un rediseño se nota mientras se usa. Se mide después.
+La dirección entra a la misma estructura. Ve las mismas reglas, más una bitácora del movimiento reciente de la institución. También ve qué cursos todavía necesitan un plan anual.
 
-Buscamos el estado que queda cuando el docente cierra la computadora: saber dónde está parado, confiar en que el sistema recuerda por él, tener claro el próximo paso. Esa tranquilidad es el producto. La pantalla solo la hace posible.
+Una sola estructura evita explicaciones paralelas y versiones distintas del mismo estado.
 
-Construimos quitando, ordenando y dejando aire, porque una herramienta institucional debe sostenerse sola, sin depender de que alguien esté presente para explicarla. Esa es, para nosotros, la forma honesta de diseñar.
+![La dirección usa la misma estructura y suma una bitácora del movimiento reciente.](/blog/aula-calma-como-estructura/hub-direccion.png)
 
-*Si querés ver cómo se siente trabajar en calma dentro de Aula, [conversemos](/contacto).*
+## También funciona en el teléfono
+
+En una pantalla pequeña, el orden se mantiene: primero la decisión, después el contexto y luego la ruta.
+
+No escondimos lo esencial detrás de un menú. Reordenamos la misma información.
+
+![En el teléfono, la decisión aparece primero. El contexto y la ruta siguen después.](/blog/aula-calma-como-estructura/vista-movil.png)
+
+## Lo que queríamos lograr
+
+El rediseño funciona si el docente cierra la computadora y sabe tres cosas: dónde quedó, qué recuerda el sistema y cuál es el próximo paso.
+
+Esa calma no viene de una pantalla bonita. Viene de una estructura que no obliga a una persona a explicar todo cada vez.
+
+Quitamos ruido. Ordenamos las decisiones. Dejamos espacio para trabajar.
+
+*Si tu institución necesita una herramienta que se sostenga en el trabajo real, [conversemos](/contacto).*

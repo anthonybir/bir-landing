@@ -1,82 +1,86 @@
-Planificar bien una clase toma tiempo. Mucho tiempo. Alinear los contenidos con el currículo oficial, secuenciar las semanas, preparar materiales, redactar evaluaciones, escribir informes para las familias. Todo eso es trabajo invisible que se acumula fuera del horario escolar.
+Planificar bien una clase toma tiempo. Mucho.
 
-En **Nuevas Alturas**, la escuela de **AENA**, decidimos atacar ese problema con tecnología propia. Construimos **Aula**, nuestra plataforma de gestión académica, y este año incorporamos asistencia de inteligencia artificial al módulo de planificación.
+Hay que ordenar el currículo, preparar materiales, pensar actividades, redactar evaluaciones y escribir informes para las familias. Gran parte de ese trabajo ocurre cuando la jornada escolar ya terminó.
 
-Desde el principio fijamos una condición: usar IA de forma responsable en una escuela. Esa condición define todo lo que sigue.
+En **Nuevas Alturas**, la escuela de **AENA**, construimos **Aula** para ordenar ese trabajo. Después incorporamos inteligencia artificial a la planificación.
 
-## El docente, en el centro. La IA, como asistente.
+Lo hicimos con una regla simple: **la IA propone y el docente decide**.
 
-La IA en Aula **nunca publica nada por su cuenta**. Propone borradores; el docente los lee, los ajusta y los aprueba. Nada se vuelve "oficial", ni visible para coordinación o familias, sin esa aprobación humana explícita.
+## Nada se publica solo
 
-El sistema incluso **bloquea la aprobación** cuando faltan condiciones (por ejemplo, datos de calificaciones que aún no están listos) y le explica al docente, en lenguaje claro, qué falta para poder avanzar. La IA acelera; el criterio profesional sigue siendo del docente.
+La IA prepara un borrador. El docente lo lee, lo ajusta y lo aprueba.
 
-![El panel de planificación organiza el trabajo del docente en una ruta clara: del plan anual, al diseño alineado con el MEC, al borrador semanal con IA, hasta la exportación del material final.](/blog/ia-aula-planificacion-docente/hub-docente.png)
+Si falta una condición importante, el sistema detiene la aprobación y explica qué falta. Nada se vuelve oficial ni llega a coordinación o a una familia sin una decisión humana.
 
-## Un camino sistemático: del currículo nacional al aula
+La IA puede acelerar el primer paso. El criterio profesional sigue en manos del docente.
 
-La planificación en Aula sigue un **flujo ordenado y repetible**:
+![El panel de planificación organiza el trabajo del docente en una ruta clara: del plan anual al borrador semanal con IA y la exportación final.](/blog/ia-aula-planificacion-docente/hub-docente.png)
 
-1. **Fuente anual:** el plan del año como punto de partida.
-2. **Diseño alineado al MEC:** competencias, indicadores y la escala de calificación del 1 al 5 del Ministerio de Educación, incorporados en cada generación.
-3. **Borrador semanal con IA:** la IA propone objetivos, actividades, banco de problemas y evaluación para la semana.
-4. **Revisión, aprobación y exportación:** el docente cierra el plan y lo descarga.
+## Del plan anual a la semana
 
-Cada plan semanal queda etiquetado según si tuvo apoyo de IA, de modo que la institución siempre sabe **qué se generó con asistencia y qué se escribió a mano**. Todo queda a la vista.
+Aula no funciona como un chat abierto donde cada persona improvisa una instrucción. La planificación sigue una ruta común:
 
-![La planificación semanal: el docente filtra por curso, semana y estado, distingue los planes hechos con IA, y abre el panel para crear uno nuevo.](/blog/ia-aula-planificacion-docente/planificacion-semanal.png)
+1. El plan anual define la fuente.
+2. El marco del MEC aporta competencias, indicadores y la escala de calificación del 1 al 5.
+3. La IA prepara objetivos, actividades, consignas y una propuesta de evaluación para la semana.
+4. El docente revisa, aprueba y exporta el plan.
 
-## Materiales en minutos
+Cada plan indica si tuvo apoyo de IA. La institución puede distinguir qué se generó con asistencia y qué escribió el docente.
 
-Más allá del plan semanal, Aula ayuda al docente a generar **materiales didácticos** alineados a su planificación: guías de cuaderno, guías didácticas, guías de proyecto, fichas de trabajo, evaluaciones y rúbricas.
+![El docente puede filtrar por curso, semana y estado, y distinguir los planes que tuvieron apoyo de IA.](/blog/ia-aula-planificacion-docente/planificacion-semanal.png)
 
-El docente elige el tipo de material, da instrucciones, y la IA produce un borrador listo para revisar y descargar (por ejemplo, en Word). El modelo de IA utilizado se muestra **abiertamente en pantalla**. Usamos modelos de Claude, de Anthropic. El docente siempre sabe con qué herramienta está trabajando.
+## Materiales que no empiezan de cero
 
-![Generación de materiales didácticos alineados a la planificación. El docente elige el tipo de recurso y la IA prepara un borrador editable y exportable.](/blog/ia-aula-planificacion-docente/materiales-docente.png)
+Aula también prepara borradores de guías, fichas de trabajo, evaluaciones y rúbricas alineadas con la planificación.
 
-Con el tiempo, esos materiales forman una **biblioteca editorial institucional**. Hoy contamos con más de **140 materiales** (textos base, fichas de trabajo, guías) organizados por área, grado y semana, disponibles para que el equipo docente los reutilice.
+El docente elige el tipo de material, escribe sus indicaciones y recibe un archivo editable. La pantalla muestra qué modelo de IA se usó. No lo escondemos.
 
-![La biblioteca editorial: más de 140 materiales generados con IA, organizados por área, grado y semana. Contenido curricular, sin datos personales.](/blog/ia-aula-planificacion-docente/biblioteca-editorial.png)
+![El docente elige el tipo de recurso y recibe un borrador que puede revisar y descargar.](/blog/ia-aula-planificacion-docente/materiales-docente.png)
 
-Cada material es una **pieza institucional trazable**: su área, su grado, su estructura alineada al currículo, su vocabulario clave y un registro de cómo fue creado (incluida una medición de "lectura IA"). El catálogo es visible para el equipo. El **archivo completo de cada material está protegido por permisos**. El acceso queda siempre controlado.
+Con el tiempo, los materiales aprobados forman una biblioteca de la institución. Hoy reúne más de **140 recursos**, organizados por área, grado y semana.
 
-![Cada material generado queda catalogado y trazable: estructura, contenidos, vocabulario y registro de origen. Una pieza que permanece.](/blog/ia-aula-planificacion-docente/material-detalle.png)
+![La biblioteca reúne más de 140 materiales organizados por área, grado y semana, sin datos personales de estudiantes.](/blog/ia-aula-planificacion-docente/biblioteca-editorial.png)
 
-## IA gobernada
+Cada material conserva su área, grado, estructura curricular, vocabulario y origen. El equipo puede ver el catálogo. El archivo completo mantiene permisos propios.
 
-Esta es la parte que rara vez se ve, y la que más nos importa.
+![Cada material conserva su estructura, contenidos, vocabulario y registro de origen.](/blog/ia-aula-planificacion-docente/material-detalle.png)
 
-En Aula, **cada comportamiento de la IA está definido por un *prompt* gobernado**: escrito, revisado, versionado y *publicado*, como una política institucional.
+## Las instrucciones también se gobiernan
 
-Hoy tenemos un **catálogo de más de 120 prompts publicados**, cada uno con su versión y su estado. Cuando mejoramos uno, se crea una nueva versión, pasa controles automáticos y se publica con registro de quién lo hizo y cuándo. Cada cambio queda trazado.
+La parte más importante casi no se ve.
 
-![Catálogo de prompts: cada función de IA del sistema es una instrucción versionada y publicada.](/blog/ia-aula-planificacion-docente/prompts-catalog.png)
+Cada función de IA usa un *prompt* escrito, revisado, versionado y publicado. No dejamos que las reglas cambien de forma informal.
 
-## Verificación de calidad y revisión humana
+El catálogo tiene más de **120 prompts publicados**. Cuando ajustamos uno, el sistema crea una versión nueva y registra quién la publicó y cuándo.
 
-Una IA puede equivocarse. Por eso verificamos lo que produce.
+![Cada función de IA usa una instrucción con versión y estado de publicación.](/blog/ia-aula-planificacion-docente/prompts-catalog.png)
 
-Antes de llegar al docente, lo que genera la IA pasa por controles automáticos de calidad: que esté **alineado pedagógicamente** con el currículo, que sea **claro y bien estructurado**, y que mantenga **fidelidad al plan anual**. Si una generación no supera esos controles, el sistema **reintenta con reglas más estrictas** y, si hace falta, ofrece una plantilla alineada al MEC. Que el contenido sea apropiado para la edad y seguro para el aula lo confirma siempre una persona: ningún material llega a un estudiante o a una familia sin **revisión humana obligatoria**.
+## Verificamos antes de confiar
 
-Incluso tenemos una herramienta interna para **correr evaluaciones del generador semanal** sobre casos reales y obtener un reporte consolidado de calidad. El control de calidad es continuo y medible.
+La IA se puede equivocar. Por eso medimos lo que produce.
 
-![Evaluaciones de IA: la institución mide y audita la calidad de lo que produce el sistema.](/blog/ia-aula-planificacion-docente/ai-evals.png)
+El sistema revisa la alineación pedagógica, la claridad, la estructura y la fidelidad al plan anual. Si el borrador no cumple esos controles, vuelve a intentarlo con reglas más estrictas. Si todavía no alcanza, ofrece una plantilla alineada al MEC.
 
-## Pensado para las familias
+Después viene el control que no delegamos: una persona confirma que el contenido sea adecuado para la edad y seguro para el aula. Ningún material llega a un estudiante o a una familia sin revisión humana.
 
-Cuando la IA ayuda a redactar un **informe pedagógico** para una familia, la dirección lo **revisa, lo edita y lo aprueba antes de publicarlo**. El texto que llega a la familia queda limpio de notas sueltas, lenguaje administrativo, razonamiento interno de la IA y marcadores técnicos. La **revisión humana es obligatoria**; nada se publica sin esa aprobación.
+También usamos una herramienta interna para evaluar el generador semanal con casos reales. Así podemos ver si una mejora funcionó y dónde todavía falla.
 
-La familia recibe una devolución **cálida, concreta y respetuosa** sobre el progreso de su hijo o hija. El docente revisa siempre antes de enviar.
+![La institución puede medir y revisar la calidad de lo que produce el sistema.](/blog/ia-aula-planificacion-docente/ai-evals.png)
+
+## Lo que recibe una familia
+
+La IA puede ayudar a redactar un informe pedagógico. No puede publicarlo.
+
+La dirección revisa, edita y aprueba cada informe. El texto final no incluye notas sueltas, lenguaje administrativo, razonamiento interno de la IA ni marcadores técnicos.
+
+La familia recibe una devolución clara y respetuosa. El docente conserva la última palabra.
 
 ## Nuestra postura
 
-La inteligencia artificial llegó a la educación para quedarse. Lo que importa es con qué principios usarla. Los nuestros son simples:
+No usamos IA para reemplazar al docente. La usamos para darle un mejor punto de partida y devolverle tiempo.
 
-- **El docente decide.** La IA asiste; el criterio profesional queda en sus manos.
-- **Alineación con el MEC.** Todo parte del currículo oficial paraguayo.
-- **Transparencia.** Se ve qué herramienta se usa y qué se generó con IA.
-- **Verificación.** Controlamos la calidad y la seguridad de forma automática.
-- **Cuidado de las familias.** Lo que llega a casa es claro, humano y seguro.
+El currículo del MEC sigue siendo la fuente. La institución puede ver dónde intervino la IA. Las instrucciones y los resultados se revisan. Nada se publica sin aprobación humana.
 
-Así le devolvemos tiempo al docente para lo que mejor hace: **enseñar**. Con el control, la calidad y la confianza intactos. Esa es, para nosotros, la forma de usar la IA de manera ética y sistemática.
+Eso es IA gobernada en una escuela. Menos trabajo repetido. La misma responsabilidad.
 
-*Si querés conocer cómo trabajamos en Nuevas Alturas, [conversemos](/contacto).*
+*Si tu institución necesita ordenar la planificación sin quitar autoridad al docente, [conversemos](/contacto).*

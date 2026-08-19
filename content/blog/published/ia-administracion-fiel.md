@@ -1,27 +1,45 @@
-Administrar los recursos de una iglesia es, antes que un problema técnico, una cuestión de confianza. Las ofrendas y los diezmos representan el esfuerzo y la fe de muchas familias. Quien los administra responde ante una planilla, ante la congregación y ante Dios.
+Administrar el dinero de una iglesia es administrar confianza.
 
-Por eso, cuando incorporamos inteligencia artificial al sistema de tesorería de IPU Paraguay, partimos de una condición clara: usar la herramienta sin debilitar la transparencia y el control que la buena administración exige.
+Cada ofrenda y cada diezmo viene del esfuerzo de una familia. El tesorero responde ante la congregación y ante Dios. Una planilla ordenada ayuda, pero no reemplaza esa responsabilidad.
 
-La respuesta tomó la forma de cuatro principios. Cada uno está escrito en el código del sistema.
+Cuando incorporamos inteligencia artificial al sistema de tesorería de IPU Paraguay, partimos de ahí. La pregunta no fue cuánto trabajo podía hacer la IA. La pregunta fue cómo usarla sin perder control.
 
-## 1. La IA propone; una persona decide.
+Definimos cuatro reglas. No quedaron en una presentación. Están dentro del sistema.
 
-En ningún punto del sistema la inteligencia artificial aplica un cambio por su cuenta. Cuando sugiere la categoría de una transacción o lee los datos de un formulario, presenta su propuesta a un tesorero, que la revisa, la corrige si hace falta y recién entonces la confirma. La herramienta acelera el trabajo; la decisión sigue siendo humana.
+## La IA propone. Una persona decide.
 
-## 2. Cada sugerencia viene con su nivel de confianza.
+La IA no aplica cambios por su cuenta.
 
-Cada propuesta de la IA llega acompañada de un puntaje de confianza, para que la persona que revisa sepa cuánto pesar esa sugerencia. Una confianza baja es una señal para mirar con más cuidado.
+Puede leer los datos de un formulario o sugerir la categoría de una transacción. Después se detiene. Un tesorero revisa la propuesta, la corrige si hace falta y recién entonces la confirma.
 
-## 3. Todo queda gobernado y auditado.
+La herramienta puede ahorrar tiempo. La decisión sigue en manos de la persona responsable.
 
-Las instrucciones que recibe la inteligencia artificial (lo que en el sistema llamamos *prompts*) están versionadas con fecha. Cada vez que la IA hace una sugerencia, queda registrado qué versión de instrucciones se usó y con qué nivel de confianza respondió. Si mañana queremos revisar cómo se comportó la herramienta hace tres meses, podemos hacerlo.
+## Si no está segura, lo muestra
 
-## 4. Cada persona ve solo lo suyo.
+Cada sugerencia llega con un nivel de confianza. Ese dato ayuda al tesorero a decidir cuánto revisar.
 
-El acceso está controlado a nivel de la base de datos misma. Un director de un fondo ve su fondo; un tesorero local ve su iglesia; cada quien ve lo que su rol permite. El control se aplica en la capa más profunda del sistema, la base de datos.
+Una confianza baja no es un detalle técnico. Es una señal clara: mirá esto con más cuidado.
+
+## Podemos volver y revisar
+
+Las instrucciones que usa la IA, los *prompts*, tienen versión y fecha.
+
+Cada sugerencia guarda la versión que se usó y el nivel de confianza de la respuesta. Si dentro de tres meses necesitamos entender por qué el sistema propuso algo, tenemos un registro para hacerlo.
+
+Eso importa. En una administración seria, no alcanza con que el resultado parezca correcto hoy.
+
+## Cada persona ve lo que le corresponde
+
+El sistema controla el acceso desde la base de datos. Un director de fondo ve su fondo. Un tesorero local ve su iglesia. Cada rol tiene un límite claro.
+
+La IA no cambia ese orden ni recibe un permiso especial por ser IA.
 
 ---
 
-Sobre estos cuatro principios funcionan hoy varios servicios de inteligencia artificial especializados: lectura de informes a partir de fotos, sugerencia de categorías contables, asistencia en la conciliación bancaria y explicación de anomalías financieras, entre otros. Cada uno es configurable y puede activarse o desactivarse de forma independiente. Un panel de control interno muestra, para cada servicio, cómo viene funcionando: cuántas veces se ejecutó sin errores, cuántas falló, y con qué versión de instrucciones.
+Con estas reglas, el sistema ya puede ayudar a leer informes desde una foto, sugerir categorías contables, acompañar una conciliación bancaria y explicar anomalías financieras. Cada servicio se puede activar o desactivar por separado.
 
-La inteligencia artificial no nos ahorra la responsabilidad de administrar bien. La ordena, la documenta y la deja a la vista. Esa, para nosotros, es la única forma aceptable de usarla.
+También tenemos un panel interno que muestra cómo funciona cada servicio: cuántas veces terminó bien, cuántas falló y qué versión de instrucciones usó.
+
+La inteligencia artificial no nos quita la responsabilidad de administrar bien. Nos ayuda a ordenar el trabajo y deja más evidencia para rendir cuentas.
+
+Para nosotros, esa es la única forma aceptable de usarla.

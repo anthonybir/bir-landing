@@ -1,65 +1,90 @@
-Una planificación semanal puede cambiar de tono, ritmo y metodología sin perder su fuente. Esa es la decisión que sostiene **Planes Semanales V2** en Aula, la plataforma académica de **AENA · Nuevas Alturas**.
+Un grupo no aprende igual todas las semanas. A veces necesita más guía. A veces necesita hacer, conversar o elegir.
 
-El sistema ofrece cinco estilos de enseñanza, pero no fabrica cinco contratos distintos. Cada semana sigue descendiendo de una capacidad del plan anual, conserva tres dimensiones de evaluación y se detiene antes de volverse oficial. **La IA propone. El docente decide.**
+El plan puede cambiar de ritmo sin perder su fuente. Esa es la idea detrás de **Planes Semanales V2** en Aula, la plataforma académica de **AENA · Nuevas Alturas**.
+
+El docente puede elegir entre cinco estilos de enseñanza. La capacidad del plan anual y la evaluación institucional no cambian con cada opción.
+
+**La IA prepara un borrador. El docente decide qué sirve para su grupo.**
 
 [Descargar la presentación completa en PowerPoint](/blog/planes-semanales-v2/planes-semanales-v2-aena.pptx)
 
-## El estilo cambia el camino, no el destino
+## El camino cambia. La meta no.
 
-La personalización pedagógica sirve cuando ayuda al docente a acompañar mejor a su grupo. No sirve si fragmenta los criterios institucionales o crea indicadores diferentes según la opción elegida.
+Personalizar una semana tiene sentido cuando ayuda al docente a acompañar mejor a su grupo.
 
-En V2, el estilo modifica la secuencia, el tipo de apoyo, las preguntas, los entregables y el espacio de elección. La capacidad anual y la estructura de evaluación permanecen.
+No tiene sentido si cada estilo inventa un criterio nuevo. Por eso V2 puede cambiar la secuencia, los apoyos, las preguntas y los productos, pero conserva la capacidad anual y la estructura de evaluación.
 
-![El estilo cambia el camino, no el destino: el plan parte de una capacidad anual y el docente conserva la decisión final.](/blog/planes-semanales-v2/slide-02.png)
+![El plan parte de una capacidad anual. El estilo cambia la manera de enseñar, pero el docente conserva la decisión final.](/blog/planes-semanales-v2/slide-02.png)
 
-## Un paquete semanal más fácil de leer
+## Un documento más fácil de usar
 
-La próxima actualización concentra el documento descargable en cuatro secciones con una función clara: **Portada**, **Cómo enseñarlo**, **Banco de consignas** y **Evaluación**.
+La próxima actualización ordena el paquete descargable en cuatro partes:
 
-La simplificación no elimina contenido pedagógico. Lo ordena. El docente puede identificar primero el contexto de la semana, después la ruta de enseñanza, luego las acciones que producirán evidencia y, finalmente, la forma de observar el aprendizaje.
+- **Portada:** qué semana, curso y capacidad estamos trabajando.
+- **Cómo enseñarlo:** la ruta que propone el estilo elegido.
+- **Banco de consignas:** las acciones que pueden producir evidencia.
+- **Evaluación:** qué observar y cómo registrarlo.
 
-![El paquete semanal se organiza en cuatro secciones: Portada, Cómo enseñarlo, Banco de consignas y Evaluación.](/blog/planes-semanales-v2/slide-03.png)
+No quitamos contenido pedagógico. Le damos un orden que el docente pueda reconocer rápido.
 
-## Cinco maneras de acompañar al grupo
+![El paquete semanal se organiza en Portada, Cómo enseñarlo, Banco de consignas y Evaluación.](/blog/planes-semanales-v2/slide-03.png)
 
-**Paso a Paso** prioriza modelado, microetapas, práctica guiada y reenseñanza. **Práctico** organiza la semana alrededor de productos, tiempos y verificaciones concretas. **Reflexivo** abre espacio para preguntas analíticas, explicación y metacognición.
+## Cinco estilos, cinco usos concretos
 
-**Creativo** permite elección, producción y transferencia sin convertir automáticamente cada semana en un proyecto. **Personalizado** recoge preferencias específicas del docente sobre ritmo, tono, oralidad, carga escrita o apoyos de inclusión.
+**Paso a Paso** divide el trabajo en etapas breves. Incluye modelado, práctica guiada y espacio para volver a enseñar.
 
-La diferencia está en cómo se llega a la evidencia, no en inventar una meta nueva.
+**Práctico** organiza la semana alrededor de un producto, tiempos claros y revisiones concretas.
 
-![Los cinco estilos de Planes Semanales V2: Paso a Paso, Práctico, Reflexivo, Creativo y Personalizado.](/blog/planes-semanales-v2/slide-04.png)
+**Reflexivo** da más lugar a preguntas, explicación y metacognición.
 
-## Borrador primero. Autoridad docente siempre.
+**Creativo** permite elegir, producir y transferir lo aprendido. No convierte cada semana en un proyecto por obligación.
 
-El flujo mantiene tres decisiones visibles. El docente prepara la semana eligiendo capacidad y estilo; revisa tiempos, lenguaje, apoyos y evidencias; y oficializa únicamente cuando el plan representa al grupo real que tiene delante.
+**Personalizado** recoge lo que el docente ya sabe de su grupo: ritmo, tono, oralidad, carga escrita y apoyos de inclusión.
 
-La generación automática es un paso intermedio. No publica, no califica y no reemplaza la aprobación profesional.
+En todos los casos cambia la forma de llegar a la evidencia. La meta no se inventa de nuevo.
 
-![El flujo docente tiene tres momentos: preparar, revisar y oficializar. Nada se vuelve oficial sin revisión.](/blog/planes-semanales-v2/slide-05.png)
+![Los cinco estilos son Paso a Paso, Práctico, Reflexivo, Creativo y Personalizado.](/blog/planes-semanales-v2/slide-04.png)
 
-## Una evaluación coherente
+## Borrador primero
 
-Cuando la semana es calificable, la estructura conserva las tres dimensiones institucionales: **procedimental, 40%**; **conceptual, 30%**; y **actitudinal, 30%**.
+El flujo tiene tres decisiones.
 
-Cada dimensión tiene una rúbrica vinculada a su indicador. Las actividades pueden variar según el estilo, pero la evidencia debe seguir siendo observable. En particular, una actitud no se infiere únicamente desde una respuesta escrita.
+Primero, el docente elige la capacidad y el estilo. Después revisa tiempos, lenguaje, apoyos y evidencias. Al final decide si el plan representa al grupo que tiene delante.
 
-![La evaluación semanal mantiene tres dimensiones: procedimental 40%, conceptual 30% y actitudinal 30%.](/blog/planes-semanales-v2/slide-06.png)
+Recién entonces lo oficializa.
 
-## Lo que está disponible y lo que sigue
+La generación automática no publica ni califica. Tampoco reemplaza la aprobación profesional.
 
-Hoy Aula ya usa la capacidad anual como base, genera según el estilo elegido, exige revisión antes de oficializar y conserva la trazabilidad del borrador.
+![El flujo docente tiene tres momentos: preparar, revisar y oficializar.](/blog/planes-semanales-v2/slide-05.png)
 
-La siguiente actualización incorpora el paquete descargable de cuatro secciones, explicaciones de estilo más concretas y una alineación más directa entre las rúbricas oficiales y el libro de calificaciones.
+## La evaluación conserva su forma
 
-![Estado de Planes Semanales V2: capacidades disponibles actualmente y mejoras previstas para la próxima actualización.](/blog/planes-semanales-v2/slide-07.png)
+Cuando una semana lleva calificación, el plan mantiene las tres dimensiones institucionales:
 
-## Lo que permanece
+- Procedimental: **40%**.
+- Conceptual: **30%**.
+- Actitudinal: **30%**.
 
-La tecnología puede ayudar a producir un mejor punto de partida. El criterio pedagógico no se delega.
+Cada dimensión tiene una rúbrica vinculada a su indicador. Las actividades pueden cambiar con el estilo. La evidencia debe seguir siendo observable.
 
-Planes Semanales V2 busca que cada docente pueda personalizar cómo enseña sin perder claridad sobre qué se aprende, qué evidencia cuenta y quién toma la decisión final.
+Eso es especialmente importante en la dimensión actitudinal. Una respuesta escrita, por sí sola, no demuestra una actitud.
 
-![Principio de Planes Semanales V2: personalizar cómo se enseña sin perder claridad sobre qué se aprende y cómo se evalúa.](/blog/planes-semanales-v2/slide-08.png)
+![La evaluación mantiene las dimensiones procedimental, conceptual y actitudinal.](/blog/planes-semanales-v2/slide-06.png)
+
+## Qué existe hoy
+
+Aula ya usa la capacidad anual como base. También genera según el estilo elegido, exige revisión antes de oficializar y conserva el historial del borrador.
+
+La próxima actualización suma el documento de cuatro partes, explicaciones más concretas para cada estilo y una relación más directa entre las rúbricas y el libro de calificaciones.
+
+![La presentación separa lo que Aula ya hace de lo que llega en la próxima actualización.](/blog/planes-semanales-v2/slide-07.png)
+
+## Lo que no delegamos
+
+La tecnología puede preparar un mejor punto de partida. No conoce al grupo como lo conoce el docente.
+
+Planes Semanales V2 permite cambiar la forma de enseñar sin perder claridad sobre qué se aprende, qué evidencia cuenta y quién toma la decisión final.
+
+![El principio de V2: personalizar la enseñanza sin perder claridad sobre el aprendizaje y la evaluación.](/blog/planes-semanales-v2/slide-08.png)
 
 *Si tu institución necesita ordenar la planificación sin quitar autoridad al docente, [conversemos](/contacto).*
