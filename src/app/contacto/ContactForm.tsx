@@ -120,7 +120,13 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="card p-6 md:p-10" noValidate>
+    <form
+      onSubmit={handleSubmit}
+      className="card p-6 md:p-10"
+      noValidate
+      toolname="prepare_contact_message"
+      tooldescription="Prepares ABN's contact form with the visitor's reviewed message. The visitor must click Enviar mensaje to send it."
+    >
       <div className="grid gap-6 lg:grid-cols-2">
         <div>
           <label htmlFor="nombre" className="field-label">
@@ -133,6 +139,7 @@ export default function ContactForm() {
             required
             maxLength={100}
             autoComplete="name"
+            toolparamdescription="The visitor's full name."
             className="field-input"
             value={formData.nombre}
             onChange={handleChange}
@@ -157,6 +164,7 @@ export default function ContactForm() {
             required
             maxLength={254}
             autoComplete="email"
+            toolparamdescription="The visitor's email address for ABN's reply."
             className="field-input"
             value={formData.email}
             onChange={handleChange}
@@ -180,6 +188,7 @@ export default function ContactForm() {
             type="text"
             maxLength={200}
             autoComplete="organization"
+            toolparamdescription="The visitor's organization, when relevant."
             className="field-input"
             value={formData.organizacion}
             onChange={handleChange}
@@ -192,6 +201,7 @@ export default function ContactForm() {
           <select
             id="tipoInstitucion"
             name="tipoInstitucion"
+            toolparamdescription="The type of institution the visitor represents."
             className="field-input"
             value={formData.tipoInstitucion}
             onChange={handleChange}
@@ -215,6 +225,7 @@ export default function ContactForm() {
           name="mensaje"
           required
           maxLength={3000}
+          toolparamdescription="What the visitor needs to put in order at their institution."
           className="field-input"
           value={formData.mensaje}
           onChange={handleChange}

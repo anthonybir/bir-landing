@@ -4,6 +4,7 @@ import { Instrument_Sans, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
+import WebMCPTools from "./WebMCPTools";
 import "./globals.css";
 
 const instrumentSans = Instrument_Sans({
@@ -87,6 +88,7 @@ export default function RootLayout({
           </main>
           <Footer />
         </div>
+        <WebMCPTools />
         <Analytics />
       </body>
     </html>
