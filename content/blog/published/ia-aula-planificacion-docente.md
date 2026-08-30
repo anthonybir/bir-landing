@@ -1,6 +1,6 @@
 Planificar bien una clase toma tiempo. Mucho.
 
-Hay que ordenar el currículo, preparar materiales, pensar actividades, redactar evaluaciones y escribir informes para las familias. Gran parte de ese trabajo ocurre cuando la jornada escolar ya terminó.
+Hay que ordenar el currículo, preparar materiales, pensar actividades, redactar evaluaciones y escribir informes para las familias. Mucho de ese trabajo empieza cuando la jornada escolar ya terminó.
 
 En **Nuevas Alturas**, la escuela de **AENA**, construimos **Aula** para ordenar ese trabajo. Después incorporamos inteligencia artificial a la planificación.
 
@@ -10,7 +10,7 @@ Lo hicimos con una regla simple: **la IA propone y el docente decide**.
 
 La IA prepara un borrador. El docente lo lee, lo ajusta y lo aprueba.
 
-Si falta una condición importante, el sistema detiene la aprobación y explica qué falta. Nada se vuelve oficial ni llega a coordinación o a una familia sin una decisión humana.
+Si faltan datos necesarios, el sistema detiene la aprobación y explica qué falta. Nada se vuelve oficial ni llega a coordinación o a una familia sin una decisión humana.
 
 La IA puede acelerar el primer paso. El criterio profesional sigue en manos del docente.
 
@@ -33,7 +33,7 @@ Cada plan indica si tuvo apoyo de IA. La institución puede distinguir qué se g
 
 Aula también prepara borradores de guías, fichas de trabajo, evaluaciones y rúbricas alineadas con la planificación.
 
-El docente elige el tipo de material, escribe sus indicaciones y recibe un archivo editable. La pantalla muestra qué modelo de IA se usó. No lo escondemos.
+El docente elige el tipo de material, escribe sus indicaciones y recibe un archivo editable. La pantalla también muestra qué modelo de IA se usó.
 
 ![El docente elige el tipo de recurso y recibe un borrador que puede revisar y descargar.](/blog/ia-aula-planificacion-docente/materiales-docente.png)
 
@@ -59,9 +59,9 @@ El catálogo tiene más de **120 prompts publicados**. Cuando ajustamos uno, el 
 
 La IA se puede equivocar. Por eso medimos lo que produce.
 
-El sistema revisa la alineación pedagógica, la claridad, la estructura y la fidelidad al plan anual. Si el borrador no cumple esos controles, vuelve a intentarlo con reglas más estrictas. Si todavía no alcanza, ofrece una plantilla alineada al MEC.
+El sistema compara cada borrador con el plan anual y revisa su claridad y estructura. Si no cumple esos controles, vuelve a intentarlo con reglas más estrictas. Si todavía falla, ofrece una plantilla alineada al MEC.
 
-Después viene el control que no delegamos: una persona confirma que el contenido sea adecuado para la edad y seguro para el aula. Ningún material llega a un estudiante o a una familia sin revisión humana.
+Una persona hace el control final. Confirma que el contenido sea adecuado para la edad y seguro para el aula. Ningún material llega a un estudiante o a una familia sin esa revisión.
 
 También usamos una herramienta interna para evaluar el generador semanal con casos reales. Así podemos ver si una mejora funcionó y dónde todavía falla.
 
@@ -75,12 +75,12 @@ La dirección revisa, edita y aprueba cada informe. El texto final no incluye no
 
 La familia recibe una devolución clara y respetuosa. El docente conserva la última palabra.
 
-## Nuestra postura
+## La última palabra sigue siendo humana
 
-No usamos IA para reemplazar al docente. La usamos para darle un mejor punto de partida y devolverle tiempo.
+En Aula, la IA nunca tiene la última palabra. Puede preparar el primer borrador y quitar trabajo repetido.
 
-El currículo del MEC sigue siendo la fuente. La institución puede ver dónde intervino la IA. Las instrucciones y los resultados se revisan. Nada se publica sin aprobación humana.
+El currículo del MEC sigue siendo la fuente. La institución ve dónde intervino la IA. El docente revisa el resultado y decide si se publica.
 
-Eso es IA gobernada en una escuela. Menos trabajo repetido. La misma responsabilidad.
+La herramienta ahorra tiempo. La responsabilidad no cambia de manos.
 
 *Si tu institución necesita ordenar la planificación sin quitar autoridad al docente, [conversemos](/contacto).*

@@ -19,8 +19,8 @@ export default function ContactoPage() {
         Empecemos por el diagnóstico.
       </h1>
       <p className="settle settle-3 mt-8 max-w-xl font-sans text-base leading-relaxed text-gray-600">
-        Contanos qué necesita orden en tu institución. Una conversación inicial
-        no te compromete a nada y suele ahorrar meses de decisiones a ciegas.
+        Contanos qué necesita orden en tu institución. Primero escuchamos.
+        Después te decimos si podemos ayudar y por dónde conviene empezar.
       </p>
 
       <div className="mt-16 grid gap-12 md:grid-cols-[1.4fr_1fr] md:gap-16">

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
     absolute: 'Paraguay Residency & Relocation Services | ABN · Agencia Bir Núñez',
   },
   description:
-    'End-to-end Paraguayan temporary residency for English-speaking families: translations, notarizations, Interpol and Migraciones filings, with transparent USD pricing.',
+    'Paraguay temporary residency for English-speaking families, including translations, notarizations, Interpol and Migraciones filing.',
   alternates: {
     canonical: '/en',
     languages: { es: '/', en: '/en' },
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Paraguay Residency & Relocation Services | ABN · Agencia Bir Núñez',
     description:
-      'End-to-end Paraguayan temporary residency for English-speaking families: translations, notarizations, Interpol and Migraciones filings, with transparent USD pricing.',
+      'Paraguay temporary residency for English-speaking families, including translations, notarizations, Interpol and Migraciones filing.',
     url: '/en',
     locale: 'en_US',
   },
@@ -73,8 +73,8 @@ const credibility = [
     desc: 'ABN is run by a US-born, fully bilingual director based in Lambaré. We have been through the same process we manage for you.',
   },
   {
-    title: 'A real firm, not a fixer',
-    desc: 'Agencia Bir Núñez is a registered Paraguayan company with legal counsel in-house. Engagement letters, invoices and accountability in writing.',
+    title: 'Registered and accountable',
+    desc: 'Agencia Bir Núñez is a registered Paraguayan company with in-house legal counsel. You receive an engagement letter, invoices and every commitment in writing.',
   },
   {
     title: 'We run institutions in Paraguay',
@@ -89,12 +89,12 @@ export default function RelocationPage() {
       <section className="mx-auto max-w-6xl px-4 pb-16 pt-24 md:px-8">
         <p className="label-caps settle mb-6">ABN · Lambaré, Paraguay · Relocation services</p>
         <h1 className="display display-hero settle settle-2 max-w-3xl">
-          Structure where others improvise.
+          Paraguay residency, handled in English.
         </h1>
         <p className="settle settle-3 mt-8 max-w-xl font-sans text-base leading-relaxed text-gray-600">
-          We manage the entire Paraguayan side of your family&rsquo;s Temporary
-          Residency: translations, notarizations, Interpol, police certificates
-          and the Migraciones filing. You land in a process, not a maze.
+          We handle the Paraguayan side of your family&rsquo;s temporary residency:
+          translations, notarizations, Interpol, police certificates and the
+          Migraciones filing. You always know what comes next and what it costs.
         </p>
         <div className="settle settle-4 mt-12 flex flex-wrap items-center gap-6">
           <a href="#contact" className="btn-secondary">

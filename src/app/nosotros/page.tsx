@@ -14,7 +14,7 @@ const team = [
   {
     name: 'Anthony Bir',
     area: 'Dirección · Presidente del Consejo Administrativo de AENA · Tesorero de IPU Paraguay',
-    line: 'Presidente del Consejo Administrativo de AENA y tesorero de IPU Paraguay. Arquitecto de los sistemas que ABN pone en producción. La persona que firma es la que opera, en el colegio y en la tesorería.',
+    line: 'Preside el Consejo Administrativo de AENA y es tesorero de IPU Paraguay. También construye los sistemas que usan el colegio y la tesorería.',
   },
   {
     name: 'Diana',
@@ -52,13 +52,13 @@ const portfolio = [
   {
     tag: 'Software',
     inst: 'ABSD',
-    line: 'Anthony Bir System Designs: AENA_Admin, ipupy_admin, Kairós Live. Producción institucional.',
+    line: 'Anthony Bir System Designs: AENA_Admin, ipupy_admin y Kairós Live, hoy en uso institucional.',
   },
 ] as const;
 
 const principles = [
   'El criterio de la institución antes que la herramienta.',
-  'Construimos primero adentro; el cliente recibe lo que ya sobrevivió.',
+  'No ofrecemos algo que todavía no usamos en una operación real.',
   'Sistemas que viven sin nosotros.',
 ] as const;
 

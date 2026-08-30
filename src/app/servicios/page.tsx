@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Servicios',
   description:
-    'Diagnóstico institucional, implementación por frente y acompañamiento integral. Tres modos de trabajo que funcionan como un solo sistema.',
+    'Diagnóstico, implementación y dirección continua para instituciones educativas y organizaciones eclesiásticas.',
   alternates: {
     canonical: '/servicios',
   },
@@ -16,11 +16,11 @@ const modes = [
     title: 'Diagnóstico institucional',
     when: 'Cuando el problema todavía no está bien definido',
     plazo: '2 a 4 semanas',
-    desc: 'Auditamos operación, criterio y puntos de fricción para establecer qué necesita orden, qué necesita sistema y qué conviene dejar para después.',
+    desc: 'Revisamos cómo trabaja la institución, dónde se frenan las decisiones y qué riesgos necesitan atención. El resultado es un orden claro para empezar.',
     bullets: [
-      'Diagnóstico operativo, financiero y pedagógico',
-      'Priorización de riesgos y cuellos de botella',
-      'Hoja de ruta inicial con responsables',
+      'Revisión operativa, financiera y pedagógica',
+      'Riesgos ordenados por urgencia',
+      'Primer plan de trabajo, con responsables',
     ],
   },
   {
@@ -28,11 +28,11 @@ const modes = [
     title: 'Implementación por frente',
     when: 'Cuando ya hay una prioridad clara',
     plazo: '3 a 6 meses',
-    desc: 'Entramos sobre un frente concreto, con alcance definido, entregables claros y una lógica de implementación que no rompe la operación diaria. Cada implementación sale con su encuadre legal: contratos, cumplimiento y relación con el regulador correspondiente, el MEC en el caso educativo.',
+    desc: 'Tomamos un problema concreto y acordamos qué debe cambiar. Implementamos por etapas para que la institución siga trabajando. También resolvemos contratos, cumplimiento y la relación con el regulador correspondiente, incluido el MEC en educación.',
     bullets: [
-      'Proyecto por área o por problema',
-      'Sistema, criterio y capacitación en el mismo frente',
-      'Ejecución escalonada con responsables visibles',
+      'Un problema y un alcance definidos',
+      'Sistema, reglas y capacitación para el mismo equipo',
+      'Trabajo por etapas, con un responsable visible',
     ],
   },
   {
@@ -40,11 +40,11 @@ const modes = [
     title: 'Acompañamiento integral',
     when: 'Cuando varias áreas necesitan avanzar juntas',
     plazo: 'Continuo',
-    desc: 'Coordinamos finanzas, derecho, tecnología y pedagogía bajo una misma dirección para evitar proveedores sueltos y decisiones contradictorias.',
+    desc: 'Un solo equipo coordina finanzas, derecho, tecnología y pedagogía. La institución no queda en medio de proveedores que se contradicen.',
     bullets: [
-      'Dirección transversal del proyecto',
-      'Ajuste continuo según operación real',
-      'Un solo equipo responsable del avance',
+      'Una dirección para todas las áreas',
+      'Ajustes según lo que ocurre en la operación',
+      'Un equipo responsable del resultado',
     ],
   },
 ] as const;
@@ -77,9 +77,9 @@ export default function ServiciosPage() {
           Ponemos tu institución en orden.
         </h1>
         <p className="settle settle-3 mt-8 max-w-xl font-sans text-base leading-relaxed text-gray-600">
-          Tres modos que funcionan como un solo sistema. ABN no reparte
-          responsabilidades entre integradores, consultores y «el que maneja el
-          Excel». Entramos completos, salimos completos.
+          ABN no divide la responsabilidad entre consultores, proveedores y «el
+          que maneja el Excel». El mismo equipo entiende el problema, hace el
+          trabajo y responde por el resultado.
         </p>
       </section>
 
@@ -151,8 +151,8 @@ export default function ServiciosPage() {
       <section className="mx-auto max-w-6xl px-4 pb-32 md:px-8">
         <div className="flex flex-col items-start gap-6 border-t border-gray-200 pt-12">
           <p className="max-w-xl font-sans text-base text-gray-600">
-            Si no sabés por cuál de los tres modos empezar, esa es exactamente
-            la conversación de diagnóstico.
+            Si todavía no está claro por dónde empezar, el diagnóstico sirve
+            para decidirlo.
           </p>
           <Link href="/contacto" className="btn-primary">
             Agendar un diagnóstico

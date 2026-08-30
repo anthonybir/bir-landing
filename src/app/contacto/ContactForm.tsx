@@ -39,7 +39,7 @@ function validate(data: FormData): FieldErrors {
   }
 
   if (data.mensaje.trim().length < MENSAJE_MIN_LENGTH) {
-    errors.mensaje = 'Contanos un poco más, mínimo 10 caracteres.';
+    errors.mensaje = 'Contanos un poco más. El mensaje debe tener al menos 10 caracteres.';
   }
 
   return errors;
@@ -113,7 +113,7 @@ export default function ContactForm() {
       <div className="card p-8 text-center md:p-12" role="status">
         <p className="display text-[1.777rem]">Mensaje recibido.</p>
         <p className="mt-4 font-sans text-base text-gray-600">
-          Te respondemos dentro de 48 horas hábiles, habitualmente antes.
+          Te respondemos dentro de 48 horas hábiles.
         </p>
       </div>
     );
@@ -209,8 +209,6 @@ export default function ContactForm() {
             <option value="">Seleccionar…</option>
             <option value="Colegio / centro educativo">Colegio / centro educativo</option>
             <option value="Iglesia / red eclesiástica">Iglesia / red eclesiástica</option>
-            <option value="Institución sin fines de lucro">Institución sin fines de lucro</option>
-            <option value="Empresa / pyme">Empresa / pyme</option>
             <option value="Otro">Otro</option>
           </select>
         </div>
@@ -265,7 +263,7 @@ export default function ContactForm() {
           {submitting ? 'Enviando…' : 'Enviar mensaje'}
         </button>
         <p className="font-sans text-xs uppercase tracking-[0.1em] text-gray-500">
-          Respuesta en 48h hábiles
+          Respuesta en hasta 48 horas hábiles
         </p>
       </div>
     </form>

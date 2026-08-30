@@ -7,7 +7,7 @@ import { WHATSAPP_URL } from './WhatsAppFloat';
 
 const es = {
   blurb:
-    'Ordenamos instituciones y convertimos su criterio en software con IA gobernada. Bajo una sola dirección.',
+    'Primero ordenamos la institución. Después construimos el sistema que sostiene el trabajo.',
   site: 'Sitio',
   contact: 'Contacto',
   whatsapp: 'WhatsApp',
@@ -26,7 +26,7 @@ const es = {
 
 const en = {
   blurb:
-    'A services agency for human-scale institutions: consulting, systems and relocation support, run by one team.',
+    'Paraguay residency support for English-speaking families, led from Lambaré.',
   site: 'Site',
   contact: 'Contact',
   whatsapp: 'WhatsApp',

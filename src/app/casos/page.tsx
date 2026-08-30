@@ -6,7 +6,7 @@ import AnimatedNumber from '../AnimatedNumber';
 export const metadata: Metadata = {
   title: 'Casos',
   description:
-    'AENA, IPU Paraguay e IBA: tres instituciones reales, tres transformaciones medibles. Sistemas operados por la misma agencia que los diseñó.',
+    'Cómo llegaron AENA, IPU Paraguay e IBA, qué cambió y qué sistemas usan hoy.',
   alternates: {
     canonical: '/casos',
   },
@@ -76,9 +76,8 @@ export default function CasosPage() {
           Tres rescates, no tres productos.
         </h1>
         <p className="settle settle-3 mt-8 max-w-xl font-sans text-base leading-relaxed text-gray-600">
-          Esta página no muestra demos aspiracionales. Muestra instituciones que
-          ABN opera o acompaña, con el arco completo: cómo llegaron y dónde
-          están hoy.
+          AENA, IPU Paraguay e IBA llegaron con problemas distintos. Acá
+          mostramos qué encontramos, qué cambió y cómo trabajan hoy.
         </p>
       </section>
 
@@ -161,12 +160,12 @@ export default function CasosPage() {
           <div className="max-w-lg">
             <p className="label-caps mb-3">Plataforma</p>
             <p className="font-sans text-base leading-relaxed text-brand-cream-muted">
-              Los tres casos corren sobre{' '}
+              Los tres casos usan{' '}
               <Link href="/aula" className="link-quiet">
                 Aula
               </Link>
-              , el motor de planificación académica con IA de ABN. Una sola
-              plataforma, propiedad de la agencia, desplegada por institución.
+              , la plataforma de ABN. Cada institución tiene su propio despliegue
+              y conserva sus reglas.
             </p>
           </div>
           <p className="display shrink-0 text-[2.5rem] leading-none">Aula</p>
@@ -177,7 +176,7 @@ export default function CasosPage() {
       <section className="mx-auto max-w-6xl px-4 pb-32 md:px-8">
         <div className="flex flex-col items-start gap-6 border-t border-gray-200 pt-12">
           <p className="max-w-xl font-sans text-base text-gray-600">
-            El caso 04 puede ser tu institución. El primer paso es un
+            Si tu institución llegó a un punto parecido, el primer paso es un
             diagnóstico, no un contrato.
           </p>
           <Link href="/contacto" className="btn-primary">

@@ -1,18 +1,18 @@
-Un grupo no aprende igual todas las semanas. A veces necesita más guía. A veces necesita hacer, conversar o elegir.
+Un grupo no necesita la misma clase todas las semanas. A veces necesita más guía. Otras veces necesita hacer, conversar o elegir.
 
 El plan puede cambiar de ritmo sin perder su fuente. Esa es la idea detrás de **Planes Semanales V2** en Aula, la plataforma académica de **AENA · Nuevas Alturas**.
 
-El docente puede elegir entre cinco estilos de enseñanza. La capacidad del plan anual y la evaluación institucional no cambian con cada opción.
+El docente puede elegir entre cinco estilos de enseñanza. La capacidad del plan anual y la forma de evaluar no cambian con cada opción.
 
 **La IA prepara un borrador. El docente decide qué sirve para su grupo.**
 
 [Descargar la presentación completa en PowerPoint](/blog/planes-semanales-v2/planes-semanales-v2-aena.pptx)
 
-## El camino cambia. La meta no.
+## El estilo no cambia lo que se evalúa
 
-Personalizar una semana tiene sentido cuando ayuda al docente a acompañar mejor a su grupo.
+En V2, elegir un estilo cambia la secuencia, los apoyos, las preguntas y los productos de la semana.
 
-No tiene sentido si cada estilo inventa un criterio nuevo. Por eso V2 puede cambiar la secuencia, los apoyos, las preguntas y los productos, pero conserva la capacidad anual y la estructura de evaluación.
+No cambia la capacidad anual ni inventa otro criterio de evaluación. El docente puede adaptar la clase sin romper el plan de la institución.
 
 ![El plan parte de una capacidad anual. El estilo cambia la manera de enseñar, pero el docente conserva la decisión final.](/blog/planes-semanales-v2/slide-02.png)
 
@@ -41,15 +41,13 @@ No quitamos contenido pedagógico. Le damos un orden que el docente pueda recono
 
 **Personalizado** recoge lo que el docente ya sabe de su grupo: ritmo, tono, oralidad, carga escrita y apoyos de inclusión.
 
-En todos los casos cambia la forma de llegar a la evidencia. La meta no se inventa de nuevo.
+Cada estilo cambia la forma de producir evidencia. Ninguno cambia lo que el grupo debe aprender.
 
 ![Los cinco estilos son Paso a Paso, Práctico, Reflexivo, Creativo y Personalizado.](/blog/planes-semanales-v2/slide-04.png)
 
 ## Borrador primero
 
-El flujo tiene tres decisiones.
-
-Primero, el docente elige la capacidad y el estilo. Después revisa tiempos, lenguaje, apoyos y evidencias. Al final decide si el plan representa al grupo que tiene delante.
+El docente toma las tres decisiones. Elige la capacidad y el estilo. Revisa tiempos, lenguaje, apoyos y evidencias. Al final decide si el plan sirve para el grupo que tiene delante.
 
 Recién entonces lo oficializa.
 
@@ -79,11 +77,11 @@ La próxima actualización suma el documento de cuatro partes, explicaciones má
 
 ![La presentación separa lo que Aula ya hace de lo que llega en la próxima actualización.](/blog/planes-semanales-v2/slide-07.png)
 
-## Lo que no delegamos
+## El docente conserva la última palabra
 
-La tecnología puede preparar un mejor punto de partida. No conoce al grupo como lo conoce el docente.
+La IA puede preparar un buen punto de partida. No conoce al grupo como lo conoce el docente.
 
-Planes Semanales V2 permite cambiar la forma de enseñar sin perder claridad sobre qué se aprende, qué evidencia cuenta y quién toma la decisión final.
+Por eso V2 cambia la forma de enseñar, pero deja la aprobación en manos del docente.
 
 ![El principio de V2: personalizar la enseñanza sin perder claridad sobre el aprendizaje y la evaluación.](/blog/planes-semanales-v2/slide-08.png)
 

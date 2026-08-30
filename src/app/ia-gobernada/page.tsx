@@ -5,7 +5,7 @@ import AnimatedNumber from '../AnimatedNumber';
 export const metadata: Metadata = {
   title: 'IA gobernada',
   description:
-    'Cómo ABN usa inteligencia artificial dentro de instituciones reales: la IA propone, la persona decide. Prompts versionados, contexto anclado en la fuente, permisos a nivel de datos y verificación automática.',
+    'Cómo ABN usa inteligencia artificial con aprobación humana, instrucciones versionadas y permisos controlados desde los datos.',
   alternates: {
     canonical: '/ia-gobernada',
   },
@@ -20,7 +20,7 @@ const principles = [
   {
     num: '02',
     title: 'Cada sugerencia, con su nivel de confianza.',
-    line: 'La IA no entrega certezas. Cada propuesta llega con un puntaje de confianza, para saber cuánto pesarla y cuándo mirar con más cuidado.',
+    line: 'La IA no entrega certezas. El nivel de confianza le indica a la persona cuándo debe revisar con más cuidado.',
   },
   {
     num: '03',
@@ -30,7 +30,7 @@ const principles = [
   {
     num: '04',
     title: 'Contexto anclado en la fuente.',
-    line: 'La IA parte del currículo oficial o de los datos de la institución, no de un chat improvisado. Se etiqueta qué se generó con asistencia y qué no. Transparencia, no caja negra.',
+    line: 'La IA parte del currículo oficial o de los datos de la institución, no de un chat improvisado. El sistema marca dónde intervino.',
   },
   {
     num: '05',
@@ -174,9 +174,9 @@ export default function IaGobernadaPage() {
           La IA propone. La persona decide.
         </h1>
         <p className="settle settle-3 mt-8 max-w-xl font-sans text-base leading-relaxed text-gray-600">
-          En las instituciones que ABN opera, la inteligencia artificial no toma decisiones ni
-          reemplaza criterio. Trabaja dentro del flujo, con trazabilidad y revisión humana, para
-          devolver tiempo sin ceder control.
+          En las instituciones que ABN opera, la IA prepara borradores y hace
+          sugerencias. La persona autorizada revisa y aprueba. La decisión no cambia
+          de manos.
         </p>
         <p className="settle settle-4 mt-12">
           <Link href="#produccion" className="link-quiet font-sans text-base">
@@ -261,8 +261,8 @@ export default function IaGobernadaPage() {
       {/* Pull quote */}
       <section className="mx-auto max-w-6xl px-4 pb-24 md:px-8">
         <blockquote className="max-w-2xl border-l-2 border-accent pl-6 font-sans text-base leading-relaxed text-gray-700">
-          La inteligencia artificial no nos ahorra la responsabilidad de administrar bien. La
-          ordena, la documenta y la deja a la vista.
+          La IA puede documentar el trabajo y ahorrar tiempo. La responsabilidad
+          sigue siendo nuestra.
         </blockquote>
       </section>
 

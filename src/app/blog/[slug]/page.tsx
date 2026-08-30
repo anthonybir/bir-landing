@@ -105,11 +105,11 @@ export default async function PostPage({ params }: Params) {
       {/* CTA */}
       <div className="mt-20 flex flex-col items-start gap-6 border-t border-gray-200 pt-12">
         <p className="max-w-xl font-sans text-base text-gray-600">
-          ¿Tu institución necesita ordenar lo que hoy depende de planillas y
-          memoria personal? El primer paso es un diagnóstico, no un contrato.
+          Si el trabajo todavía depende de planillas y de la memoria de una
+          persona, empecemos por entender el problema.
         </p>
         <Link href="/contacto" className="btn-primary">
-          Conversar sobre tu institución
+          Agendar un diagnóstico
         </Link>
       </div>
     </article>

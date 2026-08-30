@@ -4,7 +4,7 @@ Cada ofrenda y cada diezmo viene del esfuerzo de una familia. El tesorero respon
 
 Cuando incorporamos inteligencia artificial al sistema de tesorería de IPU Paraguay, partimos de ahí. La pregunta no fue cuánto trabajo podía hacer la IA. La pregunta fue cómo usarla sin perder control.
 
-Definimos cuatro reglas. No quedaron en una presentación. Están dentro del sistema.
+Definimos cuatro reglas y las pusimos dentro del sistema.
 
 ## La IA propone. Una persona decide.
 
@@ -20,11 +20,11 @@ Cada sugerencia llega con un nivel de confianza. Ese dato ayuda al tesorero a de
 
 Una confianza baja no es un detalle técnico. Es una señal clara: mirá esto con más cuidado.
 
-## Podemos volver y revisar
+## Podemos revisar una sugerencia meses después
 
 Las instrucciones que usa la IA, los *prompts*, tienen versión y fecha.
 
-Cada sugerencia guarda la versión que se usó y el nivel de confianza de la respuesta. Si dentro de tres meses necesitamos entender por qué el sistema propuso algo, tenemos un registro para hacerlo.
+Cada sugerencia guarda la versión que se usó y el nivel de confianza de la respuesta. Si dentro de tres meses necesitamos entender por qué el sistema propuso algo, podemos volver al registro.
 
 Eso importa. En una administración seria, no alcanza con que el resultado parezca correcto hoy.
 
@@ -36,10 +36,10 @@ La IA no cambia ese orden ni recibe un permiso especial por ser IA.
 
 ---
 
-Con estas reglas, el sistema ya puede ayudar a leer informes desde una foto, sugerir categorías contables, acompañar una conciliación bancaria y explicar anomalías financieras. Cada servicio se puede activar o desactivar por separado.
+Hoy el sistema puede leer informes desde una foto, sugerir categorías contables, comparar movimientos para una conciliación bancaria y explicar anomalías financieras. Cada servicio se activa por separado.
 
-También tenemos un panel interno que muestra cómo funciona cada servicio: cuántas veces terminó bien, cuántas falló y qué versión de instrucciones usó.
+Un panel interno muestra cuántas consultas completó cada servicio, cuántas fallaron y qué versión de instrucciones usó.
 
-La inteligencia artificial no nos quita la responsabilidad de administrar bien. Nos ayuda a ordenar el trabajo y deja más evidencia para rendir cuentas.
+La responsabilidad sigue siendo nuestra. La IA reduce trabajo manual y deja un registro más claro para rendir cuentas.
 
 Para nosotros, esa es la única forma aceptable de usarla.
