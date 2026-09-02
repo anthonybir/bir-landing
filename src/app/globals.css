@@ -446,6 +446,9 @@ textarea.field-input {
 .brand-texture {
   position: relative;
   isolation: isolate;
+  /* clip, not hidden: hidden makes the band a scroll container, which would
+     pin the texture's view timeline to the band instead of the page. */
+  overflow: clip;
 }
 .brand-texture > * {
   position: relative;
@@ -458,6 +461,42 @@ textarea.field-input {
   pointer-events: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Crect x='4' y='4' width='34' height='34' rx='3' fill='%23EFE6D2' opacity='.018'/%3E%3Crect x='42' y='4' width='34' height='34' rx='3' fill='%23EFE6D2' opacity='.032'/%3E%3Crect x='4' y='42' width='34' height='34' rx='3' fill='%23EFE6D2' opacity='.026'/%3E%3Crect x='42' y='42' width='34' height='34' rx='3' fill='%23EFE6D2' opacity='.012'/%3E%3C/svg%3E");
   background-size: 80px 80px;
+}
+
+/* Texture drift: the grid moves slower than the copy over it, so the band
+   reads as a surface with depth rather than a printed fill. The pseudo is
+   oversized so the drift never exposes an edge. Off without scroll timelines
+   and under reduced motion. */
+@keyframes texture-drift {
+  from { transform: translateY(-6%); }
+  to   { transform: translateY(6%); }
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .brand-texture::before {
+      inset: -12% 0;
+      animation: texture-drift linear both;
+      animation-timeline: view();
+    }
+  }
+}
+
+/* Band rise: the teal edge arrives faster than the scroll. The section is
+   clipped from the top while entering, and the clip closes to zero over the
+   first half-viewport of entry. Opt in per band; the band keeps no inner
+   reveal so the rise is its one motion event. */
+@keyframes band-rise {
+  from { clip-path: inset(30% 0 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .band-rise {
+      animation: band-rise var(--ease-out) both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 50vh;
+    }
+  }
 }
 
 /* ============================================================

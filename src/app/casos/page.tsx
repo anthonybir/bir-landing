@@ -85,50 +85,56 @@ export default function CasosPage() {
       {/* Cases */}
       <section className="mx-auto max-w-6xl space-y-24 px-4 pb-24 md:px-8">
         {cases.map((c) => (
-          <Reveal key={c.inst}>
-            <article aria-label={c.inst}>
-              <div className="border-t border-gray-200 pt-10">
-                <div className="grid gap-10 md:grid-cols-[1.1fr_1fr] md:gap-16">
-                  <div>
+          <article key={c.inst} aria-label={c.inst}>
+            <div className="border-t border-gray-200 pt-10">
+              <div className="grid gap-10 md:grid-cols-[1.1fr_1fr] md:gap-16">
+                {/* Steps. Each holds a share of the viewport so the sticky
+                    frame on the right has distance to travel. */}
+                <div>
+                  <Reveal>
                     <h2 className="font-sans text-base font-semibold text-gray-900">{c.inst}</h2>
                     <p className="label-caps mt-2">{c.sector}</p>
+                  </Reveal>
 
-                    <dl className="mt-10 space-y-8">
-                      <div>
-                        <dt className="label-caps mb-2">Antes</dt>
-                        <dd className="font-sans text-base leading-relaxed text-gray-600">
-                          {c.antes}
-                        </dd>
-                      </div>
-                      <div>
-                        <dt className="label-caps mb-2">Ahora</dt>
-                        <dd className="font-sans text-base leading-relaxed text-gray-900">
-                          {c.ahora}
-                        </dd>
-                      </div>
-                    </dl>
+                  <dl className="mt-10">
+                    <Reveal className="md:min-h-[36vh]">
+                      <dt className="label-caps mb-2">Antes</dt>
+                      <dd className="max-w-md font-sans text-base leading-relaxed text-gray-600">
+                        {c.antes}
+                      </dd>
+                    </Reveal>
+                    <Reveal className="mt-8 md:mt-0 md:min-h-[36vh]">
+                      <dt className="label-caps mb-2">Ahora</dt>
+                      <dd className="max-w-md font-sans text-base leading-relaxed text-gray-900">
+                        {c.ahora}
+                      </dd>
+                    </Reveal>
+                  </dl>
 
-                    <div className="mt-10">
-                      <p className="display display-num">
-                        {'count' in c.kpi ? (
-                          <>
-                            {c.kpi.lead}
-                            <AnimatedNumber
-                              from={c.kpi.count.from}
-                              to={c.kpi.count.to}
-                              decimals={c.kpi.count.decimals}
-                              suffix={c.kpi.count.suffix}
-                            />
-                          </>
-                        ) : (
-                          c.kpi.num
-                        )}
-                      </p>
-                      <p className="label-caps mt-2">{c.kpi.label}</p>
-                    </div>
-                  </div>
+                  <Reveal className="mt-10 md:mt-0">
+                    <p className="display display-num">
+                      {'count' in c.kpi ? (
+                        <>
+                          {c.kpi.lead}
+                          <AnimatedNumber
+                            from={c.kpi.count.from}
+                            to={c.kpi.count.to}
+                            decimals={c.kpi.count.decimals}
+                            suffix={c.kpi.count.suffix}
+                          />
+                        </>
+                      ) : (
+                        c.kpi.num
+                      )}
+                    </p>
+                    <p className="label-caps mt-2">{c.kpi.label}</p>
+                  </Reveal>
+                </div>
 
-                  <div className="shot self-start">
+                {/* The frame holds while the steps pass. Sticky sits on the
+                    Reveal itself so no animated ancestor gets in the way. */}
+                <Reveal className="self-start md:sticky md:top-24">
+                  <div className="shot">
                     <div className="shot-chrome" aria-hidden="true">
                       <span />
                       <span />
@@ -149,17 +155,17 @@ export default function CasosPage() {
                       />
                     </div>
                   </div>
-                </div>
+                </Reveal>
               </div>
-            </article>
-          </Reveal>
+            </div>
+          </article>
         ))}
       </section>
 
       {/* Plataforma — Aula, ABN-owned platform behind the three cases.
           The one dark surface on this page, placed mid-scroll. */}
-      <section className="teal-band brand-texture mb-24" aria-label="Plataforma">
-        <Reveal className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-20 md:flex-row md:items-end md:justify-between md:px-8 md:py-24">
+      <section className="teal-band brand-texture band-rise mb-24" aria-label="Plataforma">
+        <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-20 md:flex-row md:items-end md:justify-between md:px-8 md:py-24">
           <div className="max-w-lg">
             <p className="label-caps mb-3">Plataforma</p>
             <p className="font-sans text-base leading-relaxed text-brand-cream-muted">
@@ -172,7 +178,7 @@ export default function CasosPage() {
             </p>
           </div>
           <p className="display shrink-0 text-[2.5rem] leading-none">Aula</p>
-        </Reveal>
+        </div>
       </section>
 
       {/* CTA */}

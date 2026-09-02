@@ -53,16 +53,14 @@ export default function HomePage() {
 
       {/* Proof band: institutional expertise, in numbers. The one dark surface
           before the footer, and the one place the signal gold is spent. */}
-      <section className="teal-band brand-texture" aria-label="Prueba">
+      <section className="teal-band brand-texture band-rise" aria-label="Prueba">
         <div className="mx-auto max-w-6xl px-4 py-24 md:px-8 md:py-32">
-          <Reveal className="max-w-xl">
-            <p className="font-sans text-base leading-relaxed text-brand-cream-muted">
-              Primero ordenamos la institución. El sistema que queda es la prueba.
-            </p>
-          </Reveal>
+          <p className="max-w-xl font-sans text-base leading-relaxed text-brand-cream-muted">
+            Primero ordenamos la institución. El sistema que queda es la prueba.
+          </p>
 
           <div className="mt-16 grid gap-12 md:grid-cols-3 md:gap-16">
-            <Reveal>
+            <div>
               <p className="display num-signal text-[1.777rem]">
                 70% → <AnimatedNumber from={70} to={2.9} decimals={1} suffix="%" />
               </p>
@@ -70,9 +68,9 @@ export default function HomePage() {
               <p className="mt-3 font-sans text-base leading-relaxed text-brand-cream-muted">
                 AENA, en tres años de dirección directa.
               </p>
-            </Reveal>
+            </div>
 
-            <Reveal delay={80}>
+            <div>
               <p className="display text-[1.777rem]">
                 ~<AnimatedNumber to={30} />
               </p>
@@ -80,9 +78,9 @@ export default function HomePage() {
               <p className="mt-3 font-sans text-base leading-relaxed text-brand-cream-muted">
                 Tesorería por partida doble, cierre mensual de un día.
               </p>
-            </Reveal>
+            </div>
 
-            <Reveal delay={160}>
+            <div>
               <p className="display text-[1.777rem]">
                 <AnimatedNumber to={3} />
               </p>
@@ -90,16 +88,14 @@ export default function HomePage() {
               <p className="mt-3 font-sans text-base leading-relaxed text-brand-cream-muted">
                 Escolar, financiero y editorial, operando hoy.
               </p>
-            </Reveal>
+            </div>
           </div>
 
-          <Reveal className="mt-16">
-            <p className="font-sans text-base">
-              <Link href="/casos" className="link-quiet">
-                Ver los tres casos
-              </Link>
-            </p>
-          </Reveal>
+          <p className="mt-16 font-sans text-base">
+            <Link href="/casos" className="link-quiet">
+              Ver los tres casos
+            </Link>
+          </p>
         </div>
       </section>
 
