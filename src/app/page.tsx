@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import AnimatedNumber from './AnimatedNumber';
 import HeroGrid from './HeroGrid';
+import Reveal from './Reveal';
 import { WHATSAPP_URL } from './WhatsAppFloat';
 
 export const metadata: Metadata = {
@@ -54,12 +55,14 @@ export default function HomePage() {
           before the footer, and the one place the signal gold is spent. */}
       <section className="teal-band brand-texture" aria-label="Prueba">
         <div className="mx-auto max-w-6xl px-4 py-24 md:px-8 md:py-32">
-          <p className="max-w-xl font-sans text-base leading-relaxed text-brand-cream-muted">
-            Primero ordenamos la institución. El sistema que queda es la prueba.
-          </p>
+          <Reveal className="max-w-xl">
+            <p className="font-sans text-base leading-relaxed text-brand-cream-muted">
+              Primero ordenamos la institución. El sistema que queda es la prueba.
+            </p>
+          </Reveal>
 
           <div className="mt-16 grid gap-12 md:grid-cols-3 md:gap-16">
-            <div>
+            <Reveal>
               <p className="display num-signal text-[1.777rem]">
                 70% → <AnimatedNumber from={70} to={2.9} decimals={1} suffix="%" />
               </p>
@@ -67,9 +70,9 @@ export default function HomePage() {
               <p className="mt-3 font-sans text-base leading-relaxed text-brand-cream-muted">
                 AENA, en tres años de dirección directa.
               </p>
-            </div>
+            </Reveal>
 
-            <div>
+            <Reveal delay={80}>
               <p className="display text-[1.777rem]">
                 ~<AnimatedNumber to={30} />
               </p>
@@ -77,9 +80,9 @@ export default function HomePage() {
               <p className="mt-3 font-sans text-base leading-relaxed text-brand-cream-muted">
                 Tesorería por partida doble, cierre mensual de un día.
               </p>
-            </div>
+            </Reveal>
 
-            <div>
+            <Reveal delay={160}>
               <p className="display text-[1.777rem]">
                 <AnimatedNumber to={3} />
               </p>
@@ -87,28 +90,30 @@ export default function HomePage() {
               <p className="mt-3 font-sans text-base leading-relaxed text-brand-cream-muted">
                 Escolar, financiero y editorial, operando hoy.
               </p>
-            </div>
+            </Reveal>
           </div>
 
-          <p className="mt-16 font-sans text-base">
-            <Link href="/casos" className="link-quiet">
-              Ver los tres casos
-            </Link>
-          </p>
+          <Reveal className="mt-16">
+            <p className="font-sans text-base">
+              <Link href="/casos" className="link-quiet">
+                Ver los tres casos
+              </Link>
+            </p>
+          </Reveal>
         </div>
       </section>
 
       {/* Close: cream again, so the footer band reads as an anchor and not as
           a continuation of the proof band. */}
       <section className="mx-auto max-w-6xl px-4 py-24 md:px-8" aria-label="Contacto">
-        <div className="flex flex-col items-start gap-6 border-t border-gray-200 pt-12">
+        <Reveal className="flex flex-col items-start gap-6 border-t border-gray-200 pt-12">
           <p className="max-w-xl font-sans text-base leading-relaxed text-gray-600">
             El primer paso es un diagnóstico, no un contrato.
           </p>
           <Link href="/contacto" className="btn-primary">
             Agendar un diagnóstico
           </Link>
-        </div>
+        </Reveal>
       </section>
     </>
   );

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import AnimatedNumber from '../AnimatedNumber';
+import Reveal from '../Reveal';
 
 export const metadata: Metadata = {
   title: 'Casos',
@@ -84,79 +85,81 @@ export default function CasosPage() {
       {/* Cases */}
       <section className="mx-auto max-w-6xl space-y-24 px-4 pb-24 md:px-8">
         {cases.map((c) => (
-          <article key={c.inst} aria-label={c.inst}>
-            <div className="border-t border-gray-200 pt-10">
-              <div className="grid gap-10 md:grid-cols-[1.1fr_1fr] md:gap-16">
-                <div>
-                  <h2 className="font-sans text-base font-semibold text-gray-900">{c.inst}</h2>
-                  <p className="label-caps mt-2">{c.sector}</p>
+          <Reveal key={c.inst}>
+            <article aria-label={c.inst}>
+              <div className="border-t border-gray-200 pt-10">
+                <div className="grid gap-10 md:grid-cols-[1.1fr_1fr] md:gap-16">
+                  <div>
+                    <h2 className="font-sans text-base font-semibold text-gray-900">{c.inst}</h2>
+                    <p className="label-caps mt-2">{c.sector}</p>
 
-                  <dl className="mt-10 space-y-8">
-                    <div>
-                      <dt className="label-caps mb-2">Antes</dt>
-                      <dd className="font-sans text-base leading-relaxed text-gray-600">
-                        {c.antes}
-                      </dd>
+                    <dl className="mt-10 space-y-8">
+                      <div>
+                        <dt className="label-caps mb-2">Antes</dt>
+                        <dd className="font-sans text-base leading-relaxed text-gray-600">
+                          {c.antes}
+                        </dd>
+                      </div>
+                      <div>
+                        <dt className="label-caps mb-2">Ahora</dt>
+                        <dd className="font-sans text-base leading-relaxed text-gray-900">
+                          {c.ahora}
+                        </dd>
+                      </div>
+                    </dl>
+
+                    <div className="mt-10">
+                      <p className="display display-num">
+                        {'count' in c.kpi ? (
+                          <>
+                            {c.kpi.lead}
+                            <AnimatedNumber
+                              from={c.kpi.count.from}
+                              to={c.kpi.count.to}
+                              decimals={c.kpi.count.decimals}
+                              suffix={c.kpi.count.suffix}
+                            />
+                          </>
+                        ) : (
+                          c.kpi.num
+                        )}
+                      </p>
+                      <p className="label-caps mt-2">{c.kpi.label}</p>
                     </div>
-                    <div>
-                      <dt className="label-caps mb-2">Ahora</dt>
-                      <dd className="font-sans text-base leading-relaxed text-gray-900">
-                        {c.ahora}
-                      </dd>
+                  </div>
+
+                  <div className="shot self-start">
+                    <div className="shot-chrome" aria-hidden="true">
+                      <span />
+                      <span />
+                      <span />
                     </div>
-                  </dl>
-
-                  <div className="mt-10">
-                    <p className="display display-num">
-                      {'count' in c.kpi ? (
-                        <>
-                          {c.kpi.lead}
-                          <AnimatedNumber
-                            from={c.kpi.count.from}
-                            to={c.kpi.count.to}
-                            decimals={c.kpi.count.decimals}
-                            suffix={c.kpi.count.suffix}
-                          />
-                        </>
-                      ) : (
-                        c.kpi.num
-                      )}
-                    </p>
-                    <p className="label-caps mt-2">{c.kpi.label}</p>
-                  </div>
-                </div>
-
-                <div className="shot self-start">
-                  <div className="shot-chrome" aria-hidden="true">
-                    <span />
-                    <span />
-                    <span />
-                  </div>
-                  <div className="shot-body">
-                    <Image
-                      src={c.img.src}
-                      alt={c.img.alt}
-                      width={c.img.width}
-                      height={c.img.height}
-                      className={
-                        'className' in c.img
-                          ? c.img.className
-                          : 'h-auto w-full rounded-[calc(var(--radius-lg)-0.25rem)]'
-                      }
-                      sizes="(min-width: 768px) 45vw, 100vw"
-                    />
+                    <div className="shot-body">
+                      <Image
+                        src={c.img.src}
+                        alt={c.img.alt}
+                        width={c.img.width}
+                        height={c.img.height}
+                        className={
+                          'className' in c.img
+                            ? c.img.className
+                            : 'h-auto w-full rounded-[calc(var(--radius-lg)-0.25rem)]'
+                        }
+                        sizes="(min-width: 768px) 45vw, 100vw"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </Reveal>
         ))}
       </section>
 
       {/* Plataforma — Aula, ABN-owned platform behind the three cases.
           The one dark surface on this page, placed mid-scroll. */}
       <section className="teal-band brand-texture mb-24" aria-label="Plataforma">
-        <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-20 md:flex-row md:items-end md:justify-between md:px-8 md:py-24">
+        <Reveal className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-20 md:flex-row md:items-end md:justify-between md:px-8 md:py-24">
           <div className="max-w-lg">
             <p className="label-caps mb-3">Plataforma</p>
             <p className="font-sans text-base leading-relaxed text-brand-cream-muted">
@@ -169,12 +172,12 @@ export default function CasosPage() {
             </p>
           </div>
           <p className="display shrink-0 text-[2.5rem] leading-none">Aula</p>
-        </div>
+        </Reveal>
       </section>
 
       {/* CTA */}
       <section className="mx-auto max-w-6xl px-4 pb-32 md:px-8">
-        <div className="flex flex-col items-start gap-6 border-t border-gray-200 pt-12">
+        <Reveal className="flex flex-col items-start gap-6 border-t border-gray-200 pt-12">
           <p className="max-w-xl font-sans text-base text-gray-600">
             Si tu institución llegó a un punto parecido, el primer paso es un
             diagnóstico, no un contrato.
@@ -182,7 +185,7 @@ export default function CasosPage() {
           <Link href="/contacto" className="btn-primary">
             Agendar un diagnóstico
           </Link>
-        </div>
+        </Reveal>
       </section>
     </>
   );

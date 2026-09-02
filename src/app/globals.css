@@ -283,6 +283,17 @@ body {
 .settle-3 { animation-delay: 200ms; }
 .settle-4 { animation-delay: 250ms; }
 
+/* The Reveal: the Settle, below the fold. Reveal.tsx arms an element only
+   when it starts off screen, then plays the same settle on arrival. */
+.reveal-armed {
+  opacity: 0;
+  transform: translateY(12px);
+}
+.reveal-in {
+  animation: settle var(--duration-settle) var(--ease-settle) both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+
 /* Header: atmosphere at reduced opacity, light removal not darkness. */
 .site-header {
   position: sticky;
@@ -476,15 +487,40 @@ textarea.field-input {
    ============================================================ */
 @keyframes tile-settle {
   0%   { opacity: 0; transform: translateY(10px) scale(0.94); }
-  90%  { opacity: var(--tile-o); transform: translateY(-1px) scale(1); }
-  100% { opacity: var(--tile-o); transform: translateY(0) scale(1); }
+  90%  { opacity: 1; transform: translateY(-1px) scale(1); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 .hero-grid rect {
   opacity: 0;
+  fill-opacity: var(--tile-o);
   transform-box: fill-box;
   transform-origin: center;
-  animation: tile-settle var(--duration-settle) var(--ease-settle) both;
+  animation-name: tile-settle;
+  animation-duration: var(--duration-settle);
+  animation-timing-function: var(--ease-settle);
+  animation-fill-mode: both;
   animation-delay: calc(300ms + var(--tile-i) * 90ms);
+}
+
+/* Scroll continues what load began: as the reader moves toward the proof
+   band, each tile fills to solid. The system assembles. Tied to the root
+   scroll position, so it costs nothing on the main thread. Browsers without
+   scroll timelines keep the load state; reduced motion never fills. */
+@keyframes tile-fill {
+  to { fill-opacity: 1; }
+}
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-grid rect {
+      animation-name: tile-settle, tile-fill;
+      animation-duration: var(--duration-settle), auto;
+      animation-timing-function: var(--ease-settle), linear;
+      animation-fill-mode: both, both;
+      animation-delay: calc(300ms + var(--tile-i) * 90ms), 0s;
+      animation-timeline: auto, scroll(root);
+      animation-range: normal, calc(var(--tile-i) * 3vh) calc(22vh + var(--tile-i) * 3vh);
+    }
+  }
 }
 
 /* ============================================================

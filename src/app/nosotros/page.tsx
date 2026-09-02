@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Reveal from '../Reveal';
 
 export const metadata: Metadata = {
   title: 'Nosotros',
@@ -84,12 +85,14 @@ export default function NosotrosPage() {
       <section className="mx-auto max-w-6xl px-4 pb-24 md:px-8" aria-label="Equipo">
         <p className="label-caps mb-10">La unidad</p>
         <div className="grid gap-6 md:grid-cols-2">
-          {team.map((t) => (
-            <article key={t.name} className="card p-6 md:p-8">
-              <h2 className="font-sans text-base font-semibold text-gray-900">{t.name}</h2>
-              <p className="label-caps mt-1">{t.area}</p>
-              <p className="mt-4 font-sans text-base leading-relaxed text-gray-600">{t.line}</p>
-            </article>
+          {team.map((t, i) => (
+            <Reveal key={t.name} delay={i * 60}>
+              <article className="card h-full p-6 md:p-8">
+                <h2 className="font-sans text-base font-semibold text-gray-900">{t.name}</h2>
+                <p className="label-caps mt-1">{t.area}</p>
+                <p className="mt-4 font-sans text-base leading-relaxed text-gray-600">{t.line}</p>
+              </article>
+            </Reveal>
           ))}
         </div>
       </section>
@@ -98,22 +101,23 @@ export default function NosotrosPage() {
       <section className="mx-auto max-w-6xl px-4 pb-24 md:px-8" aria-label="Portfolio">
         <p className="label-caps mb-10">El retrato</p>
         <div className="border-t border-gray-200">
-          {portfolio.map((p) => (
-            <div
+          {portfolio.map((p, i) => (
+            <Reveal
               key={p.inst}
+              delay={i * 50}
               className="grid gap-2 border-b border-gray-200 py-6 md:grid-cols-[8rem_8rem_1fr] md:gap-8"
             >
               <span className="label-caps">{p.tag}</span>
               <span className="font-sans text-base font-semibold text-gray-900">{p.inst}</span>
               <span className="font-sans text-base text-gray-600">{p.line}</span>
-            </div>
+            </Reveal>
           ))}
         </div>
       </section>
 
       {/* Principles. The one dark surface on this page. */}
       <section className="teal-band brand-texture mb-24" aria-label="Principios">
-        <div className="mx-auto max-w-6xl px-4 py-20 md:px-8 md:py-24">
+        <Reveal className="mx-auto max-w-6xl px-4 py-20 md:px-8 md:py-24">
           <p className="label-caps mb-10">Cómo decidimos</p>
           <ol className="max-w-2xl space-y-6">
             {principles.map((p, i) => (
@@ -123,19 +127,19 @@ export default function NosotrosPage() {
               </li>
             ))}
           </ol>
-        </div>
+        </Reveal>
       </section>
 
       {/* CTA */}
       <section className="mx-auto max-w-6xl px-4 pb-32 md:px-8">
-        <div className="flex flex-col items-start gap-6 border-t border-gray-200 pt-12">
+        <Reveal className="flex flex-col items-start gap-6 border-t border-gray-200 pt-12">
           <p className="max-w-xl font-sans text-base text-gray-600">
             Si esta forma de trabajar le sirve a tu institución, hablemos.
           </p>
           <Link href="/contacto" className="btn-primary">
             Agendar un diagnóstico
           </Link>
-        </div>
+        </Reveal>
       </section>
     </>
   );

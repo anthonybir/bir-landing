@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Reveal from '../Reveal';
 
 export const metadata: Metadata = {
   title: 'Servicios',
@@ -87,29 +88,31 @@ export default function ServiciosPage() {
       <section className="mx-auto max-w-6xl px-4 pb-24 md:px-8" aria-label="Modos de trabajo">
         <div className="space-y-6">
           {modes.map((m) => (
-            <article key={m.num} className="card p-6 md:p-10">
-              <div className="grid gap-8 md:grid-cols-[1fr_1.2fr]">
-                <div>
-                  <div className="flex items-baseline gap-4">
-                    <span className="font-mono text-xs text-gray-500">{m.num}</span>
-                    <span className="label-caps">{m.plazo}</span>
+            <Reveal key={m.num}>
+              <article className="card p-6 md:p-10">
+                <div className="grid gap-8 md:grid-cols-[1fr_1.2fr]">
+                  <div>
+                    <div className="flex items-baseline gap-4">
+                      <span className="font-mono text-xs text-gray-500">{m.num}</span>
+                      <span className="label-caps">{m.plazo}</span>
+                    </div>
+                    <h2 className="mt-4 font-sans text-base font-semibold text-gray-900">{m.title}</h2>
+                    <p className="mt-2 font-sans text-base font-medium text-gray-600">{m.when}</p>
                   </div>
-                  <h2 className="mt-4 font-sans text-base font-semibold text-gray-900">{m.title}</h2>
-                  <p className="mt-2 font-sans text-base font-medium text-gray-600">{m.when}</p>
+                  <div>
+                    <p className="font-sans text-base leading-relaxed text-gray-600">{m.desc}</p>
+                    <ul className="mt-6 space-y-3">
+                      {m.bullets.map((b) => (
+                        <li key={b} className="flex gap-3 font-sans text-base text-gray-900">
+                          <span className="mt-2.5 h-1 w-4 shrink-0 bg-gray-300" aria-hidden />
+                          {b}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-                <div>
-                  <p className="font-sans text-base leading-relaxed text-gray-600">{m.desc}</p>
-                  <ul className="mt-6 space-y-3">
-                    {m.bullets.map((b) => (
-                      <li key={b} className="flex gap-3 font-sans text-base text-gray-900">
-                        <span className="mt-2.5 h-1 w-4 shrink-0 bg-gray-300" aria-hidden />
-                        {b}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </article>
+              </article>
+            </Reveal>
           ))}
         </div>
       </section>
@@ -118,11 +121,11 @@ export default function ServiciosPage() {
       <section className="mx-auto max-w-6xl px-4 pb-24 md:px-8" aria-label="Sectores">
         <p className="label-caps mb-10">Dónde trabajamos</p>
         <div className="grid max-w-4xl gap-x-12 gap-y-10 md:grid-cols-2">
-          {sectors.map((s) => (
-            <div key={s.title}>
+          {sectors.map((s, i) => (
+            <Reveal key={s.title} delay={i * 60}>
               <h2 className="font-sans text-base font-semibold text-gray-900">{s.title}</h2>
               <p className="mt-3 font-sans text-base leading-relaxed text-gray-600">{s.desc}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </section>
@@ -134,7 +137,7 @@ export default function ServiciosPage() {
         aria-label="Cuándo no somos la mejor opción"
       >
         <div className="mx-auto max-w-6xl px-4 py-20 md:px-8 md:py-24">
-          <div className="max-w-2xl">
+          <Reveal className="max-w-2xl">
             <p className="label-caps mb-6">No somos para</p>
             <ul className="space-y-4">
               {notForUs.map((n) => (
@@ -143,13 +146,13 @@ export default function ServiciosPage() {
                 </li>
               ))}
             </ul>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* CTA */}
       <section className="mx-auto max-w-6xl px-4 pb-32 md:px-8">
-        <div className="flex flex-col items-start gap-6 border-t border-gray-200 pt-12">
+        <Reveal className="flex flex-col items-start gap-6 border-t border-gray-200 pt-12">
           <p className="max-w-xl font-sans text-base text-gray-600">
             Si todavía no está claro por dónde empezar, el diagnóstico sirve
             para decidirlo.
@@ -157,7 +160,7 @@ export default function ServiciosPage() {
           <Link href="/contacto" className="btn-primary">
             Agendar un diagnóstico
           </Link>
-        </div>
+        </Reveal>
       </section>
     </>
   );
