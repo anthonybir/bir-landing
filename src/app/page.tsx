@@ -59,13 +59,13 @@ export default function HomePage() {
               </div>
               <div className="shot-body">
                 <Image
-                  src="/screenshots/aena-centro-coordinacion-public.png"
+                  src="/screenshots/aena-centro-coordinacion.png"
                   alt="Centro de Coordinación de AENA Admin, el sistema escolar en producción"
-                  width={1280}
-                  height={960}
+                  width={2880}
+                  height={1556}
                   priority
                   sizes="(min-width: 1024px) 60vw, 0px"
-                  className="aspect-[4/3] w-full rounded-[calc(var(--radius-lg)-0.25rem)] object-cover object-top"
+                  className="aspect-[4/3] w-full rounded-[calc(var(--radius-lg)-0.25rem)] object-cover object-left-top"
                 />
               </div>
             </div>

@@ -27,12 +27,10 @@ const cases = [
       label: 'Morosidad en tres años',
     },
     img: {
-      src: '/screenshots/aena-centro-coordinacion-public.png',
-      alt: 'Centro de Coordinación de AENA Admin con prioridades directivas y seguimiento docente semanal',
-      width: 1280,
-      height: 960,
-      className:
-        'aspect-[4/3] w-full rounded-[calc(var(--radius-lg)-0.25rem)] object-cover object-top',
+      src: '/screenshots/aena-centro-coordinacion.png',
+      alt: 'Centro de Coordinación de AENA Admin: ciclo anual de promoción, alerta temprana y coordinación académica',
+      width: 2880,
+      height: 1556,
     },
   },
   {
@@ -45,9 +43,9 @@ const cases = [
     kpi: { num: '1 día', label: 'Cierre mensual consolidado' },
     img: {
       src: '/screenshots/ipupy-dashboard.png',
-      alt: 'Panel de tesorería de IPU Paraguay',
-      width: 2846,
-      height: 1822,
+      alt: 'Control operativo de la red en la tesorería de IPU Paraguay: informes pendientes, resultados del período y cierre de mes',
+      width: 2880,
+      height: 1624,
     },
   },
   {
@@ -59,10 +57,10 @@ const cases = [
       'Marco curricular y editorial bajo un solo estándar. La primera institución desplegada en Aula, el motor de planificación académica con IA de ABN. El mismo marco se enseña hoy en vivo: diplomado «Métodos de estudiar la Biblia con uso responsable de IA».',
     kpi: { num: '1 estándar', label: 'Marco curricular y editorial único' },
     img: {
-      src: '/screenshots/editorial-biblioteca.png',
-      alt: 'Biblioteca editorial institucional bajo un solo estándar en Aula',
-      width: 1440,
-      height: 1240,
+      src: '/screenshots/aula-planificacion-docente.png',
+      alt: 'Planificación docente en Aula: mesa del docente bíblico con fuentes, ritmo de clase y aprobación',
+      width: 2880,
+      height: 1624,
     },
   },
 ] as const;
@@ -146,11 +144,7 @@ export default function CasosPage() {
                         alt={c.img.alt}
                         width={c.img.width}
                         height={c.img.height}
-                        className={
-                          'className' in c.img
-                            ? c.img.className
-                            : 'h-auto w-full rounded-[calc(var(--radius-lg)-0.25rem)]'
-                        }
+                        className="h-auto w-full rounded-[calc(var(--radius-lg)-0.25rem)]"
                         sizes="(min-width: 768px) 45vw, 100vw"
                       />
                     </div>
