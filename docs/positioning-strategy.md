@@ -1,7 +1,7 @@
 # ABN — Estrategia de posicionamiento
 
 *Documento operativo. Lectura única, regreso frecuente.*
-*Última revisión: 2026-08-13*
+*Última revisión: 2026-09-03*
 
 ---
 
@@ -36,9 +36,9 @@ Además, el sitio actual habla de capacidades (qué hace el sistema) cuando debe
 
 **`/` (home)** — Entrada. Una afirmación que el visitante paraguayo reconoce de inmediato. La morosidad recuperada es la candidata natural; ningún director de institución mediana lee "70% → 2.9%" sin detenerse.
 
-**`/casos`** — Prueba. Tres rescates, no tres productos. KPIs reales (morosidad, sedes, países, tiempo de cierre); no métricas operativas internas tipo "ajustes/mes" que sólo significan algo adentro de ABN.
+**`/casos`** — Prueba. Tres instituciones, antes y ahora: rehabilitaciones, no productos. KPIs reales (morosidad, sedes, países, tiempo de cierre); no métricas operativas internas tipo "ajustes/mes" que sólo significan algo adentro de ABN.
 
-**`/nosotros`** — Origen. Estructura actual mantenida: el portfolio como retrato (sin foto) funciona y es raro en el mercado. Lleva el rescate de 2020, la morosidad recuperada y **las dos verticales nombradas**: un colegio de ~300 alumnos y la tesorería de ~30 iglesias. La asimetría 2 (el director es el operador) se sostiene en las dos porque la ficha de dirección nombra los dos cargos. Sin ese dato, la vertical de tesorería se lee como cliente y no como operación propia.
+**`/nosotros`** — Origen. Estructura actual mantenida: el portfolio en lugar de una foto del fundador funciona y es raro en el mercado. La decisión se muestra; el sitio no la anuncia. Lleva el rescate de 2020, la morosidad recuperada y **las dos verticales nombradas**: un colegio de ~300 alumnos y la tesorería de ~30 iglesias. La asimetría 2 (el director es el operador) se sostiene en las dos porque la ficha de dirección nombra los dos cargos. Sin ese dato, la vertical de tesorería se lee como cliente y no como operación propia.
 
 **`/servicios`** — Oferta. **Dos verticales con prueba: educación y organizaciones eclesiásticas.** Los tres modos (diagnóstico, implementación, acompañamiento) se presentan sector-agnósticos; el detalle nombra las dos verticales sin que ninguna sea el modelo de la casa. El MEC aparece como el regulador del caso educativo, no como el regulador a secas.
 
@@ -65,9 +65,9 @@ mayor peso de la página. Hoy la banda cae en:
 |---|---|---|
 | `/` | Prueba numérica | La morosidad recuperada es el ancla de toda la tesis. |
 | `/servicios` | No somos para | El límite es lo más fuerte que dice la página. |
-| `/ia-gobernada` | En producción, hoy | Números verificables, no promesa de IA. |
+| `/ia-gobernada` | En producción | Números verificables, no promesa de IA. |
 | `/casos` | Plataforma | Aula es propiedad de la agencia, no software suelto. |
-| `/nosotros` | Cómo decidimos | El criterio es el retrato. |
+| `/nosotros` | Cómo decidimos | Los principios son lo más fuerte que dice la página. |
 | `/en` | Why ABN | Credibilidad, la única barrera en relocación. |
 
 Las páginas cortas o funcionales (`/aula`, `/blog`, `/contacto`) no llevan
@@ -115,7 +115,7 @@ verticales probadas parezcan un menú en vez de una frontera.
 - Prometer personalización ilimitada. La oferta es disciplina, no flexibilidad de boutique.
 - Agregar más servicios visibles. Tres modos es la arquitectura.
 - Exponer testimonios de clientes externos hasta que exista caso 04. La operación propia es el testimonio.
-- Agregar foto del fundador. La decisión actual ("el trabajo es el retrato") es correcta y rara.
+- Agregar foto del fundador. El portfolio ocupa ese lugar. La decisión es correcta y rara, y no se explica en el sitio.
 
 ## Plan de ejecución
 
@@ -133,6 +133,17 @@ Pasos 1 y 2 son edición quirúrgica. Paso 3 es decisión de posicionamiento.
 **Estado a 2026-08-13.** Los tres pasos están ejecutados. El arco *antes → ahora*
 y el KPI de morosidad están en `/nosotros` y `/casos`; la home lleva
 `70% → 2,9%` como ancla numérica; `/servicios` cerró su decisión de alcance.
+
+## Prosa
+
+*Resuelta 2026-09-03.* El sitio no lleva prosa afectada. Queda fuera:
+
+- Una metáfora en lugar de una afirmación ("el trabajo es el retrato", "sistemas que viven sin nosotros").
+- Aperturas aforísticas y refranes repetidos por ritmo ("la decisión no cambia de manos", "no un contrato").
+- Títulos de sección que nombran un clima y no un contenido.
+- Citas destacadas de nosotros mismos.
+
+Queda adentro: una regla enunciada como regla ("La IA propone. La persona decide." en `/ia-gobernada`), el H1 de posicionamiento de la home y el límite «No somos para». Frases cortas y contrastes simples son la voz, no el problema.
 
 ## Riesgo y disciplina
 
