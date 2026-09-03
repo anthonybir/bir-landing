@@ -26,9 +26,7 @@ export default function HomePage() {
           <div>
             <h1 className="display display-poster settle">
               <span className="block">No tenés</span>
-              <span className="block">
-                <em>un sistema.</em>
-              </span>
+              <span className="block">un sistema.</span>
             </h1>
             <p className="settle settle-2 mt-8 font-sans text-base font-medium leading-relaxed text-gray-900">
               Te lo construimos.

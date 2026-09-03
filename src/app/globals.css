@@ -201,12 +201,6 @@ body {
   /* Instrument Serif ships one weight. Never let the browser fake another. */
   font-synthesis-weight: none;
 }
-/* The italic is the editorial turn: one phrase per display, never a whole line block. */
-.display em {
-  font-style: italic;
-  font-weight: inherit;
-  color: inherit;
-}
 
 .display-hero  { font-size: clamp(2.369rem, 6vw, 4.209rem); }
 .display-num   { font-size: clamp(2.369rem, 5vw, 3.157rem); }
