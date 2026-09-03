@@ -198,6 +198,8 @@ body {
   text-wrap: balance;
   color: var(--gray-900);
   font-variant-numeric: tabular-nums;
+  /* Instrument Serif ships one weight. Never let the browser fake another. */
+  font-synthesis-weight: none;
 }
 /* The italic is the editorial turn: one phrase per display, never a whole line block. */
 .display em {
@@ -389,7 +391,8 @@ textarea.field-input {
 .article h2 {
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 3vw, 1.802rem);
-  font-weight: 600;
+  font-weight: 400;
+  font-synthesis-weight: none;
   letter-spacing: -0.02em;
   line-height: 1.2;
   color: var(--gray-900);
@@ -525,6 +528,20 @@ textarea.field-input {
   border-bottom-color: rgba(239, 230, 210, 0.45);
 }
 .teal-band .link-quiet:hover { border-bottom-color: var(--brand-cream); }
+
+/* Counting number: reserve the wider of the start and end strings so a
+   proportional-figure face does not jitter while the value ticks. */
+.num-anim {
+  display: inline-grid;
+  white-space: nowrap;
+}
+.num-anim > span,
+.num-anim::before,
+.num-anim::after {
+  grid-area: 1 / 1;
+}
+.num-anim::before { content: attr(data-from); visibility: hidden; }
+.num-anim::after  { content: attr(data-to); visibility: hidden; }
 
 /* Signal gold: one number per view, and only on a dark surface,
    where the gold carries text contrast. Never on cream. */

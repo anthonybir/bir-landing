@@ -77,10 +77,20 @@ export default function AnimatedNumber({
     };
   }, [from, to, durationMs]);
 
+  // The display serif has proportional figures, so the count would shift
+  // width on every tick. The wrapper reserves the wider of the start and end
+  // strings; the live value sits over that reserved space.
   return (
-    <span ref={ref}>
-      {format(value, decimals)}
-      {suffix}
+    <span
+      ref={ref}
+      className="num-anim"
+      data-from={`${format(from, decimals)}${suffix}`}
+      data-to={`${format(to, decimals)}${suffix}`}
+    >
+      <span>
+        {format(value, decimals)}
+        {suffix}
+      </span>
     </span>
   );
 }
