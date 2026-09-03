@@ -17,7 +17,7 @@ const modes = [
     title: 'Diagnóstico institucional',
     when: 'Cuando el problema todavía no está bien definido',
     plazo: '2 a 4 semanas',
-    desc: 'Revisamos cómo trabaja la institución, dónde se frenan las decisiones y qué riesgos necesitan atención. El resultado es un orden claro para empezar.',
+    desc: 'Revisamos cómo trabaja la institución, dónde se frenan las decisiones y qué riesgos necesitan atención. El resultado es una lista de prioridades para empezar.',
     bullets: [
       'Revisión operativa, financiera y pedagógica',
       'Riesgos ordenados por urgencia',
@@ -62,10 +62,10 @@ const sectors = [
 ] as const;
 
 const notForUs = [
-  'Organizaciones que quieren solo una licencia de software, sin conversar del criterio detrás.',
+  'Organizaciones que quieren solo una licencia de software, sin revisar cómo trabajan.',
   'Proyectos que esperan una integración «llave en mano» sin involucrar a la dirección.',
   'Instituciones que buscan que la agencia decida qué enseñar, cómo gobernar o qué priorizar.',
-  'Empresas que buscan desarrollo de software a medida, sin una institución que ordenar detrás.',
+  'Empresas que buscan desarrollo de software a medida, sin una institución que ordenar.',
 ] as const;
 
 export default function ServiciosPage() {
@@ -78,9 +78,9 @@ export default function ServiciosPage() {
           Ponemos tu institución en orden.
         </h1>
         <p className="settle settle-3 mt-8 max-w-xl font-sans text-base leading-relaxed text-gray-600">
-          ABN no divide la responsabilidad entre consultores, proveedores y «el
-          que maneja el Excel». El mismo equipo entiende el problema, hace el
-          trabajo y responde por el resultado.
+          ABN no divide la responsabilidad entre consultores y proveedores. El
+          mismo equipo entiende el problema, hace el trabajo y responde por el
+          resultado.
         </p>
       </section>
 

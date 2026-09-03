@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
-import { Instrument_Sans, Geist_Mono } from "next/font/google";
+import { Instrument_Serif, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import WebMCPTools from "./WebMCPTools";
 import "./globals.css";
 
-const instrumentSans = Instrument_Sans({
+const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
-  variable: "--font-instrument",
+  variable: "--font-instrument-serif",
   display: "swap",
+  weight: "400",
+  style: ["normal", "italic"],
 });
 
 const geistMono = Geist_Mono({
@@ -71,7 +73,7 @@ export default function RootLayout({
     <html
       lang="es"
       data-scroll-behavior="smooth"
-      className={`${instrumentSans.variable} ${geistMono.variable} ${satoshi.variable}`}
+      className={`${instrumentSerif.variable} ${geistMono.variable} ${satoshi.variable}`}
     >
       <body className="antialiased">
         <script

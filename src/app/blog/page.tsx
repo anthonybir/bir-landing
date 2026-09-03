@@ -6,7 +6,7 @@ import { getAllPosts } from '@/blog/posts';
 export const metadata: Metadata = {
   title: 'Blog',
   description:
-    'Notas de primera mano sobre los sistemas que ABN diseña y opera en educación y tesorería.',
+    'Notas sobre los sistemas que ABN diseña y opera en educación y tesorería.',
   alternates: {
     canonical: '/blog',
   },
@@ -21,10 +21,11 @@ export default function BlogPage() {
       <section className="mx-auto max-w-6xl px-4 pb-16 pt-24 md:px-8">
         <p className="label-caps settle mb-6">Blog</p>
         <h1 className="display display-hero settle settle-2 max-w-3xl">
-          Escribimos desde la operación.
+          Qué hicimos y por qué.
         </h1>
         <p className="settle settle-3 mt-8 max-w-xl font-sans text-base leading-relaxed text-gray-600">
-          Contamos qué hicimos, por qué lo hicimos y qué decisión sigue en manos
+          Notas sobre los sistemas que ABN diseña y opera en educación y
+          tesorería. Cada una explica qué cambió y qué decisiones siguen a cargo
           de una persona.
         </p>
       </section>

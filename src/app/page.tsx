@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import AnimatedNumber from './AnimatedNumber';
 import HeroGrid from './HeroGrid';
@@ -21,11 +22,13 @@ export default function HomePage() {
         className="flex min-h-[calc(100dvh-4rem)] flex-col justify-center"
         aria-label="Oferta"
       >
-        <div className="mx-auto grid w-full max-w-6xl items-center gap-16 px-4 py-16 xl:grid-cols-[1.25fr_0.75fr] md:px-8">
+        <div className="mx-auto grid w-full max-w-6xl items-center gap-16 px-4 py-16 md:px-8 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
             <h1 className="display display-poster settle">
               <span className="block">No tenés</span>
-              <span className="block">un sistema.</span>
+              <span className="block">
+                <em>un sistema.</em>
+              </span>
             </h1>
             <p className="settle settle-2 mt-8 font-sans text-base font-medium leading-relaxed text-gray-900">
               Te lo construimos.
@@ -46,8 +49,30 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* The progression grid answers the headline: order, arriving. */}
-          <HeroGrid className="hidden xl:block" />
+          {/* Real software answers the headline. The frame bleeds off the
+              right edge; the progression grid rides its corner: order,
+              arriving, and already in production. */}
+          <div className="hero-stage settle settle-3 hidden lg:block">
+            <div className="shot hero-shot">
+              <div className="shot-chrome" aria-hidden="true">
+                <span />
+                <span />
+                <span />
+              </div>
+              <div className="shot-body">
+                <Image
+                  src="/screenshots/aena-centro-coordinacion-public.png"
+                  alt="Centro de Coordinación de AENA Admin, el sistema escolar en producción"
+                  width={1280}
+                  height={960}
+                  priority
+                  sizes="(min-width: 1024px) 60vw, 0px"
+                  className="aspect-[4/3] w-full rounded-[calc(var(--radius-lg)-0.25rem)] object-cover object-top"
+                />
+              </div>
+            </div>
+            <HeroGrid className="hero-grid-overlay" />
+          </div>
         </div>
       </section>
 
@@ -56,12 +81,14 @@ export default function HomePage() {
       <section className="teal-band brand-texture band-rise" aria-label="Prueba">
         <div className="mx-auto max-w-6xl px-4 py-24 md:px-8 md:py-32">
           <p className="max-w-xl font-sans text-base leading-relaxed text-brand-cream-muted">
-            Primero ordenamos la institución. El sistema que queda es la prueba.
+            Resultados de las instituciones que ABN opera hoy.
           </p>
 
-          <div className="mt-16 grid gap-12 md:grid-cols-3 md:gap-16">
-            <div>
-              <p className="display num-signal text-[1.777rem]">
+          {/* The lead number carries the argument, so it gets the proof size.
+              The two that follow are context, one step down. */}
+          <div className="mt-16 grid gap-12 md:grid-cols-12 md:gap-x-8 md:gap-y-16">
+            <div className="md:col-span-12 lg:col-span-6">
+              <p className="display display-proof num-signal">
                 70% → <AnimatedNumber from={70} to={2.9} decimals={1} suffix="%" />
               </p>
               <p className="label-caps mt-2">Morosidad recuperada</p>
@@ -70,8 +97,8 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div>
-              <p className="display text-[1.777rem]">
+            <div className="md:col-span-6 lg:col-span-3">
+              <p className="display display-num">
                 ~<AnimatedNumber to={30} />
               </p>
               <p className="label-caps mt-2">Iglesias administradas</p>
@@ -80,8 +107,8 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div>
-              <p className="display text-[1.777rem]">
+            <div className="md:col-span-6 lg:col-span-3">
+              <p className="display display-num">
                 <AnimatedNumber to={3} />
               </p>
               <p className="label-caps mt-2">Sistemas en producción</p>
@@ -104,7 +131,7 @@ export default function HomePage() {
       <section className="mx-auto max-w-6xl px-4 py-24 md:px-8" aria-label="Contacto">
         <Reveal className="flex flex-col items-start gap-6 border-t border-gray-200 pt-12">
           <p className="max-w-xl font-sans text-base leading-relaxed text-gray-600">
-            El primer paso es un diagnóstico, no un contrato.
+            Empezamos con un diagnóstico. No hace falta firmar un contrato para eso.
           </p>
           <Link href="/contacto" className="btn-primary">
             Agendar un diagnóstico

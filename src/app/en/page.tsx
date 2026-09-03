@@ -78,7 +78,7 @@ const credibility = [
   },
   {
     title: 'We run institutions in Paraguay',
-    desc: 'Our team operates a K-12 school and the national treasury system of a 30-church organization. Navigating Paraguayan paperwork is our daily work, not a side gig.',
+    desc: 'Our team operates a K-12 school and the national treasury system of a 30-church organization. We handle Paraguayan paperwork every day.',
   },
 ] as const;
 

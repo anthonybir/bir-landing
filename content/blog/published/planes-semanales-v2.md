@@ -29,7 +29,7 @@ No quitamos contenido pedagógico. Le damos un orden que el docente pueda recono
 
 ![El paquete semanal se organiza en Portada, Cómo enseñarlo, Banco de consignas y Evaluación.](/blog/planes-semanales-v2/slide-03.png)
 
-## Cinco estilos, cinco usos concretos
+## Los cinco estilos
 
 **Paso a Paso** divide el trabajo en etapas breves. Incluye modelado, práctica guiada y espacio para volver a enseñar.
 
@@ -77,7 +77,7 @@ La próxima actualización suma el documento de cuatro partes, explicaciones má
 
 ![La presentación separa lo que Aula ya hace de lo que llega en la próxima actualización.](/blog/planes-semanales-v2/slide-07.png)
 
-## El docente conserva la última palabra
+## El docente aprueba
 
 La IA puede preparar un buen punto de partida. No conoce al grupo como lo conoce el docente.
 

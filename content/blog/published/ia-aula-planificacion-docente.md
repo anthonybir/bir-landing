@@ -1,4 +1,4 @@
-Planificar bien una clase toma tiempo. Mucho.
+Planificar bien una clase toma mucho tiempo.
 
 Hay que ordenar el currículo, preparar materiales, pensar actividades, redactar evaluaciones y escribir informes para las familias. Mucho de ese trabajo empieza cuando la jornada escolar ya terminó.
 
@@ -29,7 +29,7 @@ Cada plan indica si tuvo apoyo de IA. La institución puede distinguir qué se g
 
 ![El docente puede filtrar por curso, semana y estado, y distinguir los planes que tuvieron apoyo de IA.](/blog/ia-aula-planificacion-docente/planificacion-semanal.png)
 
-## Materiales que no empiezan de cero
+## Borradores de materiales
 
 Aula también prepara borradores de guías, fichas de trabajo, evaluaciones y rúbricas alineadas con la planificación.
 
@@ -47,15 +47,13 @@ Cada material conserva su área, grado, estructura curricular, vocabulario y ori
 
 ## Las instrucciones también se gobiernan
 
-La parte más importante casi no se ve.
-
 Cada función de IA usa un *prompt* escrito, revisado, versionado y publicado. No dejamos que las reglas cambien de forma informal.
 
 El catálogo tiene más de **120 prompts publicados**. Cuando ajustamos uno, el sistema crea una versión nueva y registra quién la publicó y cuándo.
 
 ![Cada función de IA usa una instrucción con versión y estado de publicación.](/blog/ia-aula-planificacion-docente/prompts-catalog.png)
 
-## Verificamos antes de confiar
+## Controles de calidad
 
 La IA se puede equivocar. Por eso medimos lo que produce.
 
@@ -73,14 +71,14 @@ La IA puede ayudar a redactar un informe pedagógico. No puede publicarlo.
 
 La dirección revisa, edita y aprueba cada informe. El texto final no incluye notas sueltas, lenguaje administrativo, razonamiento interno de la IA ni marcadores técnicos.
 
-La familia recibe una devolución clara y respetuosa. El docente conserva la última palabra.
+La familia recibe una devolución clara y respetuosa.
 
-## La última palabra sigue siendo humana
+## La persona aprueba
 
-En Aula, la IA nunca tiene la última palabra. Puede preparar el primer borrador y quitar trabajo repetido.
+En Aula, la IA no aprueba nada. Prepara el primer borrador y quita trabajo repetido.
 
 El currículo del MEC sigue siendo la fuente. La institución ve dónde intervino la IA. El docente revisa el resultado y decide si se publica.
 
-La herramienta ahorra tiempo. La responsabilidad no cambia de manos.
+La herramienta ahorra tiempo. La responsabilidad sigue siendo de la persona que aprueba.
 
 *Si tu institución necesita ordenar la planificación sin quitar autoridad al docente, [conversemos](/contacto).*

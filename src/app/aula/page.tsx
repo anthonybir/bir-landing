@@ -19,7 +19,8 @@ export default function AulaPage() {
         <h1 className="display display-hero settle settle-2 max-w-3xl">Aula.</h1>
         <p className="settle settle-3 mt-8 max-w-xl font-sans text-base leading-relaxed text-gray-600">
           El motor de planificación académica con IA de ABN. Una sola plataforma,
-          desplegada por institución. La IA propone. La persona decide.
+          desplegada por institución. La IA prepara borradores. Una persona los
+          revisa y aprueba.
         </p>
       </section>
 
@@ -47,8 +48,8 @@ export default function AulaPage() {
 
       <section className="mx-auto max-w-6xl px-4 pb-32 md:px-8">
         <p className="max-w-xl font-sans text-base leading-relaxed text-gray-600">
-          AENA, IPU Paraguay e IBA corren sobre la misma plataforma. El criterio de cada
-          institución queda adentro. El software no se vende suelto.
+          AENA, IPU Paraguay e IBA usan la misma plataforma. Cada institución
+          conserva sus propias reglas. No vendemos el software por separado.
         </p>
         <div className="mt-10 flex flex-wrap items-center gap-6">
           <Link href="/contacto" className="btn-primary">

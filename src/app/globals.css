@@ -127,7 +127,7 @@
 
   /* Typography */
   --font-sans: var(--font-satoshi), "Helvetica Neue", system-ui, -apple-system, sans-serif;
-  --font-display: var(--font-instrument), "Helvetica Neue", system-ui, sans-serif;
+  --font-display: var(--font-instrument-serif), "Iowan Old Style", Georgia, serif;
   --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace;
 
   /* Signal */
@@ -192,18 +192,29 @@ body {
 /* Display voice: h1 / hero statements / case names / key numbers. */
 .display {
   font-family: var(--font-display);
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.02;
   text-wrap: balance;
   color: var(--gray-900);
   font-variant-numeric: tabular-nums;
+}
+/* The italic is the editorial turn: one phrase per display, never a whole line block. */
+.display em {
+  font-style: italic;
+  font-weight: inherit;
+  color: inherit;
 }
 
 .display-hero  { font-size: clamp(2.369rem, 6vw, 4.209rem); }
 .display-num   { font-size: clamp(2.369rem, 5vw, 3.157rem); }
 .display-poster {
   font-size: clamp(3.8rem, 12vw, 7rem);
+  line-height: 0.92;
+}
+/* Proof: the one number that carries the argument. Dark surfaces only. */
+.display-proof {
+  font-size: clamp(3.5rem, 8vw, 5.5rem);
   line-height: 0.95;
 }
 
@@ -595,3 +606,35 @@ textarea.field-input {
   background: var(--gray-300);
 }
 .shot-body { padding: 0.5rem; }
+
+/* ============================================================
+   Hero stage: real software, angled, bleeding off the right edge.
+   The progression grid sits on the frame's corner so the motif
+   and the product read as one object: the system, arriving.
+   ============================================================ */
+.hero-stage {
+  position: relative;
+}
+.hero-shot {
+  width: 150%;
+  max-width: none;
+  transform-origin: left center;
+  transform: perspective(2400px) rotateY(-14deg) rotateX(4deg) rotateZ(0.5deg);
+  box-shadow:
+    var(--shadow-xl),
+    -24px 32px 64px hsl(20 12% 10% / 0.10);
+  transition: transform 600ms var(--ease-settle), box-shadow 600ms var(--ease-settle);
+}
+.hero-shot:hover {
+  transform: perspective(2400px) rotateY(-10deg) rotateX(2deg) rotateZ(0deg) translateY(-4px);
+  box-shadow:
+    var(--shadow-xl),
+    -32px 48px 80px hsl(20 12% 10% / 0.14);
+}
+.hero-grid-overlay {
+  position: absolute;
+  left: -3rem;
+  bottom: -2.5rem;
+  width: 13rem;
+  filter: drop-shadow(0 8px 16px hsl(20 12% 10% / 0.12));
+}

@@ -5,7 +5,7 @@ import Reveal from '../Reveal';
 export const metadata: Metadata = {
   title: 'Nosotros',
   description:
-    'ABN es una agencia familiar: dirección, pedagogía, derecho y finanzas en una sola unidad. El trabajo es el retrato.',
+    'ABN es una agencia familiar: dirección, pedagogía, derecho y finanzas en un solo equipo, que también opera las instituciones que presenta como casos.',
   alternates: {
     canonical: '/nosotros',
   },
@@ -30,7 +30,7 @@ const team = [
   {
     name: 'Stephanie',
     area: 'Finanzas',
-    line: 'Operación financiera y cobranzas. La recuperación de morosidad de AENA pasó por este escritorio.',
+    line: 'Operación financiera y cobranzas. Trabajó en la recuperación de morosidad de AENA.',
   },
 ] as const;
 
@@ -60,7 +60,7 @@ const portfolio = [
 const principles = [
   'El criterio de la institución antes que la herramienta.',
   'No ofrecemos algo que todavía no usamos en una operación real.',
-  'Sistemas que viven sin nosotros.',
+  'Construimos sistemas que la institución puede operar sin nosotros.',
 ] as const;
 
 export default function NosotrosPage() {
@@ -73,17 +73,16 @@ export default function NosotrosPage() {
           Una agencia familiar. Una sola dirección.
         </h1>
         <p className="settle settle-3 mt-8 max-w-xl font-sans text-base leading-relaxed text-gray-600">
-          ABN no es una red de freelancers. Es una unidad. Pedagogía, derecho y
-          finanzas bajo una dirección que también opera las instituciones que
-          presenta como casos: un colegio de ~300 alumnos y la tesorería de una
-          red de ~30 iglesias. No vas a encontrar una foto acá. El trabajo es el
-          retrato.
+          ABN no es una red de freelancers. Es un solo equipo. Pedagogía,
+          derecho y finanzas bajo una dirección que también opera las
+          instituciones que presenta como casos: un colegio de ~300 alumnos y la
+          tesorería de una red de ~30 iglesias.
         </p>
       </section>
 
       {/* Team */}
       <section className="mx-auto max-w-6xl px-4 pb-24 md:px-8" aria-label="Equipo">
-        <p className="label-caps mb-10">La unidad</p>
+        <p className="label-caps mb-10">Equipo</p>
         <div className="grid gap-6 md:grid-cols-2">
           {team.map((t, i) => (
             <Reveal key={t.name} delay={i * 60}>
@@ -98,8 +97,8 @@ export default function NosotrosPage() {
       </section>
 
       {/* Portfolio as portrait */}
-      <section className="mx-auto max-w-6xl px-4 pb-24 md:px-8" aria-label="Portfolio">
-        <p className="label-caps mb-10">El retrato</p>
+      <section className="mx-auto max-w-6xl px-4 pb-24 md:px-8" aria-label="Instituciones">
+        <p className="label-caps mb-10">Instituciones</p>
         <div className="border-t border-gray-200">
           {portfolio.map((p, i) => (
             <Reveal

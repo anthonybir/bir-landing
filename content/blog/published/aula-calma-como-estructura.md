@@ -1,8 +1,8 @@
-Casi todo rediseño empieza agregando cosas. Otro botón. Otro panel. Otra opción.
+Casi todo rediseño agrega botones, paneles y opciones.
 
 En la planificación de **Aula** hicimos lo contrario. Quitamos lo que estorbaba.
 
-La planificación está en el centro del trabajo docente de **Nuevas Alturas**, la escuela de **AENA**. Si abrir esa pantalla ya pesa, planificar pesa más. La rediseñamos para que el docente pueda ubicarse y empezar sin descifrarla.
+La planificación está en el centro del trabajo docente de **Nuevas Alturas**, la escuela de **AENA**. Si esa pantalla es difícil de usar, planificar cuesta más. La rediseñamos para que el docente pueda ubicarse y empezar sin descifrarla.
 
 Queríamos que el docente viera de inmediato dónde estaba, qué seguía y qué decisión debía tomar.
 
@@ -10,7 +10,7 @@ Queríamos que el docente viera de inmediato dónde estaba, qué seguía y qué 
 
 Aula abre con una sola pregunta: ¿con qué curso vas a trabajar?
 
-Hasta que el docente elige, el resto espera.
+Las demás opciones aparecen después de elegir.
 
 Una banda pequeña muestra lo necesario antes de empezar: la última sesión, el estado de preparación y la semana sugerida. Después muestra el recorrido completo: plan anual, objetivo del MEC, paquete semanal con IA y exportación.
 
@@ -28,7 +28,7 @@ Cuando se acerca un cierre, el aviso aparece en el lugar donde hace falta. Dice 
 
 ![El lienzo mantiene la ruta a la vista: primero el contexto y después la creación. También muestra las fuentes que usará la IA.](/blog/aula-calma-como-estructura/lienzo-creacion.png)
 
-## El plan anual manda
+## El plan anual es la fuente
 
 Cada semana parte de un plan anual. Aula no inventa una fuente nueva para que generar un borrador parezca más fácil.
 
@@ -38,17 +38,17 @@ Si un curso todavía no tiene un plan anual activo, el sistema lo dice. No impro
 
 ![Cada plan anual conserva su versión y su estado. También permite preparar una redistribución sin cambiar el original.](/blog/aula-calma-como-estructura/plan-anual.png)
 
-## El calendario también cuenta
+## El calendario real
 
 No todas las semanas escolares tienen cinco días normales.
 
 Hay feriados, jornadas institucionales y fechas que no cuentan. Aula las incorpora y muestra su efecto antes de preparar el plan.
 
-Así dejamos de planificar contra un calendario ideal. Trabajamos con el año que la institución tiene de verdad.
+Así el plan usa el calendario real de la institución, no uno ideal.
 
 ![El calendario muestra fines de semana, fechas no computables y jornadas institucionales con su impacto operativo.](/blog/aula-calma-como-estructura/calendario.png)
 
-## El plan no termina en una carpeta
+## Los planes quedan guardados
 
 Cuando termina una semana, Aula guarda el plan con su curso, fecha y estado.
 
@@ -76,12 +76,12 @@ No escondimos lo esencial detrás de un menú. Reordenamos la misma información
 
 ![En el teléfono, la decisión aparece primero. El contexto y la ruta siguen después.](/blog/aula-calma-como-estructura/vista-movil.png)
 
-## Al cerrar la computadora
+## Qué buscamos
 
 El rediseño funciona si el docente cierra la computadora y sabe dónde quedó y cuál es el próximo paso.
 
-La calma no viene de una pantalla bonita. Viene de una herramienta que recuerda el contexto y no necesita que alguien la explique cada vez.
+Eso no depende de una pantalla bonita. Depende de una herramienta que recuerda el contexto y no necesita explicación cada vez.
 
 Para eso quitamos lo que estorbaba y dejamos clara la próxima decisión.
 
-*Si tu institución necesita una herramienta que se sostenga en el trabajo real, [conversemos](/contacto).*
+*Si tu institución necesita una herramienta que funcione en el trabajo diario, [conversemos](/contacto).*

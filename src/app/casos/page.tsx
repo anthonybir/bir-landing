@@ -54,7 +54,7 @@ const cases = [
     inst: 'IBA',
     sector: 'Editorial · Instituto Bíblico Apostólico',
     antes:
-      'Enseñanza pastoral artesanal: cada docente con su material, sin estándar común.',
+      'Formación pastoral sin estándar común: cada docente con su propio material.',
     ahora:
       'Marco curricular y editorial bajo un solo estándar. La primera institución desplegada en Aula, el motor de planificación académica con IA de ABN. El mismo marco se enseña hoy en vivo: diplomado «Métodos de estudiar la Biblia con uso responsable de IA».',
     kpi: { num: '1 estándar', label: 'Marco curricular y editorial único' },
@@ -74,7 +74,7 @@ export default function CasosPage() {
       <section className="mx-auto max-w-6xl px-4 pb-16 pt-24 md:px-8">
         <p className="label-caps settle mb-6">Casos</p>
         <h1 className="display display-hero settle settle-2 max-w-3xl">
-          Tres rescates, no tres productos.
+          Tres instituciones, antes y ahora.
         </h1>
         <p className="settle settle-3 mt-8 max-w-xl font-sans text-base leading-relaxed text-gray-600">
           AENA, IPU Paraguay e IBA llegaron con problemas distintos. Acá
@@ -185,8 +185,8 @@ export default function CasosPage() {
       <section className="mx-auto max-w-6xl px-4 pb-32 md:px-8">
         <Reveal className="flex flex-col items-start gap-6 border-t border-gray-200 pt-12">
           <p className="max-w-xl font-sans text-base text-gray-600">
-            Si tu institución llegó a un punto parecido, el primer paso es un
-            diagnóstico, no un contrato.
+            Si tu institución está en una situación parecida, empezamos con un
+            diagnóstico. No hace falta firmar un contrato para eso.
           </p>
           <Link href="/contacto" className="btn-primary">
             Agendar un diagnóstico

@@ -138,7 +138,7 @@ const systems = [
       },
       {
         k: 'Controles',
-        v: 'Tono institucional en español, cero invenciones; la lectura financiera exige permiso.',
+        v: 'Tono institucional en español, sin datos inventados; la lectura financiera exige permiso.',
       },
       { k: 'Retención', v: 'El borrador no se guarda por sí mismo. Queda registrado únicamente si el personal lo copia o lo envía.' },
     ],
@@ -175,8 +175,7 @@ export default function IaGobernadaPage() {
         </h1>
         <p className="settle settle-3 mt-8 max-w-xl font-sans text-base leading-relaxed text-gray-600">
           En las instituciones que ABN opera, la IA prepara borradores y hace
-          sugerencias. La persona autorizada revisa y aprueba. La decisión no cambia
-          de manos.
+          sugerencias. La persona autorizada revisa y aprueba.
         </p>
         <p className="settle settle-4 mt-12">
           <Link href="#produccion" className="link-quiet font-sans text-base">
@@ -187,7 +186,7 @@ export default function IaGobernadaPage() {
 
       {/* Principles */}
       <section className="mx-auto max-w-6xl px-4 pb-24 md:px-8" aria-label="Principios">
-        <p className="label-caps mb-10 border-t border-gray-200 pt-12">Seis principios, escritos en el código</p>
+        <p className="label-caps mb-10 border-t border-gray-200 pt-12">Seis principios implementados en el sistema</p>
         <ol className="border-t border-gray-200">
           {principles.map((p) => (
             <li
@@ -214,7 +213,7 @@ export default function IaGobernadaPage() {
         aria-label="En producción"
       >
         <div className="mx-auto max-w-6xl px-4 py-20 md:px-8 md:py-24">
-          <p className="label-caps mb-10">En producción, hoy</p>
+          <p className="label-caps mb-10">En producción</p>
           <div className="grid gap-12 md:grid-cols-2">
             {proof.map((m) => (
               <div key={m.label}>
@@ -231,8 +230,8 @@ export default function IaGobernadaPage() {
 
       <section className="mx-auto max-w-6xl px-4 pb-24 md:px-8" aria-label="Asistentes">
         <p className="max-w-2xl font-sans text-base leading-relaxed text-gray-600">
-          Cuatro asistentes en AENA y los servicios de tesorería de IPU Paraguay. En cada uno, la IA
-          prepara; la persona autorizada decide.
+          Cuatro asistentes en AENA y los servicios de tesorería de IPU Paraguay. En todos, una
+          persona autorizada revisa y aprueba.
         </p>
         <div className="mt-8 grid gap-6 md:grid-cols-2">
           {systems.map((s) => (
@@ -256,14 +255,6 @@ export default function IaGobernadaPage() {
           La herramienta usada se muestra en pantalla, y ningún servicio se activa sin evaluación
           previa.
         </p>
-      </section>
-
-      {/* Pull quote */}
-      <section className="mx-auto max-w-6xl px-4 pb-24 md:px-8">
-        <blockquote className="max-w-2xl border-l-2 border-accent pl-6 font-sans text-base leading-relaxed text-gray-700">
-          La IA puede documentar el trabajo y ahorrar tiempo. La responsabilidad
-          sigue siendo nuestra.
-        </blockquote>
       </section>
 
       {/* CTA */}
