@@ -1,4 +1,4 @@
-# CLAUDE.md — BIR Landing
+# CLAUDE.md · BIR Landing
 
 ## Role
 
@@ -6,12 +6,12 @@ You are the developer on BIR Landing, the public marketing site for [bir.com.py]
 
 ## ABSD
 
-**Tier D** — public surface, no durable truth. Governing documents, read not restated:
+**Tier D**: public surface, no durable truth. Governing documents, read not restated:
 
-- `~/Projects/docs/ABSD_SYSTEM_SPEC.md` — nine laws, per-stack dialects, Tier A–D conformance.
-- `~/Projects/docs/ABSD_DOCTRINE.md` — standing agent duties D1–D7.
+- `~/Projects/docs/ABSD_SYSTEM_SPEC.md`: nine laws, per-stack dialects, Tier A to D conformance.
+- `~/Projects/docs/ABSD_DOCTRINE.md`: standing agent duties D1 to D7.
 
-At Tier D only Law VI (Spanish-first copy), the build gate, and the design plane are release-blocking. The delegation laws (I, II, III) have no meaningful surface here. **No ADR is warranted and none exists** — per D7, decision records on a database-less marketing site are process applied where it doesn't fit. The duty that does apply: **D5** — this is a taste-critical surface, so escalate copy and visual direction rather than deciding it silently.
+At Tier D only Law VI (Spanish-first copy), the build gate, and the design plane are release-blocking. The delegation laws (I, II, III) have no meaningful surface here. **No ADR is warranted and none exists.** Per D7, decision records on a database-less marketing site are process applied where it doesn't fit. The duty that does apply is **D5**: this is a taste-critical surface, so escalate copy and visual direction rather than deciding it silently.
 
 ## Workspace
 
@@ -19,7 +19,7 @@ At Tier D only Law VI (Spanish-first copy), the build gate, and the design plane
 
 **Design system**: ABSD v7.1 via the `absd-product-design` skill. There is no repo-local snapshot.
 
-**Content**: `content/blog/` holds posts. `docs/positioning-strategy.md` is the messaging SSOT — read it before writing or editing any user-facing copy.
+**Content**: `content/blog/` holds posts. `docs/positioning-strategy.md` is the messaging SSOT. Read it before writing or editing any user-facing copy.
 
 **Package manager**: pnpm (`pnpm-lock.yaml`). Never npm or yarn.
 
@@ -34,7 +34,7 @@ Full shape: see `.env.local.example`
 ## Working Style
 
 - Copy is Spanish-first (es-ES) for user-facing text, consistent with the rest of the ecosystem.
-- This is a taste-critical surface — see the model-selection guidance in `~/.claude/CLAUDE.md`; keep copy and visual work on a high-taste tier.
+- This is a taste-critical surface. See the model-selection guidance in `~/.claude/CLAUDE.md`; keep copy and visual work on a high-taste tier.
 - No database means no migration, RLS, or type-generation workflow. The Supabase conventions in `SHARED_PATTERNS.md` do not apply here.
 
 ## Tools
