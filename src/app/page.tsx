@@ -19,7 +19,7 @@ export default function HomePage() {
   return (
     <>
       <section
-        className="flex min-h-[calc(100dvh-4rem)] flex-col justify-center"
+        className="flex min-h-[calc(100dvh-4rem)] flex-col justify-center overflow-x-clip"
         aria-label="Oferta"
       >
         <div className="mx-auto grid w-full max-w-6xl items-center gap-16 px-4 py-16 md:px-8 lg:grid-cols-[1.1fr_0.9fr]">
