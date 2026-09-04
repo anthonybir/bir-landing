@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = '595991402548';
+const WHATSAPP_NUMBER = '595994790348';
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola, me interesa conocer más sobre los servicios de ABN.')}`;
 
 export const WhatsAppIcon = ({ className = 'w-5 h-5' }: { className?: string }) => (

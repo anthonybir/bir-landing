@@ -35,7 +35,7 @@ export default function ContactoPage() {
                 rel="noopener noreferrer"
                 className="link-quiet"
               >
-                WhatsApp +595 991 402 548
+                WhatsApp +595 994 790 348
               </a>
             </p>
           </div>
