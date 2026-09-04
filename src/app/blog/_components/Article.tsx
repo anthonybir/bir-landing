@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import ProductFigure from '../../ProductFigure';
 import Link from 'next/link';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -8,25 +8,11 @@ import { pngSize } from '@/lib/pngSize';
 function ArticleImage({ src, alt }: { src?: string | Blob; alt?: string }) {
   if (typeof src !== 'string') return null;
   const { width, height } = pngSize(src);
-  return (
-    <figure className="article-figure">
-      <div className="card overflow-hidden p-2">
-        <Image
-          src={src}
-          alt={alt ?? ''}
-          width={width}
-          height={height}
-          className="h-auto w-full rounded-[calc(var(--radius-lg)-0.25rem)]"
-          sizes="(min-width: 768px) 720px, 100vw"
-        />
-      </div>
-      {alt ? <figcaption>{alt}</figcaption> : null}
-    </figure>
-  );
+  return <ProductFigure src={src} alt={alt ?? 'Imagen del artículo'} width={width} height={height} sizes="(min-width: 800px) 736px, 100vw" />;
 }
 
 function ArticleLink({ href, children }: { href?: string; children?: React.ReactNode }) {
-  if (href && href.startsWith('/')) {
+  if (href && href.startsWith('/') && !href.startsWith('//')) {
     return (
       <Link href={href} className="link-quiet">
         {children}

@@ -2,11 +2,11 @@
 
 Public marketing site for [bir.com.py](https://bir.com.py).
 
-ABN is an institutional rehabilitation practice in Paraguay. The software is the
-durable form that rehabilitation takes when it works. Pages sell transformations,
-not capabilities: what happened to the institution, not what the system does.
-`docs/positioning-strategy.md` is the SSOT for that message. Read it before
-writing or editing any user-facing copy.
+ABN builds operational systems that help leaders understand their organization,
+make informed decisions and follow up. Governed AI works inside those systems
+with institutional context, defined tasks and human review. Education and church
+organizations are proven examples, not eligibility limits.
+`docs/positioning-strategy.md` is the messaging SSOT.
 
 ## Tech Stack
 
@@ -19,43 +19,38 @@ writing or editing any user-facing copy.
 
 ## Design system
 
-ABSD v7.1. Tokens and component classes live in `src/app/globals.css`; there is
-no repo-local snapshot of the spec. Four conventions are enforced by hand, so
-check them before adding a page or a section.
+ABSD v7.2. Shared tokens live in `src/app/globals.css`. The selected visual
+language uses warm cream, upright Instrument Serif, Satoshi and deep teal across
+all pages. `PageIntro`, `ContactClose` and `ProductFigure` own repeated compositions.
 
-**One dark surface per long page, mid-scroll.** Apply `.teal-band
-.brand-texture` to exactly one section on `/`, `/servicios`, `/ia-gobernada`,
-`/casos`, `/nosotros` and `/en`. Short or functional pages (`/aula`, `/blog`,
-`/contacto`, 404) get none on purpose. A band must always be followed by at
-least one cream section, otherwise it merges into the teal footer and the two
-read as one block.
+**One dark surface on a long page, followed by cream.** The footer is cream on
+all routes. Short and functional pages do not need a dark band.
 
-**Browser chrome means live product UI shown as proof.** Use `.shot` with its
-`.shot-chrome` bar only for screenshots of software in production (`/casos`,
-the `/aula` hero). Article figures in `src/app/blog/_components/Article.tsx`
-keep the plain `.card` frame, because that set includes slide exports and
-diagrams that never lived in a browser.
+**Proof remains readable.** `ProductFigure` preserves complete source images and
+links to the original in a new tab. Cases identify distinct systems; historical
+articles retain their publication context. Do not add synthetic browser chrome.
 
-**Numbers count up only when there is distance to travel.** `AnimatedNumber`
-renders its final value server-side, so crawlers and no-JS readers get the
-truth, and it rewinds to the start value only when the element is still below
-the fold. That keeps an already-visible number from flashing. Values like
-"1 día" stay static, since 0 to 1 reads as a glitch.
+**Information is visible immediately.** Numbers remain static. Content does not
+wait for entrance animations or intersection observers.
 
-**One signal gold number per view, and only on teal.** `--signal` fails text
-contrast on the cream background, so `.num-signal` is scoped to `.teal-band`
-in CSS. It is currently spent on one number each on `/` and `/ia-gobernada`.
+**Gold is reserved for a result on teal.** `.num-signal` is scoped to `.teal-band`
+because the signal colour is unsuitable for small text on cream.
 
-The hero splits into two columns at `xl` only. At 768 and 1024 the poster type
-wraps to three and four lines, so those widths keep the single-column hero.
+The home follows the selected working-table direction: upright Instrument Serif,
+flat conceptual photography and a solid teal proof band. The hero splits at 900px;
+smaller screens keep the photograph below the copy, visible in normal flow. No
+rotated product screenshot or decorative progression grid on the home. Actual
+product screenshots remain on the case pages. The generated photo is identified
+as conceptual; it does not depict a customer location.
 
 ## Features
 
 - Multi-page marketing site, Spanish-first (es-ES), with an English relocation
   page at `/en`
 - Blog rendered from Markdown in `content/blog/`
-- Contact form with email integration
-- Rate limiting (5 requests/15 min per IP)
+- Contact form with shared validation, bounded provider requests, reply address,
+  and a stable Resend idempotency key for unchanged retries
+- Best-effort per-instance rate limiting (5 requests/15 min per IP)
 - XSS protection
 - Honeypot spam prevention
 
@@ -65,6 +60,18 @@ wraps to three and four lines, so those widths keep the single-column hero.
 pnpm install
 pnpm dev
 ```
+
+## Verification
+
+```bash
+pnpm lint
+pnpm test
+pnpm build
+```
+
+The contact tests isolate the route and mock Resend. They do not prove external
+email delivery or distributed rate limiting. Visual evidence and limitations are
+recorded in `design-qa.md`.
 
 ## Environment Variables
 

@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { PageIntro } from '../PageLayout';
+import { WHATSAPP_EN_URL } from '../WhatsAppFloat';
 
 export const metadata: Metadata = {
   title: {
@@ -8,7 +10,12 @@ export const metadata: Metadata = {
     'Paraguay temporary residency for English-speaking families, including translations, notarizations, Interpol and Migraciones filing.',
   alternates: {
     canonical: '/en',
-    languages: { es: '/', en: '/en' },
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Paraguay Residency & Relocation Services | ABN',
+    description: 'Local residency support for English-speaking families in Paraguay.',
+    images: '/en/opengraph-image',
   },
   openGraph: {
     title: 'Paraguay Residency & Relocation Services | ABN · Agencia Bir Núñez',
@@ -16,16 +23,14 @@ export const metadata: Metadata = {
       'Paraguay temporary residency for English-speaking families, including translations, notarizations, Interpol and Migraciones filing.',
     url: '/en',
     locale: 'en_US',
+    type: 'website',
+    images: '/en/opengraph-image',
   },
 };
 
-const WHATSAPP_EN_URL = `https://wa.me/595991402548?text=${encodeURIComponent(
-  "Hi Anthony, I'm interested in ABN's Paraguay residency services.",
-)}`;
-
 const scope = [
   'Review of your US-origin apostilled documents for completeness and fit for Migraciones requirements.',
-  'Certified Spanish translations of all foreign-language documents through a Paraguayan certified translator.',
+  'Certified Spanish translations where required, coordinated with a Paraguayan certified translator.',
   'Notarized copies at a Paraguayan escribanía for every original submitted to Migraciones.',
   'In-country accompaniment for Interpol (Asunción) and the Paraguayan police background certificate.',
   'Preparation and filing of the sworn declarations required by Migraciones.',
@@ -37,26 +42,26 @@ const phases = [
   {
     num: '01',
     title: 'US-side preparation',
-    time: '4 to 6 weeks',
+    time: 'Before travel',
     desc: 'You gather FBI background checks, vital records and apostilles at origin. We tell you exactly what to order and review everything before you ship it.',
   },
   {
     num: '02',
     title: 'Arrival & kickoff',
-    time: 'Day 1',
+    time: 'On arrival',
     desc: 'You land in Paraguay. We meet, verify the document file together and schedule every appointment.',
   },
   {
     num: '03',
     title: 'In-country processing',
-    time: '2 to 4 weeks',
+    time: 'Local appointments',
     desc: 'Translations, notarizations, Interpol and police certificates. We go with you to each step.',
   },
   {
     num: '04',
     title: 'Filing & resolution',
-    time: '6 to 10 weeks',
-    desc: 'We file at Dirección General de Migraciones and follow the application until your residency is approved.',
+    time: 'Authority review',
+    desc: 'We prepare the filing for Dirección Nacional de Migraciones and follow the application through its decision. Approval rests with Migraciones.',
   },
 ] as const;
 
@@ -73,8 +78,8 @@ const credibility = [
     desc: 'ABN is run by a US-born, fully bilingual director based in Lambaré. We have been through the same process we manage for you.',
   },
   {
-    title: 'Registered and accountable',
-    desc: 'Agencia Bir Núñez is a registered Paraguayan company with in-house legal counsel. You receive an engagement letter, invoices and every commitment in writing.',
+    title: 'A clear written scope',
+    desc: 'You receive the agreed scope, responsibilities and an itemized quote in writing. Our team coordinates the administrative and legal work.',
   },
   {
     title: 'We run institutions in Paraguay',
@@ -85,34 +90,16 @@ const credibility = [
 export default function RelocationPage() {
   return (
     <div lang="en">
-      {/* Hero */}
-      <section className="mx-auto max-w-6xl px-4 pb-16 pt-24 md:px-8">
-        <p className="label-caps settle mb-6">ABN · Lambaré, Paraguay · Relocation services</p>
-        <h1 className="display display-hero settle settle-2 max-w-3xl">
-          Paraguay residency, handled in English.
-        </h1>
-        <p className="settle settle-3 mt-8 max-w-xl font-sans text-base leading-relaxed text-gray-600">
-          We handle the Paraguayan side of your family&rsquo;s temporary residency:
-          translations, notarizations, Interpol, police certificates and the
-          Migraciones filing. You always know what comes next and what it costs.
-        </p>
-        <div className="settle settle-4 mt-12 flex flex-wrap items-center gap-6">
-          <a href="#contact" className="btn-secondary">
-            Request a quote
-          </a>
-          <a
-            href={WHATSAPP_EN_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="link-quiet font-sans text-base"
-          >
-            Chat on WhatsApp
-          </a>
+      <PageIntro label="ABN · Lambaré, Paraguay · Relocation services" title="Paraguay residency, handled in English.">
+        <p>We coordinate the Paraguayan side of your family’s temporary residency application: documents, translations, local appointments and filing. You know what comes next and what it costs.</p>
+        <div className="mt-8 flex flex-wrap items-center gap-6">
+          <a href="#contact" className="btn-primary">Discuss your move</a>
+          <a href={WHATSAPP_EN_URL} target="_blank" rel="noopener noreferrer" className="link-quiet">Chat on WhatsApp</a>
         </div>
-      </section>
+      </PageIntro>
 
       {/* Scope */}
-      <section className="mx-auto max-w-6xl px-4 pb-24 md:px-8" aria-label="What we handle">
+      <section className="page-container page-section" aria-label="What we handle">
         <p className="label-caps mb-10">What we handle</p>
         <ul className="grid max-w-4xl gap-x-12 gap-y-5 md:grid-cols-2">
           {scope.map((s) => (
@@ -130,13 +117,13 @@ export default function RelocationPage() {
       </section>
 
       {/* Process */}
-      <section className="mx-auto max-w-6xl px-4 pb-24 md:px-8" aria-label="How it works">
+      <section className="page-container page-section" aria-label="How it works">
         <p className="label-caps mb-10">How it works</p>
-        <div className="grid gap-6 md:grid-cols-4">
+        <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-4">
           {phases.map((p) => (
-            <article key={p.num} className="card p-6">
-              <div className="flex items-baseline justify-between">
-                <span className="font-mono text-xs text-gray-500">{p.num}</span>
+            <article key={p.num} className="min-w-0">
+              <div className="flex flex-wrap items-baseline gap-3">
+                <span className="font-mono text-xs text-gray-600">{p.num}</span>
                 <span className="label-caps">{p.time}</span>
               </div>
               <h2 className="mt-6 font-sans text-base font-semibold text-gray-900">{p.title}</h2>
@@ -146,9 +133,14 @@ export default function RelocationPage() {
         </div>
       </section>
 
+      <section className="page-container page-section" aria-label="Requirements and timing">
+        <p className="body-copy">We confirm the document list and a working schedule after reviewing your situation. Requirements depend on the application, and processing times are set by the authorities.</p>
+        <a href="https://migraciones.gov.py/residencia-temporal/" target="_blank" rel="noopener noreferrer" className="link-quiet mt-5 inline-block font-sans text-base">Official temporary residency requirements (Spanish)</a>
+      </section>
+
       {/* Pricing principles */}
-      <section className="mx-auto max-w-6xl px-4 pb-24 md:px-8" aria-label="Pricing">
-        <div className="max-w-2xl border-t border-gray-200 pt-12">
+      <section className="page-container page-section" aria-label="Pricing">
+        <div className="max-w-2xl">
           <p className="label-caps mb-6">How we price</p>
           <ul className="space-y-4">
             {pricing.map((p) => (
@@ -161,8 +153,8 @@ export default function RelocationPage() {
       </section>
 
       {/* Why ABN. The one dark surface on this page. */}
-      <section className="teal-band brand-texture mb-24" aria-label="Why ABN">
-        <div className="mx-auto max-w-6xl px-4 py-20 md:px-8 md:py-24">
+      <section className="teal-band mb-16 md:mb-20" aria-label="Why ABN">
+        <div className="page-container py-16 md:py-20">
           <p className="label-caps mb-10">Why ABN</p>
           <div className="grid gap-x-12 gap-y-10 md:grid-cols-3">
             {credibility.map((c) => (
@@ -178,15 +170,15 @@ export default function RelocationPage() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="mx-auto max-w-6xl px-4 pb-32 md:px-8" aria-label="Contact">
-        <div className="card p-8 md:p-12">
-          <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
+      <section id="contact" className="page-container page-section" aria-label="Contact">
+        <div className="py-4">
+          <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
             <div className="max-w-lg">
-              <h2 className="font-sans text-base font-semibold text-gray-900">Tell us about your family.</h2>
+              <h2 className="display section-title">Tell us about your family.</h2>
               <p className="mt-3 font-sans text-base text-gray-600">
                 Write a few lines: how many adults, how many children, your
-                timeline. You&rsquo;ll have an itemized quote within 48 business
-                hours.
+                timeline. We reply within 48 business hours to confirm the information
+                needed for an itemized quote.
               </p>
             </div>
             <div className="flex shrink-0 flex-col items-start gap-4">

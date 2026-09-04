@@ -83,5 +83,3 @@ El rediseño funciona si el docente cierra la computadora y sabe dónde quedó y
 Eso no depende de una pantalla bonita. Depende de una herramienta que recuerda el contexto y no necesita explicación cada vez.
 
 Para eso quitamos lo que estorbaba y dejamos clara la próxima decisión.
-
-*Si tu institución necesita una herramienta que funcione en el trabajo diario, [conversemos](/contacto).*

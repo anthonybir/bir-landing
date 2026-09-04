@@ -1,60 +1,37 @@
-import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getAllPosts } from '@/blog/posts';
+import { PageIntro } from '../PageLayout';
+import { pageMetadata } from '../page-metadata';
 
-export const metadata: Metadata = {
-  title: 'Blog',
-  description:
-    'Notas sobre los sistemas que ABN diseña y opera en educación y tesorería.',
-  alternates: {
-    canonical: '/blog',
-  },
-};
+export const metadata = pageMetadata('Blog', 'Notas de ABN sobre gestión, diseño de sistemas e IA gobernada, con casos y decisiones del trabajo real.', '/blog');
 
 export default function BlogPage() {
   const posts = getAllPosts();
 
   return (
     <>
-      {/* Header */}
-      <section className="mx-auto max-w-6xl px-4 pb-16 pt-24 md:px-8">
-        <p className="label-caps settle mb-6">Blog</p>
-        <h1 className="display display-hero settle settle-2 max-w-3xl">
-          Qué hicimos y por qué.
-        </h1>
-        <p className="settle settle-3 mt-8 max-w-xl font-sans text-base leading-relaxed text-gray-600">
-          Notas sobre los sistemas que ABN diseña y opera en educación y
-          tesorería. Cada una explica qué cambió y qué decisiones siguen a cargo
-          de una persona.
-        </p>
-      </section>
-
+      <PageIntro label="Blog" title="Qué hicimos y por qué.">
+        <p>Notas sobre gestión, diseño e IA dentro de los sistemas que construimos. Cada artículo documenta el trabajo y las decisiones de su fecha de publicación.</p>
+      </PageIntro>
       {/* Posts */}
-      <section className="mx-auto max-w-6xl px-4 pb-32 md:px-8" aria-label="Publicaciones">
-        <div className="grid gap-8 md:grid-cols-2">
+      <section className="page-container page-section" aria-label="Publicaciones">
+        <div className="journal-list">
           {posts.map((p) => (
             <Link
               key={p.slug}
               href={`/blog/${p.slug}`}
-              className="card card-lift group flex flex-col overflow-hidden"
+              className="journal-entry"
+              aria-labelledby={`post-${p.slug}`}
             >
-              <div className="relative aspect-[16/10] w-full overflow-hidden border-b border-gray-200 bg-gray-100">
-                <Image
-                  src={p.lead.src}
-                  alt={p.lead.alt}
-                  fill
-                  className="object-cover object-top"
-                  sizes="(min-width: 768px) 45vw, 100vw"
-                />
-              </div>
-              <div className="flex flex-1 flex-col p-6 md:p-8">
+              <Image src={p.lead.src} alt={p.lead.alt} width={p.leadSize.width} height={p.leadSize.height} className="journal-entry-image" sizes="(min-width: 900px) 480px, 100vw" />
+              <div className="min-w-0">
                 <p className="label-caps">{p.tag}</p>
-                <h2 className="mt-3 font-sans text-base font-semibold text-gray-900">{p.title}</h2>
+                <h2 id={`post-${p.slug}`} className="text-gray-900">{p.title}</h2>
                 <p className="mt-3 font-sans text-base leading-relaxed text-gray-600">
                   {p.description}
                 </p>
-                <div className="mt-auto flex items-center gap-2 pt-6 font-mono text-xs text-gray-500">
+                <div className="mt-auto flex flex-wrap items-center gap-2 pt-6 font-sans text-xs text-gray-600">
                   <time dateTime={p.dateISO}>{p.dateLabel}</time>
                   <span aria-hidden>·</span>
                   <span>{p.readingLabel}</span>

@@ -1,10 +1,13 @@
 'use client';
 
 import { useEffect } from 'react';
+import { PROVEN_SECTORS, SITE_DESCRIPTION } from './site-information';
 
 const PUBLIC_PAGES = {
   inicio: '/',
   servicios: '/servicios',
+  aula: '/aula',
+  relocation: '/en',
   ia_gobernada: '/ia-gobernada',
   casos: '/casos',
   blog: '/blog',
@@ -17,6 +20,8 @@ type PublicPage = keyof typeof PUBLIC_PAGES;
 const pageNames: PublicPage[] = [
   'inicio',
   'servicios',
+  'aula',
+  'relocation',
   'ia_gobernada',
   'casos',
   'blog',
@@ -54,14 +59,16 @@ export default function WebMCPTools() {
           },
           execute: () => ({
             name: 'ABN · Agencia Bir Núñez',
-            description:
-              'ABN rehabilitates institutions through governed systems for education and church organizations.',
+            description: SITE_DESCRIPTION,
+            provenSectors: PROVEN_SECTORS,
+            engagement: 'Diagnóstico de procesos, información y decisiones de la organización.',
+            aiApproach: 'IA integrada en tareas concretas, con contexto propio, permisos y revisión humana.',
             location: 'Lambaré, Paraguay',
-            serviceArea: 'Paraguay and the region',
+            serviceArea: 'Paraguay y la región',
             contact: {
               email: 'anthony@bir.com.py',
               contactPage: '/contacto',
-              responseTime: 'Within 48 business hours',
+              responseTime: 'Dentro de 48 horas hábiles',
             },
             pages: PUBLIC_PAGES,
           }),

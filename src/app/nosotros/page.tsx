@@ -1,145 +1,44 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
-import Reveal from '../Reveal';
+import { PageIntro, ContactClose } from '../PageLayout';
+import { pageMetadata } from '../page-metadata';
 
-export const metadata: Metadata = {
-  title: 'Nosotros',
-  description:
-    'ABN es una agencia familiar: dirección, pedagogía, derecho y finanzas en un solo equipo, que también opera las instituciones que presenta como casos.',
-  alternates: {
-    canonical: '/nosotros',
-  },
-};
+export const metadata = pageMetadata('Nosotros', 'Dirección, sistemas, pedagogía, derecho y finanzas. Un equipo con experiencia directa en las operaciones que presenta como casos.', '/nosotros');
 
 const team = [
-  {
-    name: 'Anthony Bir',
-    area: 'Dirección · Presidente del Consejo Administrativo de AENA · Tesorero de IPU Paraguay',
-    line: 'Preside el Consejo Administrativo de AENA y es tesorero de IPU Paraguay. También construye los sistemas que usan el colegio y la tesorería.',
-  },
-  {
-    name: 'Diana',
-    area: 'Directora Pedagógica de AENA',
-    line: 'Marco curricular MEAA 3.0: sin tareas, sin exámenes, ABP, alineado al MEC. En producción desde hace seis años.',
-  },
-  {
-    name: 'Danae',
-    area: 'Derecho',
-    line: 'Encuadre legal y regulatorio de cada implementación: contratos, cumplimiento y relación con el MEC.',
-  },
-  {
-    name: 'Stephanie',
-    area: 'Finanzas',
-    line: 'Operación financiera y cobranzas. Trabajó en la recuperación de morosidad de AENA.',
-  },
-] as const;
-
-const portfolio = [
-  {
-    tag: 'Educación',
-    inst: 'AENA',
-    line: 'Rescate 2020. ~300 alumnos bajo MEAA 3.0. Morosidad del 70% al 2,9% en tres años.',
-  },
-  {
-    tag: 'Tesorería',
-    inst: 'IPU PY',
-    line: 'Tesorería por partida doble para ~30 iglesias. Cierre mensual de un día.',
-  },
-  {
-    tag: 'Editorial',
-    inst: 'IBA',
-    line: 'Marco curricular y editorial de formación pastoral, multipaís.',
-  },
-  {
-    tag: 'Software',
-    inst: 'ABSD',
-    line: 'Anthony Bir System Designs: AENA_Admin, ipupy_admin y Kairós Live, hoy en uso institucional.',
-  },
-] as const;
-
-const principles = [
-  'El criterio de la institución antes que la herramienta.',
-  'No ofrecemos algo que todavía no usamos en una operación real.',
-  'Construimos sistemas que la institución puede operar sin nosotros.',
+  { name: 'Anthony Bir', area: 'Dirección y sistemas', text: 'Preside el Consejo Administrativo de AENA y es tesorero de IPU Paraguay. Conecta las necesidades de dirección con el diseño y la construcción de los sistemas que usan ambas organizaciones.' },
+  { name: 'Diana', area: 'Pedagogía', text: 'Dirige la pedagogía de AENA y el marco curricular MEAA 3.0. Aporta los criterios de enseñanza, planificación y evaluación que el sistema debe respetar.' },
+  { name: 'Danae', area: 'Derecho', text: 'Trabaja en el encuadre legal de cada implementación: contratos, responsabilidades y relación con el regulador que corresponda, incluido el MEC en educación.' },
+  { name: 'Stephanie', area: 'Finanzas', text: 'Aporta experiencia en operación financiera y gestión de cobros. Participó en la recuperación de la morosidad de AENA.' },
 ] as const;
 
 export default function NosotrosPage() {
   return (
     <>
-      {/* Header */}
-      <section className="mx-auto max-w-6xl px-4 pb-16 pt-24 md:px-8">
-        <p className="label-caps settle mb-6">Nosotros</p>
-        <h1 className="display display-hero settle settle-2 max-w-3xl">
-          Una agencia familiar. Una sola dirección.
-        </h1>
-        <p className="settle settle-3 mt-8 max-w-xl font-sans text-base leading-relaxed text-gray-600">
-          ABN no es una red de freelancers. Es un solo equipo. Pedagogía,
-          derecho y finanzas bajo una dirección que también opera las
-          instituciones que presenta como casos: un colegio de ~300 alumnos y la
-          tesorería de una red de ~30 iglesias.
-        </p>
+      <PageIntro label="Nosotros" title="Un equipo que dirige y construye.">
+        <p>ABN reúne dirección, tecnología, pedagogía, derecho y finanzas. Nuestra experiencia nace de gestionar un colegio y la tesorería de una red de iglesias: reunir información, decidir y responder por lo que ocurre después.</p>
+        <p>Construimos los sistemas para sostener ese trabajo. Esa experiencia también nos permite entender los procesos de otras organizaciones y definir con ellas qué necesitan mejorar.</p>
+      </PageIntro>
+      <section className="page-container page-section" aria-label="Equipo">
+        <div className="editorial-grid">{team.map(person => <article key={person.name} className="editorial-item"><p className="label-caps">{person.area}</p><h2 className="display section-title">{person.name}</h2><p className="body-copy">{person.text}</p></article>)}</div>
       </section>
-
-      {/* Team */}
-      <section className="mx-auto max-w-6xl px-4 pb-24 md:px-8" aria-label="Equipo">
-        <p className="label-caps mb-10">Equipo</p>
-        <div className="grid gap-6 md:grid-cols-2">
-          {team.map((t, i) => (
-            <Reveal key={t.name} delay={i * 60}>
-              <article className="card h-full p-6 md:p-8">
-                <h2 className="font-sans text-base font-semibold text-gray-900">{t.name}</h2>
-                <p className="label-caps mt-1">{t.area}</p>
-                <p className="mt-4 font-sans text-base leading-relaxed text-gray-600">{t.line}</p>
-              </article>
-            </Reveal>
-          ))}
+      <section className="teal-band" aria-labelledby="origin-title">
+        <div className="page-container py-16 md:py-20 grid gap-8 md:grid-cols-2">
+          <h2 id="origin-title" className="display section-title">Experiencia que se puede explicar.</h2>
+          <div className="font-sans text-base leading-relaxed text-brand-cream">
+            <p>AENA pasó de una morosidad del 70% al 2,9% en tres años de dirección directa. En IPU Paraguay, el trabajo reúne la tesorería de unas 30 iglesias. Los sistemas forman parte de esa gestión.</p>
+            <Link href="/casos" className="link-quiet mt-6 inline-block">Leer los casos</Link>
+          </div>
         </div>
       </section>
-
-      {/* Portfolio as portrait */}
-      <section className="mx-auto max-w-6xl px-4 pb-24 md:px-8" aria-label="Instituciones">
-        <p className="label-caps mb-10">Instituciones</p>
-        <div className="border-t border-gray-200">
-          {portfolio.map((p, i) => (
-            <Reveal
-              key={p.inst}
-              delay={i * 50}
-              className="grid gap-2 border-b border-gray-200 py-6 md:grid-cols-[8rem_8rem_1fr] md:gap-8"
-            >
-              <span className="label-caps">{p.tag}</span>
-              <span className="font-sans text-base font-semibold text-gray-900">{p.inst}</span>
-              <span className="font-sans text-base text-gray-600">{p.line}</span>
-            </Reveal>
-          ))}
+      <section className="page-container pt-16 md:pt-20" aria-label="Criterios de trabajo">
+        <p className="label-caps mb-8">Cómo trabajamos</p>
+        <div className="grid gap-8 md:grid-cols-3 font-sans text-base leading-relaxed">
+          <p>Entendemos el proceso antes de elegir la herramienta.</p>
+          <p>Definimos quién puede consultar, revisar y aprobar cada parte del trabajo.</p>
+          <p>El equipo de la organización participa, aprende y puede dar continuidad al sistema.</p>
         </div>
       </section>
-
-      {/* Principles. The one dark surface on this page. */}
-      <section className="teal-band brand-texture mb-24" aria-label="Principios">
-        <Reveal className="mx-auto max-w-6xl px-4 py-20 md:px-8 md:py-24">
-          <p className="label-caps mb-10">Cómo decidimos</p>
-          <ol className="max-w-2xl space-y-6">
-            {principles.map((p, i) => (
-              <li key={p} className="flex gap-6">
-                <span className="font-mono text-xs text-brand-cream-muted">0{i + 1}</span>
-                <span className="font-sans text-base leading-relaxed text-brand-cream">{p}</span>
-              </li>
-            ))}
-          </ol>
-        </Reveal>
-      </section>
-
-      {/* CTA */}
-      <section className="mx-auto max-w-6xl px-4 pb-32 md:px-8">
-        <Reveal className="flex flex-col items-start gap-6 border-t border-gray-200 pt-12">
-          <p className="max-w-xl font-sans text-base text-gray-600">
-            Si esta forma de trabajar le sirve a tu institución, hablemos.
-          </p>
-          <Link href="/contacto" className="btn-primary">
-            Agendar un diagnóstico
-          </Link>
-        </Reveal>
-      </section>
+      <ContactClose>Si necesitas conectar la información con las decisiones de tu equipo, empecemos por conocer cómo trabajáis.</ContactClose>
     </>
   );
 }

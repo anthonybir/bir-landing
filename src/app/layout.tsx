@@ -6,6 +6,7 @@ import NavBar from "./NavBar";
 import Footer from "./Footer";
 import WebMCPTools from "./WebMCPTools";
 import "./globals.css";
+import { SITE_DESCRIPTION, SITE_TITLE } from "./site-information";
 
 const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
@@ -33,15 +34,16 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://bir.com.py'),
   title: {
     template: '%s | ABN · Agencia Bir Núñez',
-    default: 'ABN · Te construimos el sistema',
+    default: SITE_TITLE,
   },
-  description: "Tu institución no tiene un sistema. ABN lo construye: administración educativa, financiera y legal, bajo una sola dirección.",
+  description: SITE_DESCRIPTION,
+  twitter: { card: "summary_large_image", title: SITE_TITLE, description: SITE_DESCRIPTION, images: ["/opengraph-image"] },
   openGraph: {
-    title: "ABN · Te construimos el sistema",
-    description: "Educación, finanzas y derecho. Una sola dirección.",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
     url: "https://bir.com.py",
     siteName: "Agencia Bir Núñez",
-    locale: "es_PY",
+    locale: "es_ES",
     type: "website",
     images: "/opengraph-image",
   },
@@ -53,6 +55,7 @@ const organizationJsonLd = {
   name: 'ABN · Agencia Bir Núñez',
   url: 'https://bir.com.py',
   logo: 'https://bir.com.py/icon.svg',
+  description: SITE_DESCRIPTION,
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Lambaré',
@@ -81,11 +84,8 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
         <div className="flex min-h-[100dvh] flex-col text-foreground">
-          <a href="#contenido" className="skip-link">
-            Ir al contenido
-          </a>
           <NavBar />
-          <main id="contenido" className="flex-1">
+          <main id="contenido" tabIndex={-1} className="flex-1">
             {children}
           </main>
           <Footer />

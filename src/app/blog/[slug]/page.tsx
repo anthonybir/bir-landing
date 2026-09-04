@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
+import ProductFigure from '../../ProductFigure';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Article from '../_components/Article';
@@ -21,11 +21,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     alternates: {
       canonical: `/blog/${post.slug}`,
     },
+    twitter: { card: 'summary_large_image', title: post.title, description: post.description, images: post.lead.src },
     openGraph: {
       title: post.title,
       description: post.description,
       url: `https://bir.com.py/blog/${post.slug}`,
       type: 'article',
+      locale: 'es_ES',
+      publishedTime: post.dateISO,
       images: post.lead.src,
     },
   };
@@ -54,11 +57,12 @@ export default async function PostPage({ params }: Params) {
       logo: 'https://bir.com.py/icon.svg',
     },
     mainEntityOfPage: postUrl,
-    inLanguage: 'es',
+    inLanguage: 'es-ES',
+    image: `https://bir.com.py${post.lead.src}`,
   } as const;
 
   return (
-    <article className="mx-auto max-w-3xl px-4 pb-32 pt-24 md:px-8">
+    <article className="article-shell">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingJsonLd) }}
@@ -69,10 +73,11 @@ export default async function PostPage({ params }: Params) {
           ← Volver al blog
         </Link>
         <p className="label-caps mt-10">{post.tag}</p>
-        <h1 className="display mt-4 text-[2.027rem] leading-[1.1] md:text-[2.488rem]">
+        <h1 className="display article-title mt-4">
           {post.title}
         </h1>
-        <div className="mt-6 flex flex-wrap items-center gap-2 font-mono text-xs text-gray-500">
+        <p className="body-copy mt-6">{post.description}</p>
+        <div className="mt-6 flex flex-wrap items-center gap-2 font-sans text-xs text-gray-600">
           <span>{post.institution}</span>
           <span aria-hidden>·</span>
           <time dateTime={post.dateISO}>{post.dateLabel}</time>
@@ -81,21 +86,8 @@ export default async function PostPage({ params }: Params) {
         </div>
       </header>
 
-      {/* Lead image */}
-      <figure className="article-figure mt-12">
-        <div className="card overflow-hidden p-2">
-          <Image
-            src={post.lead.src}
-            alt={post.lead.alt}
-            width={post.leadSize.width}
-            height={post.leadSize.height}
-            className="h-auto w-full rounded-[calc(var(--radius-lg)-0.25rem)]"
-            sizes="(min-width: 768px) 720px, 100vw"
-            priority
-          />
-        </div>
-        <figcaption>{post.lead.alt}</figcaption>
-      </figure>
+      <ProductFigure src={post.lead.src} alt={post.lead.alt} width={post.leadSize.width} height={post.leadSize.height} sizes="(min-width: 800px) 736px, 100vw" priority />
+      {post.institution.startsWith('AENA') && <p className="body-copy text-sm">En esta nota, «Aula» se refiere al entorno de planificación de AENA.</p>}
 
       {/* Body */}
       <div className="mt-12">
@@ -103,14 +95,15 @@ export default async function PostPage({ params }: Params) {
       </div>
 
       {/* CTA */}
-      <div className="mt-20 flex flex-col items-start gap-6 border-t border-gray-200 pt-12">
+      <div className="mt-16 flex flex-col items-start gap-6">
         <p className="max-w-xl font-sans text-base text-gray-600">
-          Si el trabajo todavía depende de planillas y de la memoria de una
+          Si el trabajo todavía depende de hojas de cálculo y de la memoria de una
           persona, empecemos por entender el problema.
         </p>
-        <Link href="/contacto" className="btn-primary">
-          Agendar un diagnóstico
-        </Link>
+        <div className="flex flex-wrap items-center gap-6">
+          <Link href="/contacto" className="btn-primary">Hablemos de tu sistema</Link>
+          <Link href="/blog" className="link-quiet">Volver a las notas</Link>
+        </div>
       </div>
     </article>
   );

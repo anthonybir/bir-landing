@@ -1,4 +1,4 @@
-import { readFileSync } from 'node:fs';
+import { openSync, readSync, closeSync } from 'node:fs';
 import path from 'node:path';
 
 export type Size = { width: number; height: number };
@@ -9,7 +9,15 @@ export type Size = { width: number; height: number };
  */
 export function pngSize(publicSrc: string): Size {
   const file = path.join(process.cwd(), 'public', publicSrc.replace(/^\//, ''));
-  const buf = readFileSync(file).subarray(0, 24);
+  const buf = Buffer.alloc(24);
+  const descriptor = openSync(file, 'r');
+  try {
+    if (readSync(descriptor, buf, 0, 24, 0) !== 24 || buf.toString('ascii', 12, 16) !== 'IHDR') {
+      throw new Error(`Invalid PNG header: ${publicSrc}`);
+    }
+  } finally {
+    closeSync(descriptor);
+  }
   // PNG signature (8 bytes) + IHDR length (4) + "IHDR" (4) + width (4) + height (4)
   return { width: buf.readUInt32BE(16), height: buf.readUInt32BE(20) };
 }

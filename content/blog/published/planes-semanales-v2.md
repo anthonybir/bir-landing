@@ -18,7 +18,7 @@ No cambia la capacidad anual ni inventa otro criterio de evaluación. El docente
 
 ## Un documento más fácil de usar
 
-La próxima actualización ordena el paquete descargable en cuatro partes:
+La actualización prevista al publicar esta nota ordena el paquete descargable en cuatro partes:
 
 - **Portada:** qué semana, curso y capacidad estamos trabajando.
 - **Cómo enseñarlo:** la ruta que propone el estilo elegido.
@@ -69,13 +69,13 @@ Eso es especialmente importante en la dimensión actitudinal. Una respuesta escr
 
 ![La evaluación mantiene las dimensiones procedimental, conceptual y actitudinal.](/blog/planes-semanales-v2/slide-06.png)
 
-## Qué existe hoy
+## Estado en agosto de 2026
 
 Aula ya usa la capacidad anual como base. También genera según el estilo elegido, exige revisión antes de oficializar y conserva el historial del borrador.
 
-La próxima actualización suma el documento de cuatro partes, explicaciones más concretas para cada estilo y una relación más directa entre las rúbricas y el libro de calificaciones.
+La actualización prevista al publicar esta nota suma el documento de cuatro partes, explicaciones más concretas para cada estilo y una relación más directa entre las rúbricas y el libro de calificaciones.
 
-![La presentación separa lo que Aula ya hace de lo que llega en la próxima actualización.](/blog/planes-semanales-v2/slide-07.png)
+![La presentación separa lo que Aula ya hace de lo previsto al publicar la nota.](/blog/planes-semanales-v2/slide-07.png)
 
 ## El docente aprueba
 
@@ -84,5 +84,3 @@ La IA puede preparar un buen punto de partida. No conoce al grupo como lo conoce
 Por eso V2 cambia la forma de enseñar, pero deja la aprobación en manos del docente.
 
 ![El principio de V2: personalizar la enseñanza sin perder claridad sobre el aprendizaje y la evaluación.](/blog/planes-semanales-v2/slide-08.png)
-
-*Si tu institución necesita ordenar la planificación sin quitar autoridad al docente, [conversemos](/contacto).*

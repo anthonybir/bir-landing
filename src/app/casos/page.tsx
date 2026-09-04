@@ -1,31 +1,20 @@
-import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
-import AnimatedNumber from '../AnimatedNumber';
-import Reveal from '../Reveal';
+import { PageIntro, ContactClose } from '../PageLayout';
+import ProductFigure from '../ProductFigure';
+import { pageMetadata } from '../page-metadata';
 
-export const metadata: Metadata = {
-  title: 'Casos',
-  description:
-    'Cómo llegaron AENA, IPU Paraguay e IBA, qué cambió y qué sistemas usan hoy.',
-  alternates: {
-    canonical: '/casos',
-  },
-};
+export const metadata = pageMetadata('Casos', 'AENA, IPU Paraguay e IBA: problemas de gestión, cambios concretos y sistemas construidos para cada operación.', '/casos');
 
 const cases = [
   {
+    id: 'aena',
     inst: 'AENA',
     sector: 'Educación · Asociación Educativa Nuevas Alturas',
     antes:
       'En 2020, papel y lápiz, riesgo de cierre por COVID y una morosidad institucional del 70%.',
     ahora:
-      'Planificación anual y semanal de inicial a bachillerato, libreta digital, portal de padres y coordinación académica asistida por IA sobre el estándar MEC. ~300 alumnos. En producción desde 2024.',
-    kpi: {
-      lead: '70% → ',
-      count: { from: 70, to: 2.9, decimals: 1, suffix: '%' },
-      label: 'Morosidad en tres años',
-    },
+      'Planificación anual y semanal de inicial a bachillerato, libreta digital, portal de padres y coordinación académica con apoyo de IA y referencias del MEC. Unos 300 alumnos. En producción desde 2024.',
+    kpi: { num: '70% → 2,9%', label: 'Morosidad en tres años de dirección directa' },
     img: {
       src: '/screenshots/aena-centro-coordinacion.png',
       alt: 'Centro de Coordinación de AENA Admin: ciclo anual de promoción, alerta temprana y coordinación académica',
@@ -34,12 +23,13 @@ const cases = [
     },
   },
   {
-    inst: 'IPU PY',
+    id: 'ipu-paraguay',
+    inst: 'IPU Paraguay',
     sector: 'Tesorería · Iglesia Pentecostal Unida del Paraguay',
     antes:
-      'Tesorería fragmentada: cada congregación con su planilla, sin consolidación ni trazabilidad.',
+      'Tesorería fragmentada: cada congregación con su hoja de cálculo, sin consolidación ni trazabilidad.',
     ahora:
-      'Contabilidad institucional por partida doble, auditable, con reportes por sede y cierre mensual de un día. ~30 iglesias. En producción desde 2024.',
+      'Contabilidad institucional por partida doble, auditable, con informes por sede y cierre mensual de un día. Unas 30 iglesias. En producción desde 2024.',
     kpi: { num: '1 día', label: 'Cierre mensual consolidado' },
     img: {
       src: '/screenshots/ipupy-dashboard.png',
@@ -49,12 +39,13 @@ const cases = [
     },
   },
   {
+    id: 'iba',
     inst: 'IBA',
     sector: 'Editorial · Instituto Bíblico Apostólico',
     antes:
       'Formación pastoral sin estándar común: cada docente con su propio material.',
     ahora:
-      'Marco curricular y editorial bajo un solo estándar. La primera institución desplegada en Aula, el motor de planificación académica con IA de ABN. El mismo marco se enseña hoy en vivo: diplomado «Métodos de estudiar la Biblia con uso responsable de IA».',
+      'Marco curricular y editorial bajo un solo estándar. Aula organiza cursos, fuentes y preparación de materiales. Los docentes revisan el trabajo antes de su aprobación.',
     kpi: { num: '1 estándar', label: 'Marco curricular y editorial único' },
     img: {
       src: '/screenshots/aula-planificacion-docente.png',
@@ -68,125 +59,37 @@ const cases = [
 export default function CasosPage() {
   return (
     <>
-      {/* Header */}
-      <section className="mx-auto max-w-6xl px-4 pb-16 pt-24 md:px-8">
-        <p className="label-caps settle mb-6">Casos</p>
-        <h1 className="display display-hero settle settle-2 max-w-3xl">
-          Tres instituciones, antes y ahora.
-        </h1>
-        <p className="settle settle-3 mt-8 max-w-xl font-sans text-base leading-relaxed text-gray-600">
-          AENA, IPU Paraguay e IBA llegaron con problemas distintos. Acá
-          mostramos qué encontramos, qué cambió y cómo trabajan hoy.
-        </p>
-      </section>
-
-      {/* Cases */}
-      <section className="mx-auto max-w-6xl space-y-24 px-4 pb-24 md:px-8">
-        {cases.map((c) => (
-          <article key={c.inst} aria-label={c.inst}>
-            <div className="border-t border-gray-200 pt-10">
-              <div className="grid gap-10 md:grid-cols-[1.1fr_1fr] md:gap-16">
-                {/* Steps. Each holds a share of the viewport so the sticky
-                    frame on the right has distance to travel. */}
-                <div>
-                  <Reveal>
-                    <h2 className="font-sans text-base font-semibold text-gray-900">{c.inst}</h2>
-                    <p className="label-caps mt-2">{c.sector}</p>
-                  </Reveal>
-
-                  <dl className="mt-10">
-                    <Reveal className="md:min-h-[36vh]">
-                      <dt className="label-caps mb-2">Antes</dt>
-                      <dd className="max-w-md font-sans text-base leading-relaxed text-gray-600">
-                        {c.antes}
-                      </dd>
-                    </Reveal>
-                    <Reveal className="mt-8 md:mt-0 md:min-h-[36vh]">
-                      <dt className="label-caps mb-2">Ahora</dt>
-                      <dd className="max-w-md font-sans text-base leading-relaxed text-gray-900">
-                        {c.ahora}
-                      </dd>
-                    </Reveal>
-                  </dl>
-
-                  <Reveal className="mt-10 md:mt-0">
-                    <p className="display display-num">
-                      {'count' in c.kpi ? (
-                        <>
-                          {c.kpi.lead}
-                          <AnimatedNumber
-                            from={c.kpi.count.from}
-                            to={c.kpi.count.to}
-                            decimals={c.kpi.count.decimals}
-                            suffix={c.kpi.count.suffix}
-                          />
-                        </>
-                      ) : (
-                        c.kpi.num
-                      )}
-                    </p>
-                    <p className="label-caps mt-2">{c.kpi.label}</p>
-                  </Reveal>
-                </div>
-
-                {/* The frame holds while the steps pass. Sticky sits on the
-                    Reveal itself so no animated ancestor gets in the way. */}
-                <Reveal className="self-start md:sticky md:top-24">
-                  <div className="shot">
-                    <div className="shot-chrome" aria-hidden="true">
-                      <span />
-                      <span />
-                      <span />
-                    </div>
-                    <div className="shot-body">
-                      <Image
-                        src={c.img.src}
-                        alt={c.img.alt}
-                        width={c.img.width}
-                        height={c.img.height}
-                        className="h-auto w-full rounded-[calc(var(--radius-lg)-0.25rem)]"
-                        sizes="(min-width: 768px) 45vw, 100vw"
-                      />
-                    </div>
-                  </div>
-                </Reveal>
+      <PageIntro label="Casos" title="Tres organizaciones. Tres formas de ordenar el trabajo.">
+        <p>Dirección escolar, tesorería y formación. Cada caso parte de una operación concreta y conserva sus propias reglas.</p>
+      </PageIntro>
+      <section className="page-container" aria-label="Casos de trabajo">
+        {cases.map((item, index) => (
+          <article className="case-study" id={item.id} key={item.id} aria-labelledby={`${item.id}-title`}>
+            <div className="case-overview">
+              <div>
+                <p className="label-caps case-index">0{index + 1} · {item.sector}</p>
+                <h2 className="case-name" id={`${item.id}-title`}>{item.inst}</h2>
+                <p className="case-result"><strong>{item.kpi.num}</strong><br />{item.kpi.label}</p>
               </div>
+              <dl className="case-story">
+                <div><dt className="label-caps">El punto de partida</dt><dd>{item.antes}</dd></div>
+                <div><dt className="label-caps">Qué cambió</dt><dd>{item.ahora}</dd></div>
+              </dl>
             </div>
+            <ProductFigure {...item.img} priority={index === 0} />
           </article>
         ))}
       </section>
-
-      {/* Plataforma — Aula, ABN-owned platform behind the three cases.
-          The one dark surface on this page, placed mid-scroll. */}
-      <section className="teal-band brand-texture band-rise mb-24" aria-label="Plataforma">
-        <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-20 md:flex-row md:items-end md:justify-between md:px-8 md:py-24">
-          <div className="max-w-lg">
-            <p className="label-caps mb-3">Plataforma</p>
-            <p className="font-sans text-base leading-relaxed text-brand-cream-muted">
-              Los tres casos usan{' '}
-              <Link href="/aula" className="link-quiet">
-                Aula
-              </Link>
-              , la plataforma de ABN. Cada institución tiene su propio despliegue
-              y conserva sus reglas.
-            </p>
+      <section className="teal-band" aria-label="Sistemas propios">
+        <div className="page-container py-16 md:py-20 grid gap-8 md:grid-cols-2">
+          <h2 className="display section-title">El sistema responde a la operación.</h2>
+          <div className="font-sans text-base leading-relaxed text-brand-cream">
+            <p>AENA tiene su sistema de gestión escolar. IPU Paraguay, su sistema de tesorería. Aula organiza el trabajo académico y editorial de formación. Compartimos criterios de diseño y gobierno; cada sistema conserva su alcance.</p>
+            <Link href="/aula" className="link-quiet mt-6 inline-block">Conocer Aula</Link>
           </div>
-          <p className="display shrink-0 text-[2.5rem] leading-none">Aula</p>
         </div>
       </section>
-
-      {/* CTA */}
-      <section className="mx-auto max-w-6xl px-4 pb-32 md:px-8">
-        <Reveal className="flex flex-col items-start gap-6 border-t border-gray-200 pt-12">
-          <p className="max-w-xl font-sans text-base text-gray-600">
-            Si tu institución está en una situación parecida, empezamos con un
-            diagnóstico. No hace falta firmar un contrato para eso.
-          </p>
-          <Link href="/contacto" className="btn-primary">
-            Agendar un diagnóstico
-          </Link>
-        </Reveal>
-      </section>
+      <ContactClose title="¿Reconoces alguno de estos problemas?">Cuéntanos cómo trabaja tu organización y qué información necesitas para decidir. El diagnóstico define por dónde empezar.</ContactClose>
     </>
   );
 }

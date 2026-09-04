@@ -34,7 +34,7 @@ La IA no cambia ese orden ni recibe un permiso especial por ser IA.
 
 ---
 
-Hoy el sistema puede leer informes desde una foto, sugerir categorías contables, comparar movimientos para una conciliación bancaria y explicar anomalías financieras. Cada servicio se activa por separado.
+Al publicar esta nota en junio de 2026, el sistema podía leer informes desde una foto, sugerir categorías contables, comparar movimientos para una conciliación bancaria y explicar anomalías financieras. Cada servicio se activa por separado.
 
 Un panel interno muestra cuántas consultas completó cada servicio, cuántas fallaron y qué versión de instrucciones usó.
 

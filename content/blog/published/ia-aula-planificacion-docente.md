@@ -37,7 +37,7 @@ El docente elige el tipo de material, escribe sus indicaciones y recibe un archi
 
 ![El docente elige el tipo de recurso y recibe un borrador que puede revisar y descargar.](/blog/ia-aula-planificacion-docente/materiales-docente.png)
 
-Con el tiempo, los materiales aprobados forman una biblioteca de la institución. Hoy reúne más de **140 recursos**, organizados por área, grado y semana.
+Con el tiempo, los materiales aprobados forman una biblioteca de la institución. En junio de 2026 reunía más de **140 recursos**, organizados por área, grado y semana.
 
 ![La biblioteca reúne más de 140 materiales organizados por área, grado y semana, sin datos personales de estudiantes.](/blog/ia-aula-planificacion-docente/biblioteca-editorial.png)
 
@@ -49,7 +49,7 @@ Cada material conserva su área, grado, estructura curricular, vocabulario y ori
 
 Cada función de IA usa un *prompt* escrito, revisado, versionado y publicado. No dejamos que las reglas cambien de forma informal.
 
-El catálogo tiene más de **120 prompts publicados**. Cuando ajustamos uno, el sistema crea una versión nueva y registra quién la publicó y cuándo.
+En junio de 2026, el catálogo tenía más de **120 prompts publicados**. Cuando ajustamos uno, el sistema crea una versión nueva y registra quién la publicó y cuándo.
 
 ![Cada función de IA usa una instrucción con versión y estado de publicación.](/blog/ia-aula-planificacion-docente/prompts-catalog.png)
 
@@ -80,5 +80,3 @@ En Aula, la IA no aprueba nada. Prepara el primer borrador y quita trabajo repet
 El currículo del MEC sigue siendo la fuente. La institución ve dónde intervino la IA. El docente revisa el resultado y decide si se publica.
 
 La herramienta ahorra tiempo. La responsabilidad sigue siendo de la persona que aprueba.
-
-*Si tu institución necesita ordenar la planificación sin quitar autoridad al docente, [conversemos](/contacto).*

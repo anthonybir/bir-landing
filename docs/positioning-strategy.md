@@ -1,154 +1,101 @@
 # ABN · Estrategia de posicionamiento
 
-*Documento operativo. Lectura única, regreso frecuente.*
-*Última revisión: 2026-09-03*
+*Fuente de verdad del mensaje público. Última revisión: 2026-09-04.*
 
----
+## Decisión vigente
 
-## Tesis
+ABN construye sistemas de gestión para que la dirección entienda su organización,
+tome decisiones con información y pueda darles seguimiento. El trabajo conecta
+registros, procesos, responsabilidades y criterios de decisión. La IA se incorpora
+a tareas concretas, con contexto propio, permisos y revisión humana.
 
-ABN es una práctica de rehabilitación institucional en Paraguay. El software es la forma durable que toma esa rehabilitación cuando funciona.
+Esta decisión recoge la corrección explícita del fundador del 4 de septiembre.
+Sustituye el límite sectorial del 13 de agosto: educación y organizaciones
+eclesiásticas son ámbitos con casos, no requisitos para pedir un diagnóstico.
+No se añade una vertical «pymes» ni se presenta experiencia comercial sin prueba.
 
-Esa frase define el comprador, el embudo, el precio y la barrera de entrada. El sitio actual presenta a ABN como una agencia con servicios técnicos. La tesis correcta es otra categoría: la institución llega rota o frágil, ABN la opera hasta sanearla, y el sistema que queda es la huella.
+## Mensaje de entrada
 
-## La asimetría que sostiene todo
+**Entiende tu organización. Decide con claridad.**
 
-Cuatro hechos que solo ABN tiene en el mercado paraguayo:
+Convertimos hojas de cálculo y procesos dispersos en un sistema propio.
+Información conectada e IA con tus reglas, para decidir y dar seguimiento.
 
-1. **Recuperación financiera medible.** AENA: morosidad 70% → 2.9% en tres años bajo dirección directa, dentro de regulación MEC. Señal costosa: imposible de fingir, exige tiempo real en la institución.
-2. **El director es el operador.** La persona que firma como ABN es la misma que opera el colegio que se vende como caso. Sin esa coincidencia, los demás puntos pierden peso.
-3. **Marco pedagógico propio.** MEAA 3.0 en producción durante seis años: sin tareas, sin exámenes, ABP, alineado al MEC.
-4. **Familia operativa multidisciplinaria.** Pedagogía (Diana), derecho (Danae), financiero (Stephanie) bajo una sola dirección. No una agencia de freelancers; una unidad.
+«Propio» significa adaptado a la operación, sus datos y sus reglas. No promete
+entrenar un modelo desde cero, personalización ilimitada ni sustituir la dirección.
 
-Cada hecho es difícil de copiar. Juntos, son frontera de mercado.
+## La historia que sostiene la oferta
 
-## Lo que el sitio actual omite
+La experiencia de ABN nace del trabajo de dirección, gestión educativa y tesorería.
+Anthony dirige AENA y ejerce la tesorería de IPU Paraguay, según las fichas públicas
+existentes. El problema se conoce desde la operación: registros dispersos,
+información que cuesta reunir y decisiones sin seguimiento suficiente.
 
-El número que vuelve creíble todo lo demás (70% → 2.9%) está fuera del sitio. Sin ese dato, los tres casos parecen demos institucionales. Con ese dato, son consecuencia de algo más profundo.
+El sistema aporta continuidad: datos relacionados, responsabilidades claras,
+informes con un alcance definido y trabajo que otra persona puede revisar.
+La IA añade capacidad para consultar, preparar o clasificar dentro de ese sistema.
+La responsabilidad institucional sigue en las personas.
 
-Además, el sitio actual habla de capacidades (qué hace el sistema) cuando debería hablar de transformaciones (qué pasó en la institución). El arco *antes → ahora* está implícito y debería ser explícito en cada caso:
+Pedagogía, finanzas, derecho y tecnología permiten entender el proceso completo.
+La rehabilitación institucional sigue siendo parte de la experiencia; no se exige
+que una organización esté «rota» para que necesite un sistema.
 
-- **AENA**: papel y lápiz (2020, riesgo de cierre por COVID) → planificación anual y diaria, libreta digital, portal de padres, *curriculum builder* con IA por encima del estándar MEC. Morosidad institucional 70% → 2.9%.
-- **IPU PY**: tesorería fragmentada → contabilidad institucional auditable, ~30 iglesias, cierre mensual de un día.
-- **IBA**: enseñanza pastoral artesanal → material de estudio bíblico y alcance asistido por IA, red multipaís bajo un solo estándar editorial.
+## Prueba y límites de las afirmaciones
 
-## Arquitectura por página
+- **AENA:** dirección escolar, cobros, planificación, coordinación y relación con
+  familias. El caso publicado atribuye el cambio de morosidad del 70 % al 2,9 % a
+  tres años de dirección directa. No atribuir ese resultado solo al software o a la IA.
+- **IPU Paraguay:** tesorería de una red de unas 30 iglesias, registros contables,
+  revisión e informes. Mantener la escala del caso publicado; no reemplazarla por
+  cifras distintas encontradas en documentación técnica.
+- **IBA / Aula:** formación pastoral y flujos editoriales propios. No confundir
+  Aula (proyecto académico) con el módulo de recursos de AENA que comparte nombre.
+- Las capacidades encontradas en código no prueban activación, uso real ni revisión
+  desplegada. Los pilotos, herramientas internas y borradores no son casos de clientes.
 
-**`/` (home)**. Entrada. Una afirmación que el visitante paraguayo reconoce de inmediato. La morosidad recuperada es la candidata natural; ningún director de institución mediana lee "70% → 2.9%" sin detenerse.
+La revisión del portfolio y sus fuentes están en
+[portfolio-story-evidence.md](portfolio-story-evidence.md). No publicar inventarios
+internos, datos personales, precios privados, detalles de proveedores, cifras
+operativas cambiantes o promesas universales de controles no verificados.
 
-**`/casos`**. Prueba. Tres instituciones, antes y ahora: rehabilitaciones, no productos. KPIs reales (morosidad, sedes, países, tiempo de cierre); no métricas operativas internas tipo "ajustes/mes" que sólo significan algo adentro de ABN.
+## Qué significa IA gobernada para el visitante
 
-**`/nosotros`**. Origen. Estructura actual mantenida: el portfolio en lugar de una foto del fundador funciona y es raro en el mercado. La decisión se muestra; el sitio no la anuncia. Lleva el rescate de 2020, la morosidad recuperada y **las dos verticales nombradas**: un colegio de ~300 alumnos y la tesorería de ~30 iglesias. La asimetría 2 (el director es el operador) se sostiene en las dos porque la ficha de dirección nombra los dos cargos. Sin ese dato, la vertical de tesorería se lee como cliente y no como operación propia.
+1. Trabaja con fuentes y datos pertinentes a la organización.
+2. Tiene una tarea y un alcance definidos, según los permisos de la persona.
+3. Devuelve una propuesta o lectura que se puede revisar y contrastar.
+4. La aprobación de registros y acciones oficiales corresponde a personas autorizadas.
 
-**`/servicios`**. Oferta. **Dos verticales con prueba: educación y organizaciones eclesiásticas.** Los tres modos (diagnóstico, implementación, acompañamiento) se presentan sector-agnósticos; el detalle nombra las dos verticales sin que ninguna sea el modelo de la casa. El MEC aparece como el regulador del caso educativo, no como el regulador a secas.
+Ejemplos concretos: consultar indicadores con fuentes, sugerir categorías contables
+y preparar materiales a partir de documentos institucionales. Explicar el trabajo
+y sus límites; no vender un chat genérico ni prometer que toda función está activa
+en cada instalación. Evitar afirmaciones absolutas sobre confianza, retención o
+trazabilidad de todas las salidas.
 
-**`/aula`**. Producto. Vertical educativa específica. Mantiene su lógica actual.
+## Arquitectura del mensaje
 
-**`/ia-gobernada`**. Método. Cómo ABN usa IA: gobernada, trazable, con revisión humana obligatoria. Sostiene la frontera frente al chatbot mágico. No vende IA; vende gobierno de IA.
+- `/`: propósito de dirección; transición desde hojas de cálculo; IA integrada;
+  pruebas educativas y eclesiásticas; conversación sobre el problema del visitante.
+- `/servicios`: diagnóstico, implementación por etapas y acompañamiento.
+  El filtro es la disposición a revisar procesos e involucrar a la dirección.
+- `/casos`: cambios concretos en organizaciones identificadas, con atribución.
+- `/nosotros`: experiencia operativa del equipo; no convertir herramientas internas
+  en clientes ni añadir una foto de fundador sin una decisión de diseño.
+- `/ia-gobernada`: contexto, tareas, permisos y revisión, con ejemplos concretos.
+- `/contacto`: abierto a otras organizaciones; sin prometer idoneidad antes del diagnóstico.
+- `/aula`: propuesta educativa específica. `/blog`: criterio y evidencia sostenida.
+- `/en`: línea separada de relocación; no mezclar con esta narrativa.
 
-**`/blog`**. Evidencia en el tiempo. Criterio y casos contados en primera persona. Cada post refuerza la tesis de rehabilitación institucional. Nada de contenido genérico de marketing.
+Metadatos, Open Graph y WebMCP deben contar el mismo propósito. WebMCP distingue
+los sectores con casos del alcance de la oferta.
 
-**`/en`**. Línea de negocio separada: servicios de relocación para familias angloparlantes. No participa de la tesis de rehabilitación institucional y se gobierna aparte. No mezclar con la narrativa institucional en español.
+## Plano visual y voz
 
-## Plano visual
+Dirección seleccionada por el fundador: opción 2, mesa de trabajo. Fondo claro,
+tipografía serif vertical, fotografía conceptual en plano y acento verde oscuro.
+La fotografía no representa instalaciones ni datos de un cliente. Las capturas
+reales permanecen en los casos; la portada no las inclina ni las recorta como adorno.
+Las reglas de implementación viven en `README.md` y los tokens en `globals.css`.
 
-Las reglas de diseño no viven acá. Viven en `README.md`, y el sistema de tokens
-en `src/app/globals.css`. Este documento define qué dice el sitio; el README
-define cómo se ve. Una regla vive en un solo lugar.
-
-Lo que sí corresponde registrar acá es la consecuencia para el copy: **cada
-página larga necesita una sección que aguante ser la más fuerte visualmente**,
-porque lleva una sola banda oscura a media altura y esa banda es el momento de
-mayor peso de la página. Hoy la banda cae en:
-
-| Página | Sección | Por qué |
-|---|---|---|
-| `/` | Prueba numérica | La morosidad recuperada es el ancla de toda la tesis. |
-| `/servicios` | No somos para | El límite es lo más fuerte que dice la página. |
-| `/ia-gobernada` | En producción | Números verificables, no promesa de IA. |
-| `/casos` | Plataforma | Aula es propiedad de la agencia, no software suelto. |
-| `/nosotros` | Cómo decidimos | Los principios son lo más fuerte que dice la página. |
-| `/en` | Why ABN | Credibilidad, la única barrera en relocación. |
-
-Las páginas cortas o funcionales (`/aula`, `/blog`, `/contacto`) no llevan
-banda. Si una página nueva no tiene una sección que merezca ese peso, el
-problema es del copy, no del diseño.
-
-Dos reglas más condicionan qué se puede escribir:
-
-- El marco con barra de navegador marca **software real en producción**. No se
-  usa para diagramas ni para láminas. Un caso sin captura de producto no puede
-  fingir una.
-- El dorado de señal se gasta **una vez por vista**. Elegir cuál número lo
-  recibe es decisión de posicionamiento, no de diseño. Hoy: la morosidad
-  recuperada en `/` y los prompts publicados en `/ia-gobernada`.
-
-## Alcance institucional: la decisión de `/servicios`
-
-*Resuelta 2026-08-13.*
-
-**Dos verticales con prueba, no tres con una aspiracional.** El sitio nombra
-educación y organizaciones eclesiásticas. Nada más.
-
-La tensión real nunca fue colegios contra no-colegios. Fue prueba contra
-aspiración. Tres de las cuatro asimetrías son de forma educativa, pero dos
-también se sostienen en IPU Paraguay: el director es el operador (Anthony es
-tesorero de IPU Paraguay) y hay recuperación medible (~30 iglesias, cierre
-mensual de un día). No
-hay una vertical con prueba. Hay dos.
-
-"Instituciones y pymes" no tenía ninguna de las dos: sin caso, sin identidad de
-operador, sin número. Era la única línea del sitio que rompía su propia regla de
-que la operación propia es el testimonio hasta que exista caso 04. Salió.
-
-Abrir a pymes disuelve las cuatro asimetrías a la vez: una pyme compra
-consultoría de proceso, donde ABN compite por precio contra cualquier fábrica de
-software. Es el mismo error que "reabrir la categoría ed-tech", apuntado en la
-otra dirección. Por eso el filtro es explícito y vive en «No somos para».
-
-Nombrar un sector que no se puede probar no amplía el mercado. Hace que las dos
-verticales probadas parezcan un menú en vez de una frontera.
-
-## Lo que el sitio no debe hacer
-
-- Reabrir la categoría *ed-tech latinoamericana*. Baja precio, borra frontera.
-- Prometer personalización ilimitada. La oferta es disciplina, no flexibilidad de boutique.
-- Agregar más servicios visibles. Tres modos es la arquitectura.
-- Exponer testimonios de clientes externos hasta que exista caso 04. La operación propia es el testimonio.
-- Agregar foto del fundador. El portfolio ocupa ese lugar. La decisión es correcta y rara, y no se explica en el sitio.
-
-## Plan de ejecución
-
-**Paso 1: `/nosotros`** *(15 min, riesgo bajo)*
-Insertar rescate 2020 + morosidad recuperada en el párrafo central. Reescribir la entrada AENA del portfolio como arco *antes → ahora*. Sin tocar estructura ni componentes.
-
-**Paso 2: `/casos`** *(30 min, riesgo bajo)*
-Agregar KPI de morosidad al caso AENA. Reemplazar una métrica del hero por dato concreto. Reescribir los tres casos con arco *antes → ahora* en el panel de Alcance/Resultado.
-
-**Paso 3: `/` y `/servicios`** *(decisión estratégica)*
-La home necesita la línea de morosidad como ancla numérica. Servicios necesita rebalanceo para abrir TAM más allá de colegios. Antes de editar: alineación explícita sobre cuánto se abre el alcance institucional y cuánto se mantiene la verticalidad educativa como vidriera principal.
-
-Pasos 1 y 2 son edición quirúrgica. Paso 3 es decisión de posicionamiento.
-
-**Estado a 2026-08-13.** Los tres pasos están ejecutados. El arco *antes → ahora*
-y el KPI de morosidad están en `/nosotros` y `/casos`; la home lleva
-`70% → 2,9%` como ancla numérica; `/servicios` cerró su decisión de alcance.
-
-## Prosa
-
-*Resuelta 2026-09-03.* El sitio no lleva prosa afectada. Queda fuera:
-
-- Una metáfora en lugar de una afirmación ("el trabajo es el retrato", "sistemas que viven sin nosotros").
-- Aperturas aforísticas y refranes repetidos por ritmo ("la decisión no cambia de manos", "no un contrato").
-- Títulos de sección que nombran un clima y no un contenido.
-- Citas destacadas de nosotros mismos.
-
-Queda adentro: una regla enunciada como regla ("La IA propone. La persona decide." en `/ia-gobernada`), el H1 de posicionamiento de la home y el límite «No somos para». Frases cortas y contrastes simples son la voz, no el problema.
-
-## Riesgo y disciplina
-
-El sitio actual está bien construido. La tentación es reescribir todo. La regla operativa es la opuesta: cada cambio justifica su presencia o queda fuera. El objeto debe seguir sosteniéndose en silencio. Lo que se agrega ahora es densidad de prueba, no volumen.
-
-## Próximo paso
-
-Ejecutar pasos 1 y 2 esta misma sesión. Mostrar el resultado. Recién después, conversación de posicionamiento sobre home y servicios.
+Español es-ES, frases concretas. Hablar de información, procesos, decisiones,
+responsables y seguimiento. Evitar eslóganes sobre «transformación», metáforas de
+rehabilitación como única entrada, superlativos de mercado y citas propias.

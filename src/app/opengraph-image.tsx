@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og';
 
-export const alt = 'ABN, Agencia Bir Núñez. No tenés un sistema. Te lo construimos.';
+export const alt = 'ABN, Agencia Bir Núñez. Entiende tu organización. Decide con claridad.';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -33,13 +33,13 @@ export default function OpengraphImage() {
         <div style={{ display: 'flex', flexDirection: 'column', maxWidth: 980 }}>
           <div
             style={{
-              fontSize: 72,
+              fontSize: 68,
               fontWeight: 600,
               letterSpacing: '-0.03em',
               lineHeight: 1.05,
             }}
           >
-            No tenés un sistema.
+            Entiende tu organización.
           </div>
           <div
             style={{
@@ -50,11 +50,11 @@ export default function OpengraphImage() {
               opacity: 0.8,
             }}
           >
-            Te lo construimos.
+            Decide con claridad.
           </div>
         </div>
         <div style={{ fontSize: 28, opacity: 0.75 }}>
-          Educación · Finanzas · Derecho · bir.com.py
+          Sistemas de gestión · IA gobernada · bir.com.py
         </div>
       </div>
     ),

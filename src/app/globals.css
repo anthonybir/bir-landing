@@ -19,7 +19,7 @@
   --atmosphere-bottom: hsl(37 13% 97%);
 
   /* Semantic aliases for the gray scale. */
-  --background: var(--gray-50);
+  --background: #f7f4ef;
   --foreground: var(--gray-900);
   --surface: hsl(0 0% 100%);
 
@@ -159,9 +159,8 @@ html {
 }
 
 body {
-  background: linear-gradient(180deg, var(--atmosphere-top) 0%, var(--atmosphere-bottom) 100%) fixed;
+  background: var(--background);
   color: var(--foreground);
-  overflow-x: hidden;
 }
 
 ::selection {
@@ -204,16 +203,6 @@ body {
 
 .display-hero  { font-size: clamp(2.369rem, 6vw, 4.209rem); }
 .display-num   { font-size: clamp(2.369rem, 5vw, 3.157rem); }
-.display-poster {
-  font-size: clamp(3.8rem, 12vw, 7rem);
-  line-height: 0.92;
-}
-/* Proof: the one number that carries the argument. Dark surfaces only. */
-.display-proof {
-  font-size: clamp(3.5rem, 8vw, 5.5rem);
-  line-height: 0.95;
-}
-
 /* Buttons. One .btn-primary per screen: the accent event. */
 .btn-primary,
 .btn-secondary {
@@ -223,7 +212,7 @@ body {
   gap: 0.5rem;
   height: 3rem;
   padding: 0 1.5rem;
-  border-radius: var(--radius-md);
+  border-radius: 3px;
   font-family: var(--font-sans);
   font-size: 1rem;
   font-weight: 500;
@@ -233,11 +222,11 @@ body {
 }
 
 .btn-primary {
-  background: var(--accent);
-  color: var(--accent-foreground);
+  background: var(--brand-teal);
+  color: var(--brand-cream);
 }
-.btn-primary:hover { background: var(--accent-hover); }
-.btn-primary:active { background: var(--accent-active); }
+.btn-primary:hover { background: #185257; }
+.btn-primary:active { background: #092c2f; }
 .btn-primary:disabled {
   opacity: 0.5;
   cursor: not-allowed;
@@ -261,69 +250,14 @@ body {
 }
 .link-quiet:hover { border-bottom-color: var(--gray-900); }
 
-/* Card at rest → lifted on hover (Hikari). */
-.card {
-  background: var(--surface);
-  border: 1px solid var(--gray-200);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-xs);
-}
-.card-lift {
-  transition: var(--transition-lift);
-}
-.card-lift:hover {
-  transform: translateY(-2px) scale(1.005);
-  box-shadow: var(--shadow-lift);
-}
-
-/* The Settle: entrance for above-the-fold content. */
-@keyframes settle {
-  0%   { opacity: 0; transform: translateY(12px); }
-  90%  { opacity: 1; transform: translateY(-1px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-.settle {
-  animation: settle var(--duration-settle) var(--ease-settle) both;
-  animation-delay: var(--ma-temporal-brief, 100ms);
-}
-.settle-2 { animation-delay: 150ms; }
-.settle-3 { animation-delay: 200ms; }
-.settle-4 { animation-delay: 250ms; }
-
-/* The Reveal: the Settle, below the fold. Reveal.tsx arms an element only
-   when it starts off screen, then plays the same settle on arrival. */
-.reveal-armed {
-  opacity: 0;
-  transform: translateY(12px);
-}
-.reveal-in {
-  animation: settle var(--duration-settle) var(--ease-settle) both;
-  animation-delay: var(--reveal-delay, 0ms);
-}
-
-/* Header: atmosphere at reduced opacity, light removal not darkness. */
+/* Shared sticky navigation. */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 200;
-  background: hsl(39 15% 98% / 0.85);
-  backdrop-filter: blur(12px);
+  background: var(--background);
   border-bottom: 1px solid var(--gray-200);
 }
-
-/* Footer band: the brand-teal anchor surface. */
-.footer-band {
-  background: var(--brand-teal);
-  color: var(--brand-cream);
-}
-.footer-band .label-caps { color: var(--brand-cream-muted); }
-.footer-band a {
-  color: var(--brand-cream);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color var(--duration-fast) var(--ease-out);
-}
-.footer-band a:hover { border-bottom-color: var(--brand-cream); }
 
 /* Form fields. */
 .field-label {
@@ -336,14 +270,14 @@ body {
   letter-spacing: 0.1em;
   color: var(--gray-600);
 }
-.field-label--optional { color: var(--gray-500); font-weight: 400; }
+.field-label--optional { color: var(--gray-600); font-weight: 400; }
 
 .field-input {
   width: 100%;
   height: 2.75rem;
   padding: 0 0.75rem;
   background: var(--surface);
-  border: 1px solid var(--gray-300);
+  border: 1px solid var(--gray-500);
   border-radius: var(--radius-md);
   font-family: var(--font-sans);
   font-size: 1rem;
@@ -423,17 +357,6 @@ textarea.field-input {
   color: var(--gray-600);
 }
 .article hr { border: none; border-top: 1px solid var(--gray-200); margin: 3rem 0; }
-.article .article-figure { margin: 2.5rem 0; }
-
-/* Figure caption: lead image and inline figures. */
-.article-figure figcaption {
-  margin-top: 0.75rem;
-  font-family: var(--font-sans);
-  font-size: 0.8125rem;
-  line-height: 1.5;
-  color: var(--gray-500);
-}
-
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -443,67 +366,6 @@ textarea.field-input {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
-  }
-}
-
-/* ============================================================
-   Brand texture: the ABN micro-grid, tiled at near-threshold
-   opacity. Gives dark surfaces material instead of flat fill.
-   Static background-image, so it costs nothing on scroll.
-   ============================================================ */
-.brand-texture {
-  position: relative;
-  isolation: isolate;
-  /* clip, not hidden: hidden makes the band a scroll container, which would
-     pin the texture's view timeline to the band instead of the page. */
-  overflow: clip;
-}
-.brand-texture > * {
-  position: relative;
-}
-.brand-texture::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Crect x='4' y='4' width='34' height='34' rx='3' fill='%23EFE6D2' opacity='.018'/%3E%3Crect x='42' y='4' width='34' height='34' rx='3' fill='%23EFE6D2' opacity='.032'/%3E%3Crect x='4' y='42' width='34' height='34' rx='3' fill='%23EFE6D2' opacity='.026'/%3E%3Crect x='42' y='42' width='34' height='34' rx='3' fill='%23EFE6D2' opacity='.012'/%3E%3C/svg%3E");
-  background-size: 80px 80px;
-}
-
-/* Texture drift: the grid moves slower than the copy over it, so the band
-   reads as a surface with depth rather than a printed fill. The pseudo is
-   oversized so the drift never exposes an edge. Off without scroll timelines
-   and under reduced motion. */
-@keyframes texture-drift {
-  from { transform: translateY(-6%); }
-  to   { transform: translateY(6%); }
-}
-@supports (animation-timeline: view()) {
-  @media (prefers-reduced-motion: no-preference) {
-    .brand-texture::before {
-      inset: -12% 0;
-      animation: texture-drift linear both;
-      animation-timeline: view();
-    }
-  }
-}
-
-/* Band rise: the teal edge arrives faster than the scroll. The section is
-   clipped from the top while entering, and the clip closes to zero over the
-   first half-viewport of entry. Opt in per band; the band keeps no inner
-   reveal so the rise is its one motion event. */
-@keyframes band-rise {
-  from { clip-path: inset(30% 0 0 0); }
-  to   { clip-path: inset(0 0 0 0); }
-}
-@supports (animation-timeline: view()) {
-  @media (prefers-reduced-motion: no-preference) {
-    .band-rise {
-      animation: band-rise var(--ease-out) both;
-      animation-timeline: view();
-      animation-range: entry 0% entry 50vh;
-    }
   }
 }
 
@@ -523,129 +385,223 @@ textarea.field-input {
 }
 .teal-band .link-quiet:hover { border-bottom-color: var(--brand-cream); }
 
-/* Counting number: reserve the wider of the start and end strings so a
-   proportional-figure face does not jitter while the value ticks. */
-.num-anim {
-  display: inline-grid;
-  white-space: nowrap;
-}
-.num-anim > span,
-.num-anim::before,
-.num-anim::after {
-  grid-area: 1 / 1;
-}
-.num-anim::before { content: attr(data-from); visibility: hidden; }
-.num-anim::after  { content: attr(data-to); visibility: hidden; }
-
 /* Signal gold: one number per view, and only on a dark surface,
    where the gold carries text contrast. Never on cream. */
 .teal-band .num-signal { color: var(--signal); }
 
-/* ============================================================
-   Hero grid motif: the ABN progression pattern, assembled.
-   Six tiles rise from near-invisible to solid: the page says
-   "no system", the motif builds one. Decorative, aria-hidden.
-   ============================================================ */
-@keyframes tile-settle {
-  0%   { opacity: 0; transform: translateY(10px) scale(0.94); }
-  90%  { opacity: 1; transform: translateY(-1px) scale(1); }
-  100% { opacity: 1; transform: translateY(0) scale(1); }
+/* Home: the selected working-table direction. Photography is conceptual;
+   real product captures remain with their case studies. */
+.home-section {
+  width: min(100% - 4rem, 1280px);
+  margin-inline: auto;
 }
-.hero-grid rect {
-  opacity: 0;
-  fill-opacity: var(--tile-o);
-  transform-box: fill-box;
-  transform-origin: center;
-  animation-name: tile-settle;
-  animation-duration: var(--duration-settle);
-  animation-timing-function: var(--ease-settle);
-  animation-fill-mode: both;
-  animation-delay: calc(300ms + var(--tile-i) * 90ms);
+.home-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(2rem, 4vw, 4rem);
+  width: min(100% - 4rem, 1280px);
+  margin: 2rem auto 0;
 }
-
-/* Scroll continues what load began: as the reader moves toward the proof
-   band, each tile fills to solid. The system assembles. Tied to the root
-   scroll position, so it costs nothing on the main thread. Browsers without
-   scroll timelines keep the load state; reduced motion never fills. */
-@keyframes tile-fill {
-  to { fill-opacity: 1; }
+.home-hero-copy { padding-block: 2rem; }
+.home-title {
+  margin-top: 1.75rem;
+  font-size: clamp(3.25rem, 4.6vw, 4.5rem);
+  line-height: 1.03;
+  letter-spacing: -0.025em;
 }
-@supports (animation-timeline: scroll()) {
-  @media (prefers-reduced-motion: no-preference) {
-    .hero-grid rect {
-      animation-name: tile-settle, tile-fill;
-      animation-duration: var(--duration-settle), auto;
-      animation-timing-function: var(--ease-settle), linear;
-      animation-fill-mode: both, both;
-      animation-delay: calc(300ms + var(--tile-i) * 90ms), 0s;
-      animation-timeline: auto, scroll(root);
-      animation-range: normal, calc(var(--tile-i) * 3vh) calc(22vh + var(--tile-i) * 3vh);
-    }
-  }
+.home-title span { display: block; }
+.home-intro, .home-body {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--gray-600);
+  max-width: 34rem;
 }
-
-/* ============================================================
-   Screenshot frame: real software, shown as software.
-   Chrome bar + Hikari lift, resting on the page rather than
-   pasted onto it.
-   ============================================================ */
-.shot {
-  overflow: hidden;
-  background: var(--surface);
-  border: 1px solid var(--gray-200);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lift);
-  transition: var(--transition-lift);
-}
-.shot:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-xl);
-}
-.shot-chrome {
+.home-intro { margin-top: 1.75rem; max-width: 29rem; }
+.home-actions {
   display: flex;
   align-items: center;
-  gap: 0.375rem;
-  height: 1.75rem;
-  padding: 0 0.75rem;
-  background: var(--gray-100);
-  border-bottom: 1px solid var(--gray-200);
+  flex-wrap: wrap;
+  gap: 1.5rem 2rem;
+  margin-top: 2.5rem;
+  font-family: var(--font-sans);
+  font-size: 1rem;
 }
-.shot-chrome span {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: var(--radius-full);
-  background: var(--gray-300);
+.home-hero-image {
+  width: 100%;
+  height: clamp(420px, 35vw, 520px);
+  object-fit: cover;
+  object-position: center;
 }
-.shot-body { padding: 0.5rem; }
+.home-hero-figure figcaption {
+  margin-top: 0.6rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--gray-600);
+}
+.home-method {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  padding-block: 5rem;
+}
+.home-heading {
+  font-size: clamp(2.25rem, 3vw, 2.85rem);
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+}
+.home-method .home-heading, .home-close .home-heading { margin-block: 1rem; }
+.home-text-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+}
+.home-text-link span { margin-left: 0.45rem; }
+.home-proof { padding-block: 4.5rem; }
+.home-proof .home-body { color: var(--brand-cream); }
+.home-proof-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 5rem;
+  margin-bottom: 3.5rem;
+}
+.home-proof-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; }
+.home-metric {
+  margin-block: 1.25rem 0.5rem;
+  font-size: clamp(3.5rem, 5.5vw, 5.25rem);
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+}
+.home-metric-arrow { font-size: 0.6em; vertical-align: 0.1em; }
+.home-metric-unit { font-size: 0.8em; }
+.home-proof-detail {
+  max-width: 29rem;
+  margin-top: 0.75rem;
+  color: var(--brand-cream-muted);
+  font: 1rem/1.75 var(--font-sans);
+}
+.home-close {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding-block: 5rem;
+}
+.home-close .btn-primary { flex-shrink: 0; }
+@media (max-width: 899px) {
+  .home-hero { grid-template-columns: 1fr; gap: 1.5rem; }
+  .home-hero-copy { padding-block: 1rem; }
+  .home-title { font-size: clamp(3rem, 7vw, 4.5rem); max-width: 40rem; }
+  .home-intro { max-width: 36rem; }
+  .home-hero-image { height: auto; aspect-ratio: 3/2; }
+  .home-method, .home-proof-intro, .home-proof-grid { gap: 2.5rem; }
+  .home-close { align-items: flex-start; flex-direction: column; }
+}
+@media (max-width: 599px) {
+  .home-section, .home-hero { width: calc(100% - 2rem); }
+  .home-hero { margin-top: 1.5rem; }
+  .home-title { font-size: 3.15rem; line-height: 1.04; }
+  .home-hero-copy { padding-block: 0; }
+  .home-actions { gap: 1.25rem; margin-top: 1.75rem; }
+  .home-hero-figure { margin-top: 0.75rem; }
+  .home-method, .home-proof-intro, .home-proof-grid { grid-template-columns: 1fr; }
+  .home-method, .home-close { padding-block: 3.5rem; }
+  .home-method { gap: 3rem; }
+  .home-proof { padding-block: 3.5rem; }
+  .home-proof-intro { gap: 1rem; margin-bottom: 2.5rem; }
+  .home-heading { font-size: 2.25rem; }
+  .home-metric { font-size: 3.75rem; }
+}
 
-/* ============================================================
-   Hero stage: real software, angled, bleeding off the right edge.
-   The progression grid sits on the frame's corner so the motif
-   and the product read as one object: the system, arriving.
-   ============================================================ */
-.hero-stage {
-  position: relative;
+/* Shared agency surface: one visual system across every route. */
+.site-header > nav { max-width: 1280px; }
+.site-footer { background: var(--background); color: var(--gray-900); }
+.site-footer .label-caps, .site-footer .text-brand-cream-muted { color: var(--gray-600); }
+.site-footer a { color: var(--gray-900); text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.footer-inner { padding-block: 3rem 2rem; }
+.footer-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 0.8fr); gap: 4rem; }
+.footer-brand { max-width: 24rem; }
+.footer-links { display: grid; grid-template-columns: 1fr 1fr; column-gap: 1.5rem; }
+.footer-links a, .footer-contact a { display: inline-flex; align-items: center; min-height: 2.75rem; }
+.footer-contact li:last-child { margin-top: 0.75rem; }
+.footer-language { grid-column: 1 / -1; margin-top: 0.75rem; }
+.footer-copyright { margin-top: 3rem; color: var(--gray-600); }
+@media (max-width: 1023px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem 3rem; }
+  .footer-brand { grid-column: 1 / -1; max-width: 32rem; }
 }
-.hero-shot {
-  width: 150%;
-  max-width: none;
-  transform-origin: left center;
-  transform: perspective(2400px) rotateY(-14deg) rotateX(4deg) rotateZ(0.5deg);
-  box-shadow:
-    var(--shadow-xl),
-    -24px 32px 64px hsl(20 12% 10% / 0.10);
-  transition: transform 600ms var(--ease-settle), box-shadow 600ms var(--ease-settle);
+@media (max-width: 599px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-links { display: grid; grid-template-columns: 1fr 1fr; column-gap: 1rem; }
+  .footer-language { grid-column: 1 / -1; }
+  .footer-copyright { margin-top: 2rem; }
 }
-.hero-shot:hover {
-  transform: perspective(2400px) rotateY(-10deg) rotateX(2deg) rotateZ(0deg) translateY(-4px);
-  box-shadow:
-    var(--shadow-xl),
-    -32px 48px 80px hsl(20 12% 10% / 0.14);
+.page-container { width: min(100% - 4rem, 1200px); margin-inline: auto; }
+.page-intro { padding-block: 5rem 4rem; }
+.page-intro h1 { max-width: 56rem; margin-top: 1.5rem; }
+.page-intro-copy { max-width: 42rem; margin-top: 1.75rem; font: 1rem/1.75 var(--font-sans); color: var(--gray-600); }
+.page-intro-copy p + p { margin-top: 1rem; }
+.page-section { padding-bottom: 5rem; }
+.section-title { font-size: clamp(2.25rem, 3vw, 2.85rem); line-height: 1.12; }
+.body-copy { max-width: 40rem; font: 1rem/1.75 var(--font-sans); color: var(--gray-600); }
+.contact-close { display: flex; justify-content: space-between; align-items: center; gap: 3rem; padding-block: 5rem; }
+.contact-close .btn-primary { flex-shrink: 0; }
+.product-figure { margin: 0; min-width: 0; }
+.product-figure-link { display: block; background: var(--gray-100); padding: 0.5rem; cursor: zoom-in; }
+.product-figure-image { width: 100%; height: auto; object-fit: contain; }
+.product-figure-portrait .product-figure-image { max-height: 38rem; }
+.product-figure figcaption { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem 1.5rem; margin-top: 0.75rem; font: 0.75rem/1.6 var(--font-sans); color: var(--gray-600); }
+.product-figure figcaption span { max-width: 46rem; }
+.product-figure figcaption a { flex-shrink: 0; display: inline-flex; align-items: center; min-height: 2.75rem; font-size: 0.875rem; border: 0; text-decoration: underline; text-underline-offset: 4px; }
+.case-study { padding-bottom: 5rem; }
+.case-overview { display: grid; grid-template-columns: 0.7fr 1.3fr; gap: 4rem; margin-bottom: 2.5rem; }
+.case-story { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+.case-story dd { margin-top: 0.75rem; font: 1rem/1.75 var(--font-sans); color: var(--gray-600); }
+.case-index { color: var(--brand-teal); }
+.case-name { margin-top: 0.75rem; font: 400 clamp(2.25rem, 4vw, 3.5rem)/1.1 var(--font-display); }
+.case-result { margin-top: 1.5rem; font: 1rem/1.65 var(--font-sans); }
+.editorial-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3rem 5rem; }
+.editorial-item h2 { margin-block: 1rem; }
+.editorial-item p { line-height: 1.75; }
+.method-row { display: grid; grid-template-columns: 0.75fr 1.25fr; gap: 4rem; padding-bottom: 4rem; }
+.method-row:last-child { padding-bottom: 0; }
+.method-row h2 { font: 400 clamp(2rem, 3vw, 2.75rem)/1.1 var(--font-display); margin-block: 1rem; }
+.journal-list { display: grid; gap: 4rem; }
+.journal-entry { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 3rem; align-items: center; color: inherit; }
+.journal-entry-image { width: 100%; aspect-ratio: 16/10; object-fit: contain; background: var(--gray-100); }
+.journal-entry h2 { font: 400 clamp(2rem, 3vw, 2.75rem)/1.15 var(--font-display); margin-block: 1rem; }
+.journal-entry:hover h2 { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; }
+.article-shell { max-width: 800px; margin-inline: auto; padding: 4rem 2rem 5rem; }
+.article-title { font-size: clamp(2.35rem, 4vw, 3.4rem); line-height: 1.12; }
+.article-shell > .product-figure { margin-block: 2.5rem; }
+.article-shell .product-figure-image { max-height: 34rem; object-fit: contain; }
+.article .product-figure { margin-block: 2.5rem; }
+.article p, .article li { overflow-wrap: anywhere; }
+.article table { display: block; overflow-x: auto; max-width: 100%; }
+.article th, .article td { padding: 0.5rem; text-align: left; }
+.article pre { overflow-x: auto; max-width: 100%; padding: 1rem; }
+.article hr { border: 0; height: 0; margin-block: 3rem; }
+.contact-form { padding: 2rem; background: var(--surface); }
+.field-input[aria-invalid="true"] { border-color: var(--error); }
+@media (max-width: 899px) {
+  .case-overview, .method-row { grid-template-columns: 1fr; gap: 2rem; }
+  .contact-close { flex-direction: column; align-items: flex-start; }
+  .journal-entry { gap: 2rem; }
 }
-.hero-grid-overlay {
-  position: absolute;
-  left: -3rem;
-  bottom: -2.5rem;
-  width: 13rem;
-  filter: drop-shadow(0 8px 16px hsl(20 12% 10% / 0.12));
+@media (max-width: 599px) {
+  .page-container { width: calc(100% - 2rem); }
+  .page-intro { padding-block: 3rem; }
+  .page-intro h1 { font-size: 2.75rem; }
+  .page-section, .case-study { padding-bottom: 3.5rem; }
+  .case-story, .editorial-grid, .journal-entry { grid-template-columns: 1fr; gap: 2rem; }
+  .journal-list { gap: 3.5rem; }
+  .contact-close { padding-block: 3.5rem; }
+  .article-shell { padding: 3rem 1rem; }
+  .article-shell .product-figure-image { max-height: 25rem; }
+  .contact-form { padding: 1.5rem; }
+  .btn-primary, .btn-secondary { max-width: 100%; min-height: 3rem; height: auto; padding-block: 0.75rem; white-space: normal; text-align: center; }
 }

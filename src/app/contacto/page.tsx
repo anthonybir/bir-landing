@@ -1,26 +1,20 @@
-import type { Metadata } from 'next';
+import { pageMetadata } from '../page-metadata';
 import ContactForm from './ContactForm';
 import { WHATSAPP_URL } from '../WhatsAppFloat';
 
-export const metadata: Metadata = {
-  title: 'Contacto',
-  description:
-    'Iniciá la conversación de diagnóstico. Respuesta habitual en 48 horas hábiles, por formulario, email o WhatsApp.',
-  alternates: {
-    canonical: '/contacto',
-  },
-};
+export const metadata = pageMetadata('Contacto', 'Hablemos de los procesos, la información y las decisiones de tu organización. Respuesta habitual en 48 horas hábiles.', '/contacto');
 
 export default function ContactoPage() {
   return (
-    <section className="mx-auto max-w-6xl px-4 pb-32 pt-24 md:px-8">
-      <p className="label-caps settle mb-6">Contacto</p>
-      <h1 className="display display-hero settle settle-2 max-w-3xl">
-        Empecemos por el diagnóstico.
+    <section className="page-container page-intro">
+      <p className="label-caps mb-6">Contacto</p>
+      <h1 className="display display-hero max-w-3xl">
+        Hablemos de tu organización.
       </h1>
-      <p className="settle settle-3 mt-8 max-w-xl font-sans text-base leading-relaxed text-gray-600">
-        Contanos qué necesita orden en tu institución. Primero escuchamos.
-        Después te decimos si podemos ayudar y por dónde conviene empezar.
+      <p className="mt-8 max-w-xl font-sans text-base leading-relaxed text-gray-600">
+        Cuéntanos qué información cuesta reunir, qué procesos dependen de hojas de
+        cálculo y qué decisiones necesitan más claridad. Revisamos tu situación
+        y te indicamos si podemos ayudar y por dónde empezar.
       </p>
 
       <div className="mt-16 grid gap-12 md:grid-cols-[1.4fr_1fr] md:gap-16">
@@ -50,7 +44,7 @@ export default function ContactoPage() {
             <p className="label-caps mb-3">Qué esperar</p>
             <ul className="space-y-3 font-sans text-base leading-relaxed text-gray-600">
               <li>Respuesta dentro de 48 horas hábiles.</li>
-              <li>Primera conversación sin costo ni compromiso.</li>
+              <li>Primera conversación sin coste ni compromiso.</li>
               <li>Si no somos la mejor opción, te lo decimos.</li>
             </ul>
           </div>

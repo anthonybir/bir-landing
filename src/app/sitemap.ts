@@ -18,7 +18,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticEntries: MetadataRoute.Sitemap = routes.map(({ path, priority }) => ({
     url: `${BASE}${path}`,
-    lastModified: new Date(),
     changeFrequency: 'monthly',
     priority,
   }));

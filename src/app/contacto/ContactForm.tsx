@@ -1,6 +1,8 @@
 'use client';
 
-import { useRef, useState, type ChangeEvent, type FormEvent } from 'react';
+import { useEffect, useRef, useState, type ChangeEvent, type FormEvent } from 'react';
+
+import { ContactSchema, CONTACT_RETRY_MESSAGE } from '@/lib/contact';
 
 interface FormData {
   nombre: string;
@@ -11,7 +13,7 @@ interface FormData {
   website: string; // honeypot
 }
 
-type FieldName = 'nombre' | 'email' | 'mensaje';
+type FieldName = keyof FormData;
 type FieldErrors = Partial<Record<FieldName, string>>;
 
 const INITIAL: FormData = {
@@ -23,25 +25,14 @@ const INITIAL: FormData = {
   website: '',
 };
 
-const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const MENSAJE_MIN_LENGTH = 10;
-
 function validate(data: FormData): FieldErrors {
+  const parsed = ContactSchema.safeParse(data);
+  if (parsed.success) return {};
   const errors: FieldErrors = {};
-
-  if (!data.nombre.trim()) {
-    errors.nombre = 'Ingresá tu nombre.';
+  for (const issue of parsed.error.issues) {
+    const field = issue.path[0] as FieldName;
+    if (!errors[field]) errors[field] = issue.message;
   }
-
-  const email = data.email.trim();
-  if (!email || !EMAIL_REGEX.test(email)) {
-    errors.email = 'Ingresá un email válido.';
-  }
-
-  if (data.mensaje.trim().length < MENSAJE_MIN_LENGTH) {
-    errors.mensaje = 'Contanos un poco más. El mensaje debe tener al menos 10 caracteres.';
-  }
-
   return errors;
 }
 
@@ -51,6 +42,11 @@ export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+
+  const inFlight = useRef(false);
+  const lastSubmission = useRef<{ payload: string; id: string } | null>(null);
+  const successRef = useRef<HTMLDivElement>(null);
+  useEffect(() => { if (submitted) successRef.current?.focus(); }, [submitted]);
 
   const nombreRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
@@ -71,6 +67,7 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (inFlight.current) return;
     setSubmitError(null);
 
     const errors = validate(formData);
@@ -87,30 +84,36 @@ export default function ContactForm() {
     }
 
     setFieldErrors({});
+    inFlight.current = true;
     setSubmitting(true);
+    const payload = JSON.stringify(ContactSchema.parse(formData));
+    if (lastSubmission.current?.payload !== payload) {
+      lastSubmission.current = { payload, id: crypto.randomUUID() };
+    }
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...JSON.parse(payload), submissionId: lastSubmission.current.id }),
+        signal: AbortSignal.timeout(15000),
       });
-      const data = (await response.json()) as { error?: string };
-      if (!response.ok) {
-        throw new Error(data?.error || 'No se pudo enviar el mensaje.');
+      const data = (await response.json()) as { error?: string; ok?: boolean };
+      if (!response.ok || data.ok !== true) {
+        setSubmitError(typeof data.error === 'string' ? data.error : CONTACT_RETRY_MESSAGE);
+        return;
       }
       setSubmitted(true);
-    } catch (error) {
-      setSubmitError(
-        error instanceof Error ? error.message : 'No se pudo enviar el mensaje.',
-      );
+    } catch {
+      setSubmitError(CONTACT_RETRY_MESSAGE);
     } finally {
+      inFlight.current = false;
       setSubmitting(false);
     }
   };
 
   if (submitted) {
     return (
-      <div className="card p-8 text-center md:p-12" role="status">
+      <div className="contact-form" role="status" ref={successRef} tabIndex={-1}>
         <p className="display text-[1.777rem]">Mensaje recibido.</p>
         <p className="mt-4 font-sans text-base text-gray-600">
           Te respondemos dentro de 48 horas hábiles.
@@ -122,12 +125,14 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="card p-6 md:p-10"
+      className="contact-form"
+      aria-busy={submitting}
       noValidate
       toolname="prepare_contact_message"
-      tooldescription="Prepares ABN's contact form with the visitor's reviewed message. The visitor must click Enviar mensaje to send it."
+      tooldescription="Prepares ABN's contact form with the visitor's reviewed message about their organization, processes, information, and decisions. The visitor must click Enviar mensaje to send it."
     >
-      <div className="grid gap-6 lg:grid-cols-2">
+      <fieldset disabled={submitting}>
+      <div className="grid items-end gap-6 lg:grid-cols-2">
         <div>
           <label htmlFor="nombre" className="field-label">
             Nombre
@@ -155,7 +160,7 @@ export default function ContactForm() {
         </div>
         <div>
           <label htmlFor="email" className="field-label">
-            Email
+            Correo electrónico
           </label>
           <input
             id="email"
@@ -196,12 +201,12 @@ export default function ContactForm() {
         </div>
         <div>
           <label htmlFor="tipoInstitucion" className="field-label field-label--optional">
-            Tipo de institución · opcional
+            Tipo de organización · opcional
           </label>
           <select
             id="tipoInstitucion"
             name="tipoInstitucion"
-            toolparamdescription="The type of institution the visitor represents."
+            toolparamdescription="Type of organization represented by the visitor. Other organizations are welcome. Leave blank if unspecified."
             className="field-input"
             value={formData.tipoInstitucion}
             onChange={handleChange}
@@ -209,21 +214,21 @@ export default function ContactForm() {
             <option value="">Seleccionar…</option>
             <option value="Colegio / centro educativo">Colegio / centro educativo</option>
             <option value="Iglesia / red eclesiástica">Iglesia / red eclesiástica</option>
-            <option value="Otro">Otro</option>
+            <option value="Otra organización">Otra organización</option>
           </select>
         </div>
       </div>
 
       <div className="mt-6">
         <label htmlFor="mensaje" className="field-label">
-          ¿Qué necesita orden en tu institución?
+          ¿Qué necesitas entender o gestionar mejor?
         </label>
         <textarea
           id="mensaje"
           name="mensaje"
           required
           maxLength={3000}
-          toolparamdescription="What the visitor needs to put in order at their institution."
+          toolparamdescription="The information, processes, or decisions the visitor needs help with."
           className="field-input"
           value={formData.mensaje}
           onChange={handleChange}
@@ -254,7 +259,8 @@ export default function ContactForm() {
 
       {submitError && (
         <p className="mt-6 font-sans text-base text-[var(--error,hsl(0_72%_51%))]" role="alert">
-          {submitError} Podés escribirnos directo a anthony@bir.com.py.
+          {submitError} Puedes escribirnos directamente a{' '}
+          <a href="mailto:anthony@bir.com.py" className="underline underline-offset-4">anthony@bir.com.py</a>.
         </p>
       )}
 
@@ -262,10 +268,11 @@ export default function ContactForm() {
         <button type="submit" className="btn-primary" disabled={submitting}>
           {submitting ? 'Enviando…' : 'Enviar mensaje'}
         </button>
-        <p className="font-sans text-xs uppercase tracking-[0.1em] text-gray-500">
+        <p className="font-sans text-xs uppercase tracking-[0.1em] text-gray-600">
           Respuesta en hasta 48 horas hábiles
         </p>
       </div>
+      </fieldset>
     </form>
   );
 }

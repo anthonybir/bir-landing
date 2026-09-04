@@ -8,3 +8,5 @@ export const WhatsAppIcon = ({ className = 'w-5 h-5' }: { className?: string }) 
 );
 
 export { WHATSAPP_URL };
+
+export const WHATSAPP_EN_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi Anthony, I'm interested in ABN's Paraguay residency services.")}`;
