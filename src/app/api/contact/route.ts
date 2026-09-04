@@ -1,33 +1,6 @@
 import { NextResponse } from 'next/server';
 import { headers } from 'next/headers';
-import { z } from 'zod';
-
-const ContactSchema = z.object({
-  nombre: z
-    .string({ error: 'El nombre es obligatorio.' })
-    .trim()
-    .min(1, 'El nombre es obligatorio.')
-    .max(100, 'El nombre es demasiado largo.'),
-  email: z
-    .email({ error: 'Correo electrónico inválido.' })
-    .max(254, 'El correo es demasiado largo.'),
-  organizacion: z
-    .string()
-    .trim()
-    .max(200, 'La organización es demasiado larga.')
-    .optional(),
-  tipoInstitucion: z
-    .string()
-    .trim()
-    .max(200, 'El tipo de institución es demasiado largo.')
-    .optional(),
-  mensaje: z
-    .string({ error: 'El mensaje es obligatorio.' })
-    .trim()
-    .min(10, 'El mensaje debe tener al menos 10 caracteres.')
-    .max(3000, 'El mensaje es demasiado largo.'),
-  website: z.string().trim().optional(),
-});
+import { ContactSchema, CONTACT_RETRY_MESSAGE } from '@/lib/contact';
 
 // Rate limiting configuration
 const RATE_LIMIT_MAX = 5; // Max requests
@@ -77,15 +50,32 @@ export async function POST(request: Request) {
 
   if (isRateLimited(clientIp)) {
     return NextResponse.json(
-      { error: 'Demasiadas solicitudes. Por favor, intentá de nuevo más tarde.' },
-      { status: 429 }
+      { error: 'Demasiadas solicitudes. Por favor, intenta de nuevo más tarde.' },
+      { status: 429, headers: { 'Retry-After': '900' } }
     );
   }
 
   let json: unknown;
 
   try {
-    json = await request.json();
+    const reader = request.body?.getReader();
+    if (!reader) throw new Error('Missing request body');
+    const chunks: Uint8Array[] = [];
+    let length = 0;
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      length += value.byteLength;
+      if (length > 32768) {
+        await reader.cancel();
+        return NextResponse.json({ error: 'El mensaje es demasiado largo.' }, { status: 413 });
+      }
+      chunks.push(value);
+    }
+    const body = new Uint8Array(length);
+    let offset = 0;
+    for (const chunk of chunks) { body.set(chunk, offset); offset += chunk.length; }
+    json = JSON.parse(new TextDecoder().decode(body));
   } catch {
     return NextResponse.json({ error: 'Solicitud inválida.' }, { status: 400 });
   }
@@ -108,7 +98,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: message }, { status: 400 });
   }
 
-  const { nombre, email, organizacion, tipoInstitucion, mensaje } = parsed.data;
+  const { nombre, email, organizacion, tipoInstitucion, mensaje, submissionId } = parsed.data;
 
   const apiKey = process.env.RESEND_API_KEY;
   const to = process.env.CONTACT_TO;
@@ -118,7 +108,7 @@ export async function POST(request: Request) {
   if (!apiKey || !to) {
     console.error('Contact form misconfigured: missing RESEND_API_KEY or CONTACT_TO.');
     return NextResponse.json(
-      { error: 'No se pudo enviar el mensaje. Intentá de nuevo más tarde.' },
+      { error: 'No se pudo enviar el mensaje. Intenta de nuevo más tarde.' },
       { status: 500 }
     );
   }
@@ -141,8 +131,11 @@ export async function POST(request: Request) {
       headers: {
         Authorization: `Bearer ${apiKey}`,
         'Content-Type': 'application/json',
+        'Idempotency-Key': `abn-contact/${submissionId || crypto.randomUUID()}`,
       },
+      signal: AbortSignal.timeout(10000),
       body: JSON.stringify({
+        reply_to: email,
         from,
         to,
         subject,
@@ -152,14 +145,13 @@ export async function POST(request: Request) {
     });
 
     if (!response.ok) {
-      const errorBody = await response.text();
-      console.error('Resend error:', response.status, errorBody);
-      return NextResponse.json({ error: 'No se pudo enviar el mensaje.' }, { status: 502 });
+      console.error('Contact provider failed with status:', response.status);
+      return NextResponse.json({ error: CONTACT_RETRY_MESSAGE }, { status: 502 });
     }
 
     return NextResponse.json({ ok: true });
   } catch {
-    return NextResponse.json({ error: 'No se pudo enviar el mensaje.' }, { status: 502 });
+    return NextResponse.json({ error: CONTACT_RETRY_MESSAGE }, { status: 502 });
   }
 }
 
