@@ -1,3 +1,39 @@
+# Anthony Bir identity refresh · 2026-09-08
+
+This entry supersedes earlier visual-theme acceptance below. Scope: founder-approved
+AB identity, white/navy tokens, home composition, shared navigation/footer, favicon
+and sharing cards. The mark is a vector redraw of the supplied raster reference,
+not an original vector master or a claim of pixel-exact tracing.
+
+- Revision: `e99e903e39534c91e88a0bbffec8dec98dff43ec` plus the local refresh.
+- Presentation fingerprint (sorted file names and bytes, SHA-256): `91eee46f3347bb7ccbb7c13246c7e95b2b09c1a92b3b9641320a02010e6191b8`.
+- Inputs: `src/app/BrandMark.tsx`, `src/app/page.tsx`, `src/app/NavBar.tsx`, `src/app/Footer.tsx`, `src/app/globals.css`, `src/app/icon.svg`, `src/app/opengraph-image.tsx`, `src/app/en/opengraph-image.tsx`.
+- Runtime: local production build at `http://127.0.0.1:3017`.
+- Pass: `pnpm lint`, `pnpm test` (5 existing contact tests), `pnpm build`
+  (22 generated pages), `git diff --check`. No dependency changes.
+- Pass: home visually inspected at 1440, 1024 and 375 px; fonts loaded,
+  readable navy/white identity, mobile stacking and no document overflow.
+- Pass: `/historia`, `/servicios`, `/casos`, `/blog`, `/en`, `/contacto` return
+  HTTP 200 with no document overflow at 1440 and 375 px. Representative route
+  screenshots inspected; case image capture repeated after image decoding.
+- Pass: mobile menu opens, Escape closes it and returns focus to its button.
+  Keyboard skip link has a visible outline and moves focus to `contenido`.
+  Reduced-motion emulation yields `scroll-behavior: auto`.
+- Pass: empty contact submission shows three Spanish validation errors and
+  focuses `nombre`. No email was sent.
+- Pass: generated 1200×630 Open Graph card inspected; shared AB component renders.
+- Evidence: `output/playwright/brand-home-{1440,1024,375}.png`,
+  `brand-opengraph.png`, `brand-contact-validation-375.png` and
+  `brand-{historia,servicios,casos,blog,en,contacto}-{1440,375}.png`.
+- Limits: local production reports a 404 for `/_vercel/insights/script.js`,
+  which is supplied by Vercel. Live analytics, email delivery, full accessibility
+  certification and production revision parity: Not Proven. Build/lint emit the
+  environment's NO_COLOR/FORCE_COLOR warning.
+- No commit, push or deployment performed. Pre-existing instruction-file edits,
+  architecture notes and unrelated screenshots preserved.
+
+---
+
 # Personal history launch · 2026-09-08
 
 The personal homepage now leads to `/historia`, which presents Anthony Bir's
