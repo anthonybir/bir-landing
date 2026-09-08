@@ -114,7 +114,7 @@ export default function ContactForm() {
   if (submitted) {
     return (
       <div className="contact-form" role="status" ref={successRef} tabIndex={-1}>
-        <p className="display text-[1.777rem]">Mensaje recibido.</p>
+        <p className="display text-[1.777rem]">Gracias por escribir.</p>
         <p className="mt-4 font-sans text-base text-gray-600">
           Te respondemos dentro de 48 horas hábiles.
         </p>
@@ -221,7 +221,7 @@ export default function ContactForm() {
 
       <div className="mt-6">
         <label htmlFor="mensaje" className="field-label">
-          ¿Qué necesitas entender o gestionar mejor?
+          ¿Qué necesitas resolver?
         </label>
         <textarea
           id="mensaje"

@@ -1,6 +1,6 @@
 Cada ofrenda y cada diezmo viene del esfuerzo de una familia. El tesorero responde ante la congregación y ante Dios. Una planilla ordenada ayuda, pero no reemplaza esa responsabilidad.
 
-Cuando incorporamos inteligencia artificial al sistema de tesorería de IPU Paraguay, partimos de ahí. La pregunta fue cómo usarla sin perder control, no cuánto trabajo podía hacer.
+Cuando incorporamos inteligencia artificial al sistema de tesorería de IPU Paraguay, partimos de ahí. Queríamos que ayudara con el trabajo sin perder el control de las decisiones.
 
 Definimos cuatro reglas y las pusimos dentro del sistema.
 
@@ -24,7 +24,7 @@ Las instrucciones que usa la IA, los *prompts*, tienen versión y fecha.
 
 Cada sugerencia guarda la versión que se usó y el nivel de confianza de la respuesta. Si dentro de tres meses necesitamos entender por qué el sistema propuso algo, podemos volver al registro.
 
-En una administración seria no alcanza con que el resultado parezca correcto hoy. Hay que poder explicarlo después.
+Necesitamos poder explicar una decisión después, además de revisar el resultado en el momento.
 
 ## Cada persona ve lo que le corresponde
 

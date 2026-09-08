@@ -97,11 +97,11 @@ export default async function PostPage({ params }: Params) {
       {/* CTA */}
       <div className="mt-16 flex flex-col items-start gap-6">
         <p className="max-w-xl font-sans text-base text-gray-600">
-          Si el trabajo todavía depende de hojas de cálculo y de la memoria de una
-          persona, empecemos por entender el problema.
+          Si te encuentras con un problema parecido en tu organización,
+          cuéntame cómo lo estás resolviendo.
         </p>
         <div className="flex flex-wrap items-center gap-6">
-          <Link href="/contacto" className="btn-primary">Hablemos de tu sistema</Link>
+          <Link href="/contacto" className="btn-primary">Escríbeme</Link>
           <Link href="/blog" className="link-quiet">Volver a las notas</Link>
         </div>
       </div>

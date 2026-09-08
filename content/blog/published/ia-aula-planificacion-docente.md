@@ -18,7 +18,7 @@ La IA puede acelerar el primer paso. El criterio profesional sigue en manos del 
 
 ## Del plan anual a la semana
 
-Aula no funciona como un chat abierto donde cada persona improvisa una instrucción. La planificación sigue una ruta común:
+En Aula, la planificación sigue una ruta común:
 
 1. El plan anual define la fuente.
 2. El marco del MEC aporta competencias, indicadores y la escala de calificación del 1 al 5.
@@ -45,7 +45,7 @@ Cada material conserva su área, grado, estructura curricular, vocabulario y ori
 
 ![Cada material conserva su estructura, contenidos, vocabulario y registro de origen.](/blog/ia-aula-planificacion-docente/material-detalle.png)
 
-## Las instrucciones también se gobiernan
+## Las instrucciones también se revisan
 
 Cada función de IA usa un *prompt* escrito, revisado, versionado y publicado. No dejamos que las reglas cambien de forma informal.
 

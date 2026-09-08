@@ -1,6 +1,4 @@
-Casi todo rediseño agrega botones, paneles y opciones.
-
-En la planificación de **Aula** hicimos lo contrario. Quitamos lo que estorbaba.
+Al revisar la planificación de **Aula**, encontramos botones y opciones que estorbaban. Empezamos por quitarlos.
 
 La planificación está en el centro del trabajo docente de **Nuevas Alturas**, la escuela de **AENA**. Si esa pantalla es difícil de usar, planificar cuesta más. La rediseñamos para que el docente pueda ubicarse y empezar sin descifrarla.
 
@@ -30,7 +28,7 @@ Cuando se acerca un cierre, el aviso aparece en el lugar donde hace falta. Dice 
 
 ## El plan anual es la fuente
 
-Cada semana parte de un plan anual. Aula no inventa una fuente nueva para que generar un borrador parezca más fácil.
+Cada semana parte de un plan anual. Esa es la fuente que usa Aula para preparar el borrador.
 
 El plan anual conserva su versión, su estado y su historial. La institución ve qué cursos están al día y cuáles necesitan ajuste. También puede preparar una nueva distribución sin tocar el original.
 
@@ -60,9 +58,7 @@ El docente puede volver al trabajo por curso, en una lista o en una tabla. La in
 
 ## Docentes y dirección ven el mismo estado
 
-No construimos un sistema para docentes y otro distinto para dirección.
-
-La dirección entra a la misma estructura. Además, ve una bitácora del movimiento reciente y los cursos que todavía necesitan un plan anual.
+Docentes y dirección trabajan con la misma estructura. La dirección también ve una bitácora del movimiento reciente y los cursos que todavía necesitan un plan anual.
 
 Nadie tiene que comparar dos paneles para saber qué está pasando.
 
@@ -80,6 +76,6 @@ No escondimos lo esencial detrás de un menú. Reordenamos la misma información
 
 El rediseño funciona si el docente cierra la computadora y sabe dónde quedó y cuál es el próximo paso.
 
-Eso no depende de una pantalla bonita. Depende de una herramienta que recuerda el contexto y no necesita explicación cada vez.
+Para eso, la herramienta debe conservar el contexto y dejar claro cómo continuar.
 
-Para eso quitamos lo que estorbaba y dejamos clara la próxima decisión.
+Quitamos lo que estorbaba y dejamos clara la próxima decisión.

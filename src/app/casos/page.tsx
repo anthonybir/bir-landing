@@ -27,7 +27,7 @@ const cases = [
     inst: 'IPU Paraguay',
     sector: 'Tesorería · Iglesia Pentecostal Unida del Paraguay',
     antes:
-      'Tesorería fragmentada: cada congregación con su hoja de cálculo, sin consolidación ni trazabilidad.',
+      'Cada congregación llevaba su propia hoja de cálculo. Faltaba una forma de reunir los registros y seguir los movimientos.',
     ahora:
       'Contabilidad institucional por partida doble, auditable, con informes por sede y cierre mensual de un día. Unas 30 iglesias. En producción desde 2024.',
     kpi: { num: '1 día', label: 'Cierre mensual consolidado' },
@@ -59,8 +59,8 @@ const cases = [
 export default function CasosPage() {
   return (
     <>
-      <PageIntro label="Casos" title="Tres organizaciones. Tres formas de ordenar el trabajo.">
-        <p>Dirección escolar, tesorería y formación. Cada caso parte de una operación concreta y conserva sus propias reglas.</p>
+      <PageIntro label="Casos" title="El trabajo en AENA, IPU Paraguay e IBA.">
+        <p>Estos casos muestran el punto de partida, los cambios y el sistema que usa cada organización. Los resultados forman parte del trabajo de dirección, tesorería y formación.</p>
       </PageIntro>
       <section className="page-container" aria-label="Casos de trabajo">
         {cases.map((item, index) => (
@@ -82,14 +82,14 @@ export default function CasosPage() {
       </section>
       <section className="teal-band" aria-label="Sistemas propios">
         <div className="page-container py-16 md:py-20 grid gap-8 md:grid-cols-2">
-          <h2 className="display section-title">El sistema responde a la operación.</h2>
+          <h2 className="display section-title">Cada organización necesita su propio sistema.</h2>
           <div className="font-sans text-base leading-relaxed text-brand-cream">
-            <p>AENA tiene su sistema de gestión escolar. IPU Paraguay, su sistema de tesorería. Aula organiza el trabajo académico y editorial de formación. Compartimos criterios de diseño y gobierno; cada sistema conserva su alcance.</p>
+            <p>AENA tiene su sistema de gestión escolar. IPU Paraguay, su sistema de tesorería. Aula organiza el trabajo académico y editorial de formación. Los sistemas comparten criterios de diseño y revisión, pero cada uno responde a un trabajo distinto.</p>
             <Link href="/aula" className="link-quiet mt-6 inline-block">Conocer Aula</Link>
           </div>
         </div>
       </section>
-      <ContactClose title="¿Reconoces alguno de estos problemas?">Cuéntanos cómo trabaja tu organización y qué información necesitas para decidir. El diagnóstico define por dónde empezar.</ContactClose>
+      <ContactClose title="¿Reconoces alguno de estos problemas?">Cuéntame qué ocurre en tu organización y qué necesitas mejorar. Empecemos por ahí.</ContactClose>
     </>
   );
 }

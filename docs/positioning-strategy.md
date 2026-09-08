@@ -22,8 +22,9 @@ persona y distinguen ABN como afiliación.
 
 **Hola, soy Anthony Bir.**
 
-Dirijo un colegio y la tesorería de una red de iglesias en Paraguay.
-Construyo los sistemas que usan, con IA y revisión humana.
+Dirijo un colegio y llevo la tesorería de una red de iglesias en Paraguay.
+También construyo los sistemas que usamos en el trabajo diario, con apoyo de IA
+y revisión humana.
 
 ## Contexto de las páginas de ABN
 
@@ -114,3 +115,12 @@ Las reglas de implementación viven en `README.md` y los tokens en `globals.css`
 Español es-ES, frases concretas. Hablar de información, procesos, decisiones,
 responsables y seguimiento. Evitar eslóganes sobre «transformación», metáforas de
 rehabilitación como única entrada, superlativos de mercado y citas propias.
+
+## Voz personal
+
+Aplicar la voz de Anthony: autoridad práctica, cercanía y frases directas.
+La portada, el blog y las invitaciones a conversar hablan en primera persona.
+Las páginas del equipo y los servicios identifican a ABN cuando usan «nosotros».
+Usar «Cuéntame» y «Escríbeme» para el contacto, sin añadir promesas ni plazos.
+Mantener el inglés de la página de relocación y las fechas de las notas publicadas.
+Simplificar palabras abstractas sin cambiar roles, cifras, condiciones ni alcance.

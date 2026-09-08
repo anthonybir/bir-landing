@@ -24,10 +24,10 @@ export default function HomePage() {
         <div className="profile-hero-copy">
         <h1 id="home-title" className="display display-hero">Hola, soy Anthony Bir.</h1>
         <p className="profile-intro">
-          Dirijo un colegio y la tesorería de una red de iglesias en Paraguay.
-          Construyo los sistemas que usan, con IA y revisión humana.
+          Dirijo un colegio y llevo la tesorería de una red de iglesias en Paraguay.
+          También construyo los sistemas que usamos en el trabajo diario, con apoyo de IA y revisión humana.
         </p>
-        <p className="body-copy">También soy fundador de <Link href="/servicios" className="link-quiet">ABN · Agencia Bir Núñez</Link>.</p>
+        <p className="body-copy">Soy fundador de <Link href="/servicios" className="link-quiet">ABN · Agencia Bir Núñez</Link>.</p>
         <p className="body-copy"><Link href="/casos" className="link-quiet">Ver mi trabajo</Link></p>
         </div>
         <figure className="profile-hero-figure">

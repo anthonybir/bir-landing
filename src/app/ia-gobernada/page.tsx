@@ -19,7 +19,7 @@ const principles = [
   },
   {
     title: 'La aprobación tiene un responsable.',
-    text: 'La IA puede preparar una lectura, una categoría o un borrador. Las personas autorizadas revisan las propuestas y aprueban los registros y las acciones oficiales.',
+    text: 'La IA puede resumir información, sugerir una categoría o preparar un borrador. Las personas autorizadas revisan las propuestas y aprueban los registros y las acciones oficiales.',
   },
 ] as const;
 
@@ -28,7 +28,7 @@ const examples = [
     name: 'Consultar indicadores para decidir',
     tag: 'AENA · Gestión',
     task: 'Relacionar una pregunta con los indicadores y registros que la persona tiene permiso para consultar.',
-    control: 'La lectura se limita al alcance y al periodo de los datos. El sistema contrasta la explicación con los resultados y puede rechazar consultas sin fuentes disponibles.',
+    control: 'La respuesta se limita a los registros y al periodo consultados. El sistema contrasta la explicación con los resultados y puede rechazar consultas sin fuentes disponibles.',
   },
   {
     name: 'Clasificar movimientos contables',
@@ -47,9 +47,9 @@ const examples = [
 export default function IaGobernadaPage() {
   return (
     <>
-      <PageIntro label="IA gobernada" title="IA que trabaja con tu contexto y tus reglas.">
-        <p>Incorporamos IA en tareas concretas del sistema: consultar información, preparar borradores o sugerir clasificaciones. Cada función tiene fuentes, permisos y un proceso de revisión definidos.</p>
-        <Link href="#ejemplos" className="link-quiet mt-6 inline-block">Ver ejemplos de aplicación</Link>
+      <PageIntro label="IA gobernada" title="Cómo uso la IA en los sistemas.">
+        <p>Uso la IA para tareas concretas: consultar información, preparar borradores o sugerir categorías. Para cada función definimos qué fuentes puede usar, qué permisos necesita y quién revisa el resultado.</p>
+        <Link href="#ejemplos" className="link-quiet mt-6 inline-block">Ver ejemplos</Link>
       </PageIntro>
       <section className="page-container page-section" aria-label="Cómo se gobierna">
         <ol className="space-y-8">
@@ -75,8 +75,8 @@ export default function IaGobernadaPage() {
         </div>
       </section>
       <section id="ejemplos" className="page-container pt-16 md:pt-20" aria-labelledby="examples-title">
-        <p className="label-caps mb-6">Ejemplos de aplicación</p>
-        <h2 id="examples-title" className="display section-title">Distintas tareas. Reglas propias.</h2>
+        <p className="label-caps mb-6">Ejemplos de uso</p>
+        <h2 id="examples-title" className="display section-title">Qué ayuda a resolver.</h2>
         <div className="mt-12 grid gap-12 lg:grid-cols-3">
           {examples.map((example) => (
             <article key={example.name}>
@@ -93,7 +93,7 @@ export default function IaGobernadaPage() {
           evaluar y revisar.
         </p>
       </section>
-      <ContactClose title="Definamos una tarea útil.">Revisamos qué información existe, quién la puede usar y cómo evaluar la ayuda de la IA antes de incorporarla al trabajo.</ContactClose>
+      <ContactClose title="¿En qué tarea necesitas ayuda?">Cuéntame qué tarea tienes en mente. Revisaremos qué información necesita y cómo comprobar si la IA aporta algo útil.</ContactClose>
     </>
   );
 }

@@ -11,14 +11,14 @@ export function PageIntro({ label, title, children }: { label: string; title: st
   );
 }
 
-export function ContactClose({ title = 'Hablemos de tu sistema.', children }: { title?: string; children: ReactNode }) {
+export function ContactClose({ title = 'Cuéntame qué necesitas resolver.', children }: { title?: string; children: ReactNode }) {
   return (
     <section className="page-container contact-close">
       <div>
         <h2 className="display section-title">{title}</h2>
         <p className="body-copy mt-5">{children}</p>
       </div>
-      <Link href="/contacto" className="btn-primary">Hablemos de tu sistema</Link>
+      <Link href="/contacto" className="btn-primary">Escríbeme</Link>
     </section>
   );
 }

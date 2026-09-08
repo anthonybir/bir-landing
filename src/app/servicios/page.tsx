@@ -7,7 +7,7 @@ export const metadata = pageMetadata('Servicios', 'Diagnóstico, implementación
 const modes = [
   {
     num: '01',
-    title: 'Diagnóstico de la operación',
+    title: 'Entender el problema',
     when: 'Cuando el problema todavía no está bien definido',
     plazo: '2 a 4 semanas',
     desc: 'Revisamos cómo trabaja la organización, dónde se frenan las decisiones y qué riesgos necesitan atención. El resultado es una lista de prioridades para empezar.',
@@ -26,19 +26,19 @@ const modes = [
     bullets: [
       'Un problema y un alcance definidos',
       'Sistema, reglas y capacitación para el mismo equipo',
-      'Trabajo por etapas, con un responsable visible',
+      'Trabajo por etapas, con un responsable definido',
     ],
   },
   {
     num: '03',
-    title: 'Acompañamiento integral',
+    title: 'Acompañamiento a la dirección',
     when: 'Cuando varias áreas necesitan avanzar juntas',
     plazo: 'Continuo',
     desc: 'Acompañamos a la dirección para revisar resultados, ajustar procesos y sostener el uso del sistema. Sumamos criterio financiero, legal o pedagógico cuando la operación lo requiere.',
     bullets: [
-      'Una dirección para todas las áreas',
+      'Coordinación entre las áreas',
       'Ajustes según lo que ocurre en la operación',
-      'Un equipo responsable del resultado',
+      'Responsabilidades claras dentro del equipo',
     ],
   },
 ] as const;
@@ -57,8 +57,8 @@ const sectors = [
 export default function ServiciosPage() {
   return (
     <>
-      <PageIntro label="Servicios" title="Un sistema para dirigir con más claridad.">
-        <p>Partimos de tus procesos y de la información que necesitas para decidir. Definimos las prioridades, construimos por etapas y acompañamos al equipo. Incorporamos IA cuando una tarea concreta la justifica.</p>
+      <PageIntro label="ABN · Servicios" title="Empecemos por lo que necesitas resolver.">
+        <p>En ABN revisamos cómo trabaja tu organización y qué necesita mejorar. Acordamos una prioridad, construimos por etapas y acompañamos al equipo para que pueda usar el sistema. Incorporamos IA cuando ayuda a resolver una tarea concreta.</p>
       </PageIntro>
       <section className="page-container page-section" aria-label="Tres modos de trabajo">
         {modes.map(mode => (
@@ -86,12 +86,12 @@ export default function ServiciosPage() {
           </ul>
         </div>
       </section>
-      <section className="page-container pt-16 md:pt-20" aria-label="Ámbitos con casos">
-        <p className="label-caps mb-8">Ámbitos con casos</p>
+      <section className="page-container pt-16 md:pt-20" aria-label="Dónde hemos trabajado">
+        <p className="label-caps mb-8">Dónde hemos trabajado</p>
         <div className="editorial-grid">{sectors.map(sector => <article key={sector.title}><h2 className="font-sans text-base font-semibold">{sector.title}</h2><p className="body-copy mt-3">{sector.desc}</p></article>)}</div>
         <Link href="/casos" className="link-quiet mt-8 inline-block font-sans text-base">Ver el trabajo realizado</Link>
       </section>
-      <ContactClose>Empezamos por un problema concreto. La primera conversación permite valorar si podemos ayudar y qué necesitamos conocer.</ContactClose>
+      <ContactClose>Cuéntame qué está costando más en el trabajo diario. Con esa primera conversación podemos ver si ABN puede ayudar y por dónde empezar.</ContactClose>
     </>
   );
 }
