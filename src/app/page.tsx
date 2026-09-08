@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
 import { SITE_DESCRIPTION, SITE_TITLE } from './site-information';
+import { WHATSAPP_URL } from './WhatsAppFloat';
 
 export const metadata: Metadata = {
   title: { absolute: SITE_TITLE },
@@ -9,99 +10,60 @@ export const metadata: Metadata = {
   alternates: { canonical: '/' },
 };
 
+const career = [
+  { date: '2005 a 2006', name: 'HJ Heinz', text: 'Coordinador de ventas de exportación' },
+  { date: '2007 a 2011', name: 'Thermo Fisher Scientific', text: 'Líder de proyectos internacionales' },
+  { date: '2012 a 2019', name: 'Empresa propia de logística', text: 'Propietario y gerente general' },
+  { date: '2020 →', name: 'AENA · Nuevas Alturas', text: 'Presidente del Consejo Administrativo' },
+] as const;
+
 export default function HomePage() {
   return (
     <>
-      <section className="home-hero" aria-labelledby="home-title">
-        <div className="home-hero-copy ">
-          <p className="label-caps text-brand-teal">Sistemas de gestión · IA gobernada</p>
-          <h1 id="home-title" className="display home-title">
-            <span>Entiende tu organización.</span>
-            <span>Decide con claridad.</span>
-          </h1>
-          <p className="home-intro">
-            Convertimos hojas de cálculo y procesos dispersos en un sistema propio.
-            Información conectada e IA con tus reglas, para decidir y dar seguimiento.
-          </p>
-          <div className="home-actions">
-            <Link href="/contacto" className="btn-primary">Hablemos de tu sistema</Link>
-            <Link href="/casos" className="link-quiet">Ver los casos</Link>
-          </div>
+      <section className="page-container profile-hero" aria-labelledby="home-title">
+        <div className="profile-hero-copy">
+        <h1 id="home-title" className="display display-hero">Hola, soy Anthony Bir.</h1>
+        <p className="profile-intro">
+          Dirijo un colegio y la tesorería de una red de iglesias en Paraguay.
+          Construyo los sistemas que usan, con IA y revisión humana.
+        </p>
+        <p className="body-copy">También soy fundador de <Link href="/servicios" className="link-quiet">ABN · Agencia Bir Núñez</Link>.</p>
+        <p className="body-copy"><Link href="/casos" className="link-quiet">Ver mi trabajo</Link></p>
         </div>
-        <figure className="home-hero-figure ">
+        <figure className="profile-hero-figure">
           <Image
             src="/images/leadership-working-table.webp"
             alt="Cuadernos, documentos y un ordenador sobre una mesa de trabajo"
             width={1536}
             height={1024}
             priority
-            sizes="(min-width: 1440px) 660px, (min-width: 900px) 48vw, 100vw"
-            className="home-hero-image"
+            sizes="(min-width: 1264px) 576px, (min-width: 900px) 46vw, 100vw"
+            className="profile-hero-image"
           />
           <figcaption>Mesa de trabajo · Imagen conceptual</figcaption>
         </figure>
       </section>
 
-      <section className="home-section home-method" aria-label="Qué construimos">
-        <article>
-          <p className="label-caps text-brand-teal">01 · La gestión</p>
-          <h2 className="display home-heading">De Excel a una gestión conectada.</h2>
-          <p className="home-body">
-            Reunimos registros, procesos y responsabilidades en un sistema diseñado
-            para tu operación. La dirección puede ver qué ocurre, qué necesita
-            atención y quién se ocupa de cada decisión.
-          </p>
-          <Link href="/servicios" className="link-quiet home-text-link">Cómo trabajamos <span aria-hidden="true">↗</span></Link>
-        </article>
-        <article>
-          <p className="label-caps text-brand-teal">02 · La inteligencia artificial</p>
-          <h2 className="display home-heading">IA dentro del trabajo.</h2>
-          <p className="home-body">
-            Consultar indicadores, clasificar un movimiento o preparar un borrador.
-            Cada tarea usa el contexto y los permisos que le corresponden.
-            Las personas autorizadas revisan y aprueban las acciones oficiales.
-          </p>
-          <Link href="/ia-gobernada" className="link-quiet home-text-link">Qué significa IA gobernada <span aria-hidden="true">↗</span></Link>
-        </article>
-      </section>
-
-      <section className="teal-band home-proof" aria-labelledby="proof-title">
-        <div className="home-section">
-          <div className="home-proof-intro">
-            <h2 id="proof-title" className="display home-heading">Experiencia desde la dirección.</h2>
-            <p className="home-body">
-              Construimos a partir de problemas que también gestionamos.
-              Estos son dos ámbitos donde ya hemos aplicado ese trabajo.
-            </p>
-          </div>
-          <div className="home-proof-grid">
-            <article>
-              <p className="label-caps">Educación · AENA</p>
-              <p className="display home-metric">70% <span className="home-metric-arrow">→</span> <span className="num-signal">2,9%</span></p>
-              <p className="home-body">Morosidad en AENA. Tres años de dirección directa.</p>
-              <p className="home-proof-detail">Gestión escolar, cobros, planificación y coordinación en un mismo sistema.</p>
-            </article>
-            <article>
-              <p className="label-caps">Organizaciones eclesiásticas · IPU Paraguay</p>
-              <p className="display home-metric">~30 <span className="home-metric-unit">iglesias</span></p>
-              <p className="home-body">Tesorería de IPU Paraguay.</p>
-              <p className="home-proof-detail">Registros contables, revisión e informes para gestionar una red de iglesias.</p>
-            </article>
-          </div>
-          <Link href="/casos" className="link-quiet home-text-link">Conocer los casos <span aria-hidden="true">↗</span></Link>
+      <section id="trayectoria" className="page-container profile-section" aria-labelledby="trayectoria-title">
+        <p className="label-caps text-brand-teal">Trayectoria</p>
+        <h2 id="trayectoria-title" className="display section-title">Mi trayectoria.</h2>
+        <div className="profile-list">
+          {career.map((item) => (
+            <div key={`${item.date}-${item.name}`} className="profile-row profile-row-timeline">
+              <p className="label-caps">{item.date}</p>
+              <p className="display profile-item">{item.name}</p>
+              <p className="body-copy">{item.text}</p>
+            </div>
+          ))}
         </div>
       </section>
-
-      <section className="home-section home-close" aria-labelledby="contact-title">
-        <div>
-          <p className="label-caps text-brand-teal">El primer paso</p>
-          <h2 id="contact-title" className="display home-heading">¿Qué necesitas entender mejor?</h2>
-          <p className="home-body">
-            Cuéntanos qué información cuesta reunir y qué decisiones se frenan.
-            Empezamos por entender tu operación y definir una primera prioridad.
-          </p>
+      <section id="contacto" className="page-container profile-section" aria-labelledby="contacto-title">
+        <p className="label-caps text-brand-teal">Contacto</p>
+        <h2 id="contacto-title" className="display section-title">Hablemos.</h2>
+        <div className="profile-actions">
+          <a href="mailto:anthony@bir.com.py" className="btn-primary">Escríbeme</a>
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-secondary">WhatsApp</a>
         </div>
-        <Link href="/contacto" className="btn-primary">Hablemos de tu sistema</Link>
       </section>
     </>
   );

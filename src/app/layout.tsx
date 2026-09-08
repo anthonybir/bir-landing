@@ -33,7 +33,7 @@ const satoshi = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL('https://bir.com.py'),
   title: {
-    template: '%s | ABN · Agencia Bir Núñez',
+    template: '%s | Anthony Bir',
     default: SITE_TITLE,
   },
   description: SITE_DESCRIPTION,
@@ -42,29 +42,23 @@ export const metadata: Metadata = {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     url: "https://bir.com.py",
-    siteName: "Agencia Bir Núñez",
+    siteName: "Anthony Bir",
     locale: "es_ES",
     type: "website",
     images: "/opengraph-image",
   },
 };
 
-const organizationJsonLd = {
+const personJsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'ABN · Agencia Bir Núñez',
+  '@type': 'Person',
+  name: 'Anthony Bir',
   url: 'https://bir.com.py',
-  logo: 'https://bir.com.py/icon.svg',
+  email: 'anthony@bir.com.py',
   description: SITE_DESCRIPTION,
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Lambaré',
-    addressCountry: 'PY',
-  },
-  contactPoint: {
-    '@type': 'ContactPoint',
-    email: 'anthony@bir.com.py',
-  },
+  jobTitle: 'Presidente del Consejo Administrativo',
+  worksFor: { '@type': 'Organization', name: 'AENA · Asociación Educativa Nuevas Alturas' },
+  address: { '@type': 'PostalAddress', addressLocality: 'Lambaré', addressCountry: 'PY' },
 } as const;
 
 export default function RootLayout({
@@ -81,7 +75,7 @@ export default function RootLayout({
       <body className="antialiased">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
         <div className="flex min-h-[100dvh] flex-col text-foreground">
           <NavBar />

@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og';
 
-export const alt = 'ABN, Agencia Bir Núñez. Entiende tu organización. Decide con claridad.';
+export const alt = 'Anthony Bir. Dirección, sistemas e IA gobernada.';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -28,7 +28,7 @@ export default function OpengraphImage() {
             opacity: 0.75,
           }}
         >
-          ABN · Agencia Bir Núñez
+          Anthony Bir
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', maxWidth: 980 }}>
           <div
@@ -39,7 +39,7 @@ export default function OpengraphImage() {
               lineHeight: 1.05,
             }}
           >
-            Entiende tu organización.
+            Hola, soy Anthony Bir.
           </div>
           <div
             style={{
@@ -50,11 +50,11 @@ export default function OpengraphImage() {
               opacity: 0.8,
             }}
           >
-            Decide con claridad.
+            Dirijo un colegio y una tesorería. Construyo los sistemas que usan.
           </div>
         </div>
         <div style={{ fontSize: 28, opacity: 0.75 }}>
-          Sistemas de gestión · IA gobernada · bir.com.py
+          Dirección · Sistemas · IA gobernada · bir.com.py
         </div>
       </div>
     ),

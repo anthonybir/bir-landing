@@ -1,18 +1,34 @@
-# ABN · Estrategia de posicionamiento
+# Anthony Bir · Sitio personal
 
-*Fuente de verdad del mensaje público. Última revisión: 2026-09-04.*
+*Fuente de verdad del mensaje público. Última revisión: 2026-09-08.*
 
 ## Decisión vigente
 
-ABN construye sistemas de gestión para que la dirección entienda su organización,
-tome decisiones con información y pueda darles seguimiento. El trabajo conecta
-registros, procesos, responsabilidades y criterios de decisión. La IA se incorpora
-a tareas concretas, con contexto propio, permisos y revisión humana.
+bir.com.py es el sitio personal de Anthony Bir. La portada tiene tres partes:
+una introducción breve, trayectoria profesional y contacto por correo y WhatsApp.
+ABN aparece como una afiliación y conserva sus páginas de servicios.
 
-Esta decisión recoge la corrección explícita del fundador del 4 de septiembre.
-Sustituye el límite sectorial del 13 de agosto: educación y organizaciones
-eclesiásticas son ámbitos con casos, no requisitos para pedir un diagnóstico.
-No se añade una vertical «pymes» ni se presenta experiencia comercial sin prueba.
+La trayectoria confirmada por Anthony es: HJ Heinz, coordinación de ventas de
+exportación (2005–2006); Thermo Fisher Scientific, liderazgo de proyectos
+internacionales (2007–2011); empresa propia de logística (2012–2019); AENA
+(desde 2020). No añadir fechas, logros ni nombres de empresa no confirmados.
+
+La portada no incluye inventario de sistemas, cifras de commits, versiones
+publicadas, banda de resultados ni historia de Git. La ruta `/historia` queda
+fuera de esta publicación. Los metadatos y WebMCP identifican a Anthony como
+persona y distinguen ABN como afiliación.
+
+## Mensaje de entrada personal
+
+**Hola, soy Anthony Bir.**
+
+Dirijo un colegio y la tesorería de una red de iglesias en Paraguay.
+Construyo los sistemas que usan, con IA y revisión humana.
+
+## Contexto de las páginas de ABN
+
+Las pautas siguientes se aplican a los servicios y casos existentes, no sustituyen
+la introducción personal de la portada.
 
 ## Mensaje de entrada
 
@@ -73,8 +89,7 @@ trazabilidad de todas las salidas.
 
 ## Arquitectura del mensaje
 
-- `/`: propósito de dirección; transición desde hojas de cálculo; IA integrada;
-  pruebas educativas y eclesiásticas; conversación sobre el problema del visitante.
+- `/`: introducción personal, trayectoria confirmada y contacto.
 - `/servicios`: diagnóstico, implementación por etapas y acompañamiento.
   El filtro es la disposición a revisar procesos e involucrar a la dirección.
 - `/casos`: cambios concretos en organizaciones identificadas, con atribución.
@@ -90,10 +105,10 @@ los sectores con casos del alcance de la oferta.
 
 ## Plano visual y voz
 
-Dirección seleccionada por el fundador: opción 2, mesa de trabajo. Fondo claro,
-tipografía serif vertical, fotografía conceptual en plano y acento verde oscuro.
-La fotografía no representa instalaciones ni datos de un cliente. Las capturas
-reales permanecen en los casos; la portada no las inclina ni las recorta como adorno.
+Dirección seleccionada por el fundador: perfil sencillo de texto. Fondo claro,
+Instrument Serif vertical, Satoshi y acento verde oscuro. La fotografía conceptual de la mesa acompaña la introducción: a su lado en
+escritorio y debajo en móvil, con el pie «Mesa de trabajo · Imagen conceptual».
+Sin banda de pruebas. Las capturas reales permanecen en los casos.
 Las reglas de implementación viven en `README.md` y los tokens en `globals.css`.
 
 Español es-ES, frases concretas. Hablar de información, procesos, decisiones,
