@@ -405,6 +405,7 @@ textarea.field-input {
 .profile-actions .btn-secondary { height: 3rem; padding: 0 1.5rem; }
 .profile-section { padding-bottom: 5rem; }
 .profile-section .section-title { margin-block: 1rem 1.5rem; }
+.profile-follow-up { margin-top: 1.5rem; }
 .profile-list { display: flex; flex-direction: column; }
 .profile-row { padding-block: 1.5rem; border-top: 1px solid var(--gray-200); }
 .profile-row:last-child { border-bottom: 1px solid var(--gray-200); }

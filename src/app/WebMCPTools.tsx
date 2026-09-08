@@ -1,33 +1,11 @@
 'use client';
 
 import { useEffect } from 'react';
-import { SITE_DESCRIPTION } from './site-information';
-
-const PUBLIC_PAGES = {
-  inicio: '/',
-  servicios: '/servicios',
-  aula: '/aula',
-  relocation: '/en',
-  ia_gobernada: '/ia-gobernada',
-  casos: '/casos',
-  blog: '/blog',
-  nosotros: '/nosotros',
-  contacto: '/contacto',
-} as const;
+import { CAREER, PUBLIC_PAGES, SITE_DESCRIPTION } from './site-information';
 
 type PublicPage = keyof typeof PUBLIC_PAGES;
 
-const pageNames: PublicPage[] = [
-  'inicio',
-  'servicios',
-  'aula',
-  'relocation',
-  'ia_gobernada',
-  'casos',
-  'blog',
-  'nosotros',
-  'contacto',
-];
+const pageNames = Object.keys(PUBLIC_PAGES) as PublicPage[];
 
 function isPublicPage(page: string): page is PublicPage {
   return Object.hasOwn(PUBLIC_PAGES, page);
@@ -51,7 +29,7 @@ export default function WebMCPTools() {
         {
           name: 'get_anthony_bir_site_information',
           description:
-            'Get public information about Anthony Bir, his career, affiliations, location, and contact channels. Use this before deciding which public page to open.',
+            'Obtiene información pública sobre Anthony Bir, su trayectoria, trabajo actual, afiliaciones y canales de contacto. Úsala antes de decidir qué página pública abrir.',
           inputSchema: {
             type: 'object',
             properties: {},
@@ -60,7 +38,17 @@ export default function WebMCPTools() {
           execute: () => ({
             name: 'Anthony Bir',
             description: SITE_DESCRIPTION,
-            affiliation: { name: 'ABN · Agencia Bir Núñez', role: 'Fundador', page: '/servicios' },
+            currentWork: [
+              { organization: 'AENA · Nuevas Alturas', role: 'Presidente del Consejo Administrativo' },
+              { organization: 'IPU Paraguay', role: 'Tesorero' },
+            ],
+            career: CAREER,
+            affiliation: {
+              name: 'ABN · Agencia Bir Núñez',
+              role: 'Fundador',
+              relationship: 'Afiliación y servicios para organizaciones',
+              page: '/servicios',
+            },
             location: 'Lambaré, Paraguay',
             contact: {
               email: 'anthony@bir.com.py',
@@ -77,14 +65,14 @@ export default function WebMCPTools() {
         {
           name: 'navigate_anthony_bir_site',
           description:
-            'Navigate to a public page on Anthony Bir’s site. The contacto page contains the ABN enquiry form. This does not submit a form or send a message.',
+            'Navega a una página pública del sitio de Anthony Bir. La página contacto contiene el formulario de consulta de ABN. Esta herramienta no envía formularios ni mensajes.',
           inputSchema: {
             type: 'object',
             properties: {
               page: {
                 type: 'string',
                 enum: pageNames,
-                description: 'The public page to open.',
+                description: 'Página pública que se abrirá.',
               },
             },
             required: ['page'],

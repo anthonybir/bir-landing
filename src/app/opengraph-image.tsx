@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og';
 
-export const alt = 'Anthony Bir. Dirección, sistemas e IA gobernada.';
+export const alt = 'Anthony Bir. Dirección, tesorería y sistemas.';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -50,11 +50,11 @@ export default function OpengraphImage() {
               opacity: 0.8,
             }}
           >
-            Dirijo un colegio y una tesorería. Construyo los sistemas que usan.
+            Dirijo un colegio, llevo una tesorería y construyo los sistemas que usamos.
           </div>
         </div>
         <div style={{ fontSize: 28, opacity: 0.75 }}>
-          Dirección · Sistemas · IA gobernada · bir.com.py
+          Trayectoria · ABN · Lambaré, Paraguay · bir.com.py
         </div>
       </div>
     ),

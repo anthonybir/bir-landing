@@ -5,7 +5,9 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const LINKS_ES = [
-  { href: '/#trayectoria', label: 'Trayectoria' },
+  { href: '/historia', label: 'Historia' },
+  { href: '/servicios', label: 'ABN' },
+  { href: '/blog', label: 'Blog' },
 ] as const;
 
 const LINKS_EN = [{ href: '/', label: 'Español' }] as const;

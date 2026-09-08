@@ -11,9 +11,9 @@ const es = {
   whatsapp: 'WhatsApp',
   location: 'Lambaré, Paraguay',
   links: [
-    { href: '/#trayectoria', label: 'Trayectoria' },
+    { href: '/historia', label: 'Historia' },
     { href: '/#contacto', label: 'Contacto' },
-    { href: '/servicios', label: 'ABN' },
+    { href: '/servicios', label: 'ABN · Servicios' },
     { href: '/blog', label: 'Blog' },
   ],
   langSwitch: { href: '/en', label: 'English · Relocation services' },

@@ -6,6 +6,7 @@
 
 bir.com.py es el sitio personal de Anthony Bir. La portada tiene tres partes:
 una introducción breve, trayectoria profesional y contacto por correo y WhatsApp.
+La ruta `/historia` amplía la trayectoria y conecta la experiencia actual con ABN.
 ABN aparece como una afiliación y conserva sus páginas de servicios.
 
 La trayectoria confirmada por Anthony es: HJ Heinz, coordinación de ventas de
@@ -14,9 +15,9 @@ internacionales (2007–2011); empresa propia de logística (2012–2019); AENA
 (desde 2020). No añadir fechas, logros ni nombres de empresa no confirmados.
 
 La portada no incluye inventario de sistemas, cifras de commits, versiones
-publicadas, banda de resultados ni historia de Git. La ruta `/historia` queda
-fuera de esta publicación. Los metadatos y WebMCP identifican a Anthony como
-persona y distinguen ABN como afiliación.
+publicadas, banda de resultados ni historia de Git. La ruta `/historia` usa solo
+la trayectoria confirmada y el trabajo actual ya publicado. Los metadatos y
+WebMCP identifican a Anthony como persona y distinguen ABN como afiliación.
 
 ## Mensaje de entrada personal
 
@@ -90,7 +91,8 @@ trazabilidad de todas las salidas.
 
 ## Arquitectura del mensaje
 
-- `/`: introducción personal, trayectoria confirmada y contacto.
+- `/`: introducción personal, trayectoria confirmada, acceso a la historia y contacto.
+- `/historia`: recorrido profesional, trabajo actual y origen operativo de ABN.
 - `/servicios`: diagnóstico, implementación por etapas y acompañamiento.
   El filtro es la disposición a revisar procesos e involucrar a la dirección.
 - `/casos`: cambios concretos en organizaciones identificadas, con atribución.
@@ -107,8 +109,10 @@ los sectores con casos del alcance de la oferta.
 ## Plano visual y voz
 
 Dirección seleccionada por el fundador: perfil sencillo de texto. Fondo claro,
-Instrument Serif vertical, Satoshi y acento verde oscuro. La fotografía conceptual de la mesa acompaña la introducción: a su lado en
-escritorio y debajo en móvil, con el pie «Mesa de trabajo · Imagen conceptual».
+Instrument Serif vertical, Satoshi y acento verde oscuro. La fotografía conceptual
+de la mesa acompaña la introducción: a su lado en escritorio y debajo en móvil,
+con el pie «Mesa de trabajo · Imagen conceptual». `/historia` conserva la misma
+jerarquía y presenta el recorrido como texto, sin inventar material documental.
 Sin banda de pruebas. Las capturas reales permanecen en los casos.
 Las reglas de implementación viven en `README.md` y los tokens en `globals.css`.
 
