@@ -32,10 +32,10 @@ const scope = [
   'Review of your US-origin apostilled documents for completeness and fit for Migraciones requirements.',
   'Certified Spanish translations where required, coordinated with a Paraguayan certified translator.',
   'Notarized copies at a Paraguayan escribanía for every original submitted to Migraciones.',
-  'In-country accompaniment for Interpol (Asunción) and the Paraguayan police background certificate.',
+  'We accompany you to Interpol in Asunción and help with the Paraguayan police background certificate.',
   'Preparation and filing of the sworn declarations required by Migraciones.',
   'Submission and follow-up of your Temporary Residency application until resolution.',
-  'Bilingual EN/ES communication and status updates throughout the process.',
+  'Updates in English or Spanish throughout the process.',
 ] as const;
 
 const phases = [
@@ -47,19 +47,19 @@ const phases = [
   },
   {
     num: '02',
-    title: 'Arrival & kickoff',
+    title: 'Arrival and first meeting',
     time: 'On arrival',
-    desc: 'You land in Paraguay. We meet, verify the document file together and schedule every appointment.',
+    desc: 'When you arrive, we meet to check your documents together and schedule the appointments.',
   },
   {
     num: '03',
-    title: 'In-country processing',
+    title: 'Local paperwork',
     time: 'Local appointments',
     desc: 'Translations, notarizations, Interpol and police certificates. We go with you to each step.',
   },
   {
     num: '04',
-    title: 'Filing & resolution',
+    title: 'Application and decision',
     time: 'Authority review',
     desc: 'We prepare the filing for Dirección Nacional de Migraciones and follow the application through its decision. Approval rests with Migraciones.',
   },
@@ -67,9 +67,9 @@ const phases = [
 
 const pricing = [
   'Itemized quotes in USD: government fees, translations, notarizations and our professional fee, each on its own line.',
-  'Exchange-rate transparency: every quote is pegged to the Banco Central del Paraguay reference rate, documented on the quote itself.',
+  'Each quote states the Banco Central del Paraguay reference exchange rate used.',
   'Milestone payments tied to real progress, not lump sums up front.',
-  'State fees passed through at cost, with documentation. Estimate variances are shared with you before any commitment.',
+  'Government fees are charged at cost, with documentation. We discuss any change to the estimate before you commit.',
 ] as const;
 
 const credibility = [
