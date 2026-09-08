@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og';
+import BrandMark from './BrandMark';
 
 export const alt = 'Anthony Bir. Dirección, tesorería y sistemas.';
 export const size = { width: 1200, height: 630 };
@@ -6,58 +7,12 @@ export const contentType = 'image/png';
 
 export default function OpengraphImage() {
   return new ImageResponse(
-    (
-      <div
-        style={{
-          width: '100%',
-          height: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-          padding: 80,
-          background: '#0F3B3E',
-          color: '#EFE6D2',
-          fontFamily: 'sans-serif',
-        }}
-      >
-        <div
-          style={{
-            fontSize: 28,
-            letterSpacing: '0.3em',
-            textTransform: 'uppercase',
-            opacity: 0.75,
-          }}
-        >
-          Anthony Bir
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'column', maxWidth: 980 }}>
-          <div
-            style={{
-              fontSize: 68,
-              fontWeight: 600,
-              letterSpacing: '-0.03em',
-              lineHeight: 1.05,
-            }}
-          >
-            Hola, soy Anthony Bir.
-          </div>
-          <div
-            style={{
-              fontSize: 40,
-              letterSpacing: '-0.01em',
-              lineHeight: 1.1,
-              marginTop: 20,
-              opacity: 0.8,
-            }}
-          >
-            Dirijo un colegio, llevo una tesorería y construyo los sistemas que usamos.
-          </div>
-        </div>
-        <div style={{ fontSize: 28, opacity: 0.75 }}>
-          Trayectoria · ABN · Lambaré, Paraguay · bir.com.py
-        </div>
-      </div>
-    ),
+    <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', background: '#ffffff', color: '#1b2936', fontFamily: 'sans-serif', padding: 60 }}>
+      <BrandMark width={250} height={194} />
+      <div style={{ fontSize: 48, letterSpacing: '0.22em', marginTop: 40 }}>ANTHONY BIR</div>
+      <div style={{ fontSize: 18, letterSpacing: '0.2em', marginTop: 24 }}>DIRECCIÓN · TESORERÍA · SISTEMAS</div>
+      <div style={{ fontSize: 16, color: '#52616e', marginTop: 52 }}>Lambaré, Paraguay · bir.com.py</div>
+    </div>,
     size,
   );
 }

@@ -1,52 +1,47 @@
 @import "tailwindcss";
 
 :root {
-  /* Warm gray scale: hue shifts from 39deg warm beige to 20deg warm charcoal. */
-  --gray-50:  hsl(39 15% 98%);
-  --gray-100: hsl(37 12% 95%);
-  --gray-200: hsl(35 10% 90%);
-  --gray-300: hsl(33 8% 82%);
-  --gray-400: hsl(30 6% 65%);
-  --gray-500: hsl(27 5% 50%);
-  --gray-600: hsl(25 6% 40%);
-  --gray-700: hsl(23 8% 30%);
-  --gray-800: hsl(22 10% 20%);
-  --gray-900: hsl(20 12% 10%);
-  --gray-950: hsl(20 12% 6%);
+  /* Anthony Bir identity: paper white and ink navy. */
+  --gray-50: #fafbfc;
+  --gray-100: #f2f4f6;
+  --gray-200: #e0e5e9;
+  --gray-300: #c2cbd2;
+  --gray-400: #8997a3;
+  --gray-500: #657583;
+  --gray-600: #52616e;
+  --gray-700: #394b5b;
+  --gray-800: #263746;
+  --gray-900: #1b2936;
+  --gray-950: #111c26;
 
-  /* Directional atmosphere */
-  --atmosphere-top: hsl(39 15% 98%);
-  --atmosphere-bottom: hsl(37 13% 97%);
+  --atmosphere-top: #ffffff;
+  --atmosphere-bottom: #fafbfc;
 
   /* Semantic aliases for the gray scale. */
-  --background: #f7f4ef;
+  --background: #ffffff;
   --foreground: var(--gray-900);
   --surface: hsl(0 0% 100%);
 
-  /* Deep teal accent (Color Ma) */
-  --accent: hsl(173 58% 39%);
-  --accent-hover: hsl(173 58% 34%);
-  --accent-active: hsl(173 58% 29%);
-  --accent-light: hsl(173 58% 95%);
-  --accent-lighter: hsl(173 58% 97%);
-  --accent-dark: hsl(173 58% 25%);
-  --accent-darker: hsl(173 58% 15%);
-  --accent-foreground: hsl(0 0% 100%);
-
-  /* Brand teal band (footer / dark surfaces) + cream foreground. */
-  --brand-teal: #0F3B3E;
-  --brand-cream: #EFE6D2;
-  --brand-cream-muted: rgba(239, 230, 210, 0.72);
-
-  /* Signal: warm counterpoint, used scarcely. */
-  --signal: #E9B031;
-  --signal-light: #F4C960;
+  /* Monochrome controls. Legacy aliases keep existing routes consistent. */
+  --accent: #1b2936;
+  --accent-hover: #394b5b;
+  --accent-active: #111c26;
+  --accent-light: #f2f4f6;
+  --accent-lighter: #fafbfc;
+  --accent-dark: #1b2936;
+  --accent-darker: #111c26;
+  --accent-foreground: #ffffff;
+  --brand-teal: var(--accent);
+  --brand-cream: #ffffff;
+  --brand-cream-muted: #c2cbd2;
+  --signal: #ffffff;
+  --signal-light: #ffffff;
 
   /* Status */
   --error: hsl(0 60% 42%);
 
   /* Focus indicator: 3:1+ non-text contrast, accent-colored. */
-  --focus-glow: 0 0 0 2px var(--accent), 0 0 8px hsl(173 58% 39% / 0.25);
+  --focus-glow: 0 0 0 2px var(--accent), 0 0 0 4px #ffffff;
 
   /* Brand fixed colors */
 
@@ -64,15 +59,15 @@
   --radius-2xl: 1.5rem;
   --radius-full: 9999px;
 
-  /* Hikari shadow system: warm-tinted, light as material. */
-  --shadow-xs: 0 1px 2px hsl(20 12% 10% / 0.04);
-  --shadow-sm: 0 2px 4px hsl(20 12% 10% / 0.06);
-  --shadow-md: 0 4px 8px hsl(20 12% 10% / 0.08);
-  --shadow-lg: 0 8px 16px hsl(20 12% 10% / 0.10);
-  --shadow-xl: 0 16px 32px hsl(20 12% 10% / 0.12);
-  --shadow-lift: 0 4px 12px hsl(20 12% 10% / 0.08);
-  --shadow-accent: 0 4px 12px hsl(173 58% 39% / 0.25);
-  --scrim-hikari: hsl(39 15% 98% / 0.60);
+  /* Subtle ink shadows for shared overlays and controls. */
+  --shadow-xs: 0 1px 2px hsl(209 33% 16% / 0.04);
+  --shadow-sm: 0 2px 4px hsl(209 33% 16% / 0.06);
+  --shadow-md: 0 4px 8px hsl(209 33% 16% / 0.08);
+  --shadow-lg: 0 8px 16px hsl(209 33% 16% / 0.10);
+  --shadow-xl: 0 16px 32px hsl(209 33% 16% / 0.12);
+  --shadow-lift: 0 4px 12px hsl(209 33% 16% / 0.08);
+  --shadow-accent: 0 4px 12px rgb(27 41 54 / 0.15);
+  --scrim-hikari: rgb(255 255 255 / 0.60);
 
   /* Motion tokens */
   --ease-settle: cubic-bezier(0.22, 1, 0.36, 1);
@@ -164,7 +159,7 @@ body {
 }
 
 ::selection {
-  background: hsl(173 58% 39% / 0.2);
+  background: #e0e5e9;
   color: var(--foreground);
 }
 
@@ -174,7 +169,7 @@ body {
 }
 
 /* ============================================================
-   ABN agency layer (ABSD v7.1 components).
+   Anthony Bir shared presentation.
    Sanshu per view: one display size, 16px body, 12px caps labels.
    ============================================================ */
 
@@ -184,7 +179,7 @@ body {
   font-size: 0.75rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.18em;
   color: var(--gray-600);
 }
 
@@ -212,7 +207,7 @@ body {
   gap: 0.5rem;
   height: 3rem;
   padding: 0 1.5rem;
-  border-radius: 3px;
+  border-radius: 0;
   font-family: var(--font-sans);
   font-size: 1rem;
   font-weight: 500;
@@ -225,8 +220,8 @@ body {
   background: var(--brand-teal);
   color: var(--brand-cream);
 }
-.btn-primary:hover { background: #185257; }
-.btn-primary:active { background: #092c2f; }
+.btn-primary:hover { background: var(--accent-hover); }
+.btn-primary:active { background: var(--accent-active); }
 .btn-primary:disabled {
   opacity: 0.5;
   cursor: not-allowed;
@@ -251,7 +246,12 @@ body {
 .link-quiet:hover { border-bottom-color: var(--gray-900); }
 
 /* Shared sticky navigation. */
-.site-wordmark { font-size: 1.5rem; letter-spacing: -0.01em; text-decoration: none; color: var(--gray-900); }
+.site-wordmark { font: 500 0.875rem/1.3 var(--font-sans); letter-spacing: 0.24em; text-transform: uppercase; text-decoration: none; color: var(--gray-900); }
+.nav-brand { display: inline-flex; align-items: center; gap: 1rem; }
+.nav-brand svg { flex: none; }
+.site-nav { height: 5rem; }
+.footer-lockup { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+.footer-lockup:hover { text-decoration: none !important; }
 .site-header {
   position: sticky;
   top: 0;
@@ -268,7 +268,7 @@ body {
   font-size: 0.75rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.18em;
   color: var(--gray-600);
 }
 .field-label--optional { color: var(--gray-600); font-weight: 400; }
@@ -371,8 +371,7 @@ textarea.field-input {
 }
 
 /* ============================================================
-   Teal band: the second dark surface. One per page, mid-scroll,
-   so the footer is not the only anchor in a full cream field.
+   Legacy band class: navy surface with white content.
    ============================================================ */
 .teal-band {
   background: var(--brand-teal);
@@ -382,54 +381,72 @@ textarea.field-input {
 .teal-band .label-caps { color: var(--brand-cream-muted); }
 .teal-band .link-quiet {
   color: var(--brand-cream);
-  border-bottom-color: rgba(239, 230, 210, 0.45);
+  border-bottom-color: rgb(255 255 255 / 0.45);
 }
 .teal-band .link-quiet:hover { border-bottom-color: var(--brand-cream); }
 
-/* Signal gold: one number per view, and only on a dark surface,
-   where the gold carries text contrast. Never on cream. */
+/* Legacy result emphasis stays monochrome on dark surfaces. */
 .teal-band .num-signal { color: var(--signal); }
 
-/* Profile home: one line per item. Three row shapes, one item type size. */
-.profile-hero { padding-block: 4rem 5rem; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 3rem; }
-.profile-hero-copy { display: flex; flex-direction: column; gap: 1.5rem; }
-.profile-hero-figure { min-width: 0; }
-.profile-hero-image { width: 100%; height: auto; }
-.profile-hero-figure figcaption { margin-top: 0.6rem; font: 0.75rem/1.5 var(--font-sans); color: var(--gray-600); }
-@media (max-width: 899px) {
-  .profile-hero { grid-template-columns: 1fr; gap: 2rem; }
-}
-.profile-hero .display-hero { max-width: 56rem; }
-.profile-intro { max-width: 38rem; font: 1.25rem/1.6 var(--font-sans); color: var(--gray-900); }
-.profile-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; margin-top: 0.5rem; }
-.profile-actions .btn-secondary { height: 3rem; padding: 0 1.5rem; }
-.profile-section { padding-bottom: 5rem; }
+/* Personal home: a signature, a clear introduction, then the work. */
+.profile-hero { padding-block: 6rem; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 6rem; }
+.profile-identity { display: flex; flex-direction: column; align-items: center; text-align: center; padding-block: 2rem; }
+.profile-monogram { width: min(70%, 280px); height: auto; margin-bottom: 2.75rem; }
+.identity-name { font: 400 clamp(1.5rem, 2.5vw, 2rem)/1.3 var(--font-sans); letter-spacing: 0.22em; text-transform: uppercase; padding-left: 0.22em; }
+.identity-descriptor { margin-top: 1.25rem; font: 500 0.625rem/1.8 var(--font-sans); letter-spacing: 0.22em; text-transform: uppercase; }
+.profile-hero-copy { display: flex; flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+.profile-hero .display-hero { font-size: clamp(3rem, 5vw, 4.5rem); line-height: 1.02; }
+.profile-intro { max-width: 34rem; font: 1rem/1.8 var(--font-sans); color: var(--gray-600); }
+.profile-work-link { display: inline-flex; align-items: center; gap: 2.25rem; min-height: 2.75rem; font: 500 1rem/1.5 var(--font-sans); border-bottom: 1px solid var(--gray-300); }
+.profile-work-link:hover { border-color: var(--gray-900); }
+.profile-hero-figure { padding-bottom: 6rem; }
+.profile-hero-image { width: 100%; height: clamp(15rem, 28vw, 23rem); object-fit: cover; object-position: center 55%; }
+.profile-hero-figure figcaption { margin-top: 0.75rem; font: 0.75rem/1.5 var(--font-sans); color: var(--gray-600); }
+.profile-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; }
+.profile-section { padding-bottom: 6rem; scroll-margin-top: 7rem; }
+.profile-section-heading { display: grid; grid-template-columns: 1fr 2fr; align-items: baseline; gap: 2rem; margin-bottom: 3rem; }
 .profile-section .section-title { margin-block: 1rem 1.5rem; }
+.profile-section-heading .section-title { margin-bottom: 0; }
 .profile-follow-up { margin-top: 1.5rem; }
 .profile-list { display: flex; flex-direction: column; }
-.profile-row { padding-block: 1.5rem; border-top: 1px solid var(--gray-200); }
+.profile-row { padding-block: 2rem; border-top: 1px solid var(--gray-200); }
 .profile-row:last-child { border-bottom: 1px solid var(--gray-200); }
-.profile-row-timeline { display: grid; grid-template-columns: 10rem 17.5rem minmax(0, 1fr); gap: 2rem; padding-block: 1.25rem; }
-.profile-row-timeline .label-caps { padding-top: 0.375rem; }
+.profile-row-timeline { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; align-items: baseline; }
 .profile-item { font-size: 1.75rem; line-height: 1.15; }
+.profile-contact { display: flex; align-items: center; justify-content: space-between; gap: 3rem; padding-top: 2rem; }
 @media (max-width: 899px) {
-  .profile-row-timeline { grid-template-columns: 1fr; gap: 0.375rem; }
-  .profile-row-timeline .label-caps { padding-top: 0; }
+  .profile-hero { gap: 3rem; padding-block: 4rem; }
+  .profile-identity { padding: 0; }
+  .identity-descriptor { max-width: 15rem; }
+  .profile-row-timeline { grid-template-columns: 8rem 1fr; gap: 0.75rem 2rem; }
+  .profile-row-timeline .body-copy { grid-column: 2; }
 }
 @media (max-width: 599px) {
-  .profile-hero { padding-block: 3rem 2.5rem; }
-  .profile-intro { font-size: 1.125rem; }
-  .profile-section { padding-bottom: 3.5rem; }
-  .profile-item { font-size: 1.5rem; }
+  .site-wordmark { font-size: 0.75rem; letter-spacing: 0.18em; }
+  .nav-brand { gap: 0.75rem; }
+  .nav-brand svg { width: 34px; height: auto; }
+  .profile-hero { grid-template-columns: 1fr; gap: 3.5rem; padding-block: 3rem; }
+  .profile-monogram { width: 150px; margin-bottom: 1.75rem; }
+  .identity-name { font-size: 1.5rem; }
+  .identity-descriptor { max-width: none; font-size: 0.5625rem; margin-top: 0.75rem; }
+  .profile-hero .display-hero { font-size: 3rem; }
+  .profile-hero-copy { gap: 1.25rem; }
+  .profile-hero-figure { padding-bottom: 4rem; }
+  .profile-hero-image { height: 16rem; }
+  .profile-section { padding-bottom: 4rem; }
+  .profile-section-heading { grid-template-columns: 1fr; gap: 0; margin-bottom: 2rem; }
+  .profile-row-timeline { grid-template-columns: 1fr; gap: 0.75rem; padding-block: 1.75rem; }
+  .profile-row-timeline .body-copy { grid-column: auto; }
+  .profile-contact { flex-direction: column; align-items: flex-start; gap: 2rem; padding-top: 0; }
 }
 
 /* Shared agency surface: one visual system across every route. */
-.site-header > nav { max-width: 1280px; }
-.site-footer { background: var(--background); color: var(--gray-900); }
+
+.site-footer { background: var(--gray-50); color: var(--gray-900); }
 .site-footer .label-caps, .site-footer .text-brand-cream-muted { color: var(--gray-600); }
 .site-footer a { color: var(--gray-900); text-decoration: none; }
 .site-footer a:hover { text-decoration: underline; text-underline-offset: 4px; }
-.footer-inner { padding-block: 3rem 2rem; }
+.footer-inner { padding-block: 4rem 2rem; }
 .footer-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 0.8fr); gap: 4rem; }
 .footer-brand { max-width: 24rem; }
 .footer-links { display: grid; grid-template-columns: 1fr 1fr; column-gap: 1.5rem; }
@@ -500,7 +517,7 @@ textarea.field-input {
   .journal-entry { gap: 2rem; }
 }
 @media (max-width: 599px) {
-  .page-container { width: calc(100% - 2rem); }
+  .page-container { width: calc(100% - 2.5rem); }
   .page-intro { padding-block: 3rem; }
   .page-intro h1 { font-size: 2.75rem; }
   .page-section, .case-study { padding-bottom: 3.5rem; }

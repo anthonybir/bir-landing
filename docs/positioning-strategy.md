@@ -108,13 +108,18 @@ los sectores con casos del alcance de la oferta.
 
 ## Plano visual y voz
 
-Dirección seleccionada por el fundador: perfil sencillo de texto. Fondo claro,
-Instrument Serif vertical, Satoshi y acento verde oscuro. La fotografía conceptual
-de la mesa acompaña la introducción: a su lado en escritorio y debajo en móvil,
-con el pie «Mesa de trabajo · Imagen conceptual». `/historia` conserva la misma
-jerarquía y presenta el recorrido como texto, sin inventar material documental.
-Sin banda de pruebas. Las capturas reales permanecen en los casos.
-Las reglas de implementación viven en `README.md` y los tokens en `globals.css`.
+Dirección seleccionada por el fundador: identidad personal AB, a partir de la
+referencia de marca del 8 de septiembre de 2026. Fondo blanco, tinta azul marino,
+monograma vectorial AB y nombre en mayúsculas espaciadas. Instrument Serif vertical
+para titulares y Satoshi para texto y marca. La identidad encabeza la portada junto
+a la introducción; la fotografía conceptual de la mesa aparece debajo en una franja
+con el pie «Mesa de trabajo · Imagen conceptual». En móvil, identidad, introducción
+y fotografía se apilan. Sin banda de pruebas. Las capturas reales permanecen en los
+casos. `/historia` mantiene el recorrido como texto, sin inventar material documental.
+La nueva paleta se aplica también a las páginas compartidas de ABN.
+El descriptor es «Dirección · Tesorería · Sistemas»; no trasladar los eslóganes en
+inglés de la referencia a la portada española. Las reglas de implementación viven
+en `README.md` y los tokens en `globals.css`.
 
 Español es-ES, frases concretas. Hablar de información, procesos, decisiones,
 responsables y seguimiento. Evitar eslóganes sobre «transformación», metáforas de

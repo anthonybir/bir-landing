@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import BrandMark from './BrandMark';
 import { usePathname } from 'next/navigation';
 import { WHATSAPP_URL, WHATSAPP_EN_URL } from './WhatsAppFloat';
 
@@ -42,7 +43,10 @@ export default function Footer() {
       <div className="page-container footer-inner">
         <div className="footer-grid">
           <div className="footer-brand">
-            <p className="display site-wordmark">Anthony Bir</p>
+            <Link href="/" className="footer-lockup" aria-label={isEnglish ? "Anthony Bir, home" : "Anthony Bir, inicio"}>
+              <BrandMark width={80} height={62} />
+              <span className="site-wordmark">Anthony Bir</span>
+            </Link>
             <p className="mt-6 font-sans text-base leading-relaxed text-brand-cream-muted">
               {t.blurb}
             </p>

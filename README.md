@@ -19,28 +19,29 @@ ABN is an affiliation with its existing service pages; it is not the home identi
 
 ## Design system
 
-ABSD v7.2. Shared tokens live in `src/app/globals.css`. The selected visual
-language uses warm cream, upright Instrument Serif, Satoshi and deep teal across
-all pages. `PageIntro`, `ContactClose` and `ProductFigure` own repeated compositions.
+The founder-approved Anthony Bir identity supersedes the previous cream/teal
+visual theme. ABSD still provides spacing, accessibility and verification guidance.
+The supplied September 8 brand board defines the visual direction; it is not used
+as a flattened page image.
 
-**One dark surface on a long page, followed by cream.** The footer is cream on
-all routes. Short and functional pages do not need a dark band.
-
-**Proof remains readable.** `ProductFigure` preserves complete source images and
-links to the original in a new tab. Cases identify distinct systems; historical
-articles retain their publication context. Do not add synthetic browser chrome.
-
-**Information is visible immediately.** Numbers remain static. Content does not
-wait for entrance animations or intersection observers.
-
-**Gold is reserved for a result on teal.** `.num-signal` is scoped to `.teal-band`
-because the signal colour is unsuitable for small text on cream.
-
-The home is a simple profile: introduction, career timeline and contact.
-Keep the existing cream, Instrument Serif, Satoshi and teal tokens. The conceptual desk photo sits beside the introduction on desktop and below it
-on mobile, with an explicit conceptual-image caption. No proof band, system
-inventory or release statistics. Career rows stack on mobile. `/historia` uses
-the same restrained text-led system and only confirmed career facts.
+- **Palette:** white `#ffffff`, ink navy `#1b2936`, secondary text `#52616e` and
+  pale gray `#fafbfc`. Shared tokens live in `src/app/globals.css`. Legacy teal/cream
+  class aliases resolve to the new palette so existing service routes stay coherent.
+- **Identity:** `BrandMark.tsx` owns the scalable AB vector redraw. The browser
+  signet repeats its geometry with slightly heavier strokes for small sizes.
+  Use a spaced Satoshi wordmark; keep descriptors out of the navigation.
+- **Typography:** upright Instrument Serif for editorial headings; Satoshi for
+  reading, controls and identity. Letter spacing belongs to short labels and the
+  wordmark, not paragraphs. Controls are flat and square.
+- **Home:** identity and personal introduction side by side, followed by the
+  captioned conceptual desk photograph, confirmed career timeline and contact.
+  On mobile these stack in reading order. No system inventory or release statistics.
+- **Shared routes:** `PageIntro`, `ContactClose` and `ProductFigure` retain their
+  content contracts. The footer is pale gray; existing dark bands use navy.
+- **Proof remains readable:** `ProductFigure` preserves complete source images and
+  links to the original. Do not add synthetic browser chrome or recolor evidence.
+- **Information is visible immediately:** no entrance animation hides content;
+  respect reduced motion. Keep Spanish copy on the main site and English on `/en`.
 
 ## Features
 

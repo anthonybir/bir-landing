@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import BrandMark from './BrandMark';
 import { usePathname } from 'next/navigation';
 
 const LINKS_ES = [
@@ -41,11 +42,12 @@ export default function NavBar() {
     }}>
       <a href="#contenido" className="skip-link">{isEnglish ? 'Skip to content' : 'Ir al contenido'}</a>
       <nav
-        className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:px-8"
+        className="page-container flex items-center justify-between site-nav"
         aria-label={isEnglish ? 'Main navigation' : 'Principal'}
       >
-        <Link href="/" aria-label={isEnglish ? 'Anthony Bir, home' : 'Anthony Bir, inicio'} className="display site-wordmark" onClick={() => setOpenPath(null)}>
-          Anthony Bir
+        <Link href="/" aria-label={isEnglish ? 'Anthony Bir, home' : 'Anthony Bir, inicio'} className="site-wordmark nav-brand" onClick={() => setOpenPath(null)}>
+          <BrandMark width={44} height={35} />
+          <span>Anthony Bir</span>
         </Link>
 
         {/* Desktop */}
@@ -91,7 +93,7 @@ export default function NavBar() {
 
       {/* Mobile menu */}
       {open && (
-        <div id="mobile-menu" className="max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain border-t border-gray-200 px-4 pb-6 pt-2 lg:hidden">
+        <div id="mobile-menu" className="max-h-[calc(100dvh-5rem)] overflow-y-auto overscroll-contain border-t border-gray-200 px-4 pb-6 pt-2 lg:hidden">
           {links.map((l) => (
             <Link
               key={l.href}
