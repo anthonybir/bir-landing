@@ -1,8 +1,10 @@
 import Link from 'next/link';
+import JsonLd from '../JsonLd';
+import { absoluteUrl, ABN_ORGANIZATION } from '../site-information';
 import { PageIntro, ContactClose } from '../PageLayout';
 import { pageMetadata } from '../page-metadata';
 
-export const metadata = pageMetadata('Servicios', 'Diagnóstico, implementación y acompañamiento: sistemas de gestión e IA gobernada para las decisiones de tu organización.', '/servicios');
+export const metadata = pageMetadata('Sistemas de gestión e IA en Paraguay', 'En ABN conectamos procesos y datos en sistemas propios, con IA y revisión humana. Diagnóstico, implementación por etapas y acompañamiento en Paraguay.', '/servicios', 'ABN');
 
 const modes = [
   {
@@ -57,8 +59,19 @@ const sectors = [
 export default function ServiciosPage() {
   return (
     <>
-      <PageIntro label="ABN · Servicios" title="Empecemos por lo que necesitas resolver.">
-        <p>En ABN revisamos cómo trabaja tu organización y qué necesita mejorar. Acordamos una prioridad, construimos por etapas y acompañamos al equipo para que pueda usar el sistema. Incorporamos IA cuando ayuda a resolver una tarea concreta.</p>
+      <JsonLd data={{
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        '@id': absoluteUrl('/servicios#service'),
+        url: absoluteUrl('/servicios'),
+        name: 'Sistemas de gestión e inteligencia artificial para organizaciones',
+        serviceType: 'Diagnóstico, implementación de sistemas y acompañamiento',
+        provider: ABN_ORGANIZATION,
+        areaServed: { '@type': 'Country', name: 'Paraguay' },
+      }} />
+      <PageIntro label="ABN · Servicios" title="Sistemas de gestión e IA para tu organización.">
+        <p>En ABN construimos sistemas de gestión para organizaciones en Paraguay. Conectamos procesos y datos para que tu equipo pueda consultar información, decidir y dar seguimiento.</p>
+        <p>Revisamos cómo trabaja tu organización, acordamos una prioridad y construimos por etapas. Incorporamos <Link href="/ia-gobernada" className="link-quiet">inteligencia artificial con fuentes y revisión humana</Link> cuando ayuda a resolver una tarea concreta.</p>
       </PageIntro>
       <section className="page-container page-section" aria-label="Tres modos de trabajo">
         {modes.map(mode => (
@@ -89,7 +102,10 @@ export default function ServiciosPage() {
       <section className="page-container pt-16 md:pt-20" aria-label="Dónde hemos trabajado">
         <p className="label-caps mb-8">Dónde hemos trabajado</p>
         <div className="editorial-grid">{sectors.map(sector => <article key={sector.title}><h2 className="font-sans text-base font-semibold">{sector.title}</h2><p className="body-copy mt-3">{sector.desc}</p></article>)}</div>
-        <Link href="/casos" className="link-quiet mt-8 inline-block font-sans text-base">Ver el trabajo realizado</Link>
+        <div className="mt-8 flex flex-wrap gap-x-8 gap-y-4 font-sans text-base">
+          <Link href="/casos" className="link-quiet">Ver los casos de gestión e IA</Link>
+          <Link href="/nosotros" className="link-quiet">Conocer al equipo de ABN</Link>
+        </div>
       </section>
       <ContactClose>Cuéntame qué está costando más en el trabajo diario. Con esa primera conversación podemos ver si ABN puede ayudar y por dónde empezar.</ContactClose>
     </>

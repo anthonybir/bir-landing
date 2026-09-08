@@ -6,7 +6,8 @@ import NavBar from "./NavBar";
 import Footer from "./Footer";
 import WebMCPTools from "./WebMCPTools";
 import "./globals.css";
-import { SITE_DESCRIPTION, SITE_TITLE } from "./site-information";
+import JsonLd from "./JsonLd";
+import { absoluteUrl, PERSON_ID, ORGANIZATION_ID, SITE_URL, SITE_DESCRIPTION, SITE_TITLE } from "./site-information";
 
 const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
@@ -31,7 +32,7 @@ const satoshi = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://bir.com.py'),
+  metadataBase: new URL(SITE_URL),
   title: {
     template: '%s | Anthony Bir',
     default: SITE_TITLE,
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    url: "https://bir.com.py",
+    url: absoluteUrl(),
     siteName: "Anthony Bir",
     locale: "es_ES",
     type: "website",
@@ -52,15 +53,16 @@ export const metadata: Metadata = {
 const personJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
+  '@id': PERSON_ID,
   name: 'Anthony Bir',
-  url: 'https://bir.com.py',
+  url: absoluteUrl('/historia'),
   email: 'anthony@bir.com.py',
   description: SITE_DESCRIPTION,
   jobTitle: 'Presidente del Consejo Administrativo',
   worksFor: { '@type': 'Organization', name: 'AENA · Asociación Educativa Nuevas Alturas' },
   affiliation: [
-    { '@type': 'Organization', name: 'IPU Paraguay', description: 'Tesorero' },
-    { '@type': 'Organization', name: 'ABN · Agencia Bir Núñez', url: 'https://bir.com.py/servicios', description: 'Fundador' },
+    { '@type': 'Organization', name: 'IPU Paraguay' },
+    { '@type': 'Organization', '@id': ORGANIZATION_ID, name: 'ABN · Agencia Bir Núñez', url: absoluteUrl('/nosotros') },
   ],
   address: { '@type': 'PostalAddress', addressLocality: 'Lambaré', addressCountry: 'PY' },
 } as const;
@@ -77,10 +79,7 @@ export default function RootLayout({
       className={`${instrumentSerif.variable} ${geistMono.variable} ${satoshi.variable}`}
     >
       <body className="antialiased">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
-        />
+        <JsonLd data={personJsonLd} />
         <div className="flex min-h-[100dvh] flex-col text-foreground">
           <NavBar />
           <main id="contenido" tabIndex={-1} className="flex-1">

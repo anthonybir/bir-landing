@@ -1,0 +1,1030 @@
+[
+  {
+    "url": "https://bir.com.py",
+    "final": "https://www.bir.com.py/",
+    "status": 200,
+    "title": "Anthony Bir · Dirección, tesorería y sistemas",
+    "h1": 1,
+    "lang": "es",
+    "description": "Anthony Bir dirige un colegio, lleva la tesorería de una red de iglesias en Paraguay y construye los sistemas que usan en el trabajo diario.",
+    "canonical": "https://bir.com.py",
+    "robots": null,
+    "links": [
+      "#contenido",
+      "/",
+      "/historia",
+      "/servicios",
+      "/blog",
+      "/#contacto",
+      "/servicios",
+      "/casos",
+      "/historia",
+      "mailto:anthony@bir.com.py",
+      "https://wa.me/595994790348?text=Hola%20Anthony%2C%20vi%20tu%20sitio.",
+      "/",
+      "/historia",
+      "/#contacto",
+      "/servicios",
+      "/blog",
+      "/en",
+      "mailto:anthony@bir.com.py",
+      "https://wa.me/595994790348?text=Hola%20Anthony%2C%20vi%20tu%20sitio."
+    ],
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Anthony Bir",
+        "url": "https://bir.com.py",
+        "email": "anthony@bir.com.py",
+        "description": "Anthony Bir dirige un colegio, lleva la tesorería de una red de iglesias en Paraguay y construye los sistemas que usan en el trabajo diario.",
+        "jobTitle": "Presidente del Consejo Administrativo",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "AENA · Asociación Educativa Nuevas Alturas"
+        },
+        "affiliation": [
+          {
+            "@type": "Organization",
+            "name": "IPU Paraguay",
+            "description": "Tesorero"
+          },
+          {
+            "@type": "Organization",
+            "name": "ABN · Agencia Bir Núñez",
+            "url": "https://bir.com.py/servicios",
+            "description": "Fundador"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lambaré",
+          "addressCountry": "PY"
+        }
+      }
+    ],
+    "missingAlt": 0
+  },
+  {
+    "url": "https://bir.com.py/historia",
+    "final": "https://www.bir.com.py/historia",
+    "status": 200,
+    "title": "Mi historia | Anthony Bir",
+    "h1": 1,
+    "lang": "es",
+    "description": "La trayectoria de Anthony Bir: ventas de exportación, proyectos internacionales, logística, dirección educativa, tesorería y sistemas.",
+    "canonical": "https://bir.com.py/historia",
+    "robots": null,
+    "links": [
+      "#contenido",
+      "/",
+      "/historia",
+      "/servicios",
+      "/blog",
+      "/#contacto",
+      "/servicios",
+      "/contacto",
+      "/",
+      "/historia",
+      "/#contacto",
+      "/servicios",
+      "/blog",
+      "/en",
+      "mailto:anthony@bir.com.py",
+      "https://wa.me/595994790348?text=Hola%20Anthony%2C%20vi%20tu%20sitio."
+    ],
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Anthony Bir",
+        "url": "https://bir.com.py",
+        "email": "anthony@bir.com.py",
+        "description": "Anthony Bir dirige un colegio, lleva la tesorería de una red de iglesias en Paraguay y construye los sistemas que usan en el trabajo diario.",
+        "jobTitle": "Presidente del Consejo Administrativo",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "AENA · Asociación Educativa Nuevas Alturas"
+        },
+        "affiliation": [
+          {
+            "@type": "Organization",
+            "name": "IPU Paraguay",
+            "description": "Tesorero"
+          },
+          {
+            "@type": "Organization",
+            "name": "ABN · Agencia Bir Núñez",
+            "url": "https://bir.com.py/servicios",
+            "description": "Fundador"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lambaré",
+          "addressCountry": "PY"
+        }
+      }
+    ],
+    "missingAlt": 0
+  },
+  {
+    "url": "https://bir.com.py/servicios",
+    "final": "https://www.bir.com.py/servicios",
+    "status": 200,
+    "title": "Servicios | Anthony Bir",
+    "h1": 1,
+    "lang": "es",
+    "description": "Diagnóstico, implementación y acompañamiento: sistemas de gestión e IA gobernada para las decisiones de tu organización.",
+    "canonical": "https://bir.com.py/servicios",
+    "robots": null,
+    "links": [
+      "#contenido",
+      "/",
+      "/historia",
+      "/servicios",
+      "/blog",
+      "/#contacto",
+      "/casos",
+      "/contacto",
+      "/",
+      "/historia",
+      "/#contacto",
+      "/servicios",
+      "/blog",
+      "/en",
+      "mailto:anthony@bir.com.py",
+      "https://wa.me/595994790348?text=Hola%20Anthony%2C%20vi%20tu%20sitio."
+    ],
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Anthony Bir",
+        "url": "https://bir.com.py",
+        "email": "anthony@bir.com.py",
+        "description": "Anthony Bir dirige un colegio, lleva la tesorería de una red de iglesias en Paraguay y construye los sistemas que usan en el trabajo diario.",
+        "jobTitle": "Presidente del Consejo Administrativo",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "AENA · Asociación Educativa Nuevas Alturas"
+        },
+        "affiliation": [
+          {
+            "@type": "Organization",
+            "name": "IPU Paraguay",
+            "description": "Tesorero"
+          },
+          {
+            "@type": "Organization",
+            "name": "ABN · Agencia Bir Núñez",
+            "url": "https://bir.com.py/servicios",
+            "description": "Fundador"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lambaré",
+          "addressCountry": "PY"
+        }
+      }
+    ],
+    "missingAlt": 0
+  },
+  {
+    "url": "https://bir.com.py/ia-gobernada",
+    "final": "https://www.bir.com.py/ia-gobernada",
+    "status": 200,
+    "title": "IA gobernada | Anthony Bir",
+    "h1": 1,
+    "lang": "es",
+    "description": "IA integrada en tus procesos: fuentes propias, tareas definidas, permisos y revisión humana para apoyar el trabajo y las decisiones.",
+    "canonical": "https://bir.com.py/ia-gobernada",
+    "robots": null,
+    "links": [
+      "#contenido",
+      "/",
+      "/historia",
+      "/servicios",
+      "/blog",
+      "/#contacto",
+      "#ejemplos",
+      "/contacto",
+      "/",
+      "/historia",
+      "/#contacto",
+      "/servicios",
+      "/blog",
+      "/en",
+      "mailto:anthony@bir.com.py",
+      "https://wa.me/595994790348?text=Hola%20Anthony%2C%20vi%20tu%20sitio."
+    ],
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Anthony Bir",
+        "url": "https://bir.com.py",
+        "email": "anthony@bir.com.py",
+        "description": "Anthony Bir dirige un colegio, lleva la tesorería de una red de iglesias en Paraguay y construye los sistemas que usan en el trabajo diario.",
+        "jobTitle": "Presidente del Consejo Administrativo",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "AENA · Asociación Educativa Nuevas Alturas"
+        },
+        "affiliation": [
+          {
+            "@type": "Organization",
+            "name": "IPU Paraguay",
+            "description": "Tesorero"
+          },
+          {
+            "@type": "Organization",
+            "name": "ABN · Agencia Bir Núñez",
+            "url": "https://bir.com.py/servicios",
+            "description": "Fundador"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lambaré",
+          "addressCountry": "PY"
+        }
+      }
+    ],
+    "missingAlt": 0
+  },
+  {
+    "url": "https://bir.com.py/aula",
+    "final": "https://www.bir.com.py/aula",
+    "status": 200,
+    "title": "Aula | Anthony Bir",
+    "h1": 1,
+    "lang": "es",
+    "description": "Gestión académica y preparación de materiales con fuentes institucionales, IA gobernada y revisión docente.",
+    "canonical": "https://bir.com.py/aula",
+    "robots": null,
+    "links": [
+      "#contenido",
+      "/",
+      "/historia",
+      "/servicios",
+      "/blog",
+      "/#contacto",
+      "/contacto",
+      "/screenshots/aula-planificacion-docente.png",
+      "/screenshots/aula-planificacion-docente.png",
+      "/casos#iba",
+      "/contacto",
+      "/",
+      "/historia",
+      "/#contacto",
+      "/servicios",
+      "/blog",
+      "/en",
+      "mailto:anthony@bir.com.py",
+      "https://wa.me/595994790348?text=Hola%20Anthony%2C%20vi%20tu%20sitio."
+    ],
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Anthony Bir",
+        "url": "https://bir.com.py",
+        "email": "anthony@bir.com.py",
+        "description": "Anthony Bir dirige un colegio, lleva la tesorería de una red de iglesias en Paraguay y construye los sistemas que usan en el trabajo diario.",
+        "jobTitle": "Presidente del Consejo Administrativo",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "AENA · Asociación Educativa Nuevas Alturas"
+        },
+        "affiliation": [
+          {
+            "@type": "Organization",
+            "name": "IPU Paraguay",
+            "description": "Tesorero"
+          },
+          {
+            "@type": "Organization",
+            "name": "ABN · Agencia Bir Núñez",
+            "url": "https://bir.com.py/servicios",
+            "description": "Fundador"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lambaré",
+          "addressCountry": "PY"
+        }
+      }
+    ],
+    "missingAlt": 0
+  },
+  {
+    "url": "https://bir.com.py/casos",
+    "final": "https://www.bir.com.py/casos",
+    "status": 200,
+    "title": "Casos | Anthony Bir",
+    "h1": 1,
+    "lang": "es",
+    "description": "AENA, IPU Paraguay e IBA: problemas de gestión, cambios concretos y sistemas construidos para cada operación.",
+    "canonical": "https://bir.com.py/casos",
+    "robots": null,
+    "links": [
+      "#contenido",
+      "/",
+      "/historia",
+      "/servicios",
+      "/blog",
+      "/#contacto",
+      "/screenshots/aena-centro-coordinacion.png",
+      "/screenshots/aena-centro-coordinacion.png",
+      "/screenshots/ipupy-dashboard.png",
+      "/screenshots/ipupy-dashboard.png",
+      "/screenshots/aula-planificacion-docente.png",
+      "/screenshots/aula-planificacion-docente.png",
+      "/aula",
+      "/contacto",
+      "/",
+      "/historia",
+      "/#contacto",
+      "/servicios",
+      "/blog",
+      "/en",
+      "mailto:anthony@bir.com.py",
+      "https://wa.me/595994790348?text=Hola%20Anthony%2C%20vi%20tu%20sitio."
+    ],
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Anthony Bir",
+        "url": "https://bir.com.py",
+        "email": "anthony@bir.com.py",
+        "description": "Anthony Bir dirige un colegio, lleva la tesorería de una red de iglesias en Paraguay y construye los sistemas que usan en el trabajo diario.",
+        "jobTitle": "Presidente del Consejo Administrativo",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "AENA · Asociación Educativa Nuevas Alturas"
+        },
+        "affiliation": [
+          {
+            "@type": "Organization",
+            "name": "IPU Paraguay",
+            "description": "Tesorero"
+          },
+          {
+            "@type": "Organization",
+            "name": "ABN · Agencia Bir Núñez",
+            "url": "https://bir.com.py/servicios",
+            "description": "Fundador"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lambaré",
+          "addressCountry": "PY"
+        }
+      }
+    ],
+    "missingAlt": 0
+  },
+  {
+    "url": "https://bir.com.py/blog",
+    "final": "https://www.bir.com.py/blog",
+    "status": 200,
+    "title": "Blog | Anthony Bir",
+    "h1": 1,
+    "lang": "es",
+    "description": "Notas de Anthony Bir sobre gestión, diseño de sistemas e IA: qué hicimos, qué aprendimos y por qué.",
+    "canonical": "https://bir.com.py/blog",
+    "robots": null,
+    "links": [
+      "#contenido",
+      "/",
+      "/historia",
+      "/servicios",
+      "/blog",
+      "/#contacto",
+      "/blog/planes-semanales-v2",
+      "/blog/aula-calma-como-estructura",
+      "/blog/ia-administracion-fiel",
+      "/blog/ia-aula-planificacion-docente",
+      "/",
+      "/historia",
+      "/#contacto",
+      "/servicios",
+      "/blog",
+      "/en",
+      "mailto:anthony@bir.com.py",
+      "https://wa.me/595994790348?text=Hola%20Anthony%2C%20vi%20tu%20sitio."
+    ],
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Anthony Bir",
+        "url": "https://bir.com.py",
+        "email": "anthony@bir.com.py",
+        "description": "Anthony Bir dirige un colegio, lleva la tesorería de una red de iglesias en Paraguay y construye los sistemas que usan en el trabajo diario.",
+        "jobTitle": "Presidente del Consejo Administrativo",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "AENA · Asociación Educativa Nuevas Alturas"
+        },
+        "affiliation": [
+          {
+            "@type": "Organization",
+            "name": "IPU Paraguay",
+            "description": "Tesorero"
+          },
+          {
+            "@type": "Organization",
+            "name": "ABN · Agencia Bir Núñez",
+            "url": "https://bir.com.py/servicios",
+            "description": "Fundador"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lambaré",
+          "addressCountry": "PY"
+        }
+      }
+    ],
+    "missingAlt": 0
+  },
+  {
+    "url": "https://bir.com.py/nosotros",
+    "final": "https://www.bir.com.py/nosotros",
+    "status": 200,
+    "title": "El equipo de ABN | Anthony Bir",
+    "h1": 1,
+    "lang": "es",
+    "description": "Dirección, sistemas, pedagogía, derecho y finanzas. Un equipo con experiencia directa en las operaciones que presenta como casos.",
+    "canonical": "https://bir.com.py/nosotros",
+    "robots": null,
+    "links": [
+      "#contenido",
+      "/",
+      "/historia",
+      "/servicios",
+      "/blog",
+      "/#contacto",
+      "/casos",
+      "/contacto",
+      "/",
+      "/historia",
+      "/#contacto",
+      "/servicios",
+      "/blog",
+      "/en",
+      "mailto:anthony@bir.com.py",
+      "https://wa.me/595994790348?text=Hola%20Anthony%2C%20vi%20tu%20sitio."
+    ],
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Anthony Bir",
+        "url": "https://bir.com.py",
+        "email": "anthony@bir.com.py",
+        "description": "Anthony Bir dirige un colegio, lleva la tesorería de una red de iglesias en Paraguay y construye los sistemas que usan en el trabajo diario.",
+        "jobTitle": "Presidente del Consejo Administrativo",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "AENA · Asociación Educativa Nuevas Alturas"
+        },
+        "affiliation": [
+          {
+            "@type": "Organization",
+            "name": "IPU Paraguay",
+            "description": "Tesorero"
+          },
+          {
+            "@type": "Organization",
+            "name": "ABN · Agencia Bir Núñez",
+            "url": "https://bir.com.py/servicios",
+            "description": "Fundador"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lambaré",
+          "addressCountry": "PY"
+        }
+      }
+    ],
+    "missingAlt": 0
+  },
+  {
+    "url": "https://bir.com.py/contacto",
+    "final": "https://www.bir.com.py/contacto",
+    "status": 200,
+    "title": "Contacto | Anthony Bir",
+    "h1": 1,
+    "lang": "es",
+    "description": "Escribe a Anthony Bir para conversar sobre el trabajo de tu organización. Respuesta habitual en 48 horas hábiles.",
+    "canonical": "https://bir.com.py/contacto",
+    "robots": null,
+    "links": [
+      "#contenido",
+      "/",
+      "/historia",
+      "/servicios",
+      "/blog",
+      "/#contacto",
+      "mailto:anthony@bir.com.py",
+      "https://wa.me/595994790348?text=Hola%20Anthony%2C%20vi%20tu%20sitio.",
+      "/",
+      "/historia",
+      "/#contacto",
+      "/servicios",
+      "/blog",
+      "/en",
+      "mailto:anthony@bir.com.py",
+      "https://wa.me/595994790348?text=Hola%20Anthony%2C%20vi%20tu%20sitio."
+    ],
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Anthony Bir",
+        "url": "https://bir.com.py",
+        "email": "anthony@bir.com.py",
+        "description": "Anthony Bir dirige un colegio, lleva la tesorería de una red de iglesias en Paraguay y construye los sistemas que usan en el trabajo diario.",
+        "jobTitle": "Presidente del Consejo Administrativo",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "AENA · Asociación Educativa Nuevas Alturas"
+        },
+        "affiliation": [
+          {
+            "@type": "Organization",
+            "name": "IPU Paraguay",
+            "description": "Tesorero"
+          },
+          {
+            "@type": "Organization",
+            "name": "ABN · Agencia Bir Núñez",
+            "url": "https://bir.com.py/servicios",
+            "description": "Fundador"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lambaré",
+          "addressCountry": "PY"
+        }
+      }
+    ],
+    "missingAlt": 0
+  },
+  {
+    "url": "https://bir.com.py/en",
+    "final": "https://www.bir.com.py/en",
+    "status": 200,
+    "title": "Paraguay Residency & Relocation Services | ABN · Agencia Bir Núñez",
+    "h1": 1,
+    "lang": "es",
+    "description": "Paraguay temporary residency for English-speaking families, including translations, notarizations, Interpol and Migraciones filing.",
+    "canonical": "https://bir.com.py/en",
+    "robots": null,
+    "links": [
+      "#contenido",
+      "/",
+      "/",
+      "/en#contact",
+      "#contact",
+      "https://wa.me/595994790348?text=Hi%20Anthony%2C%20I'm%20interested%20in%20ABN's%20Paraguay%20residency%20services.",
+      "https://migraciones.gov.py/residencia-temporal/",
+      "mailto:anthony@bir.com.py?subject=Paraguay%20residency%20inquiry",
+      "https://wa.me/595994790348?text=Hi%20Anthony%2C%20I'm%20interested%20in%20ABN's%20Paraguay%20residency%20services.",
+      "/",
+      "/en",
+      "/",
+      "/",
+      "mailto:anthony@bir.com.py",
+      "https://wa.me/595994790348?text=Hi%20Anthony%2C%20I'm%20interested%20in%20ABN's%20Paraguay%20residency%20services."
+    ],
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Anthony Bir",
+        "url": "https://bir.com.py",
+        "email": "anthony@bir.com.py",
+        "description": "Anthony Bir dirige un colegio, lleva la tesorería de una red de iglesias en Paraguay y construye los sistemas que usan en el trabajo diario.",
+        "jobTitle": "Presidente del Consejo Administrativo",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "AENA · Asociación Educativa Nuevas Alturas"
+        },
+        "affiliation": [
+          {
+            "@type": "Organization",
+            "name": "IPU Paraguay",
+            "description": "Tesorero"
+          },
+          {
+            "@type": "Organization",
+            "name": "ABN · Agencia Bir Núñez",
+            "url": "https://bir.com.py/servicios",
+            "description": "Fundador"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lambaré",
+          "addressCountry": "PY"
+        }
+      }
+    ],
+    "missingAlt": 0
+  },
+  {
+    "url": "https://bir.com.py/blog/planes-semanales-v2",
+    "final": "https://www.bir.com.py/blog/planes-semanales-v2",
+    "status": 200,
+    "title": "Planes Semanales V2: cinco formas de acompañar al grupo | Anthony Bir",
+    "h1": 1,
+    "lang": "es",
+    "description": "El docente puede cambiar el ritmo y la forma de enseñar sin perder la capacidad anual, la evaluación institucional ni su decisión final.",
+    "canonical": "https://bir.com.py/blog/planes-semanales-v2",
+    "robots": null,
+    "links": [
+      "#contenido",
+      "/",
+      "/historia",
+      "/servicios",
+      "/blog",
+      "/#contacto",
+      "/blog",
+      "/blog/planes-semanales-v2/slide-01.png",
+      "/blog/planes-semanales-v2/slide-01.png",
+      "/blog/planes-semanales-v2/planes-semanales-v2-aena.pptx",
+      "/blog/planes-semanales-v2/slide-02.png",
+      "/blog/planes-semanales-v2/slide-02.png",
+      "/blog/planes-semanales-v2/slide-03.png",
+      "/blog/planes-semanales-v2/slide-03.png",
+      "/blog/planes-semanales-v2/slide-04.png",
+      "/blog/planes-semanales-v2/slide-04.png",
+      "/blog/planes-semanales-v2/slide-05.png",
+      "/blog/planes-semanales-v2/slide-05.png",
+      "/blog/planes-semanales-v2/slide-06.png",
+      "/blog/planes-semanales-v2/slide-06.png",
+      "/blog/planes-semanales-v2/slide-07.png",
+      "/blog/planes-semanales-v2/slide-07.png",
+      "/blog/planes-semanales-v2/slide-08.png",
+      "/blog/planes-semanales-v2/slide-08.png",
+      "/contacto",
+      "/blog",
+      "/",
+      "/historia",
+      "/#contacto",
+      "/servicios",
+      "/blog",
+      "/en",
+      "mailto:anthony@bir.com.py",
+      "https://wa.me/595994790348?text=Hola%20Anthony%2C%20vi%20tu%20sitio."
+    ],
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Anthony Bir",
+        "url": "https://bir.com.py",
+        "email": "anthony@bir.com.py",
+        "description": "Anthony Bir dirige un colegio, lleva la tesorería de una red de iglesias en Paraguay y construye los sistemas que usan en el trabajo diario.",
+        "jobTitle": "Presidente del Consejo Administrativo",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "AENA · Asociación Educativa Nuevas Alturas"
+        },
+        "affiliation": [
+          {
+            "@type": "Organization",
+            "name": "IPU Paraguay",
+            "description": "Tesorero"
+          },
+          {
+            "@type": "Organization",
+            "name": "ABN · Agencia Bir Núñez",
+            "url": "https://bir.com.py/servicios",
+            "description": "Fundador"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lambaré",
+          "addressCountry": "PY"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Planes Semanales V2: cinco formas de acompañar al grupo",
+        "description": "El docente puede cambiar el ritmo y la forma de enseñar sin perder la capacidad anual, la evaluación institucional ni su decisión final.",
+        "datePublished": "2026-08-04",
+        "author": {
+          "@type": "Person",
+          "name": "Anthony Bir"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "ABN · Agencia Bir Núñez",
+          "url": "https://bir.com.py",
+          "logo": "https://bir.com.py/icon.svg"
+        },
+        "mainEntityOfPage": "https://bir.com.py/blog/planes-semanales-v2",
+        "inLanguage": "es-ES",
+        "image": "https://bir.com.py/blog/planes-semanales-v2/slide-01.png"
+      }
+    ],
+    "missingAlt": 0
+  },
+  {
+    "url": "https://bir.com.py/blog/aula-calma-como-estructura",
+    "final": "https://www.bir.com.py/blog/aula-calma-como-estructura",
+    "status": 200,
+    "title": "Quitamos ruido de la planificación docente | Anthony Bir",
+    "h1": 1,
+    "lang": "es",
+    "description": "Rediseñamos la planificación de Aula para que cada docente vea dónde está, qué sigue y qué decisión le corresponde.",
+    "canonical": "https://bir.com.py/blog/aula-calma-como-estructura",
+    "robots": null,
+    "links": [
+      "#contenido",
+      "/",
+      "/historia",
+      "/servicios",
+      "/blog",
+      "/#contacto",
+      "/blog",
+      "/blog/aula-calma-como-estructura/hub-llegada.png",
+      "/blog/aula-calma-como-estructura/hub-llegada.png",
+      "/blog/aula-calma-como-estructura/lienzo-creacion.png",
+      "/blog/aula-calma-como-estructura/lienzo-creacion.png",
+      "/blog/aula-calma-como-estructura/plan-anual.png",
+      "/blog/aula-calma-como-estructura/plan-anual.png",
+      "/blog/aula-calma-como-estructura/calendario.png",
+      "/blog/aula-calma-como-estructura/calendario.png",
+      "/blog/aula-calma-como-estructura/mis-planes.png",
+      "/blog/aula-calma-como-estructura/mis-planes.png",
+      "/blog/aula-calma-como-estructura/hub-direccion.png",
+      "/blog/aula-calma-como-estructura/hub-direccion.png",
+      "/blog/aula-calma-como-estructura/vista-movil.png",
+      "/blog/aula-calma-como-estructura/vista-movil.png",
+      "/contacto",
+      "/blog",
+      "/",
+      "/historia",
+      "/#contacto",
+      "/servicios",
+      "/blog",
+      "/en",
+      "mailto:anthony@bir.com.py",
+      "https://wa.me/595994790348?text=Hola%20Anthony%2C%20vi%20tu%20sitio."
+    ],
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Anthony Bir",
+        "url": "https://bir.com.py",
+        "email": "anthony@bir.com.py",
+        "description": "Anthony Bir dirige un colegio, lleva la tesorería de una red de iglesias en Paraguay y construye los sistemas que usan en el trabajo diario.",
+        "jobTitle": "Presidente del Consejo Administrativo",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "AENA · Asociación Educativa Nuevas Alturas"
+        },
+        "affiliation": [
+          {
+            "@type": "Organization",
+            "name": "IPU Paraguay",
+            "description": "Tesorero"
+          },
+          {
+            "@type": "Organization",
+            "name": "ABN · Agencia Bir Núñez",
+            "url": "https://bir.com.py/servicios",
+            "description": "Fundador"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lambaré",
+          "addressCountry": "PY"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Quitamos ruido de la planificación docente",
+        "description": "Rediseñamos la planificación de Aula para que cada docente vea dónde está, qué sigue y qué decisión le corresponde.",
+        "datePublished": "2026-06-20",
+        "author": {
+          "@type": "Person",
+          "name": "Anthony Bir"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "ABN · Agencia Bir Núñez",
+          "url": "https://bir.com.py",
+          "logo": "https://bir.com.py/icon.svg"
+        },
+        "mainEntityOfPage": "https://bir.com.py/blog/aula-calma-como-estructura",
+        "inLanguage": "es-ES",
+        "image": "https://bir.com.py/blog/aula-calma-como-estructura/hub-llegada.png"
+      }
+    ],
+    "missingAlt": 0
+  },
+  {
+    "url": "https://bir.com.py/blog/ia-administracion-fiel",
+    "final": "https://www.bir.com.py/blog/ia-administracion-fiel",
+    "status": 200,
+    "title": "Cómo usamos IA sin perder control sobre la tesorería | Anthony Bir",
+    "h1": 1,
+    "lang": "es",
+    "description": "Cuatro reglas para usar inteligencia artificial en la tesorería de IPU Paraguay sin debilitar la responsabilidad ni la rendición de cuentas.",
+    "canonical": "https://bir.com.py/blog/ia-administracion-fiel",
+    "robots": null,
+    "links": [
+      "#contenido",
+      "/",
+      "/historia",
+      "/servicios",
+      "/blog",
+      "/#contacto",
+      "/blog",
+      "/blog/ia-administracion-fiel/ai-governance.png",
+      "/blog/ia-administracion-fiel/ai-governance.png",
+      "/contacto",
+      "/blog",
+      "/",
+      "/historia",
+      "/#contacto",
+      "/servicios",
+      "/blog",
+      "/en",
+      "mailto:anthony@bir.com.py",
+      "https://wa.me/595994790348?text=Hola%20Anthony%2C%20vi%20tu%20sitio."
+    ],
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Anthony Bir",
+        "url": "https://bir.com.py",
+        "email": "anthony@bir.com.py",
+        "description": "Anthony Bir dirige un colegio, lleva la tesorería de una red de iglesias en Paraguay y construye los sistemas que usan en el trabajo diario.",
+        "jobTitle": "Presidente del Consejo Administrativo",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "AENA · Asociación Educativa Nuevas Alturas"
+        },
+        "affiliation": [
+          {
+            "@type": "Organization",
+            "name": "IPU Paraguay",
+            "description": "Tesorero"
+          },
+          {
+            "@type": "Organization",
+            "name": "ABN · Agencia Bir Núñez",
+            "url": "https://bir.com.py/servicios",
+            "description": "Fundador"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lambaré",
+          "addressCountry": "PY"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Cómo usamos IA sin perder control sobre la tesorería",
+        "description": "Cuatro reglas para usar inteligencia artificial en la tesorería de IPU Paraguay sin debilitar la responsabilidad ni la rendición de cuentas.",
+        "datePublished": "2026-06-12",
+        "author": {
+          "@type": "Person",
+          "name": "Anthony Bir"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "ABN · Agencia Bir Núñez",
+          "url": "https://bir.com.py",
+          "logo": "https://bir.com.py/icon.svg"
+        },
+        "mainEntityOfPage": "https://bir.com.py/blog/ia-administracion-fiel",
+        "inLanguage": "es-ES",
+        "image": "https://bir.com.py/blog/ia-administracion-fiel/ai-governance.png"
+      }
+    ],
+    "missingAlt": 0
+  },
+  {
+    "url": "https://bir.com.py/blog/ia-aula-planificacion-docente",
+    "final": "https://www.bir.com.py/blog/ia-aula-planificacion-docente",
+    "status": 200,
+    "title": "La IA propone. El docente decide. | Anthony Bir",
+    "h1": 1,
+    "lang": "es",
+    "description": "Así usamos inteligencia artificial en Aula para preparar planes y materiales sin quitar autoridad al docente.",
+    "canonical": "https://bir.com.py/blog/ia-aula-planificacion-docente",
+    "robots": null,
+    "links": [
+      "#contenido",
+      "/",
+      "/historia",
+      "/servicios",
+      "/blog",
+      "/#contacto",
+      "/blog",
+      "/blog/ia-aula-planificacion-docente/hub-docente.png",
+      "/blog/ia-aula-planificacion-docente/hub-docente.png",
+      "/blog/ia-aula-planificacion-docente/hub-docente.png",
+      "/blog/ia-aula-planificacion-docente/hub-docente.png",
+      "/blog/ia-aula-planificacion-docente/planificacion-semanal.png",
+      "/blog/ia-aula-planificacion-docente/planificacion-semanal.png",
+      "/blog/ia-aula-planificacion-docente/materiales-docente.png",
+      "/blog/ia-aula-planificacion-docente/materiales-docente.png",
+      "/blog/ia-aula-planificacion-docente/biblioteca-editorial.png",
+      "/blog/ia-aula-planificacion-docente/biblioteca-editorial.png",
+      "/blog/ia-aula-planificacion-docente/material-detalle.png",
+      "/blog/ia-aula-planificacion-docente/material-detalle.png",
+      "/blog/ia-aula-planificacion-docente/prompts-catalog.png",
+      "/blog/ia-aula-planificacion-docente/prompts-catalog.png",
+      "/blog/ia-aula-planificacion-docente/ai-evals.png",
+      "/blog/ia-aula-planificacion-docente/ai-evals.png",
+      "/contacto",
+      "/blog",
+      "/",
+      "/historia",
+      "/#contacto",
+      "/servicios",
+      "/blog",
+      "/en",
+      "mailto:anthony@bir.com.py",
+      "https://wa.me/595994790348?text=Hola%20Anthony%2C%20vi%20tu%20sitio."
+    ],
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Anthony Bir",
+        "url": "https://bir.com.py",
+        "email": "anthony@bir.com.py",
+        "description": "Anthony Bir dirige un colegio, lleva la tesorería de una red de iglesias en Paraguay y construye los sistemas que usan en el trabajo diario.",
+        "jobTitle": "Presidente del Consejo Administrativo",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "AENA · Asociación Educativa Nuevas Alturas"
+        },
+        "affiliation": [
+          {
+            "@type": "Organization",
+            "name": "IPU Paraguay",
+            "description": "Tesorero"
+          },
+          {
+            "@type": "Organization",
+            "name": "ABN · Agencia Bir Núñez",
+            "url": "https://bir.com.py/servicios",
+            "description": "Fundador"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lambaré",
+          "addressCountry": "PY"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "La IA propone. El docente decide.",
+        "description": "Así usamos inteligencia artificial en Aula para preparar planes y materiales sin quitar autoridad al docente.",
+        "datePublished": "2026-06-10",
+        "author": {
+          "@type": "Person",
+          "name": "Anthony Bir"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "ABN · Agencia Bir Núñez",
+          "url": "https://bir.com.py",
+          "logo": "https://bir.com.py/icon.svg"
+        },
+        "mainEntityOfPage": "https://bir.com.py/blog/ia-aula-planificacion-docente",
+        "inLanguage": "es-ES",
+        "image": "https://bir.com.py/blog/ia-aula-planificacion-docente/hub-docente.png"
+      }
+    ],
+    "missingAlt": 0
+  }
+]

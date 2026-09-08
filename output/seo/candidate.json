@@ -1,0 +1,23 @@
+{
+  "base": "529b44a226525beec62e73bc8c7dd5f55c93415d",
+  "fingerprint": "6495a6cf37e5416fac34e1b8667bca542b325ad406dbc0bff90989d86b78c312",
+  "files": [
+    "src/app/JsonLd.tsx",
+    "src/app/aula/page.tsx",
+    "src/app/blog/[slug]/page.tsx",
+    "src/app/blog/page.tsx",
+    "src/app/casos/page.tsx",
+    "src/app/contacto/page.tsx",
+    "src/app/historia/page.tsx",
+    "src/app/ia-gobernada/page.tsx",
+    "src/app/layout.tsx",
+    "src/app/nosotros/page.tsx",
+    "src/app/page-metadata.ts",
+    "src/app/page.tsx",
+    "src/app/robots.ts",
+    "src/app/servicios/page.tsx",
+    "src/app/site-information.ts",
+    "src/app/sitemap.ts",
+    "tests/seo-contract.test.mjs"
+  ]
+}

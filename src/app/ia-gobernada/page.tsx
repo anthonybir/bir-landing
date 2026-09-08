@@ -2,7 +2,7 @@ import { PageIntro, ContactClose } from '../PageLayout';
 import { pageMetadata } from '../page-metadata';
 import Link from 'next/link';
 
-export const metadata = pageMetadata('IA gobernada', 'IA integrada en tus procesos: fuentes propias, tareas definidas, permisos y revisión humana para apoyar el trabajo y las decisiones.', '/ia-gobernada');
+export const metadata = pageMetadata('Inteligencia artificial para organizaciones en Paraguay', 'Integra IA en los procesos de tu organización con fuentes propias, permisos y revisión humana. Conoce los usos de ABN en gestión, tesorería y formación.', '/ia-gobernada', 'ABN');
 
 const principles = [
   {
@@ -47,8 +47,8 @@ const examples = [
 export default function IaGobernadaPage() {
   return (
     <>
-      <PageIntro label="IA gobernada" title="Cómo uso la IA en los sistemas.">
-        <p>Uso la IA para tareas concretas: consultar información, preparar borradores o sugerir categorías. Para cada función definimos qué fuentes puede usar, qué permisos necesita y quién revisa el resultado.</p>
+      <PageIntro label="ABN · IA gobernada" title="Inteligencia artificial con reglas claras.">
+        <p>En ABN incorporamos inteligencia artificial a los sistemas de organizaciones en Paraguay. La usamos para consultar información, preparar borradores o sugerir categorías. Para cada función definimos qué fuentes puede usar, qué permisos necesita y quién revisa el resultado.</p>
         <Link href="#ejemplos" className="link-quiet mt-6 inline-block">Ver ejemplos</Link>
       </PageIntro>
       <section className="page-container page-section" aria-label="Cómo se gobierna">
@@ -92,6 +92,10 @@ export default function IaGobernadaPage() {
           prioridades de cada organización. Empezamos por una tarea que se pueda
           evaluar y revisar.
         </p>
+        <div className="mt-8 flex flex-wrap gap-x-8 gap-y-4 font-sans text-base">
+          <Link href="/servicios" className="link-quiet">Cómo implementamos los sistemas</Link>
+          <Link href="/casos" className="link-quiet">Ver los casos de AENA, IPU Paraguay e IBA</Link>
+        </div>
       </section>
       <ContactClose title="¿En qué tarea necesitas ayuda?">Cuéntame qué tarea tienes en mente. Revisaremos qué información necesita y cómo comprobar si la IA aporta algo útil.</ContactClose>
     </>

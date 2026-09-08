@@ -1,8 +1,10 @@
 import Link from 'next/link';
+import JsonLd from '../JsonLd';
+import { ABN_ORGANIZATION } from '../site-information';
 import { PageIntro, ContactClose } from '../PageLayout';
 import { pageMetadata } from '../page-metadata';
 
-export const metadata = pageMetadata('El equipo de ABN', 'Dirección, sistemas, pedagogía, derecho y finanzas. Un equipo con experiencia directa en las operaciones que presenta como casos.', '/nosotros');
+export const metadata = pageMetadata('Equipo de sistemas e IA en Paraguay', 'Dirección, sistemas, pedagogía, derecho y finanzas. Un equipo con experiencia directa en las operaciones que presenta como casos.', '/nosotros', 'ABN');
 
 const team = [
   { name: 'Anthony Bir', area: 'Dirección y sistemas', text: 'Preside el Consejo Administrativo de AENA y es tesorero de IPU Paraguay. Conecta las necesidades de dirección con el diseño y la construcción de los sistemas que usan ambas organizaciones.' },
@@ -14,6 +16,7 @@ const team = [
 export default function NosotrosPage() {
   return (
     <>
+      <JsonLd data={{ '@context': 'https://schema.org', ...ABN_ORGANIZATION }} />
       <PageIntro label="ABN · Equipo" title="Quiénes trabajamos en ABN.">
         <p>ABN reúne dirección, tecnología, pedagogía, derecho y finanzas. Trabajamos en la dirección de un colegio y en la tesorería de una red de iglesias. Conocemos lo que cuesta reunir la información, tomar una decisión y darle seguimiento.</p>
         <p>Construimos los sistemas para sostener ese trabajo. Esa experiencia también nos permite entender los procesos de otras organizaciones y definir con ellas qué necesitan mejorar.</p>

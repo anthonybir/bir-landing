@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import JsonLd from '../../JsonLd';
+import { absoluteUrl, PERSON_ID } from '../../site-information';
 import ProductFigure from '../../ProductFigure';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -19,16 +21,17 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     title: post.title,
     description: post.description,
     alternates: {
-      canonical: `/blog/${post.slug}`,
+      canonical: absoluteUrl(`/blog/${post.slug}`),
     },
     twitter: { card: 'summary_large_image', title: post.title, description: post.description, images: post.lead.src },
     openGraph: {
       title: post.title,
       description: post.description,
-      url: `https://bir.com.py/blog/${post.slug}`,
+      url: absoluteUrl(`/blog/${post.slug}`),
       type: 'article',
       locale: 'es_ES',
       publishedTime: post.dateISO,
+      authors: [absoluteUrl('/historia')],
       images: post.lead.src,
     },
   };
@@ -39,34 +42,30 @@ export default async function PostPage({ params }: Params) {
   const post = getPostBySlug(slug);
   if (!post) notFound();
 
-  const postUrl = `https://bir.com.py/blog/${post.slug}`;
+  const postUrl = absoluteUrl(`/blog/${post.slug}`);
   const blogPostingJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
+    '@id': `${postUrl}#article`,
+    url: postUrl,
     headline: post.title,
     description: post.description,
     datePublished: post.dateISO,
     author: {
       '@type': 'Person',
+      '@id': PERSON_ID,
       name: 'Anthony Bir',
+      url: absoluteUrl('/historia'),
     },
-    publisher: {
-      '@type': 'Organization',
-      name: 'ABN · Agencia Bir Núñez',
-      url: 'https://bir.com.py',
-      logo: 'https://bir.com.py/icon.svg',
-    },
+    publisher: { '@type': 'Person', '@id': PERSON_ID, name: 'Anthony Bir', url: absoluteUrl('/historia') },
     mainEntityOfPage: postUrl,
     inLanguage: 'es-ES',
-    image: `https://bir.com.py${post.lead.src}`,
+    image: absoluteUrl(post.lead.src),
   } as const;
 
   return (
     <article className="article-shell">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingJsonLd) }}
-      />
+      <JsonLd data={blogPostingJsonLd} />
       {/* Header */}
       <header>
         <Link href="/blog" className="label-caps inline-block transition-colors hover:text-gray-900">
@@ -78,6 +77,8 @@ export default async function PostPage({ params }: Params) {
         </h1>
         <p className="body-copy mt-6">{post.description}</p>
         <div className="mt-6 flex flex-wrap items-center gap-2 font-sans text-xs text-gray-600">
+          <Link href="/historia" rel="author" className="link-quiet">Anthony Bir</Link>
+          <span aria-hidden>·</span>
           <span>{post.institution}</span>
           <span aria-hidden>·</span>
           <time dateTime={post.dateISO}>{post.dateLabel}</time>

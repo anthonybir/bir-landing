@@ -1,19 +1,22 @@
 import type { Metadata } from 'next';
+import { absoluteUrl } from './site-information';
 
-/** Route metadata stays together so social previews cannot inherit the home description. */
-export function pageMetadata(title: string, description: string, path: string): Metadata {
+/** One canonical and preview contract; service pages identify ABN explicitly. */
+export function pageMetadata(title: string, description: string, path: string, brand: 'Anthony Bir' | 'ABN' = 'Anthony Bir'): Metadata {
+  const fullTitle = `${title} | ${brand}`;
   return {
-    title,
+    title: { absolute: fullTitle },
     description,
-    alternates: { canonical: path },
+    alternates: { canonical: absoluteUrl(path) },
     openGraph: {
-      title: `${title} | Anthony Bir`,
+      title: fullTitle,
       description,
-      url: path,
+      url: absoluteUrl(path),
+      siteName: 'Anthony Bir',
       locale: 'es_ES',
       type: 'website',
-      images: '/opengraph-image',
+      images: absoluteUrl('/opengraph-image'),
     },
-    twitter: { card: 'summary_large_image', title, description, images: ['/opengraph-image'] },
+    twitter: { card: 'summary_large_image', title: fullTitle, description, images: [absoluteUrl('/opengraph-image')] },
   };
 }

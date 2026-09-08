@@ -3,7 +3,7 @@ import { PageIntro, ContactClose } from '../PageLayout';
 import ProductFigure from '../ProductFigure';
 import { pageMetadata } from '../page-metadata';
 
-export const metadata = pageMetadata('Casos', 'AENA, IPU Paraguay e IBA: problemas de gestión, cambios concretos y sistemas construidos para cada operación.', '/casos');
+export const metadata = pageMetadata('Casos de sistemas de gestión e IA en Paraguay', 'AENA, IPU Paraguay e IBA: problemas de gestión, cambios concretos y sistemas construidos para cada operación.', '/casos', 'ABN');
 
 const cases = [
   {
