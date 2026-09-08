@@ -1,3 +1,25 @@
+# Personal history launch · 2026-09-08
+
+The personal homepage now leads to `/historia`, which presents Anthony Bir's
+confirmed career, current AENA and IPU Paraguay work, and the path into ABN.
+Navigation, footer, metadata, sitemap, Open Graph copy and WebMCP discovery use
+the same personal-first positioning. ABN remains an affiliation and service path.
+
+- **Pass:** `pnpm lint`, `pnpm build` (22 generated entries, including
+  `/historia` and TypeScript), and `git diff --check`.
+- **Pass:** `/historia` inspected at 1440 × 1000, 1024 × 900 and 375 × 812.
+  The homepage was rechecked at 1440 × 1000 and 375 × 812. Desktop navigation
+  fits; the mobile menu exposes Historia, ABN, Blog and Contacto without overlap.
+- **Pass:** `/historia` title, description, canonical URL and sitemap entry;
+  `/opengraph-image` returns PNG with HTTP 200 locally.
+- Evidence: `output/playwright/history-1440.png`, `history-1024.png`,
+  `history-375.png`, `personal-launch-1440.png` and `personal-launch-375.png`.
+- Local limitation: the Vercel Analytics script returns 404 outside Vercel.
+  Native WebMCP registration and production publication remain **Not Proven**
+  until the release checks below complete.
+
+---
+
 # Anthony-tone copy pass · 2026-09-08
 
 Reviewed the 13 content routes, shared prompts, metadata, form copy and four

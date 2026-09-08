@@ -58,6 +58,10 @@ const personJsonLd = {
   description: SITE_DESCRIPTION,
   jobTitle: 'Presidente del Consejo Administrativo',
   worksFor: { '@type': 'Organization', name: 'AENA · Asociación Educativa Nuevas Alturas' },
+  affiliation: [
+    { '@type': 'Organization', name: 'IPU Paraguay', description: 'Tesorero' },
+    { '@type': 'Organization', name: 'ABN · Agencia Bir Núñez', url: 'https://bir.com.py/servicios', description: 'Fundador' },
+  ],
   address: { '@type': 'PostalAddress', addressLocality: 'Lambaré', addressCountry: 'PY' },
 } as const;
 

@@ -3,6 +3,8 @@
 Personal site for Anthony Bir at [bir.com.py](https://bir.com.py).
 
 The home presents a short introduction, career timeline and contact links.
+`/historia` expands the confirmed career path and connects it to Anthony's current
+work and ABN.
 ABN is an affiliation with its existing service pages; it is not the home identity.
 `docs/positioning-strategy.md` is the messaging SSOT.
 
@@ -34,10 +36,11 @@ wait for entrance animations or intersection observers.
 **Gold is reserved for a result on teal.** `.num-signal` is scoped to `.teal-band`
 because the signal colour is unsuitable for small text on cream.
 
-The home is a simple text profile: introduction, career timeline and contact.
+The home is a simple profile: introduction, career timeline and contact.
 Keep the existing cream, Instrument Serif, Satoshi and teal tokens. The conceptual desk photo sits beside the introduction on desktop and below it
 on mobile, with an explicit conceptual-image caption. No proof band, system
-inventory or release statistics. Career rows stack on mobile.
+inventory or release statistics. Career rows stack on mobile. `/historia` uses
+the same restrained text-led system and only confirmed career facts.
 
 ## Features
 

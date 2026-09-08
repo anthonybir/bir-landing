@@ -6,6 +6,7 @@ const BASE = 'https://bir.com.py';
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes: Array<{ path: string; priority: number }> = [
     { path: '', priority: 1 },
+    { path: '/historia', priority: 0.9 },
     { path: '/servicios', priority: 0.9 },
     { path: '/ia-gobernada', priority: 0.9 },
     { path: '/aula', priority: 0.8 },

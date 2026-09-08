@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { SITE_DESCRIPTION, SITE_TITLE } from './site-information';
+import { CAREER, SITE_DESCRIPTION, SITE_TITLE } from './site-information';
 import { WHATSAPP_URL } from './WhatsAppFloat';
 
 export const metadata: Metadata = {
@@ -9,13 +9,6 @@ export const metadata: Metadata = {
   description: SITE_DESCRIPTION,
   alternates: { canonical: '/' },
 };
-
-const career = [
-  { date: '2005 a 2006', name: 'HJ Heinz', text: 'Coordinador de ventas de exportación' },
-  { date: '2007 a 2011', name: 'Thermo Fisher Scientific', text: 'Líder de proyectos internacionales' },
-  { date: '2012 a 2019', name: 'Empresa propia de logística', text: 'Propietario y gerente general' },
-  { date: '2020 →', name: 'AENA · Nuevas Alturas', text: 'Presidente del Consejo Administrativo' },
-] as const;
 
 export default function HomePage() {
   return (
@@ -27,7 +20,7 @@ export default function HomePage() {
           Dirijo un colegio y llevo la tesorería de una red de iglesias en Paraguay.
           También construyo los sistemas que usamos en el trabajo diario, con apoyo de IA y revisión humana.
         </p>
-        <p className="body-copy">Soy fundador de <Link href="/servicios" className="link-quiet">ABN · Agencia Bir Núñez</Link>.</p>
+        <p className="body-copy">Soy fundador de <Link href="/servicios" className="link-quiet">ABN · Agencia Bir Núñez</Link>, donde llevo esa experiencia a otras organizaciones.</p>
         <p className="body-copy"><Link href="/casos" className="link-quiet">Ver mi trabajo</Link></p>
         </div>
         <figure className="profile-hero-figure">
@@ -48,14 +41,17 @@ export default function HomePage() {
         <p className="label-caps text-brand-teal">Trayectoria</p>
         <h2 id="trayectoria-title" className="display section-title">Mi trayectoria.</h2>
         <div className="profile-list">
-          {career.map((item) => (
-            <div key={`${item.date}-${item.name}`} className="profile-row profile-row-timeline">
+          {CAREER.map((item) => (
+            <div key={`${item.date}-${item.organization}`} className="profile-row profile-row-timeline">
               <p className="label-caps">{item.date}</p>
-              <p className="display profile-item">{item.name}</p>
-              <p className="body-copy">{item.text}</p>
+              <p className="display profile-item">{item.organization}</p>
+              <p className="body-copy">{item.role}</p>
             </div>
           ))}
         </div>
+        <p className="body-copy profile-follow-up">
+          <Link href="/historia" className="link-quiet">Conoce la historia completa</Link>
+        </p>
       </section>
       <section id="contacto" className="page-container profile-section" aria-labelledby="contacto-title">
         <p className="label-caps text-brand-teal">Contacto</p>
