@@ -1,3 +1,41 @@
+# Concept photo follow-up · 2026-09-08
+
+- Restored the conceptual desk image beside the personal introduction on desktop
+  and below it on mobile. Kept the caption and quiet link to `/casos`.
+- **Pass:** lint, build and diff checks for the final application changes.
+- **Pass:** final hero screenshots inspected at 1440 × 1000 and 375 × 812:
+  `output/playwright/concept-desktop.png`, `output/playwright/concept-mobile.png`.
+- The earlier full-page evidence and fingerprint below describe the text-only
+  iteration. Contact logic is unchanged; its five passing tests remain applicable.
+- **Not Proven:** production deployment and native WebMCP execution. The local
+  Vercel Analytics script still returns 404.
+
+---
+
+# Personal home review · 2026-09-08
+
+The home is now Anthony Bir's introduction, four-entry career timeline and
+contact. ABN is an affiliation; existing service routes remain available.
+The unpublished history route, system inventory and release counts were removed.
+Previous visual records below describe earlier designs, not this home.
+
+## Verification
+
+- **Pass:** `pnpm lint`, `pnpm test` (5 contact-route tests), `pnpm build`
+  (21 generated entries, including TypeScript), `git diff --check`.
+- **Pass:** rendered home screenshots inspected at 375 × 812 and 1440 × 1000;
+  mobile content width is 375px. Mobile menu contact navigation closes the menu
+  and reaches `/#contacto`.
+- Evidence: `output/playwright/personal-mobile.png` and
+  `output/playwright/personal-desktop.png`.
+- Existing local limitation: Vercel Analytics script returns 404 on the local
+  production server. No application error was observed in this home check.
+- **Not Proven:** live email delivery, native WebMCP execution and production
+  deployment. Contact tests mock the mail provider. No message was sent.
+- Application diff SHA-256: `83d78c4ff88912e3371db1ef19a267363f208015b269d5fefd29064409cdf6d2`.
+
+---
+
 # Closing review · 2026-09-04
 
 **Pass within the reviewed scope.** Follow-up to the full-page visual review below.

@@ -1,11 +1,9 @@
 # BIR Landing
 
-Public marketing site for [bir.com.py](https://bir.com.py).
+Personal site for Anthony Bir at [bir.com.py](https://bir.com.py).
 
-ABN builds operational systems that help leaders understand their organization,
-make informed decisions and follow up. Governed AI works inside those systems
-with institutional context, defined tasks and human review. Education and church
-organizations are proven examples, not eligibility limits.
+The home presents a short introduction, career timeline and contact links.
+ABN is an affiliation with its existing service pages; it is not the home identity.
 `docs/positioning-strategy.md` is the messaging SSOT.
 
 ## Tech Stack
@@ -36,12 +34,10 @@ wait for entrance animations or intersection observers.
 **Gold is reserved for a result on teal.** `.num-signal` is scoped to `.teal-band`
 because the signal colour is unsuitable for small text on cream.
 
-The home follows the selected working-table direction: upright Instrument Serif,
-flat conceptual photography and a solid teal proof band. The hero splits at 900px;
-smaller screens keep the photograph below the copy, visible in normal flow. No
-rotated product screenshot or decorative progression grid on the home. Actual
-product screenshots remain on the case pages. The generated photo is identified
-as conceptual; it does not depict a customer location.
+The home is a simple text profile: introduction, career timeline and contact.
+Keep the existing cream, Instrument Serif, Satoshi and teal tokens. The conceptual desk photo sits beside the introduction on desktop and below it
+on mobile, with an explicit conceptual-image caption. No proof band, system
+inventory or release statistics. Career rows stack on mobile.
 
 ## Features
 

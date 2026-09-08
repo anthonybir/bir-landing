@@ -1,40 +1,33 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { WHATSAPP_URL, WHATSAPP_EN_URL } from './WhatsAppFloat';
 
 const es = {
-  blurb:
-    'Sistemas de gestión e IA gobernada para entender tu organización y decidir con claridad.',
+  blurb: 'Dirección, tesorería y sistemas desde Lambaré, Paraguay.',
   site: 'Sitio',
   contact: 'Contacto',
   whatsapp: 'WhatsApp',
   location: 'Lambaré, Paraguay',
   links: [
-    { href: '/servicios', label: 'Servicios' },
-    { href: '/ia-gobernada', label: 'IA gobernada' },
-    { href: '/aula', label: 'Aula' },
-    { href: '/casos', label: 'Casos' },
+    { href: '/#trayectoria', label: 'Trayectoria' },
+    { href: '/#contacto', label: 'Contacto' },
+    { href: '/servicios', label: 'ABN' },
     { href: '/blog', label: 'Blog' },
-    { href: '/nosotros', label: 'Nosotros' },
-    { href: '/contacto', label: 'Contacto' },
   ],
   langSwitch: { href: '/en', label: 'English · Relocation services' },
 };
 
 const en = {
-  blurb:
-    'Paraguay residency support for English-speaking families, led from Lambaré.',
+  blurb: 'Paraguay residency support for English-speaking families, led from Lambaré.',
   site: 'Site',
   contact: 'Contact',
   whatsapp: 'WhatsApp',
   location: 'Lambaré, Paraguay',
   links: [
     { href: '/en', label: 'Relocation services' },
-    { href: '/casos', label: 'Casos (ES)' },
-    { href: '/nosotros', label: 'Nosotros (ES)' },
+    { href: '/', label: 'Anthony Bir (ES)' },
   ],
   langSwitch: { href: '/', label: 'Español · Sitio principal' },
 };
@@ -49,12 +42,7 @@ export default function Footer() {
       <div className="page-container footer-inner">
         <div className="footer-grid">
           <div className="footer-brand">
-            <Image
-              src="/logos/abn-lockup-horizontal-teal.svg"
-              alt="ABN, Agencia Bir Núñez"
-              width={190}
-              height={30}
-            />
+            <p className="display site-wordmark">Anthony Bir</p>
             <p className="mt-6 font-sans text-base leading-relaxed text-brand-cream-muted">
               {t.blurb}
             </p>
@@ -93,7 +81,7 @@ export default function Footer() {
         </div>
 
         <p className="footer-copyright font-sans text-xs text-brand-cream-muted">
-          © {new Date().getFullYear()} Agencia Bir Núñez · bir.com.py
+          © {new Date().getFullYear()} Anthony Bir · Lambaré, Paraguay
         </p>
       </div>
     </footer>

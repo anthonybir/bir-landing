@@ -1,6 +1,6 @@
 /** Shared public positioning for metadata and browser-agent discovery. */
-export const SITE_TITLE = 'ABN · Sistemas para decidir con claridad';
+export const SITE_TITLE = 'Anthony Bir · Trayectoria y contacto';
 export const SITE_DESCRIPTION =
-  'Sistemas de gestión para entender tu organización, conectar información y tomar decisiones. IA gobernada con tus datos, procesos y reglas.';
+  'Anthony Bir dirige un colegio y la tesorería de una red de iglesias en Paraguay, y construye los sistemas que usan, con IA y revisión humana.';
 
 export const PROVEN_SECTORS = ['Educación', 'Organizaciones eclesiásticas'] as const;

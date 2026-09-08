@@ -1,19 +1,20 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const LINKS_ES = [
-  { href: '/servicios', label: 'Servicios' },
-  { href: '/ia-gobernada', label: 'IA gobernada' },
-  { href: '/casos', label: 'Casos' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/nosotros', label: 'Nosotros' },
+  { href: '/#trayectoria', label: 'Trayectoria' },
 ] as const;
 
 const LINKS_EN = [{ href: '/', label: 'Español' }] as const;
+
+/** Hash links point into the home; they never mark a route as current. */
+function isCurrent(pathname: string, href: string): boolean {
+  if (href.includes('#')) return false;
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
 
 export default function NavBar() {
   const [openPath, setOpenPath] = useState<string | null>(null);
@@ -26,7 +27,7 @@ export default function NavBar() {
     document.documentElement.lang = isEnglish ? 'en' : 'es';
   }, [isEnglish]);
   const links = isEnglish ? LINKS_EN : LINKS_ES;
-  const ctaHref = isEnglish ? '/en#contact' : '/contacto';
+  const ctaHref = isEnglish ? '/en#contact' : '/#contacto';
   const ctaLabel = isEnglish ? 'Contact' : 'Contacto';
 
   return (
@@ -41,14 +42,8 @@ export default function NavBar() {
         className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:px-8"
         aria-label={isEnglish ? 'Main navigation' : 'Principal'}
       >
-        <Link href="/" aria-label={isEnglish ? 'ABN, Agencia Bir Núñez, home' : 'ABN, Agencia Bir Núñez, inicio'} onClick={() => setOpenPath(null)}>
-          <Image
-            src="/logos/abn-lockup-horizontal-teal.svg"
-            alt="ABN, Agencia Bir Núñez"
-            width={171}
-            height={27}
-            priority
-          />
+        <Link href="/" aria-label={isEnglish ? 'Anthony Bir, home' : 'Anthony Bir, inicio'} className="display site-wordmark" onClick={() => setOpenPath(null)}>
+          Anthony Bir
         </Link>
 
         {/* Desktop */}
@@ -57,9 +52,9 @@ export default function NavBar() {
             <Link
               key={l.href}
               href={l.href}
-              aria-current={pathname === l.href || pathname.startsWith(`${l.href}/`) ? 'page' : undefined}
+              aria-current={isCurrent(pathname, l.href) ? 'page' : undefined}
               className={`font-sans text-base transition-colors ${
-                pathname === l.href || pathname.startsWith(`${l.href}/`)
+                isCurrent(pathname, l.href)
                   ? 'font-medium text-gray-900 underline decoration-gray-300 underline-offset-8'
                   : 'text-gray-600 hover:text-gray-900'
               }`}
@@ -99,7 +94,7 @@ export default function NavBar() {
             <Link
               key={l.href}
               href={l.href}
-              aria-current={pathname === l.href || pathname.startsWith(`${l.href}/`) ? 'page' : undefined}
+              aria-current={isCurrent(pathname, l.href) ? 'page' : undefined}
               className="block py-3 font-sans text-base text-gray-900"
               onClick={() => setOpenPath(null)}
             >

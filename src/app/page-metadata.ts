@@ -7,7 +7,7 @@ export function pageMetadata(title: string, description: string, path: string): 
     description,
     alternates: { canonical: path },
     openGraph: {
-      title: `${title} | ABN · Agencia Bir Núñez`,
+      title: `${title} | Anthony Bir`,
       description,
       url: path,
       locale: 'es_ES',

@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import { PROVEN_SECTORS, SITE_DESCRIPTION } from './site-information';
+import { SITE_DESCRIPTION } from './site-information';
 
 const PUBLIC_PAGES = {
   inicio: '/',
@@ -49,26 +49,22 @@ export default function WebMCPTools() {
     const register = async () => {
       await modelContext.registerTool(
         {
-          name: 'get_abn_site_information',
+          name: 'get_anthony_bir_site_information',
           description:
-            'Get public information about ABN Agencia Bir Núñez, its service areas, location, and contact channels. Use this before deciding which public page to open.',
+            'Get public information about Anthony Bir, his career, affiliations, location, and contact channels. Use this before deciding which public page to open.',
           inputSchema: {
             type: 'object',
             properties: {},
             additionalProperties: false,
           },
           execute: () => ({
-            name: 'ABN · Agencia Bir Núñez',
+            name: 'Anthony Bir',
             description: SITE_DESCRIPTION,
-            provenSectors: PROVEN_SECTORS,
-            engagement: 'Diagnóstico de procesos, información y decisiones de la organización.',
-            aiApproach: 'IA integrada en tareas concretas, con contexto propio, permisos y revisión humana.',
+            affiliation: { name: 'ABN · Agencia Bir Núñez', role: 'Fundador', page: '/servicios' },
             location: 'Lambaré, Paraguay',
-            serviceArea: 'Paraguay y la región',
             contact: {
               email: 'anthony@bir.com.py',
-              contactPage: '/contacto',
-              responseTime: 'Dentro de 48 horas hábiles',
+              contactPage: '/#contacto',
             },
             pages: PUBLIC_PAGES,
           }),
@@ -79,16 +75,16 @@ export default function WebMCPTools() {
 
       await modelContext.registerTool(
         {
-          name: 'navigate_abn_site',
+          name: 'navigate_anthony_bir_site',
           description:
-            'Navigate to a public ABN page. Use contacto when the visitor wants to start a conversation. This does not submit a form or send a message.',
+            'Navigate to a public page on Anthony Bir’s site. The contacto page contains the ABN enquiry form. This does not submit a form or send a message.',
           inputSchema: {
             type: 'object',
             properties: {
               page: {
                 type: 'string',
                 enum: pageNames,
-                description: 'The public ABN page to open.',
+                description: 'The public page to open.',
               },
             },
             required: ['page'],
