@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import BrandMark from './BrandMark';
-import { CAREER, SITE_DESCRIPTION, SITE_TITLE } from './site-information';
+import JsonLd from './JsonLd';
+import { absoluteUrl, PERSON_ID, CAREER, SITE_DESCRIPTION, SITE_TITLE } from './site-information';
 import { WHATSAPP_URL } from './WhatsAppFloat';
 
 export const metadata: Metadata = {
@@ -14,6 +15,15 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={{
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        '@id': absoluteUrl('/#website'),
+        name: 'Anthony Bir',
+        url: absoluteUrl(),
+        publisher: { '@id': PERSON_ID },
+        inLanguage: ['es', 'en'],
+      }} />
       <section className="page-container profile-hero" aria-labelledby="home-title">
         <div className="profile-identity" aria-label="Anthony Bir">
           <BrandMark className="profile-monogram" width={280} height={217} />

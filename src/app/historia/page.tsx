@@ -1,7 +1,8 @@
 import Link from 'next/link';
+import JsonLd from '../JsonLd';
 import { ContactClose, PageIntro } from '../PageLayout';
 import { pageMetadata } from '../page-metadata';
-import { CAREER } from '../site-information';
+import { absoluteUrl, PERSON_ID, CAREER } from '../site-information';
 
 export const metadata = pageMetadata(
   'Mi historia',
@@ -12,6 +13,14 @@ export const metadata = pageMetadata(
 export default function HistoriaPage() {
   return (
     <>
+      <JsonLd data={{
+        '@context': 'https://schema.org',
+        '@type': 'ProfilePage',
+        '@id': absoluteUrl('/historia#profile'),
+        url: absoluteUrl('/historia'),
+        name: 'La trayectoria de Anthony Bir',
+        mainEntity: { '@type': 'Person', '@id': PERSON_ID, name: 'Anthony Bir', url: absoluteUrl('/historia') },
+      }} />
       <PageIntro label="Historia" title="Mi camino hasta aquí.">
         <p>
           Mi trabajo pasó por ventas de exportación, proyectos internacionales y logística antes de llegar a la dirección educativa, la tesorería y los sistemas que hoy construyo en Paraguay.

@@ -1,3 +1,12 @@
+/** Canonical origin matches the production redirect target. */
+export const SITE_URL = 'https://www.bir.com.py';
+export const PERSON_ID = `${SITE_URL}/#anthony-bir`;
+export const ORGANIZATION_ID = `${SITE_URL}/nosotros#organization`;
+
+export function absoluteUrl(path = '/'): string {
+  return new URL(path, SITE_URL).toString();
+}
+
 /** Shared public positioning for metadata and browser-agent discovery. */
 export const SITE_TITLE = 'Anthony Bir · Dirección, tesorería y sistemas';
 export const SITE_DESCRIPTION =
@@ -23,4 +32,17 @@ export const PUBLIC_PAGES = {
   blog: '/blog',
   nosotros: '/nosotros',
   contacto: '/contacto',
+} as const;
+
+/** Confirmed public ABN identity; the personal site and the agency stay distinct. */
+export const ABN_ORGANIZATION = {
+  '@type': 'Organization',
+  '@id': ORGANIZATION_ID,
+  name: 'ABN · Agencia Bir Núñez',
+  alternateName: 'ABN',
+  url: absoluteUrl('/nosotros'),
+  description: 'Sistemas de gestión e inteligencia artificial para organizaciones en Paraguay.',
+  founder: { '@type': 'Person', '@id': PERSON_ID, name: 'Anthony Bir', url: absoluteUrl('/historia') },
+  address: { '@type': 'PostalAddress', addressLocality: 'Lambaré', addressCountry: 'PY' },
+  areaServed: { '@type': 'Country', name: 'Paraguay' },
 } as const;

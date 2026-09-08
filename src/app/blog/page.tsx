@@ -4,7 +4,7 @@ import { getAllPosts } from '@/blog/posts';
 import { PageIntro } from '../PageLayout';
 import { pageMetadata } from '../page-metadata';
 
-export const metadata = pageMetadata('Blog', 'Notas de Anthony Bir sobre gestión, diseño de sistemas e IA: qué hicimos, qué aprendimos y por qué.', '/blog');
+export const metadata = pageMetadata('Notas sobre gestión, sistemas e IA', 'Notas de Anthony Bir sobre gestión, diseño de sistemas e IA: qué hicimos, qué aprendimos y por qué.', '/blog');
 
 export default function BlogPage() {
   const posts = getAllPosts();

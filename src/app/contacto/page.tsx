@@ -2,7 +2,7 @@ import { pageMetadata } from '../page-metadata';
 import ContactForm from './ContactForm';
 import { WHATSAPP_URL } from '../WhatsAppFloat';
 
-export const metadata = pageMetadata('Contacto', 'Escribe a Anthony Bir para conversar sobre el trabajo de tu organización. Respuesta habitual en 48 horas hábiles.', '/contacto');
+export const metadata = pageMetadata('Contacto para sistemas de gestión e IA', 'Cuéntanos qué necesita tu organización. Contacta con Anthony Bir y ABN en Lambaré, Paraguay, para conversar sobre procesos, sistemas de gestión e IA.', '/contacto', 'ABN');
 
 export default function ContactoPage() {
   return (
@@ -43,8 +43,8 @@ export default function ContactoPage() {
           <div>
             <p className="label-caps mb-3">Qué esperar</p>
             <ul className="space-y-3 font-sans text-base leading-relaxed text-gray-600">
-              <li>Respuesta dentro de 48 horas hábiles.</li>
-              <li>Primera conversación sin coste ni compromiso.</li>
+              <li>Revisamos qué necesita tu organización.</li>
+              <li>Acordamos el alcance antes de empezar.</li>
               <li>Si ABN no es la mejor opción, te lo diremos.</li>
             </ul>
           </div>

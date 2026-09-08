@@ -133,3 +133,19 @@ Las páginas del equipo y los servicios identifican a ABN cuando usan «nosotros
 Usar «Cuéntame» y «Escríbeme» para el contacto, sin añadir promesas ni plazos.
 Mantener el inglés de la página de relocación y las fechas de las notas publicadas.
 Simplificar palabras abstractas sin cambiar roles, cifras, condiciones ni alcance.
+
+## Prioridad de búsqueda
+
+Desde el 8 de septiembre de 2026, la prioridad SEO elegida por Anthony es captar
+consultas para los servicios de ABN y los sistemas con IA en Paraguay. La portada
+sigue siendo personal. `/servicios` responde a la búsqueda de sistemas de gestión;
+`/ia-gobernada` explica los usos de inteligencia artificial con revisión humana;
+`/casos` aporta pruebas y `/nosotros` identifica al equipo. Estas páginas se enlazan
+con anclas descriptivas. No mezclar la relocación en inglés con esta oferta ni
+tratar `/en` como una traducción de la portada.
+
+El origen canónico es `https://www.bir.com.py`, destino del redireccionamiento de
+producción. Su fuente en código es `SITE_URL` en `src/app/site-information.ts`.
+No inventar cifras de demanda, posiciones, reseñas, precios ni perfiles externos.
+El blog identifica a Anthony como autor y editor; ABN se mantiene como organización
+distinta. Las fechas de las notas reflejan la publicación, no el último despliegue.

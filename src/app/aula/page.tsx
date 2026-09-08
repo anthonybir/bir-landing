@@ -3,7 +3,7 @@ import { PageIntro, ContactClose } from '../PageLayout';
 import ProductFigure from '../ProductFigure';
 import { pageMetadata } from '../page-metadata';
 
-export const metadata = pageMetadata('Aula', 'Gestión académica y preparación de materiales con fuentes institucionales, IA gobernada y revisión docente.', '/aula');
+export const metadata = pageMetadata('Aula: gestión académica e IA para formación', 'Gestión académica y preparación de materiales con fuentes institucionales, IA gobernada y revisión docente.', '/aula', 'ABN');
 
 export default function AulaPage() {
   return (
