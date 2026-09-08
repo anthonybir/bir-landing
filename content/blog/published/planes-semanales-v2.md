@@ -47,7 +47,7 @@ Cada estilo cambia la forma de producir evidencia. Ninguno cambia lo que el grup
 
 ## Borrador primero
 
-El docente toma las tres decisiones. Elige la capacidad y el estilo. Revisa tiempos, lenguaje, apoyos y evidencias. Al final decide si el plan sirve para el grupo que tiene delante.
+El docente elige la capacidad y el estilo. Después revisa los tiempos, el lenguaje, los apoyos y las evidencias. Al final decide si el plan sirve para el grupo que tiene delante.
 
 Recién entonces lo oficializa.
 

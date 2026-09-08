@@ -4,15 +4,15 @@ import { getAllPosts } from '@/blog/posts';
 import { PageIntro } from '../PageLayout';
 import { pageMetadata } from '../page-metadata';
 
-export const metadata = pageMetadata('Blog', 'Notas de ABN sobre gestión, diseño de sistemas e IA gobernada, con casos y decisiones del trabajo real.', '/blog');
+export const metadata = pageMetadata('Blog', 'Notas de Anthony Bir sobre gestión, diseño de sistemas e IA: qué hicimos, qué aprendimos y por qué.', '/blog');
 
 export default function BlogPage() {
   const posts = getAllPosts();
 
   return (
     <>
-      <PageIntro label="Blog" title="Qué hicimos y por qué.">
-        <p>Notas sobre gestión, diseño e IA dentro de los sistemas que construimos. Cada artículo documenta el trabajo y las decisiones de su fecha de publicación.</p>
+      <PageIntro label="Blog" title="Notas de mi trabajo.">
+        <p>Aquí escribo sobre gestión, diseño y uso de IA en los sistemas que construyo. Cada nota cuenta el trabajo y las decisiones de su fecha de publicación.</p>
       </PageIntro>
       {/* Posts */}
       <section className="page-container page-section" aria-label="Publicaciones">

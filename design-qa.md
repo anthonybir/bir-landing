@@ -1,3 +1,21 @@
+# Anthony-tone copy pass · 2026-09-08
+
+Reviewed the 13 content routes, shared prompts, metadata, form copy and four
+published articles. Edits clarify personal invitations and distinguish ABN's
+team voice. Existing dates, figures, service terms and historical scope remain.
+
+- **Pass:** lint, five contact tests, build and diff checks. Final build repeated
+  after a blog grammar correction and removal of a repeated word on the home.
+- **Pass:** 26 route/viewport checks (13 routes at 375px and 1440px): HTTP 200,
+  one H1, no horizontal overflow. These preceded the two final word corrections.
+- Home mobile and contact desktop screenshots inspected. Local captures:
+  `output/playwright/tone-home-375.png`, `output/playwright/tone-contacto-1440.png`.
+- Existing local Analytics script 404 remains. Live email delivery, native
+  WebMCP execution and production publication: **Not Proven** for this pass.
+- Application/content diff SHA-256: `2314a1becb028c5dbb99096e5c2480d18059c40241bf629b78d64ad44910299b`.
+
+---
+
 # Concept photo follow-up · 2026-09-08
 
 - Restored the conceptual desk image beside the personal introduction on desktop
