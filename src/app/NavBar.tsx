@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, ViewTransition } from 'react';
 import Link from 'next/link';
 import BrandMark from './BrandMark';
 import { usePathname } from 'next/navigation';
@@ -57,13 +57,18 @@ export default function NavBar() {
               key={l.href}
               href={l.href}
               aria-current={isCurrent(pathname, l.href) ? 'page' : undefined}
-              className={`font-sans text-base transition-colors ${
+              className={`relative font-sans text-base transition-colors ${
                 isCurrent(pathname, l.href)
-                  ? 'font-medium text-gray-900 underline decoration-gray-300 underline-offset-8'
+                  ? 'font-medium text-gray-900'
                   : 'text-gray-600 hover:text-gray-900'
               }`}
             >
               {l.label}
+              {isCurrent(pathname, l.href) && (
+                <ViewTransition name="nav-current">
+                  <span className="nav-current-mark" aria-hidden="true" />
+                </ViewTransition>
+              )}
             </Link>
           ))}
           <Link href={ctaHref} aria-current={pathname === ctaHref ? 'page' : undefined} className="btn-secondary !h-10 !px-4">
@@ -74,7 +79,7 @@ export default function NavBar() {
         {/* Mobile toggle */}
         <button
           type="button"
-          className="flex h-11 w-11 items-center justify-center rounded-md text-gray-900 lg:hidden"
+          className="menu-toggle flex h-11 w-11 items-center justify-center rounded-md text-gray-900 lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={isEnglish ? (open ? 'Close menu' : 'Open menu') : (open ? 'Cerrar menú' : 'Abrir menú')}
@@ -93,7 +98,7 @@ export default function NavBar() {
 
       {/* Mobile menu */}
       {open && (
-        <div id="mobile-menu" className="max-h-[calc(100dvh-5rem)] overflow-y-auto overscroll-contain border-t border-gray-200 px-4 pb-6 pt-2 lg:hidden">
+        <div id="mobile-menu" className="mobile-menu max-h-[calc(100dvh-5rem)] overflow-y-auto overscroll-contain border-t border-gray-200 px-4 pb-6 pt-2 lg:hidden">
           {links.map((l) => (
             <Link
               key={l.href}
