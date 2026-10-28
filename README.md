@@ -40,8 +40,13 @@ as a flattened page image.
   content contracts. The footer is pale gray; existing dark bands use navy.
 - **Proof remains readable:** `ProductFigure` preserves complete source images and
   links to the original. Do not add synthetic browser chrome or recolor evidence.
-- **Information is visible immediately:** no entrance animation hides content;
-  respect reduced motion. Keep Spanish copy on the main site and English on `/en`.
+- **Information is visible immediately:** motion never hides content. Blocks below
+  the fold settle 10px into place (transform only, `RevealOnScroll.tsx`, skipped on
+  Back/Forward); pages cross-fade through React `ViewTransition`; the decorative home
+  monogram is set stroke by stroke. Use the kit's timings (140ms UI, 220ms state,
+  700ms reveal) and curves, with no bounce, parallax or loops. Respect reduced
+  motion; `tests/motion.test.mjs` enforces these rules. Keep Spanish copy on the
+  main site and English on `/en`.
 
 ## Features
 

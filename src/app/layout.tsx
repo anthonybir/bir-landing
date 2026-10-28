@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import { ViewTransition } from "react";
 import { Analytics } from "@vercel/analytics/next";
 import { Instrument_Serif, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import WebMCPTools from "./WebMCPTools";
+import RevealOnScroll from "./RevealOnScroll";
 import "./globals.css";
 import JsonLd from "./JsonLd";
 import { absoluteUrl, PERSON_ID, ORGANIZATION_ID, SITE_URL, SITE_DESCRIPTION, SITE_TITLE } from "./site-information";
@@ -82,12 +84,15 @@ export default function RootLayout({
         <JsonLd data={personJsonLd} />
         <div className="flex min-h-[100dvh] flex-col text-foreground">
           <NavBar />
-          <main id="contenido" tabIndex={-1} className="flex-1">
-            {children}
-          </main>
+          <ViewTransition name="page">
+            <main id="contenido" tabIndex={-1} className="flex-1">
+              {children}
+            </main>
+          </ViewTransition>
           <Footer />
         </div>
         <WebMCPTools />
+        <RevealOnScroll />
         <Analytics />
       </body>
     </html>
